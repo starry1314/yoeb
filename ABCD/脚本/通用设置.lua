@@ -15,7 +15,7 @@
 2、函数型：函数名(参数1,参数2) 这样的就是函数型 由函数名与若干个参数组成 参数被半角括号()套起来
 ]]
 ------------------基本设置
-g_needMinimizeGame=false			--最小化遊戲窗口 true为最小化 false或nil为不最小化
+g_needMinimizeGame=true			--最小化遊戲窗口 true为最小化 false或nil为不最小化
 g_imBoss=false			--如果是仓库号要为true 挂机号为false
 g_attackDis=50					--攻击距离
 g_yiJieTimeOut=15*60			--异界地图内的超时时间 单位为秒 如果未设置就会用g_timeOut *是乘号 这里为15乘以60=15分钟
@@ -145,7 +145,7 @@ SetNeedFlaskData(5,"魔力药剂","障礙物之,LocalManaFlaskHinderNearbyEnemies2",48)
 AddNotMakeTaskData("a2q5")--梦中圣地
 AddNotMakeTaskData("a2q10")--白色巨兽
 AddNotMakeTaskData("a3q13")--重生的渴望
-AddNotMakeTaskData("a3q12")--命运之语
+--AddNotMakeTaskData("a3q12")--命运之语
 AddNotMakeTaskData("a6q5")--毕斯特传奇
 AddNotMakeTaskData("a7q5")--银色吊坠
 --AddNotMakeTaskData("a7q8")--古斯特的墓碑
@@ -381,29 +381,21 @@ SetNeedBuyGoodsData("工匠石","Metadata/Items/Currency/CurrencyRerollSocketNumber
 SetGoodsCaoZuo("通货|可堆叠通货|异界地图","0|2")--多个大类设置捡存
 SetGoodsCaoZuo("主动技能宝石|辅助技能宝石","0|2",nil,nil,nil,nil,5)--拾取品质超过5的技能宝石
 SetGoodsCaoZuo(nil,"0|1|4",nil,nil,nil,nil,nil,nil,"3")--拾取 鉴定 出售橙色物品
-SetGoodsCaoZuo(nil,nil,"知识卷轴","Metadata/Items/Currency/CurrencyIdentification",nil,nil,nil,40)--够了就不捡了
+SetGoodsCaoZuo(nil,nil,"知识卷轴","Metadata/Items/Currency/CurrencyIdentification",nil,nil,nil,80)--够了就不捡了
 SetGoodsCaoZuo(nil,nil,"传送卷轴","Metadata/Items/Currency/CurrencyPortal",nil,nil,nil,80)--够了就不捡了
 SetGoodsCaoZuo(nil,"0|1",nil,nil,nil,nil,nil,nil,"0|1|2",6)--6洞装设置捡卖
 SetGoodsCaoZuo(nil,"0|1",nil,nil,nil,nil,nil,nil,"0|1|2",nil,6)--6连洞装设置捡卖
 SetGoodsCaoZuo("爪|单手剑|细剑|单手斧|单手锤","0|1",nil,nil,nil,nil,nil,nil,"2")--捡卖黄武
 SetGoodsCaoZuo("珠宝|深渊珠宝|短杖|战杖|弓|长杖|双手剑|双手斧|双手锤","0|1|4",nil,nil,nil,nil,nil,nil,"2")--拾取 鉴定 出售黄色物品珠宝
-
----
---用0|1就是不鑑定直接賣
---用0|1|4就是鑑定後賣
---匕首|法杖|单手剑|细剑|单手斧|单手锤|符文匕首|短杖|战杖|弓|长杖|双手剑|双手斧|双手锤|主动技能宝石|辅助技能宝石|箭袋|腰带|手套|鞋子|衣服|头盔|盾
----
-
-SetGoodsCaoZuo("珠宝|深渊珠宝|符文匕首|匕首|法杖|单手剑|细剑","0|1|4",nil,nil,nil,nil,nil,nil,"2")--拾取 鉴定 出售黄色物品珠宝
 SetGoodsCaoZuo(nil,"1|3","周年福袋","Metadata/Items/MicrotransactionCurrency/MicrotransactionTencentEventCoin")--
 SetGoodsCaoZuo(nil,"1|3","玻璃弹珠","Metadata/Items/Currency/CurrencyFlaskQuality")--
 SetGoodsCaoZuo(nil,"3","卷轴碎片","Metadata/Items/Currency/CurrencyIdentificationShard")--卷轴碎片丢
 SetGoodsCaoZuo(nil,"2|3","预言","Metadata/Items/Currency/CurrencyItemisedProphecy")--丢预言
 SetGoodsCaoZuo(nil,"0|2","蘭塔朵迷惘之愛","Metadata/Items/DivinationCards/DivinationCardLantadorsLostLove")
 SetGoodsCaoZuo(nil,"3","祝福石","Metadata/Items/Currency/CurrencyRerollImplicit",nil,nil,nil,0)--祝福石
-SetGoodsCaoZuo(nil,"0","束縛石","Metadata/Items/Currency/CurrencyUpgradeToRareAndSetSockets",nil,nil,nil,10)--束縛石
+--SetGoodsCaoZuo(nil,"0","束縛石","Metadata/Items/Currency/CurrencyUpgradeToRareAndSetSockets",nil,nil,nil,10)--束縛石
 SetGoodsCaoZuo(nil,"3","工程石","Metadata/Items/Currency/CurrencyStrongboxQuality",nil,nil,nil,0)--工程石
-SetGoodsCaoZuo(nil,"0","磨刀石","Metadata/Items/Currency/CurrencyWeaponQuality")--磨刀石不存
+SetGoodsCaoZuo(nil,"0|1","磨刀石","Metadata/Items/Currency/CurrencyWeaponQuality")--磨刀石不存
 SetGoodsCaoZuo(nil,"0","护甲片","Metadata/Items/Currency/CurrencyArmourQuality")--护甲片不存
 --SetJiaoYiGoods(nil,nil,"Metadata/Items/Currency/CurrencyWeaponQuality")--磨刀石
 --SetJiaoYiGoods(nil,nil,"Metadata/Items/Currency/CurrencyArmourQuality")--護甲片
