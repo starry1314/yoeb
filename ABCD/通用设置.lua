@@ -393,7 +393,7 @@ SetGoodsCaoZuo(nil,"3","卷轴碎片","Metadata/Items/Currency/CurrencyIdentificatio
 SetGoodsCaoZuo(nil,"2|3","预言","Metadata/Items/Currency/CurrencyItemisedProphecy")--丢预言
 SetGoodsCaoZuo(nil,"0|2","蘭塔朵迷惘之愛","Metadata/Items/DivinationCards/DivinationCardLantadorsLostLove")
 SetGoodsCaoZuo(nil,"3","祝福石","Metadata/Items/Currency/CurrencyRerollImplicit",nil,nil,nil,0)--祝福石
-SetGoodsCaoZuo(nil,"0","束縛石","Metadata/Items/Currency/CurrencyUpgradeToRareAndSetSockets",nil,nil,nil,10)--束縛石
+--SetGoodsCaoZuo(nil,"0","束縛石","Metadata/Items/Currency/CurrencyUpgradeToRareAndSetSockets",nil,nil,nil,10)--束縛石
 SetGoodsCaoZuo(nil,"3","工程石","Metadata/Items/Currency/CurrencyStrongboxQuality",nil,nil,nil,0)--工程石
 SetGoodsCaoZuo(nil,"0|1","磨刀石","Metadata/Items/Currency/CurrencyWeaponQuality")--磨刀石不存
 SetGoodsCaoZuo(nil,"0","护甲片","Metadata/Items/Currency/CurrencyArmourQuality")--护甲片不存
