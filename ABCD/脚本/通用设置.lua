@@ -2878,8 +2878,8 @@ SetJiaoYiGoods(nil,nil,"Metadata/Items/DivinationCards/DivinationCardTheTransfor
 SetJiaoYiGoods(nil,nil,"Metadata/Items/DivinationCards/DivinationCardMagnumOpus")--巨著
 SetJiaoYiGoods(nil,nil,"Metadata/Items/DivinationCards/DivinationCardImperfectMemories")--不完美的回憶
 
-SetSaveIndex("契约","1|4")--设定契约存在哪些仓库页
-SetGoodsCaoZuo("契约","0|2",nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,function(r)return r.lv>60 end)--大于60级的契约才捡存
+SetSaveIndex("契约","4")--设定契约存在哪些仓库页
+SetGoodsCaoZuo("契约","2",nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,function(r)return r.lv>60 end)--大于60级的契约才捡存
 SetGoodsCaoZuo(nil,"0","赏金猎人印记","Metadata/Items/Heist/HeistCoin")--只捡不存夺宝币
 SetGoodsCaoZuo(nil,"0|2","赏金猎人印记","Metadata/Items/Heist/HeistCoin",nil,nil,nil,50000)--包中满1000就改为捡存
 --如果需要夺宝币交易给仓库号就加上下面这条
