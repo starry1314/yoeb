@@ -177,7 +177,7 @@ SetSaveIndex("异界地图","4")
 SetSaveIndex("命运卡","1|2")
 SetSaveIndex("项链|戒指|爪|匕首|法杖|单手剑|细剑|单手斧|单手锤|符文匕首|短杖|战杖|弓|长杖|双手剑|双手斧|双手锤|腰带|手套|鞋子|头盔|衣服|盾|箭袋","3")
 SetSaveIndex("主动技能宝石|辅助技能宝石|珠宝|地图碎片","1|2")
-SetSaveIndex("HeistBlueprint","1|2")--蓝图
+SetSaveIndex("HeistBlueprint","4")--蓝图
 SetSaveIndex("ExpeditionLogbook","4")--探險日誌
 SetSaveIndex(nil,"1",nil,"Metadata/Items/MapFragments/ClassicVaultKey")--古典遺鑰
 SetSaveIndex(nil,"1",nil,"Metadata/Items/MapFragments/340VaultKey")--古朽遺鑰
