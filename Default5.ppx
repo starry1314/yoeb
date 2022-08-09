@@ -17,12 +17,12 @@
 	<ProxyList>
 		<Proxy id="100" type="SOCKS5">
 			<Authentication enabled="true">
-				<Password>AAACbYKAV922l/tzcedYZhKmevdIOr3oZYIDco/J13I8jEc=</Password>
-				<Username>fanxing</Username>
+				<Password>AAACbYKAV922l/tzcedYZhKmeoXa2grWV1wj0uvrWTzZ5JE=</Password>
+				<Username>yobest</Username>
 			</Authentication>
 			<Options>48</Options>
 			<Port>59527</Port>
-			<Address>192.168.100.1</Address>
+			<Address>how.ros.tw</Address>
 		</Proxy>
 	</ProxyList>
 	<ChainList />
