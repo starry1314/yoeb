@@ -5,4 +5,4 @@ mshta vbscript:createobject("shell.application").shellexecute("%~s0","goto :runa
 
 xcopy  /D/K/E/Y/C/I/H "C:\Users\Administrator\Desktop\yoeb-main\ABCD" "C:\Users\Administrator\Desktop\ABCD"
 
-start "" "C:\Users\Administrator\Desktop\\ABCD\ABCD.exe"
+start "" "C:\Users\Administrator\Desktop\ABCD\ABCD.exe"
