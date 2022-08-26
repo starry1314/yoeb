@@ -30,13 +30,14 @@ g_duobiHpVal=0.2
 --pos=指定位置 nil为自动选择 2为衣服 3为主武器 4为副武器 5为头盔 6为项链 7为左戒指 8为右戒指 9为护手 10为鞋子 11为腰带
 --nType 有效场景 nil为无论何时都有效 0为没在刷异界才有效 1为只在刷异界才有效
 
-SetNeedSkillLineData(10,"燃燒箭矢,nil|穿透輔助,nil",2,nil,nil)
+SetNeedSkillLineData(10,"燃燒箭矢,nil",2,nil,nil)
 SetNeedSkillLineData(95,"元素淨化,nil|受傷時施放輔助,nil|信念浪湧,nil",nil,9,nil)
-SetNeedSkillLineData(96,"鋼筋鐵骨,nil|先祖衛士,nil|持續時間延長輔助,nil",nil,4,nil)
+SetNeedSkillLineData(96,"鋼筋鐵骨,nil|先祖衛士,nil|持續時間延長輔助,nil|物品稀有度增幅輔助,nil|連鎖輔助,nil|冰霜之刃,nil|憎恨,nil",nil,4,nil)
 SetNeedSkillLineData(97,"冰霜之捷,nil|盜獵者印記,nil|擊中時印記輔助,nil",nil,nil,nil)
-SetNeedSkillLineData(98,"凋零之步,nil|召喚寒冰魔像,nil|恢復輔助,nil",nil,nil,nil)
+--SetNeedSkillLineData(98,"凋零之步,nil|召喚寒冰魔像,nil|恢復輔助,nil",nil,nil,nil)
+SetNeedSkillLineData(98,"召喚寒冰魔像,nil|恢復輔助,nil",nil,nil,nil)
 SetNeedSkillLineData(99,"爆裂陷阱,nil|迅速組裝輔助,nil|機率中毒輔助,nil",18,nil,nil)
-SetNeedSkillLineData(100,"靈體旋武,nil|夜刃輔助,nil|附加冰冷傷害輔助,nil|霜咬輔助,nil|附加閃電傷害輔助,nil|物理轉閃電輔助,nil|元素攻擊傷害輔助,nil|快速攻擊輔助,nil",nil,nil,nil)
+SetNeedSkillLineData(100,"靈體旋武,nil|夜刃輔助,nil|附加冰冷傷害輔助,nil|附加閃電傷害輔助,nil|物理轉閃電輔助,nil|霜咬輔助,nil|元素攻擊傷害輔助,nil|快速攻擊輔助,nil",nil,nil,nil)
 
 --添加攻击技能 name=技能名 className=技能类名 noLine=不在直线就能攻击 挑选攻击技能会从上到下寻找，要把厉害的技能加在前面
 
@@ -55,12 +56,12 @@ SetSkillLimitMaxLv("信念浪湧",nil,1)
 SetNeedFlaskData(1,"生命药剂","nil")
 SetNeedFlaskData(2,"生命药剂","nil")
 SetNeedFlaskData(3,"水银药剂","nil")
-SetNeedFlaskData(4,"魔力药剂","nil")
+SetNeedFlaskData(4,"生命药剂","nil")
 SetNeedFlaskData(5,"魔力药剂","nil")
 
 
 g_addHpVal=0.7--HP低于多少吃红药
-g_addMpVal=0.2--MP低于多少吃蓝药
+g_addMpVal=0.3--MP低于多少吃蓝药
 
 ---------------------------------------换装设置
 --SetAtuoChangeEquipData(job,pos,name,val,yijie) 计算方式如下 定义过的属性值乘以比重值  哪样装备高就会用哪样
@@ -96,11 +97,9 @@ SetAtuoChangeEquipData("游侠","匕首","Local_critical_strike_chance_%",3,nil)
 SetAtuoChangeEquipData("游侠","盾","护甲",1,nil)
 
 --游侠--孔色
-SetZhengTiColorVarData(2,1,4,1,nil,650,true)
-SetZhengTiColorVarData(2,1,5,0,nil,630,true)
-SetZhengTiColorVarData(2,1,4,0,nil,600,true)
-SetZhengTiColorVarData(2,0,4,1,nil,580,true)
-SetZhengTiColorVarData(2,0,5,0,nil,550,true)
+SetZhengTiColorVarData(2,2,2,2,nil,650,true)
+SetZhengTiColorVarData(2,1,2,2,nil,600,true)
+SetZhengTiColorVarData(2,0,3,2,nil,550,true)
 SetZhengTiColorVarData(2,0,4,0,nil,450,true)
 SetZhengTiColorVarData(2,0,3,1,nil,400,true)
 SetZhengTiColorVarData(2,1,3,0,nil,350,true)
@@ -138,9 +137,8 @@ SetZhengTiColorVarData(10,0,1,0,nil,100)
 
 
 
-AddShengJiZhuangBeiGoodsData("点金石","Metadata/Items/Currency/CurrencyUpgradeToRare",0,50,0)--主线生效 超过50级就用点金点白色装备
---AddShengJiZhuangBeiGoodsData("束縛石","Metadata/Items/Currency/CurrencyUpgradeToRareAndSetSockets",0,50,0)
-AddShengJiZhuangBeiGoodsData("富豪石","Metadata/Items/Currency/CurrencyUpgradeMagicToRare",1,50,0)--主线生效 超过50级就用富豪点蓝色装备
+AddShengJiZhuangBeiGoodsData("点金石","Metadata/Items/Currency/CurrencyUpgradeToRare",0,36,0)--主线生效 超过36级就用点金点白色装备
+AddShengJiZhuangBeiGoodsData("富豪石","Metadata/Items/Currency/CurrencyUpgradeMagicToRare",1,36,0)--主线生效 超过36级就用富豪点蓝色装备
 
 --掉落率+稀有率 异界时才有效
 --SetAtuoChangeEquipData("暗影|野蛮人|决斗者|女巫|游侠|圣堂武僧","戒指|项链|腰带|鞋子|手套|衣服|头盔|法杖|盾","base_item_found_rarity_+%",0.5,2)--基礎物品掉落品質 +%
@@ -150,9 +148,9 @@ AddShengJiZhuangBeiGoodsData("富豪石","Metadata/Items/Currency/CurrencyUpgradeMa
 SetGaoJiHuanZhuangData("游侠","简易之袍","Metadata/Items/Armours/BodyArmours/BodyInt1","无尽之衣","Tabula Rasa")
 
 --SetTaskShengJiData(taskClassName,taskIndex,shengjiMapClassName,needLv)--设置跑图时升级 taskClassName=任务类名 taskIndex=任务索引 nil为忽略，只匹配任务类名 shengjiMapClassName=要刷的地图类名 needLv=升级到多少级为止
-SetTaskShengJiData("a5q7",nil,"1_5_5",46,true)--做 到奇塔弗的受难 的时候刷纯净圣地到50级再进行下一任务
-SetTaskShengJiData("a9q3",nil,"2_9_1",68,true)--做 到風暴飛刃 的时候刷滲血水道到68级再进行下一任务
-SetTaskShengJiData("a10q3",nil,"2_9_1",78,true)--做 到風暴飛刃 的时候刷滲血水道到68级再进行下一任务
+SetTaskShengJiData("a5q7",nil,"1_5_5",49,true)--做 到奇塔弗的受难 的时候刷纯净圣地到50级再进行下一任务
+SetTaskShengJiData("a9q3",nil,"2_9_1",66,true)--做 到風暴飛刃 的时候刷滲血水道到68级再进行下一任务
+SetTaskShengJiData("a10q2",nil,"2_9_1",80,true)--做 到風暴飛刃 的时候刷滲血水道到68级再进行下一任务
 
 SetTaskMiGongData("a8q7",nil,1)--大于等于a9q1级 做迷宫1
 SetTaskMiGongData("a10q1",nil,2)--大于等于a10q1 做迷宫2
