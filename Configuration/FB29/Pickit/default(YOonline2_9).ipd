@@ -321,7 +321,7 @@
 	[Type] == "Cartographer's Chisel" # 	[StashItem]	 == "true"	//	//製圖釘																							
 	[Type] == "Orb of Annulment"         # 	[StashItem]	 == "true"	//	//無效石																							
 //	[Type] == "Orb of Binding"                 # 	[StashItem]	 == "true"	//	//束縛石																							
-//	[Type] == "Orb of Horizons"         # 	[StashItem]	 == "true"	//	//地平石																							
+	[Type] == "Orb of Horizons"         # 	[StashItem]	 == "true"	//	//地平石																							
 //	[Type] == "Harbinger's Orb"         # 	[StashItem]	 == "true"	//	//神諭石																							
 //	[Type] == "Engineer's Orb"                 # 	[StashItem]	 == "true"	//	//工程石																							
 	[Type] == "Ancient Orb"                 # 	[StashItem]	 == "true"	//	//古變石																							
@@ -829,7 +829,7 @@
 	//// 18F 藥水（預設關閉）			//																								
 				//																								
 //	[Type] == "Quicksilver Flask" # 	[StashItem]	 == "true" 	//	//水銀藥劑	不撿不存倉																						
-	[Type] == "Gold Flask"     # 	[StashItem]	 == "true" 	//	//黃金藥劑	不撿不存倉	
+//	[Type] == "Gold Flask"     # 	[StashItem]	 == "true" 	//	//黃金藥劑	不撿不存倉	
 //	 [Type] == "Diamond Flask" # 	[StashItem]	 == "true" 	//	//寶鑽藥劑	不撿不存倉		
 				//																								
 //	 [Type] == "Small Life Flask" # 	[StashItem]	 == "true" 	//	//小型生命藥劑	不撿不存倉																						
