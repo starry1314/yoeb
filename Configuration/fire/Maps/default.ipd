@@ -19,7 +19,7 @@
 // === 1 Settings ===
 
 // Upgrading maps' quality
-// [Quality] <= "16" && [Rarity] == "Normal" # [UpgradeQuality] == "true"
+ [Quality] <= "16" && [Rarity] == "Normal" # [UpgradeQuality] == "true"
 
 // Tiers to run (difficult to use since one map can have up to four tiers)
 [MapTier] >= "1" && [MapTier] <= "16" # [RunMap] == "true"
@@ -27,11 +27,11 @@
 // Upgrading maps' rarity - XOR
 
 // Upgrade to BLUE
-//[Rarity] == "Normal" 	# [UpgradeToMagic] == "true"
-//[Rarity] == "Magic" 	# [AugmentIfPossible] == "true"
+[Rarity] == "Normal" 	# [UpgradeToMagic] == "true"
+[Rarity] == "Magic" 	# [AugmentIfPossible] == "true"
 
 // Upgrade to YELLOW
- [Rarity] == "Normal" # [UpgradeToRare] == "true"
+// [Rarity] == "Normal" # [UpgradeToRare] == "true"
 
 
 // === 2 Map types - UpgradeTier. These will be sold in a quantity of 3 pcs. to get 1 of higher tier ===
