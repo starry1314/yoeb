@@ -131,11 +131,14 @@ AddNeedBuySkillTime(11,"a11q1")	--在拾取碎片 这个任务时检测购买一
 
 --药瓶摆放
 --SetNeedFlaskData(pos,flask)--设置药  pos=位置 1-5  flask=药 字符串型，支持以下 (生命药剂,魔力药剂,复合药剂,宝钻药剂,红玉药剂,蓝玉药剂,黄玉药剂,坚岩药剂,水银药剂,紫晶药剂,石英药剂,翠玉药剂,石化药剂,海蓝药剂,迷雾药剂,硫磺药剂,真银药剂,灰岩药剂)
-SetNeedFlaskData(1,"生命药剂","密封之,FlaskBleedCorruptingBloodImmunity1",8)
-SetNeedFlaskData(2,"生命药剂","自由之,LocalFlaskImmuneToMaimAndHinder3",9)
-SetNeedFlaskData(3,"水银药剂","水晶之,FlaskBuffResistancesWhileHealing")
-SetNeedFlaskData(4,"水银药剂","鹿之,FlaskFreezeAndChillImmunityDuringEffect")
+SetNeedFlaskData(1,"生命药剂","密封之,FlaskBleedCorruptingBloodImmunity1",8,"不朽生命藥劑","Metadata/Items/Flasks/FlaskLife11",true)
+SetNeedFlaskData(2,"生命药剂","自由之,LocalFlaskImmuneToMaimAndHinder3",9,"不朽生命藥劑","Metadata/Items/Flasks/FlaskLife11",true)
+SetNeedFlaskData(3,"水银药剂","水晶之,FlaskBuffResistancesWhileHealing","水银药剂","Metadata/Items/Flasks/FlaskLife11",true)
+SetNeedFlaskData(4,"水银药剂","鹿之,FlaskFreezeAndChillImmunityDuringEffect","水银药剂","Metadata/Items/Flasks/FlaskLife11",true)
 SetNeedFlaskData(5,"魔力药剂","障礙物之,LocalManaFlaskHinderNearbyEnemies2",48)
+--药品如何自动点品质
+SetGoodsCaoZuo(nil,"0|2","玻璃弹珠","Metadata/Items/Currency/CurrencyFlaskQuality",nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,function(gd,barArr) return not g_funcFlaskPingZhiIsOk(barArr) end)--药剂品质没全满就设置捡、存 玻璃弹珠
+SetGoodsCaoZuo(nil,"1|3","玻璃弹珠","Metadata/Items/Currency/CurrencyFlaskQuality",nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,function(gd,barArr) return g_funcFlaskPingZhiIsOk(barArr) end)--药剂品质全满了就设置卖、丢 玻璃弹珠
 
 --AddNotMakeTaskData(taskClassName)--添加不需要做的任务 taskClassName为任务类名
 AddNotMakeTaskData("a2q5")--梦中圣地
