@@ -78,7 +78,7 @@
 	//歐喙=1.5D																											
 	[Type] == "Raven Mask" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 		//鷗喙 禍鴉之面																							
 //生命藥劑
-[Type] == "Divine Life Flask" # 	[StashItem]	 == "true" 	//	//不朽生命藥劑	撿+存倉
+// [Type] == "Divine Life Flask" # 	[StashItem]	 == "true" 	//	//不朽生命藥劑	撿+存倉
 	//水道仔或閃打仔會用到的散件																											
 	//熊頭 鳥頭																											
 	[Type] == "Silken Hood" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
