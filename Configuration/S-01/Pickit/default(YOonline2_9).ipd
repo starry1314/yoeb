@@ -806,9 +806,9 @@
 	[Type]=="Something Dark" #	[StashItem]	 == "true"	//																								
 																												
 	//// 15F 輿圖			//																								
-	//[Category] == "Map" && [MapTier] >= "1"  && [Rarity] == "Normal"  #	[ForceSellItem]	 == "true" // 	//	普通地圖	普通地圖撿取，背包內普通地圖售出																						
-	//[Category] == "Map" && [MapTier] >= "1"  && [Rarity] == "Magic"  #	[ForceSellItem]	 == "true" // 	//	藍地圖	藍地圖撿取，背包內藍地圖售出																						
-	//[Category] == "Map" && [MapTier] >= "1"  && [Rarity] == "Rare"  #	[ForceSellItem]	 == "true" // 	//	黃地圖	黃地圖撿取，背包內黃地圖售出																						
+	[Category] == "Map" && [MapTier] >= "1"  && [Rarity] == "Normal"  #	[StashItem] == "true" // 	//	普通地圖	普通地圖撿取，背包內普通地圖																					
+	[Category] == "Map" && [MapTier] >= "1"  && [Rarity] == "Magic"  #	[StashItem]	 == "true" // 	//	藍地圖	藍地圖撿取，背包內藍地圖售出																						
+	[Category] == "Map" && [MapTier] >= "1"  && [Rarity] == "Rare"  #	[StashItem]	 == "true" // 	//	黃地圖	黃地圖撿取，背包內黃地圖售出																						
 	[Category] == "Map" && [MapTier] >= "1"  && [Rarity] == "Unique"  #	[ForceSellItem]	 == "true" // 	//	傳奇地圖	傳奇地圖撿取，背包內傳奇地圖售出																						
 																												
 	[Type] =="Incandescent Invitation" #	[StashItem]	 == "true" 	//	//熾熱之邀																							
