@@ -1,4 +1,4 @@
-//編輯時間：2022/9/7
+﻿//編輯時間：2022/9/7
 [Type]=="Tainted Chromatic Orb" # [StashItem]  == "true"
 [Type]=="Tainted Orb of Fusing" # [StashItem]  == "true"
 [Type]=="Tainted Jeweller's Orb" # [StashItem]  == "true"
