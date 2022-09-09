@@ -10,7 +10,7 @@
 [Type]=="Tainted Divine Teardrop" # [StashItem]  == "true"
  
  
- 
+ [Type]=="Einhar's Memory" #	[StashItem]	 == "true" // 
  
  //編輯時間：2022/7/5 ex比水餃便宜的季末
 [Type] == "Orb of Alteration" # [StashItem] == "true"////改造石拾取且存倉
