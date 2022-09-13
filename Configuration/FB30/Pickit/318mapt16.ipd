@@ -1,3 +1,21 @@
+//3.19 哀哈記憶 2022-09-13
+ [Type]=="Niko's Memory" # [StashItem]  == "true" // 
+[Type]=="Alva's Memory" # [StashItem]  == "true" // 
+[Type]=="Kirac's Memory" # [StashItem]  == "true" // 
+[Type]=="Einhar's Memory" # [StashItem]  == "true" // 
+[Type]=="Engraved Ultimatum" # [StashItem]  == "true" // 
+[Type]=="Mirrored Tablet" # [StashItem]  == "true" // 
+[Type]=="Forgotten Reliquary Key" # [StashItem]  == "true" // 
+[Type]=="Visceral Reliquary Key" # [StashItem]  == "true" // 
+[Type]=="Shiny Reliquary Key" # [StashItem]  == "true" // 
+[Type]=="Archive Reliquary Key" # [StashItem]  == "true" // 
+[Type]=="Oubliette Reliquary Key" # [StashItem]  == "true" // 
+[Type]=="Cosmic Reliquary Key" # [StashItem]  == "true" // 
+[Type]=="Decaying Reliquary Key" # [StashItem]  == "true" //
+
+//特殊
+[Type] == "Awakened Sextant" # 	[StashItem]	 == "true"	//	//製圖六分儀．覺醒	拾取且存倉
+//
 //編輯時間：2022/9/7
 [Type]=="Tainted Chromatic Orb" # [StashItem]  == "true"
 [Type]=="Tainted Orb of Fusing" # [StashItem]  == "true"
@@ -8,7 +26,7 @@
 [Type]=="Tainted Armourer's Scrap" # [StashItem]  == "true"
 [Type]=="Tainted Blacksmith's Whetstone" # [StashItem]  == "true"
 [Type]=="Tainted Divine Teardrop" # [StashItem]  == "true"
- 
+
  
  //編輯時間：2022/7/5 ex比水餃便宜的季末
 [Type] == "Orb of Alteration" # [StashItem] == "true"////改造石拾取且存倉
@@ -37,10 +55,12 @@
 [Type] == "Enhance Support" #[StashItem] == "true"////增幅輔助不撿不存倉
 [Type] == "Enlighten Support" #[StashItem] == "true"////啟蒙輔助拾取且存倉
 [Type] == "The Apothecary" #[StashItem] == "true"////(魔血 5/5)拾取且存倉
+//----門票---
 [Type] =="Incandescent Invitation" #[StashItem] == "true" ////熾熱之邀拾取且存倉
-[Type] =="Polaric Invitation" #[StashItem] == "true" ////極地之邀不撿不存倉
+//[Type] =="Polaric Invitation" #[StashItem] == "true" ////極地之邀不撿不存倉
 [Type] == "Screaming Invitation" #[StashItem] == "true" ////尖哮之邀拾取且存倉
-[Type] =="Writhing Invitation" #[StashItem] == "true" ////纏繞之邀不撿不存倉
+//[Type] =="Writhing Invitation" #[StashItem] == "true" ////纏繞之邀不撿不存倉
+//----門票---
 [Type] == "Humility" # [StashItem] == "true" // 1.0 C//謙遜(無盡之衣)拾取且存倉
 [Type] == "House of Mirrors" # [StashItem] == "true" // 2220 C//明鏡(卡蘭德的魔鏡)拾取且存倉30E
 [Type] == "The Doctor" # [StashItem] == "true" // 1536 C//瘋醫(獵首)拾取且存倉8E
