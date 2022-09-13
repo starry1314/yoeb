@@ -11,7 +11,21 @@
 [Type]=="Tainted Blacksmith's Whetstone" # [StashItem]  == "true"
 [Type]=="Tainted Divine Teardrop" # [StashItem]  == "true"
  
- 
+ //3.19 哀哈記憶
+ [Type]=="Niko's Memory" # [StashItem]  == "true" // 
+[Type]=="Alva's Memory" # [StashItem]  == "true" // 
+[Type]=="Kirac's Memory" # [StashItem]  == "true" // 
+[Type]=="Einhar's Memory" # [StashItem]  == "true" // 
+[Type]=="Engraved Ultimatum" # [StashItem]  == "true" // 
+[Type]=="Mirrored Tablet" # [StashItem]  == "true" // 
+[Type]=="Forgotten Reliquary Key" # [StashItem]  == "true" // 
+[Type]=="Visceral Reliquary Key" # [StashItem]  == "true" // 
+[Type]=="Shiny Reliquary Key" # [StashItem]  == "true" // 
+[Type]=="Archive Reliquary Key" # [StashItem]  == "true" // 
+[Type]=="Oubliette Reliquary Key" # [StashItem]  == "true" // 
+[Type]=="Cosmic Reliquary Key" # [StashItem]  == "true" // 
+[Type]=="Decaying Reliquary Key" # [StashItem]  == "true" //
+
  //編輯時間：2022/7/5 ex比水餃便宜的季末
 [Type] == "Orb of Alteration" # [StashItem] == "true"////改造石拾取且存倉
 [Type] == "Chaos Orb" # [StashItem] == "true"////混沌石拾取且存倉
