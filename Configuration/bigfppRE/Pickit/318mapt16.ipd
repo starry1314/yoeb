@@ -8,7 +8,11 @@
 [Type]=="Tainted Armourer's Scrap" # [StashItem]  == "true"
 [Type]=="Tainted Blacksmith's Whetstone" # [StashItem]  == "true"
 [Type]=="Tainted Divine Teardrop" # [StashItem]  == "true"
-
+//記憶
+//[Type]=="Niko's Memory" # [StashItem]  == "true" // 
+//[Type]=="Alva's Memory" # [StashItem]  == "true" // 
+//[Type]=="Kirac's Memory" # [StashItem]  == "true" // 
+[Type]=="Einhar's Memory" # [StashItem]  == "true" //
   [Type] == "Awakened Sextant" # 	[StashItem]	 == "true"	//	//製圖六分儀．覺醒	拾取且存倉
   
  //編輯時間：2022/7/5 ex比水餃便宜的季末
