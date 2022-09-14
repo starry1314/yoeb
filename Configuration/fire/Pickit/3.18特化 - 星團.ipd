@@ -3,7 +3,8 @@
 //[Type]=="Alva's Memory" # [StashItem]  == "true" // 
 //[Type]=="Kirac's Memory" # [StashItem]  == "true" // 
 [Type]=="Einhar's Memory" # [StashItem]  == "true" //
-
+//----
+ [Type] =="Maven's Invitation: The Elderslayers" # [StashItem]  == "true"   //殺手 拾取且存倉
 //特殊
 [Type] == "Awakened Sextant" # 	[StashItem]	 == "true"	//	//製圖六分儀．覺醒	拾取且存倉
 //
