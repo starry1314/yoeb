@@ -14,6 +14,7 @@
 //[Type]=="Kirac's Memory" # [StashItem]  == "true" // 
 [Type]=="Einhar's Memory" # [StashItem]  == "true" //
   [Type] == "Awakened Sextant" # 	[StashItem]	 == "true"	//	//製圖六分儀．覺醒	拾取且存倉
+  [Type] == "Stacked Deck" # 	[StashItem]	 == "true"	//	//豐裕牌組	拾取且存倉
   
  //編輯時間：2022/7/5 ex比水餃便宜的季末
 [Type] == "Orb of Alteration" # [StashItem] == "true"////改造石拾取且存倉
