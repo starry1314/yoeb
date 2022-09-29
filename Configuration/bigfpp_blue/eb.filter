@@ -22,6 +22,12 @@
 
 # 【特殊語法-六連裝備】0001
 
+
+#地圖破裂
+Hide
+    FracturedItem True
+    Class "Maps"
+    
 #地圖已汙染
 Hide
 　　Corrupted True
