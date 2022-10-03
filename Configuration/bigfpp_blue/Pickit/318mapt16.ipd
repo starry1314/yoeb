@@ -44,6 +44,7 @@
 [Type] == "Enhance Support" #[StashItem] == "true"////增幅輔助不撿不存倉
 [Type] == "Enlighten Support" #[StashItem] == "true"////啟蒙輔助拾取且存倉
 [Type] == "The Apothecary" #[StashItem] == "true"////(魔血 5/5)拾取且存倉
+[Type]=="The Price of Devotion" #[StashItem] == "true"	//	//奉獻的價格(汙染魔血)
 [Type] =="Incandescent Invitation" #[StashItem] == "true" ////熾熱之邀拾取且存倉
 //[Type] =="Polaric Invitation" #[StashItem] == "true" ////極地之邀不撿不存倉
 [Type] == "Screaming Invitation" #[StashItem] == "true" ////尖哮之邀拾取且存倉
