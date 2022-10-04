@@ -21,7 +21,8 @@
 [Type]=="Gemcutter's Mercy" #	[StashItem]	 == "true"	//	//寶石切割者的憐憫(卓越寶石)	拾取且存倉
 //[Type] == "Awakened Sextant" # 	[StashItem]	 == "true"	//	//製圖六分儀．覺醒	拾取且存倉
 //[Type] == "Stacked Deck" # 	[StashItem]	 == "true"	//	//豐裕牌組	拾取且存倉
-
+[Type]=="The Shieldbearer" #	[StashItem]	 == "true"	//	//持盾者(大地主)	拾取且存倉
+[Type] == "The Destination" #	[StashItem]	 == "true"	//	//(看守之眼, 2個汙染詞綴 9/9)	拾取且存倉
 //[Type] == "Lingering Remnants" # [StashItem] == "true" // 殘墟 拾取且存倉
 
 
