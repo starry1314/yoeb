@@ -40,7 +40,9 @@
 [Type]=="Oubliette Reliquary Key" # [StashItem]  == "true" // 
 [Type]=="Cosmic Reliquary Key" # [StashItem]  == "true" // 
 [Type]=="Decaying Reliquary Key" # [StashItem]  == "true" //
+//輿圖裝
 
+[Type] == "Dragonscale Boots" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 暗雷 鞋
 //編輯時間：2022/9/7
 [Type]=="Tainted Chromatic Orb" # [StashItem]  == "true"
 [Type]=="Tainted Orb of Fusing" # [StashItem]  == "true"
