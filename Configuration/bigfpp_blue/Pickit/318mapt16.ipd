@@ -2,31 +2,18 @@
 //[Type] == "Feathered Arrow Quiver" &&  [Rarity] == "Unique" # [base_cast_speed_+%] >= "1" &&   [ForceSellItem]	 == "true" //
 //[Type] == "Feathered Arrow Quiver" &&  [Rarity] == "Unique" # [local_display_grants_skill_call_of_steel] >= "1" &&   [ForceSellItem]	 == "true" //
 
-[Type] =="Maven's Invitation: The Elderslayers" #	[StashItem]	 == "true" 		//殺手	拾取且存倉
+
+//＝＝＝＝＝＝＝＝＝釋界之邀＝＝＝＝＝＝＝＝
+[Type] =="Maven's Invitation: The Elderslayers" #	[StashItem]	 == "true" 		//釋界之邀:尊師殺手	拾取且存倉
 //[Type] =="Maven's Invitation: The Forgotten" #	[StashItem]	 == "true" 		//釋界之邀：遺忘	拾取且存倉
 //[Type] =="Maven's Invitation: The Formed" #	[StashItem]	 == "true" 		//釋界之邀：塑型	拾取且存倉
 [Type] =="Maven's Invitation: The Twisted" #	[StashItem]	 == "true" 		//釋界之邀：扭曲	拾取且存倉
-//[Type] == "Mortal Grief"             # 	[StashItem]	 == "true" 	//	//凡人的哀傷	拾取且存倉
-//[Type] == "Mortal Rage"              # 	[StashItem]	 == "true" 	//	//凡人的憤怒	拾取且存倉
-//[Type] == "Mortal Ignorance"         # 	[StashItem]	 == "true" 	//	//凡人的無知	拾取且存倉
-//[Type] == "Mortal Hope"              # 	[StashItem]	 == "true" 	//	//凡人的希望	拾取且存倉
-//[Type] == "Sacrifice at Dawn"        # 	[StashItem]	 == "true" 	//	//黎明的奉獻	拾取且存倉
-//[Type] == "Sacrifice at Noon"        # 	[StashItem]	 == "true" 	//	//正午的奉獻	拾取且存倉
-//[Type] == "Sacrifice at Dusk"        # 	[StashItem]	 == "true" 	//	//黃昏的奉獻	拾取且存倉
-//[Type] == "Sacrifice at Midnight"    # 	[StashItem]	 == "true" 	//	//午夜的奉獻	拾取且存倉
-//[Type] == "Lingering Remnants" # 	[StashItem]	 == "true" // 1.0 C	//	殘墟(瓦爾密殿-物品等級:83-已汙染)	拾取且存倉
-//[Type] == "Last Hope" # 	[StashItem]	 == "true" // 1.0 C	//	最後希望(凡人的希望)	拾取且存倉
-//[Type] == "Sambodhi's Vow" # 	[StashItem]	 == "true" // 1.0 C	//	菩提誓約(凡人碎片)	拾取且存倉
-//[Type]=="Something Dark" #	[StashItem]	 == "true"	//	//黑暗的東西(藍圖)	拾取且存倉
-[Type]=="Gemcutter's Mercy" #	[StashItem]	 == "true"	//	//寶石切割者的憐憫(卓越寶石)	拾取且存倉
-[Type] == "Awakened Sextant" # 	[StashItem]	 == "true"	//	//製圖六分儀．覺醒	拾取且存倉
-//[Type] == "Stacked Deck" # 	[StashItem]	 == "true"	//	//豐裕牌組	拾取且存倉
-[Type]=="The Shieldbearer" #	[StashItem]	 == "true"	//	//持盾者(大地主)	拾取且存倉
-[Type] == "The Destination" #	[StashItem]	 == "true"	//	//(看守之眼, 2個汙染詞綴 9/9)	拾取且存倉
-//[Type] == "Lingering Remnants" # [StashItem] == "true" // 殘墟 拾取且存倉
-
-
-
+//＝＝＝＝＝＝＝＝＝綠門＝＝＝＝＝＝＝＝
+[Type] == "Mortal Grief"             # 	[StashItem]	 == "true" 	//	//凡人的哀傷	拾取且存倉
+[Type] == "Mortal Rage"              # 	[StashItem]	 == "true" 	//	//凡人的憤怒	拾取且存倉
+[Type] == "Mortal Ignorance"         # 	[StashItem]	 == "true" 	//	//凡人的無知	拾取且存倉
+[Type] == "Mortal Hope"              # 	[StashItem]	 == "true" 	//	//凡人的希望	拾取且存倉
+//＝＝＝＝＝＝＝哀哈記憶＝＝＝＝＝＝＝＝
 //[Type]=="Niko's Memory" # [StashItem]  == "true" // 
 //[Type]=="Alva's Memory" # [StashItem]  == "true" // 
 //[Type]=="Kirac's Memory" # [StashItem]  == "true" // 
@@ -40,63 +27,24 @@
 [Type]=="Oubliette Reliquary Key" # [StashItem]  == "true" // 
 [Type]=="Cosmic Reliquary Key" # [StashItem]  == "true" // 
 [Type]=="Decaying Reliquary Key" # [StashItem]  == "true" //
-//輿圖裝
-
-[Type] == "Dragonscale Boots" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 暗雷 鞋
-//編輯時間：2022/9/7
-[Type]=="Tainted Chromatic Orb" # [StashItem]  == "true"
-[Type]=="Tainted Orb of Fusing" # [StashItem]  == "true"
-[Type]=="Tainted Jeweller's Orb" # [StashItem]  == "true"
-[Type]=="Tainted Chaos Orb" # [StashItem]  == "true"
-[Type]=="Tainted Exalted Orb" # [StashItem]  == "true"
-[Type]=="Tainted Mythic Orb" # [StashItem]  == "true"
-[Type]=="Tainted Armourer's Scrap" # [StashItem]  == "true"
-[Type]=="Tainted Blacksmith's Whetstone" # [StashItem]  == "true"
-[Type]=="Tainted Divine Teardrop" # [StashItem]  == "true"
- 
- 
- 
- //=====高價命運卡==========
-[Type]=="The Price of Devotion" #	[StashItem]	 == "true"	//	//奉獻的價格(汙染魔血)
-//=====高價命運卡==========
-
- //編輯時間：2022/7/5 ex比水餃便宜的季末
-[Type] == "Orb of Alteration" # [StashItem] == "true"////改造石拾取且存倉
-[Type] == "Chaos Orb" # [StashItem] == "true"////混沌石拾取且存倉
-[Type] == "Divine Orb" # [StashItem] == "true"////神聖石拾取且存倉
-[Type] == "Exalted Orb" # [StashItem] == "true"////崇高石拾取且存倉
-[Type] == "Mirror of Kalandra" # [StashItem] == "true"////卡蘭德的魔鏡拾取且存倉
-[Type] == "Ancient Orb"# [StashItem] == "true"////古變石拾取且存倉
-[Type] == "Mirror Shard"# [StashItem] == "true"////魔鏡碎片拾取且存倉
-//[Type] == "Ancient Shard"# [StashItem] == "true"////古變石碎片拾取且存倉
-[Type] == "Exalted Shard"# [StashItem] == "true"////崇高石碎片拾取且存倉
-//[Type] == "Orb of Regret"# [StashItem] == "true"////後悔石拾取且存倉
-//[Type] == "Orb of Unmaking"# [StashItem] == "true"////撤銷石拾取且存倉
-//[Type] == "Orb of Horizons"# [StashItem] == "true"////地平石拾取且存倉
-//[Type] == "Enkindling Orb"# [StashItem] == "true"////點燃石拾取且存倉
-[Type] == "Orb of Annulment"# [StashItem] == "true"////無效 拾取且存倉
-[Type] == "Orb of Scouring"# [StashItem] == "true"////重鑄 拾取且存倉
-//[Type] == "Gemcutter's Prism"# [StashItem] == "true"////GCP 拾取且存倉
-//[Type] == "Regal Orb" # [StashItem] == "true"////富豪
-[Type] == "Awakened Sextant" # [StashItem] == "true"////六分
-[Type] == "Timeless Eternal Empire Splinter" # [StashItem] == "true"////永恆不朽帝國裂片不撿不存倉
-[Type] == "Timeless Karui Splinter"# [StashItem] == "true"////永恆卡魯裂片不撿不存倉
-[Type] == "Timeless Maraketh Splinter"# [StashItem] == "true"////永恆馬拉克斯裂片拾取且存倉
-[Type] == "Timeless Templar Splinter"# [StashItem] == "true"////永恆聖宗裂片拾取且存倉
-[Type] == "Timeless Vaal Splinter" # [StashItem] == "true"////永恆瓦爾裂片不撿不存倉
-[Type] == "Timeless Eternal Emblem" # [StashItem] == "true"////永恆不朽帝國徽印拾取且存倉
-[Type] == "Timeless Karui Emblem"# [StashItem] == "true"////永恆卡魯徽印拾取且存倉
-[Type] == "Timeless Maraketh Emblem" # [StashItem] == "true"////永恆馬拉克斯徽印拾取且存倉
-[Type] == "Timeless Templar Emblem" # [StashItem] == "true"////永恆聖宗徽印拾取且存倉
-[Type] == "Timeless Vaal Emblem"# [StashItem] == "true"////永恆瓦爾徽印拾取且存倉
-//[Type] == "Empower Support" #[StashItem] == "true"////賦予輔助拾取且存倉
-//[Type] == "Enhance Support" #[StashItem] == "true"////增幅輔助不撿不存倉
-[Type] == "Enlighten Support" #[StashItem] == "true"////啟蒙輔助拾取且存倉
-[Type] == "The Apothecary" #[StashItem] == "true"////(魔血 5/5)拾取且存倉
+//＝＝＝＝＝＝＝門票＝＝＝＝＝＝＝＝
 [Type] =="Incandescent Invitation" #[StashItem] == "true" ////熾熱之邀拾取且存倉
 //[Type] =="Polaric Invitation" #[StashItem] == "true" ////極地之邀不撿不存倉
 [Type] == "Screaming Invitation" #[StashItem] == "true" ////尖哮之邀拾取且存倉
 //[Type] =="Writhing Invitation" #[StashItem] == "true" ////纏繞之邀不撿不存倉
+//＝＝＝＝＝＝＝卡片＝＝＝＝＝＝＝＝
+//[Type]=="Something Dark" #	[StashItem]	 == "true"	//	//黑暗的東西(藍圖)	拾取且存倉
+[Type]=="Gemcutter's Mercy" #	[StashItem]	 == "true"	//	//寶石切割者的憐憫(卓越寶石)	拾取且存倉
+[Type] == "Awakened Sextant" # 	[StashItem]	 == "true"	//	//製圖六分儀．覺醒	拾取且存倉
+//[Type] == "Stacked Deck" # 	[StashItem]	 == "true"	//	//豐裕牌組	拾取且存倉
+
+
+ //=====高價命運卡==========
+[Type]=="The Price of Devotion" #	[StashItem]	 == "true"	//	//奉獻的價格(汙染魔血)
+[Type]=="The Shieldbearer" #	[StashItem]	 == "true"	//	//持盾者(大地主)	拾取且存倉
+[Type] == "The Destination" #	[StashItem]	 == "true"	//	//(看守之眼, 2個汙染詞綴 9/9)	拾取且存倉
+[Type] == "The Apothecary" #[StashItem] == "true"////(魔血 5/5)拾取且存倉
+
 [Type] == "Humility" # [StashItem] == "true" // 1.0 C//謙遜(無盡之衣)拾取且存倉
 [Type] == "House of Mirrors" # [StashItem] == "true" // 2220 C//明鏡(卡蘭德的魔鏡)拾取且存倉30E
 [Type] == "The Doctor" # [StashItem] == "true" // 1536 C//瘋醫(獵首)拾取且存倉8E
@@ -129,10 +77,86 @@
 [Type] == "The Patient" # [StashItem] == "true" // 18.0 C//病患拾取且存倉病患
 [Type] == "Council of Cats" # [StashItem] == "true" // 10.0 C//貓咪議會(費爾羅之物)拾取且存倉貓貓
 [Type] == "The Hoarder" # [StashItem] == "true" // 8.0 C//寶箱(崇高石)拾取且存倉ex
+//=====高價命運卡==========
+
+
+
+
+//＝＝＝＝＝＝＝＝＝閃打輿圖裝＝＝＝＝＝＝＝＝
+//深淵之喚 艾茲麥堅盔	大於４５物點　　＜１２0％護甲
+[Type] == "Ezomyte Burgonet" && [Rarity] == "Unique" # [physical_damage_taken_+%] > "45" && [melee_weapon_critical_strike_multiplier_+] < "120" && [StashItem] == "true" // Abyssus				
+// 暗雷 鞋子
+[Type] == "Dragonscale Boots" && [Rarity] == "Unique" # 	[StashItem]	 == "true" 
+// 獵人的獎賞(元素之章)	卡片
+[Type] == "Hunter's Reward" # 	[StashItem]	 == "true" // 8.0 C	//	獵人的獎賞(元素之章)	拾取且存倉
+//沙塵之影 環帶護手	
+[Type] == "Clasped Mitts" && [Rarity] == "Unique" # [gain_unholy_might_on_rampage_threshold_ms] >= "1" && [StashItem] == "true" // Shadows and Dust
+//瑞斯拉薩之纏 扣釘腰帶	拾取且存倉	
+[Type]== "Studded Belt" && [Rarity] == "Unique" # [gain_X_life_on_stun] >= "1" && [StashItem] == "true" // Ryslatha's Coil	
+
+
+//傳奇藥劑-獅吼精華	拾取且售出
+[Type] == "Granite Flask" && [Rarity] == "Unique" # [local_unique_lions_roar_melee_physical_damage_+%_final_during_flask_effect] >= "1" && [StashItem] == "true" //				
+//普通藥劑
+	 [Type] == "Bismuth Flask" # 	[StashItem]	 == "true" 	//	//灰岩藥劑	
+//	 [Type] == "Stibnite Flask" # 	[StashItem]	 == "true" 	//	//迷霧藥劑	
+//	 [Type] == "Amethyst Flask" # 	[StashItem]	 == "true" 	//	//紫晶藥劑	
+
+ //＝＝＝＝＝＝＝＝＝輿圖拾取＝＝＝＝＝＝＝＝
 [Category] == "Map" && [MapTier] >= "1"  && [Rarity] == "Normal"  #[StashItem] == "true" // //普通地圖普通地圖撿取，普通地圖存倉
 [Category] == "Map" && [MapTier] >= "1"  && [Rarity] == "Magic"  #[StashItem] == "true" // //藍地圖藍地圖撿取，藍地圖存倉
 [Category] == "Map" && [MapTier] >= "1"  && [Rarity] == "Rare"  #[StashItem] == "true" // //黃地圖黃地圖不撿，黃地圖售出
 //[Category] == "Map" && [MapTier] >= "1"  && [Rarity] == "Unique"  #[ForceSellItem] == "true" // //傳奇地圖傳奇地圖不撿，傳奇地圖售出
+				
+
+ //＝＝＝＝＝＝＝＝＝被污染的＝＝＝＝＝＝＝＝
+[Type]=="Tainted Chromatic Orb" # [StashItem]  == "true"
+[Type]=="Tainted Orb of Fusing" # [StashItem]  == "true"
+[Type]=="Tainted Jeweller's Orb" # [StashItem]  == "true"
+[Type]=="Tainted Chaos Orb" # [StashItem]  == "true"
+[Type]=="Tainted Exalted Orb" # [StashItem]  == "true"
+[Type]=="Tainted Mythic Orb" # [StashItem]  == "true"
+[Type]=="Tainted Armourer's Scrap" # [StashItem]  == "true"
+[Type]=="Tainted Blacksmith's Whetstone" # [StashItem]  == "true"
+[Type]=="Tainted Divine Teardrop" # [StashItem]  == "true"
+
+ 
+
+
+ //編輯時間：2022/7/5 ex比水餃便宜的季末
+[Type] == "Orb of Alteration" # [StashItem] == "true"////改造石拾取且存倉
+[Type] == "Chaos Orb" # [StashItem] == "true"////混沌石拾取且存倉
+[Type] == "Divine Orb" # [StashItem] == "true"////神聖石拾取且存倉
+[Type] == "Exalted Orb" # [StashItem] == "true"////崇高石拾取且存倉
+[Type] == "Mirror of Kalandra" # [StashItem] == "true"////卡蘭德的魔鏡拾取且存倉
+[Type] == "Ancient Orb"# [StashItem] == "true"////古變石拾取且存倉
+[Type] == "Mirror Shard"# [StashItem] == "true"////魔鏡碎片拾取且存倉
+//[Type] == "Ancient Shard"# [StashItem] == "true"////古變石碎片拾取且存倉
+[Type] == "Exalted Shard"# [StashItem] == "true"////崇高石碎片拾取且存倉
+//[Type] == "Orb of Regret"# [StashItem] == "true"////後悔石拾取且存倉
+//[Type] == "Orb of Unmaking"# [StashItem] == "true"////撤銷石拾取且存倉
+//[Type] == "Orb of Horizons"# [StashItem] == "true"////地平石拾取且存倉
+//[Type] == "Enkindling Orb"# [StashItem] == "true"////點燃石拾取且存倉
+[Type] == "Orb of Annulment"# [StashItem] == "true"////無效 拾取且存倉
+[Type] == "Orb of Scouring"# [StashItem] == "true"////重鑄 拾取且存倉
+//[Type] == "Gemcutter's Prism"# [StashItem] == "true"////GCP 拾取且存倉
+[Type] == "Regal Orb" # [StashItem] == "true"////富豪
+[Type] == "Awakened Sextant" # [StashItem] == "true"////六分
+[Type] == "Timeless Eternal Empire Splinter" # [StashItem] == "true"////永恆不朽帝國裂片不撿不存倉
+[Type] == "Timeless Karui Splinter"# [StashItem] == "true"////永恆卡魯裂片不撿不存倉
+[Type] == "Timeless Maraketh Splinter"# [StashItem] == "true"////永恆馬拉克斯裂片拾取且存倉
+[Type] == "Timeless Templar Splinter"# [StashItem] == "true"////永恆聖宗裂片拾取且存倉
+[Type] == "Timeless Vaal Splinter" # [StashItem] == "true"////永恆瓦爾裂片不撿不存倉
+[Type] == "Timeless Eternal Emblem" # [StashItem] == "true"////永恆不朽帝國徽印拾取且存倉
+[Type] == "Timeless Karui Emblem"# [StashItem] == "true"////永恆卡魯徽印拾取且存倉
+[Type] == "Timeless Maraketh Emblem" # [StashItem] == "true"////永恆馬拉克斯徽印拾取且存倉
+[Type] == "Timeless Templar Emblem" # [StashItem] == "true"////永恆聖宗徽印拾取且存倉
+[Type] == "Timeless Vaal Emblem"# [StashItem] == "true"////永恆瓦爾徽印拾取且存倉
+//[Type] == "Empower Support" #[StashItem] == "true"////賦予輔助拾取且存倉
+//[Type] == "Enhance Support" #[StashItem] == "true"////增幅輔助不撿不存倉
+[Type] == "Enlighten Support" #[StashItem] == "true"////啟蒙輔助拾取且存倉
+
+
  [Sockets] == "6" && [Linked] >= "6"   #[ForceSellItem] == "true" // //六連全賣
 //20220821	//以下是 獵首的親兄弟，除了獵首通通賣掉																											
 	[Type] == "Leather Belt" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 		//皮革腰帶 基底																							
@@ -211,7 +235,8 @@
 	[Type] == "Steel Kite Shield" && [Rarity] == "Unique" # [keystone_corrupted_defences] >= "1" && 	[ForceSellItem]	 == "true" // 		瑪哈薩多																							
 	//歐喙=1.5D																											
 //	[Type] == "Raven Mask" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 		//鷗喙 禍鴉之面
-	//水道仔或閃打仔會用到的散件																											
+
+//水道仔或閃打仔會用到的散件																											
 	//熊頭 鳥頭																											
 //	[Type] == "Silken Hood" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
 //	[Type] == "Silken Hood" && [Rarity] == "Unique" # [evasion_rating_+%_when_on_low_life] >= "1" && 	[ForceSellItem]	 == "true" // 		//斯塔空加之首 綢緞之兜																							
