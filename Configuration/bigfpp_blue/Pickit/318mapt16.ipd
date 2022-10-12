@@ -84,13 +84,13 @@
 
 //＝＝＝＝＝＝＝＝＝閃打輿圖裝＝＝＝＝＝＝＝＝
 //深淵之喚 艾茲麥堅盔	大於４５物點　　＜１２0％護甲
-[Type] == "Ezomyte Burgonet" && [Rarity] == "Unique" # [physical_damage_taken_+%] > "45" && [melee_weapon_critical_strike_multiplier_+] < "120" && [StashItem] == "true" // Abyssus				
+//[Type] == "Ezomyte Burgonet" && [Rarity] == "Unique" # [physical_damage_taken_+%] > "45" && [melee_weapon_critical_strike_multiplier_+] < "120" && [StashItem] == "true" // Abyssus				
 // 暗雷 鞋子
-[Type] == "Dragonscale Boots" && [Rarity] == "Unique" # 	[StashItem]	 == "true" 
+//[Type] == "Dragonscale Boots" && [Rarity] == "Unique" # 	[StashItem]	 == "true" 
 // 獵人的獎賞(元素之章)	卡片
 [Type] == "Hunter's Reward" # 	[StashItem]	 == "true" // 8.0 C	//	獵人的獎賞(元素之章)	拾取且存倉
 //沙塵之影 環帶護手	
-[Type] == "Clasped Mitts" && [Rarity] == "Unique" # [gain_unholy_might_on_rampage_threshold_ms] >= "1" && [StashItem] == "true" // Shadows and Dust
+//[Type] == "Clasped Mitts" && [Rarity] == "Unique" # [gain_unholy_might_on_rampage_threshold_ms] >= "1" && [StashItem] == "true" // Shadows and Dust
 //瑞斯拉薩之纏 扣釘腰帶	拾取且存倉	
 [Type]== "Studded Belt" && [Rarity] == "Unique" # [gain_X_life_on_stun] >= "1" && [StashItem] == "true" // Ryslatha's Coil	
 
