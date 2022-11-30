@@ -1,0 +1,1 @@
+xcopy C:\Users\Administrator\Desktop\yoeb-main\TOOLBOX\PathOfExile.exe C:\Users\Administrator\Desktop\PoeBG\ /y
