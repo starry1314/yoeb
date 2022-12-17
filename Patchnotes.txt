@@ -1,28 +1,3 @@
-v0.89
-Fixed offsets for game version 3.18.0.
-
-v0.88j
-Fixed map non-stop reseting issue.
-
-v0.88i
-Fixed offsets for game version 3.17.4.
-
-v0.88h
-Fixed gem leveling (and crash).
-
-v0.88g
-Fixed golem summoning.
-Fixed mirrored and corrupted items detection.
-
-v0.88f
-Fixed offsets for game version 3.17.3.
-
-v0.88e
-Fixed offsets for game version 3.17.2.
-Archnemesis monster state should be detected properly.
-Fixed mods indexes.
-Fixed waypoint state detection.
-
 v0.88d
 Fixed offsets for game version 3.17.1b.
 
