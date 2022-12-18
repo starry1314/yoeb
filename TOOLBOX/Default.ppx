@@ -14,17 +14,7 @@
 		<HandleDirectConnections enabled="false" />
 		<HttpProxiesSupport enabled="false" />
 	</Options>
-	<ProxyList>
-		<Proxy id="100" type="SOCKS5">
-			<Authentication enabled="true">
-				<Password>AAACwSpMKDNaY7GZ1LVQiDWJ85IW0gH3/rrmQfX3IAiazyY=</Password>
-				<Username>451p1</Username>
-			</Authentication>
-			<Options>48</Options>
-			<Port>41020</Port>
-			<Address>1.34.189.20</Address>
-		</Proxy>
-	</ProxyList>
+	<ProxyList />
 	<ChainList />
 	<RuleList>
 		<Rule enabled="true">
@@ -38,7 +28,7 @@
 			<Name>New</Name>
 		</Rule>
 		<Rule enabled="true">
-			<Action type="Proxy">100</Action>
+			<Action type="Direct" />
 			<Name>Default</Name>
 		</Rule>
 	</RuleList>
