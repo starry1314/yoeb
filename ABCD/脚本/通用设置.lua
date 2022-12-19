@@ -165,8 +165,8 @@ SetZhongShenData("Lunaris","Gruthkul")--设置月影女神之魂与绝望之母 格鲁丝克之魂
 -------注意要大类在前 小类 单独设置在后面添加
 SetSaveIndex("生命药剂|魔力药剂|复合药剂|功能药剂","1|2")
 SetSaveIndex("通货|可堆叠通货|异界图鉴升级物品","1|2")
-SetSaveIndex("异界地图|命运卡","3")
-SetSaveIndex("项链|戒指|爪|匕首|法杖|单手剑|细剑|单手斧|单手锤|符文匕首|短杖|战杖|弓|长杖|双手剑|双手斧|双手锤|腰带|手套|鞋子|头盔","3")
+SetSaveIndex("异界地图|命运卡","2|3")
+SetSaveIndex("项链|戒指|爪|匕首|法杖|单手剑|细剑|单手斧|单手锤|符文匕1首|短杖|战杖|弓|长杖|双手剑|双手斧|双手锤|腰带|手套|鞋子|头盔","3|4")
 SetSaveIndex("主动技能宝石|辅助技能宝石|珠宝|衣服|盾|箭袋|地图碎片","3")
 SetSaveIndex("HeistBlueprint","1|2")--蓝图
 SetSaveIndex("ExpeditionLogbook","1|2")--探險日誌
