@@ -50,6 +50,8 @@ SetGameMode(1)----mode 数字型 游戏模式 0为自动 1为预测 2为同步 默认为同步模式
 --endHour 数字型 结束交易的小时
 AddJiaoYiTime(23,8)--晚上11点到8点前会检测交易
 SetSaveIndex("通货|可堆叠通货|异界图鉴升级物品","1|2",nil,nil,nil,nil,nil,true)--公会仓库集货时所存到的页面
+SetSaveIndex("命运卡","1|2",nil,nil,nil,nil,nil,true)
+SetSaveIndex("HeistBlueprint","1|2",nil,nil,nil,nil,nil,true)--蓝图
 AddJiaoYiBossName("fanst",nil,nil,nil,true)--设置公会仓库方式集货 仓库号要求是公会干部或会长才可以
 
 --SetAtlasRegionsUseShouWangShiCnt("0|1|2|3|4|5|6|7",2)--设置异界区域放几个守望石
