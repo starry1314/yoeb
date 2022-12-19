@@ -38,7 +38,7 @@ SetGameMode(1)----mode 数字型 游戏模式 0为自动 1为预测 2为同步 默认为同步模式
 
 
 --集货boss名 字符串型
---AddJiaoYiBossName(bossName,computerName,mohu) 添加仓库号
+--AddJiaoYiBossName(fanst,computerName,mohu) 添加仓库号
 --bossName 仓库号名字 
 --computerName 电脑名 单独为某台电脑指定不同的仓库号 忽略填nil
 --mohu true为模糊匹配 false 或 nil 或不填为完整匹配
@@ -48,7 +48,7 @@ SetGameMode(1)----mode 数字型 游戏模式 0为自动 1为预测 2为同步 默认为同步模式
 --AddJiaoYiTime(startHour,endHour)--添加交易时间段大于等于startHour 并且小于等于endHour 时会检测交易
 -- StartHour 数字型 开始交易的小时 
 --endHour 数字型 结束交易的小时
---AddJiaoYiTime(23,8)--晚上11点到8点前会检测交易
+AddJiaoYiTime(23,8)--晚上11点到8点前会检测交易
 SetSaveIndex("通货|可堆叠通货|异界图鉴升级物品","1|2",nil,nil,nil,nil,nil,true)--公会仓库集货时所存到的页面
 AddJiaoYiBossName("fanst",nil,nil,nil,true)--设置公会仓库方式集货 仓库号要求是公会干部或会长才可以
 
