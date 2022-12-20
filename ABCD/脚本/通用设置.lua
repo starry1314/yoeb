@@ -927,8 +927,8 @@ AddJiaoYiTime(0,24)--晚上11点到8点前会检测交易
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --公会仓库存仓
 
-SetSaveIndex("通货|可堆叠通货","17|17|17|16|16|16|16",nil,nil,nil,nil,nil,true)
-SetSaveIndex("命运卡","13|13|2|3|5|6|4",nil,nil,nil,nil,nil,true)
+SetSaveIndex("通货|可堆叠通货","1|2|7|16|16|16|16",nil,nil,nil,nil,nil,true)
+SetSaveIndex("命运卡","13|1|2|3|5|6|4",nil,nil,nil,nil,nil,true)
 SetSaveIndex("珠宝","14|14|14|2|2|3|4|5|6|4",nil,nil,nil,nil,nil,true)
 SetSaveIndex("爪|匕首|法杖|单手剑|细剑|单手斧|单手锤|符文匕首|短杖|战杖|弓|长杖|双手剑|双手斧|双手锤|箭袋|手套|衣服|盾|腰带|鞋子|头盔|","14|14|14|2|2|19|4",nil,nil,nil,nil,nil,true)
 SetSaveIndex("生命药剂|魔力药剂|复合药剂|功能药剂","14|14|14|2|3|4|5|6",nil,nil,nil,nil,nil,true)
@@ -944,6 +944,7 @@ SetSaveIndex(nil,"7|8|9|10|11|16|17|18",nil,"Metadata/Items/Currency/CurrencyRer
 SetSaveIndex(nil,"17|17",nil,"Metadata/Items/Currency/CurrencyAddModToRareShard",nil,nil,nil,true)--崇高石碎片
 SetSaveIndex(nil,"7|8|9|10|11|16|17|18",nil,"Metadata/Items/Currency/CurrencyRerollRareShard",nil,nil,nil,true)--混沌石碎片
 SetSaveIndex(nil,"7|8|9|10|11|16|17|18",nil,"Metadata/Items/Currency/CurrencyRerollMagicShard",nil,nil,nil,true)--改造石碎片
+SetSaveIndex(nil,"7|8|9|10|11|16|17|18",nil,"Metadata/Items/Currency/CurrencyRerollMagic",nil,nil,nil,true)--改造石
 
 --SetSaveIndex(nil,"14",nil,"Metadata/Items/Currency/CurrencyEnkindlingOrb",nil,nil,nil,true)--點燃石
 --SetSaveIndex(nil,"14",nil,"Metadata/Items/Currency/CurrencyInstillingOrb",nil,nil,nil,true)--滴注石
