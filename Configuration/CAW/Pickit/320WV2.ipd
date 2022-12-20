@@ -176,8 +176,8 @@
 	[Type] == "Cartographer's Chisel" # 	[StashItem]	 == "true"	//	//製圖釘	拾取且存倉
 	[Type] == "Orb of Annulment"         # 	[StashItem]	 == "true"	//	//無效石	拾取且存倉
 //	[Type] == "Orb of Binding"                 # 	[StashItem]	 == "true"	//	//束縛石	不撿不存倉
-//	[Type] == "Orb of Horizons"         # 	[StashItem]	 == "true"	//	//地平石	不撿不存倉
-//	[Type] == "Harbinger's Orb"         # 	[StashItem]	 == "true"	//	//神諭石	不撿不存倉
+	[Type] == "Orb of Horizons"         # 	[StashItem]	 == "true"	//	//地平石	不撿不存倉
+	[Type] == "Harbinger's Orb"         # 	[StashItem]	 == "true"	//	//神諭石	不撿不存倉
 //	[Type] == "Engineer's Orb"                 # 	[StashItem]	 == "true"	//	//工程石	不撿不存倉
 	[Type] == "Ancient Orb"                 # 	[StashItem]	 == "true"	//	//古變石	拾取且存倉
 	[Type] == "Annulment Shard"         # 	[StashItem]	 == "true"	//	//無效石碎片	拾取且存倉
