@@ -61,7 +61,7 @@ g_notShuaBaiPao=true                    --是否不需要刷白袍 true为不需要 false或n
 --SetHaveLingTiBossName(bossName,minLv)--设置灵体仓库号 如果灵体号的灵体比身上的更好，他就会去灵体号所在位置召唤灵体
 --bossName 字符串型 灵体仓库号的名字
 --minLv 数字型 满多少级才会去仓库号家召唤 nil为忽略等级总是去
-SetHaveLingTiBossName("55555",nil)
+--SetHaveLingTiBossName("55555",nil)
 
 SetYiJieShuaTuModeByMapCnt(20,nil,2)--仓库中地图数量满20 启用速刷 直通boss
 SetYiJieShuaTuModeByMapCnt(10,0.6,0)--仓库中地图数量满10 刷6成 且要打完BOSS
@@ -915,7 +915,7 @@ SetGoodsCaoZuo(nil,"1|3","附魔化石","Metadata/Items/Currency/CurrencyDelveCrafti
 --endHour 数字型 结束交易的小时
 AddJiaoYiTime(0,24)--晚上11点到8点前会检测交易
 
-AddJiaoYiBossName("走走停停的爱情",nil,nil,nil,true)
+AddJiaoYiBossName("fanst",nil,nil,nil,true)
 
 
 --AddJiaoYiTime(startHour,endHour)--添加交易时间段大于等于startHour 并且小于等于endHour 时会检测交易
