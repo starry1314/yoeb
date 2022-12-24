@@ -655,9 +655,9 @@ SetGoodsCaoZuo(nil,"3","幻色石","Metadata/Items/Currency/CurrencyRerollSocketCol
 
 
 
-SetGoodsCaoZuo("契约","0|2",nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,function(r)return r.lv>85 end)
+SetGoodsCaoZuo("契约","0|2",nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,function(r)return r.lv>68 end)
 SetGoodsCaoZuo(nil,"0","赏金猎人印记","Metadata/Items/Heist/HeistCoin")--只捡不存夺宝币
--- SetGoodsCaoZuo(nil,nil,"赏金猎人印记","Metadata/Items/Heist/HeistCoin",nil,nil,nil,10000)--够了就不捡了
+SetGoodsCaoZuo(nil,nil,"赏金猎人印记","Metadata/Items/Heist/HeistCoin",nil,nil,nil,30000)--够了就不捡了
 
 
 SetGoodsCaoZuo(nil,"3",nil,"Metadata/Items/Heist/HeistBlueprintDungeon")--藍圖：實驗室
@@ -965,7 +965,7 @@ SetSaveIndex("DelveStackableSocketableCurrency","14|7|8|9|10|11",nil,nil,nil,nil
 
 SetSaveIndex(nil,"14|7|8|9|10|11",nil,"Metadata/Items/Metamorphosis/CurrencyItemisedProphecy",nil,nil,nil,true)--預言
 SetSaveIndex(nil,"14|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyItemisedCapturedMonster",nil,nil,nil,true)--拓印獸魂玉 enName:
-SetSaveIndex(nil,"14|7|8|9|10|11",nil,"Metadata/Items/Heist/HeistCoin",nil,nil,nil,true)--盜賊之印 enName:rogues-marker
+--SetSaveIndex(nil,"14|7|8|9|10|11",nil,"Metadata/Items/Heist/HeistCoin",nil,nil,nil,true)--盜賊之印 enName:rogues-marker
 --SetSaveIndex(nil,"14|14|14|14|14|2|2|1|5|6",nil,"Metadata/Items/Currency/CurrencyRitualStone",nil,nil,nil,true)--祭祀碑器
 
 SetSaveIndex(nil,"14|7|8|9|10|11",nil,"Metadata/Items/Belts/Belt3",nil,nil,nil,true)--皮革腰帶
