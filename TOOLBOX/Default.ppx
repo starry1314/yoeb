@@ -27,11 +27,7 @@
 			<Applications>sebarclt.exe</Applications>
 			<Name>New</Name>
 		</Rule>
-		  <Rule enabled="true">
-			<Action type="Direct" />
-			<Applications>svchost.exe</Applications>
-			<Name>New</Name>
-		</Rule>
+
 		<Rule enabled="true">
 			<Action type="Direct" />
 			<Name>Default</Name>
