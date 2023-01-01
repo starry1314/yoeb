@@ -1,1 +1,1 @@
-rasdial ¿í´øÁ¬½Ó 86231042@hinet.net d73a7d40
+rasdial vpn fan71 fanxing
