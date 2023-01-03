@@ -1,5 +1,6 @@
+[vpn]
 set NIC_name=VPN
 set user=
-set pass=
+set passwd=
 set serverip=
-rasdial %NIC_name% %user% %pass% /phone:%serverip%
+rasdial %NIC_name% %user% %passwd% /phone:%serverip%
