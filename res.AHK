@@ -587,7 +587,8 @@ goto,loginok
 }
 }
 loginok:
-
+WinActivate , %ggcgui%
+	Sleep 1000
 	Click,  733,30
 	Sleep 1000
 	Click,  733,30
