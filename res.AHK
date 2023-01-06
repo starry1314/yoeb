@@ -580,7 +580,7 @@ Loop
     If (ErrorLevel = 0)
     {
         ; If the image is found, display a message and exit the loop
-        MsgBox, The image was found at coordinates (%x%, %y%)
+FindText().Click(X, Y, "L")
         break
     }
 
@@ -590,7 +590,7 @@ Loop
     ; If the counter is 10 or greater, display a message and exit the loop
     If (counter >= 10)
     {
-        MsgBox, The image was not found after 10 searches.
+      
         break
     }
 
