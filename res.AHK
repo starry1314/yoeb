@@ -1,4 +1,4 @@
-﻿; #Include <FindText>
+; #Include <FindText>
 global allw = 0
 global err ="Error"
 global BOXTOPX = 25
@@ -576,11 +576,11 @@ counter = 0
 Loop
 {
     ; Search for the image on the screen
-    FindText(X, Y, 646-150000, 482-150000, 646+150000, 482+150000, 0, 0, Text)
+    ImageSearch, x, y, 0, 0, A_ScreenWidth, A_ScreenHeight, *20 C:\Users\Administrator\Desktop\yoeb-main\toolbox\cancel.png
     If (ErrorLevel = 0)
     {
         ; If the image is found, display a message and exit the loop
-FindText().Click(X, Y, "L")
+        MsgBox, The image was found at coordinates (%x%, %y%)
         break
     }
 
@@ -590,7 +590,7 @@ FindText().Click(X, Y, "L")
     ; If the counter is 10 or greater, display a message and exit the loop
     If (counter >= 10)
     {
-      
+        MsgBox, The image was not found after 10 searches.
         break
     }
 
@@ -598,8 +598,6 @@ FindText().Click(X, Y, "L")
     Sleep, 1000
 }
 
-
-WinActivate , %ggcgui%
 	Sleep 1000
 	Click,  733,30
 	Sleep 1000
