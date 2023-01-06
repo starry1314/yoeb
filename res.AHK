@@ -568,10 +568,10 @@ endrestime()
 	{
 	Sleep 4000
 	WinActivate , %ggcgui%
-	Sleep 7000
+	Sleep 10000
 	
-	loop
-{
+	
+
 t1:=A_TickCount, Text:=X:=Y:=""
 Text:="|<>**50$30.zs3zzkDuzRzE/PNTTjxTMPjs1TPyzxMPPTxTTHs1HRnTxyCnM1nQuzxzHSmx1DamV1wzyzU"
 if (ok:=FindText(X, Y, 646-150000, 482-150000, 646+150000, 482+150000, 0, 0, Text))
@@ -579,10 +579,10 @@ if (ok:=FindText(X, Y, 646-150000, 482-150000, 646+150000, 482+150000, 0, 0, Tex
 Send, {Esc}
 sleep, 1000
 
-goto,loginok
+
 }
-}
-loginok:
+
+
 
 	Click,  733,30
 	Sleep 1000
