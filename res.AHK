@@ -608,9 +608,10 @@ FindText().Click(X, Y, "L")
 sleep, 1000
 mousemove,542,40,speed,R
 click
-Break
+goto,loginok
 }
 
+loginok:
 	fpoeicon=0
 	Sleep 1000
 	WinActivate , %ggcgui%
