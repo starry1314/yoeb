@@ -1,4 +1,4 @@
-﻿*
+﻿
 ;===========================================
 ;  FindText - 屏幕抓字生成字庫工具與找字函數
 ;  https://autohotkey.com/boards/viewtopic.php?f=6&t=17834
