@@ -570,6 +570,20 @@ endrestime()
 	WinActivate , %ggcgui%
 	Sleep 7000
 	
+	loop
+{
+t1:=A_TickCount, Text:=X:=Y:=""
+Text:="|<>**50$30.zs3zzkDuzRzE/PNTTjxTMPjs1TPyzxMPPTxTTHs1HRnTxyCnM1nQuzxzHSmx1DamV1wzyzU"
+if (ok:=FindText(X, Y, 646-150000, 482-150000, 646+150000, 482+150000, 0, 0, Text))
+{
+Send, {Esc}
+sleep, 1000
+
+goto,loginok
+}
+}
+loginok:
+
 	Click,  733,30
 	Sleep 1000
 	Click,  733,30
@@ -599,19 +613,7 @@ endrestime()
 	Click, up
 	Sleep 5000
 	
-loop
-{
-t1:=A_TickCount, Text:=X:=Y:=""
-Text:="|<>**50$30.zs3zzkDuzRzE/PNTTjxTMPjs1TPyzxMPPTxTTHs1HRnTxyCnM1nQuzxzHSmx1DamV1wzyzU"
-if (ok:=FindText(X, Y, 646-150000, 482-150000, 646+150000, 482+150000, 0, 0, Text))
-{
-Send, {Esc}
-sleep, 1000
 
-goto,loginok
-}
-}
-loginok:
 	fpoeicon=0
 	Sleep 1000
 	WinActivate , %ggcgui%
