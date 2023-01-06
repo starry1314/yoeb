@@ -568,17 +568,35 @@ endrestime()
 	{
 	Sleep 4000
 	WinActivate , %ggcgui%
-	Sleep 2000
+	Sleep 1000
 
+; Set a counter to track the number of loops
+counter = 0
 
+Loop
+{
+    ; Search for the image on the screen
+    FindText(X, Y, 646-150000, 482-150000, 646+150000, 482+150000, 0, 0, Text)
+    If (ErrorLevel = 0)
+    {
+        ; If the image is found, display a message and exit the loop
+        MsgBox, The image was found at coordinates (%x%, %y%)
+        break
+    }
 
+    ; If the image is not found, increment the counter
+    counter++
 
-Send, {Esc}
-sleep 100
-Send, {Esc}
-sleep 100
-Send, {Esc}
+    ; If the counter is 10 or greater, display a message and exit the loop
+    If (counter >= 10)
+    {
+        MsgBox, The image was not found after 10 searches.
+        break
+    }
 
+    ; If the image is not found and the counter is less than 10, wait for a second and then check again
+    Sleep, 1000
+}
 
 
 WinActivate , %ggcgui%
