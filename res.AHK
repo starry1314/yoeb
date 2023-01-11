@@ -1,4 +1,9 @@
-; #Include <FindText>
+﻿;請確保下段程式碼在腳本最頂部
+SysGet, VirtualHeight, 79
+SysGet, VirtualWidth, 78
+SysGet, VirtualX, 76
+SysGet, VirtualY, 77
+;=====================
 global allw = 0
 global err ="Error"
 global BOXTOPX = 25
@@ -232,8 +237,6 @@ if(sk5mod==1)
 {
 
 FileDelete, C:\Users\Administrator\AppData\Roaming\Proxifier4\Profiles\Default.ppx
-sleep 500
-Filecopy, C:\Users\Administrator\Desktop\yoeb-main\toolbox\Default.ppx ,C:\Users\Administrator\AppData\Roaming\Proxifier4\Profiles\Default.ppx,1
 
 sleep 2000
 run C:\Program Files (x86)\Proxifier\Proxifier.exe
@@ -562,43 +565,44 @@ endrestime()
 	}
 	}
 
+loop_time_int_489:=5
+Loop %loop_time_int_489% {
+    Sleep % 1000
+    __ImageFilePath:=A_ScriptDir . "\" . "\toolbox\cancel.png"
+    gui,add,picture,hwnd__mypic,%__ImageFilePath%
+    if FileExist(__ImageFilePath){
+        controlgetpos,,,__img_w,__img_h,,ahk_id %__mypic%
+        CoordMode Pixel
+        ;搜尋圖片
+        ImageSearch, __FoundX, __FoundY, VirtualX, VirtualY, VirtualWidth, VirtualHeight,%__ImageFilePath%
+        CoordMode Mouse
+        ;獲取圖片中心座標
+        圖片座標X:=__FoundX + __img_w/2
+        圖片座標Y:=__FoundY + __img_h/2
+        if (ErrorLevel=0) {
+            CoordMode, Mouse , Screen
+            __ClickX:=圖片座標X
+            __ClickY:=圖片座標Y
+            __ClickTimes:=1
+            Click %__ClickX%, %__ClickY%, %__ClickTimes%
+            break
+        } else {
+        }
+    } else {
+        Msgbox % "圖片路徑不存在"
+    }
+    gui,destroy
+}
+
+x := 0
 
 	Sleep 500
 	if WinExist(ggcgui)
 	{
 	Sleep 4000
 	WinActivate , %ggcgui%
-	Sleep 1000
-
-; Set a counter to track the number of loops
-counter = 0
-
-Loop
-{
-    ; Search for the image on the screen
-    ImageSearch, x, y, 0, 0, A_ScreenWidth, A_ScreenHeight, *20 C:\Users\Administrator\Desktop\yoeb-main\toolbox\cancel.png
-    If (ErrorLevel = 0)
-    {
-        ; If the image is found, display a message and exit the loop
-        MsgBox, The image was found at coordinates (%x%, %y%)
-        break
-    }
-
-    ; If the image is not found, increment the counter
-    counter++
-
-    ; If the counter is 10 or greater, display a message and exit the loop
-    If (counter >= 10)
-    {
-        MsgBox, The image was not found after 10 searches.
-        break
-    }
-
-    ; If the image is not found and the counter is less than 10, wait for a second and then check again
-    Sleep, 1000
-}
-
-	Sleep 1000
+	Sleep 7000
+	
 	Click,  733,30
 	Sleep 1000
 	Click,  733,30
@@ -626,9 +630,8 @@ Loop
 	Click, down
 	sleep 100
 	Click, up
-	Sleep 5000
+	Sleep 8000
 	
-
 	fpoeicon=0
 	Sleep 1000
 	WinActivate , %ggcgui%
@@ -648,7 +651,7 @@ Loop
 	Sleep 2000
 
 
-	WinWait,%poe%,,30
+	WinWait,%poe%,,45
 	if ErrorLevel
 	{
 	Click, down
@@ -656,7 +659,7 @@ Loop
 	Click, up
 	Sleep 1000
 
-	WinWait,%poecall%,,5
+	WinWait,%poecall%,,2
 	if ErrorLevel
 	{
 	}
@@ -2013,7 +2016,7 @@ sleep 500
 FileDelete, %A_MyDocuments%\My Games\Path of Exile\garena_tw_production_Config.ini
 Filecopy ,%A_ScriptDir%\ABCD\garena_tw_production_Config.ini,%A_MyDocuments%\My Games\Path of Exile\,1
 sleep 2000
-IniWrite, 6670, %A_ScriptDir%\ABCD\setting.ini, 通用设置, 中控端口
+IniWrite, 6699, %A_ScriptDir%\ABCD\setting.ini, 通用设置, 中控端口
 sleep 1000
 run %A_ScriptDir%\ABCD\openabcd.bat
 sleep 2000
