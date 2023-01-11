@@ -158,7 +158,7 @@
 
 
 //[Category] == "Map" && [MapTier] >= "1"  && [Rarity] == "Unique"  #[ForceSellItem] == "true" // //傳奇地圖傳奇地圖不撿，傳奇地圖售出
-
+[Type] == "Synthesised Map" # [StashItem]== "true" // 追憶及深層記憶存倉
  [Sockets] == "6" && [Linked] >= "6"   #[ForceSellItem] == "true" // //六連全賣
 
 //20220821	//以下是 獵首的親兄弟，除了獵首通通賣掉																											
