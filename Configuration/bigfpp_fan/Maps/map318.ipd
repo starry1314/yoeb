@@ -1,4 +1,4 @@
-//	//				//中文判斷																				
+//				//中文判斷																				
 	//3.20 12/22 閃打
 
 [map_contains_citadel] >= "1" # [IgnoreMap] == "true" 
@@ -206,7 +206,8 @@
 	[Type]=="Vaal Temple Map" #	[IgnoreMap]	=="true"	//瓦爾密殿	不打這張圖																				
 	[Type]=="Harbinger Map" #	[IgnoreMap]	=="true"	//神諭之殿．煉獄	不打這張圖																				
 																									
-	//3.17 忽略圖與忽略傳奇圖																								
+	//3.17 忽略圖與忽略傳奇圖	
+	[Type] == "Synthesised Map" # [IgnoreMap]=="true"// 追憶及深層記憶避打
 	[Type]== "Forge of the Phoenix Map"#[IgnoreMap]== "true"//火鳳凰熔核 #																								
 	[Type]== "Lair of the Hydra Map"#[IgnoreMap]== "true"//九頭蛇冰窟 #																								
 	[Type]== "Maze of the Minotaur Map"#[IgnoreMap]== "true"//牛頭人謎域 #																								
