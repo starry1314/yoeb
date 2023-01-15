@@ -20,14 +20,7 @@
 [Type]=="Fracturing Orb" #[StashItem] == "true" //				破裂石
 [Type]=="Fracturing Shard" #[StashItem] == "true" //				破裂石碎片
 
-//3.2	0			
-[Type]=="Forgotten Reliquary Key" #	[StashItem]	 == "true" // 		//被遺忘的聖物鑰匙
-[Type]=="Visceral Reliquary Key" #	[StashItem]	 == "true" // 		//內臟聖物鑰匙
-[Type]=="Shiny Reliquary Key" #	[StashItem]	 == "true" // 		//閃亮的聖物箱鑰匙
-[Type]=="Archive Reliquary Key" #	[StashItem]	 == "true" // 		//存檔聖物箱鑰匙
-[Type]=="Oubliette Reliquary Key" #	[StashItem]	 == "true" // 		//Oubliette 聖物箱鑰匙
-[Type]=="Cosmic Reliquary Key" #	[StashItem]	 == "true" // 		//宇宙聖物鑰匙
-[Type]=="Decaying Reliquary Key" #	[StashItem]	 == "true" // 		//腐朽的聖物鑰匙			
+//3.20						
 [Type] == "Voidborn Reliquary Key"   # [StashItem]  == "true"  //虛誕遺鑰  拾取且存倉
 
 //下面是3.19以前
