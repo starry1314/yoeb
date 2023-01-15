@@ -28,7 +28,7 @@
 [Type]=="Oubliette Reliquary Key" #	[StashItem]	 == "true" // 		//Oubliette 聖物箱鑰匙
 [Type]=="Cosmic Reliquary Key" #	[StashItem]	 == "true" // 		//宇宙聖物鑰匙
 [Type]=="Decaying Reliquary Key" #	[StashItem]	 == "true" // 		//腐朽的聖物鑰匙			
-
+[Type] == "Voidborn Reliquary Key"   # [StashItem]  == "true"  //虛誕遺鑰  拾取且存倉
 
 //下面是3.19以前
 
