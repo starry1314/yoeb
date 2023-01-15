@@ -291,6 +291,7 @@
 	[Type] == "Dragonscale Boots" && [Rarity] == "Unique" # 	[StashItem]	 == "true"
 	//==大小傷腰 堅毅之環 都撿//																										
 	[Type]== "Studded Belt" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 	
+		[Type]== "Clasped Mitts" && [Rarity] == "Unique" # [StashItem] == "true" // 沙塵之影 環帶護手	拾取且售出
 ////////////重要分隔線///////////////
 
 	//赤紅珠寶																											
