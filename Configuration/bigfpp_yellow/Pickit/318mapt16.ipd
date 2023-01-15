@@ -143,11 +143,11 @@
 [Type] == "Council of Cats" # [StashItem] == "true" // 10.0 C//貓咪議會(費爾羅之物)拾取且存倉貓貓
 [Type] == "The Hoarder" # [StashItem] == "true" // 8.0 C//寶箱(崇高石)拾取且存倉ex
 
-[Category] == "Map" && [MapTier] >= "1"  && [Rarity] == "Normal"  #[StashItem] == "true" // 普通地圖撿取，普通地圖存倉
+[Category] == "Map" && [MapTier] >= "1"  && [Rarity] == "Normal"  #[StashItem] == "true" // //普通地圖普通地圖撿取，普通地圖存倉
 
-[Category] == "Map" && [MapTier] >= "1"  && [Rarity] == "Magic"  #[StashItem] == "true" // 藍地圖圖撿取，藍地圖存倉
+[Category] == "Map" && [MapTier] >= "1"  && [Rarity] == "Magic"  #[StashItem] == "true" // //藍地圖藍地圖撿取，藍地圖存倉
 
-[Category] == "Map" && [MapTier] >= "1"  && [Rarity] == "Rare"  #	[StashItem]	 == "true" // 稀有地圖藍，稀有地圖存倉
+//[Category] == "Map" && [MapTier] >= "1"  && [Rarity] == "Rare"  #	[StashItem]	 == "true" // 
 
 //[Category] == "Map" && [Rarity] == "Rare" && [map_contains_citadel] >= "1" # [StashItem] == "true" // 13855 Citadel Maps
 
@@ -247,6 +247,8 @@
 //	[Type] == "Steel Kite Shield" && [Rarity] == "Unique" # [keystone_corrupted_defences] >= "1" && 	[ForceSellItem]	 == "true" // 		瑪哈薩多																							
 	//歐喙=1.5D																											
 //	[Type] == "Raven Mask" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 		//鷗喙 禍鴉之面
+
+
 	//水道仔或閃打仔會用到的散件																											
 	//熊頭 鳥頭																											
 //	[Type] == "Silken Hood" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
@@ -264,12 +266,7 @@
 //	[Type] == "Gold Amulet" && [Rarity] == "Unique" # [item_found_quantity_+%_if_wearing_a_magic_item] >= "1" && 	[ForceSellItem]	 == "true" // 		//苦行 帝金護身符																							
 //	[Type] == "Gold Amulet" && [Rarity] == "Unique" # [attack_maximum_added_fire_damage] >= "1" && 	[ForceSellItem]	 == "true" // 		//帝金護身符																							
 //	[Type] == "Gold Amulet" && [Rarity] == "Unique" # [life_regeneration_per_minute_%_while_frozen] >= "1" && 	[ForceSellItem]	 == "true" // 		//冬之心 帝金護身符																							
-	//自殺頭																											
-	[Type] == "Ezomyte Burgonet" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
-//	[Type] == "Ezomyte Burgonet" && [Rarity] == "Unique" # [physical_damage_taken_+%] <= "40" && [melee_weapon_critical_strike_multiplier_+] >= "120" && 	[ForceSellItem]	 == "true" // 		//深淵之喚 艾茲麥堅盔																							
-//	[Type] == "Ezomyte Burgonet" && [Rarity] == "Unique" # [local_item_can_have_x_additional_enchantments] >= "1" && [ForceSellItem] == "true" // Cowl of the Thermophile	[ForceSellItem]	 == "true" // 		//嗜炎斗篷 艾茲麥堅盔																							
-	//暗雷																											
-//	[Type] == "Dragonscale Boots" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
+																									
 	//冰冷之眼																											
 //	[Type] == "Goathide Gloves" && [Rarity] == "Unique" # [base_physical_damage_%_to_convert_to_cold] >= "1" && 	[StashItem]	 == "true" // 																									
 
@@ -284,10 +281,16 @@
 //	[Type]== "Siege Axe" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
 	//獅吼、魯米都撿																											
 //	[Type] == "Granite Flask" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
-	//大小傷腰 堅毅之環 都撿																											
-	[Type]== "Studded Belt" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
-
-
+																								
+////////////自用裝////////////
+	//==自殺頭==//																										
+	[Type] == "Ezomyte Burgonet" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
+	[Type] == "Ezomyte Burgonet" && [Rarity] == "Unique" # [physical_damage_taken_+%] <= "40" && [melee_weapon_critical_strike_multiplier_+] >= "120" && 	[ForceSellItem]	 == "true" // 		//深淵之喚 艾茲麥堅盔																							
+	[Type] == "Ezomyte Burgonet" && [Rarity] == "Unique" # [local_item_can_have_x_additional_enchantments] >= "1" && [ForceSellItem] == "true" // Cowl of the Thermophile	[ForceSellItem]	 == "true" // 		//嗜炎斗篷 艾茲麥堅盔																							
+//==暗雷== //																								
+	[Type] == "Dragonscale Boots" && [Rarity] == "Unique" # 	[StashItem]	 == "true"
+	//==大小傷腰 堅毅之環 都撿//																										
+	[Type]== "Studded Belt" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 	
 ////////////重要分隔線///////////////
 
 	//赤紅珠寶																											
