@@ -565,38 +565,17 @@ endrestime()
 	}
 	}
 
-loop_time_int_489:=5
-Loop %loop_time_int_489% {
-    Sleep % 1000
-    __ImageFilePath:=A_ScriptDir . "\" . "\toolbox\cancel.png"
-    gui,add,picture,hwnd__mypic,%__ImageFilePath%
-    if FileExist(__ImageFilePath){
-        controlgetpos,,,__img_w,__img_h,,ahk_id %__mypic%
-        CoordMode Pixel
-        ;搜尋圖片
-        ImageSearch, __FoundX, __FoundY, VirtualX, VirtualY, VirtualWidth, VirtualHeight,%__ImageFilePath%
-        CoordMode Mouse
-        ;獲取圖片中心座標
-        圖片座標X:=__FoundX + __img_w/2
-        圖片座標Y:=__FoundY + __img_h/2
-        if (ErrorLevel=0) {
-            CoordMode, Mouse , Screen
-            __ClickX:=圖片座標X
-            __ClickY:=圖片座標Y
-            __ClickTimes:=1
-            Click %__ClickX%, %__ClickY%, %__ClickTimes%
-            break
-        } else {
-        }
-    } else {
-        Msgbox % "圖片路徑不存在"
-    }
-    gui,destroy
-}
-
-x := 0
-
-	Sleep 500
+__ClickX:=769
+__ClickY:=491
+__ClickTimes:=2
+Click %__ClickX%, %__ClickY%, %__ClickTimes%
+Sleep 1000
+__ClickX:=415
+__ClickY:=251
+__ClickTimes:=2
+Click %__ClickX%, %__ClickY%, %__ClickTimes%
+Sleep 500
+	
 	if WinExist(ggcgui)
 	{
 	Sleep 4000
