@@ -21,8 +21,9 @@
 [Type]=="Fracturing Shard" #[StashItem] == "true" //				破裂石碎片
 
 //3.20						
-[Type] == "Voidborn Reliquary Key"   # [StashItem]  == "true"  //虛誕遺鑰  拾取且存倉
-
+	[Type]=="Fracturing Orb" #	[StashItem]	 == "true"		//破裂石	拾取且存倉
+	[Type]=="Fracturing Shard" #	[StashItem]	 == "true"		//破裂石碎片	拾取且存倉
+	[Type] == "Voidborn Reliquary Key"   #	[StashItem]	 == "true"		//虛誕遺鑰 	拾取且存倉
 //下面是3.19以前
 
 [Type] =="Maven's Invitation: The Elderslayers" #	[StashItem]	 == "true" 		//殺手	拾取且存倉
