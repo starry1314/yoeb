@@ -85,11 +85,11 @@
 //[Type] == "Orb of Horizons"# [StashItem] == "true"////地平石拾取且存倉
 //[Type] == "Enkindling Orb"# [StashItem] == "true"////點燃石拾取且存倉
 [Type] == "Orb of Annulment"# [StashItem] == "true"////無效 拾取且存倉
-[Type] == "Orb of Scouring"# [StashItem] == "true"////重鑄 拾取且存倉
+//[Type] == "Orb of Scouring"# [StashItem] == "true"////重鑄 拾取且存倉
 [Type] == "Gemcutter's Prism"# [StashItem] == "true"////GCP 拾取且存倉
 //[Type] == "Regal Orb" # [StashItem] == "true"////富豪
 [Type] == "Harbinger's Orb" # [StashItem] == "true" //神諭石
-[Type] == "Vaal Orb" # 	[StashItem]	 == "true"	//	//瓦爾寶珠
+//[Type] == "Vaal Orb" # 	[StashItem]	 == "true"	//	//瓦爾寶珠
 [Type]=="Tainted Chromatic Orb" #	[StashItem]	 == "true"	//	//被污染的幻色	拾取且存倉
 
 [Type] == "Awakened Sextant" # [StashItem] == "true"////六分
