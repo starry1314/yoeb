@@ -226,7 +226,7 @@ AddYouXianGongPingBuyGoods("改造石","Metadata/Items/Currency/CurrencyRerollMagic
 AddYouXianGongPingBuyGoods("点金石","Metadata/Items/Currency/CurrencyUpgradeToRare")
 
 -- SetZhuangBeiBoss(bossName,srvName)--设置发装仓库号 bossName=发装号名字 字符串型 srvName=服务器名字，如果多个区用同一份配置的话填上服务器名字可单独区分 如果不是可忽略 或填nil 
---SetZhuangBeiBoss("自强不息的爱情","禁忌聖域")--发装备的仓库号 如果不需要 就注释掉
+--SetZhuangBeiBoss("fanxing","禁忌聖域")--发装备的仓库号 如果不需要 就注释掉
 --添加在做到某个任务时购买技能宝石
 
 --添加在做到某个任务时购买技能宝石
@@ -913,9 +913,9 @@ SetGoodsCaoZuo(nil,"1|3","附魔化石","Metadata/Items/Currency/CurrencyDelveCrafti
 --AddJiaoYiTime(startHour,endHour)--添加交易时间段大于等于startHour 并且小于等于endHour 时会检测交易
 -- StartHour 数字型 开始交易的小时 
 --endHour 数字型 结束交易的小时
-AddJiaoYiTime(0,24)--晚上11点到8点前会检测交易
+AddJiaoYiTime(0,8)--晚上11点到8点前会检测交易
 
-AddJiaoYiBossName("恒撿怒",nil,nil,nil,true)
+AddJiaoYiBossName("禁忌_星光",nil,nil,nil,true)
 
 
 --AddJiaoYiTime(startHour,endHour)--添加交易时间段大于等于startHour 并且小于等于endHour 时会检测交易
