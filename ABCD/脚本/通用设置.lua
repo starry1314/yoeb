@@ -913,24 +913,28 @@ SetGoodsCaoZuo(nil,"1|3","附魔化石","Metadata/Items/Currency/CurrencyDelveCrafti
 --AddJiaoYiTime(startHour,endHour)--添加交易时间段大于等于startHour 并且小于等于endHour 时会检测交易
 -- StartHour 数字型 开始交易的小时 
 --endHour 数字型 结束交易的小时
-AddJiaoYiTime(0,8)--晚上11点到8点前会检测交易
+AddJiaoYiTime(0,24)--晚上11点到8点前会检测交易
 
-AddJiaoYiBossName("禁忌_星光",nil,nil,nil,true)
+addJiaoYiBossName("禁忌_星光",nil,nil,nil,true)
 
+
+--AddJiaoYiTime(startHour,endHour)--添加交易时间段大于等于startHour 并且小于等于endHour 时会检测交易
+--startHour 数字型 开始交易的小时 
+--endHour 数字型 结束交易的小时
+AddJiaoYiTime(0,24)--晚上11点到8点前会检测交易
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --公会仓库存仓
---1 通貨 2 巨倉 3命運 4碎片 5精隨 6高倉 7高倉 
---7-11 高倉
+
 SetSaveIndex("通货|可堆叠通货","1|7|8|9|10|11",nil,nil,nil,nil,nil,true)
-SetSaveIndex("爪|匕首|法杖|单手剑|细剑|单手斧|单手锤|符文匕首|短杖|战杖|弓|长杖|双手剑|双手斧|双手锤|箭袋|手套|衣服|盾|腰带|鞋子|头盔|","7|8|9|10|2",nil,nil,nil,nil,nil,true)
-SetSaveIndex("腰带|项链|戒指|","7|8|9|10|2",nil,nil,nil,nil,nil,true)
-SetSaveIndex("珠宝","7|8|9|10|2",nil,nil,nil,nil,nil,true)
-SetSaveIndex("命运卡","3",nil,nil,nil,nil,nil,true)
-SetSaveIndex("生命药剂|魔力药剂|复合药剂|功能药剂","7|8|9|10|2",nil,nil,nil,nil,nil,true)
-SetSaveIndex("异界地图","7|8|9|10|12",nil,nil,nil,nil,nil,true)
-SetSaveIndex("主动技能宝石|辅助技能宝石","7|8|9|10|1|2",nil,nil,nil,nil,nil,true)
+SetSaveIndex("命运卡","2|7|8|9|10|11",nil,nil,nil,nil,nil,true)
+SetSaveIndex("珠宝","7|8|9|10|11",nil,nil,nil,nil,nil,true)
+SetSaveIndex("爪|匕首|法杖|单手剑|细剑|单手斧|单手锤|符文匕首|短杖|战杖|弓|长杖|双手剑|双手斧|双手锤|箭袋|手套|衣服|盾|腰带|鞋子|头盔|","7|8|9|10|11",nil,nil,nil,nil,nil,true)
+SetSaveIndex("生命药剂|魔力药剂|复合药剂|功能药剂","7|8|9|10|11",nil,nil,nil,nil,nil,true)
+SetSaveIndex("腰带|项链|戒指|","7|8|9|10|11",nil,nil,nil,nil,nil,true)
+SetSaveIndex("异界地图","7|8|9|10|11",nil,nil,nil,nil,nil,true)
+SetSaveIndex("主动技能宝石|辅助技能宝石","7|8|9|10|11",nil,nil,nil,nil,nil,true)
 
 -- SetSaveIndex(nil,"6|17|18",nil,"Metadata/Items/Currency/CurrencyRerollRare",nil,nil,nil,true)--混沌石
 -- SetSaveIndex(nil,"17|17|17",nil,"Metadata/Items/Currency/CurrencyRerollSocketColours",nil,nil,nil,true)--幻色石
@@ -949,7 +953,7 @@ SetSaveIndex(nil,"1|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEldritchEm
 
 SetSaveIndex("MiscMapItem","14|14|14|7|8|9|10|11",nil,nil,nil,nil,nil,true)--裂隙之石钥匙
 SetSaveIndex("HeistBlueprint","14|14|14|7|8|9|10|11",nil,nil,nil,nil,nil,true)--蓝图
-SetSaveIndex("MapFragment",4|3|7|8|9|10|11",nil,nil,nil,nil,nil,true)--聖甲蟲
+SetSaveIndex("MapFragment","3|7|8|9|10|11",nil,nil,nil,nil,nil,true)--聖甲蟲
 SetSaveIndex("异界图鉴升级物品","14|7|8|9|10|11",nil,nil,nil,nil,nil,true)--异界图鉴升级物品
 SetSaveIndex("HarvestSeed","14|7|8|9|10|11",nil,nil,nil,nil,nil,true)--种子
 SetSaveIndex("ExpeditionLogbook","14|7|8|9|10|11",nil,nil,nil,nil,nil,true)--探險日誌
@@ -997,34 +1001,34 @@ SetSaveIndex(nil,"1|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyRefreshSag
 -- SetSaveIndex(nil,"11|16|17|3|14|19|1|2|5|6|4",nil,"Metadata/Items/Currency/CurrencyAddAtlasModMid",nil,nil,nil,true)--製圖六分儀．精華
  SetSaveIndex(nil,"1|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyAddAtlasModHigh",nil,nil,nil,true)--製圖六分儀．覺醒
 
-SetSaveIndex(nil,"4|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyAfflictionShard",nil,nil,nil,true)--幻像斷片
-SetSaveIndex(nil,"4|7|8|9|10|11",nil,"Metadata/Items/MapFragments/CurrencyAfflictionFragment",nil,nil,nil,true)--幻像異界
-SetSaveIndex(nil,"4|7|8|9|10|11",nil,"Metadata/Items/MapFragments/ClassicVaultKey",nil,nil,nil,true)--古典遺鑰
-SetSaveIndex(nil,"4|7|8|9|10|11",nil,"Metadata/Items/MapFragments/340VaultKey",nil,nil,nil,true)--古朽遺鑰
-SetSaveIndex(nil,"4|7|8|9|10|11",nil,"Metadata/Items/MapFragments/VaalVaultKey",nil,nil,nil,true)--瓦爾遺鑰
-SetSaveIndex(nil,"4|7|8|9|10|11",nil,"Metadata/Items/MapFragments/RitualFragment",nil,nil,nil,true)--浸血碑器
+SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyAfflictionShard",nil,nil,nil,true)--幻像斷片
+SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/MapFragments/CurrencyAfflictionFragment",nil,nil,nil,true)--幻像異界
+SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/MapFragments/ClassicVaultKey",nil,nil,nil,true)--古典遺鑰
+SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/MapFragments/340VaultKey",nil,nil,nil,true)--古朽遺鑰
+SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/MapFragments/VaalVaultKey",nil,nil,nil,true)--瓦爾遺鑰
+SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/MapFragments/RitualFragment",nil,nil,nil,true)--浸血碑器
 
 --放到E301
-SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardAbandonedWealth",nil,nil,nil,true)--棄財求生
-SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardTheSaintsTreasure",nil,nil,nil,true)--聖徒之財
-SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardAlluringBounty",nil,nil,nil,true)--誘惑之寶
-SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardTheHoarder",nil,nil,nil,true)--寶箱
-SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardBrothersStash",nil,nil,nil,true)--伯仲財庫
-SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardTheScout",nil,nil,nil,true)--童子軍
-SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardUnrequitedLove",nil,nil,nil,true)--單相思 enName:unrequited-love
-SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardDemigodsWager",nil,nil,nil,true)--昇華的賭注	
-SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardTheSephirot",nil,nil,nil,true)--生命之樹 enName:the-sephirot
+SetSaveIndex(nil,"2|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardAbandonedWealth",nil,nil,nil,true)--棄財求生
+SetSaveIndex(nil,"2|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardTheSaintsTreasure",nil,nil,nil,true)--聖徒之財
+SetSaveIndex(nil,"2|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardAlluringBounty",nil,nil,nil,true)--誘惑之寶
+SetSaveIndex(nil,"2|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardTheHoarder",nil,nil,nil,true)--寶箱
+SetSaveIndex(nil,"2|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardBrothersStash",nil,nil,nil,true)--伯仲財庫
+SetSaveIndex(nil,"2|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardTheScout",nil,nil,nil,true)--童子軍
+SetSaveIndex(nil,"2|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardUnrequitedLove",nil,nil,nil,true)--單相思 enName:unrequited-love
+SetSaveIndex(nil,"2|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardDemigodsWager",nil,nil,nil,true)--昇華的賭注	
+SetSaveIndex(nil,"2|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardTheSephirot",nil,nil,nil,true)--生命之樹 enName:the-sephirot
 
- SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardTheValkyrie",nil,nil,nil,true)--女武神
- SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardTheUndaunted",nil,nil,nil,true)--不怕不怕 enName:the-undaunted
- SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardTheWretched",nil,nil,nil,true)--骯髒
- SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardTheDemon",nil,nil,nil,true)--惡魔 enName:the-demon
- SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardTheFiend",nil,nil,nil,true)--魔鬼
- SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardTheDoctor",nil,nil,nil,true)--瘋醫 enName:the-doctor
- SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardTheNurse",nil,nil,nil,true)--護理師
- SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardThePatient",nil,nil,nil,true)--病患
- SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardHouseOfMirrors",nil,nil,nil,true)--明鏡
- SetSaveIndex(nil,"3|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardSevenYearsBadLuck",nil,nil,nil,true)--七年霉運
+ SetSaveIndex(nil,"2|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardTheValkyrie",nil,nil,nil,true)--女武神
+ SetSaveIndex(nil,"2|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardTheUndaunted",nil,nil,nil,true)--不怕不怕 enName:the-undaunted
+ SetSaveIndex(nil,"2|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardTheWretched",nil,nil,nil,true)--骯髒
+ SetSaveIndex(nil,"2|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardTheDemon",nil,nil,nil,true)--惡魔 enName:the-demon
+ SetSaveIndex(nil,"2|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardTheFiend",nil,nil,nil,true)--魔鬼
+ SetSaveIndex(nil,"2|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardTheDoctor",nil,nil,nil,true)--瘋醫 enName:the-doctor
+ SetSaveIndex(nil,"2|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardTheNurse",nil,nil,nil,true)--護理師
+ SetSaveIndex(nil,"2|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardThePatient",nil,nil,nil,true)--病患
+ SetSaveIndex(nil,"2|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardHouseOfMirrors",nil,nil,nil,true)--明鏡
+ SetSaveIndex(nil,"2|7|8|9|10|11",nil,"Metadata/Items/DivinationCards/DivinationCardSevenYearsBadLuck",nil,nil,nil,true)--七年霉運
 
 SetSaveIndex(nil,"7|8|9|10|11",nil,"原始結晶生靈之力","Metadata/Items/Currency/HarvestSeedBlue",nil,nil,nil,nil)
 SetSaveIndex(nil,"7|8|9|10|11",nil,"神聖結晶生靈之力","Metadata/Items/Currency/HarvestSeedBoss",nil,nil,nil,1)
@@ -1125,110 +1129,110 @@ SetSaveIndex(nil,"7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyDelveCraftin
 SetSaveIndex(nil,"7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyDelveCraftingRandom",nil,nil,nil,true)--纠缠化石
 SetSaveIndex(nil,"7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyDelveCraftingLuckyModRolls",nil,nil,nil,true)--圣洁化石
 SetSaveIndex(nil,"7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyDelveCraftingSellPrice",nil,nil,nil,true)--镶金化石
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceHatred1",nil,nil,nil,true)--憎恨之低語精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceHatred2",nil,nil,nil,true)--憎恨之呢喃精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceHatred3",nil,nil,nil,true)--憎恨之啼泣精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceHatred4",nil,nil,nil,true)--憎恨之哀嚎精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceHatred5",nil,nil,nil,true)--憎恨之咆哮精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceHatred6",nil,nil,nil,true)--憎恨之尖嘯精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceHatred7",nil,nil,nil,true)--憎恨之破空精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceWoe1",nil,nil,nil,true)--悲痛之低語精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceWoe2",nil,nil,nil,true)--悲痛之呢喃精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceWoe3",nil,nil,nil,true)--悲痛之啼泣精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceWoe4",nil,nil,nil,true)--悲痛之哀嚎精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceWoe5",nil,nil,nil,true)--悲痛之咆哮精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceWoe6",nil,nil,nil,true)--悲痛之尖嘯精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceWoe7",nil,nil,nil,true)--悲痛之破空精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceGreed1",nil,nil,nil,true)--貪婪之低語精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceGreed2",nil,nil,nil,true)--貪婪之呢喃精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceGreed3",nil,nil,nil,true)--貪婪之啼泣精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceGreed4",nil,nil,nil,true)--貪婪之哀嚎精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceGreed5",nil,nil,nil,true)--貪婪之咆哮精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceGreed6",nil,nil,nil,true)--貪婪之尖嘯精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceGreed7",nil,nil,nil,true)--貪婪之破空精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceContempt1",nil,nil,nil,true)--輕視之低語精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceContempt2",nil,nil,nil,true)--輕視之呢喃精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceContempt3",nil,nil,nil,true)--輕視之啼泣精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceContempt4",nil,nil,nil,true)--輕視之哀嚎精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceContempt5",nil,nil,nil,true)--輕視之咆哮精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceContempt6",nil,nil,nil,true)--輕視之尖嘯精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceContempt7",nil,nil,nil,true)--輕視之破空精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSorrow1",nil,nil,nil,true)--哀惜之呢喃精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSorrow2",nil,nil,nil,true)--哀惜之啼泣精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSorrow3",nil,nil,nil,true)--哀惜之哀嚎精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSorrow4",nil,nil,nil,true)--哀惜之咆哮精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSorrow5",nil,nil,nil,true)--哀惜之尖嘯精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSorrow6",nil,nil,nil,true)--哀惜之破空精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceAnger1",nil,nil,nil,true)--憤怒之呢喃精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceAnger2",nil,nil,nil,true)--憤怒之啼泣精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceAnger3",nil,nil,nil,true)--憤怒之哀嚎精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceAnger4",nil,nil,nil,true)--憤怒之咆哮精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceAnger5",nil,nil,nil,true)--憤怒之尖嘯精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceAnger6",nil,nil,nil,true)--憤怒之破空精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceTorment1",nil,nil,nil,true)--折磨之呢喃精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceTorment2",nil,nil,nil,true)--折磨之啼泣精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceTorment3",nil,nil,nil,true)--折磨之哀嚎精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceTorment4",nil,nil,nil,true)--折磨之咆哮精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceTorment5",nil,nil,nil,true)--折磨之尖嘯精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceTorment6",nil,nil,nil,true)--折磨之破空精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceFear1",nil,nil,nil,true)--恐懼之呢喃精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceFear2",nil,nil,nil,true)--恐懼之啼泣精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceFear3",nil,nil,nil,true)--恐懼之哀嚎精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceFear4",nil,nil,nil,true)--恐懼之咆哮精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceFear5",nil,nil,nil,true)--恐懼之尖嘯精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceFear6",nil,nil,nil,true)--恐懼之破空精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSuffering1",nil,nil,nil,true)--苦難之啼泣精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSuffering2",nil,nil,nil,true)--苦難之哀嚎精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSuffering3",nil,nil,nil,true)--苦難之咆哮精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSuffering4",nil,nil,nil,true)--苦難之尖嘯精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSuffering5",nil,nil,nil,true)--苦難之破空精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceRage1",nil,nil,nil,true)--肆虐之啼泣精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceRage2",nil,nil,nil,true)--肆虐之哀嚎精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceRage3",nil,nil,nil,true)--肆虐之咆哮精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceRage4",nil,nil,nil,true)--肆虐之尖嘯精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceRage5",nil,nil,nil,true)--肆虐之破空精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceWrath1",nil,nil,nil,true)--雷霆之啼泣精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceWrath2",nil,nil,nil,true)--雷霆之哀嚎精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceWrath3",nil,nil,nil,true)--雷霆之咆哮精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceWrath4",nil,nil,nil,true)--雷霆之尖嘯精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceWrath5",nil,nil,nil,true)--雷霆之破空精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceDoubt1",nil,nil,nil,true)--疑惑之啼泣精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceDoubt2",nil,nil,nil,true)--疑惑之哀嚎精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceDoubt3",nil,nil,nil,true)--疑惑之咆哮精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceDoubt4",nil,nil,nil,true)--疑惑之尖嘯精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceDoubt5",nil,nil,nil,true)--疑惑之破空精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceAnguish1",nil,nil,nil,true)--煎熬之哀嚎精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceAnguish2",nil,nil,nil,true)--煎熬之咆哮精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceAnguish3",nil,nil,nil,true)--煎熬之尖嘯精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceAnguish4",nil,nil,nil,true)--煎熬之破空精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceLoathing1",nil,nil,nil,true)--厭惡之哀嚎精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceLoathing2",nil,nil,nil,true)--厭惡之咆哮精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceLoathing3",nil,nil,nil,true)--厭惡之尖嘯精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceLoathing4",nil,nil,nil,true)--厭惡之破空精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSpite1",nil,nil,nil,true)--刻毒之哀嚎精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSpite2",nil,nil,nil,true)--刻毒之咆哮精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSpite3",nil,nil,nil,true)--刻毒之尖嘯精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSpite4",nil,nil,nil,true)--刻毒之破空精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceZeal1",nil,nil,nil,true)--熱情之哀嚎精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceZeal2",nil,nil,nil,true)--熱情之咆哮精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceZeal3",nil,nil,nil,true)--熱情之尖嘯精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceZeal4",nil,nil,nil,true)--熱情之破空精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceMisery1",nil,nil,nil,true)--悽慘之咆哮精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceMisery2",nil,nil,nil,true)--悽慘之尖嘯精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceMisery3",nil,nil,nil,true)--悽慘之破空精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceDread1",nil,nil,nil,true)--忌憚之咆哮精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceDread2",nil,nil,nil,true)--忌憚之尖嘯精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceDread3",nil,nil,nil,true)--忌憚之破空精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceScorn1",nil,nil,nil,true)--傲視之咆哮精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceScorn2",nil,nil,nil,true)--傲視之尖嘯精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceScorn3",nil,nil,nil,true)--傲視之破空精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceEnvy1",nil,nil,nil,true)--忌妒之咆哮精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceEnvy2",nil,nil,nil,true)--忌妒之尖嘯精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceEnvy3",nil,nil,nil,true)--忌妒之破空精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceHysteria1",nil,nil,nil,true)--浮誇精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceInsanity1",nil,nil,nil,true)--錯亂精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceHorror1",nil,nil,nil,true)--極恐精髓
-SetSaveIndex(nil,"5|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceDelirium1",nil,nil,nil,true)--譫妄精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceHatred1",nil,nil,nil,true)--憎恨之低語精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceHatred2",nil,nil,nil,true)--憎恨之呢喃精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceHatred3",nil,nil,nil,true)--憎恨之啼泣精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceHatred4",nil,nil,nil,true)--憎恨之哀嚎精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceHatred5",nil,nil,nil,true)--憎恨之咆哮精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceHatred6",nil,nil,nil,true)--憎恨之尖嘯精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceHatred7",nil,nil,nil,true)--憎恨之破空精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceWoe1",nil,nil,nil,true)--悲痛之低語精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceWoe2",nil,nil,nil,true)--悲痛之呢喃精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceWoe3",nil,nil,nil,true)--悲痛之啼泣精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceWoe4",nil,nil,nil,true)--悲痛之哀嚎精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceWoe5",nil,nil,nil,true)--悲痛之咆哮精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceWoe6",nil,nil,nil,true)--悲痛之尖嘯精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceWoe7",nil,nil,nil,true)--悲痛之破空精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceGreed1",nil,nil,nil,true)--貪婪之低語精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceGreed2",nil,nil,nil,true)--貪婪之呢喃精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceGreed3",nil,nil,nil,true)--貪婪之啼泣精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceGreed4",nil,nil,nil,true)--貪婪之哀嚎精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceGreed5",nil,nil,nil,true)--貪婪之咆哮精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceGreed6",nil,nil,nil,true)--貪婪之尖嘯精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceGreed7",nil,nil,nil,true)--貪婪之破空精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceContempt1",nil,nil,nil,true)--輕視之低語精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceContempt2",nil,nil,nil,true)--輕視之呢喃精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceContempt3",nil,nil,nil,true)--輕視之啼泣精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceContempt4",nil,nil,nil,true)--輕視之哀嚎精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceContempt5",nil,nil,nil,true)--輕視之咆哮精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceContempt6",nil,nil,nil,true)--輕視之尖嘯精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceContempt7",nil,nil,nil,true)--輕視之破空精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSorrow1",nil,nil,nil,true)--哀惜之呢喃精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSorrow2",nil,nil,nil,true)--哀惜之啼泣精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSorrow3",nil,nil,nil,true)--哀惜之哀嚎精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSorrow4",nil,nil,nil,true)--哀惜之咆哮精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSorrow5",nil,nil,nil,true)--哀惜之尖嘯精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSorrow6",nil,nil,nil,true)--哀惜之破空精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceAnger1",nil,nil,nil,true)--憤怒之呢喃精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceAnger2",nil,nil,nil,true)--憤怒之啼泣精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceAnger3",nil,nil,nil,true)--憤怒之哀嚎精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceAnger4",nil,nil,nil,true)--憤怒之咆哮精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceAnger5",nil,nil,nil,true)--憤怒之尖嘯精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceAnger6",nil,nil,nil,true)--憤怒之破空精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceTorment1",nil,nil,nil,true)--折磨之呢喃精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceTorment2",nil,nil,nil,true)--折磨之啼泣精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceTorment3",nil,nil,nil,true)--折磨之哀嚎精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceTorment4",nil,nil,nil,true)--折磨之咆哮精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceTorment5",nil,nil,nil,true)--折磨之尖嘯精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceTorment6",nil,nil,nil,true)--折磨之破空精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceFear1",nil,nil,nil,true)--恐懼之呢喃精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceFear2",nil,nil,nil,true)--恐懼之啼泣精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceFear3",nil,nil,nil,true)--恐懼之哀嚎精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceFear4",nil,nil,nil,true)--恐懼之咆哮精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceFear5",nil,nil,nil,true)--恐懼之尖嘯精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceFear6",nil,nil,nil,true)--恐懼之破空精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSuffering1",nil,nil,nil,true)--苦難之啼泣精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSuffering2",nil,nil,nil,true)--苦難之哀嚎精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSuffering3",nil,nil,nil,true)--苦難之咆哮精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSuffering4",nil,nil,nil,true)--苦難之尖嘯精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSuffering5",nil,nil,nil,true)--苦難之破空精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceRage1",nil,nil,nil,true)--肆虐之啼泣精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceRage2",nil,nil,nil,true)--肆虐之哀嚎精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceRage3",nil,nil,nil,true)--肆虐之咆哮精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceRage4",nil,nil,nil,true)--肆虐之尖嘯精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceRage5",nil,nil,nil,true)--肆虐之破空精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceWrath1",nil,nil,nil,true)--雷霆之啼泣精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceWrath2",nil,nil,nil,true)--雷霆之哀嚎精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceWrath3",nil,nil,nil,true)--雷霆之咆哮精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceWrath4",nil,nil,nil,true)--雷霆之尖嘯精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceWrath5",nil,nil,nil,true)--雷霆之破空精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceDoubt1",nil,nil,nil,true)--疑惑之啼泣精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceDoubt2",nil,nil,nil,true)--疑惑之哀嚎精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceDoubt3",nil,nil,nil,true)--疑惑之咆哮精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceDoubt4",nil,nil,nil,true)--疑惑之尖嘯精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceDoubt5",nil,nil,nil,true)--疑惑之破空精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceAnguish1",nil,nil,nil,true)--煎熬之哀嚎精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceAnguish2",nil,nil,nil,true)--煎熬之咆哮精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceAnguish3",nil,nil,nil,true)--煎熬之尖嘯精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceAnguish4",nil,nil,nil,true)--煎熬之破空精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceLoathing1",nil,nil,nil,true)--厭惡之哀嚎精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceLoathing2",nil,nil,nil,true)--厭惡之咆哮精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceLoathing3",nil,nil,nil,true)--厭惡之尖嘯精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceLoathing4",nil,nil,nil,true)--厭惡之破空精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSpite1",nil,nil,nil,true)--刻毒之哀嚎精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSpite2",nil,nil,nil,true)--刻毒之咆哮精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSpite3",nil,nil,nil,true)--刻毒之尖嘯精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceSpite4",nil,nil,nil,true)--刻毒之破空精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceZeal1",nil,nil,nil,true)--熱情之哀嚎精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceZeal2",nil,nil,nil,true)--熱情之咆哮精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceZeal3",nil,nil,nil,true)--熱情之尖嘯精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceZeal4",nil,nil,nil,true)--熱情之破空精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceMisery1",nil,nil,nil,true)--悽慘之咆哮精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceMisery2",nil,nil,nil,true)--悽慘之尖嘯精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceMisery3",nil,nil,nil,true)--悽慘之破空精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceDread1",nil,nil,nil,true)--忌憚之咆哮精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceDread2",nil,nil,nil,true)--忌憚之尖嘯精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceDread3",nil,nil,nil,true)--忌憚之破空精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceScorn1",nil,nil,nil,true)--傲視之咆哮精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceScorn2",nil,nil,nil,true)--傲視之尖嘯精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceScorn3",nil,nil,nil,true)--傲視之破空精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceEnvy1",nil,nil,nil,true)--忌妒之咆哮精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceEnvy2",nil,nil,nil,true)--忌妒之尖嘯精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceEnvy3",nil,nil,nil,true)--忌妒之破空精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceHysteria1",nil,nil,nil,true)--浮誇精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceInsanity1",nil,nil,nil,true)--錯亂精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceHorror1",nil,nil,nil,true)--極恐精髓
+SetSaveIndex(nil,"6|7|8|9|10|11",nil,"Metadata/Items/Currency/CurrencyEssenceDelirium1",nil,nil,nil,true)--譫妄精髓
 
 SetSaveIndex(nil,"7|8|9|10|11",nil,"Metadata/Items/Expedition/ExpeditionVendorCurrencyFaction1_1",nil,nil,nil,true)--低階破碎之環文物
 SetSaveIndex(nil,"7|8|9|10|11",nil,"Metadata/Items/Expedition/ExpeditionVendorCurrencyFaction1_2",nil,nil,nil,true)--普通破碎之環文物
