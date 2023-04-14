@@ -43,7 +43,7 @@
 //3.20新增 111年12月13日
 
 //3.20 12/11 開啟大量有價物品版本//
-
+[Type] == "Rogue's Marker"  //盜賊幣
 
 //卡蘭德之觸
 [Type] == "Ring" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 
