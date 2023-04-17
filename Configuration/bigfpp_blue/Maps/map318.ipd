@@ -28,7 +28,7 @@
 [Type]=="Promenade Map" # [IgnoreMap] =="true" //月色迴廊
 [Type]=="City Square Map" # [IgnoreMap] =="true" //危城廣場
 [Type]=="Arcade Map" # [IgnoreMap] =="true" //崩壞長廊
-[Type]=="Defiled Cathedral Map" # [IgnoreMap] =="true" //不潔教堂
+//[Type]=="Defiled Cathedral Map" # [IgnoreMap] =="true" //不潔教堂
 [Type]=="Lookout Map" # [IgnoreMap] =="true" //如履危牆
 [Type]=="Beach Map" # [IgnoreMap] =="true" //白沙灘頭
 [Type]=="Graveyard Map" # [IgnoreMap] =="true" //墮影墓場
