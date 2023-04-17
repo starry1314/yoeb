@@ -57,7 +57,7 @@
 [Type]=="A Dusty Memory" #[StashItem] == "true" //				
 //[Type]=="The Return of the Rat" #[StashItem] == "true" //				
 [Type]=="The Finishing Touch" #[StashItem] == "true" //				
-				
+[Type] == "Voidborn Reliquary Key"   #	[StashItem]	 == "true"		//虛誕遺鑰 	拾取且存倉				
 				
 [Type]=="Fracturing Orb" #[StashItem] == "true" //				破裂石
 [Type]=="Fracturing Shard" #[StashItem] == "true" //				破裂石碎片
