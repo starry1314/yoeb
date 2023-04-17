@@ -1,7 +1,7 @@
 //3.20新增 111年12月21日
 
 //3.20 12/11 開啟大量有價物品版本//
-
+	[Type] == "Riveted Boots" && [Rarity] == "Unique" # [StashItem] == "true" // Ralakesh's Impatience				//儀式短靴	拾取且售出
 
 //卡蘭德之觸
 [Type] == "Ring" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 
@@ -19,10 +19,12 @@
 				
 [Type]=="Fracturing Orb" #[StashItem] == "true" //				破裂石
 [Type]=="Fracturing Shard" #[StashItem] == "true" //				破裂石碎片
-				
-				
 
+//3.20						
 
+	[Type]=="Fracturing Orb" #	[StashItem]	 == "true"		//破裂石	拾取且存倉
+	[Type]=="Fracturing Shard" #	[StashItem]	 == "true"		//破裂石碎片	拾取且存倉
+	[Type] == "Voidborn Reliquary Key"   #	[StashItem]	 == "true"		//虛誕遺鑰 	拾取且存倉
 //下面是3.19以前
 
 [Type] =="Maven's Invitation: The Elderslayers" #	[StashItem]	 == "true" 		//殺手	拾取且存倉
@@ -67,6 +69,8 @@
  
 
  //編輯時間：2022/7/5 ex比水餃便宜的季末
+[Type] == "Glassblower's Bauble" # 	[StashItem]	 == "true"//玻璃彈珠	拾取且存倉
+[Type] == "Gemcutter's Prism" # 	[StashItem]	 == "true"//寶石匠的稜鏡
 //[Type] == "Orb of Alteration" # [StashItem] == "true"////改造石拾取且存倉
 [Type] == "Chaos Orb" # [StashItem] == "true"////混沌石拾取且存倉
 [Type] == "Divine Orb" # [StashItem] == "true"////神聖石拾取且存倉
@@ -81,11 +85,11 @@
 //[Type] == "Orb of Horizons"# [StashItem] == "true"////地平石拾取且存倉
 //[Type] == "Enkindling Orb"# [StashItem] == "true"////點燃石拾取且存倉
 [Type] == "Orb of Annulment"# [StashItem] == "true"////無效 拾取且存倉
-[Type] == "Orb of Scouring"# [StashItem] == "true"////重鑄 拾取且存倉
-[Type] == "Gemcutter's Prism"# [StashItem] == "true"////GCP 拾取且存倉
+//[Type] == "Orb of Scouring"# [StashItem] == "true"////重鑄 拾取且存倉
 //[Type] == "Regal Orb" # [StashItem] == "true"////富豪
 [Type] == "Harbinger's Orb" # [StashItem] == "true" //神諭石
-
+//[Type] == "Vaal Orb" # 	[StashItem]	 == "true"	//	//瓦爾寶珠
+[Type]=="Tainted Chromatic Orb" #	[StashItem]	 == "true"	//	//被污染的幻色	拾取且存倉
 
 [Type] == "Awakened Sextant" # [StashItem] == "true"////六分
 [Type] == "Timeless Eternal Empire Splinter" # [StashItem] == "true"////永恆不朽帝國裂片不撿不存倉
@@ -104,9 +108,9 @@
 [Type] == "Enlighten Support" #[StashItem] == "true"////啟蒙輔助拾取且存倉
 [Type] == "The Apothecary" #[StashItem] == "true"////(魔血 5/5)拾取且存倉
 [Type] =="Incandescent Invitation" #[StashItem] == "true" ////熾熱之邀拾取且存倉
-[Type] =="Polaric Invitation" #[StashItem] == "true" ////極地之邀不撿不存倉
+//[Type] =="Polaric Invitation" #[StashItem] == "true" ////極地之邀不撿不存倉
 [Type] == "Screaming Invitation" #[StashItem] == "true" ////尖哮之邀拾取且存倉
-[Type] =="Writhing Invitation" #[StashItem] == "true" ////纏繞之邀不撿不存倉
+//[Type] =="Writhing Invitation" #[StashItem] == "true" ////纏繞之邀不撿不存倉
 [Type] == "Humility" # [StashItem] == "true" // 1.0 C//謙遜(無盡之衣)拾取且存倉
 [Type] == "House of Mirrors" # [StashItem] == "true" // 2220 C//明鏡(卡蘭德的魔鏡)拾取且存倉30E
 [Type] == "The Doctor" # [StashItem] == "true" // 1536 C//瘋醫(獵首)拾取且存倉8E
@@ -146,9 +150,9 @@
 
 [Category] == "Map" && [MapTier] >= "1"  && [Rarity] == "Rare"  #	[StashItem]	 == "true" // 
 
-[Category] == "Map" && [Rarity] == "Rare" && [map_contains_citadel] >= "1" # [StashItem] == "true" // 13855 Citadel Maps
+//[Category] == "Map" && [Rarity] == "Rare" && [map_contains_citadel] >= "1" # [StashItem] == "true" // 13855 Citadel Maps
 
-[Category] == "Map" && [Rarity] == "Rare" && [map_elder_boss_variation] >= "1" # [StashItem] == "true" // 6551 Elder Maps
+//[Category] == "Map" && [Rarity] == "Rare" && [map_elder_boss_variation] >= "1" # [StashItem] == "true" // 6551 Elder Maps
 
 																		
 [Type]== "Forge of the Phoenix Map"#[StashItem]== "true"//火鳳凰熔核 #																								
@@ -158,7 +162,7 @@
 
 
 //[Category] == "Map" && [MapTier] >= "1"  && [Rarity] == "Unique"  #[ForceSellItem] == "true" // //傳奇地圖傳奇地圖不撿，傳奇地圖售出
-[Type] == "Synthesised Map" # [StashItem]== "true" // 追憶及深層記憶存倉
+
  [Sockets] == "6" && [Linked] >= "6"   #[ForceSellItem] == "true" // //六連全賣
 
 //20220821	//以下是 獵首的親兄弟，除了獵首通通賣掉																											
@@ -244,6 +248,8 @@
 //	[Type] == "Steel Kite Shield" && [Rarity] == "Unique" # [keystone_corrupted_defences] >= "1" && 	[ForceSellItem]	 == "true" // 		瑪哈薩多																							
 	//歐喙=1.5D																											
 //	[Type] == "Raven Mask" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 		//鷗喙 禍鴉之面
+
+
 	//水道仔或閃打仔會用到的散件																											
 	//熊頭 鳥頭																											
 //	[Type] == "Silken Hood" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
@@ -261,30 +267,32 @@
 //	[Type] == "Gold Amulet" && [Rarity] == "Unique" # [item_found_quantity_+%_if_wearing_a_magic_item] >= "1" && 	[ForceSellItem]	 == "true" // 		//苦行 帝金護身符																							
 //	[Type] == "Gold Amulet" && [Rarity] == "Unique" # [attack_maximum_added_fire_damage] >= "1" && 	[ForceSellItem]	 == "true" // 		//帝金護身符																							
 //	[Type] == "Gold Amulet" && [Rarity] == "Unique" # [life_regeneration_per_minute_%_while_frozen] >= "1" && 	[ForceSellItem]	 == "true" // 		//冬之心 帝金護身符																							
-	//自殺頭																											
-	[Type] == "Ezomyte Burgonet" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
-//	[Type] == "Ezomyte Burgonet" && [Rarity] == "Unique" # [physical_damage_taken_+%] <= "40" && [melee_weapon_critical_strike_multiplier_+] >= "120" && 	[ForceSellItem]	 == "true" // 		//深淵之喚 艾茲麥堅盔																							
-//	[Type] == "Ezomyte Burgonet" && [Rarity] == "Unique" # [local_item_can_have_x_additional_enchantments] >= "1" && [ForceSellItem] == "true" // Cowl of the Thermophile	[ForceSellItem]	 == "true" // 		//嗜炎斗篷 艾茲麥堅盔																							
-	//暗雷																											
-//	[Type] == "Dragonscale Boots" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
+																									
 	//冰冷之眼																											
 //	[Type] == "Goathide Gloves" && [Rarity] == "Unique" # [base_physical_damage_%_to_convert_to_cold] >= "1" && 	[StashItem]	 == "true" // 																									
 
 	//雙玉戒指：冰火、火雷、雷冰戒、意志呼喚、狼王戒																											
 
-	[Type]== "Two-Stone Ring" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
+//	[Type]== "Two-Stone Ring" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
 	//三相戒指：竊罪、羅里																											
 //	[Type]== "Prismatic Ring" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
 	//裂心刃																											
 //	[Type] == "Royal Skean" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
 	//開膛斧																											
-	[Type]== "Siege Axe" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
+//	[Type]== "Siege Axe" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
 	//獅吼、魯米都撿																											
 //	[Type] == "Granite Flask" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
-	//大小傷腰 堅毅之環 都撿																											
-	[Type]== "Studded Belt" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
-
-
+																								
+////////////自用裝////////////
+	//==自殺頭==//																										
+	[Type] == "Ezomyte Burgonet" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
+	[Type] == "Ezomyte Burgonet" && [Rarity] == "Unique" # [physical_damage_taken_+%] <= "40" && [melee_weapon_critical_strike_multiplier_+] >= "120" && 	[ForceSellItem]	 == "true" // 		//深淵之喚 艾茲麥堅盔																							
+	[Type] == "Ezomyte Burgonet" && [Rarity] == "Unique" # [local_item_can_have_x_additional_enchantments] >= "1" && [ForceSellItem] == "true" // Cowl of the Thermophile	[ForceSellItem]	 == "true" // 		//嗜炎斗篷 艾茲麥堅盔																							
+//==暗雷== //																								
+	//[Type] == "Dragonscale Boots" && [Rarity] == "Unique" # 	[StashItem]	 == "true"
+	//==大小傷腰 堅毅之環 都撿//																										
+	[Type]== "Studded Belt" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 	
+//[Type]== "Clasped Mitts" && [Rarity] == "Unique" # [StashItem] == "true" // 沙塵之影 環帶護手	拾取且售出
 ////////////重要分隔線///////////////
 
 	//赤紅珠寶																											
@@ -302,17 +310,18 @@
 //回血套	永生已經寫在皮革那邊了																											
 
 	//基加薩魯																											
-	[Type] == "Topaz Ring" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
+//	[Type] == "Topaz Ring" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
 //	[Type] == "Topaz Ring" && [Rarity] == "Unique" # [curse_effect_on_self_+%] >= "1" && 	[ForceSellItem]	 == "true" // 		基加薩魯																							
 //	[Type] == "Topaz Ring" && [Rarity] == "Unique" # [damage_vs_shocked_enemies_+%] >= "40" && 	[ForceSellItem]	 == "true" // 		瓦拉庫之印																							
 //	[Type] == "Topaz Ring" && [Rarity] == "Unique" # [herald_of_thunder_bolt_frequency_+%] >= "1" && 	[ForceSellItem]	 == "true" // 		風暴之密																							
-	[Type] == "Topaz Ring" && [Rarity] == "Unique" # [nova_spells_cast_at_target_location] >= "1" && 	[ForceSellItem]	 == "true" // 		星空之影																							
+//	[Type] == "Topaz Ring" && [Rarity] == "Unique" # [nova_spells_cast_at_target_location] >= "1" && 	[ForceSellItem]	 == "true" // 		星空之影																							
 	//新生盾																											
 //	[Type] == "Plank Kite Shield" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
 	//靈護																											
-	[Type] == "Basket Rapier" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
+
+// [Type] == "Basket Rapier" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 																									
 	//塑界者之籽																											
-        [Type] == "Agate Amulet" && [Rarity] == "Unique" #	[StashItem]	 == "true" // 																									
+//        [Type] == "Agate Amulet" && [Rarity] == "Unique" #	[StashItem]	 == "true" // 																									
 //	[Type] == "Agate Amulet" && [Rarity] == "Unique" # [gain_endurance_charge_on_power_charge_expiry] >= "1" && 	[ForceSellItem]	 == "true" // 		//福爾的忠誠之符 瑪瑙護身符																							
 //	[Type] == "Agate Amulet" && [Rarity] == "Unique" # [chance_to_grant_nearby_enemies_unholy_might_on_kill_%] >= "1" && 	[ForceSellItem]	 == "true" // 		//心靈抽取 瑪瑙護身符																							
 //	[Type] == "Agate Amulet" && [Rarity] == "Unique" # [local_display_aura_mana_regeneration_rate_+%] >= "1" &&	[ForceSellItem]	 == "true" // 		//塑界者之籽 瑪瑙護身符																							
