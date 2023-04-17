@@ -18,6 +18,8 @@
 //[Type]=="Strand Map" # [IgnoreMap] =="true" //致命岩灘
 //[Type]=="Haunted Mansion Map" # [IgnoreMap] =="true" //幽魂宅邸
 //[Type]=="Crater Map" # [IgnoreMap] =="true" //殘破殞坑
+//[Type]=="Defiled Cathedral Map" # [IgnoreMap] =="true" //不潔教堂
+//[Type]=="Wharf Map" # [IgnoreMap] =="true" //毒牙海港
 
 //  不打的
 [Type]=="Shore Map" # [IgnoreMap] =="true" //暮光海灘
@@ -28,7 +30,7 @@
 [Type]=="Promenade Map" # [IgnoreMap] =="true" //月色迴廊
 [Type]=="City Square Map" # [IgnoreMap] =="true" //危城廣場
 [Type]=="Arcade Map" # [IgnoreMap] =="true" //崩壞長廊
-//[Type]=="Defiled Cathedral Map" # [IgnoreMap] =="true" //不潔教堂
+
 [Type]=="Lookout Map" # [IgnoreMap] =="true" //如履危牆
 [Type]=="Beach Map" # [IgnoreMap] =="true" //白沙灘頭
 [Type]=="Graveyard Map" # [IgnoreMap] =="true" //墮影墓場
@@ -78,7 +80,6 @@
 [Type]=="Phantasmagoria Map" # [IgnoreMap] =="true" //魔靈幻獄
 [Type]=="Academy Map" # [IgnoreMap] =="true" //惡靈學院
 [Type]=="Thicket Map" # [IgnoreMap] =="true" //驚懼樹叢
-[Type]=="Wharf Map" # [IgnoreMap] =="true" //毒牙海港
 [Type]=="Ashen Wood Map" # [IgnoreMap] =="true" //旱木林地
 [Type]=="Atoll Map" # [IgnoreMap] =="true" //濱海山丘
 [Type]=="Underground Sea Map" # [IgnoreMap] =="true" //濱海幽穴
