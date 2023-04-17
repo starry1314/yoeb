@@ -18,158 +18,53 @@
 //[Type]=="Strand Map" # [IgnoreMap] =="true" //致命岩灘
 //[Type]=="Haunted Mansion Map" # [IgnoreMap] =="true" //幽魂宅邸
 //[Type]=="Crater Map" # [IgnoreMap] =="true" //殘破殞坑
-//[Type]=="Defiled Cathedral Map" # [IgnoreMap] =="true" //不潔教堂
-//[Type]=="Wharf Map" # [IgnoreMap] =="true" //毒牙海港
 
 //  不打的
-[Type]=="Shore Map" # [IgnoreMap] =="true" //暮光海灘
-[Type]=="Canyon Map" # [IgnoreMap] =="true" //炙陽峽谷
-[Type]=="Grotto Map" # [IgnoreMap] =="true" //幽暗地穴
-[Type]=="Cemetery Map" # [IgnoreMap] =="true" //晨曦墓地
-[Type]=="Coves Map" # [IgnoreMap] =="true" //疾風峽灣
-[Type]=="Promenade Map" # [IgnoreMap] =="true" //月色迴廊
-[Type]=="City Square Map" # [IgnoreMap] =="true" //危城廣場
-[Type]=="Arcade Map" # [IgnoreMap] =="true" //崩壞長廊
+//[Type]=="Shore Map" # [IgnoreMap] =="true" //暮光海灘
+//[Type]=="Canyon Map" # [IgnoreMap] =="true" //炙陽峽谷
+//[Type]=="Grotto Map" # [IgnoreMap] =="true" //幽暗地穴
+//[Type]=="Cemetery Map" # [IgnoreMap] =="true" //晨曦墓地
+//[Type]=="Coves Map" # [IgnoreMap] =="true" //疾風峽灣
+//[Type]=="Promenade Map" # [IgnoreMap] =="true" //月色迴廊
+//[Type]=="City Square Map" # [IgnoreMap] =="true" //危城廣場
+//[Type]=="Arcade Map" # [IgnoreMap] =="true" //崩壞長廊
+//[Type]=="Defiled Cathedral Map" # [IgnoreMap] =="true" //不潔教堂
+//[Type]=="Lookout Map" # [IgnoreMap] =="true" //如履危牆
+//[Type]=="Beach Map" # [IgnoreMap] =="true" //白沙灘頭
+//[Type]=="Graveyard Map" # [IgnoreMap] =="true" //墮影墓場
+//[Type]=="Dungeon Map" # [IgnoreMap] =="true" //禁魂炎獄
+//[Type]=="Foundry Map" # [IgnoreMap] =="true" //鍊金房
+//[Type]=="Alleyways Map" # [IgnoreMap] =="true" //危城巷弄
+//[Type]=="Pen Map" # [IgnoreMap] =="true" //穢陰獄牢
+//[Type]=="Desert Map" # [IgnoreMap] =="true" //貧瘠之地
+//[Type]=="Arid Lake Map" # [IgnoreMap] =="true" //乾枯湖岸
+//[Type]=="Flooded Mine Map" # [IgnoreMap] =="true" //洪災礦坑
+//[Type]=="Marshes Map" # [IgnoreMap] =="true" //惡臭沼地
+//[Type]=="Iceberg Map" # [IgnoreMap] =="true" //極原冰帽
+//[Type]=="Cage Map" # [IgnoreMap] =="true" //羈破牢籠
+//[Type]=="Fungal Hollow Map" # [IgnoreMap] =="true" //毒菌魔域
+//[Type]=="Excavation Map" # [IgnoreMap] =="true" //挖掘場
+//[Type]=="Leyline Map" # [IgnoreMap] =="true" //荒涼牧野
+//[Type]=="Peninsula Map" # [IgnoreMap] =="true" //乾潮林地
+//[Type]=="Port Map" # [IgnoreMap] =="true" //失落城塢
+//[Type]=="Burial Chambers Map" # [IgnoreMap] =="true" //旱地墓室
+//[Type]=="Cells Map" # [IgnoreMap] =="true" //幽魂監牢
+//[Type]=="Relic Chambers Map" # [IgnoreMap] =="true" //古典密室
+//[Type]=="Courthouse Map" # [IgnoreMap] =="true" //失序教院
+//[Type]=="Park Map" # [IgnoreMap] =="true" //園林苑
+//[Type]=="Chateau Map" # [IgnoreMap] =="true" //古堡
+//[Type]=="Glacier Map" # [IgnoreMap] =="true" //冰川山丘
+//[Type]=="Volcano Map" # [IgnoreMap] =="true" //火山炎域
+//[Type]=="Lighthouse Map" # [IgnoreMap] =="true" //絕望燈塔
+//[Type]=="Frozen Cabins Map" # [IgnoreMap] =="true" //凍原小屋
+//[Type]=="Grave Trough Map" # [IgnoreMap] =="true" //墓地谷
+//[Type]=="Crimson Township Map" # [IgnoreMap] =="true" //緋紅之鎮
+//[Type]=="Forking River Map" # [IgnoreMap] =="true" //岔河
+//[Type]=="Cold River Map" # [IgnoreMap] =="true" //寒河
+//[Type]=="Forbidden Woods Map" # [IgnoreMap] =="true" //禁忌之森
+//[Type]=="Conservatory Map" # [IgnoreMap] =="true" //寧逸溫房
+//[Type]=="Sulphur Vents Map" # [IgnoreMap] =="true" //硫磺蝕岸
 
-[Type]=="Lookout Map" # [IgnoreMap] =="true" //如履危牆
-[Type]=="Beach Map" # [IgnoreMap] =="true" //白沙灘頭
-[Type]=="Graveyard Map" # [IgnoreMap] =="true" //墮影墓場
-[Type]=="Dungeon Map" # [IgnoreMap] =="true" //禁魂炎獄
-[Type]=="Foundry Map" # [IgnoreMap] =="true" //鍊金房
-[Type]=="Alleyways Map" # [IgnoreMap] =="true" //危城巷弄
-[Type]=="Pen Map" # [IgnoreMap] =="true" //穢陰獄牢
-[Type]=="Desert Map" # [IgnoreMap] =="true" //貧瘠之地
-[Type]=="Arid Lake Map" # [IgnoreMap] =="true" //乾枯湖岸
-[Type]=="Flooded Mine Map" # [IgnoreMap] =="true" //洪災礦坑
-[Type]=="Marshes Map" # [IgnoreMap] =="true" //惡臭沼地
-[Type]=="Iceberg Map" # [IgnoreMap] =="true" //極原冰帽
-[Type]=="Cage Map" # [IgnoreMap] =="true" //羈破牢籠
-[Type]=="Fungal Hollow Map" # [IgnoreMap] =="true" //毒菌魔域
-[Type]=="Excavation Map" # [IgnoreMap] =="true" //挖掘場
-[Type]=="Leyline Map" # [IgnoreMap] =="true" //荒涼牧野
-[Type]=="Peninsula Map" # [IgnoreMap] =="true" //乾潮林地
-[Type]=="Port Map" # [IgnoreMap] =="true" //失落城塢
-[Type]=="Burial Chambers Map" # [IgnoreMap] =="true" //旱地墓室
-[Type]=="Cells Map" # [IgnoreMap] =="true" //幽魂監牢
-[Type]=="Relic Chambers Map" # [IgnoreMap] =="true" //古典密室
-[Type]=="Courthouse Map" # [IgnoreMap] =="true" //失序教院
-[Type]=="Park Map" # [IgnoreMap] =="true" //園林苑
-[Type]=="Chateau Map" # [IgnoreMap] =="true" //古堡
-[Type]=="Glacier Map" # [IgnoreMap] =="true" //冰川山丘
-[Type]=="Volcano Map" # [IgnoreMap] =="true" //火山炎域
-[Type]=="Lighthouse Map" # [IgnoreMap] =="true" //絕望燈塔
-[Type]=="Frozen Cabins Map" # [IgnoreMap] =="true" //凍原小屋
-[Type]=="Grave Trough Map" # [IgnoreMap] =="true" //墓地谷
-[Type]=="Crimson Township Map" # [IgnoreMap] =="true" //緋紅之鎮
-[Type]=="Forking River Map" # [IgnoreMap] =="true" //岔河
-[Type]=="Cold River Map" # [IgnoreMap] =="true" //寒河
-[Type]=="Forbidden Woods Map" # [IgnoreMap] =="true" //禁忌之森
-[Type]=="Conservatory Map" # [IgnoreMap] =="true" //寧逸溫房
-[Type]=="Sulphur Vents Map" # [IgnoreMap] =="true" //硫磺蝕岸
-
-[Type]=="Maze Map" # [IgnoreMap] =="true" //冥神之域
-[Type]=="Channel Map" # [IgnoreMap] =="true" //秘密通道
-[Type]=="Toxic Sewer Map" # [IgnoreMap] =="true" //腐敗下水道
-[Type]=="Ancient City Map" # [IgnoreMap] =="true" //遠古危城
-[Type]=="Ivory Temple Map" # [IgnoreMap] =="true" //象牙神殿
-[Type]=="Spider Lair Map" # [IgnoreMap] =="true" //巨蛛巢穴
-[Type]=="Barrows Map" # [IgnoreMap] =="true" //熱林塚墓
-[Type]=="Mausoleum Map" # [IgnoreMap] =="true" //靜縊陵墓
-[Type]=="Fields Map" # [IgnoreMap] =="true" //無疆田野
-[Type]=="Jungle Valley Map" # [IgnoreMap] =="true" //劇毒林谷
-[Type]=="Phantasmagoria Map" # [IgnoreMap] =="true" //魔靈幻獄
-[Type]=="Academy Map" # [IgnoreMap] =="true" //惡靈學院
-[Type]=="Thicket Map" # [IgnoreMap] =="true" //驚懼樹叢
-[Type]=="Ashen Wood Map" # [IgnoreMap] =="true" //旱木林地
-[Type]=="Atoll Map" # [IgnoreMap] =="true" //濱海山丘
-[Type]=="Underground Sea Map" # [IgnoreMap] =="true" //濱海幽穴
-[Type]=="Coral Ruins Map" # [IgnoreMap] =="true" //破碎堡礁
-[Type]=="Lava Chamber Map" # [IgnoreMap] =="true" //熔岩之室
-[Type]=="Residence Map" # [IgnoreMap] =="true" //神主居所
-[Type]=="Ramparts Map" # [IgnoreMap] =="true" //濱海堡壘
-[Type]=="Dunes Map" # [IgnoreMap] =="true" //暮色沙丘
-[Type]=="Bone Crypt Map" # [IgnoreMap] =="true" //骨跡陵墓
-[Type]=="Underground River Map" # [IgnoreMap] =="true" //地底之河
-[Type]=="Gardens Map" # [IgnoreMap] =="true" //迷宮花園
-[Type]=="Arachnid Nest Map" # [IgnoreMap] =="true" //異蛛巢穴
-[Type]=="Bazaar Map" # [IgnoreMap] =="true" //遠古市集
-[Type]=="Laboratory Map" # [IgnoreMap] =="true" //實驗居所
-[Type]=="Infested Valley Map" # [IgnoreMap] =="true" //病疫林谷
-[Type]=="Overgrown Ruin Map" # [IgnoreMap] =="true" //長草遺跡
-[Type]=="Vaal Pyramid Map" # [IgnoreMap] =="true" //瓦爾金字塔
-[Type]=="Geode Map" # [IgnoreMap] =="true" //詭譎晶洞
-[Type]=="Armoury Map" # [IgnoreMap] =="true" //軍械庫
-[Type]=="Courtyard Map" # [IgnoreMap] =="true" //奇術之庭
-[Type]=="Mud Geyser Map" # [IgnoreMap] =="true" //陰晦泥灘
-[Type]=="Tropical Island Map" # [IgnoreMap] =="true" //晴空幽島
-[Type]=="Mineral Pools Map" # [IgnoreMap] =="true" //濕地礦山
-[Type]=="Moon Temple Map" # [IgnoreMap] =="true" //嬋娟神殿
-[Type]=="Sepulchre Map" # [IgnoreMap] =="true" //陰暗墓塚
-[Type]=="Tower Map" # [IgnoreMap] =="true" //闇獄尖塔
-[Type]=="Waste Pool Map" # [IgnoreMap] =="true" //死寂泥溝
-[Type]=="Plateau Map" # [IgnoreMap] =="true" //海風高原
-[Type]=="Estuary Map" # [IgnoreMap] =="true" //熔火岩灘
-[Type]=="Vault Map" # [IgnoreMap] =="true" //魔金寶庫
-[Type]=="Temple Map" # [IgnoreMap] =="true" //奪魂之殿
-[Type]=="Arena Map" # [IgnoreMap] =="true" //競技場
-[Type]=="Museum Map" # [IgnoreMap] =="true" //古博物館
-[Type]=="Scriptorium Map" # [IgnoreMap] =="true" //墓影書坊
-[Type]=="Siege Map" # [IgnoreMap] =="true" //禁斷圍城
-[Type]=="Shipyard Map" # [IgnoreMap] =="true" //熾炎船塢
-[Type]=="Belfry Map" # [IgnoreMap] =="true" //雲頂鐘樓
-[Type]=="Arachnid Tomb Map" # [IgnoreMap] =="true" //異蛛墓塚
-[Type]=="Wasteland Map" # [IgnoreMap] =="true" //荒地
-[Type]=="Precinct Map" # [IgnoreMap] =="true" //苦行之域
-[Type]=="Bog Map" # [IgnoreMap] =="true" //瘴氣泥沼
-[Type]=="Pier Map" # [IgnoreMap] =="true" //怒浪之港
-[Type]=="Cursed Crypt Map" # [IgnoreMap] =="true" //惡咒陵墓
-[Type]=="Orchard Map" # [IgnoreMap] =="true" //密林果園
-[Type]=="Lair Map" # [IgnoreMap] =="true" //餓獸巢穴
-[Type]=="Colonnade Map" # [IgnoreMap] =="true" //激戰柱廊
-[Type]=="Primordial Pool Map" # [IgnoreMap] =="true" //血腥沼澤
-[Type]=="Spider Forest Map" # [IgnoreMap] =="true" //巨蛛之林
-[Type]=="Waterways Map" # [IgnoreMap] =="true" //危機水道
-[Type]=="Factory Map" # [IgnoreMap] =="true" //鐵鏽工廠
-[Type]=="Mesa Map" # [IgnoreMap] =="true" //平頂荒漠
-[Type]=="Pit Map" # [IgnoreMap] =="true" //巨坑
-[Type]=="Dry Sea Map" # [IgnoreMap] =="true" //乾海
-[Type]=="Summit Map" # [IgnoreMap] =="true" //寒頂之巔
-[Type]=="Overgrown Shrine Map" # [IgnoreMap] =="true" //密草神殿
-[Type]=="Castle Ruins Map" # [IgnoreMap] =="true" //遺跡廢墟
-[Type]=="Crystal Ore Map" # [IgnoreMap] =="true" //紫晶礦山
-[Type]=="Villa Map" # [IgnoreMap] =="true" //魅影別墅
-[Type]=="Primordial Blocks Map" # [IgnoreMap] =="true" //血腥陣地
-[Type]=="Necropolis Map" # [IgnoreMap] =="true" //魔影墓場
-[Type]=="Racecourse Map" # [IgnoreMap] =="true" //古競速場
-[Type]=="Caldera Map" # [IgnoreMap] =="true" //火山炎口
-[Type]=="Ghetto Map" # [IgnoreMap] =="true" //赤貧居所
-[Type]=="Malformation Map" # [IgnoreMap] =="true" //畸形亡域
-[Type]=="Terrace Map" # [IgnoreMap] =="true" //露台花園
-[Type]=="Shrine Map" # [IgnoreMap] =="true" //奇術秘殿
-[Type]=="Arsenal Map" # [IgnoreMap] =="true" //古兵工廠
-[Type]=="Desert Spring Map" # [IgnoreMap] =="true" //硫磺荒漠
-[Type]=="Core Map" # [IgnoreMap] =="true" //核心
-[Type]=="Colosseum Map" # [IgnoreMap] =="true" //大決鬥場
-[Type]=="Acid Caverns Map" # [IgnoreMap] =="true" //酸岩酸嶼
-[Type]=="Dark Forest Map" # [IgnoreMap] =="true" //夜語幽林
-
-[Type]=="Plaza Map" # [IgnoreMap] =="true" //廣場
-[Type]=="Dig Map" # [IgnoreMap] =="true" //違禁掘坑
-[Type]=="Palace Map" # [IgnoreMap] =="true" //神域之殿
-[Type]=="Lava Lake Map" # [IgnoreMap] =="true" //岩漿熔湖
-[Type]=="Basilica Map" # [IgnoreMap] =="true" //聖殿
-[Type]=="Sunken City Map" # [IgnoreMap] =="true" //亞特蘭提斯
-[Type]=="Reef Map" # [IgnoreMap] =="true" //危機海礁
-[Type]=="Carcass Map" # [IgnoreMap] =="true" //惡臭屍域
-[Type]=="Stagnation Map" # [IgnoreMap] =="true" //淤塞水道
-[Type]=="Bramble Valley Map" # [IgnoreMap] =="true" //荊棘谷
-[Type]=="Silo Map" # [IgnoreMap] =="true" //儲物倉
-[Type]=="Pit of the Chimera Map" # [IgnoreMap] =="true" //奇美拉魔坑
-[Type]=="Lair of the Hydra Map" # [IgnoreMap] =="true" //九頭蛇冰窟
-[Type]=="Maze of the Minotaur Map" # [IgnoreMap] =="true" //牛頭人謎域
-[Type]=="Forge of the Phoenix Map" # [IgnoreMap] =="true" //火鳳凰熔核
-[Type]=="Vaal Temple Map" # [IgnoreMap] =="true" //瓦爾密殿
-[Type]=="Harbinger Map" # [IgnoreMap] =="true" //神諭之殿．煉獄
 
 
 /////////避開王房////////////
@@ -313,24 +208,24 @@
 //[map_ground_lightning]                                  >= "1" && [Rarity] == "Rare" # [RerollMods] == "true"//地圖裡有感電地面
 //[map_base_ground_desecration_damage_to_deal_per_minute] >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Of Desecration -- Area Has Patches of Desecrated Ground 地圖裡有汙染地面
 //[map_players_block_chance_+%]                            < "0" && [Rarity] == "Rare" # [RerollMods] == "true" // Of Rust -- Players have -% Block Chance/ -% Less Armour // 降低格擋
-//[3250]                         >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Of Insulation -- Monsters have +% Chance to Avoid Status Elemental Ailments
+[3250]                         >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Of Insulation -- Monsters have +% Chance to Avoid Status Elemental Ailments
 
 // IGNORE rare maps
 // REROLL Rare maps with Alteration
-[map_monsters_reflect_%_elemental_damage] 	            >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true" // Mirrored -- Monsters Reflect % Elemental Damage
-//[map_monsters_reflect_%_physical_damage] 	            >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true" // Punishing -- Monsters Reflect % Physical Damage
-[map_players_no_regeneration_including_es] 	            >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true" // Of Statis -- Players have no Life or Mana Regeneration
+//[map_monsters_reflect_%_elemental_damage] 	            >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true" // Mirrored -- Monsters Reflect % Elemental Damage
+//[map_monsters_reflect_%_physical_damage] 	            >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Punishing -- Monsters Reflect % Physical Damage
+//[map_players_no_regeneration_including_es] 	            >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Of Statis -- Players have no Life or Mana Regeneration
 //[map_player_has_level_X_temporal_chains]                >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true"//玩家受到時空鎖鍊詛咒影響
-[map_player_has_level_X_vulnerability]                  >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true"//玩家受到脆弱詛咒
-//[map_player_has_level_X_enfeeble]                     >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true"//玩家受到衰弱詛咒影響
+//[map_player_has_level_X_vulnerability]                  >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true"//玩家受到脆弱詛咒
+//[map_player_has_level_X_enfeeble]                     >= "1" && [Rarity] == "Rare" # [RerollMods] == "true"//玩家受到衰弱詛咒影響
 //[map_player_has_level_X_elemental_weakness]           >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true"//玩家受到元素要害詛咒影響
 //[map_rare_monsters_have_nemesis_mod]                  >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true"//稀有怪有復仇屬性
 //[map_base_ground_fire_damage_to_deal_per_minute]        >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true"//地圖裡有燃燒地面
 //[map_ground_ice]                                      >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true"//地圖裡有冰緩地面
 //[map_ground_lightning]                                >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true"//地圖裡有感電地面
-[map_base_ground_desecration_damage_to_deal_per_minute] >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true" // Of Desecration -- Area Has Patches of Desecrated Ground 地圖裡有汙染地面
+//[map_base_ground_desecration_damage_to_deal_per_minute] >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true" // Of Desecration -- Area Has Patches of Desecrated Ground 地圖裡有汙染地面
 //[map_players_block_chance_+%]                            < "0" && [Rarity] == "Rare" # [IgnoreMap] == "true" // Of Rust -- Players have -% Block Chance/ -% Less Armour // 降低格擋
-[3250]                           >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true" // Of Insulation -- Monsters have +% Chance to Avoid Status Elemental Ailments
+//[3250]                           >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true" // Of Insulation -- Monsters have +% Chance to Avoid Status Elemental Ailments
 
 
 
