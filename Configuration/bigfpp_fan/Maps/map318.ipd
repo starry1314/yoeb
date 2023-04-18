@@ -1,231 +1,101 @@
+//	//				//中文判斷																				
+	//3.20 12/22 閃打
 
-//3.17 橘貓輿圖檔 //
+[map_contains_citadel] >= "1" # [IgnoreMap] == "true" 
+[map_elder_boss_variation] >= "1" # [IgnoreMap] == "true" 
+[map_atlas_influence_type] >= "1" # [IgnoreMap] == "true" 
 
-//[Quality]<="16"&& [Rarity]=="Normal"#[UpgradeQuality]== "true"//使用製圖釘
-[MapTier]>= "5" && [MapTier] <= "16"#[RunMap]== "true"//執行輿圖
-//[Rarity]== "Normal"#[UpgradeToMagic]== "true"//使用蛻變石
-//[Rarity]== "Magic"#[AugmentIfPossible]== "true"//使用增幅石
-//[Rarity]== "Normal"#[UpgradeToRare]== "true"//使用點金石
-
-// === 2 Map types - UpgradeTier. These will be sold in a quantity of 3 pcs. to get 1 of higher tier ===  地圖三換一
-
-[Type] == "Vault Map" # [UpgradeMapTier] == "true" //魔金寶庫
+	//避開王房地圖//(預設)				//中文判斷																				
+				
 
 
-//雙控要打的
+[Type] == "Ashen Wood Map" # [RunMap] == "true"
+[Type] == "Ghetto Map" # [RunMap] == "true"
+																
+	[Type]=="Strand Map" #	[RunMap]	=="true"	//致命岩灘	打這張圖V																																							
 
-//[Type]=="Crimson Temple Map" # [IgnoreMap] =="true" //緋紅神殿
-//[Type]=="Strand Map" # [IgnoreMap] =="true" //致命岩灘
-//[Type]=="Haunted Mansion Map" # [IgnoreMap] =="true" //幽魂宅邸
-//[Type]=="Crater Map" # [IgnoreMap] =="true" //殘破殞坑
+	[Type]=="Haunted Mansion Map" #	[RunMap]	=="true"	//幽魂宅邸	打這張圖V																																							
 
-//  不打的
-//[Type]=="Shore Map" # [IgnoreMap] =="true" //暮光海灘
-//[Type]=="Canyon Map" # [IgnoreMap] =="true" //炙陽峽谷
-//[Type]=="Grotto Map" # [IgnoreMap] =="true" //幽暗地穴
-//[Type]=="Cemetery Map" # [IgnoreMap] =="true" //晨曦墓地
-//[Type]=="Coves Map" # [IgnoreMap] =="true" //疾風峽灣
-//[Type]=="Promenade Map" # [IgnoreMap] =="true" //月色迴廊
-//[Type]=="City Square Map" # [IgnoreMap] =="true" //危城廣場
-//[Type]=="Arcade Map" # [IgnoreMap] =="true" //崩壞長廊
-//[Type]=="Defiled Cathedral Map" # [IgnoreMap] =="true" //不潔教堂
-//[Type]=="Lookout Map" # [IgnoreMap] =="true" //如履危牆
-//[Type]=="Beach Map" # [IgnoreMap] =="true" //白沙灘頭
-//[Type]=="Graveyard Map" # [IgnoreMap] =="true" //墮影墓場
-//[Type]=="Dungeon Map" # [IgnoreMap] =="true" //禁魂炎獄
-//[Type]=="Foundry Map" # [IgnoreMap] =="true" //鍊金房
-//[Type]=="Alleyways Map" # [IgnoreMap] =="true" //危城巷弄
-//[Type]=="Pen Map" # [IgnoreMap] =="true" //穢陰獄牢
-//[Type]=="Desert Map" # [IgnoreMap] =="true" //貧瘠之地
-//[Type]=="Arid Lake Map" # [IgnoreMap] =="true" //乾枯湖岸
-//[Type]=="Flooded Mine Map" # [IgnoreMap] =="true" //洪災礦坑
-//[Type]=="Marshes Map" # [IgnoreMap] =="true" //惡臭沼地
-//[Type]=="Iceberg Map" # [IgnoreMap] =="true" //極原冰帽
-//[Type]=="Cage Map" # [IgnoreMap] =="true" //羈破牢籠
-//[Type]=="Fungal Hollow Map" # [IgnoreMap] =="true" //毒菌魔域
-//[Type]=="Excavation Map" # [IgnoreMap] =="true" //挖掘場
-//[Type]=="Leyline Map" # [IgnoreMap] =="true" //荒涼牧野
-//[Type]=="Peninsula Map" # [IgnoreMap] =="true" //乾潮林地
-//[Type]=="Port Map" # [IgnoreMap] =="true" //失落城塢
-//[Type]=="Burial Chambers Map" # [IgnoreMap] =="true" //旱地墓室
-//[Type]=="Cells Map" # [IgnoreMap] =="true" //幽魂監牢
-//[Type]=="Relic Chambers Map" # [IgnoreMap] =="true" //古典密室
-//[Type]=="Courthouse Map" # [IgnoreMap] =="true" //失序教院
-//[Type]=="Park Map" # [IgnoreMap] =="true" //園林苑
-//[Type]=="Chateau Map" # [IgnoreMap] =="true" //古堡
-//[Type]=="Glacier Map" # [IgnoreMap] =="true" //冰川山丘
-//[Type]=="Volcano Map" # [IgnoreMap] =="true" //火山炎域
-//[Type]=="Lighthouse Map" # [IgnoreMap] =="true" //絕望燈塔
-//[Type]=="Frozen Cabins Map" # [IgnoreMap] =="true" //凍原小屋
-//[Type]=="Grave Trough Map" # [IgnoreMap] =="true" //墓地谷
-//[Type]=="Crimson Township Map" # [IgnoreMap] =="true" //緋紅之鎮
-//[Type]=="Forking River Map" # [IgnoreMap] =="true" //岔河
-//[Type]=="Cold River Map" # [IgnoreMap] =="true" //寒河
-//[Type]=="Forbidden Woods Map" # [IgnoreMap] =="true" //禁忌之森
-//[Type]=="Conservatory Map" # [IgnoreMap] =="true" //寧逸溫房
-//[Type]=="Sulphur Vents Map" # [IgnoreMap] =="true" //硫磺蝕岸
+	[Type]=="Crater Map" #	[RunMap]	=="true"	//殘破殞坑	打這張圖V																				
+																				
+	[Type]=="Mesa Map" #	[RunMap]	=="true"	//平頂荒漠	打這張圖																				
 
+	[Type]=="Defiled Cathedral Map" #	[RunMap]	=="true"	//不潔教堂	打這張圖																				
 
-
-/////////避開王房////////////
-[Type]=="Graveyard Map" # [SkipBossArena] =="true" //墮影墓場
-[Type]=="Dungeon Map" # [SkipBossArena] =="true" //禁魂炎獄
-[Type]=="Foundry Map" # [SkipBossArena] =="true" //鍊金房
-[Type]=="Cells Map" # [SkipBossArena] =="true" //幽魂監牢
-[Type]=="Relic Chambers Map" # [SkipBossArena] =="true" //古典密室
-[Type]=="Frozen Cabins Map" # [SkipBossArena] =="true" //凍原小屋
-[Type]=="Grave Trough Map" # [SkipBossArena] =="true" //墓地谷
-[Type]=="Crimson Township Map" # [SkipBossArena] =="true" //緋紅之鎮
-[Type]=="Toxic Sewer Map" # [SkipBossArena] =="true" //腐敗下水道
-[Type]=="Ivory Temple Map" # [SkipBossArena] =="true" //象牙神殿
-[Type]=="Lava Chamber Map" # [SkipBossArena] =="true" //熔岩之室
-[Type]=="Residence Map" # [SkipBossArena] =="true" //神主居所
-[Type]=="Bone Crypt Map" # [SkipBossArena] =="true" //骨跡陵墓
-[Type]=="Underground River Map" # [SkipBossArena] =="true" //地底之河
-[Type]=="Laboratory Map" # [SkipBossArena] =="true" //實驗居所
-[Type]=="Overgrown Ruin Map" # [SkipBossArena] =="true" //長草遺跡
-[Type]=="Vaal Pyramid Map" # [SkipBossArena] =="true" //瓦爾金字塔
-[Type]=="Tower Map" # [SkipBossArena] =="true" //闇獄尖塔
-[Type]=="Waste Pool Map" # [SkipBossArena] =="true" //死寂泥溝
-[Type]=="Vault Map" # [SkipBossArena] =="true" //魔金寶庫
-[Type]=="Shipyard Map" # [SkipBossArena] =="true" //熾炎船塢
-[Type]=="Belfry Map" # [SkipBossArena] =="true" //雲頂鐘樓
-[Type]=="Lair Map" # [SkipBossArena] =="true" //餓獸巢穴
-[Type]=="Primordial Pool Map" # [SkipBossArena] =="true" //血腥沼澤
-[Type]=="Factory Map" # [SkipBossArena] =="true" //鐵鏽工廠
-[Type]=="Summit Map" # [SkipBossArena] =="true" //寒頂之巔
-[Type]=="Primordial Blocks Map" # [SkipBossArena] =="true" //血腥陣地
-[Type]=="Necropolis Map" # [SkipBossArena] =="true" //魔影墓場
-[Type]=="Malformation Map" # [SkipBossArena] =="true" //畸形亡域
-[Type]=="Terrace Map" # [SkipBossArena] =="true" //露台花園
-[Type]=="Shrine Map" # [SkipBossArena] =="true" //奇術秘殿
-[Type]=="Arsenal Map" # [SkipBossArena] =="true" //古兵工廠
-[Type]=="Core Map" # [SkipBossArena] =="true" //核心
-[Type]=="Colosseum Map" # [SkipBossArena] =="true" //大決鬥場
-//[Type]=="Dark Forest Map" # [SkipBossArena] =="true" //夜語幽林
-[Type]=="Plaza Map" # [SkipBossArena] =="true" //廣場
-[Type]=="Lava Lake Map" # [SkipBossArena] =="true" //岩漿熔湖
-[Type]=="Basilica Map" # [SkipBossArena] =="true" //聖殿
-[Type]=="Sunken City Map" # [SkipBossArena] =="true" //亞特蘭提斯
-[Type]=="Reef Map" # [SkipBossArena] =="true" //危機海礁
-[Type]=="Bramble Valley Map" # [SkipBossArena] =="true" //荊棘谷
-[Type]=="Pit of the Chimera Map" # [SkipBossArena] =="true" //奇美拉魔坑
-[Type]=="Lair of the Hydra Map" # [SkipBossArena] =="true" //九頭蛇冰窟
-[Type]=="Maze of the Minotaur Map" # [SkipBossArena] =="true" //牛頭人謎域
-[Type]=="Forge of the Phoenix Map" # [SkipBossArena] =="true" //火鳳凰熔核
-[Type]=="Vaal Temple Map" # [SkipBossArena] =="true" //瓦爾密殿
-[Type]=="Harbinger Map" # [SkipBossArena] =="true" //神諭之殿．煉獄
-
-
-
-//////幸運地圖可以挑選聖殿毒牙或是致命岩灘////
-//區域被塑界者控制
-[Type]== "Forge of the Phoenix Map"#[IgnoreMap]== "true"//火鳳凰熔核
-[Type]== "Lair of the Hydra Map"#[IgnoreMap]== "true"//九頭蛇冰窟
-[Type]== "Maze of the Minotaur Map"#[IgnoreMap]== "true"//牛頭人謎域
-[Type]== "Pit of the Chimera Map"#[IgnoreMap]== "true"//奇美拉魔坑
-
-
-////Unique Map////
-
-[Type]== "Overgrown Shrine Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Siege Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Courthouse Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Underground River Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Relic Chambers Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Necropolis Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Maze Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Promenade Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Cemetery Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Atoll Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Shore Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Underground Sea Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Bone Crypt Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Dunes Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Temple Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Basilica Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Harbinger Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Cursed Crypt Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Chateau Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Museum Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Moon Temple Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Courtyard Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Park Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Tropical Island Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Vaal Pyramid Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Strand Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//
-[Type]== "Synthesised Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//追憶圖
-
-
-//輿圖重骰，或避打
-
-// REROLL magic maps with Alteration
-[map_monsters_reflect_%_elemental_damage] 	            >= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // Mirrored -- Monsters Reflect % Elemental Damage
-//[map_monsters_reflect_%_physical_damage] 	            >= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // Punishing -- Monsters Reflect % Physical Damage
-[map_players_no_regeneration_including_es] 	            >= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // Of Statis -- Players have no Life or Mana Regeneration
-//[map_player_has_level_X_temporal_chains]                >= "1" && [Rarity] == "Magic" # [RerollMods] == "true"//玩家受到時空鎖鍊詛咒影響
-[map_player_has_level_X_vulnerability]                  >= "1" && [Rarity] == "Magic" # [RerollMods] == "true"//玩家受到脆弱詛咒
-//[map_player_has_level_X_enfeeble]                     >= "1" && [Rarity] == "Magic" # [RerollMods] == "true"//玩家受到衰弱詛咒影響
-//[map_player_has_level_X_elemental_weakness]           >= "1" && [Rarity] == "Magic" # [RerollMods] == "true"//玩家受到元素要害詛咒影響
-//[map_rare_monsters_have_nemesis_mod]                  >= "1" && [Rarity] == "Magic" # [RerollMods] == "true"//稀有怪有復仇屬性
-//[map_base_ground_fire_damage_to_deal_per_minute]        >= "1" && [Rarity] == "Magic" # [RerollMods] == "true"//地圖裡有燃燒地面
-//[map_ground_ice]                                      >= "1" && [Rarity] == "Magic" # [RerollMods] == "true"//地圖裡有冰緩地面
-//[map_ground_lightning]                                >= "1" && [Rarity] == "Magic" # [RerollMods] == "true"//地圖裡有感電地面
-[map_base_ground_desecration_damage_to_deal_per_minute] >= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // Of Desecration -- Area Has Patches of Desecrated Ground 地圖裡有汙染地面
-//[map_players_block_chance_+%]                            < "0" && [Rarity] == "Magic" # [RerollMods] == "true" // Of Rust -- Players have -% Block Chance/ -% Less Armour // 降低格擋
-[3250]                         >= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // Of Insulation -- Monsters have +% Chance to Avoid Status Elemental Ailments
-
-
-
-// IGNORE magic maps
-//[map_monsters_reflect_%_elemental_damage] 	          >= "1" && [Rarity] == "Magic" # [IgnoreMap] == "true" // Mirrored -- Monsters Reflect % Elemental Damage
-//[map_monsters_reflect_%_physical_damage] 	              >= "1" && [Rarity] == "Magic" # [IgnoreMap] == "true" // Punishing -- Monsters Reflect % Physical Damage
-//[map_players_no_regeneration_including_es] 	          >= "1" && [Rarity] == "Magic" # [IgnoreMap] == "true" // Of Statis -- Players have no Life or Mana Regeneration
-//[map_player_has_level_X_temporal_chains]                >= "1" && [Rarity] == "Magic" # [IgnoreMap] == "true"//玩家受到時空鎖鍊詛咒影響
-//[map_player_has_level_X_vulnerability]                  >= "1" && [Rarity] == "Magic" # [IgnoreMap] == "true"//玩家受到脆弱詛咒
-//[map_player_has_level_X_enfeeble]                       >= "1" && [Rarity] == "Magic" # [IgnoreMap] == "true"//玩家受到衰弱詛咒影響
-//[map_player_has_level_X_elemental_weakness]             >= "1" && [Rarity] == "Magic" # [IgnoreMap] == "true"//玩家受到元素要害詛咒影響
-//[map_rare_monsters_have_nemesis_mod]                    >= "1" && [Rarity] == "Magic" # [IgnoreMap] == "true"//稀有怪有復仇屬性
-//[map_base_ground_fire_damage_to_deal_per_minute]        >= "1" && [Rarity] == "Magic" # [IgnoreMap] == "true"//地圖裡有燃燒地面
-//[map_ground_ice]                                        >= "1" && [Rarity] == "Magic" # [IgnoreMap] == "true"//地圖裡有冰緩地面
-//[map_ground_lightning]                                  >= "1" && [Rarity] == "Magic" # [IgnoreMap] == "true"//地圖裡有感電地面
-//[map_base_ground_desecration_damage_to_deal_per_minute] >= "1" && [Rarity] == "Magic" # [IgnoreMap] == "true" // Of Desecration -- Area Has Patches of Desecrated Ground 地圖裡有汙染地面
-//[map_players_block_chance_+%]                            < "0" && [Rarity] == "Magic" # [IgnoreMap] == "true" // Of Rust -- Players have -% Block Chance/ -% Less Armour // 降低格擋
-//[3250]                           >= "1" && [Rarity] == "Magic" # [IgnoreMap] == "true" // Of Insulation -- Monsters have +% Chance to Avoid Status Elemental Ailments
-
-
-// REROLL rare maps with Chaos
-//[map_monsters_reflect_%_elemental_damage] 	          >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Mirrored -- Monsters Reflect % Elemental Damage
-//[map_monsters_reflect_%_physical_damage] 	              >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Punishing -- Monsters Reflect % Physical Damage
-//[map_players_no_regeneration_including_es] 	          >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Of Statis -- Players have no Life or Mana Regeneration
-//[map_player_has_level_X_temporal_chains]                >= "1" && [Rarity] == "Rare" # [RerollMods] == "true"//玩家受到時空鎖鍊詛咒影響
-//[map_player_has_level_X_vulnerability]                  >= "1" && [Rarity] == "Rare" # [RerollMods] == "true"//玩家受到脆弱詛咒
-//[map_player_has_level_X_enfeeble]                       >= "1" && [Rarity] == "Rare" # [RerollMods] == "true"//玩家受到衰弱詛咒影響
-//[map_player_has_level_X_elemental_weakness]             >= "1" && [Rarity] == "Rare" # [RerollMods] == "true"//玩家受到元素要害詛咒影響
-//[map_rare_monsters_have_nemesis_mod]                    >= "1" && [Rarity] == "Rare" # [RerollMods] == "true"//稀有怪有復仇屬性
-//[map_base_ground_fire_damage_to_deal_per_minute]        >= "1" && [Rarity] == "Rare" # [RerollMods] == "true"//地圖裡有燃燒地面
-//[map_ground_ice]                                        >= "1" && [Rarity] == "Rare" # [RerollMods] == "true"//地圖裡有冰緩地面
-//[map_ground_lightning]                                  >= "1" && [Rarity] == "Rare" # [RerollMods] == "true"//地圖裡有感電地面
-//[map_base_ground_desecration_damage_to_deal_per_minute] >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Of Desecration -- Area Has Patches of Desecrated Ground 地圖裡有汙染地面
-//[map_players_block_chance_+%]                            < "0" && [Rarity] == "Rare" # [RerollMods] == "true" // Of Rust -- Players have -% Block Chance/ -% Less Armour // 降低格擋
-[3250]                         >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Of Insulation -- Monsters have +% Chance to Avoid Status Elemental Ailments
-
-// IGNORE rare maps
-// REROLL Rare maps with Alteration
-//[map_monsters_reflect_%_elemental_damage] 	            >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true" // Mirrored -- Monsters Reflect % Elemental Damage
-//[map_monsters_reflect_%_physical_damage] 	            >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Punishing -- Monsters Reflect % Physical Damage
-//[map_players_no_regeneration_including_es] 	            >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Of Statis -- Players have no Life or Mana Regeneration
-//[map_player_has_level_X_temporal_chains]                >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true"//玩家受到時空鎖鍊詛咒影響
-//[map_player_has_level_X_vulnerability]                  >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true"//玩家受到脆弱詛咒
-//[map_player_has_level_X_enfeeble]                     >= "1" && [Rarity] == "Rare" # [RerollMods] == "true"//玩家受到衰弱詛咒影響
-//[map_player_has_level_X_elemental_weakness]           >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true"//玩家受到元素要害詛咒影響
-//[map_rare_monsters_have_nemesis_mod]                  >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true"//稀有怪有復仇屬性
-//[map_base_ground_fire_damage_to_deal_per_minute]        >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true"//地圖裡有燃燒地面
-//[map_ground_ice]                                      >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true"//地圖裡有冰緩地面
-//[map_ground_lightning]                                >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true"//地圖裡有感電地面
-//[map_base_ground_desecration_damage_to_deal_per_minute] >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true" // Of Desecration -- Area Has Patches of Desecrated Ground 地圖裡有汙染地面
-//[map_players_block_chance_+%]                            < "0" && [Rarity] == "Rare" # [IgnoreMap] == "true" // Of Rust -- Players have -% Block Chance/ -% Less Armour // 降低格擋
-//[3250]                           >= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true" // Of Insulation -- Monsters have +% Chance to Avoid Status Elemental Ailments
-
-
-
+	[Type]=="Crimson Temple Map" #	[RunMap]	=="true"	//緋紅神殿	打這張圖V																				
+																									
+	//3.17 忽略圖與忽略傳奇圖																								
+	[Type]== "Forge of the Phoenix Map"#[IgnoreMap]== "true"//火鳳凰熔核 #																								
+	[Type]== "Lair of the Hydra Map"#[IgnoreMap]== "true"//九頭蛇冰窟 #																								
+	[Type]== "Maze of the Minotaur Map"#[IgnoreMap]== "true"//牛頭人謎域 #																								
+	[Type]== "Pit of the Chimera Map"#[IgnoreMap]== "true"//奇美拉魔坑 #																								
+	////Unique Map//// #																								
+//請勿更動//	//[Type]== "Overgrown Shrine Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+	[Type]== "Siege Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+	[Type]== "Courthouse Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+	[Type]== "Underground River Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+	[Type]== "Relic Chambers Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+	[Type]== "Necropolis Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+	[Type]== "Maze Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+//請勿更動//	//[Type]== "Promenade Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+//請勿更動//	//[Type]== "Cemetery Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+	[Type]== "Atoll Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+	[Type]== "Shore Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+	[Type]== "Underground Sea Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+	[Type]== "Bone Crypt Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+	[Type]== "Dunes Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+	[Type]== "Temple Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+//請勿更動//	//[Type]== "Basilica Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+	[Type]== "Harbinger Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+	[Type]== "Cursed Crypt Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+//請勿更動//	//[Type]== "Chateau Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+	[Type]== "Museum Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+	[Type]== "Moon Temple Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+	[Type]== "Courtyard Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+	[Type]== "Park Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+	[Type]== "Tropical Island Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+	[Type]== "Vaal Pyramid Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+//請勿更動//	//[Type]== "Strand Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+	[Type]== "Temple Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//																								
+																									
+	//3.17 討厭的詞綴避開 重骰 （務必兩個、兩個一起改）																								
+	[map_monsters_reflect_%_elemental_damage] >= "1" && [Rarity] == "Magic" #	[RerollMods]	=="true"	//怪物反射_%_元素傷害	避開//怪物反射_%_元素傷害的圖，用改造或C去骰																				
+	[map_monsters_reflect_%_elemental_damage] >= "1" && [Rarity] == "Rare" #	[RerollMods]	=="true"	//怪物反射_%_元素傷害	避開//怪物反射_%_元素傷害的圖，用改造或C去骰																				
+	[map_monsters_reflect_%_physical_damage]>= "1" && [Rarity] == "Magic" #	[RerollMods]	=="true"	//怪物反射_%_物理傷害	避開//怪物反射_%_物理傷害的圖，用改造或C去骰																				
+	[map_monsters_reflect_%_physical_damage]>= "1" && [Rarity] == "Rare" #	[RerollMods]	=="true"	//怪物反射_%_物理傷害	避開//怪物反射_%_物理傷害的圖，用改造或C去骰																				
+	[map_players_no_regeneration_including_es]>= "1" && [Rarity] == "Magic" #	[RerollMods]	=="true"	//玩家無法回復生命、魔力和能量護盾	避開//玩家無法回復生命、魔力和能量護盾的圖，用改造或C去骰																				
+	[map_players_no_regeneration_including_es]>= "1" && [Rarity] == "Rare" #	[RerollMods]	=="true"	//玩家無法回復生命、魔力和能量護盾	避開//玩家無法回復生命、魔力和能量護盾的圖，用改造或C去骰																				
+	[map_player_has_level_X_temporal_chains]>= "1" && [Rarity]="Magic" #	[RerollMods]	=="true"	//玩家受到時空鎖鍊詛咒影響	避開//玩家受到時空鎖鍊詛咒影響的圖，用改造或C去骰																				
+//	[map_player_has_level_X_temporal_chains]>= "1" && [Rarity]="Rare" #	[RerollMods]	=="true"	//玩家受到時空鎖鍊詛咒影響	我不怕這個																				
+	[map_player_has_level_X_vulnerability]>= "1" && [Rarity]="Magic" #	[RerollMods]	=="true"	//玩家受到脆弱詛咒	避開//玩家受到脆弱詛咒的圖，用改造或C去骰																				
+	[map_player_has_level_X_vulnerability]>= "1" && [Rarity]="Rare" #	[RerollMods]	=="true"	//玩家受到脆弱詛咒	避開//玩家受到脆弱詛咒的圖，用改造或C去骰																				
+//	[map_player_has_level_X_enfeeble]>= "1" && [Rarity]="Magic" #	[RerollMods]	=="true"	//玩家受到衰弱詛咒影響	我不怕這個																				
+//	[map_player_has_level_X_enfeeble]>= "1" && [Rarity]="Rare" #	[RerollMods]	=="true"	//玩家受到衰弱詛咒影響	我不怕這個																				
+	[map_player_has_level_X_elemental_weakness]>= "1" && [Rarity]="Magic" #	[RerollMods]	=="true"	//玩家受到元素要害詛咒影響	避開//玩家受到元素要害詛咒影響的圖，用改造或C去骰																				
+	[map_player_has_level_X_elemental_weakness]>= "1" && [Rarity]="Rare" #	[RerollMods]	=="true"	//玩家受到元素要害詛咒影響	避開//玩家受到元素要害詛咒影響的圖，用改造或C去骰																				
+//	[map_rare_monsters_have_nemesis_mod]>= "1" && [Rarity]="Magic" #	[RerollMods]	=="true"	//稀有怪有復仇屬性	我不怕這個																				
+//	[map_rare_monsters_have_nemesis_mod]>= "1" && [Rarity]="Rare" #	[RerollMods]	=="true"	//稀有怪有復仇屬性	我不怕這個																				
+//	[map_base_ground_fire_damage_to_deal_per_minute]>= "1" && [Rarity]="Magic" #	[RerollMods]	=="true"	//地圖裡有燃燒地面	避開//地圖裡有燃燒地面的圖，用改造或C去骰																				
+//	[map_base_ground_fire_damage_to_deal_per_minute]>= "1" && [Rarity]="Rare" #	[RerollMods]	=="true"	//地圖裡有燃燒地面	避開//地圖裡有燃燒地面的圖，用改造或C去骰																				
+	[map_ground_ice]>= "1" && [Rarity]="Magic" #	[RerollMods]	=="true"	//地圖裡有冰緩地面	避開//地圖裡有冰緩地面的圖，用改造或C去骰																				
+//	[map_ground_ice]>= "1" && [Rarity]="Rare" #	[RerollMods]	=="true"	//地圖裡有冰緩地面	我不怕這個																				
+	[map_ground_lightning]>= "1" && [Rarity]="Magic" #	[RerollMods]	=="true"	//地圖裡有感電地面	避開//地圖裡有感電地面的圖，用改造或C去骰																				
+//	[map_ground_lightning]>= "1" && [Rarity]="Rare" #	[RerollMods]	=="true"	//地圖裡有感電地面	我不怕這個																				
+	[map_base_ground_desecration_damage_to_deal_per_minute] >= "1" && [Rarity] == "Magic" #	[RerollMods]	=="true"	//汙染地面	避開//汙染地面的圖，用改造或C去骰																				
+//	[map_base_ground_desecration_damage_to_deal_per_minute] >= "1" && [Rarity] == "Rare" #	[RerollMods]	=="true"	//汙染地面	我不怕這個																				
+//	[map_players_block_chance_+%] < "0" && [Rarity] == "Magic" #	[RerollMods]	=="true"	//降低格檔	我不怕這個																				
+//	[map_players_block_chance_+%] < "0" && [Rarity] == "Rare" #	[RerollMods]	=="true"	//降低格檔	我不怕這個																				
+	[map_player_has_level_X_vulnerability] >= "1" && [Rarity] == "Magic" #	[RerollMods]	=="true"	//脆弱詛咒	避開//脆弱詛咒的圖，用改造或C去骰																				
+//	[map_player_has_level_X_vulnerability] >= "1" && [Rarity] == "Rare" #	[RerollMods]	=="true"	//脆弱詛咒	我不怕這個																				
+	[map_monsters_life_leech_resistance_%] >= "1" && [Rarity] == "Magic" #	[RerollMods]	=="true"	//無法偷取	避開//無法偷取的圖，用改造或C去骰																				
+	[map_monsters_life_leech_resistance_%] >= "1" && [Rarity] == "Rare" #	[RerollMods]	=="true"	//無法偷取	避開//無法偷取的圖，用改造或C去骰																				
+	[map_monsters_avoid_ailments_%] >= "1" && [Rarity] == "Magic" #	[RerollMods]	=="true"	//地圖怪物避免元素異常狀態	我不怕這個																				
+	[map_monsters_avoid_ailments_%] >= "1" && [Rarity] == "Rare #	[RerollMods]	=="true"	//地圖怪物避免元素異常狀態	我不怕這個																				
+	[map_additional_player_maximum_resistances_%] < "0" && [Rarity] == "Magic" #	[RerollMods]	=="true"	//降低最大抗	避開//降低最大抗的圖，用改造或C去骰																				
+	[map_additional_player_maximum_resistances_%] < "0" && [Rarity] == "Rare" #	[RerollMods]	=="true"	//降低最大抗	避開//降低最大抗的圖，用改造或C去骰																				
+	
+	 [map_monsters_cannot_be_leeched_from] >= "1" && [Rarity] == "Magic" # [RerollMods] =="true" //無法偷取 避開//無法偷取的圖，用改造或C去骰                    
+	[map_monsters_cannot_be_leeched_from] >= "1" && [Rarity] == "Rare" # [RerollMods] =="true" //無法偷取 避開//無法偷取的圖，用改造或C去骰
+ 
+	[map_monsters_steal_charges] >= "1" && [Rarity] == "Magic" #  [RerollMods]  =="true"            //被怪偷球
+	[map_monsters_steal_charges] >= "1" && [Rarity] == "Rare" #  [RerollMods]  =="true"             //被怪偷球
