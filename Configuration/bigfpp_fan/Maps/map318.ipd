@@ -27,11 +27,11 @@
 // Upgrading maps' rarity - XOR
 
 // Upgrade to BLUE
-[Rarity] == "Normal" 	# [UpgradeToMagic] == "true"
-[Rarity] == "Magic" 	# [AugmentIfPossible] == "true"
+//[Rarity] == "Normal" 	# [UpgradeToMagic] == "true"
+//[Rarity] == "Magic" 	# [AugmentIfPossible] == "true"
 
 // Upgrade to YELLOW
- //[Rarity] == "Normal" # [UpgradeToRare] == "true"
+[Rarity] == "Normal" # [UpgradeToRare] == "true"
 
 
 // === 2 Map types - UpgradeTier. These will be sold in a quantity of 3 pcs. to get 1 of higher tier ===
