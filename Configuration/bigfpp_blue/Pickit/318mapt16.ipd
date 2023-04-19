@@ -1,7 +1,7 @@
 //3.20新增 111年12月21日
 
 //3.20 12/11 開啟大量有價物品版本//
-	[Type] == "Riveted Boots" && [Rarity] == "Unique" # [StashItem] == "true" // Ralakesh's Impatience				//儀式短靴	拾取且售出
+	[Type] == "Riveted Boots" && [Rarity] == "Unique" # [StashItem] == "true" // Ralakesh's Impatience	//儀式短靴	拾取且保存
 
 //卡蘭德之觸
 [Type] == "Ring" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 
@@ -16,10 +16,7 @@
 		
 [Type]=="The Finishing Touch" #[StashItem] == "true" //				
 				
-				
-[Type]=="Fracturing Orb" #[StashItem] == "true" //				破裂石
-[Type]=="Fracturing Shard" #[StashItem] == "true" //				破裂石碎片
-
+		
 //3.20						
 
 	[Type]=="Fracturing Orb" #	[StashItem]	 == "true"		//破裂石	拾取且存倉
@@ -28,8 +25,8 @@
 //下面是3.19以前
 
 [Type] =="Maven's Invitation: The Elderslayers" #	[StashItem]	 == "true" 		//殺手	拾取且存倉
-//[Type] =="Maven's Invitation: The Forgotten" #	[StashItem]	 == "true" 		//釋界之邀：遺忘	拾取且存倉
-//[Type] =="Maven's Invitation: The Formed" #	[StashItem]	 == "true" 		//釋界之邀：塑型	拾取且存倉
+[Type] =="Maven's Invitation: The Forgotten" #	[StashItem]	 == "true" 		//釋界之邀：遺忘	拾取且存倉
+[Type] =="Maven's Invitation: The Formed" #	[StashItem]	 == "true" 		//釋界之邀：塑型	拾取且存倉
 [Type] =="Maven's Invitation: The Twisted" #	[StashItem]	 == "true" 		//釋界之邀：扭曲	拾取且存倉
 
 //[Type] == "Last Hope" # 	[StashItem]	 == "true" // 1.0 C	//	最後希望(凡人的希望)	拾取且存倉
