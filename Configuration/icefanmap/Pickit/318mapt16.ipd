@@ -26,7 +26,7 @@
 [Type] == "Voidborn Reliquary Key" #  [StashItem]  == "true" // 虛誕遺鑰
 
 //2022/12/24
-
+[Type]== "Viridian Jewel" && [Rarity] == "Unique" # [local_unique_jewel_melee_applies_to_bow] >= "1" && [ForceSellItem] == "true" // Lioneye's Fall
 [Category] == "Map" && [MapTier] >= "16"  && [Rarity] == "Normal"  #[StashItem] == "true" // //普通地圖普通地圖撿取，普通地圖存倉
 [Category] == "Map" && [MapTier] >= "16"  && [Rarity] == "Magic"  #[StashItem] == "true" // //藍地圖藍地圖撿取，藍地圖存倉
 [Category] == "Map" && [MapTier] >= "16"  && [Rarity] == "Rare"  #[StashItem] == "true" // //黃地圖黃地圖不撿，黃地圖售出
