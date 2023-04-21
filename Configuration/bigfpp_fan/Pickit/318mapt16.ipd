@@ -2,7 +2,7 @@
 
 //3.20 12/11 開啟大量有價物品版本//
 	[Type] == "Riveted Boots" && [Rarity] == "Unique" # [StashItem] == "true" // Ralakesh's Impatience				//儀式短靴	拾取且售出
-
+[Type]== "Viridian Jewel" && [Rarity] == "Unique" # [local_unique_jewel_melee_applies_to_bow] >= "1" && [ForceSellItem] == "true" // Lioneye's Fall
 //卡蘭德之觸
 [Type] == "Ring" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 
 //開膛斧
