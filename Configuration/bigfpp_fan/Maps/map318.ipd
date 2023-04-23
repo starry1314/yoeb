@@ -9,7 +9,7 @@
 //[Rarity] == "Magic" #[AugmentIfPossible] == "true"
 
 // Upgrade to YELLOW
-//[Rarity] == "Normal" #[UpgradeToRare] == "true"
+[Rarity] == "Normal" #[UpgradeToRare] == "true"
 
 
 
