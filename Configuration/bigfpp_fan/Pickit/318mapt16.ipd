@@ -35,13 +35,13 @@
 
 //	Players are Cursed with Vulnerability	
 	[Category] == "Map" && [map_contains_citadel] >= "1" && [Rarity] == "Rare" #	[StashItem]	=="true"	//存征服者
-//	[Category] == "Map" && [map_monsters_reflect_%_elemental_damage] >= "1" && [Rarity] == "Rare" #	[ForceSellItem]	=="true"	//怪物反射_%_元素傷害
-//	[Category] == "Map" && [map_monsters_reflect_%_physical_damage]>= "1" && [Rarity] == "Rare" #	[ForceSellItem]	=="true"	//怪物反射_%_物理傷害
+	[Category] == "Map" && [map_monsters_reflect_%_elemental_damage] >= "1" && [Rarity] == "Rare" #	[ForceSellItem]	=="true"	//怪物反射_%_元素傷害
+	[Category] == "Map" && [map_monsters_reflect_%_physical_damage]>= "1" && [Rarity] == "Rare" #	[ForceSellItem]	=="true"	//怪物反射_%_物理傷害
 //	[Category] == "Map" && [map_players_no_regeneration_including_es]>= "1" && [Rarity] == "Rare" #	[ForceSellItem]	=="true"	//玩家無法回復生命、魔力和能量護盾
 //	[Category] == "Map" && [map_player_has_level_X_temporal_chains]>= "1" && [Rarity]="Rare" #	[ForceSellItem]	=="true"	//玩家受到時空鎖鍊詛咒影響
 //	[Category] == "Map" && [map_player_has_level_X_vulnrability]>= "1" && [Rarity]="Rare" #	[ForceSellItem]	=="true"	//玩家受到脆弱詛咒
 //	[Category] == "Map" && [map_player_has_level_X_enfeeble]>= "1" && [Rarity]="Rare" #	[ForceSellItem]	=="true"	//玩家受到衰弱詛咒影響
-//	[Category] == "Map" && [map_player_has_level_X_elemental_weakness]>= "1" && [Rarity]="Rare" #	[ForceSellItem]	=="true"	//玩家受到元素要害詛咒影響
+	[Category] == "Map" && [map_player_has_level_X_elemental_weakness]>= "1" && [Rarity]="Rare" #	[ForceSellItem]	=="true"	//玩家受到元素要害詛咒影響
 //	[Category] == "Map" && [map_rare_monsters_have_nemesis_mod]>= "1" && [Rarity]="Rare" #	[ForceSellItem]	=="true"	//稀有怪有復仇屬性
 //	[Category] == "Map" && [map_base_ground_fire_damage_to_deal_per_minute]>= "1" && [Rarity]="Rare" #	[ForceSellItem]	=="true"	//地圖裡有燃燒地面
 //	[Category] == "Map" && [map_ground_ice]>= "1" && [Rarity]="Rare" #	[ForceSellItem]	=="true"	//地圖裡有冰緩地面
@@ -50,8 +50,8 @@
 //	[Category] == "Map" && [map_players_block_chance_+%] < "0" && [Rarity] == "Rare" #	[ForceSellItem]	=="true"	//降低格檔
 //	[Category] == "Map" && [map_monsters_avoid_ailments_%] >= "1" && [Rarity] == "Rare #	[ForceSellItem]	=="true"	//地圖怪物避免元素異常狀態
 //	[Category] == "Map" && [map_additional_player_maximum_resistances_%] < "0" && [Rarity] == "Rare" #	[ForceSellItem]	=="true"	//降低最大抗
-//	[Category] == "Map" && [map_monsters_cannot_be_leeched_from]  > "0" && [Rarity] == "Rare" # 	[ForceSellItem]	=="true"	//無法偷取
-//	[Category] == "Map" && [map_monsters_steal_charges] >= "1" && [Rarity] == "Rare" # 	[ForceSellItem]	=="true"	//怪物偷球
+	[Category] == "Map" && [map_monsters_cannot_be_leeched_from]  > "0" && [Rarity] == "Rare" # 	[ForceSellItem]	=="true"	//無法偷取
+	[Category] == "Map" && [map_monsters_steal_charges] >= "1" && [Rarity] == "Rare" # 	[ForceSellItem]	=="true"	//怪物偷球
 
 
 //3.20新增 111年12月13日
