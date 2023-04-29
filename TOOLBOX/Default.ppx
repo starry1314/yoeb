@@ -19,7 +19,7 @@
 	<RuleList>
 		<Rule enabled="true">
 			<Action type="Direct" />
-			<Targets>localhost; 127.0.0.1; %ComputerName%; ::1</Targets>
+			<Targets>localhost; 127.0.0.1;sebarclt.exe; %ComputerName%; ::1</Targets>
 			<Name>Localhost</Name>
 		</Rule>
 		<Rule enabled="true">
