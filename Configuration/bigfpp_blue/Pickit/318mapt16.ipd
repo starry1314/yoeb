@@ -14,6 +14,8 @@
 [Type] == "Poisoned Faith" # [StashItem] == "true" // 有毒信仰 初期有價
 [Type] == "A Chilling Wind" # [StashItem] == "true" // 凜冽之風 
 [Type] == "Matryoshka" # [StashItem] == "true" // 俄羅斯娃娃 有價
+[Type] == "DivinationCardLachrymalNecrosis" # [StashItem] == "true" // 鐵骨心腸 有價
+
 
 [Type] == "Xoph's Flawless Breachstone" # [StashItem] == "true" // 索伏的無暇裂痕石
 [Type] == "Tul's Flawless Breachstone" # [StashItem] == "true" // 托沃的無暇裂痕石
