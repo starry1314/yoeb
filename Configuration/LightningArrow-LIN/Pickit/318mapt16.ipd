@@ -1,7 +1,8 @@
 //2023/4/27測試85藥劑
 //＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝【８５藥劑－測試】＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 //[Type] == "Amethyst Flask"&& 	[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" //紫晶
-//[Type] == "Bismuth Flask"&& 	[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" //灰岩
+[Type] == "Bismuth Flask"&& 	[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" //灰岩
+[Type] == "Ruby Flask"&& [ItemLevel] >= "85" && [ItemLevel] <="100" # 	[StashItem]	 == "true" //紅玉藥劑	
 //[Type] == "Silver Flask"&& 	[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" //猛攻
 //[Type] == "Diamond Flask"&& 	[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" //寶鑽
 //[Type] == "Granite Flask"&& 	[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" //+1500護甲
@@ -29,6 +30,10 @@
 [Category] == "Map" && [Rarity] == "Rare" && [map_elder_boss_variation] >= "1" # [StashItem] == "true" // 6551 Elder Maps
 [Type] == "Synthesised Map" # [StashItem] == "true" //
 
+//＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝【配裝】＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+[Type]=="Titan Gauntlets" &&  [Rarity] == "Unique" # [StashItem] == "true"				//岡姆之魂
+[Type]=="Primal Arrow Quiver" &&  [Rarity] == "Unique" # [StashItem] == "true"				//優雅迷鏡	拾取且售出
+[Type] == "The Escape" # 	[StashItem]	 == "true" // 	逃脫大師(盟誓之跡)	拾取且存倉
 
 //2023/04/13 新增要撿的雜物
 //沙塵暴怒手
@@ -40,6 +45,7 @@
 [Type] == "Igneous Geode" # [StashItem] == "true" // 火成晶洞
 [Type] == "Crystalline Geode" # [StashItem] == "true" // 水晶晶洞
 [Type] == "Magmatic Ore" # [StashItem] == "true" // 岩漿礦
+
 //＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝【通貨】＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 //[Type] == "Orb of Alteration" # [StashItem] == "true"////改造石拾取且存倉
 [Type] == "Chaos Orb" # [StashItem] == "true"////混沌石拾取且存倉
@@ -495,10 +501,10 @@
 //	 [Type] == "Eternal Life Flask" # 	[StashItem]	 == "true" 	//	//永恆生命藥劑	不撿不存倉																																											
 //	 [Type] == "Divine Mana Flask" # 	[StashItem]	 == "true" 	//	//不朽魔力藥劑	不撿不存倉																						
 //	 [Type] == "Eternal Mana Flask" # 	[StashItem]	 == "true" 	//	//永恆魔力藥劑	不撿不存倉																																												
-//	 [Type] == "Bismuth Flask" # 	[StashItem]	 == "true" 	//	//灰岩藥劑	不撿不存倉																						
+	 [Type] == "Bismuth Flask" # 	[StashItem]	 == "true" 	//	//灰岩藥劑	不撿不存倉																						
 //	 [Type] == "Stibnite Flask" # 	[StashItem]	 == "true" 	//	//迷霧藥劑	不撿不存倉																						
 //	 [Type] == "Amethyst Flask"# 	[StashItem]	 == "true"	//	//紫晶藥劑	不撿不存倉																						
-//	 [Type] == "Ruby Flask" # 	[StashItem]	 == "true" 	//	//紅玉藥劑	不撿不存倉																						
+	 [Type] == "Ruby Flask" # 	[StashItem]	 == "true" 	//	//紅玉藥劑	不撿不存倉																						
 //	 [Type] == "Sapphire Flask" # 	[StashItem]	 == "true" 	//	//藍玉藥劑	不撿不存倉																						
 //	 [Type] == "Topaz Flask" # 	[StashItem]	 == "true" 	//	//黃玉藥劑	不撿不存倉																						
 //	 [Type] == "Silver Flask" # 	[StashItem]	 == "true" 	//	//真銀藥劑	不撿不存倉																						
