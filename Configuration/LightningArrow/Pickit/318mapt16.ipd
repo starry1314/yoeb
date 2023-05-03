@@ -52,7 +52,9 @@
 
 
 //2023/01
-[Type] == "Voidborn Reliquary Key" #  [StashItem]  == "true" // 虛誕遺鑰
+[Type] == "Ring" && [Rarity] == "Unique" # 	[StashItem]	 == "true" // 卡蘭德之觸
+[Type] == "Voidborn Reliquary Key" # 	[StashItem]	 == "true" // 虛誕鑰匙
+
 
 //2022/12/24
 
