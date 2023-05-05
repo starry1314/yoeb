@@ -1,4 +1,6 @@
 @echo off
+echo 等待10秒鐘...
+ping -n 11 127.0.0.1 > nul
 set myDir=%~dp0
 set file=%myDir%setting.ini
 set name=更新目录
@@ -11,8 +13,8 @@ echo "%myDir%"
 rem 更新文件
 xcopy /y/c/j/d "%wlmbDir%" "%myDir%"
 xcopy /y/c/j/d "%wlmbDir%\res" "%myDir%res\"
-
+xcopy /y/c/j/d "%wlmbDir%\脚本" "%myDir%脚本\"
 )
 rem 启动
 start /d "%myDir%" abcd.exe
-pause
+
