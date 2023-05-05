@@ -1,6 +1,4 @@
 @echo off
-echo 等待10秒鐘...
-ping -n 11 127.0.0.1 > nul
 set myDir=%~dp0
 set file=%myDir%setting.ini
 set name=更新目录
