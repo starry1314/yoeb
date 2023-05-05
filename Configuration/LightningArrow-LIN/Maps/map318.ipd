@@ -10,6 +10,22 @@
 // [13855] == "3" # [IgnoreMap] == "true" // Drox maps
 // [13855] == "4" # [IgnoreMap] == "true" // Al-Hezmin maps
 
+[Type] == "City Square Map" #[RunMap] == "true"
+[Type] == "Toxic Sewer Map" #[RunMap] == "true"
+[Type]=="Crimson Temple Map" # [RunMap]=="true"
+[Type]=="Sulphur Vents Map" # [RunMap]=="true"
+[Type] == "Canyon Map" # [RunMap] == "true"
+[Type] == "Arcade Map" # [RunMap] == "true"
+[Type]=="Cemetery Map" # [RunMap] == "true"
+
+[Type] == "City Square Map" # [ExitAfterBossKill] == "true"
+[Type] == "Toxic Sewer Map" # [ExitAfterBossKill] == "true"
+[Type]=="Crimson Temple Map" # [ExitAfterBossKill] == "true"
+[Type]=="Sulphur Vents Map" # [ExitAfterBossKill] == "true"
+[Type] == "Canyon Map" # [ExitAfterBossKill] == "true"
+[Type] == "Arcade Map" # [ExitAfterBossKill] == "true"
+[Type]=="Cemetery Map" # [ExitAfterBossKill] == "true
+
 // Synthesized maps
 [Type] == "Synthesised Map" # [IgnoreMap] == "true" 
 
@@ -25,7 +41,7 @@
 //	[MapTier]>= "1" && [MapTier] <= "16"#[RunMap]== "true"//執行輿圖			//這橫行請勿更動																					
 //	[Rarity]== "Normal"#[UpgradeToMagic]== "true"//使用蛻變石			//使用蛻變	不//使用蛻變																				
 //	[Rarity]== "Magic"#[AugmentIfPossible]== "true"//使用增幅石			//使用增幅	不//使用增幅																				
-//	[Rarity]== "Normal"#[UpgradeToRare]== "true"//使用點金石			//使用點金	不//使用點金																				
+	[Rarity]== "Normal"#[UpgradeToRare]== "true"//使用點金石			//使用點金	不//使用點金																				
 	//避開王房地圖//(預設)				//中文判斷																				
 	[Type]=="Graveyard Map" #	[SkipBossArena]	=="true"	//墮影墓場	不打這張圖的王																				
 	[Type]=="Dungeon Map" #	[SkipBossArena]	=="true"	//禁魂炎獄	不打這張圖的王																				
