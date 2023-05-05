@@ -1,8 +1,8 @@
 //2023/4/27測試85藥劑
 //＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝【８５藥劑－測試】＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 //[Type] == "Amethyst Flask"&& 	[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" //紫晶
-[Type] == "Bismuth Flask"&& 	[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" //灰岩
-[Type] == "Ruby Flask"&& [ItemLevel] >= "85" && [ItemLevel] <="100" # 	[StashItem]	 == "true" //紅玉藥劑	
+//[Type] == "Bismuth Flask"&& 	[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" //灰岩
+//[Type] == "Ruby Flask"&& [ItemLevel] >= "85" && [ItemLevel] <="100" # 	[StashItem]	 == "true" //紅玉藥劑	
 //[Type] == "Silver Flask"&& 	[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" //猛攻
 //[Type] == "Diamond Flask"&& 	[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" //寶鑽
 //[Type] == "Granite Flask"&& 	[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" //+1500護甲
