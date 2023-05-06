@@ -7,7 +7,7 @@
 //[Type] == "Diamond Flask"&& 	[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" //寶鑽
 //[Type] == "Granite Flask"&& 	[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" //+1500護甲
 //[Type] == "Jade Flask"&& 	[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" //+1500閃避
-//[Type] == "Quicksilver Flask"&& 	[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" //跑水
+[Type] == "Quicksilver Flask"&& 	[ItemLevel] >= "84" && [ItemLevel] <="100" # [StashItem] == "true" //跑水
 
 
 [Type]=="Sulphur Vents Map" # [StashItem] == "true"
@@ -32,13 +32,9 @@
 
 //＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝【配裝】＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 [Type]=="Titan Gauntlets" &&  [Rarity] == "Unique" # [StashItem] == "true"				//岡姆之魂
-[Type]=="Primal Arrow Quiver" &&  [Rarity] == "Unique" # [StashItem] == "true"				//優雅迷鏡	拾取且售出
+[Type]=="Primal Arrow Quiver" &&  [Rarity] == "Unique" # [StashItem] == "true"				//優雅迷鏡	
 [Type] == "The Escape" # 	[StashItem]	 == "true" // 	逃脫大師(盟誓之跡)	拾取且存倉
-
-//2023/04/13 新增要撿的雜物
-//沙塵暴怒手
-//[Type] == "Clasped Mitts" && [Rarity] == "Unique" # 	[StashItem]	 == "true"
-//埋火
+//[Type] == "Clasped Mitts" && [Rarity] == "Unique" # 	[StashItem]	 == "true" //沙塵暴怒手
 //[Type] == "Wyrmscale Gauntlets" && [attack_speed_+_%] >= "1" && [Rarity] == "Unique" # [StashItem]	 == "true" // 埋火
 
 //2023/04/11//3.21 新物品清單
