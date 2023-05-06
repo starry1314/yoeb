@@ -31,8 +31,8 @@
 [Type] == "Synthesised Map" # [StashItem] == "true" //
 
 //＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝【配裝】＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-[Type]=="Titan Gauntlets" &&  [Rarity] == "Unique" # [StashItem] == "true"				//岡姆之魂
-//[Type]=="Primal Arrow Quiver" &&  [Rarity] == "Unique" # [StashItem] == "true"				//優雅迷鏡	
+
+//[Type]=="Primal Arrow Quiver" &&  [Rarity] == "Unique" # [StashItem] == "true"	//優雅迷鏡	
 [Type] == "The Escape" # 	[StashItem]	 == "true" // 	逃脫大師(盟誓之跡)	拾取且存倉
 //[Type] == "Clasped Mitts" && [Rarity] == "Unique" # 	[StashItem]	 == "true" //沙塵暴怒手
 //[Type] == "Wyrmscale Gauntlets" && [attack_speed_+_%] >= "1" && [Rarity] == "Unique" # [StashItem]	 == "true" // 埋火
