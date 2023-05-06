@@ -440,7 +440,7 @@
 //	[Type] == "Gemcutter's Prism" # 	[StashItem]	 == "true"	//	//寶石匠的稜鏡																							
 //	[Type] == "Jeweller's Orb" # 	[StashItem]	 == "true"	//	//工匠石																							
 //	[Type] == "Mirror of Kalandra" # 	[StashItem]	 == "true"	//	//卡蘭德的魔鏡																							
-//	[Type] == "Orb of Alchemy" # 	[StashItem]	 == "true"	//	//點金石																							
+	[Type] == "Orb of Alchemy" # 	[StashItem]	 == "true"	//	//點金石																							
 //	[Type] == "Orb of Alteration" # 	[StashItem]	 == "true"	//	//改造石																							
 //	[Type] == "Orb of Transmutation" # 	[StashItem]	 == "true"	//	//蛻變石																							
 //	[Type] == "Orb of Augmentation" # 	[StashItem]	 == "true"	//	//增幅石																							
