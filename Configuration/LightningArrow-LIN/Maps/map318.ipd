@@ -1,4 +1,4 @@
-// Shaper / Elder
+==================【避打征服與尊師】=============
 [6831] >= "1" # [IgnoreMap] == "true" // Shaper/Elder maps
 // [6831] == "1" # [IgnoreMap] == "true" // Shaper maps
 // [6831] == "2" # [IgnoreMap] == "true" // Elder maps
@@ -9,6 +9,20 @@
 // [13855] == "2" # [IgnoreMap] == "true" // Veritania maps
 // [13855] == "3" # [IgnoreMap] == "true" // Drox maps
 // [13855] == "4" # [IgnoreMap] == "true" // Al-Hezmin maps
+
+[6827] == "1" # [IgnoreMap] == "true" // Elder infuenced maps
+[6827] == "2" # [IgnoreMap] == "true" // Elder infuenced maps
+[6827] == "3" # [IgnoreMap] == "true" // Elder infuenced maps
+[6827] == "4" # [IgnoreMap] == "true" // Elder infuenced maps
+
+[13845] == "1"  # [IgnoreMap] == "true" // Baron maps
+[13845] == "2"  # [IgnoreMap] == "true" // Veritania maps
+[13845] == "3"  # [lgnoreMap] == "true" // Drox maps
+[13845] == "4"  # [lgnoreMap] =="true" // AI-Hezmin maps
+
+[11508] >= "1" # [IgnoreMap] == "true" // Delirium maps
+
+[Type] == "Synthesised Map" # [lgnoreMap] == "true" // Synthesised maps
 
 [Type] == "City Square Map" #[RunMap] == "true"
 [Type] == "Toxic Sewer Map" #[RunMap] == "true"
@@ -26,11 +40,6 @@
 [Type] == "Arcade Map" # [ExitAfterBossKill] == "true"
 [Type]=="Cemetery Map" # [ExitAfterBossKill] == "true
 
-// Synthesized maps
-[Type] == "Synthesised Map" # [IgnoreMap] == "true" 
-
-// Delirium maps
-[11508] >= "1" # [IgnoreMap] == "true" // Delirium maps
 
 //[MapTier]>= "1" && [MapTier] <= "16" && [Rarity] == "Rare" # [IgnoreMap]== "true" // 金圖全部不打
 [MapTier]>= "1" && [MapTier] <= "16" && [Rarity] == "Unique" # [IgnoreMap]== "true" // 橘圖不打
