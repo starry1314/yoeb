@@ -9,6 +9,13 @@
 //[Type] == "Jade Flask"&& 	[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" //+1500閃避
 //[Type] == "Quicksilver Flask"&& 	[ItemLevel] >= "84" && [ItemLevel] <="100" # [StashItem] == "true" //跑水
 
+//偵查報告
+//[Type] == "Influenced Scouting Report" 			#[ForceSellItem]== "true" // 勢力
+//[Type] == "Vaal Scouting Report" 				#[ForceSellItem]== "true" // 瓦爾
+//[Type] == "Singular Scouting Report" 				#[ForceSellItem]== "true" // 卓越
+//[Type] == "Explorer's Scouting Report" 			#[ForceSellItem]== "true" // 探險家
+[Type] == "Otherworldly Scouting Report" 			#[StashItem] == "true" // 超凡
+
 
 [Type]=="Sulphur Vents Map" # [StashItem] == "true"
 [Type]=="Crimson Temple Map" #[StashItem] == "true"
