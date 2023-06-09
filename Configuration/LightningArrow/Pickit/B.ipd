@@ -152,7 +152,7 @@
 //＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝【必撿高價(鑰匙/門票/記憶】＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 [Type] == "Voidborn Reliquary Key" #  [StashItem]  == "true" // 虛誕遺鑰
 [Type] == "Ring" && [Rarity] == "Unique" # [StashItem] == "true" // 卡蘭德之觸
-//[Type] =="Incandescent Invitation" #[StashItem] == "true" ////熾熱之邀拾取且存倉
+[Type] =="Incandescent Invitation" #[StashItem] == "true" ////熾熱之邀拾取且存倉
 //[Type] =="Polaric Invitation" #[StashItem] == "true" ////極地之邀不撿不存倉
 [Type] == "Screaming Invitation" #[StashItem] == "true" ////尖哮之邀拾取且存倉
 //[Type] =="Writhing Invitation" #[StashItem] == "true" ////纏繞之邀不撿不存倉
