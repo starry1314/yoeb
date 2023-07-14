@@ -1,0 +1,1837 @@
+# -*- coding: utf-8 -*-
+
+# A very simple Flask Hello World app for you to get started with...
+
+from flask import Flask, request, jsonify, render_template, Markup, redirect, make_response
+from pathlib import Path
+import time
+import sqlite3
+import json
+import csv
+import os
+import shortuuid
+from random import randint
+import urllib.parse
+from datetime import datetime, timedelta
+
+
+app = Flask(__name__)
+
+TemplateDir = "/home/fanxing/mysite/templates/"
+UserSQLDB = "/home/fanxing/mysite/db/user.db"
+ServerSQLDB = "/home/fanxing/mysite/db/server.db"
+EnglishNameTxt = "/home/fanxing/mysite/static/english_names.txt"
+expiration_csv = "/home/fanxing/mysite/static/expiration.csv"
+random_account_csv = "/home/fanxing/mysite/static/random_account.csv"
+batch_account_csv = "/home/fanxing/mysite/static/batch_account.csv"
+account_list_csv = "/home/fanxing/mysite/static/account_list.csv"
+
+Socks5_Port_Start = 15000
+
+KEYWORD_LOGIN_USER = "online_user"
+KEYWORD_OVER_LIMIT = "overlimit"
+KEYWORD_OUTBOND_IP = "oip"
+KEYWORD_OUTBOND_IP_COUNT = "oip_count"
+
+#JSON Keyword Server
+SERVER_LISTENING = "tcp_listening"
+SERVER_TCP_CONNECTIONS = "tcp_connections"
+SERVER_CPU_USAGE = "cpu_usage"
+SERVER_RAM_USAGE = "ram_usage"
+SERVER_ONLINE_HOURS = "elapsed_hours"
+SERVER_NAME = "socks5_name"
+SERVER_START_TIME = "start_time"
+SERVER_VERSION = "version"
+SERVER_INBOUND_IP = "inbound_ip"
+SERVER_LAST_CONNECTION = "last_conn"
+SERVER_INBOUND_TCP_PORTS = "inbound_tcp_ports"
+SERVER_INBOUND_UDP_PORTS = "inbound_udp_ports"
+SERVER_REFERENCE_EXTERNAL_IP = "extern_ip"
+
+
+
+#####################################################################
+@app.route('/')
+def index():
+
+    return serverlist ()
+
+#####################################################################
+def GetCurrentTimeString (delta_days,FormatStr="%Y-%m-%d") :  #"%Y-%m-%d %H:%M:%S"
+
+    try :
+        now = datetime.now()
+        if delta_days > 0 :
+            now = now + timedelta(days=delta_days) # current date and time
+        now = now + timedelta(hours=8) # current date and time
+        CurrentTimeStr = now.strftime(FormatStr)
+        return CurrentTimeStr
+    except Exception as e :
+        print (e)
+
+    return "0000-00-00 00:00:00"
+
+#####################################################################
+def GetSortableIP (IPStr) :
+
+    try :
+            IPArray = IPStr.split(".")
+            if len(IPArray) == 4 :
+                try :
+                        Sec1 = int(IPArray[0])
+                        Sec2 = int(IPArray[1])
+                        Sec3 = int(IPArray[2])
+                        Sec4 = int(IPArray[3])
+
+                        FinalIPStr = "{:03d}.{:03d}.{:03d}.{:03d}".format(Sec1,Sec2,Sec3,Sec4)
+
+                        return FinalIPStr
+                except Exception as e1 :
+                    print(e1)
+
+    except Exception as e :
+        print (e)
+
+    return None
+
+#####################################################################
+def LoopParsingPostData (keyword) :
+
+    tmpList = []
+    tmp_total_count = 0
+    hasData = True
+
+    while hasData :
+        try :
+                ExpextedKey = "{}{}".format(keyword,tmp_total_count)
+                if ExpextedKey in request.form :
+                    #print("{} : {}".format(ExpextedKey, request.form[ExpextedUserName]))
+                    tmpList.append(request.form[ExpextedKey])
+                    hasData = True
+                else :
+                    hasData = False
+
+        except Exception as e:
+            print(e)
+        finally :
+            tmp_total_count = tmp_total_count + 1
+
+    return tmpList
+
+#####################################################################
+def GetGameGroupList () :
+    GroupList = []
+    conn = sqlite3.connect(ServerSQLDB)
+    c = conn.cursor()
+    cursor = c.execute("SELECT * FROM GAME_GROUPS ORDER BY GROUP_NAME;")
+    for oneGroup in cursor :
+        GroupList.append(oneGroup[0])
+
+    conn.close()
+
+    return GroupList
+
+#####################################################################
+def GetSocks5ServerByIP (InbondIP) :
+    ServerList = []
+    conn = sqlite3.connect(ServerSQLDB)
+    c = conn.cursor()
+    cursor = c.execute("SELECT NAME FROM SOCKS5 where INBOUND_IP = '{}' ORDER BY NAME;".format(InbondIP))
+    for oneServer in cursor :
+        if oneServer[0] not in ServerList :
+            ServerList.append(oneServer[0])
+
+    conn.close()
+
+    return ServerList
+
+def GetSocks5ServerList () :
+    ServerList = []
+    conn = sqlite3.connect(ServerSQLDB)
+    c = conn.cursor()
+    cursor = c.execute("SELECT INBOUND_IP FROM SOCKS5 ORDER BY NAME;")
+    for oneServer in cursor :
+        if oneServer[0] not in ServerList :
+            ServerList.append(oneServer[0])
+
+    conn.close()
+
+    return ServerList
+
+def GetSocks5InbondPortRange (socks5Name) :
+
+    conn = sqlite3.connect(ServerSQLDB)
+    c = conn.cursor()
+    cursor = c.execute("SELECT NAME, INBOUND_TCP_PORTS FROM SOCKS5 where NAME = '{}';".format(socks5Name))
+    for oneServer in cursor :
+        ServerName = oneServer[0]
+        tmpPortRange = oneServer[1]  #16000~16009
+        tmpPortRangeArray = tmpPortRange.split("~")
+        if len(tmpPortRangeArray) == 2 :
+            tmpStartPort = tmpPortRangeArray[0]
+            tmpEndPort = tmpPortRangeArray[1]
+            try :
+                  return (ServerName, int(tmpStartPort), int (tmpEndPort))
+            except :
+                pass
+
+    return (None, None, None)
+
+
+@app.route('/socks5post', methods=['POST','GET'])
+def socks5post ():
+
+
+    #socks5Name = request.form[SERVER_NAME]
+    #print("report server name:{}".format(socks5Name))
+
+    if SERVER_NAME in request.form :
+        try :
+            socks5Name = request.form[SERVER_NAME]
+            #print("server: {} post to ServerPatametersDICT.".format(socks5Name))
+
+            tmpLISTENING = 0
+            tmpTCP_CONNECTIONS = 0
+            tmpCPU_USAGE = None
+            tmpRAM_USAGE = None
+            tmpONLINE_HOURS = None
+            tmpSTART_TIME = None
+            tmpVERSION = None
+            tmpINBOUND_IP = None
+            tmpINBOUND_TCP_PORTS = None
+            tmpINBOUND_UDP_PORTS = None
+            tmpREFERENCE_EXTERNAL_IP = None
+
+            if SERVER_LISTENING in request.form:
+                tmpLISTENINGStr = request.form[SERVER_LISTENING]
+                tmpLISTENING = int(tmpLISTENINGStr)
+            if SERVER_TCP_CONNECTIONS in request.form:
+                tmpTCP_CONNECTIONSStr = request.form[SERVER_TCP_CONNECTIONS]
+                tmpTCP_CONNECTIONS = int(tmpTCP_CONNECTIONSStr)
+            if SERVER_CPU_USAGE in request.form:
+                tmpCPU_USAGE = request.form[SERVER_CPU_USAGE]
+            if SERVER_RAM_USAGE in request.form:
+                tmpRAM_USAGE = request.form[SERVER_RAM_USAGE]
+            if SERVER_ONLINE_HOURS in request.form:
+                tmpONLINE_HOURS = request.form[SERVER_ONLINE_HOURS]
+            if SERVER_START_TIME in request.form:
+                tmpSTART_TIME = request.form[SERVER_START_TIME]
+            if SERVER_VERSION in request.form:
+                tmpVERSION = request.form[SERVER_VERSION]
+            if SERVER_INBOUND_IP in request.form:
+                tmpINBOUND_IP = request.form[SERVER_INBOUND_IP]
+                #tmpINBOUND_IP_FS = GetSortableIP(tmpINBOUND_IP)
+            if SERVER_INBOUND_TCP_PORTS in request.form:
+                tmpINBOUND_TCP_PORTS = request.form[SERVER_INBOUND_TCP_PORTS]
+            if SERVER_INBOUND_UDP_PORTS in request.form:
+                tmpINBOUND_UDP_PORTS = request.form[SERVER_INBOUND_UDP_PORTS]
+            if SERVER_REFERENCE_EXTERNAL_IP in request.form:
+                tmpREFERENCE_EXTERNAL_IP = request.form[SERVER_REFERENCE_EXTERNAL_IP]
+
+            tmpLAST_CONNECTION = time.time()
+
+            conn = sqlite3.connect(ServerSQLDB)
+            c = conn.cursor()
+            rowcount = c.execute("SELECT COUNT(*) FROM SOCKS5 where NAME = '{}';".format(socks5Name)).fetchone()[0]
+            if rowcount > 0 :
+                #update
+                SQLCmd = "UPDATE SOCKS5 set LISTENING={},TCP_CONNECTIONS={},CPU_USAGE='{}',RAM_USAGE='{}',ONLINE_HOURS='{}',START_TIME='{}',INBOUND_IP='{}',INBOUND_TCP_PORTS='{}',INBOUND_UDP_PORTS='{}',REFERENCE_EXTERNAL_IP='{}',VERSION='{}',LAST_CONNECTION='{}' WHERE ".format(tmpLISTENING,tmpTCP_CONNECTIONS,tmpCPU_USAGE,tmpRAM_USAGE,tmpONLINE_HOURS,tmpSTART_TIME,tmpINBOUND_IP,tmpINBOUND_TCP_PORTS,tmpINBOUND_UDP_PORTS,tmpREFERENCE_EXTERNAL_IP,tmpVERSION,tmpLAST_CONNECTION)
+                SQLCmd = SQLCmd + " NAME = '{}';".format(socks5Name)
+            else :
+                #insert new server
+                SQLCmd = "INSERT INTO SOCKS5 (NAME,LISTENING,TCP_CONNECTIONS,CPU_USAGE,RAM_USAGE,ONLINE_HOURS,START_TIME,INBOUND_IP,INBOUND_TCP_PORTS,INBOUND_UDP_PORTS,REFERENCE_EXTERNAL_IP,VERSION,LAST_CONNECTION) VALUES "
+                SQLCmd = SQLCmd + "('{}',{},{},'{}','{}','{}','{}','{}','{}','{}','{}','{}','{}');".format(socks5Name,tmpLISTENING,tmpTCP_CONNECTIONS,tmpCPU_USAGE,tmpRAM_USAGE,tmpONLINE_HOURS,tmpSTART_TIME,tmpINBOUND_IP,tmpINBOUND_TCP_PORTS,tmpINBOUND_UDP_PORTS,tmpREFERENCE_EXTERNAL_IP,tmpVERSION,tmpLAST_CONNECTION)
+
+            #print(SQLCmd)
+            c.execute(SQLCmd)
+            conn.commit()
+            conn.close()
+
+
+            # deal with overlimit
+            OverlimitList = LoopParsingPostData (KEYWORD_OVER_LIMIT)
+            TodayStr = GetCurrentTimeString(0)
+            if len(OverlimitList) > 0 :
+                conn = sqlite3.connect(UserSQLDB)
+                c = conn.cursor()
+                for onePort in OverlimitList :
+                    SQLCmd = "UPDATE ACCOUNT SET traffic_over_limit_date='{}' WHERE socks5_ip='{}' and socks5_port={} ".format(TodayStr,tmpINBOUND_IP,onePort)
+                    c.execute(SQLCmd)
+                conn.commit()
+                conn.close()
+
+            #response user settings
+            OutboundIPList = GetSocks5OutbondIP(socks5Name)
+
+            (tmpName, Socks5_Port_Start, Socks5_Port_End) = GetSocks5InbondPortRange (socks5Name)
+
+            conn = sqlite3.connect(UserSQLDB)
+            c = conn.cursor()
+            SQLCmd = "SELECT * FROM ACCOUNT WHERE socks5_ip='{}' and start_date <= '{}'".format(tmpINBOUND_IP,TodayStr)
+            cursor = c.execute(SQLCmd)
+            UserDataList = []
+            Counter = 0
+            for data in cursor :
+
+                if data[6] in OutboundIPList :
+                    if data[5] >= Socks5_Port_Start and  data[5] <= Socks5_Port_End :
+                        #check end_date, end_date empty is unlimited
+                        tmp_end_date = data[8].strip()
+                        if len(tmp_end_date) == 0 or tmp_end_date >= TodayStr:
+                            tmpList = []
+                            tmpList.append(data[1])  #username
+                            tmpList.append(data[2])  #password
+                            tmpList.append(data[5])  #socks5 port
+                            tmpList.append(data[6])  #outbound ip
+                            #tmpList.append(data[7])  #start date
+                            #tmpList.append(data[8])  #end date
+                            tmpList.append(data[9])  #forbidden ports
+                            UserDataList.append(tmpList)
+                            Counter = Counter + 1
+            conn.close()
+
+            data = {
+                        "status" : 200,
+                        "UserData" : UserDataList
+            }
+        except Exception as e :
+            print(e)
+            data = {
+                        "status" : 500,
+                        "UserData" : []
+            }
+
+    else :
+        print("no server name in post data.")
+
+        data = {
+                    'status' : 500,
+                    "UserData" : []
+        }
+
+    return jsonify(data)
+
+#####################################################################
+@app.route('/delete_server', methods=['POST','GET'])
+def delete_server ():
+
+    socks5Name = request.args.get('socks5Name')
+
+    if socks5Name is not None :
+        conn = sqlite3.connect(ServerSQLDB)
+        c = conn.cursor()
+        SQLCmd = "DELETE FROM SOCKS5  WHERE NAME = '{}';".format(socks5Name)
+        #print(SQLCmd)
+        c.execute(SQLCmd)
+        c.execute("DELETE FROM SOCKS5_OUTBOND where NAME = '{}';".format(socks5Name))
+        conn.commit()
+        conn.close()
+
+        Msg = "主機紀錄 {} 已經刪除.".format(socks5Name)
+    else :
+        Msg = "刪除失敗, 請輸入主機名稱!!"
+
+    response = make_response(redirect("/serverlist"))
+    response.set_cookie('error', json.dumps({"error1" : Msg}))
+    return response
+
+#####################################################################
+@app.route('/socks5_outbondips', methods=['POST','GET'])
+def socks5_outbondips ():
+
+
+    if SERVER_NAME in request.form :
+        socks5Name = request.form[SERVER_NAME]
+        #print("server: {} post to ServerPatametersDICT.".format(socks5Name))
+
+        CurrentOutbondIPList = LoopParsingPostData (KEYWORD_OUTBOND_IP)
+
+        if len(CurrentOutbondIPList) > 0 :
+
+            conn = sqlite3.connect(ServerSQLDB)
+            c = conn.cursor()
+            c.execute("DELETE FROM SOCKS5_OUTBOND where NAME = '{}';".format(socks5Name))
+            for oneIP in CurrentOutbondIPList :
+
+                oneIP_FS = GetSortableIP(oneIP)
+                #insert new server
+                SQLCmd = "INSERT INTO SOCKS5_OUTBOND (NAME,OUTBOND_IP,BINDINGS,OUTBOND_IP_FS) VALUES "
+                SQLCmd = SQLCmd + "('{}','{}',{},'{}');".format(socks5Name,oneIP,0,oneIP_FS)
+                c.execute(SQLCmd)
+            conn.commit()
+            conn.close()
+    else :
+        print("no server name in post data.")
+
+    data = {
+                'status' : 200
+    }
+
+    return jsonify(data)
+
+#####################################################################
+def GetSocks5OutbondIP (socks5Name) :
+
+    IPList = []
+    conn = sqlite3.connect(ServerSQLDB)
+    c = conn.cursor()
+    SQLCmd = "SELECT * FROM SOCKS5_OUTBOND WHERE NAME='{}' ORDER BY OUTBOND_IP_FS;".format(socks5Name)
+    #print(SQLCmd)
+    cursor = c.execute(SQLCmd)
+    for data in cursor:
+        IPList.append(data[1])
+    conn.close()
+
+    return IPList
+
+def RandomSelectOneOutbonIP (IPList) :
+    tmpint = randint(0,99999)
+    tmpint = tmpint % len(IPList)
+
+    return IPList[tmpint]
+
+@app.route('/outbondip_list', methods=['POST','GET'])
+def outbondip_list ():
+
+
+    socks5Name = request.args.get(SERVER_NAME)
+
+    FuncTitle = "主機 {} 出口IP列表".format(socks5Name)
+    FuncDesc = ""
+
+    OutbondIPList = GetSocks5OutbondIP (socks5Name)
+    for oneIP in OutbondIPList:
+        FuncDesc = FuncDesc + oneIP + "<br>"
+
+    if len(FuncDesc) <= 0 :
+        FuncDesc = "沒有出口IP紀錄."
+
+    return render_template('index.html', FuncTitle=FuncTitle, FuncDesc=FuncDesc)
+
+#####################################################################
+@app.route('/serverlist', methods=['POST','GET'])
+def serverlist ():
+
+    FuncTitle = "主機列表"
+    FuncDesc = Path(TemplateDir + 'serverlist.html').read_text(encoding='utf-8')
+
+    conn = sqlite3.connect(ServerSQLDB)
+    c = conn.cursor()
+    cursor = c.execute("SELECT * FROM SOCKS5 ORDER BY NAME;")
+    ServerPatametersList = []
+    for data in cursor:
+        tmpDICT = {}
+        tmpDICT['NAME'] =  data[0]
+        tmpDICT[SERVER_LISTENING] =  data[1]
+        tmpDICT[SERVER_TCP_CONNECTIONS] =  data[2]
+        tmpDICT[SERVER_CPU_USAGE] =  data[3]
+        tmpDICT[SERVER_RAM_USAGE] =  data[4]
+        tmpDICT[SERVER_ONLINE_HOURS] =  data[5]
+        tmpDICT[SERVER_START_TIME] =  data[6]
+        tmpDICT[SERVER_INBOUND_IP] =  data[7]
+        tmpDICT[SERVER_INBOUND_TCP_PORTS] =  data[8]
+        tmpDICT[SERVER_INBOUND_UDP_PORTS] =  data[9]
+        tmpDICT[SERVER_REFERENCE_EXTERNAL_IP] =  data[10]
+        tmpDICT[SERVER_VERSION] =  data[11]
+        tmpDICT[SERVER_LAST_CONNECTION] =  data[12]
+        ServerPatametersList.append(tmpDICT)
+
+    conn.close()
+
+    tmpStr = ""
+    if len(ServerPatametersList) > 0:
+        for tmpDICT in ServerPatametersList :
+
+
+            if SERVER_LAST_CONNECTION in tmpDICT:
+                last_conn = (int) ((time.time() - float(tmpDICT[SERVER_LAST_CONNECTION])) / 60)
+            else :
+                last_conn = None
+
+            if last_conn > 10 or last_conn is None:
+                tmpStr = tmpStr + '<tr bgcolor="red">'
+            else :
+                tmpStr = tmpStr + '<tr>'
+
+            oneServerName = tmpDICT['NAME']
+            #print(ServerPatametersDICT)
+            tmpStr = tmpStr + "<td><a href='/outbondip_list?{}={}'>{}</a></td>".format(SERVER_NAME,urllib.parse.quote_plus(oneServerName),oneServerName)
+
+            '''
+            <th>主機名稱/th>
+            <th>允許連接數</th>
+            <th>TCP數</th>
+            <th>CPU%</th>
+            <th>RAM剩餘</th>
+            <th>開機時長</th>
+            <th>開機日期</th>
+            <th>入口IP</th>
+            <th>軟體版本</th>
+            <th>備註</th>
+            '''
+            if SERVER_LISTENING in tmpDICT:
+                tmpStr = tmpStr + "<td>{}</td>".format(tmpDICT[SERVER_LISTENING])
+            else :
+                tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+            if SERVER_TCP_CONNECTIONS in tmpDICT:
+                tmpStr = tmpStr + "<td>{}</td>".format(tmpDICT[SERVER_TCP_CONNECTIONS])
+            else :
+                tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+            if SERVER_CPU_USAGE in tmpDICT:
+                tmpStr = tmpStr + "<td>{}</td>".format(tmpDICT[SERVER_CPU_USAGE])
+            else :
+                tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+            if SERVER_RAM_USAGE in tmpDICT:
+                tmpStr = tmpStr + "<td>{}</td>".format(tmpDICT[SERVER_RAM_USAGE])
+            else :
+                tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+            if SERVER_ONLINE_HOURS in tmpDICT:
+                tmpStr = tmpStr + "<td>{}</td>".format(tmpDICT[SERVER_ONLINE_HOURS])
+            else :
+                tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+            if SERVER_START_TIME in tmpDICT:
+                tmpStr = tmpStr + "<td>{}</td>".format(tmpDICT[SERVER_START_TIME])
+            else :
+                tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+            if SERVER_INBOUND_IP in tmpDICT:
+                tmpStr = tmpStr + "<td>{}</td>".format(tmpDICT[SERVER_INBOUND_IP])
+            else :
+                tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+            if SERVER_INBOUND_TCP_PORTS in tmpDICT:
+                tmpStr = tmpStr + "<td>{}</td>".format(tmpDICT[SERVER_INBOUND_TCP_PORTS])
+            else :
+                tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+            if SERVER_INBOUND_UDP_PORTS in tmpDICT:
+                tmpStr = tmpStr + "<td>{}</td>".format(tmpDICT[SERVER_INBOUND_UDP_PORTS])
+            else :
+                tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+            if SERVER_REFERENCE_EXTERNAL_IP in tmpDICT:
+                tmpStr = tmpStr + "<td>{}</td>".format(tmpDICT[SERVER_REFERENCE_EXTERNAL_IP])
+            else :
+                tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+            if SERVER_VERSION in tmpDICT:
+                tmpStr = tmpStr + "<td>{}</td>".format(tmpDICT[SERVER_VERSION])
+            else :
+                tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+            if last_conn is not None:
+                if last_conn < 10 :
+                    tmpStr = tmpStr + "<td>{} min</td>".format(last_conn)
+                else :
+                    tmpStr = tmpStr + "<td><font color=red>{} min</font></td>".format(last_conn)
+            else :
+                tmpStr = tmpStr + "<td>NA</td>"
+
+            tmpStr = tmpStr + '<td><a href="/delete_server?socks5Name={}">[刪]</td>'.format(urllib.parse.quote_plus(oneServerName))
+
+            tmpStr = tmpStr + "</tr>"
+
+    #print(tmpStr)
+    FuncDesc = FuncDesc.replace("<!-- SERVER_LIST -->",tmpStr)
+
+    return render_template('index.html', FuncTitle=FuncTitle, FuncDesc=FuncDesc)
+
+#####################################################################
+@app.route('/create_account', methods=['POST','GET'])
+def create_account () :
+    FuncTitle = "建立客戶帳號"
+    FuncDesc = Path('/home/fanxing/mysite/templates/create_account.html').read_text(encoding='utf-8')
+
+
+    FuncDesc = FuncDesc.replace("<!-- CGI_NAME -->","/account_update_imp")
+    FuncDesc = FuncDesc.replace("<!-- user_id_value -->","")
+    FuncDesc = FuncDesc.replace("<!-- user_account_value -->","")
+    FuncDesc = FuncDesc.replace("<!-- user_passwd_value -->","")
+
+    tmpSelection = '遊戲群組: <select name="game_group" id="game_group_select">'
+    GroupList = GetGameGroupList()
+
+    for oneGroup in GroupList :
+        tmpSelection = tmpSelection + '<option>{}</option>'.format(oneGroup)
+
+    tmpSelection = tmpSelection + '</select>'
+
+    FuncDesc = FuncDesc.replace("<!-- game_group_value -->",tmpSelection)
+    FuncDesc = FuncDesc.replace("<!-- socks5_ip_value -->","")
+    FuncDesc = FuncDesc.replace("<!-- socks5_port_value -->","")
+    FuncDesc = FuncDesc.replace("<!-- outbound_ip_value -->","")
+    FuncDesc = FuncDesc.replace("<!-- start_date_value -->","")
+    FuncDesc = FuncDesc.replace("<!-- end_date_value -->","")
+    FuncDesc = FuncDesc.replace("<!-- forbidden_port_value -->","")
+
+
+    return render_template('index.html', FuncTitle=FuncTitle, FuncDesc=FuncDesc)
+
+#####################################################################
+@app.route('/account_update_imp', methods=['POST'])
+def account_update_imp () :
+
+
+    uid = None
+    if 'uid' in request.form :
+        #normal update
+        uid = request.form['uid']
+        uid = uid.strip()
+        if len(uid) <= 0:
+            # create new, insert
+            uid = None
+    user_account = request.form['user_account']
+    user_passwd = request.form['user_passwd']
+    game_group = request.form['game_group']
+    socks5_ip = request.form['socks5_ip']
+    socks5_ip_FS = GetSortableIP(socks5_ip)
+    socks5_port = request.form['socks5_port']
+    outbound_ip = request.form['outbound_ip']
+    outbound_ip_FS = GetSortableIP(outbound_ip)
+    start_date = request.form['start_date']
+    end_date = request.form['end_date']
+    forbidden_port = request.form['forbidden_port']
+
+    IsRequiredFieldEmpty = False
+    if user_account == None or len(user_account) <= 0 :
+        IsRequiredFieldEmpty = True
+    if user_passwd == None or len(user_passwd) <= 0 :
+        IsRequiredFieldEmpty = True
+
+    IsNoAvailablePort = False
+    if not IsRequiredFieldEmpty :
+
+        conn = sqlite3.connect(UserSQLDB)
+        c = conn.cursor()
+        #Account allow duplication
+
+        if uid is None :
+            rowcount = c.execute("SELECT COUNT(*) FROM ACCOUNT where socks5_ip='{}' and socks5_port={} ;".format(socks5_ip,socks5_port)).fetchone()[0]
+        else :
+            #update
+            rowcount = -1
+
+        if rowcount <= 0 :
+
+            ServerNameList = GetSocks5ServerByIP (socks5_ip)
+            if len (ServerNameList) > 0 :
+                OutbondIPList = []
+                for oneServer in ServerNameList:
+                    tmpOutbondIPList = GetSocks5OutbondIP (oneServer)
+                    OutbondIPList.extend(tmpOutbondIPList)
+
+                if len(OutbondIPList) <= 0 :
+                    conn.close()
+                    response = make_response(redirect("/account_list"))
+                    response.set_cookie('error', json.dumps({"error1" : "主機 {} 沒有出口IP資料.".format(socks5_ip)}))
+                    return response
+                else :
+                    if outbound_ip not in OutbondIPList :
+                        conn.close()
+                        response = make_response(redirect("/account_list"))
+                        response.set_cookie('error', json.dumps({"error1" : "主機 {} 沒有指定的出口IP {}.".format(socks5_ip,outbound_ip)}))
+                        return response
+                    else :
+
+                        tmp_socks5_port = 0
+                        try :
+                                tmp_socks5_port = int(socks5_port)
+                        except Exception as e1 :
+                            pass
+                        IsPortInRange = False
+                        for oneServer in ServerNameList :
+                            (tmpName, Socks5_Port_Start, Socks5_Port_End) = GetSocks5InbondPortRange (oneServer)
+                            if tmp_socks5_port <= Socks5_Port_End and tmp_socks5_port >= Socks5_Port_Start :
+                                IsPortInRange = True
+                                break
+
+                        if IsPortInRange :
+                            if uid is None :
+                                c.execute("INSERT INTO ACCOUNT (uid,user_account,user_passwd,game_group,socks5_ip,socks5_port,outbound_ip,start_date,end_date,forbidden_port,socks5_ip_FS,outbound_ip_FS) VALUES ('{}','{}','{}','{}','{}',{},'{}','{}','{}','{}','{}','{}')".format(shortuuid.uuid(),user_account,user_passwd,game_group,socks5_ip,socks5_port,outbound_ip,start_date,end_date,forbidden_port,socks5_ip_FS,outbound_ip_FS))
+                            else :
+                                c.execute("UPDATE ACCOUNT set user_account='{}',user_passwd='{}',game_group='{}',socks5_ip='{}',socks5_port={},outbound_ip='{}',start_date='{}',end_date='{}',forbidden_port='{}',socks5_ip_FS='{}',outbound_ip_FS='{}' WHERE uid='{}'".format(user_account,user_passwd,game_group,socks5_ip,socks5_port,outbound_ip,start_date,end_date,forbidden_port,socks5_ip_FS,outbound_ip_FS,uid))
+                        else :
+                            conn.close()
+                            response = make_response(redirect("/account_list"))
+                            response.set_cookie('error', json.dumps({"error1" : "指定Port {} 超出主機設定範圍 {} ~ {}.".format(socks5_port,Socks5_Port_Start,Socks5_Port_End)}))
+                            return response
+            else :
+                conn.close()
+                response = make_response(redirect("/account_list"))
+                response.set_cookie('error', json.dumps({"error1" : "入口IP {} 查不到對應的主機.".format(socks5_ip)}))
+                return response
+        else :
+            IsNoAvailablePort = True
+
+        conn.commit()
+        conn.close()
+
+    if IsNoAvailablePort :
+        response = make_response(redirect("/account_list"))
+        response.set_cookie('error', json.dumps({"error1" : "主機 {} 的 port {} 已經被使用!!".format(socks5_ip,socks5_port)}))
+        return response
+    elif IsRequiredFieldEmpty :
+        response = make_response(redirect("/account_list"))
+        response.set_cookie('error', json.dumps({"error1" : "使用者帳號/密碼不能空白!!"}))
+        return response
+    else :
+        return redirect("/account_list")
+
+#####################################################################
+@app.route('/account_update', methods=['POST'])
+def account_update () :
+
+    Action = request.form['Action']
+
+    uid = None
+    if 'uid' in request.form :
+       uid_list = request.form.getlist('uid')
+       uid = uid_list[0]
+    else :
+       if Action in ["十天內到期","三天內流量超過","按遊戲群組與帳號","已到期_遊戲群組_socks5IP"] :
+            uid = "Bypass"
+       else :
+            uid = None
+
+    #print("user_account : ",user_account)
+
+    if uid is not None:
+
+        if Action == "修改客戶資料" :
+
+            FuncTitle = "修改客戶資料"
+            FuncDesc = Path('/home/fanxing/mysite/templates/create_account.html').read_text(encoding='utf-8')
+            conn = sqlite3.connect(UserSQLDB)
+            c = conn.cursor()
+            cursor = c.execute("SELECT * FROM ACCOUNT where uid = '{}';".format(uid))
+
+            for data in cursor:
+                FuncDesc = FuncDesc.replace("<!-- user_id_value -->",data[0])
+                FuncDesc = FuncDesc.replace("<!-- user_account_value -->",data[1])
+                FuncDesc = FuncDesc.replace("<!-- user_passwd_value -->",data[2])
+
+                tmpSelection = '遊戲群組: <select name="game_group" id="game_group_select">'
+                GroupList = GetGameGroupList()
+
+                for oneGroup in GroupList :
+
+                    if data[3] == oneGroup :
+                        tmpSelection = tmpSelection + '<option selected>{}</option>'.format(oneGroup)
+                    else :
+                        tmpSelection = tmpSelection + '<option >{}</option>'.format(oneGroup)
+
+                tmpSelection = tmpSelection + '</select>'
+
+                FuncDesc = FuncDesc.replace("<!-- game_group_value -->",tmpSelection)
+                FuncDesc = FuncDesc.replace("<!-- socks5_ip_value -->",data[4])
+                FuncDesc = FuncDesc.replace("<!-- socks5_port_value -->",str(data[5]))
+                FuncDesc = FuncDesc.replace("<!-- outbound_ip_value -->",str(data[6]))
+                FuncDesc = FuncDesc.replace("<!-- start_date_value -->",data[7])
+                FuncDesc = FuncDesc.replace("<!-- end_date_value -->",data[8])
+                FuncDesc = FuncDesc.replace("<!-- forbidden_port_value -->",data[9])
+
+                #only process first data
+                break
+            conn.close()
+
+            FuncDesc = FuncDesc.replace("<!-- CGI_NAME -->","/account_update_imp")
+
+            return render_template('index.html', FuncTitle=FuncTitle, FuncDesc=FuncDesc)
+        elif (Action == "刪除客戶資料") :
+            conn = sqlite3.connect(UserSQLDB)
+            c = conn.cursor()
+
+            total_count = 0
+            for oneUID in uid_list :
+                c.execute("DELETE FROM ACCOUNT where uid = '{}';".format(oneUID))
+                total_count = total_count + 1
+
+            conn.commit()
+            conn.close()
+            response = make_response(redirect("/account_list"))
+            response.set_cookie('error', json.dumps({"error1" : "已刪除 {} 個客戶!".format(total_count)}))
+            return response
+
+        elif (Action == "十天內到期") :
+            response = make_response(redirect("/account_list?action=tendays"))
+            return response
+
+        elif (Action == "三天內流量超過") :
+            response = make_response(redirect("/account_list?action=threedays_traffic"))
+            return response
+
+        elif (Action == "按遊戲群組與帳號") :
+            game_group = request.form['game_group']
+            if "filter_account" in request.form :
+                filter_account = request.form['filter_account']
+                response = make_response(redirect("/account_list?action=game_group&game_group={}&filter_account={}".format(urllib.parse.quote_plus(game_group),urllib.parse.quote_plus(filter_account))))
+            else :
+                response = make_response(redirect("/account_list?action=game_group&game_group={}".format(urllib.parse.quote_plus(game_group))))
+            return response
+        elif (Action == "已到期_遊戲群組_socks5IP") :
+            game_group = request.form['game_group']
+            socks5_server_ip = None
+            if "socks5_server_ip" in request.form :
+                socks5_server_ip = request.form['socks5_server_ip']
+            if socks5_server_ip is not None :
+                response = make_response(redirect("/account_list?action=expired&game_group={}&socks5_server_ip={}".format(urllib.parse.quote_plus(game_group),urllib.parse.quote_plus(socks5_server_ip))))
+            else :
+                response = make_response(redirect("/account_list?action=expired&game_group={}".format(urllib.parse.quote_plus(game_group))))
+            return response
+
+        elif (Action == "帳號密碼批次更改") :
+            conn = sqlite3.connect(UserSQLDB)
+            c = conn.cursor()
+
+            tmpIDList = ""
+            for idx, oneUID in enumerate(uid_list) :
+                tmpIDList = tmpIDList + "'" + oneUID + "'"
+                if idx != len(uid_list) - 1 :
+                    tmpIDList = tmpIDList + ","
+
+            cursor = c.execute("SELECT * FROM ACCOUNT where uid in ({});".format(tmpIDList))
+
+            ResultHTML = '帳號編輯:<input type = "text" id="edit_account" size="15"/>&nbsp;&nbsp;<input type = "button" value="統一帳號" onclick="fillAll(\'user_account\',\'edit_account\');" />&nbsp;&nbsp;'
+            ResultHTML = ResultHTML + '密碼編輯:<input type = "text" id="edit_passwd" size="15"/>&nbsp;&nbsp;<input type = "button" value="隨機" onclick="random_pass(\'edit_passwd\');" />&nbsp;&nbsp;<input type = "button" value="統一密碼" onclick="fillAll(\'user_passwd\',\'edit_passwd\');" />&nbsp;&nbsp;'
+            ResultHTML = ResultHTML + '到期日編輯:<input type = "date" id="edit_end_date" size="15"/>&nbsp;&nbsp;<input type = "button" value="統一到期" onclick="fillAll(\'end_date\',\'edit_end_date\');" />&nbsp;&nbsp;'
+            ResultHTML = ResultHTML + '禁止Port編輯:<input type = "text" id="edit_forbidden_port" size="15"/>&nbsp;&nbsp;<input type = "button" value="統一禁止Port" onclick="fillAll(\'forbidden_port\',\'edit_forbidden_port\');" />&nbsp;&nbsp;'
+            ResultHTML = ResultHTML + '<hr><form action = "/account_password_update_imp" method = "POST" '
+            ResultHTML = ResultHTML + 'enctype = "multipart/form-data">'
+            Counter = 0
+            for data in cursor:
+                uid = data[0]
+                user_account = data[1]
+                user_passwd = data[2]
+                end_date = data[8]
+                forbidden_port = data[9]
+
+                ResultHTML = ResultHTML + '<input type = "hidden" name = "uid{}"  value="{}" size="15"/>&nbsp;&nbsp;'.format(Counter,uid)
+                ResultHTML = ResultHTML + '帳號: <input type = "text" name = "user_account{}" id="user_account{}" value="{}"  size="15"/>&nbsp;&nbsp;'.format(Counter,Counter,user_account)
+                ResultHTML = ResultHTML + '密碼: <input type = "text" name = "user_passwd{}"  id="user_passwd{}" value="{}" size="15"/>&nbsp;&nbsp;'.format(Counter,Counter,user_passwd)
+                ResultHTML = ResultHTML + '到期日: <input type = "date" name = "end_date{}" id="end_date{}" value="{}" size="15"/>&nbsp;&nbsp;'.format(Counter,Counter,end_date)
+                ResultHTML = ResultHTML + '禁止Port(請用逗號隔開,最後一個不用逗號): <input type = "text" name = "forbidden_port{}" id="forbidden_port{}" value="{}" size="50"/><br>'.format(Counter,Counter,forbidden_port)
+                Counter = Counter + 1
+
+            ResultHTML = ResultHTML + '<input type = "submit" name="batch_submit" value = "修改帳號密碼" />'
+            ResultHTML = ResultHTML + '</form><hr>'
+
+            conn.close()
+
+            FuncTitle = "帳號密碼批次更改"
+
+            return render_template('index.html', FuncTitle=FuncTitle, FuncDesc=ResultHTML)
+
+        elif (Action == "帳號密碼隨機更改") :
+
+            conn = sqlite3.connect(UserSQLDB)
+            c = conn.cursor()
+
+            tmpIDList = ""
+            for idx, oneUID in enumerate(uid_list) :
+                tmpIDList = tmpIDList + "'" + oneUID + "'"
+                if idx != len(uid_list) - 1 :
+                    tmpIDList = tmpIDList + ","
+
+            cursor = c.execute("SELECT * FROM ACCOUNT where uid in ({});".format(tmpIDList))
+            ResultHTML = '<hr><form action = "/account_password_update_imp" method = "POST" '
+            ResultHTML = ResultHTML + 'enctype = "multipart/form-data">'
+            Counter = 0
+
+            AccountList = []
+            for data in cursor:
+                uid = data[0]
+                user_account = data[1]
+                user_passwd = data[2]
+                AccountList.append((uid,user_account,user_passwd))
+
+
+            NameList = Path(EnglishNameTxt).read_text(encoding='utf-8').split("\n")
+            tmpNameSet = set()
+            for oneTuple in AccountList:
+                uid,user_account,user_passwd = oneTuple
+                GoAhead = False
+                while not GoAhead :
+                    NameIdx =randint(0,len(NameList)-1)
+                    name = NameList[NameIdx].strip().lower()
+                    rowcount = c.execute("SELECT COUNT(*) FROM ACCOUNT where user_account = '{}';".format(name)).fetchone()[0]
+                    #print(rowcount, name, len(RandomAccountDICT))
+                    if (rowcount <= 0) and (name not in tmpNameSet) :
+                        GoAhead = True
+                        tmpNameSet.add(name)
+
+                passwordstr = randint(10000,99999)
+
+                ResultHTML = ResultHTML + '<input type = "hidden" name = "uid{}"  value="{}" size="15"/>&nbsp;&nbsp;'.format(Counter,uid)
+                ResultHTML = ResultHTML + '新帳號: (原 {}) <input type = "text" name = "user_account{}" value="{}"  size="15"/>&nbsp;&nbsp;'.format(user_account,Counter,name)
+                ResultHTML = ResultHTML + '新密碼: (原 {}) <input type = "text" name = "user_passwd{}" value="{}" size="15"/><br>'.format(user_passwd,Counter,passwordstr)
+                Counter = Counter + 1
+
+            conn.close()
+
+            ResultHTML = ResultHTML + '<input type = "submit" name="batch_submit" value = "修改帳號密碼" />'
+            ResultHTML = ResultHTML + '</form><hr>'
+
+
+
+            FuncTitle = "帳號密碼隨機更改"
+
+            return render_template('index.html', FuncTitle=FuncTitle, FuncDesc=ResultHTML)
+    else :
+        response = make_response(redirect(request.referrer))
+        response.set_cookie('error', json.dumps({"error1" : "尚未勾選使用者!!"}))
+        return response
+
+#####################################################################
+@app.route('/account_password_update_imp', methods=['POST'])
+def account_password_update_imp () :
+
+    Counter = 0
+    hasData = True
+    conn = sqlite3.connect(UserSQLDB)
+    c = conn.cursor()
+    while hasData :
+        ExpectedKey_UID = "uid{}".format(Counter)
+        ExpectedKey_ACCOUNT = "user_account{}".format(Counter)
+        ExpectedKey_PASSWD = "user_passwd{}".format(Counter)
+        ExpectedKey_END_DATE = "end_date{}".format(Counter)
+        ExpectedKey_FORBIDDEN = "forbidden_port{}".format(Counter)
+        if ExpectedKey_UID in request.form :
+            uid = request.form[ExpectedKey_UID]
+            user_account = request.form[ExpectedKey_ACCOUNT]
+            user_passwd = request.form[ExpectedKey_PASSWD]
+            if ExpectedKey_END_DATE in  request.form:
+                end_date = request.form[ExpectedKey_END_DATE]
+            if ExpectedKey_FORBIDDEN in request.form:
+                forbidden_port = request.form[ExpectedKey_FORBIDDEN]
+            c.execute("UPDATE ACCOUNT set user_account='{}',user_passwd='{}',end_date='{}',forbidden_port='{}' WHERE uid='{}'".format(user_account,user_passwd,end_date,forbidden_port,uid))
+            Counter = Counter + 1
+        else :
+            hasData = False
+
+    if (Counter > 0) :
+        #had updated
+        conn.commit()
+    conn.close()
+
+    return redirect("/account_list")
+
+
+
+#####################################################################
+@app.route('/account_list', methods=['POST','GET'])
+def account_list () :
+
+    MyAction = request.args.get("action")
+
+    tmpSelectStr = "全選"
+    tmp_game_group = None
+    filter_account = None
+    tmp_socks5_server_ip = None
+    if MyAction is not None :
+        if MyAction == 'tendays' :
+            FuncTitle = "十天內到期客戶帳號列表"
+        elif MyAction == 'threedays_traffic' :
+            FuncTitle = "三天內流量超過客戶帳號列表"
+        elif MyAction == 'game_group' :
+            filter_account = request.args.get("filter_account")
+            if len(filter_account) <= 0:   #empty string
+                filter_account = None
+            if filter_account is not None :
+                FuncTitle = "按遊戲群組與 {} 客戶帳號列表".format(filter_account)
+            else :
+                FuncTitle = "按遊戲群組與帳號客戶帳號列表"
+        elif MyAction == 'expired' :
+            tmp_socks5_server_ip = request.args.get("socks5_server_ip")
+            tmp_game_group = request.args.get("game_group")
+            if tmp_socks5_server_ip != 'all' and tmp_game_group != 'all':
+                FuncTitle = "已到期->按遊戲群組 {} 與 Socks5 IP {} 列表".format(tmp_game_group,tmp_socks5_server_ip)
+            elif tmp_socks5_server_ip == 'all' and tmp_game_group != 'all':
+                FuncTitle = "已到期->按遊戲群組 {} 列表".format(tmp_game_group)
+            elif tmp_socks5_server_ip != 'all' and tmp_game_group == 'all':
+                FuncTitle = "已到期->按Socks5 IP {} 列表".format(tmp_socks5_server_ip)
+            else :
+                FuncTitle = "已到期列表"
+    else :
+        FuncTitle = "客戶帳號列表"
+    FuncDesc = Path(TemplateDir + 'account_list.html').read_text(encoding='utf-8')
+    TodayStr = GetCurrentTimeString(0)
+    conn = sqlite3.connect(UserSQLDB)
+    c = conn.cursor()
+    if MyAction == 'tendays' :
+
+        TendaysStr = GetCurrentTimeString(10)
+        cursor = c.execute("SELECT * FROM ACCOUNT WHERE end_date BETWEEN '{}' AND '{}' ORDER BY socks5_ip_FS,game_group,socks5_port,user_account,outbound_ip_FS ASC;".format(TodayStr, TendaysStr))
+    elif MyAction == 'threedays_traffic' :
+        ThreeDaysBeforesStr = GetCurrentTimeString(-3)
+        cursor = c.execute("SELECT * FROM ACCOUNT WHERE traffic_over_limit_date BETWEEN '{}' AND '{}' ORDER BY socks5_ip_FS,game_group,socks5_port,user_account,outbound_ip_FS ASC;".format(ThreeDaysBeforesStr, TodayStr))
+    elif MyAction == 'game_group' :
+        tmp_game_group = request.args.get("game_group")
+        if filter_account is not None :
+            if tmp_game_group != 'all' :
+                cursor = c.execute("SELECT * FROM ACCOUNT WHERE game_group = '{}' and user_account='{}' ORDER BY socks5_ip_FS,game_group,socks5_port,user_account,outbound_ip_FS ASC;".format(tmp_game_group,filter_account))
+            else :
+                cursor = c.execute("SELECT * FROM ACCOUNT WHERE user_account='{}' ORDER BY socks5_ip_FS,game_group,socks5_port,user_account,outbound_ip_FS ASC;".format(filter_account))
+        else :
+            if tmp_game_group != 'all' :
+                cursor = c.execute("SELECT * FROM ACCOUNT WHERE game_group = '{}' ORDER BY socks5_ip_FS,game_group,socks5_port,user_account,outbound_ip_FS ASC;".format(tmp_game_group))
+            else :
+                cursor = c.execute("SELECT * FROM ACCOUNT ORDER BY socks5_ip_FS,game_group,socks5_port,user_account,outbound_ip_FS ASC;")
+    elif MyAction == "expired" :
+        tmp_socks5_server_ip = request.args.get("socks5_server_ip")
+        tmp_game_group = request.args.get("game_group")
+        if tmp_socks5_server_ip == 'all' and tmp_game_group == 'all':
+            cursor = c.execute("SELECT * FROM ACCOUNT WHERE end_date != '' and end_date < '{}' ORDER BY socks5_ip_FS,game_group,socks5_port,user_account,outbound_ip_FS ASC;".format(TodayStr))
+        elif tmp_socks5_server_ip != 'all' and tmp_game_group == 'all':
+            cursor = c.execute("SELECT * FROM ACCOUNT WHERE end_date != '' and end_date < '{}' and socks5_ip = '{}' ORDER BY socks5_ip_FS,game_group,socks5_port,user_account,outbound_ip_FS ASC;".format(TodayStr, tmp_socks5_server_ip))
+        elif tmp_socks5_server_ip != 'all' and tmp_game_group != 'all':
+            cursor = c.execute("SELECT * FROM ACCOUNT WHERE end_date != '' and end_date < '{}' and socks5_ip = '{}' and game_group = '{}' ORDER BY socks5_ip_FS,game_group,socks5_port,user_account,outbound_ip_FS ASC;".format(TodayStr, tmp_socks5_server_ip, tmp_game_group))
+        else :
+            cursor = c.execute("SELECT * FROM ACCOUNT WHERE end_date != '' and end_date < '{}' and game_group = '{}' ORDER BY socks5_ip_FS,game_group,socks5_port,user_account,outbound_ip_FS ASC;".format(TodayStr, tmp_game_group))
+    else :
+        cursor = c.execute("SELECT * FROM ACCOUNT ORDER BY socks5_ip_FS,game_group,socks5_port,user_account,outbound_ip_FS ASC;")
+
+
+    TodayStr = GetCurrentTimeString(0)
+    TendaysStr = GetCurrentTimeString(10)
+    tmpStr = ""
+    Counter = 0
+    with open(account_list_csv, 'w', newline='', encoding='utf-8-sig') as csvfile:
+        # 建立 CSV 檔寫入器
+        writer = csv.writer(csvfile)
+        # 寫入一列資料
+        writer.writerow(['遊戲群組','Socks5 IP','Socks5 Port','客戶帳號','客戶密碼','出口IP','起始日期','結束日期','禁止Port','客戶端'])
+        #Sock5IP|PORT|帳號|密碼|結束日期
+        for data in cursor:
+            uid = data[0]
+            user_account = data[1]
+            user_passwd = data[2]
+            game_group = data[3]
+            socks5_ip = data[4]
+            socks5_port = data[5]
+            outbound_ip = data[6]
+            start_date = data[7]
+            end_date = data[8]
+            forbidden_port = data[9]
+            traffic_over_limit_date = data[12]
+
+            #192.168.120.1/16149/S546/xx7891/2023-02-04
+            NoteStr = "{}/{}/{}/{}/{}".format(socks5_ip,socks5_port,user_account,user_passwd,end_date)
+
+            writer.writerow([game_group,socks5_ip,socks5_port,user_account,user_passwd,outbound_ip,start_date,end_date,forbidden_port,NoteStr])
+
+            bgcolor = ''
+            if MyAction != 'tendays' :
+                if end_date <= TendaysStr and end_date >= TodayStr :
+                    bgcolor = 'bgcolor="yellow"'
+
+            if len(bgcolor) == 0 :
+                if end_date < TodayStr and len(end_date) > 0:
+                    bgcolor = 'bgcolor="LightGray"'
+
+            tmpStr = tmpStr + '<tr {}>'.format(bgcolor)
+
+            if MyAction == 'game_group' :  #default is check all
+                tmpSelectStr = "全消"
+                tmpStr = tmpStr + "<td><input type=checkbox name='uid' value='{}' checked ></td>".format(uid)
+            else :
+                tmpStr = tmpStr + "<td><input type=checkbox name='uid' value='{}'></td>".format(uid)
+
+            if socks5_ip is not None:
+                tmpStr = tmpStr + "<td>{}</td>".format(socks5_ip)
+            else :
+                tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+            if game_group is not None:
+                tmpStr = tmpStr + "<td>{}</td>".format(game_group)
+            else :
+                tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+            if socks5_port is not None:
+                tmpStr = tmpStr + "<td>{}</td>".format(socks5_port)
+            else :
+                tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+            if outbound_ip is not None:
+                tmpStr = tmpStr + "<td>{}</td>".format(outbound_ip)
+            else :
+                tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+            if user_account is not None:
+                tmpStr = tmpStr + "<td>{}</td>".format(user_account)
+            else :
+                tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+            if user_passwd is not None:
+                tmpStr = tmpStr + "<td>{}</td>".format(user_passwd)
+            else :
+                tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+            if start_date is not None:
+                tmpStr = tmpStr + "<td>{}</td>".format(start_date)
+            else :
+                tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+            if end_date is not None:
+                tmpStr = tmpStr + "<td>{}</td>".format(end_date)
+            else :
+                tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+            if forbidden_port is not None:
+                tmpStr = tmpStr + "<td>{}</td>".format(forbidden_port)
+            else :
+                tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+            if traffic_over_limit_date is not None:
+                tmpStr = tmpStr + "<td>{}</td>".format(traffic_over_limit_date)
+            else :
+                tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+            tmpStr = tmpStr + "</tr>"
+
+            Counter = Counter + 1
+
+        csvfile.close()
+
+    conn.close()
+
+    FuncDesc = FuncDesc.replace("<!-- File_Download -->",'<a href="/account_list.csv" >帳號暫存檔案下載</a>')
+    FuncDesc = FuncDesc.replace("<!-- SelectTxt -->",tmpSelectStr)
+    FuncDesc = FuncDesc.replace("<!-- ACCOUNT_LIST -->",tmpStr)
+    ButtonHTML = '<input type="submit" name="Action" value="修改客戶資料">&nbsp;&nbsp;&nbsp;'
+    ButtonHTML = ButtonHTML + '<input type="submit" name="Action" value="刪除客戶資料" onclick="return confirm(\'確定要刪除嗎?\')">&nbsp;&nbsp;&nbsp;'
+    ButtonHTML = ButtonHTML + '<input type="submit" name="Action" value="十天內到期">&nbsp;&nbsp;&nbsp;'
+    ButtonHTML = ButtonHTML + '<input type="submit" name="Action" value="三天內流量超過">&nbsp;&nbsp;&nbsp;'
+    ButtonHTML = ButtonHTML + '<input type="submit" name="Action" value="帳號密碼批次更改">&nbsp;&nbsp;&nbsp;'
+    ButtonHTML = ButtonHTML + '<input type="submit" name="Action" value="帳號密碼隨機更改">&nbsp;&nbsp;&nbsp;'
+
+    if filter_account is not None :
+        ButtonHTML = ButtonHTML + '<input type="text" name="filter_account" value="{}" size="15">&nbsp;'.format(filter_account)
+    else :
+        ButtonHTML = ButtonHTML + '<input type="text" name="filter_account" size="15">&nbsp;'
+
+    ## Game group selection
+    ResultHTML = '<select name="game_group" id="game_group_select">'
+
+    GroupList = GetGameGroupList()
+
+    for oneGroup in GroupList :
+        if oneGroup == tmp_game_group :
+            ResultHTML = ResultHTML + '<option selected>{}</option>'.format(oneGroup)
+        else :
+            ResultHTML = ResultHTML + '<option>{}</option>'.format(oneGroup)
+
+    if tmp_game_group == 'all' :
+        ResultHTML = ResultHTML + '<option selected>all</option>'
+    else :
+        ResultHTML = ResultHTML + '<option>all</option>'
+    ResultHTML = ResultHTML + '</select>'
+
+    ButtonHTML = ButtonHTML + ResultHTML + '<input type="submit" name="Action" value="按遊戲群組與帳號">&nbsp;&nbsp;&nbsp;'
+
+    ## Socks5 IP selection
+    ResultHTML = '<select name="socks5_server_ip" id="socks5_server_ip">'
+
+    Socks5ServerList = GetSocks5ServerList()
+
+    for oneSocks5IP in Socks5ServerList :
+        if oneSocks5IP == tmp_socks5_server_ip :
+            ResultHTML = ResultHTML + '<option selected>{}</option>'.format(oneSocks5IP)
+        else :
+            ResultHTML = ResultHTML + '<option>{}</option>'.format(oneSocks5IP)
+
+    if tmp_socks5_server_ip == 'all' :
+        ResultHTML = ResultHTML + '<option selected>all</option>'
+    else :
+        ResultHTML = ResultHTML + '<option>all</option>'
+
+    ResultHTML = ResultHTML + '</select>'
+
+    ButtonHTML = ButtonHTML + ResultHTML + '<input type="submit" name="Action" value="已到期_遊戲群組_socks5IP">&nbsp;&nbsp;&nbsp;'
+
+
+
+    FuncDesc = FuncDesc.replace("<!-- SUBMIT_BUTTON -->",ButtonHTML)
+
+    FuncTitle = FuncTitle + " (總數:{})".format(Counter)
+
+    return render_template('index.html', FuncTitle=FuncTitle, FuncDesc=FuncDesc)
+
+#####################################################################
+@app.route('/batch_account', methods=['POST','GET'])
+def batch_account ():
+
+    FuncTitle = "批次建立帳號"
+    FuncDesc = "使用批次建立(1-100) 設定客戶所要的SK5帳號與密碼,並且100組對外不同IP的線路<br>"
+    FuncDesc = FuncDesc + '<a href="/random_account.csv" >前次批次帳號暫存檔案下載</a><br><br>請輸入 <br><br>'
+
+    ResultHTML = '<hr><form action = "/create_account_imp" method = "POST" '
+    ResultHTML = ResultHTML + 'enctype = "multipart/form-data">'
+    ResultHTML = ResultHTML + '帳號: <input type = "text" name = "user_account"  size="15"/>'
+    ResultHTML = ResultHTML + '密碼: <input type = "text" name = "password"  size="15"/>'
+    ResultHTML = ResultHTML + '組數: <input type = "text" name = "numbers"  size="15"/><br>'
+    ResultHTML = ResultHTML + 'Socks5 IP: <input type = "text" name = "socks5_ip"  size="15"/>'
+    ResultHTML = ResultHTML + '起始port: <input type = "text" name = "port_start"  size="15"/>'
+    ResultHTML = ResultHTML + '出口IP編號(從0開始): <input type = "text" name = "outbond_idx"  size="15"/>'
+
+
+    ResultHTML = ResultHTML + '遊戲群組: <select name="game_group" id="game_group_select">'
+
+    GroupList = GetGameGroupList()
+
+    for oneGroup in GroupList :
+        ResultHTML = ResultHTML + '<option>{}</option>'.format(oneGroup)
+
+    ResultHTML = ResultHTML + '</select><br>'
+
+
+    ResultHTML = ResultHTML + '起始日期: <input type = "date" name = "start_date" />'
+    ResultHTML = ResultHTML + '結束日期: <input type = "date" name = "end_date" /><br>'
+    ResultHTML = ResultHTML + '<input type = "submit" name="random_submit" value = "建立帳號" />'
+    ResultHTML = ResultHTML + '</form><hr>'
+
+    return render_template('index.html', FuncTitle=FuncTitle, FuncDesc=FuncDesc + ResultHTML)
+
+
+#####################################################################
+@app.route('/random_account', methods=['POST','GET'])
+def random_account ():
+
+    FuncTitle = "批次建立十組隨機帳號"
+    FuncDesc = '<a href="/random_account.csv" >前次隨機帳號暫存檔案下載</a><br><br>請輸入 <br><br>'
+
+    ResultHTML = '<hr><form action = "/create_account_imp" method = "POST" '
+    ResultHTML = ResultHTML + 'enctype = "multipart/form-data">'
+    ResultHTML = ResultHTML + 'Socks5 IP: <input type = "text" name = "socks5_ip" size="15"/>'
+
+
+    ResultHTML = ResultHTML + '遊戲群組: <select name="game_group" id="game_group_select">'
+
+    GroupList = GetGameGroupList()
+
+    for oneGroup in GroupList :
+        ResultHTML = ResultHTML + '<option>{}</option>'.format(oneGroup)
+
+    ResultHTML = ResultHTML + '</select><br>'
+
+    ResultHTML = ResultHTML + '起始日期: <input type = "date" name = "start_date" />'
+    ResultHTML = ResultHTML + '結束日期: <input type = "date" name = "end_date" /><br>'
+    ResultHTML = ResultHTML + '<input type = "submit" name="random_submit" value = "建立隨機帳號" />'
+    ResultHTML = ResultHTML + '</form><hr>'
+
+    return render_template('index.html', FuncTitle=FuncTitle, FuncDesc=FuncDesc + ResultHTML)
+
+#####################################################################
+@app.route('/create_account_insert', methods=['POST','GET'])
+def random_account_insert ():
+
+
+    RandomAccountDICT = None
+    if 'RandomAccountDICT' in request.form :
+        FuncTitle = "批次建立十組隨機帳號完成!!"
+        FuncDesc = '<a href="/random_account.csv" >隨機帳號暫存檔案下載</a>'
+        tmpStr = request.form['RandomAccountDICT']
+        #print(tmpStr)
+        tmpStr = urllib.parse.unquote_plus(tmpStr)
+        #print(tmpStr)
+        RandomAccountDICT = json.loads(tmpStr)
+        csv_file = random_account_csv
+    else :
+        FuncTitle = "批次建立帳號完成!!"
+        FuncDesc = '<a href="/batch_account.csv" >批次帳號暫存檔案下載</a>'
+        tmpStr = request.form['BatchAccountDICT']
+        #print(tmpStr)
+        tmpStr = urllib.parse.unquote_plus(tmpStr)
+        #print(tmpStr)
+        RandomAccountDICT = json.loads(tmpStr)
+        csv_file = batch_account_csv
+
+    if RandomAccountDICT is not None and len(RandomAccountDICT) > 0 :
+        conn = sqlite3.connect(UserSQLDB)
+        c = conn.cursor()
+        #check user , port , ip again
+        IsUserDuplicated = False
+        if 'RandomAccountDICT' in request.form :
+            for onUser in RandomAccountDICT :
+                (name, passwordstr, socks5_ip, socks5_port, outbound_ip, game_group,start_date,end_date) = RandomAccountDICT[onUser]
+                rowcount = c.execute("SELECT COUNT(*) FROM ACCOUNT where user_account = '{}';".format(name)).fetchone()[0]
+                if rowcount > 0 :
+                    IsUserDuplicated = True
+                    break
+
+        if not IsUserDuplicated :
+            IsIP_Port_Duplicated = False
+            for onUser in RandomAccountDICT :
+                (name, passwordstr, socks5_ip, socks5_port, outbound_ip, game_group,start_date,end_date) = RandomAccountDICT[onUser]
+                rowcount = c.execute("SELECT COUNT(*) FROM ACCOUNT where socks5_ip = '{}' and socks5_port={} ;".format(socks5_ip,socks5_port)).fetchone()[0]
+                if rowcount > 0 :
+                    IsIP_Port_Duplicated = True
+                    break
+
+            if not IsIP_Port_Duplicated :
+
+                with open(csv_file, 'w', newline='', encoding='utf-8-sig') as csvfile:
+                    # 建立 CSV 檔寫入器
+                    writer = csv.writer(csvfile)
+                    # 寫入一列資料
+                    writer.writerow(['客戶帳號','客戶密碼','Socks5 IP','Socks5 Port','出口IP','遊戲群組','起始日期','結束日期','客戶端'])
+                    #192.168.120.1/16149/S546/xx7891/2023-02-04
+
+
+                    for onUser in RandomAccountDICT :
+                        (name, passwordstr, socks5_ip, socks5_port, outbound_ip, game_group,start_date,end_date) = RandomAccountDICT[onUser]
+                        socks5_ip_FS = GetSortableIP(socks5_ip)
+                        outbound_ip_FS = GetSortableIP(outbound_ip)
+
+                        print (shortuuid.uuid(),name,passwordstr,game_group,socks5_ip,socks5_port,outbound_ip,start_date,end_date,'*',socks5_ip_FS,outbound_ip_FS)
+                        SQLCmd = "INSERT INTO ACCOUNT (uid,user_account,user_passwd,game_group,socks5_ip,socks5_port,outbound_ip,start_date,end_date,forbidden_port,socks5_ip_FS,outbound_ip_FS) VALUES ('{}','{}','{}','{}','{}',{},'{}','{}','{}','{}','{}','{}')".format(shortuuid.uuid(),name,passwordstr,game_group,socks5_ip,socks5_port,outbound_ip,start_date,end_date,'',socks5_ip_FS,outbound_ip_FS)
+                        #c.execute("INSERT INTO ACCOUNT (uid,user_account,user_passwd,game_group,socks5_ip,socks5_port,outbound_ip,start_date,end_date,forbidden_port,socks5_ip_FS,outbound_ip_FS) VALUES ('{}','{}','{}','{}','{}',{},'{}','{}','{}','{}','{}','{}')".format(shortuuid.uuid(),name,passwordstr,game_group,socks5_ip,socks5_port,outbound_ip,start_date,end_date,'',socks5_ip_FS,outbound_ip_FS))
+                        print (SQLCmd)
+                        c.execute(SQLCmd)
+                        NoteStrs = "{}/{}/{}/{}/{}".format(socks5_ip,socks5_port,name,passwordstr,end_date)
+                        writer.writerow([name,passwordstr,socks5_ip,socks5_port,outbound_ip,game_group,start_date,end_date,NoteStrs])
+
+                    conn.commit()
+                    conn.close()
+                    csvfile.close()
+
+                return render_template('index.html', FuncTitle=FuncTitle, FuncDesc=FuncDesc)
+
+            else :
+                conn.close()
+                response = make_response(redirect(request.referrer))
+                response.set_cookie('error', json.dumps({"error1" : "Socks5 IP, Port 重複!!\n請重新輸入!!"}))
+                return response
+        else :
+            conn.close()
+            response = make_response(redirect(request.referrer))
+            response.set_cookie('error', json.dumps({"error1" : "使用者帳號已經存在!!\n請重新輸入!!"}))
+            return response
+    else :
+        response = make_response(redirect(request.referrer))
+        response.set_cookie('error', json.dumps({"error1" : "系統錯誤, 請重新執行!!"}))
+        return response
+
+#####################################################################
+@app.route('/create_account_imp', methods=['POST','GET'])
+def random_account_imp ():
+
+
+    FuncDesc = Path('/home/fanxing/mysite/templates/random_account.html').read_text(encoding='utf-8')
+    NameList = Path(EnglishNameTxt).read_text(encoding='utf-8').split("\n")
+    if 'socks5_ip' in request.form :
+
+        socks5_ip = request.form['socks5_ip']
+        game_group = request.form['game_group']
+        user_account = None
+        if 'user_account' in request.form :
+            user_account = request.form['user_account']
+
+        if user_account is None:
+            #建立隨機
+            FuncTitle = "確認隨機帳號是否OK? "
+        else :
+            #建立帳號
+            FuncTitle = "確認批次建立帳號是否OK? "
+
+        user_passwd = None
+        if 'password' in request.form :
+            user_passwd = request.form['password']
+
+        numbers = 10
+        if 'numbers' in request.form :
+            try :
+                numbers = int(request.form['numbers'])
+            except Exception as e1:
+                pass
+
+        port_start = 0
+        if 'port_start' in request.form :
+            try :
+                port_start = int(request.form['port_start'])
+            except Exception as e1:
+                pass
+
+        ServerNameList = GetSocks5ServerByIP (socks5_ip)
+        if len (ServerNameList) > 0 :
+            OutbondIPList = []
+            for oneServer in ServerNameList :
+                tmpOutbondIPList = GetSocks5OutbondIP (oneServer)
+                OutbondIPList.extend(tmpOutbondIPList)
+
+            if len(OutbondIPList) <= 0 :
+                return render_template('index.html', FuncTitle=FuncTitle, FuncDesc="主機 {} 沒有設定出口IP.".format(socks5_ip))
+        else :
+            return render_template('index.html', FuncTitle=FuncTitle, FuncDesc="入口IP {} 沒有對應的主機.".format(socks5_ip))
+
+        outbond_idx = -1
+        #print("outbond_idx: {}, numbers:{}, iplist:{}".format(outbond_idx,numbers,len(OutbondIPList)))
+        if 'outbond_idx' in request.form :
+            try :
+                outbond_idx = int(request.form['outbond_idx'])
+                #print("outbond_idx: {}, numbers:{}, iplist:{}".format(outbond_idx,numbers,len(OutbondIPList)))
+                if (outbond_idx + numbers) > len(OutbondIPList) :
+                    return render_template('index.html', FuncTitle=FuncTitle, FuncDesc="主機 {} 找不到從的出口IP編號 {} 開始 {} 組可用出口IP.".format(socks5_ip,outbond_idx,numbers))
+            except Exception as e1:
+                print(e1)
+
+        start_date = ""
+        if "start_date" in request.form :
+            start_date = request.form["start_date"]
+
+        end_date = ""
+        if "end_date" in request.form :
+            end_date = request.form["end_date"]
+
+        if len(ServerNameList) > 0 :
+
+            PortRangeList = []
+
+            for oneServer in ServerNameList :
+                (tmpName, Socks5_Port_Start, Socks5_Port_End) = GetSocks5InbondPortRange (oneServer)
+                PortRangeList.append((Socks5_Port_Start, Socks5_Port_End))
+
+            PortRangeList.sort(key = lambda s: s[0])
+
+            conn = sqlite3.connect(UserSQLDB)
+            c = conn.cursor()
+            # rand account
+            RandomAccountDICT = {}
+            tmpNameSet = set()
+            tmpPortSet = set()
+
+            (Socks5_Port_Start, Socks5_Port_End) = PortRangeList[0]
+            target_port = Socks5_Port_Start
+            if user_account is not None:
+                if port_start > 0 :
+                    target_port = port_start
+                    IsPortInRange = False
+                    PortRangeTxt = ""
+                    for oneRange in PortRangeList :
+                        (tmp_Socks5_Port_Start, tmp_Socks5_Port_End) = oneRange
+                        PortRangeTxt = PortRangeTxt + "{} ~ {}<br>".format(tmp_Socks5_Port_Start,tmp_Socks5_Port_End)
+                        if target_port >= tmp_Socks5_Port_Start and target_port <= tmp_Socks5_Port_End :
+                            IsPortInRange = True
+                            break
+                    if not IsPortInRange :
+                        return render_template('index.html', FuncTitle=FuncTitle, FuncDesc="起始Port {} 不在主機 {} 的port 範圍內.<br><br>可用範圍:<br>{}".format(target_port,socks5_ip,PortRangeTxt))
+
+            tmpStr = ""
+            Counter = 0
+            while len(RandomAccountDICT) < numbers :
+                GoAhead = False
+                if user_account is None:
+                    NameIdx =randint(0,len(NameList)-1)
+                    name = NameList[NameIdx].strip().lower()
+                    rowcount = c.execute("SELECT COUNT(*) FROM ACCOUNT where user_account = '{}';".format(name)).fetchone()[0]
+                    #print(rowcount, name, len(RandomAccountDICT))
+                    if (rowcount <= 0) and (name not in tmpNameSet) :
+                        GoAhead = True
+                else :
+                    name = user_account
+                    GoAhead = True
+
+                if (GoAhead) :
+
+                    IsTherePortAvailable = False
+                    while not IsTherePortAvailable :
+                        rowcount2 = c.execute("SELECT COUNT(*) FROM ACCOUNT where socks5_ip = '{}' and socks5_port={};".format(socks5_ip,target_port)).fetchone()[0]
+                        if (rowcount2 <= 0) and (target_port not in tmpPortSet):
+                            IsTherePortAvailable = True
+                        else :
+                            if port_start > 0 :
+                                return render_template('index.html', FuncTitle=FuncTitle, FuncDesc="主機 {} 的入口IP {} 找不到從Port {} 開始連續 {} 組空閒Port.".format(tmpName,socks5_ip,port_start,numbers))
+                            else :
+                                target_port = target_port + 1
+                                if target_port > Socks5_Port_End :
+                                    return render_template('index.html', FuncTitle=FuncTitle, FuncDesc="主機 {} 的入口IP {} 找不到閒置的 Port.".format(tmpName,socks5_ip))
+
+
+                    if user_account is None:
+                        passwordstr = randint(10000,99999)
+                        outbound_ip = RandomSelectOneOutbonIP (OutbondIPList)
+                    else :
+                        passwordstr = user_passwd
+                        if outbond_idx >= 0 :
+                            outbound_ip = OutbondIPList[Counter + outbond_idx]
+                        else :
+                            outbound_ip = OutbondIPList[Counter % len(OutbondIPList)]
+                    RandomAccountDICT[Counter] = (name, passwordstr, socks5_ip, target_port, outbound_ip, game_group,start_date,end_date)
+                    tmpNameSet.add(name)
+                    tmpPortSet.add(target_port)
+                    tmpStr = tmpStr + "<tr>"
+                    tmpStr = tmpStr + "<td>{}</td>".format(name)
+                    tmpStr = tmpStr + "<td>{}</td>".format(passwordstr)
+                    tmpStr = tmpStr + "<td>{}</td>".format(socks5_ip)
+                    tmpStr = tmpStr + "<td>{}</td>".format(target_port)
+                    tmpStr = tmpStr + "<td>{}</td>".format(outbound_ip)
+                    tmpStr = tmpStr + "<td>{}</td>".format(game_group)
+                    tmpStr = tmpStr + "<td>{}</td>".format(start_date)
+                    tmpStr = tmpStr + "<td>{}</td>".format(end_date)
+                    tmpStr = tmpStr + "</tr>"
+
+                    if user_account is None:
+                        NameIdx = NameIdx + 1
+
+                    Counter = Counter + 1
+                    target_port = target_port + 1
+                else :
+                    name = name + randint(0,999)
+
+            conn.close()
+
+            RandomAccountDICT_JSONStr = json.dumps(RandomAccountDICT)
+
+            ResultHTML = '<br><hr><form action = "/create_account_insert" method = "POST" '
+            ResultHTML = ResultHTML + 'enctype = "multipart/form-data">'
+            if user_account is None:
+                ResultHTML = ResultHTML + '<input type = "hidden" name="RandomAccountDICT" value="{}" />'.format(urllib.parse.quote_plus(RandomAccountDICT_JSONStr))
+            else :
+                ResultHTML = ResultHTML + '<input type = "hidden" name="BatchAccountDICT" value="{}" />'.format(urllib.parse.quote_plus(RandomAccountDICT_JSONStr))
+            ResultHTML = ResultHTML + '<input type = "submit" value="寫入資料庫" />'
+            ResultHTML = ResultHTML + '</form><hr><br>'
+
+            FuncDesc = FuncDesc.replace("<!-- Random_Account -->",tmpStr)
+
+            return render_template('index.html', FuncTitle=FuncTitle, FuncDesc=ResultHTML + FuncDesc)
+        else :
+            return render_template('index.html', FuncTitle=FuncTitle, FuncDesc="找不到符合入口IP {} 的主機.".format(socks5_ip))
+
+    else :
+        response = make_response(redirect(request.referrer))
+        response.set_cookie('error', json.dumps({"error1" : "Socks5 Server IP 不能空白!!"}))
+        return response
+
+
+#####################################################################
+@app.route('/user_account_modify', methods=['POST','GET'])
+def user_account_modify ():
+
+    FuncTitle = "客戶帳號密碼做批次更改"
+    FuncDesc = "客戶想要將訂購的100組A遊戲IP內的某10組帳號密碼做更改,\n--批次勾選所指定的10組線路批次修改帳密\n--並匯出檔案或至剪貼簿以便提供給客戶"
+
+    return render_template('index.html', FuncTitle=FuncTitle, FuncDesc=FuncDesc)
+
+#####################################################################
+@app.route('/user_account_modify_random', methods=['POST','GET'])
+def user_account_modify_random ():
+
+    FuncTitle = "客戶帳號密碼做隨機更改"
+    FuncDesc = "客戶想要將訂購的100組A遊戲IP的帳號密碼全部做更改為統一或隨機,\n--篩選出此客戶所購買的IP統一更改或逐筆更改"
+
+    return render_template('index.html', FuncTitle=FuncTitle, FuncDesc=FuncDesc)
+
+#####################################################################
+@app.route('/user_expiration_check', methods=['POST','GET'])
+def user_expiration_check ():
+
+    FuncTitle = "客戶查詢遊戲到期日"
+    FuncDesc = '<br><br><a href="/expiration.csv">上次查詢的Cache檔案</a><br><br><br>請輸入客戶ID: <br><br>'
+
+    ResultHTML = '<hr><form action = "/user_expiration_list" method = "POST" '
+    ResultHTML = ResultHTML + 'enctype = "multipart/form-data">'
+    ResultHTML = ResultHTML + '<input type = "text" name = "user_account" />'
+    ResultHTML = ResultHTML + '<input type = "submit"/>'
+    ResultHTML = ResultHTML + '</form><hr>'
+
+    return render_template('index.html', FuncTitle=FuncTitle, FuncDesc=FuncDesc+ResultHTML)
+
+#####################################################################
+@app.route('/user_expiration_list', methods=['POST','GET'])
+def user_expiration_list ():
+    FuncTitle = "客戶到期日列表"
+    FuncDesc = Path(TemplateDir + 'expiration_list.html').read_text(encoding='utf-8')
+    if 'user_account' in request.form :
+        account_str = request.form['user_account'].strip()
+        if len(account_str) > 0 :
+            conn = sqlite3.connect(UserSQLDB)
+            c = conn.cursor()
+            cursor = c.execute("SELECT * FROM ACCOUNT WHERE user_account='{}' ORDER BY game_group,socks5_port,socks5_ip_FS,user_account,outbound_ip_FS ASC;".format(account_str))
+
+
+            with open(expiration_csv, 'w', newline='', encoding='utf-8-sig') as csvfile:
+                # 建立 CSV 檔寫入器
+                writer = csv.writer(csvfile)
+                # 寫入一列資料
+                writer.writerow(['客戶帳號','客戶密碼','遊戲群組','Socks5 IP','Socks5 Port','出口IP','起始日期','結束日期','客戶端'])
+
+
+
+                tmpStr = ""
+                for data in cursor:
+                    user_account = data[1]
+                    user_passwd = data[2]
+                    game_group = data[3]
+                    socks5_ip = data[4]
+                    socks5_port = data[5]
+                    outbound_ip = data[6]
+                    start_date = data[7]
+                    end_date = data[8]
+                    forbidden_port = data[9]
+
+                    #192.168.120.1/16149/S546/xx7891/2023-02-04
+                    NoteStr = "{}/{}/{}/{}/{}".format(socks5_ip,socks5_port,user_account,user_passwd,end_date)
+
+
+                    writer.writerow([user_account,user_passwd,game_group,socks5_ip,socks5_port,outbound_ip,start_date,end_date,NoteStr])
+                    tmpStr = tmpStr + "<tr>"
+                    if user_account is not None:
+                        #tmpStr = tmpStr + "<td><input type=checkbox name='user_account' value='{}'></td>".format(user_account)
+                        tmpStr = tmpStr + "<td>{}</td>".format(user_account)
+                    else :
+                        tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+                    if user_passwd is not None:
+                        tmpStr = tmpStr + "<td>{}</td>".format(user_passwd)
+                    else :
+                        tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+                    if game_group is not None:
+                        tmpStr = tmpStr + "<td>{}</td>".format(game_group)
+                    else :
+                        tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+                    if socks5_ip is not None:
+                        tmpStr = tmpStr + "<td>{}</td>".format(socks5_ip)
+                    else :
+                        tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+                    if socks5_port is not None:
+                        tmpStr = tmpStr + "<td>{}</td>".format(socks5_port)
+                    else :
+                        tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+                    if outbound_ip is not None:
+                        tmpStr = tmpStr + "<td>{}</td>".format(outbound_ip)
+                    else :
+                        tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+                    if start_date is not None:
+                        tmpStr = tmpStr + "<td>{}</td>".format(start_date)
+                    else :
+                        tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+                    if end_date is not None:
+                        tmpStr = tmpStr + "<td>{}</td>".format(end_date)
+                    else :
+                        tmpStr = tmpStr + "<td>&nbsp;</td>"
+
+                    if forbidden_port is not None:
+                        tmpStr = tmpStr + "<td>{}</td>".format(forbidden_port)
+                    else :
+                        tmpStr = tmpStr + "<td>&nbsp;</td>"
+                    tmpStr = tmpStr + "</tr>"
+                conn.close()
+                csvfile.close()
+
+
+                FuncDesc = FuncDesc.replace("<!-- ACCOUNT_LIST -->",tmpStr)
+                FuncDesc = FuncDesc.replace("<!-- SUBMIT_BUTTON -->","")
+                FuncDesc = FuncDesc.replace("<!-- File_Download -->",'<a href="/expiration.csv" download="{}">檔案下載</a>'.format(account_str))
+
+                #<--- Add Externel IP column
+
+                return render_template('index.html', FuncTitle=FuncTitle, FuncDesc=FuncDesc)
+        else :
+            response = make_response(redirect(request.referrer))
+            response.set_cookie('error', json.dumps({"error1" : "客戶帳號不能空白!!"}))
+            return response
+    else :
+        response = make_response(redirect(request.referrer))
+        response.set_cookie('error', json.dumps({"error1" : "客戶帳號不能空白!!"}))
+        return response
+
+
+#####################################################################
+@app.route('/uploader1', methods = ['GET', 'POST'])
+def upload1_file():
+   if request.method == 'POST':
+      f = request.files['file']
+      #f.filename
+      uploaded_filename = "/home/fanxing/mysite/static/tmp1.txt"
+      f.save(uploaded_filename)
+      return redirect("/format1_upload", code=302)
+
+#####################################################################
+@app.route('/format1_upload', methods=['POST','GET'])
+def format1_upload ():
+
+    FuncTitle = "格式1資料上傳"
+    FuncDesc = Path('/home/fanxing/mysite/static/format1.txt').read_text(encoding='utf-8')
+    UploadHTML = '<hr><form action = "/uploader1" method = "POST" '
+    UploadHTML = UploadHTML + 'enctype = "multipart/form-data">'
+    UploadHTML = UploadHTML + '<input type = "file" name = "file" />'
+    UploadHTML = UploadHTML + '<input type = "submit"/>'
+    UploadHTML = UploadHTML + '</form><hr>'
+
+    return render_template('index.html', FuncTitle=FuncTitle, FuncDesc=Markup(UploadHTML) + "\n" + FuncDesc)
+
+#####################################################################
+@app.route('/uploader2', methods = ['GET', 'POST'])
+def upload2_file():
+   if request.method == 'POST':
+      f = request.files['file']
+      uploaded_filename = "/home/fanxing/mysite/static/tmp2.txt"
+      f.save(uploaded_filename)
+
+      if os.path.exists(uploaded_filename) :
+        TotalUserDataList = []
+        UploadedData = Path("/home/fanxing/mysite/static/tmp2.txt").read_text(encoding='utf-8')
+        UploadedDataArray = UploadedData.split("\n")
+        for oneLine in UploadedDataArray :
+            UserDataArray = oneLine.split("----")
+            UserDataDICT = {}
+            for onePair in UserDataArray :
+                UserDataPair = onePair.split(":")
+                if len(UserDataPair) == 2 :
+                    UserDataDICT[UserDataPair[0]] = UserDataPair[1]
+
+            if len(UserDataDICT) > 0 :
+                TotalUserDataList.append(UserDataDICT)
+
+        try :
+                if len(TotalUserDataList) > 0 :
+                    conn = sqlite3.connect(UserSQLDB)
+                    c = conn.cursor()
+                    #check if data in database
+                    for oneUserData in TotalUserDataList :
+                        user_passwd = oneUserData['密碼']
+                        game_group = oneUserData['遊戲群組']
+                        socks5_ip = oneUserData['Server']
+                        socks5_ip_FS = GetSortableIP(socks5_ip)
+                        socks5_port = oneUserData['端口']
+                        outbound_ip = oneUserData['出口地址']
+                        outbound_ip_FS = GetSortableIP(outbound_ip)
+                        start_date = oneUserData['起始日期']
+                        end_date = oneUserData['結束時間']
+                        forbidden_port = oneUserData['禁用PORT']
+                        user_account = oneUserData['帳號']
+
+                        cursor = c.execute("SELECT uid FROM ACCOUNT where user_account='{}' and user_passwd='{}' and socks5_ip='{}' and socks5_port='{}' and outbound_ip='{}' and end_date='{}';".format(user_account,user_passwd,socks5_ip,socks5_port,outbound_ip,end_date))
+                        uid = None
+                        for data in cursor:
+                            uid = data[0]
+                            break
+                        if uid is None :
+                            SQLCmd = "INSERT INTO ACCOUNT (uid, user_account,user_passwd,game_group,socks5_ip,socks5_port,outbound_ip,start_date,end_date,forbidden_port,socks5_ip_FS,outbound_ip_FS) VALUES ('{}','{}','{}','{}','{}',{},'{}','{}','{}','{}','{}','{}')".format(shortuuid.uuid(), user_account,user_passwd,game_group,socks5_ip,socks5_port,outbound_ip,start_date,end_date,forbidden_port,socks5_ip_FS,outbound_ip_FS)
+                        else :
+                            SQLCmd = "UPDATE ACCOUNT SET user_account = '{}', user_passwd='{}',game_group='{}',socks5_ip='{}',socks5_port='{}',outbound_ip='{}',start_date='{}',end_date='{}',forbidden_port='{}',socks5_ip_FS='{}',outbound_ip_FS='{}' WHERE uid='{}';".format(user_account,user_passwd,game_group,socks5_ip,socks5_port,outbound_ip,start_date,end_date,forbidden_port,socks5_ip_FS,outbound_ip_FS,uid)
+                        #print(SQLCmd)
+                        c.execute(SQLCmd)
+                    conn.commit()
+                    conn.close()
+        except Exception as e:
+            print(e)
+      #f.save(secure_filename(f.filename))
+      return redirect("/account_list", code=302)
+
+#####################################################################
+@app.route('/format2_upload', methods=['POST','GET'])
+def format2_upload ():
+
+    FuncTitle = "格式2資料上傳"
+    #FuncDesc = Path("/home/fanxing/mysite/static/tmp2.txt").read_text(encoding='utf-8')
+    UploadHTML = '<hr><form action = "/uploader2" method = "POST" '
+    UploadHTML = UploadHTML + 'enctype = "multipart/form-data">'
+    UploadHTML = UploadHTML + '<input type = "file" name = "file" />'
+    UploadHTML = UploadHTML + '<input type = "submit"/>'
+    UploadHTML = UploadHTML + '</form><hr>'
+
+    response = make_response(render_template('index.html', FuncTitle=FuncTitle, FuncDesc=Markup(UploadHTML)))
+    #response.set_cookie('error', json.dumps({"error1" : "Socks5 Server IP 不能空白!!"}))
+    return response
+
+
+#####################################################################
+
+@app.route('/game_group_management', methods=['POST','GET'])
+def game_group_management ():
+
+    FuncTitle = "遊戲群組管理"
+    FuncDesc = ""
+
+    ResultHTML = '<hr><form action = "/create_game_group" method = "POST" '
+    ResultHTML = ResultHTML + 'enctype = "multipart/form-data">'
+    ResultHTML = ResultHTML + '遊戲群組: <input type = "text" name = "game_group" /><br>'
+    ResultHTML = ResultHTML + '<input type = "submit" name="random_submit" value = "建立群組" />'
+    ResultHTML = ResultHTML + '</form><hr><br><br><br>'
+
+    GroupList = GetGameGroupList()
+
+    ResultHTML = ResultHTML + '<table>'
+    for oneGroup in GroupList :
+        ResultHTML = ResultHTML + '<tr><td>{}&nbsp;&nbsp;&nbsp;<a href="/delete_game_group?game_group={}">[刪除]</a></td></tr>'.format(oneGroup,urllib.parse.quote_plus(oneGroup))
+
+    ResultHTML = ResultHTML + '</table>'
+
+    return render_template('index.html', FuncTitle=FuncTitle, FuncDesc=FuncDesc + ResultHTML)
+
+
+#####################################################################
+
+@app.route('/create_game_group', methods=['POST','GET'])
+def create_game_group ():
+
+    if 'game_group' in request.form :
+
+        game_group = request.form['game_group']
+
+        conn = sqlite3.connect(ServerSQLDB)
+        c = conn.cursor()
+
+        rowcount = c.execute("SELECT COUNT(*) FROM GAME_GROUPS where GROUP_NAME = '{}';".format(game_group)).fetchone()[0]
+        if (rowcount <= 0) :
+            SQLCmd = "INSERT INTO GAME_GROUPS (GROUP_NAME) VALUES "
+            SQLCmd = SQLCmd + "('{}');".format(game_group)
+            c.execute(SQLCmd)
+            conn.commit()
+            conn.close()
+            data = {
+                'status' : 200
+            }
+
+            return redirect("/game_group_management", code=302)
+        else :
+
+            response = make_response(redirect("/game_group_management", code=302))
+            response.set_cookie('error', json.dumps({"error1" : "遊戲群組 {} 已經存在!".format(game_group)}))
+            return response
+
+    else :
+        response = make_response(redirect("/game_group_management", code=302))
+        response.set_cookie('error', json.dumps({"error1" : "參數錯誤!"}))
+        return response
+
+
+#####################################################################
+
+@app.route('/delete_game_group', methods=['POST','GET'])
+def delete_game_group ():
+
+    game_group = request.args.get('game_group')
+
+    conn = sqlite3.connect(ServerSQLDB)
+    c = conn.cursor()
+    SQLCmd = "DELETE FROM GAME_GROUPS WHERE GROUP_NAME="
+    SQLCmd = SQLCmd + "'{}';".format(game_group)
+    c.execute(SQLCmd)
+    conn.commit()
+    conn.close()
+
+    data = {
+                'status' : 200
+    }
+
+    response = make_response(redirect("/game_group_management", code=302))
+    response.set_cookie('error', json.dumps({"error1" : "遊戲群組 {} 已經刪除!".format(game_group)}))
+    return response
+
+'''
+if __name__ == '__main__':
+    #app.debug = True
+    app.run()
+'''
