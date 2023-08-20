@@ -23,22 +23,25 @@
 [11508] >= "1" # [IgnoreMap] == "true" // Delirium maps
 
 [Type] == "Synthesised Map" # [lgnoreMap] == "true" // Synthesised maps
+[map_contains_citadel] >= "1"            # [IgnoreMap] == "true" // Elder Maps
+[map_elder_boss_variation] >= "1"        # [IgnoreMap] == "true" // Guardian Maps
+[map_atlas_influence_type] >= "1"        # [IgnoreMap] == "true" // Guardian Maps
 
-[Type] == "City Square Map" #[RunMap] == "true"
-[Type] == "Toxic Sewer Map" #[RunMap] == "true"
-[Type]=="Crimson Temple Map" # [RunMap]=="true"
-[Type]=="Sulphur Vents Map" # [RunMap]=="true"
-[Type] == "Canyon Map" # [RunMap] == "true"
-[Type] == "Arcade Map" # [RunMap] == "true"
-[Type]=="Cemetery Map" # [RunMap] == "true"
+[Type] == "Wharf Map" # [RunMap] == "true" //
+[Type] == "Mud Geyser Map" # [RunMap] == "true" //
+[Type] == "Crimson Temple Map" # [RunMap] == "true" //
+[Type] == "City Square Map" # [RunMap] == "true" //
+[Type] == "Cemetery Map" # RunMap] == "true" //
+[Type] == "Bazaar Map" # [RunMap] == "true" //
+[Type] == "Bog Map" # [RunMap] == "true" //
 
-[Type] == "City Square Map" # [ExitAfterBossKill] == "true"
-[Type] == "Toxic Sewer Map" # [ExitAfterBossKill] == "true"
-[Type]=="Crimson Temple Map" # [ExitAfterBossKill] == "true"
-[Type]=="Sulphur Vents Map" # [ExitAfterBossKill] == "true"
-[Type] == "Canyon Map" # [ExitAfterBossKill] == "true"
-[Type] == "Arcade Map" # [ExitAfterBossKill] == "true"
-[Type]=="Cemetery Map" # [ExitAfterBossKill] == "true
+[Type] == "Wharf Map" # [ExitAfterBossKill] == "true" //
+[Type] == "Mud Geyser Map" # [ExitAfterBossKill] == "true" //
+[Type] == "Crimson Temple Map" # [ExitAfterBossKill] == "true" //
+[Type] == "City Square Map" # [ExitAfterBossKill] == "true" //
+[Type] == "Cemetery Map" # [ExitAfterBossKill] == "true" //
+[Type] == "Bazaar Map" # [ExitAfterBossKill] == "true" //
+[Type] == "Bog Map" # [ExitAfterBossKill] == "true" //
 
 
 //[MapTier]>= "1" && [MapTier] <= "16" && [Rarity] == "Rare" # [IgnoreMap]== "true" // 金圖全部不打
@@ -265,7 +268,10 @@
 	[Type]== "Relic Chambers Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
 	[Type]== "Necropolis Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
 	[Type]== "Maze Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
-//請勿更動//	//[Type]== "Promenade Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
+//請勿更動//	//[Type]== "Promenade Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #	
+[map_contains_citadel] >= "1"            # [IgnoreMap] == "true" // Elder Maps
+[map_elder_boss_variation] >= "1"        # [IgnoreMap] == "true" // Guardian Maps
+[map_atlas_influence_type] >= "1"        # [IgnoreMap] == "true" // Guardian Maps																								
 //請勿更動//	//[Type]== "Cemetery Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
 	[Type]== "Atoll Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
 	[Type]== "Shore Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
@@ -285,10 +291,11 @@
 	[Type]== "Vaal Pyramid Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
 //請勿更動//	//[Type]== "Strand Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
 	[Type]== "Temple Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"//																								
-																									
+																					
 	//3.17 討厭的詞綴避開 重骰 （務必兩個、兩個一起改）
 [1001] >=  "1" && [Rarity] == "Rare" # [Rerollmods] == "true"
 [1001] >=  "1" && [Rarity] == "Magic" # [Rerollmods] == "true"
+
 	[map_monsters_reflect_%_elemental_damage] >= "1" && [Rarity] == "Magic" #	[RerollMods]	=="true"	//怪物反射_%_元素傷害	我不怕這個
 	[map_monsters_reflect_%_elemental_damage] >= "1" && [Rarity] == "Rare" #	[RerollMods]	=="true"	//怪物反射_%_元素傷害	我不怕這個
 	[map_monsters_reflect_%_physical_damage]>= "1" && [Rarity] == "Magic" #	[RerollMods]	=="true"	//怪物反射_%_物理傷害	我不怕這個
@@ -329,3 +336,5 @@
 //	[map_player_cooldown_speed_+%_final] < "0" && [Rarity] == "Rare" #	[IgnoreMap]	=="true"	//玩家冷卻回復降低	我不怕這個
 //X	[map_player_non_curse_aura_effect_+%] >= "1" && [Rarity] == "Magic" #	[IgnoreMap]	=="true"	//玩家光環效果減少	我不怕這個
 //X	[map_player_non_curse_aura_effect_+%] >= "1" && [Rarity] == "Rare" #	[IgnoreMap]	=="true"	//玩家光環效果減少	我不怕這個
+	[3248] >= "1" && [Rarity] == "Magic" #	[RerollMods]	=="true
+	[3248] >= "1" && [Rarity] == "Rare" #	[RerollMods]	=="true
