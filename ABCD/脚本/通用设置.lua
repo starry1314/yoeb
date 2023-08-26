@@ -148,7 +148,7 @@ SetSaveIndex(nil,"4","鏈結石","Metadata/Items/Currency/CurrencyRerollSocketLinks
 SetSaveIndex(nil,"4","改造石","Metadata/Items/Currency/CurrencyRerollMagic")
 
 ------------------挂机相关
-g_yijieNoWhiteMonster=false		--异界时是否不打白怪 true为不打 nil或false为打
+g_yijieNoWhiteMonster=true		--异界时是否不打白怪 true为不打 nil或false为打
 g_yijieNoWhiteBox=true			--异界时是否不开白箱子 true为不开 nil或false为开
 g_useYiJieWanChengDuLv=90	--使用下面异界完成度那个设置的等级，如果未到等则刷全图
 g_yiJieWanChengDu=0.9		--异界完成度 完成多少就回去 为1或1以下的小数
