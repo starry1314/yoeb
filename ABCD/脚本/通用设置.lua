@@ -16,7 +16,7 @@
 2、函数型：函数名(参数1,参数2) 这样的就是函数型 由函数名与若干个参数组成 参数被半角括号()套起来
 ]]
 ------------------基本设置
-g_needMinimizeGame=true			--最小化遊戲窗口 true为最小化 false或nil为不最小化
+g_needMinimizeGame=false			--最小化遊戲窗口 true为最小化 false或nil为不最小化
 g_imBoss=false					--如果是仓库号要为true 挂机号为false
 g_attackDis=50					--攻击距离
 g_yiJieTimeOut=15*60			--异界地图内的超时时间 单位为秒 如果未设置就会用g_timeOut *是乘号 这里为15乘以60=15分钟
@@ -148,7 +148,7 @@ SetSaveIndex(nil,"4","鏈結石","Metadata/Items/Currency/CurrencyRerollSocketLinks
 SetSaveIndex(nil,"4","改造石","Metadata/Items/Currency/CurrencyRerollMagic")
 
 ------------------挂机相关
-g_yijieNoWhiteMonster=true		--异界时是否不打白怪 true为不打 nil或false为打
+g_yijieNoWhiteMonster=false		--异界时是否不打白怪 true为不打 nil或false为打
 g_yijieNoWhiteBox=true			--异界时是否不开白箱子 true为不开 nil或false为开
 g_useYiJieWanChengDuLv=90	--使用下面异界完成度那个设置的等级，如果未到等则刷全图
 g_yiJieWanChengDu=0.9		--异界完成度 完成多少就回去 为1或1以下的小数
