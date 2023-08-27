@@ -1,3 +1,5 @@
+//3.22 特殊
+[Type] == "forbidden tome" # [StashItem] == "true"
 //3.22季初珠寶
 [Type] == "Viridian Jewel" && [Rarity] == "Unique" #   [UniqueName] == "Stormshroud" && [StashItem] == "true"    //風暴籠罩 綠
 [Type] == "Viridian Jewel" && [Rarity] == "Unique" #   [UniqueName] == "Quickening Covenant" && [StashItem] == "true"  //復甦誓約 綠
