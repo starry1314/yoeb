@@ -113,7 +113,7 @@
 [Type] == "Gemcutter's Prism"# [StashItem] == "true"////GCP 拾取且存倉
 [Type] == "Regal Orb" # [StashItem] == "true"////富豪
 [Type] == "Vaal Orb" # [StashItem] == "true"////瓦寶
-[Type] == "Rogue's Marker" # [StashItem] == "true" // 盜賊幣
+//[Type] == "Rogue's Marker" # [StashItem] == "true" // 盜賊幣
 [Type] == "Awakened Sextant" # 	[StashItem]	 == "true" //製圖六分儀．覺醒	拾取且存倉
  //＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝【命運卡】＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 [Type] == "Fire Of Unknown Origin" # [StashItem] == "true"// 3.22尼米斯卡
