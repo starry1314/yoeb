@@ -3992,7 +3992,7 @@ Show # 藥劑 - 功能藥劑
 
 # 【藥劑-生命藥劑】7002
 
-Hide # 藥劑 - 生命藥劑 - 低階(小型/中型/大型/良質/優質/巨型)
+Show # 藥劑 - 生命藥劑 - 低階(小型/中型/大型/良質/優質/巨型)
     Rarity <= Magic
     Class "Life Flasks"
     BaseType "Small Life Flask" "Medium Life Flask" "Large Life Flask" "Greater Life Flask" "Grand Life Flask" "Giant Life Flask"
@@ -4001,7 +4001,7 @@ Hide # 藥劑 - 生命藥劑 - 低階(小型/中型/大型/良質/優質/巨型)
     SetBorderColor 153 0 0
     SetFontSize 40
 
-Hide # 藥劑 - 生命藥劑 - 中階(高階/聖語/祝福)
+Show  # 藥劑 - 生命藥劑 - 中階(高階/聖語/祝福)
     Rarity <= Magic
     Class "Life Flasks"
     BaseType "Colossal Life Flask" "Sacred Life Flask" "Hallowed Life Flask"
@@ -4010,7 +4010,7 @@ Hide # 藥劑 - 生命藥劑 - 中階(高階/聖語/祝福)
     SetBorderColor 153 0 0
     SetFontSize 40
 
-Hide # 藥劑 - 生命藥劑 - 高階(聖化/不朽/永恆)
+Show  # 藥劑 - 生命藥劑 - 高階(聖化/不朽/永恆)
     Class "Life Flasks"
     BaseType "Sanctified Life Flask" "Divine Life Flask" "Eternal Life Flask"
     SetTextColor 153 0 0
