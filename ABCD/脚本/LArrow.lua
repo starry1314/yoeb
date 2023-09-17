@@ -5,7 +5,6 @@ do
 	package.loaded[loadArr[i]]=nil;
 	require(loadArr[i]);
 end
---拓圖
 
 --指定职业  野蛮人、女巫、贵族、游侠、决斗者、暗影、圣堂武僧、
 g_newRoleJob="游侠"
@@ -25,11 +24,11 @@ g_duobiHpVal=0.2
 --pos=指定位置 nil为自动选择 2为衣服 3为主武器 4为副武器 5为头盔 6为项链 7为左戒指 8为右戒指 9为护手 10为鞋子 11为腰带
 --nType 有效场景 nil为无论何时都有效 0为没在刷异界才有效 1为只在刷异界才有效
 
-SetNeedSkillLineData(96,"魔改箭矢輔助,nil|狂怒,nil|誘捕箭矢,nil|暴擊獲得暴擊球輔助,nil",nil,5,nil) --頭盔
-SetNeedSkillLineData(97,"啟蒙,nil|元素淨化,nil|瓦爾．優雅,nil|狂戰,nil",nil,10,nil) --鞋子
-SetNeedSkillLineData(98,"擊中時印記輔助,nil|狙擊者印記,nil|閃現射擊,nil|鋼筋鐵骨,nil",nil,9,nil) --手套
-SetNeedSkillLineData(99,"魔改箭矢輔助,nil|冰霜射擊,nil|燃燒箭矢,nil|閃電箭矢,nil|活栓輔助,nil|啟發輔助,nil",nil,3,nil) --武器
-SetNeedSkillLineData(100,"閃電箭矢,nil|元素攻擊傷害輔助,nil|增加暴擊傷害輔助,nil|啟發輔助,nil|三體輔助,nil|易變輔助,nil",nil,2,nil) --衣服
+--SetNeedSkillLineData(96,"魔改箭矢輔助,nil|箭雨,nil|冰霜射擊,nil",nil,10,nil)
+--SetNeedSkillLineData(97,"啟蒙,nil|元素淨化,nil|憤怒,nil",nil,9,nil)
+--SetNeedSkillLineData(98,"擊中時印記輔助,nil|狙擊者印記,nil|狂戰,nil|鋼筋鐵骨,nil",nil,5,nil)
+--SetNeedSkillLineData(99,"魔改箭矢輔助,nil|狂怒,nil|暴擊獲得暴擊球輔助,nil|龍捲射擊,nil|誘捕箭矢,nil|元素打擊,nil",nil,3,nil)
+--SetNeedSkillLineData(100,"瓦爾．閃電箭矢,nil|幻影射手輔助,nil|增加暴擊傷害輔助,nil|啟發輔助,nil|三體輔助,nil|附加冰冷傷害輔助,nil",nil,2,nil)
 
 
 --添加攻击技能 name=技能名 className=技能类名 noLine=不在直线就能攻击 挑选攻击技能会从上到下寻找，要把厉害的技能加在前面
@@ -44,11 +43,11 @@ SetSkillLimitMaxLv("鋼筋鐵骨",nil,14)
 -- SetYiJieZhaoHuanLingTiData(mapClassName,name,className)--设置异界时召唤的灵体数据 mapClassName=剧情图类名 name=灵体名 className=灵体类名
 
 --SetNeedFlaskData(pos,flask,modsData,minLv)--设置药瓶摆放
-SetNeedFlaskData(1,"生命药剂","起泡的,FlaskPartialInstantRecovery5|密封之,FlaskBleedCorruptingBloodImmunity1",90,"不朽生命藥劑","Metadata/Items/Flasks/FlaskLife11",nil)
-SetNeedFlaskData(2,"水银药剂","nil")
-SetNeedFlaskData(3,"翠玉药剂","nil")
-SetNeedFlaskData(4,"真银药剂","nil")
-SetNeedFlaskData(5,"宝钻药剂","nil")
+--SetNeedFlaskData(1,"生命药剂","起泡的,FlaskPartialInstantRecovery5|密封之,FlaskBleedCorruptingBloodImmunity1",90,"不朽生命藥劑","Metadata/Items/Flasks/FlaskLife11",nil)
+--SetNeedFlaskData(2,"水银药剂","nil")
+--SetNeedFlaskData(3,"真银药剂","nil")
+--SetNeedFlaskData(4,"紫晶药剂","nil")
+--SetNeedFlaskData(5,"宝钻药剂","nil")
 
 
 g_addHpVal=0.7--HP低于多少吃红药
@@ -139,7 +138,7 @@ SetTaskShengJiData("a9q3",nil,"2_9_1",68,true)--做 到風暴飛刃 的时候刷滲血水道到
 
 SetTaskMiGongData("a8q7",nil,1)--大于等于a9q1级 做迷宫1
 SetTaskMiGongData("a10q1",nil,2)--大于等于a10q1 做迷宫2
-SetTaskMiGongDataByLv(80,3)--大于等于80级 做迷宫3
+SetTaskMiGongDataByLv(84,3)--大于等于80级 做迷宫3
 
 g_openQlkMaxMapTianFuCnt=nil--数值型 满多少天赋后不开奇拉克任务nil为一直开
 g_useMinLvMapTianFuCnt=100--地图天赋满多少点后 就从低阶地图开始取
