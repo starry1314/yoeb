@@ -99,8 +99,8 @@ SetUseBuffSkill("活力","vitality","活力光環","player_aura_life_regen")--
 SetUseBuffSkill("驕傲","physical_damage_aura","驕傲","player_physical_damage_aura")--
 
 SetUseBuffSkill("精準","aura_accuracy_and_crits","精準光環","player_aura_accuracy_and_crits")--
-SetUseBuffSkill("迅捷","haste","迅捷光環","player_aura_speed")--
-SetUseBuffSkill("優雅","grace","優雅光環","player_aura_evasion")--
+--SetUseBuffSkill("迅捷","haste","迅捷光環","player_aura_speed")--
+--SetUseBuffSkill("優雅","grace","優雅光環","player_aura_evasion")--
 SetUseBuffSkill("憎恨","hatred","憎恨光環","player_aura_cold_damage")--
 SetUseBuffSkill("冰霜淨化","cold_resist_aura","冰冷淨化光環","player_aura_cold_resist")--
 
