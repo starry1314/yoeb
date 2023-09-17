@@ -40,63 +40,63 @@ SetNeedAddTianFu("异界地图天赋=atlas_boss_adjacent_maps_2-相鄰地圖掉落機率|atlas
 --添加在做到某个任务时购买技能宝石
 --AddNeedBuySkillTime(city,task)-- city=城市索引数值型 1-11 task=任务类名 字符串型 任务类名可以在调试窗口中点击 所有任务 按钮查看到
 ----A1
-AddNeedBuySkillTime(1,"a1q1")
-AddNeedBuySkillTime(1,"a1q5")
-AddNeedBuySkillTime(1,"a1q4")
-AddNeedBuySkillTime(1,"a1q2")
-AddNeedBuySkillTime(1,"a1q3")
-AddNeedBuySkillTime(1,"a1q6")
-AddNeedBuySkillTime(1,"a1q9")
-AddNeedBuySkillTime(1,"a1q7")
+--AddNeedBuySkillTime(1,"a1q1")
+--AddNeedBuySkillTime(1,"a1q5")
+--AddNeedBuySkillTime(1,"a1q4")
+--AddNeedBuySkillTime(1,"a1q2")
+--AddNeedBuySkillTime(1,"a1q3")
+--AddNeedBuySkillTime(1,"a1q6")
+--AddNeedBuySkillTime(1,"a1q9")
+--AddNeedBuySkillTime(1,"a1q7")
 ----A2
-AddNeedBuySkillTime(2,"a2q7")
-AddNeedBuySkillTime(1,"a2q6")
-AddNeedBuySkillTime(2,"a2q9")
-AddNeedBuySkillTime(1,"a2q9")
-AddNeedBuySkillTime(2,"a2q2")
-AddNeedBuySkillTime(1,"a2q8")
-AddNeedBuySkillTime(1,"a2q2")
+--AddNeedBuySkillTime(2,"a2q7")
+--AddNeedBuySkillTime(1,"a2q6")
+--AddNeedBuySkillTime(2,"a2q9")
+--AddNeedBuySkillTime(1,"a2q9")
+--AddNeedBuySkillTime(2,"a2q2")
+--AddNeedBuySkillTime(1,"a2q8")
+--AddNeedBuySkillTime(1,"a2q2")
 -----A3
-AddNeedBuySkillTime(2,"a3q1")
-AddNeedBuySkillTime(2,"a3q11")
-AddNeedBuySkillTime(1,"a3q3")
-AddNeedBuySkillTime(1,"a3q4")
-AddNeedBuySkillTime(3,"a3q8")
-AddNeedBuySkillTime(3,"a3q9")
-AddNeedBuySkillTime(3,"a3q12")
-AddNeedBuySkillTime(3,"a3q10")
+--AddNeedBuySkillTime(2,"a3q1")
+--AddNeedBuySkillTime(2,"a3q11")
+--AddNeedBuySkillTime(1,"a3q3")
+--AddNeedBuySkillTime(1,"a3q4")
+--AddNeedBuySkillTime(3,"a3q8")
+--AddNeedBuySkillTime(3,"a3q9")
+--AddNeedBuySkillTime(3,"a3q12")
+--AddNeedBuySkillTime(3,"a3q10")
 ----A4
-AddNeedBuySkillTime(3,"a4q2")
-AddNeedBuySkillTime(2,"a4q2")
-AddNeedBuySkillTime(1,"a4q2")
-AddNeedBuySkillTime(3,"a4q6")
-AddNeedBuySkillTime(3,"a4q3")
-AddNeedBuySkillTime(3,"a4q4")
-AddNeedBuySkillTime(4,"a4q5")
-AddNeedBuySkillTime(3,"a4q1")
+--AddNeedBuySkillTime(3,"a4q2")
+--AddNeedBuySkillTime(2,"a4q2")
+--AddNeedBuySkillTime(1,"a4q2")
+--AddNeedBuySkillTime(3,"a4q6")
+--AddNeedBuySkillTime(3,"a4q3")
+--AddNeedBuySkillTime(3,"a4q4")
+--AddNeedBuySkillTime(4,"a4q5")
+--AddNeedBuySkillTime(3,"a4q1")
 ----A5
-AddNeedBuySkillTime(3,"a5q3")
-AddNeedBuySkillTime(2,"a5q3")
-AddNeedBuySkillTime(1,"a5q3")
-AddNeedBuySkillTime(4,"a5q5")
+--AddNeedBuySkillTime(3,"a5q3")
+--AddNeedBuySkillTime(2,"a5q3")
+--AddNeedBuySkillTime(1,"a5q3")
+--AddNeedBuySkillTime(4,"a5q5")
 
-AddNeedBuySkillTime(6,"a6q1")	--在第6章的惊海之王时 检测购买一遍
-AddNeedBuySkillTime(6,"a6q2")
-AddNeedBuySkillTime(6,"a6q3")
-AddNeedBuySkillTime(6,"a6q5")
-AddNeedBuySkillTime(6,"a7q2")
-AddNeedBuySkillTime(6,"a8q2")
-AddNeedBuySkillTime(6,"a10q2")	--第10章的死亡和重生任务 检测购买一遍
-AddNeedBuySkillTime(11,"a11q1")	--在拾取碎片 这个任务时检测购买一遍
+--AddNeedBuySkillTime(6,"a6q1")	--在第6章的惊海之王时 检测购买一遍
+--AddNeedBuySkillTime(6,"a6q2")
+--AddNeedBuySkillTime(6,"a6q3")
+--AddNeedBuySkillTime(6,"a6q5")
+--AddNeedBuySkillTime(6,"a7q2")
+--AddNeedBuySkillTime(6,"a8q2")
+--AddNeedBuySkillTime(6,"a10q2")	--第10章的死亡和重生任务 检测购买一遍
+--AddNeedBuySkillTime(11,"a11q1")	--在拾取碎片 这个任务时检测购买一遍
 
 
 --药瓶摆放
 --SetNeedFlaskData(pos,flask)--设置药  pos=位置 1-5  flask=药 字符串型，支持以下 (生命药剂,魔力药剂,复合药剂,宝钻药剂,红玉药剂,蓝玉药剂,黄玉药剂,坚岩药剂,水银药剂,紫晶药剂,石英药剂,翠玉药剂,石化药剂,海蓝药剂,迷雾药剂,硫磺药剂,真银药剂,灰岩药剂)
 --SetNeedFlaskData(1,"生命药剂","nil")
---SetNeedFlaskData(2,"水银药剂","nil")
---SetNeedFlaskData(3,"翠玉药剂","nil")
---SetNeedFlaskData(4,"真银药剂","nil")
---SetNeedFlaskData(5,"灰岩药剂","nil")
+--SetNeedFlaskData(2,"魔力药剂","nil")
+--SetNeedFlaskData(3,"宝钻药剂","nil")
+--SetNeedFlaskData(4,"紫晶药剂","nil")
+--SetNeedFlaskData(5,"水银药剂","nil")
 
 --AddNotMakeTaskData(taskClassName)--添加不需要做的任务 taskClassName为任务类名
 AddNotMakeTaskData("a2q5")--梦中圣地
@@ -132,8 +132,8 @@ SetZhongShenData("Lunaris","Gruthkul")--设置月影女神之魂与绝望之母 格鲁丝克之魂
 
 -------注意要大类在前 小类 单独设置在后面添加
 SetSaveIndex("通货|可堆叠通货","1")
-SetSaveIndex("异界地图","2|3")
-SetSaveIndex("项链|戒指|爪|匕首|法杖|单手剑|细剑|单手斧|单手锤|符文匕首|短杖|战杖|弓|长杖|双手剑|双手斧|双手锤|腰带|手套|鞋子|头盔","4")
+SetSaveIndex("异界地图","2")
+SetSaveIndex("项链|戒指|爪|匕首|法杖|单手剑|细剑|单手斧|单手锤|符文匕首|短杖|战杖|弓|长杖|双手剑|双手斧|双手锤|腰带|手套|鞋子|头盔","3|4")
 SetSaveIndex("珠宝|命运卡|衣服|盾|箭袋|地图碎片","4")
 SetSaveIndex("生命药剂|魔力药剂|复合药剂|功能药剂","4")
 SetSaveIndex(nil,"4","鍊魔眼睛","Metadata/Items/Metamorphosis/MetamorphosisEye")
@@ -284,15 +284,7 @@ SetSellGoodsData("濱海幽穴","Metadata/Items/Maps/MapWorldsUndergroundSea",3,"0|1
 SetSellGoodsData("闇獄尖塔","Metadata/Items/Maps/MapWorldsTower",3,"0|1|2|")
 
 
-
-
-
-
-
-
-
 --SetCompoundDivinationCard(name,className,nType) --设置需要合成的命运卡 name=卡片名 className=卡片类名 nType=合成场景 nil或不填为无论何时都合成 0为没在刷异界才合 1为只在刷异界才合
-
 SetCompoundDivinationCard("谦逊","Metadata/Items/DivinationCards/DivinationCardHumility")--设置合成忠诚命运卡
 
 --SetNeedBuyGoodsData(name,className,cnt,buyName,buyClassName)--设置开始刷异界时间检测购买指定物品
@@ -350,13 +342,6 @@ SetGoodsCaoZuo(nil,"1|3","祝福石","Metadata/Items/Currency/CurrencyRerollImplici
 SetGoodsCaoZuo(nil,"1|3","束縛石","Metadata/Items/Currency/CurrencyUpgradeToRareAndSetSockets")--
 SetGoodsCaoZuo(nil,"1|3","工程石","Metadata/Items/Currency/CurrencyStrongboxQuality")--
 
-SetGoodsCaoZuo("爪|匕首|法杖|单手剑|细剑|单手斧|单手锤|符文匕首|短杖|战杖|弓|长杖|双手剑|双手斧|双手锤|手套|鞋子|衣服|头盔","3",nil,nil,nil,nil,nil,nil,"0|1|2",nil,nil,nil,true,nil,function(gd)return not g_setAllSkillGemOk end )--技能宝石未全部装备上就 拾取 出售蓝色 白色 黄色的三色相连装备
-
-SetGoodsCaoZuo(nil,"1|3",nil,"Metadata/Items/Metamorphosis/MetamorphosisBrain")--鍊魔腦髓不捡
-SetGoodsCaoZuo(nil,"1|3",nil,"Metadata/Items/Metamorphosis/MetamorphosisEye")--鍊魔眼睛不捡
-SetGoodsCaoZuo(nil,"1|3",nil,"Metadata/Items/Metamorphosis/MetamorphosisLiver")--鍊魔肝臟不捡
-SetGoodsCaoZuo(nil,"1|3",nil,"Metadata/Items/Metamorphosis/MetamorphosisLung")--鍊魔肺臟不捡
-SetGoodsCaoZuo(nil,"1|3",nil,"Metadata/Items/Metamorphosis/MetamorphosisHeart")--鍊魔心臟不捡
 
 
 SetGoodsCaoZuo("异界地图","1|3","致命岩灘","Metadata/Items/Maps/MapWorldsCursedCrypt",nil,nil,nil,nil,"3")
@@ -368,9 +353,6 @@ SetGoodsCaoZuo("异界地图","1|3","瓦爾金字塔","Metadata/Items/Maps/MapWorldsVaalP
 SetGoodsCaoZuo("异界地图","1|3","密草神殿","Metadata/Items/Maps/MapWorldsOvergrownShrine",nil,nil,nil,nil,"3")
 SetGoodsCaoZuo("异界地图","1|3","濱海幽穴","Metadata/Items/Maps/MapWorldsUndergroundSea",nil,nil,nil,nil,"3")
 SetGoodsCaoZuo("异界地图","1|3","魔影墓場","Metadata/Items/Maps/MapWorldsNecropolis",nil,nil,nil,nil,"3")
-
-SetGoodsCaoZuo(nil,"1|3","普兰德斯金币","Metadata/Items/Currency/CurrencyPerandusCoin",nil,nil,nil,nil)
-
 
 
 
@@ -458,278 +440,37 @@ SetJiaoYiGoods(nil,nil,nil,nil,"TBottled Faith")--"瓶中信仰 硫磺藥劑"
 SetJiaoYiGoods(nil,nil,nil,nil,"Cinderswallow Urn")--"噬燼甕 真銀藥劑"
 --SetJiaoYiGoods("药剂",nil,nil,nil,nil,"3")
 
-SetJiaoYiGoods(nil,"初级制图六分仪","Metadata/Items/Currency/CurrencyAddAtlasMod",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"中级制图六分仪","Metadata/Items/Currency/CurrencyAddAtlasModMid",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"大师制图六分仪","Metadata/Items/Currency/CurrencyAddAtlasModHigh",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"初级封界印","Metadata/Items/Currency/CurrencySealMapLow",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"中级封界印","Metadata/Items/Currency/CurrencySealMapMid",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"大师封界印","Metadata/Items/Currency/CurrencySealMapHigh",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"裂界之玉","Metadata/Items/Currency/CurrencyRespecShapersOrb",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"裂隙碎片(索伏)","Metadata/Items/Currency/CurrencyBreachFireShard",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"裂隙碎片(托沃)","Metadata/Items/Currency/CurrencyBreachColdShard",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"裂隙碎片(艾许)","Metadata/Items/Currency/CurrencyBreachLightningShard",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"裂隙碎片(乌尔尼多)","Metadata/Items/Currency/CurrencyBreachPhysicalShard",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"裂隙碎片(夏乌拉)","Metadata/Items/Currency/CurrencyBreachChaosShard",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"索伏裂痕石","Metadata/Items/MapFragments/BreachFragmentFire")
-SetJiaoYiGoods(nil,"托沃裂痕石","Metadata/Items/MapFragments/BreachFragmentCold")
-SetJiaoYiGoods(nil,"艾許裂痕石","Metadata/Items/MapFragments/BreachFragmentLightning")
-SetJiaoYiGoods(nil,"烏爾尼多裂痕石","Metadata/Items/MapFragments/BreachFragmentPhysical")
-SetJiaoYiGoods(nil,"夏烏拉裂痕石","Metadata/Items/MapFragments/BreachFragmentChaos")
-SetJiaoYiGoods(nil,"索伏的祝福","Metadata/Items/Currency/CurrencyBreachUpgradeUniqueFire",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"托沃的祝福","Metadata/Items/Currency/CurrencyBreachUpgradeUniqueCold",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"艾许的祝福","Metadata/Items/Currency/CurrencyBreachUpgradeUniqueLightning",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"乌尔尼多的祝福","Metadata/Items/Currency/CurrencyBreachUpgradeUniquePhysical",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"夏乌拉的祝福","Metadata/Items/Currency/CurrencyBreachUpgradeUniqueChaos",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"永恒卡鲁裂片","Metadata/Items/Currency/CurrencyLegionKaruiShard",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"永恒马拉克斯裂片","Metadata/Items/Currency/CurrencyLegionMarakethShard",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"永恒帝国裂片","Metadata/Items/Currency/CurrencyLegionEternalEmpireShard",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"永恒圣堂裂片","Metadata/Items/Currency/CurrencyLegionTemplarShard",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"永恒瓦尔裂片","Metadata/Items/Currency/CurrencyLegionVaalShard",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"剥离石","Metadata/Items/Currency/CurrencyRemoveMod",nil,nil,nil,nil)
---SetJiaoYiGoods(nil,"高阶点金石","Metadata/Items/Currency/CurrencyUpgradeToRareAndSetSockets",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"平行石=地平石","Metadata/Items/Currency/CurrencyRerollMapType",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"先驱石","Metadata/Items/Currency/CurrencyUpgradeMapTier",nil,nil,nil,nil)
---SetJiaoYiGoods(nil,"制箱岩=工程石","Metadata/Items/Currency/CurrencyStrongboxQuality",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"远古石","Metadata/Items/Currency/CurrencyRerollUnique",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"製圖六分儀．簡易","Metadata/Items/Currency/CurrencyAddAtlasMod",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"製圖六分儀．精華","Metadata/Items/Currency/CurrencyAddAtlasModMid",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"製圖六分儀．覺醒","Metadata/Items/Currency/CurrencyAddAtlasModHigh",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"聖戰士的崇高石","Metadata/Items/AtlasExiles/AddModToRareCrusader",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"救贖者的崇高石","Metadata/Items/AtlasExiles/AddModToRareRedeemer",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"狩獵者的崇高石","Metadata/Items/AtlasExiles/AddModToRareHunter",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"總督軍的崇高石","Metadata/Items/AtlasExiles/AddModToRareWarlord",nil,nil,nil,nil)
-SetJiaoYiGoods(nil,"喚醒者之玉","Metadata/Items/AtlasExiles/ApplyInfluence",nil,nil,nil,nil)
+-- SetJiaoYiGoods(nil,"银币","Metadata/Items/Currency/CurrencySilverCoin",nil,nil,nil,nil)
+SetJiaoYiGoods(nil,"洶湧的催化劑","Metadata/Items/Currency/CurrencyJewelleryQualityElemental",nil,nil,nil,nil)
+-- SetJiaoYiGoods(nil,"充能的催化劑","Metadata/Items/Currency/CurrencyJewelleryQualityCaster",nil,nil,nil,nil)
+-- SetJiaoYiGoods(nil,"研磨的催化劑","Metadata/Items/Currency/CurrencyJewelleryQualityAttack",nil,nil,nil,nil)
+SetJiaoYiGoods(nil,"本質的催化劑","Metadata/Items/Currency/CurrencyJewelleryQualityAttribute",nil,nil,nil,nil)
+SetJiaoYiGoods(nil,"冶鍊的催化劑","Metadata/Items/Currency/CurrencyJewelleryQualityDefense",nil,nil,nil,nil)
+SetJiaoYiGoods(nil,"富饒的催化劑","Metadata/Items/Currency/CurrencyJewelleryQualityResource",nil,nil,nil,nil)
+SetJiaoYiGoods(nil,"多稜的催化劑","Metadata/Items/Currency/CurrencyJewelleryQualityResistance",nil,nil,nil,nil)
+SetJiaoYiGoods(nil,"奴役斷片","Metadata/Items/MapFragments/CurrencyElderFragment1",nil,nil,nil,nil)
+SetJiaoYiGoods(nil,"根除斷片","Metadata/Items/MapFragments/CurrencyElderFragment2",nil,nil,nil,nil)
+SetJiaoYiGoods(nil,"干擾斷片","Metadata/Items/MapFragments/CurrencyElderFragment3",nil,nil,nil,nil)
+SetJiaoYiGoods(nil,"淨化斷片","Metadata/Items/MapFragments/CurrencyElderFragment4",nil,nil,nil,nil)
+SetJiaoYiGoods(nil,"恐懼斷片","Metadata/Items/MapFragments/CurrencyUberElderFragment1",nil,nil,nil,nil)
+SetJiaoYiGoods(nil,"空虛斷片","Metadata/Items/MapFragments/CurrencyUberElderFragment2",nil,nil,nil,nil)
+SetJiaoYiGoods(nil,"雕塑斷片","Metadata/Items/MapFragments/CurrencyUberElderFragment3",nil,nil,nil,nil)
+SetJiaoYiGoods(nil,"智慧斷片","Metadata/Items/MapFragments/CurrencyUberElderFragment4",nil,nil,nil,nil)
 
---SetJiaoYiGoods(nil,nil,nil,nil,"The Scourge")--"災害"
-SetJiaoYiGoods(nil,nil,nil,nil,"The Poet's Pen")--"學富之筆"
-SetJiaoYiGoods(nil,nil,nil,nil,"Shade of Solaris")--"日耀之影"
---SetJiaoYiGoods(nil,nil,nil,nil,"Shimmeron")--"低伏微光"
-SetJiaoYiGoods(nil,nil,nil,nil,"Void Battery")--"潛能魔棒"
-SetJiaoYiGoods(nil,nil,nil,nil,"Oni-Goroshi")--"西拉氣流殺"
-SetJiaoYiGoods(nil,nil,nil,nil,"Fate of the Vaal")--"瓦爾之命"
---SetJiaoYiGoods(nil,nil,nil,nil,"The Rippling Thoughts")--"漣漪冥想"
-SetJiaoYiGoods(nil,nil,nil,nil,"The Saviour")--"救世主"
-SetJiaoYiGoods(nil,nil,nil,nil,"Rebuke of the Vaal")--"瓦爾戰刃"
-SetJiaoYiGoods(nil,nil,nil,nil,"Beltimber Blade")--"刀鋒禁材"
-SetJiaoYiGoods(nil,nil,nil,nil,"Grelwood Shank")--"沃德步伐"
-SetJiaoYiGoods(nil,nil,nil,nil,"Cospri's Malice")--"卡斯普里的怨恨"
-SetJiaoYiGoods(nil,nil,nil,nil,"Soul Taker")--"開膛斧"
---SetJiaoYiGoods(nil,nil,nil,nil,"Nebuloch")--"銀河星雲"
---SetJiaoYiGoods(nil,nil,nil,nil,"Nebulis")--"銀河星雲"
---SetJiaoYiGoods(nil,nil,nil,nil,"Doryani's Catalyst")--"多里亞尼的幻化之杖"
-SetJiaoYiGoods(nil,nil,nil,nil,"Arakaali's Fang")--"艾爾卡莉之牙"
---SetJiaoYiGoods(nil,nil,nil,nil,"Vulconus")--"祝融鍛冶"
---SetJiaoYiGoods(nil,nil,nil,nil,"The Crimson Storm")--"緋紅風暴"
---SetJiaoYiGoods(nil,nil,nil,nil,"Xoph's Nurture")--"索伏的愛撫"
---SetJiaoYiGoods(nil,nil,nil,nil,"Hopeshredder")--"破滅之希"
-SetJiaoYiGoods(nil,nil,nil,nil,"Darkscorn")--"夜吟"
---SetJiaoYiGoods(nil,nil,nil,nil,"Slivertongue")--"裂舌"
---SetJiaoYiGoods(nil,nil,nil,nil,"Martyr of Innocence")--"烈士之淨"
-SetJiaoYiGoods(nil,nil,nil,nil,"Starforge")--"核星"
-SetJiaoYiGoods(nil,nil,nil,nil,"Voidforge")--"核虛"
-SetJiaoYiGoods(nil,nil,nil,nil,"Atziri's Disfavour")--"阿茲里的刑刃"
-SetJiaoYiGoods(nil,nil,nil,nil,"Kingmaker")--"王者之刃"
---SetJiaoYiGoods(nil,nil,nil,nil,"Pledge of Hands")--"誓約"
-SetJiaoYiGoods(nil,nil,nil,nil,"The Grey Spire")--"斑駁蒼杖"
-SetJiaoYiGoods(nil,nil,nil,nil,"Rigwald's Quills")--"瑞佛之羽"
-SetJiaoYiGoods(nil,nil,nil,nil,"The Fracturing Spinner")--"裂斷蛛絲"
-SetJiaoYiGoods(nil,nil,nil,nil,"Voidfletcher")--"虛眼箭矢"
-SetJiaoYiGoods(nil,nil,nil,nil,"Maloney's Mechanism")--"馬洛尼的機關"
---SetJiaoYiGoods(nil,nil,nil,nil,"Tukohama's Fortress")--"圖克哈瑪堡壘"
-SetJiaoYiGoods(nil,nil,nil,nil,"Whakatutuki o Matua")--"養育之恩"
---SetJiaoYiGoods(nil,nil,nil,nil,"Light of Lunaris")--"月影之耀"
-SetJiaoYiGoods(nil,nil,nil,nil,"Apep's Supremacy")--"艾普霸權"
-SetJiaoYiGoods(nil,nil,nil,nil,"Unyielding Flame")--"不屈惡火"
-
-SetJiaoYiGoods(nil,nil,nil,nil,"Atziri's Acuity")--"阿兹里的捷思"
-SetJiaoYiGoods(nil,nil,nil,nil,"Craiceann's Pincers")--"奎爾珊堅鉗"
-SetJiaoYiGoods(nil,nil,nil,nil,"Maligaro's Virtuosity")--"馬雷葛蘿的血染手套"
-SetJiaoYiGoods(nil,nil,nil,nil,"Asenath's Gentle Touch")--"安賽娜絲的安撫之語"
-SetJiaoYiGoods(nil,nil,nil,nil,"Grip of the Council")--"議會之握"
---SetJiaoYiGoods(nil,nil,nil,nil,"Farrul's Pounce")--"費爾羅鋒爪"
-SetJiaoYiGoods(nil,nil,nil,nil,"Breathstealer")--"偷息"
---SetJiaoYiGoods(nil,nil,nil,nil,"Saqawal's Winds")--"斯卡沃之翼"
-SetJiaoYiGoods(nil,nil,nil,nil,"Command of the Pit")--"闇核號令"
-SetJiaoYiGoods(nil,nil,nil,nil,"Null and Void")--"虛空"
---SetJiaoYiGoods(nil,nil,nil,nil,"Offering to the Serpent")--"蛇皮獻祭"
---SetJiaoYiGoods(nil,nil,nil,nil,"Shaper's Touch")--"塑者之觸"
+SetJiaoYiGoods(nil,nil,nil,nil,"Fury Valve")--"憤怒閉鎖"
 SetJiaoYiGoods(nil,nil,nil,nil,"Hands of the High Templar")--"聖宗神手"
-SetJiaoYiGoods(nil,nil,nil,nil,"Aukuna's Will")--"奧庫納之意"
-SetJiaoYiGoods(nil,nil,nil,nil,"Slavedriver's Hand")--"奴役之手"
-SetJiaoYiGoods(nil,nil,nil,nil,"Fenumus' Weave")--"菲恩絲夜織"
---SetJiaoYiGoods(nil,nil,nil,nil,"Storm's Gift")--"風暴之贈"
-SetJiaoYiGoods(nil,nil,nil,nil,"Machina Mitts")--"詭計魔手"
---SetJiaoYiGoods(nil,nil,nil,nil,"Craiceann's Tracks")--"奎爾珊之跡"
-SetJiaoYiGoods(nil,nil,nil,nil,"The Red Trail")--"赤紅蹤跡"
-SetJiaoYiGoods(nil,nil,nil,nil,"Seven-League Step")--"盟誓之跡"
-SetJiaoYiGoods(nil,nil,nil,nil,"Abberath's Hooves")--"艾貝拉斯之蹄"
---SetJiaoYiGoods(nil,nil,nil,nil,"Goldwyrm")--"龍炎足跡"
-SetJiaoYiGoods(nil,nil,nil,nil,"Garukhan's Flight")--"卡洛翰之影"
---SetJiaoYiGoods(nil,nil,nil,nil,"Farrul's Chase")--"費爾羅獵靴"
-SetJiaoYiGoods(nil,nil,nil,nil,"Inya's Epiphany")--"茵雅的頓悟"
-SetJiaoYiGoods(nil,nil,nil,nil,"Skyforth")--"空向"
---SetJiaoYiGoods(nil,nil,nil,nil,"Lioneye's Paws")--"獅眼的鬥志"
---SetJiaoYiGoods(nil,nil,nil,nil,"Saqawal's Talons")--"斯卡沃鷹爪"
-SetJiaoYiGoods(nil,nil,nil,nil,"Omeyocan")--"歐門悠根"
-SetJiaoYiGoods(nil,nil,nil,nil,"Fenumus' Spinnerets")--"菲恩絲刺靴"
---SetJiaoYiGoods(nil,nil,nil,nil,"The Stampede")--"潰逃之靴"
---SetJiaoYiGoods(nil,nil,nil,nil,"Voidwalker")--"虛空行者"
-SetJiaoYiGoods(nil,nil,nil,nil,"Craiceann's Carapace")--"奎爾珊硬甲"
-SetJiaoYiGoods(nil,nil,nil,nil,"The Brass Dome")--"堅銅戰罩"
-SetJiaoYiGoods(nil,nil,nil,nil,"Kaom's Heart")--"岡姆的壯志"
-SetJiaoYiGoods(nil,nil,nil,nil,"Yriel's Fostering")--"伊瑞的栽培"
-SetJiaoYiGoods(nil,nil,nil,nil,"Hyrri's Ire")--"西里的戰衣"
---SetJiaoYiGoods(nil,nil,nil,nil,"The Perfect Form")--"完美姿態"
-SetJiaoYiGoods(nil,nil,nil,nil,"Tabula Rasa")--"無盡之衣"
-SetJiaoYiGoods(nil,nil,nil,nil,"Skin of the Lords")--"君主之膚"
-SetJiaoYiGoods(nil,nil,nil,nil,"Cloak of Tawm'r Isley")--"陶米兒艾斯理之袍"
-SetJiaoYiGoods(nil,nil,nil,nil,"Garb of the Ephemeral")--"無常禮袍"
-SetJiaoYiGoods(nil,nil,nil,nil,"Shavronne's Wrappings")--"薛朗的護身長袍"
-SetJiaoYiGoods(nil,nil,nil,nil,"Fenumus' Shroud")--"菲恩絲魘甲"
-SetJiaoYiGoods(nil,nil,nil,nil,"The Queen's Hunger")--"女王的渴望"
-SetJiaoYiGoods(nil,nil,nil,nil,"Gruthkul's Pelt")--"葛魯斯寇真皮"
---SetJiaoYiGoods(nil,nil,nil,nil,"Daresso's Defiance")--"德瑞索的衛衣"
-SetJiaoYiGoods(nil,nil,nil,nil,"Romira's Banquet")--"費爾羅羽衣"
-SetJiaoYiGoods(nil,nil,nil,nil,"Voll's Protector")--"福爾的戰鎧"
-SetJiaoYiGoods(nil,nil,nil,nil,"Crystal Vault")--"水晶寶庫"
---SetJiaoYiGoods(nil,nil,nil,nil,"Rotting Legion")--"腐敗軍團"
-SetJiaoYiGoods(nil,nil,nil,nil,"Sporeguard")--"毒孢守衛"
+SetJiaoYiGoods(nil,nil,nil,nil,"Leash of Oblation")--"祭品之繫"
+SetJiaoYiGoods(nil,nil,nil,nil,"Manastorm")--"魔能暴風"
+SetJiaoYiGoods(nil,nil,nil,nil,"Mistwall")--"迷霧之璧"
+SetJiaoYiGoods(nil,nil,nil,nil,"Mother's Embrace")--"母親的擁抱"
+SetJiaoYiGoods(nil,nil,nil,nil,"Painseeker")--"尋苦"
+SetJiaoYiGoods(nil,nil,nil,nil,"The Black Cane")--"黑藤"
 SetJiaoYiGoods(nil,nil,nil,nil,"The Ivory Tower")--"象牙塔"
---SetJiaoYiGoods(nil,nil,nil,nil,"Cloak of Defiance")--"衛道之袍"
---SetJiaoYiGoods(nil,nil,nil,nil,"Carcass Jack")--"致命之體"
-SetJiaoYiGoods(nil,nil,nil,nil,"The Eternity Shroud")--"永恆屍布"
-SetJiaoYiGoods(nil,nil,nil,nil,"Inpulsa's Broken Heart")--"印卜薩的心碎"
-SetJiaoYiGoods(nil,nil,nil,nil,"Shroud of the Lightless")--"晦暗的屍布"
---SetJiaoYiGoods(nil,nil,nil,nil,"Atziri's Splendour")--"阿茲里的威權"
-SetJiaoYiGoods(nil,nil,nil,nil,"Shadowstitch")--"縫影"
---SetJiaoYiGoods(nil,nil,nil,nil,"Saqawal's Flock")--"斯卡沃之徒"
---SetJiaoYiGoods(nil,nil,nil,nil,"Cowl of the Cryophile")--"酷寒斗篷"
---SetJiaoYiGoods(nil,nil,nil,nil,"Obscurantis")--"朦朧詭面"
-SetJiaoYiGoods(nil,nil,nil,nil,"Maw of Conquest")--"雛鳥之征"
-SetJiaoYiGoods(nil,nil,nil,nil,"The Devouring Diadem")--"吞噬之冠"
---SetJiaoYiGoods(nil,nil,nil,nil,"Cowl of the Ceraunophile")--"狂雷斗篷"
---SetJiaoYiGoods(nil,nil,nil,nil,"Hale Negator")--"強彈辯駁"
-SetJiaoYiGoods(nil,nil,nil,nil,"Indigon")--"地印之環"
-SetJiaoYiGoods(nil,nil,nil,nil,"Honourhome")--"私慾的光輝"
---SetJiaoYiGoods(nil,nil,nil,nil,"Craiceann's Chitin")--"奎爾珊畸面"
-SetJiaoYiGoods(nil,nil,nil,nil,"Mask of the Stitched Demon")--"惡縫之面"
-SetJiaoYiGoods(nil,nil,nil,nil,"Crown of the Tyrant")--"堂皇冠冕"
-SetJiaoYiGoods(nil,nil,nil,nil,"The Brine Crown")--"海王冠冕"
---SetJiaoYiGoods(nil,nil,nil,nil,"Crown of the Inward Eye")--"暗眼之冠"
---SetJiaoYiGoods(nil,nil,nil,nil,"Memory Vault")--"回憶寶庫"
---SetJiaoYiGoods(nil,nil,nil,nil,"Farrul's Bite")--"費爾羅咥喙"
---SetJiaoYiGoods(nil,nil,nil,nil,"The Vertex")--"謎容"
-
---SetJiaoYiGoods(nil,nil,nil,nil,"The Primordial Chain")--"先祖羈絆"
---SetJiaoYiGoods(nil,nil,nil,nil,"Tavukai")--"狂靈之怒"
-SetJiaoYiGoods(nil,nil,nil,nil,"Xoph's Heart")--"索伏之心"
-SetJiaoYiGoods(nil,nil,nil,nil,"Xoph's Blood")--"索伏之血"
-SetJiaoYiGoods(nil,nil,nil,nil,"Karui Charge")--"卡魯充能"
-SetJiaoYiGoods(nil,nil,nil,nil,"The Halcyon")--"太平"
-SetJiaoYiGoods(nil,nil,nil,nil,"The Pandemonius")--"群魔殿"
---SetJiaoYiGoods(nil,nil,nil,nil,"Hyrri's Truth")--"西里的真理"
---SetJiaoYiGoods(nil,nil,nil,nil,"Fury Valve")--"憤怒閉鎖"
---SetJiaoYiGoods(nil,nil,nil,nil,"Voice of the Storm")--"暴風之言"
---SetJiaoYiGoods(nil,nil,nil,nil,"Choir of the Storm")--"暴風之語"
-SetJiaoYiGoods(nil,nil,nil,nil,"The Ascetic")--"苦行"
-SetJiaoYiGoods(nil,nil,nil,nil,"Bisco's Collar")--"畢斯寇的項圈"
-SetJiaoYiGoods(nil,nil,nil,nil,"Astramentis")--"均衡之符"
-SetJiaoYiGoods(nil,nil,nil,nil,"Presence of Chayula")--"夏烏拉之印"
---SetJiaoYiGoods(nil,nil,nil,nil,"Yoke of Suffering")--"磨難之軛"
---SetJiaoYiGoods(nil,nil,nil,nil,"Impresence")--"不在場證明"
-SetJiaoYiGoods(nil,nil,nil,nil,"Aul's Uprising")--"奧爾的崛起"
-SetJiaoYiGoods(nil,nil,nil,nil,"Solstice Vigil")--"守夜之至"
-SetJiaoYiGoods(nil,nil,nil,nil,"Badge of the Brotherhood")--"激情之章"
-SetJiaoYiGoods(nil,nil,nil,nil,"Voll's Devotion")--"福爾的忠誠之符"
-SetJiaoYiGoods(nil,nil,nil,nil,"Eye of Innocence")--"無罪之眼"
-SetJiaoYiGoods(nil,nil,nil,nil,"Eyes of the Greatwolf")--"巨狼之眼"
-
---SetJiaoYiGoods(nil,nil,nil,nil,"Voidheart")--"虛空心靈"
---SetJiaoYiGoods(nil,nil,nil,nil,"Icefang Orbit")--"冰風軌跡"
-SetJiaoYiGoods(nil,nil,nil,nil,"Circle of Guilt")--"愧疚之環"
---SetJiaoYiGoods(nil,nil,nil,nil,"Winterweave")--"冬織"
-SetJiaoYiGoods(nil,nil,nil,nil,"Ventor's Gamble")--"賭神芬多"
-SetJiaoYiGoods(nil,nil,nil,nil,"Valako's Sign")--"瓦拉庫之印"
-SetJiaoYiGoods(nil,nil,nil,nil,"Circle of Regret")--"遺憾之環"
-SetJiaoYiGoods(nil,nil,nil,nil,"Astral Projector")--"星空之影"
---SetJiaoYiGoods(nil,nil,nil,nil,"Snakepit")--"蛇巢"
-SetJiaoYiGoods(nil,nil,nil,nil,"Circle of Fear")--"恐懼之環"
-SetJiaoYiGoods(nil,nil,nil,nil,"Circle of Anguish")--"煎熬之環"
-SetJiaoYiGoods(nil,nil,nil,nil,"Warrior's Legacy")--"戰士遺物"
-SetJiaoYiGoods(nil,nil,nil,nil,"The Taming")--"元素之章"
-SetJiaoYiGoods(nil,nil,nil,nil,"Thief's Torment")--"竊罪"
-SetJiaoYiGoods(nil,nil,nil,nil,"Shavronne's Revelation")--"薛朗的啟示之環"
---SetJiaoYiGoods(nil,nil,nil,nil,"Circle of Nostalgia")--"懷舊之環"
---SetJiaoYiGoods(nil,nil,nil,nil,"Berek's Grip")--"貝雷克的冰與雷之曲"
-SetJiaoYiGoods(nil,nil,nil,nil,"Berek's Respite")--"貝雷克的火與雷之樂"
-SetJiaoYiGoods(nil,nil,nil,nil,"Call of the Brotherhood")--"意志呼喚"
---SetJiaoYiGoods(nil,nil,nil,nil,"Rigwald's Crest")--"瑞佛之冠"
---SetJiaoYiGoods(nil,nil,nil,nil,"The Pariah")--"草民"
-SetJiaoYiGoods(nil,nil,nil,nil,"Angler's Plait")--"漁夫之辮"
-SetJiaoYiGoods(nil,nil,nil,nil,"Vivinsect")--"寄生惡魔"
-SetJiaoYiGoods(nil,nil,nil,nil,"Mark of the Elder")--"尊師之印"
-SetJiaoYiGoods(nil,nil,nil,nil,"Mark of the Shaper")--"塑者之印"
-
---SetJiaoYiGoods(nil,nil,nil,nil,"Faminebind")--"饑荒之結"
---SetJiaoYiGoods(nil,nil,nil,nil,"The Retch")--"嘔吐"
-SetJiaoYiGoods(nil,nil,nil,nil,"Coward's Chains")--"懦夫的鎖鏈"
-SetJiaoYiGoods(nil,nil,nil,nil,"Coward's Legacy")--"懦夫的遺產"
-SetJiaoYiGoods(nil,nil,nil,nil,"Headhunter")--"獵首"
---SetJiaoYiGoods(nil,nil,nil,nil,"Umbilicus Immortalis")--"不朽繫命"
---SetJiaoYiGoods(nil,nil,nil,nil,"Cyclopean Coil")--"巨岩之環"
---SetJiaoYiGoods(nil,nil,nil,nil,"Hyperboreus")--"極地束腹"
---SetJiaoYiGoods(nil,nil,nil,nil,"Mother's Embrace")--"母親的擁抱"
---SetJiaoYiGoods(nil,nil,nil,nil,"The Flow Untethered")--"潺流不息"
-SetJiaoYiGoods(nil,nil,nil,nil,"Ryslatha's Coil")--"瑞斯拉薩之纏"
-SetJiaoYiGoods(nil,nil,nil,nil,"The Tactician")--"智勇軍師"
-SetJiaoYiGoods(nil,nil,nil,nil,"The Nomad")--"游牧"
-
-SetJiaoYiGoods(nil,nil,nil,nil,"Inspired Learning")--"求知的熱情"
-SetJiaoYiGoods(nil,nil,nil,nil,"Efficient Training")--"充分訓練"
---SetJiaoYiGoods(nil,nil,nil,nil,"Fragility")--"虛弱"
-SetJiaoYiGoods(nil,nil,nil,nil,"Emperor's Might")--"帝王的霸權"
-SetJiaoYiGoods(nil,nil,nil,nil,"Emperor's Mastery")--"帝王的純熟"
-SetJiaoYiGoods(nil,nil,nil,nil,"Emperor's Cunning")--"帝王的詭計"
-SetJiaoYiGoods(nil,nil,nil,nil,"Emperor's Wit")--"帝王的智慧"
---SetJiaoYiGoods(nil,nil,nil,nil,"Primordial Might")--"先祖力量"
-SetJiaoYiGoods(nil,nil,nil,nil,"The Red Dream")--"赤影夢境"
-SetJiaoYiGoods(nil,nil,nil,nil,"Might of the Meek")--"儒子可教"
-SetJiaoYiGoods(nil,nil,nil,nil,"Transcendent Flesh")--"超凡之體"
+SetJiaoYiGoods(nil,nil,nil,nil,"The Saviour")--"救世主"
 SetJiaoYiGoods(nil,nil,nil,nil,"Thread of Hope")--"希望之絃"
-SetJiaoYiGoods(nil,nil,nil,nil,"Intuitive Leap")--"直覺之躍"
-SetJiaoYiGoods(nil,nil,nil,nil,"Lioneye's Fall")--"獅眼的隕落"
-SetJiaoYiGoods(nil,nil,nil,nil,"The Green Dream")--"青影夢境"
-SetJiaoYiGoods(nil,nil,nil,nil,"The Green Nightmare")--"青影夢魘"
-SetJiaoYiGoods(nil,nil,nil,nil,"Transcendent Spirit")--"超凡之靈"
-SetJiaoYiGoods(nil,nil,nil,nil,"Unnatural Instinct")--"神感"
---SetJiaoYiGoods(nil,nil,nil,nil,"Clear Mind")--"理智"
-SetJiaoYiGoods(nil,nil,nil,nil,"Energy From Within")--"潛能防護"
-SetJiaoYiGoods(nil,nil,nil,nil,"Grand Spectrum")--"巨光譜"
-SetJiaoYiGoods(nil,nil,nil,nil,"Unending Hunger")--"無盡渴望"
---SetJiaoYiGoods(nil,nil,nil,nil,"Primordial Harmony")--"先祖和諧"
-SetJiaoYiGoods(nil,nil,nil,nil,"Fortress Covenant")--"堅壁誓約"
-SetJiaoYiGoods(nil,nil,nil,nil,"The Blue Dream")--"碧影夢境"
-SetJiaoYiGoods(nil,nil,nil,nil,"The Blue Nightmare")--"碧影夢魘"
-SetJiaoYiGoods(nil,nil,nil,nil,"The Anima Stone")--"聚魂石"
-SetJiaoYiGoods(nil,nil,nil,nil,"Watcher's Eye")--"看守之眼"
-SetJiaoYiGoods(nil,nil,nil,nil,"Glorious Vanity")--"輝煌的虛榮"
-SetJiaoYiGoods(nil,nil,nil,nil,"Lethal Pride")--"致命的驕傲"
-SetJiaoYiGoods(nil,nil,nil,nil,"Brutal Restraint")--"殘酷的紀律"
-SetJiaoYiGoods(nil,nil,nil,nil,"Militant Faith")--"激進的信仰"
-SetJiaoYiGoods(nil,nil,nil,nil,"Elegant Hubris")--"優雅的高傲"
+SetJiaoYiGoods(nil,nil,nil,nil,"Warrior's Legacy")--"戰士遺物"
+SetJiaoYiGoods(nil,nil,nil,nil,"Willowgift")--"柳木之禮"
 
-SetJiaoYiGoods(nil,nil,nil,nil,"Blood of the Karui")--"卡魯之血"
-SetJiaoYiGoods(nil,nil,nil,nil,"Zerphi's Last Breath")--"澤佛伊的終息"
-SetJiaoYiGoods(nil,nil,nil,nil,"Divination Distillate")--"寶視精華"
-SetJiaoYiGoods(nil,nil,nil,nil,"Dying Sun")--"滅日"
-SetJiaoYiGoods(nil,nil,nil,nil,"Taste of Hate")--"恨意"
-SetJiaoYiGoods(nil,nil,nil,nil,"Vessel of Vinktar")--"維克塔血器"
-SetJiaoYiGoods(nil,nil,nil,nil,"Rumi's Concoction")--"魯米的靈藥"
-SetJiaoYiGoods(nil,nil,nil,nil,"Sin's Rebirth")--"再生的罪惡"
-SetJiaoYiGoods(nil,nil,nil,nil,"The Sorrow of the Divine")--"神聖哀悼"
-SetJiaoYiGoods(nil,nil,nil,nil,"Bottled Faith")--"瓶中信仰"
-SetJiaoYiGoods(nil,nil,nil,nil,"Cinderswallow Urn")--"噬燼甕"
-SetJiaoYiGoods(nil,nil,nil,nil,"The Wise Oak")--"哲櫟"
 
 SetJiaoYiGoods(nil,"绯红圣油","Metadata/Items/Currency/Mushrune8",nil,nil,nil,nil)
 SetJiaoYiGoods(nil,"漆黑圣油","Metadata/Items/Currency/Mushrune9",nil,nil,nil,nil)
@@ -739,312 +480,3 @@ SetJiaoYiGoods(nil,"金色圣油","Metadata/Items/Currency/Mushrune12",nil,nil,nil,n
 
 SetJiaoYiGoods(nil,"黑暗三面","Metadata/Items/DivinationCards/DivinationCardThreeFacesInTheDark",nil,nil,nil,nil)--命运卡
 SetJiaoYiGoods(nil,"瘋醫","Metadata/Items/DivinationCards/DivinationCardTheDoctor",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"鬥士","Metadata/Items/DivinationCards/DivinationCardTheGladiator",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"學者","Metadata/Items/DivinationCards/DivinationCardTheScholar",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"碎裂大帝","Metadata/Items/DivinationCards/DivinationCardTheBrittleEmperor",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"詩人","Metadata/Items/DivinationCards/DivinationCardThePoet",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"食腐掠鸦","Metadata/Items/DivinationCards/DivinationCardTheCarrionCrow",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"希望","Metadata/Items/DivinationCards/DivinationCardHope",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"魔鬼","Metadata/Items/DivinationCards/DivinationCardTheFiend",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"三者之诞","Metadata/Items/DivinationCards/DivinationCardBirthOfTheThree",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"薇妮雅的信物","Metadata/Items/DivinationCards/DivinationCardViniasToken",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"召唤师","Metadata/Items/DivinationCards/DivinationCardTheSummoner",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"巨变","Metadata/Items/DivinationCards/DivinationCardTheCataclysm",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"饥饿","Metadata/Items/DivinationCards/DivinationCardTheHunger",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"宝箱","Metadata/Items/DivinationCards/DivinationCardTheHoarder",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"酒醉贵族","Metadata/Items/DivinationCards/DivinationCardTheDrunkenAristocrat",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"烈日","Metadata/Items/DivinationCards/DivinationCardTheSun",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"典狱长","Metadata/Items/DivinationCards/DivinationCardTheWarden",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"创痕之原","Metadata/Items/DivinationCards/DivinationCardTheScarredMeadow",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"黑暗术者","Metadata/Items/DivinationCards/DivinationCardTheDarkMage",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"珠宝匠","Metadata/Items/DivinationCards/DivinationCardTheGemcutter",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"赌徒","Metadata/Items/DivinationCards/DivinationCardTheGambler",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"情人","Metadata/Items/DivinationCards/DivinationCardTheLover",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"浑沌性情","Metadata/Items/DivinationCards/DivinationCardChaoticDisposition",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"力量之道","Metadata/Items/DivinationCards/DivinationCardTheRoadToPower",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"复仇者","Metadata/Items/DivinationCards/DivinationCardTheAvenger",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"帝运","Metadata/Items/DivinationCards/DivinationCardEmperorsLuck",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"失落遗骨","Metadata/Items/DivinationCards/DivinationCardTimeLostRelic",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"好运连连","Metadata/Items/DivinationCards/DivinationCardLuckyConnections",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"盛宴","Metadata/Items/DivinationCards/DivinationCardTheFeast",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"混沌之雨","Metadata/Items/DivinationCards/DivinationCardRainOfChaos",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"凝视者","Metadata/Items/DivinationCards/DivinationCardTheWatcher",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"咒语","Metadata/Items/DivinationCards/DivinationCardTheIncantation",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"饥渴之占","Metadata/Items/DivinationCards/DivinationCardCovetedPossession",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"王者之心","Metadata/Items/DivinationCards/DivinationCardTheKingsHeart",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"弃财求生","Metadata/Items/DivinationCards/DivinationCardAbandonedWealth",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"风","Metadata/Items/DivinationCards/DivinationCardTheWind",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"协约","Metadata/Items/DivinationCards/DivinationCardThePact",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"宝石匠的允诺","Metadata/Items/DivinationCards/DivinationCardGemcuttersPromise",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"天堂执法官","Metadata/Items/DivinationCards/DivinationCardTheCelestialJusticar",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"束缚之炼","Metadata/Items/DivinationCards/DivinationCardTheChainsThatBind",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"艺者","Metadata/Items/DivinationCards/DivinationCardTheArtist",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"发明家","Metadata/Items/DivinationCards/DivinationCardTheInventor",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"群聚之首","Metadata/Items/DivinationCards/DivinationCardThePackLeader",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"惊喜盒","Metadata/Items/DivinationCards/DivinationCardJackInTheBox",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"联姻","Metadata/Items/DivinationCards/DivinationCardTheUnion",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"女王","Metadata/Items/DivinationCards/DivinationCardTheQueen",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"谦逊","Metadata/Items/DivinationCards/DivinationCardHumility",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"探险家","Metadata/Items/DivinationCards/DivinationCardTheExplorer",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"骄纵皇子","Metadata/Items/DivinationCards/DivinationCardTheSpoiledPrince",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"背叛","Metadata/Items/DivinationCards/DivinationCardTheBetrayal",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"芙劳拉的赠礼","Metadata/Items/DivinationCards/DivinationCardTheFlorasGift",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"海妖","Metadata/Items/DivinationCards/DivinationCardTheSiren",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"完人","Metadata/Items/DivinationCards/DivinationCardTheOneWithAll",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"屹立不败之人","Metadata/Items/DivinationCards/DivinationCardTheLastOneStanding",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"德瑞竞之狂","Metadata/Items/DivinationCards/DivinationCardDoedresMadness",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"黑暗来犯","Metadata/Items/DivinationCards/DivinationCardTheEncroachingDarkness",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"怨忿","Metadata/Items/DivinationCards/DivinationCardTheWrath",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"王者之刃","Metadata/Items/DivinationCards/DivinationCardTheKingsBlade",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"远征","Metadata/Items/DivinationCards/DivinationCardTheTrial",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"绅士之风","Metadata/Items/DivinationCards/DivinationCardTheGentleman",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"明镜","Metadata/Items/DivinationCards/DivinationCardHouseOfMirrors",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"钱与权","Metadata/Items/DivinationCards/DivinationCardWealthAndPower",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"灾变","Metadata/Items/DivinationCards/DivinationCardTheCatalyst",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"平壤","Metadata/Items/DivinationCards/DivinationCardTheVast",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"宝石皇后的赠礼","Metadata/Items/DivinationCards/DivinationCardGiftOfTheGemlingQueen",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"龙之心","Metadata/Items/DivinationCards/DivinationCardTheDragonsHeart",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"狡狐","Metadata/Items/DivinationCards/DivinationCardTheFox",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"傀儡","Metadata/Items/DivinationCards/DivinationCardTheDoppelganger",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"求生专家","Metadata/Items/DivinationCards/DivinationCardTheSurvivalist",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"死亡","Metadata/Items/DivinationCards/DivinationCardDeath",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"亡灵智慧","Metadata/Items/DivinationCards/DivinationCardGraveKnowledge",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"小丑","Metadata/Items/DivinationCards/DivinationCardTheJester",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"佣兵","Metadata/Items/DivinationCards/DivinationCardTheMercenary",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"移花接木","Metadata/Items/DivinationCards/DivinationCardTheInoculated",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"忠诚","Metadata/Items/DivinationCards/DivinationCardLoyalty",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"骄者必败","Metadata/Items/DivinationCards/DivinationCardPrideBeforeTheFall",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"胆识","Metadata/Items/DivinationCards/DivinationCardAudacity",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"暗影恩惠","Metadata/Items/DivinationCards/DivinationCardAssassinsFavour",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"猎者之愿","Metadata/Items/DivinationCards/DivinationCardHuntersResolve",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"海洋学者","Metadata/Items/DivinationCards/DivinationCardScholarOfTheSeas",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"雷针","Metadata/Items/DivinationCards/DivinationCardTheConduit",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"塔峰","Metadata/Items/DivinationCards/DivinationCardTheTower",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"孪生","Metadata/Items/DivinationCards/DivinationCardTheTwins",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"混乱代价","Metadata/Items/DivinationCards/DivinationCardAnarchysPrice",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"巫妖","Metadata/Items/DivinationCards/DivinationCardTheLich",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"大奇术师","Metadata/Items/DivinationCards/DivinationCardTheThaumaturgist",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"大艺术家","Metadata/Items/DivinationCards/DivinationCardTheAesthete",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"智慧启蒙","Metadata/Items/DivinationCards/DivinationCardTheEnlightened",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"猎人的奖赏","Metadata/Items/DivinationCards/DivinationCardHuntersReward",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"制箭者","Metadata/Items/DivinationCards/DivinationCardTheFletcher",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"勘查员","Metadata/Items/DivinationCards/DivinationCardTheSurveyor",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"弓匠的梦想","Metadata/Items/DivinationCards/DivinationCardBowyersDream",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"外科医师","Metadata/Items/DivinationCards/DivinationCardTheSurgeon",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"不稳定的力量","Metadata/Items/DivinationCards/DivinationCardVolatilePower",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"最后希望","Metadata/Items/DivinationCards/DivinationCardLastHope",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"狂妄","Metadata/Items/DivinationCards/DivinationCardHubris",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"盲途","Metadata/Items/DivinationCards/DivinationCardBlindVenture",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"无情军械","Metadata/Items/DivinationCards/DivinationCardMercilessArmament",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"制图师","Metadata/Items/DivinationCards/DivinationCardTheCartographer",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"大军阀","Metadata/Items/DivinationCards/DivinationCardTheWarlord",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"魅魔","Metadata/Items/DivinationCards/DivinationCardTheDemoness",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"背叛者","Metadata/Items/DivinationCards/DivinationCardTheTraitor",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"奉献","Metadata/Items/DivinationCards/DivinationCardTheOffering",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"失落帝国","Metadata/Items/DivinationCards/DivinationCardLostWorlds",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"暗黑之王","Metadata/Items/DivinationCards/DivinationCardTheLordInBlack",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"母亲的礼物","Metadata/Items/DivinationCards/DivinationCardAMothersPartingGift",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"血肉之躯","Metadata/Items/DivinationCards/DivinationCardTheBody",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"忍辱","Metadata/Items/DivinationCards/DivinationCardTurnTheOtherCheek",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"希望微光","Metadata/Items/DivinationCards/DivinationCardGlimmerOfHope",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"空灵","Metadata/Items/DivinationCards/DivinationCardTheEthereal",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"兴盛","Metadata/Items/DivinationCards/DivinationCardProsperity",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"魔符","Metadata/Items/DivinationCards/DivinationCardTheSigil",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"极致不凡","Metadata/Items/DivinationCards/DivinationCardTheDapperProdigy",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"疯狂恐喙鸟","Metadata/Items/DivinationCards/DivinationCardTheRabidRhoa",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"灵魂","Metadata/Items/DivinationCards/DivinationCardTheSoul",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"雄狮","Metadata/Items/DivinationCards/DivinationCardTheLion",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"巨龙","Metadata/Items/DivinationCards/DivinationCardTheDragon",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"鼠辈","Metadata/Items/DivinationCards/DivinationCardRats",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"危机","Metadata/Items/DivinationCards/DivinationCardTheRisk",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"宁静","Metadata/Items/DivinationCards/DivinationCardTranquillity",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"她的面具","Metadata/Items/DivinationCards/DivinationCardHerMask",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"赏金猎手","Metadata/Items/DivinationCards/DivinationCardTreasureHunter",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"大地吞食者","Metadata/Items/DivinationCards/DivinationCardEarthDrinker",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"狼的影子","Metadata/Items/DivinationCards/DivinationCardTheWolfsShadow",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"竞技场冠军","Metadata/Items/DivinationCards/DivinationCardTheArenaChampion",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"生命之树","Metadata/Items/DivinationCards/DivinationCardTheSephirot",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"梦想家","Metadata/Items/DivinationCards/DivinationCardTheVisionary",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"怒雷之空","Metadata/Items/DivinationCards/DivinationCardThunderousSkies",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"消逝之怒","Metadata/Items/DivinationCards/DivinationCardDyingAnguish",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"永恒不朽","Metadata/Items/DivinationCards/DivinationCardTheImmortal",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"王座","Metadata/Items/DivinationCards/DivinationCardTheThrone",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"无尽之域","Metadata/Items/DivinationCards/DivinationCardBoundlessRealms",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"蹂躏之王","Metadata/Items/DivinationCards/DivinationCardTheDevastator",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"殒落的命运","Metadata/Items/DivinationCards/DivinationCardDestinedToCrumble",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"命运之晶","Metadata/Items/DivinationCards/DivinationCardShardOfFate",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"阴阳眼","Metadata/Items/DivinationCards/DivinationCardHeterochromia",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"诱惑之雨","Metadata/Items/DivinationCards/DivinationCardRainTempter",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"虚空","Metadata/Items/DivinationCards/DivinationCardTheVoid",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil," 暴虐之灵","Metadata/Items/DivinationCards/DivinationCardTheTyrant",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"命运之网","Metadata/Items/DivinationCards/DivinationCardTheWeb",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"收割者","Metadata/Items/DivinationCards/DivinationCardTheHarvester",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"月影女祭司","Metadata/Items/DivinationCards/DivinationCardTheLunarisPriestess",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"纯净帝王","Metadata/Items/DivinationCards/DivinationCardEmperorOfPurity",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"诅咒之王","Metadata/Items/DivinationCards/DivinationCardTheCursedKing",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"风暴使者","Metadata/Items/DivinationCards/DivinationCardTheStormcaller",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"莉莎之息","Metadata/Items/DivinationCards/DivinationCardLysahsRespite",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"制图者的青睐","Metadata/Items/DivinationCards/DivinationCardCartographersDelight",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"未知的命运卡","Metadata/Items/DivinationCards/DivinationCardDeck",nil,nil,nil,nil)--可堆叠通货
-SetJiaoYiGoods(nil,"命运垂青","Metadata/Items/DivinationCards/DivinationCardLuckyDeck",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"光与真实","Metadata/Items/DivinationCards/DivinationCardLightAndTruth",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"瓦尔的眷顾","Metadata/Items/DivinationCards/DivinationCardLuckOfTheVaal",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"耐久者","Metadata/Items/DivinationCards/DivinationCardTheEndurance",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"忏悔者","Metadata/Items/DivinationCards/DivinationCardThePenitent",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"群狼之王","Metadata/Items/DivinationCards/DivinationCardTheWolf",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"达拉夫人的宝石","Metadata/Items/DivinationCards/DivinationCardDiallasSubjugation",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"越界的呼唤","Metadata/Items/DivinationCards/DivinationCardTheCalling",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"女之武神","Metadata/Items/DivinationCards/DivinationCardTheValkyrie",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"无迹之海","Metadata/Items/DivinationCards/DivinationCardTheFormlessSea",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"力之誓言","Metadata/Items/DivinationCards/DivinationCardTheOath",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"拾荒者","Metadata/Items/DivinationCards/DivinationCardTheScavenger",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"狼之信物","Metadata/Items/DivinationCards/DivinationCardMawrBlaidd",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"射成筛子","Metadata/Items/DivinationCards/DivinationCardThePorcupine",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"风暴来袭","Metadata/Items/DivinationCards/DivinationCardTheComingStorm",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"博学者","Metadata/Items/DivinationCards/DivinationCardThePolymath",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"金刚狼","Metadata/Items/DivinationCards/DivinationCardTheWolverine",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"露指手套","Metadata/Items/DivinationCards/DivinationCardMitts",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"死灵遗物","Metadata/Items/DivinationCards/DivinationCardTheWretched",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"狼王之弦","Metadata/Items/DivinationCards/DivinationCardTheWolvenKingsBite",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"冷淡","Metadata/Items/DivinationCards/DivinationCardTheStandoff",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"遗弃之物","Metadata/Items/DivinationCards/DivinationCardTheForsaken",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"炫耀之力","Metadata/Items/DivinationCards/DivinationCardTheGarishPower",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"稍纵即逝","Metadata/Items/DivinationCards/DivinationCardLingeringRemnants",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"闪光与火焰","Metadata/Items/DivinationCards/DivinationCardTheSparkAndTheFlame",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"圣人之礼","Metadata/Items/DivinationCards/DivinationCardTheSaintsTreasure",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"远古召唤","Metadata/Items/DivinationCards/DivinationCardCallToTheFirstOnes",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"金属盒子","Metadata/Items/DivinationCards/DivinationCardTheValleyOfSteelBoxes",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"正气","Metadata/Items/DivinationCards/DivinationCardMightIsRight",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"净白","Metadata/Items/DivinationCards/DivinationCardTheOpulecent",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"雷劈","Metadata/Items/DivinationCards/DivinationCardStruckByLightning",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"阿兹里的武器库","Metadata/Items/DivinationCards/DivinationCardAtzirisArsenal",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"残酷之环","Metadata/Items/DivinationCards/DivinationCardTheRuthlessCeinture",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"无迹可寻","Metadata/Items/DivinationCards/DivinationCardNoTraces",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"家的捷径","Metadata/Items/DivinationCards/DivinationCardTheRealm",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"龙之眼","Metadata/Items/DivinationCards/DivinationCardTheEyeOfTheDragon",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"灼热之火","Metadata/Items/DivinationCards/DivinationCardTheBlazingFire",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"听天由命","Metadata/Items/DivinationCards/DivinationCardLeftToFate",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"重生","Metadata/Items/DivinationCards/DivinationCardRebirth",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"永不满足","Metadata/Items/DivinationCards/DivinationCardTheInsatiable",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"黑暗缭绕","Metadata/Items/DivinationCards/DivinationCardTheObscured",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"坚毅诗人","Metadata/Items/DivinationCards/DivinationCardTheIronBard",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"禁忌之力","Metadata/Items/DivinationCards/DivinationCardForbiddenPower",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"裂隙","Metadata/Items/DivinationCards/DivinationCardTheBreach",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"追梦者","Metadata/Items/DivinationCards/DivinationCardTheDreamer",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"噬界者","Metadata/Items/DivinationCards/DivinationCardTheWorldEater",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"狡徒","Metadata/Items/DivinationCards/DivinationCardTheDeceiver",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"神佑","Metadata/Items/DivinationCards/DivinationCardBlessingOfGod",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"谜团","Metadata/Items/DivinationCards/DivinationCardThePuzzle",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"巫婆","Metadata/Items/DivinationCards/DivinationCardTheWitch",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"不朽决心","Metadata/Items/DivinationCards/DivinationCardImmortalResolve",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"珠宝匠的福祉","Metadata/Items/DivinationCards/DivinationCardTheJewellersBoon",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"深深黑梦","Metadata/Items/DivinationCards/DivinationCardTheDarkestDream",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"主宰","Metadata/Items/DivinationCards/DivinationCardTheMaster",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"无尽深渊","Metadata/Items/DivinationCards/DivinationCardTheFathomlessDepths",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"无畏者","Metadata/Items/DivinationCards/DivinationCardTheUndaunted",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"仰慕者","Metadata/Items/DivinationCards/DivinationCardTheAdmirer",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"剑圣的致敬","Metadata/Items/DivinationCards/DivinationCardTheSwordKingsSalute",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"鲜血大军","Metadata/Items/DivinationCards/DivinationCardTheArmyOfBlood",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"天堂之石","Metadata/Items/DivinationCards/DivinationCardTheCelestialStone",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"至臻完美","Metadata/Items/DivinationCards/DivinationCardPerfection",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"梦境","Metadata/Items/DivinationCards/DivinationCardTheDreamland",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"魂之和谐","Metadata/Items/DivinationCards/DivinationCardHarmonyOfSouls",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"武士之眼","Metadata/Items/DivinationCards/DivinationCardTheSamuraisEye",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"壮心不已","Metadata/Items/DivinationCards/DivinationCardTheHaleHeart",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"庄园主","Metadata/Items/DivinationCards/DivinationCardTheMayor",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"无可争议者","Metadata/Items/DivinationCards/DivinationCardTheUndisputed",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"元素祭祀","Metadata/Items/DivinationCards/DivinationCardTheRiteOfElements",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"三魔音","Metadata/Items/DivinationCards/DivinationCardThreeVoices",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"教授","Metadata/Items/DivinationCards/DivinationCardTheProfessor",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"狂兽","Metadata/Items/DivinationCards/DivinationCardTheBeast",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"无辜者","Metadata/Items/DivinationCards/DivinationCardTheInnocent",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"枯萎玫瑰","Metadata/Items/DivinationCards/DivinationCardTheWiltedRose",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"无尽黑暗","Metadata/Items/DivinationCards/DivinationCardTheEndlessDarkness",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"来生之美","Metadata/Items/DivinationCards/DivinationCardBeautyThroughDeath",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"保护的代价","Metadata/Items/DivinationCards/DivinationCardThePriceOfProtection",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"先祖赐福","Metadata/Items/DivinationCards/DivinationCardBoonOfTheFirstOnes",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"暮光之月","Metadata/Items/DivinationCards/DivinationCardTheTwilightMoon",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"不协之音","Metadata/Items/DivinationCards/DivinationCardTheCacophony",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"牺牲","Metadata/Items/DivinationCards/DivinationCardTheSacrifice",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"墨水点滴","Metadata/Items/DivinationCards/DivinationCardADabOfInk",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"照料者","Metadata/Items/DivinationCards/DivinationCardTheNurse",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"工匠大师","Metadata/Items/DivinationCards/DivinationCardTheMasterArtisan",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"生命窃贼","Metadata/Items/DivinationCards/DivinationCardTheLifeThief",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"寻觅者","Metadata/Items/DivinationCards/DivinationCardTheSeeker",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"信使","Metadata/Items/DivinationCards/DivinationCardTheMessenger",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"狂王","Metadata/Items/DivinationCards/DivinationCardTheMadKing",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"司法的恩赐","Metadata/Items/DivinationCards/DivinationCardBoonOfJustice",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"旅程","Metadata/Items/DivinationCards/DivinationCardTheJourney",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"瓦尔的傲慢","Metadata/Items/DivinationCards/DivinationCardArroganceOfTheVaal",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"降临","Metadata/Items/DivinationCards/DivinationCardTheLanding",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"山脉","Metadata/Items/DivinationCards/DivinationCardTheMountain",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"七年厄运","Metadata/Items/DivinationCards/DivinationCardSevenYearsBadLuck",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"黄金纪元","Metadata/Items/DivinationCards/DivinationCardTheGoldenEra",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"黑白世界","Metadata/Items/DivinationCards/DivinationCardMonochrome",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"黑暗的引诱","Metadata/Items/DivinationCards/DivinationCardDarkTemptation",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"黑暗中独行","Metadata/Items/DivinationCards/DivinationCardAloneInTheDarkness",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"萨博辛的誓言","Metadata/Items/DivinationCards/DivinationCardSambodhisVow",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"欢庆领主","Metadata/Items/DivinationCards/DivinationCardTheLordOfCelebration",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"虚荣","Metadata/Items/DivinationCards/DivinationCardVanity",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"帝国的遗产","Metadata/Items/DivinationCards/DivinationCardImperialLegacy",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"燃烧之血","Metadata/Items/DivinationCards/DivinationCardBurningBlood",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"起源","Metadata/Items/DivinationCards/DivinationCardThePrimordial",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"爱的回音","Metadata/Items/DivinationCards/DivinationCardEchoesOfLove",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"求知若渴","Metadata/Items/DivinationCards/DivinationCardThirstForKnowledge",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"诱人的奖赏","Metadata/Items/DivinationCards/DivinationCardAlluringBounty",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"愚人","Metadata/Items/DivinationCards/DivinationCardTheFool",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"先祖的代价","Metadata/Items/DivinationCards/DivinationCardPrideOfTheFirstOnes",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"深渊之子","Metadata/Items/DivinationCards/DivinationCardTheDeepOnes",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"大法师的右手","Metadata/Items/DivinationCards/DivinationCardTheArchmagesRightHand",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"黑暗之梦","Metadata/Items/DivinationCards/DivinationCardDarkDreams",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"埋葬的宝藏","Metadata/Items/DivinationCards/DivinationCardBuriedTreasure",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"半神的赌局","Metadata/Items/DivinationCards/DivinationCardDemigodsWager",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"老人","Metadata/Items/DivinationCards/DivinationCardTheOldMan",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"诺克之冠","Metadata/Items/DivinationCards/DivinationCardNooksCrown",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"支线任务","Metadata/Items/DivinationCards/DivinationCardTheSideQuest",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"忠诚的代价","Metadata/Items/DivinationCards/DivinationCardThePriceOfLoyalty",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"英勇打击","Metadata/Items/DivinationCards/DivinationCardTheHeroicShot",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"铭记","Metadata/Items/DivinationCards/DivinationCardRemembrance",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"永不知足","Metadata/Items/DivinationCards/DivinationCardMoreIsNeverEnough",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"恶毒的权力","Metadata/Items/DivinationCards/DivinationCardVilePower",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"交易","Metadata/Items/DivinationCards/DivinationCardTheBargain",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"阿祖兰的奖赏","Metadata/Items/DivinationCards/DivinationCardAzyransReward",nil,nil,nil,nil)--命运卡
--- SetJiaoYiGoods(nil,"魔侍","Metadata/Items/DivinationCards/DivinationCardTheSkeleton",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"恐怖之眼","Metadata/Items/DivinationCards/DivinationCardTheEyeOfTerror",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"恶魔","Metadata/Items/DivinationCards/DivinationCardTheDemon",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"阿凯的预言","Metadata/Items/DivinationCards/DivinationCardAkilsProphecy",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"咒诅之灵","Metadata/Items/DivinationCards/DivinationCardTheDamned",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"元素虚空","Metadata/Items/DivinationCards/DivinationCardVoidOfTheElements",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"买卖","Metadata/Items/DivinationCards/DivinationCardTheDeal",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"狼王的遗产","Metadata/Items/DivinationCards/DivinationCardTheWolfsLegacy",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"誘餌之期待","Metadata/Items/DivinationCards/DivinationCardBaitedExpectations",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"卡麥歷亞之割","Metadata/Items/DivinationCards/DivinationCardCameriasCut",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"致死記號","Metadata/Items/DivinationCards/DivinationCardDeathlyDesigns",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"神判","Metadata/Items/DivinationCards/DivinationCardDivineJustice",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"腐爛於血","Metadata/Items/DivinationCards/DivinationCardEtchedInBlood",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"友誼小船","Metadata/Items/DivinationCards/DivinationCardFriendship",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"失落的繁華","Metadata/Items/DivinationCards/DivinationCardSquanderedProsperity",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"無罪救贖","Metadata/Items/DivinationCards/DivinationCardSuccorOfTheSinless",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"識骨尋蹤","Metadata/Items/DivinationCards/DivinationCardTheBones",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"天選之人","Metadata/Items/DivinationCards/DivinationCardTheChosen",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"想要","Metadata/Items/DivinationCards/DivinationCardTheCraving",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"逃脫大師","Metadata/Items/DivinationCards/DivinationCardTheEscape",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"魚販","Metadata/Items/DivinationCards/DivinationCardTheFishmonger",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"地底叢林","Metadata/Items/DivinationCards/DivinationCardUndergroundForest",nil,nil,nil,nil)--命运卡
-SetJiaoYiGoods(nil,"赤红珠宝","Metadata/Items/Jewels/JewelStr","求知的热情","Inspired Learning","3",nil)--珠宝
---SetJiaoYiGoods(nil,"赤红珠宝","Metadata/Items/Jewels/JewelStr","起源力量","Primordial Might","3",nil)--珠宝
-SetJiaoYiGoods(nil,"赤红珠宝","Metadata/Items/Jewels/JewelStr","赤影梦境","The Red Dream","3",nil)--珠宝
-SetJiaoYiGoods(nil,"赤红珠宝","Metadata/Items/Jewels/JewelStr","温柔之力","Might of the Meek","3",nil)--珠宝
-SetJiaoYiGoods(nil,"翠绿珠宝","Metadata/Items/Jewels/JewelDex","直觉之跃","Intuitive Leap","3",nil)--珠宝
-SetJiaoYiGoods(nil,"翠绿珠宝","Metadata/Items/Jewels/JewelDex","狮眼的陨落","Lioneye's Fall","3",nil)--珠宝
-SetJiaoYiGoods(nil,"翠绿珠宝","Metadata/Items/Jewels/JewelDex","青影梦境","The Green Dream","3",nil)--珠宝
-SetJiaoYiGoods(nil,"翠绿珠宝","Metadata/Items/Jewels/JewelDex","超自然本能","Unnatural Instinct","3",nil)--珠宝
-SetJiaoYiGoods(nil,"钴蓝珠宝","Metadata/Items/Jewels/JewelInt","灵体转换","Healthy Mind","3",nil)--珠宝
-SetJiaoYiGoods(nil,"钴蓝珠宝","Metadata/Items/Jewels/JewelInt","聚光之石","Grand Spectrum","3",nil)--珠宝
-SetJiaoYiGoods(nil,"钴蓝珠宝","Metadata/Items/Jewels/JewelInt","无尽渴望","Unending Hunger","3",nil)--珠宝
---SetJiaoYiGoods(nil,"钴蓝珠宝","Metadata/Items/Jewels/JewelInt","起源和谐","Primordial Harmony","3",nil)--珠宝
-SetJiaoYiGoods(nil,"钴蓝珠宝","Metadata/Items/Jewels/JewelInt","碧影梦境","The Blue Dream","3",nil)--珠宝
-SetJiaoYiGoods(nil,"钴蓝珠宝","Metadata/Items/Jewels/JewelInt","要塞誓约","Fortress Covenant","3",nil)--珠宝
-SetJiaoYiGoods(nil,"三相珠宝","Metadata/Items/Jewels/JewelPrismatic","守望之眼","Watcher's Eye","3",nil)--珠宝
-SetJiaoYiGoods(nil,"啟蒙輔助","Metadata/Items/Gems/SupportGemAdditionalXP",nil,nil,nil,nil)--技能寶石
-SetJiaoYiGoods(nil,"賦予輔助","Metadata/Items/Gems/SupportGemAdditionalLevel",nil,nil,nil,nil)--技能寶石
