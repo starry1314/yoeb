@@ -28,7 +28,7 @@
 
 
 
-[Type] == "City Square Map" # [ExitAfterBossKill] == "true"
+//[Type] == "City Square Map" # [ExitAfterBossKill] == "true" //危城廣場
 [Type] == "Toxic Sewer Map" # [ExitAfterBossKill] == "true"
 [Type]=="Crimson Temple Map" # [ExitAfterBossKill] == "true"
 [Type]=="Sulphur Vents Map" # [ExitAfterBossKill] == "true"
