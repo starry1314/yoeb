@@ -28,7 +28,7 @@ g_duobiHpVal=0.2
 --SetNeedSkillLineData(97,"啟蒙,nil|元素淨化,nil|瓦爾．優雅,nil|狂戰,nil",nil,10,nil) --鞋子
 --SetNeedSkillLineData(98,"擊中時印記輔助,nil|狙擊者印記,nil|閃現射擊,nil|鋼筋鐵骨,nil",nil,9,nil) --手套
 --SetNeedSkillLineData(99,"魔改箭矢輔助,nil|冰霜射擊,nil|燃燒箭矢,nil|閃電箭矢,nil|活栓輔助,nil|啟發輔助,nil",nil,3,nil) --武器
-SetNeedSkillLineData(100,"閃電箭矢,nil|元素攻擊傷害輔助,nil|增加暴擊傷害輔助,nil|啟發輔助,nil|三體輔助,nil|急凍輔助,nil",nil,2,nil) --衣服
+--SetNeedSkillLineData(100,"閃電箭矢,nil|元素攻擊傷害輔助,nil|增加暴擊傷害輔助,nil|啟發輔助,nil|三體輔助,nil|急凍輔助,nil",nil,2,nil) --衣服
 
 
 --添加攻击技能 name=技能名 className=技能类名 noLine=不在直线就能攻击 挑选攻击技能会从上到下寻找，要把厉害的技能加在前面
