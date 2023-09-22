@@ -16,7 +16,7 @@
 2、函数型：函数名(参数1,参数2) 这样的就是函数型 由函数名与若干个参数组成 参数被半角括号()套起来
 ]]
 ------------------基本设置
-g_needMinimizeGame=true			--最小化遊戲窗口 true为最小化 false或nil为不最小化
+g_needMinimizeGame=false			--最小化遊戲窗口 true为最小化 false或nil为不最小化
 g_imBoss=false					--如果是仓库号要为true 挂机号为false
 g_attackDis=50					--攻击距离
 g_yiJieTimeOut=15*60			--异界地图内的超时时间 单位为秒 如果未设置就会用g_timeOut *是乘号 这里为15乘以60=15分钟
@@ -92,11 +92,7 @@ AddNeedBuySkillTime(11,"a11q1")	--在拾取碎片 这个任务时检测购买一遍
 
 --药瓶摆放
 --SetNeedFlaskData(pos,flask)--设置药  pos=位置 1-5  flask=药 字符串型，支持以下 (生命药剂,魔力药剂,复合药剂,宝钻药剂,红玉药剂,蓝玉药剂,黄玉药剂,坚岩药剂,水银药剂,紫晶药剂,石英药剂,翠玉药剂,石化药剂,海蓝药剂,迷雾药剂,硫磺药剂,真银药剂,灰岩药剂)
---SetNeedFlaskData(1,"生命药剂","nil")
---SetNeedFlaskData(2,"魔力药剂","nil")
---SetNeedFlaskData(3,"宝钻药剂","nil")
---SetNeedFlaskData(4,"紫晶药剂","nil")
---SetNeedFlaskData(5,"水银药剂","nil")
+
 
 --AddNotMakeTaskData(taskClassName)--添加不需要做的任务 taskClassName为任务类名
 AddNotMakeTaskData("a2q5")--梦中圣地
@@ -132,10 +128,12 @@ SetZhongShenData("Lunaris","Gruthkul")--设置月影女神之魂与绝望之母 格鲁丝克之魂
 
 -------注意要大类在前 小类 单独设置在后面添加
 SetSaveIndex("通货|可堆叠通货","1")
-SetSaveIndex("异界地图","2")
+SetSaveIndex("异界地图","2|3")
 SetSaveIndex("项链|戒指|爪|匕首|法杖|单手剑|细剑|单手斧|单手锤|符文匕首|短杖|战杖|弓|长杖|双手剑|双手斧|双手锤|腰带|手套|鞋子|头盔","3|4")
 SetSaveIndex("珠宝|命运卡|衣服|盾|箭袋|地图碎片","4")
 SetSaveIndex("生命药剂|魔力药剂|复合药剂|功能药剂","4")
+SetSaveIndex(nil,"4","啟蒙輔助","Metadata/Items/Gems/SupportGemAdditionalXP")--技能寶石
+SetSaveIndex(nil,"4","賦予輔助","Metadata/Items/Gems/SupportGemAdditionalLevel")--技能寶石
 SetSaveIndex(nil,"4","鍊魔眼睛","Metadata/Items/Metamorphosis/MetamorphosisEye")
 SetSaveIndex(nil,"4","预言","Metadata/Items/Currency/CurrencyItemisedProphecy")
 SetSaveIndex(nil,"4","鏈結石","Metadata/Items/Currency/CurrencyRerollSocketLinks")
