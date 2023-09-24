@@ -32,7 +32,7 @@ g_duobiHpVal=0.2
 
 
 --添加攻击技能 name=技能名 className=技能类名 noLine=不在直线就能攻击 挑选攻击技能会从上到下寻找，要把厉害的技能加在前面
---AddAttackSkillData("瓦爾．閃電箭矢","Vaal Lightning Arrow",false,50,10)
+AddAttackSkillData("瓦爾．閃電箭矢","Vaal Lightning Arrow",false,50,10)
 AddAttackSkillData("閃電箭矢","Lightning Arrow",true,nil,nil)--添加攻击技能
 AddAttackSkillData("普通攻击","melee")
 
