@@ -16,7 +16,7 @@
 2¡¢º¯ÊıĞÍ£ºº¯ÊıÃû(²ÎÊı1,²ÎÊı2) ÕâÑùµÄ¾ÍÊÇº¯ÊıĞÍ ÓÉº¯ÊıÃûÓëÈô¸É¸ö²ÎÊı×é³É ²ÎÊı±»°ë½ÇÀ¨ºÅ()Ì×ÆğÀ´
 ]]
 ------------------»ù±¾ÉèÖÃ
-g_needMinimizeGame=true			--×îĞ¡»¯ß[‘ò´°¿Ú trueÎª×îĞ¡»¯ false»ònilÎª²»×îĞ¡»¯
+g_needMinimizeGame=false			--×îĞ¡»¯ß[‘ò´°¿Ú trueÎª×îĞ¡»¯ false»ònilÎª²»×îĞ¡»¯
 g_imBoss=false					--Èç¹ûÊÇ²Ö¿âºÅÒªÎªtrue ¹Ò»úºÅÎªfalse
 g_attackDis=50					--¹¥»÷¾àÀë
 g_yiJieTimeOut=15*60			--Òì½çµØÍ¼ÄÚµÄ³¬Ê±Ê±¼ä µ¥Î»ÎªÃë Èç¹ûÎ´ÉèÖÃ¾Í»áÓÃg_timeOut *ÊÇ³ËºÅ ÕâÀïÎª15³ËÒÔ60=15·ÖÖÓ
@@ -25,18 +25,16 @@ g_addTianFu=true				--×Ô¶¯°´Éè¶¨ºÃµÄÅäÖÃ¼ÓÌì¸³ trueÎª¼Ó nil»òfalseÎª²»¼Ó
 g_shengJiBaoShi=true			--×Ô¶¯Éı¼¶±¦Ê¯ trueÎªÉı¼¶ nil»òfalseÎª²»Éı¼¶
 g_sellSkillGem=true				--×Ô¶¯Âô³¬¹ı40Æ·ÖÊµÄ¼¼ÄÜ±¦Ê¯
 g_notHuanYaoLv=82				--´óÓÚµÈÓÚ¶àÉÙ¼¶Ö»¼ñÀ¶É«ÒÔÉÏÒ© 
-g_needAutoChangeEquip=false		--¿ªÆô×Ô¶¯»»×° trueÎª»» nil»òfalseÎª²»»»
-g_needAutoSetBaoShi=false		--¿ªÆô×Ô¶¯»»±¦Ê¯ trueÎª»» nil»òfalseÎª²»»»
-g_bossGiveZhuangBei=false		--½»Ò×Ê±²Ö¿âºÅ¸øÓèÈ±ÉÙµÄ¸ß¼¶»»×°ÖĞµÄ×°±¸ trueÎª¸ø falseÎª²»¸ø ÊÇ¶Ô²Ö¿âºÅÉèÖÃµÄ
+g_needAutoChangeEquip=true		--¿ªÆô×Ô¶¯»»×° trueÎª»» nil»òfalseÎª²»»»
+g_needAutoSetBaoShi=true		--¿ªÆô×Ô¶¯»»±¦Ê¯ trueÎª»» nil»òfalseÎª²»»»
+g_bossGiveZhuangBei=true		--½»Ò×Ê±²Ö¿âºÅ¸øÓèÈ±ÉÙµÄ¸ß¼¶»»×°ÖĞµÄ×°±¸ trueÎª¸ø falseÎª²»¸ø ÊÇ¶Ô²Ö¿âºÅÉèÖÃµÄ
 g_xiaoHaoGetZhuangBei=false		--¹Ò»úºÅÏò·¢×°²Ö¿âºÅÉêÇëÁì¸ß¼¶»»×°ÖĞµÄ×°±¸ trueÎªÉêÇë falseÎª²»ÉêÇë 
-
-g_youXianMapLv=80				--È¡Í¼Ê±ÈËÎïÂú¶àÉÙ¼¶¾Í´Ó¸ß½×¿ªÊ¼È¡
 
 --SetZhuangBeiBoss(bossName,srvName)--ÉèÖÃ·¢×°²Ö¿âºÅ bossName=·¢×°ºÅÃû×Ö ×Ö·û´®ĞÍ srvName=·şÎñÆ÷Ãû×Ö£¬Èç¹û¶à¸öÇøÓÃÍ¬Ò»·İÅäÖÃµÄ»°ÌîÉÏ·şÎñÆ÷Ãû×Ö¿Éµ¥¶ÀÇø·Ö Èç¹û²»ÊÇ¿ÉºöÂÔ »òÌînil 
 --SetZhuangBeiBoss("ÕâÀïÌîÉÏÄã×Ô¼ºµÄ·¢×°²Ö¿âºÅÃû×Ö","ÇøÃû×Ö")--·¢×°±¸µÄ²Ö¿âºÅ Èç¹û²»ĞèÒª ¾Í×¢ÊÍµô Ö»ÓĞ¹Ò»úºÅ¸ú²Ö¿âºÅ¶¼ÊÇ Íâ¹ÒÕËºÅ ²ÅÓĞĞ§
 
+
 --SetNeedAddTianFu(tfStr)--ÉèÖÃÒì½çÌì¸³¼Óµã 
-SetNeedAddTianFu("Òì½çµØÍ¼Ìì¸³=atlas_boss_adjacent_maps_2-ÏààµØˆDµôÂä™CÂÊ|atlas_path_11-ÏààµØˆDµôÂä™CÂÊ|atlas_path_23_-ÏààµØˆDµôÂä™CÂÊ|atlas_boss_adjacent_maps_1-ÏààµØˆDµôÂä™CÂÊ|atlas_boss_adjacent_maps_8-ÏààµØˆDµôÂä™CÂÊ|atlas_kirac_1_10-»ùÀ­¿ËÈÎ„Õ™CÂÊ|atlas_kirac_1_9-»ùÀ­¿ËÈÎ„Õ™CÂÊ|atlas_zana_1_6-ÖØüc‚É²ì|atlas_kirac_1_8_-»ùÀ­¿ËÈÎ„Õ™CÂÊ|atlas_kirac_1_7-»ùÀ­¿ËÈÎ„Õ™CÂÊ|atlas_path_96-µôÂäÑ}ÑuµØˆD|atlas_path_94-µôÂäÑ}ÑuµØˆD|atlas_map_drops_8-µôÂäÑ}ÑuµØˆD|atlas_path_92-µôÂäÑ}ÑuµØˆD|atlas_path_61-ÎïÆ·”µÁ¿|atlas_path_44-ÎïÆ·”µÁ¿|atlas_path_35-ÎïÆ·”µÁ¿|atlas_path_90-µôÂäÑ}ÑuµØˆD|atlas_keystone_smallnodes_1-Á÷ÀËÖ®Â·|atlas_path_37-ÏààµØˆDµôÂä™CÂÊ|atlas_path_30-ÏààµØˆDµôÂä™CÂÊ|atlas_path_18-ÏààµØˆDµôÂä™CÂÊ|atlas_path_15-ÏààµØˆDµôÂä™CÂÊ|atlas_path_2-ÏààµØˆDµôÂä™CÂÊ|atlas_kirac_2_1-»ùÀ­¿ËÈÎ„Õ™CÂÊ|atlas_kirac_2_2-»ùÀ­¿ËÈÎ„Õ™CÂÊ|atlas_kirac_2_3-»ùÀ­¿ËÈÎ„Õ™CÂÊ|atlas_map_tier_5_1-¸ßëAµØˆD™CÂÊ|atlas_map_tier_5_2-¸ßëAµØˆD™CÂÊ|atlas_map_tier_3_1-¸ßëAµØˆD™CÂÊ|atlas_keystone_enhanced_kirac_crafts-³¬İdëŠÂ·|atlas_map_tier_3_2-¸ßëAµØˆD™CÂÊ|atlas_map_tier_4_2-¸ßëAµØˆD™CÂÊ|atlas_map_tier_4_1-¸ßëAµØˆD™CÂÊ|atlas_path_17-ÏààµØˆDµôÂä™CÂÊ|atlas_map_tier_2_1-¸ßëAµØˆD™CÂÊ|atlas_map_tier_2_2-¸ßëAµØˆD™CÂÊ|atlas_path_38-ÏààµØˆDµôÂä™CÂÊ|atlas_path_21-ÏààµØˆDµôÂä™CÂÊ|atlas_path_27-ÏààµØˆDµôÂä™CÂÊ|atlas_path_28-ÏààµØˆDµôÂä™CÂÊ|atlas_map_tier_1_2_-¸ßëAµØˆD™CÂÊ|atlas_map_tier_1_1-¸ßëAµØˆD™CÂÊ|atlas_path_14-ÏààµØˆDµôÂä™CÂÊ|atlas_path_26-ÏààµØˆDµôÂä™CÂÊ|atlas_path_25_-ÏààµØˆDµôÂä™CÂÊ|atlas_path_16-ÏààµØˆDµôÂä™CÂÊ|atlas_path_24_-ÏààµØˆDµôÂä™CÂÊ|atlas_path_12-ÏààµØˆDµôÂä™CÂÊ|atlas_path_22-ÏààµØˆDµôÂä™CÂÊ|atlas_path_13-ÏààµØˆDµôÂä™CÂÊ|atlas_path_8-ÏààµØˆDµôÂä™CÂÊ|atlas_path_9-ÏààµØˆDµôÂä™CÂÊ|atlas_path_20-ÏààµØˆDµôÂä™CÂÊ|atlas_path_1-ÏààµØˆDµôÂä™CÂÊ|atlas_path_19-ÏààµØˆDµôÂä™CÂÊ|atlas_path_10-ÏààµØˆDµôÂä™CÂÊ|atlas_path_6-ÏààµØˆDµôÂä™CÂÊ|atlas_path_5-ÏààµØˆDµôÂä™CÂÊ|atlas_path_30_1-ÏààµØˆDµôÂä™CÂÊ|atlas_map_drops_1-µôÂäÑ}ÑuµØˆD|atlas_map_drops_10-µôÂäÑ}ÑuµØˆD|atlas_map_drops_11-µôÂäÑ}ÑuµØˆD|atlas_path_4-ÏààµØˆDµôÂä™CÂÊ|atlas_path_7-ÏààµØˆDµôÂä™CÂÊ|atlas_path_88-µôÂäÑ}ÑuµØˆD|atlas_map_drops_12_-µôÂäÑ}ÑuµØˆD|atlas_path_87-µôÂäÑ}ÑuµØˆD|atlas_map_drops_13-µôÂäÑ}ÑuµØˆD|atlas_map_drops_16-µôÂäÑ}ÑuµØˆD|atlas_map_drops_15-µôÂäÑ}ÑuµØˆD|atlas_path_82-µôÂäÑ}ÑuµØˆD|atlas_map_drops_14-µôÂäÑ}ÑuµØˆD|atlas_path_85-µôÂäÑ}ÑuµØˆD|atlas_map_drops_4-µôÂäÑ}ÑuµØˆD|atlas_path_83-µôÂäÑ}ÑuµØˆD|atlas_map_drops_5-µôÂäÑ}ÑuµØˆD|atlas_path_84-µôÂäÑ}ÑuµØˆD|")
 
 
 --Ìí¼ÓÔÚ×öµ½Ä³¸öÈÎÎñÊ±¹ºÂò¼¼ÄÜ±¦Ê¯
@@ -51,22 +49,41 @@ AddNeedBuySkillTime(1,"a1q6")
 AddNeedBuySkillTime(1,"a1q9")
 AddNeedBuySkillTime(1,"a1q7")
 ----A2
-AddNeedBuySkillTime(2,"a2q7")
+AddNeedBuySkillTime(2,"a2q11")
+AddNeedBuySkillTime(1,"a2q11")
+AddNeedBuySkillTime(2,"a2q6")
 AddNeedBuySkillTime(1,"a2q6")
+AddNeedBuySkillTime(2,"a2q7")
+AddNeedBuySkillTime(1,"a2q7")
+AddNeedBuySkillTime(2,"a2q4")
+AddNeedBuySkillTime(1,"a2q4")
 AddNeedBuySkillTime(2,"a2q9")
 AddNeedBuySkillTime(1,"a2q9")
 AddNeedBuySkillTime(2,"a2q2")
-AddNeedBuySkillTime(1,"a2q8")
 AddNeedBuySkillTime(1,"a2q2")
+AddNeedBuySkillTime(2,"a2q8")
+AddNeedBuySkillTime(1,"a2q8")
 -----A3
 AddNeedBuySkillTime(2,"a3q1")
+AddNeedBuySkillTime(1,"a3q1")
 AddNeedBuySkillTime(2,"a3q11")
+AddNeedBuySkillTime(1,"a3q11")
+AddNeedBuySkillTime(2,"a3q3")
 AddNeedBuySkillTime(1,"a3q3")
+AddNeedBuySkillTime(2,"a3q4")
 AddNeedBuySkillTime(1,"a3q4")
 AddNeedBuySkillTime(3,"a3q8")
+AddNeedBuySkillTime(2,"a3q8")
+AddNeedBuySkillTime(1,"a3q8")
 AddNeedBuySkillTime(3,"a3q9")
+AddNeedBuySkillTime(2,"a3q9")
+AddNeedBuySkillTime(1,"a3q9")
 AddNeedBuySkillTime(3,"a3q12")
+AddNeedBuySkillTime(2,"a3q12")
+AddNeedBuySkillTime(1,"a3q12")
 AddNeedBuySkillTime(3,"a3q10")
+AddNeedBuySkillTime(2,"a3q10")
+AddNeedBuySkillTime(1,"a3q10")
 ----A4
 AddNeedBuySkillTime(3,"a4q2")
 AddNeedBuySkillTime(2,"a4q2")
@@ -93,7 +110,7 @@ AddNeedBuySkillTime(11,"a11q1")	--ÔÚÊ°È¡ËéÆ¬ Õâ¸öÈÎÎñÊ±¼ì²â¹ºÂòÒ»±é
 
 
 --Ò©Æ¿°Ú·Å
---SetNeedFlaskData(pos,flask)--ÉèÖÃÒ©  pos=Î»ÖÃ 1-5  flask=Ò© ×Ö·û´®ĞÍ£¬Ö§³ÖÒÔÏÂ (ÉúÃüÒ©¼Á,Ä§Á¦Ò©¼Á,¸´ºÏÒ©¼Á,±¦×êÒ©¼Á,ºìÓñÒ©¼Á,À¶ÓñÒ©¼Á,»ÆÓñÒ©¼Á,¼áÑÒÒ©¼Á,Ë®ÒøÒ©¼Á,×Ï¾§Ò©¼Á,Ê¯Ó¢Ò©¼Á,´äÓñÒ©¼Á,Ê¯»¯Ò©¼Á,º£À¶Ò©¼Á,ÃÔÎíÒ©¼Á,Áò»ÇÒ©¼Á,ÕæÒøÒ©¼Á,»ÒÑÒÒ©¼Á)
+--SetNeedFlaskData(pos,flask,modsData,minLv)--ÉèÖÃÒ©Æ¿°Ú·Å
 SetNeedFlaskData(1,"ÉúÃüÒ©¼Á","ŸáÇéÑóÒçµÄ,FlaskPartialInstantRecovery3|ÃÜ·âÖ®,FlaskBleedCorruptingBloodImmunity1",90)
 SetNeedFlaskData(2,"Ä§Á¦Ò©¼Á","ÄÍ¾ÃµÄ,FlaskEffectNotRemovedOnFullMana1|ŠWĞgŸÖ®FlaskBuffReducedManaCostWhileHealing4",90)
 SetNeedFlaskData(3,"±¦×êÒ©¼Á","nil")
@@ -118,7 +135,6 @@ AddNotMakeTaskData("a10q5")--Éîº£Ö®Â·
 AddUseGoodsData("ÌìÙxÖ®•ø")--Ìí¼ÓÌì¸³Ö®Êé
 AddUseGoodsData("áá»ÚÖ®•ø")--Ìí¼Óáá»ÚÖ®Êé
 
-
 --SetZhongShenData(className1,className2)--ÉèÖÃÒª¼ÓµÄÖÚÉñµîÊı¾İ className1=¸ß½×Êı¾İÀàÃû ×Ö·û´®ĞÍ className2=µÍ½×Êı¾İÀàÃû ×Ö·û´®ĞÍ 
 SetZhongShenData("Lunaris","Gruthkul")--ÉèÖÃÔÂÓ°Å®ÉñÖ®»êÓë¾øÍûÖ®Ä¸ ¸ñÂ³Ë¿¿ËÖ®»ê
 
@@ -134,9 +150,9 @@ SetZhongShenData("Lunaris","Gruthkul")--ÉèÖÃÔÂÓ°Å®ÉñÖ®»êÓë¾øÍûÖ®Ä¸ ¸ñÂ³Ë¿¿ËÖ®»ê
 
 -------×¢ÒâÒª´óÀàÔÚÇ° Ğ¡Àà µ¥¶ÀÉèÖÃÔÚºóÃæÌí¼Ó
 SetSaveIndex("Í¨»õ|¿É¶ÑµşÍ¨»õ","1")
-SetSaveIndex("Òì½çµØÍ¼","2|3")
+SetSaveIndex("Òì½çµØÍ¼","2")
 SetSaveIndex("ÏîÁ´|½äÖ¸|×¦|Ø°Ê×|·¨ÕÈ|µ¥ÊÖ½£|Ï¸½£|µ¥ÊÖ¸«|µ¥ÊÖ´¸|·ûÎÄØ°Ê×|¶ÌÕÈ|Õ½ÕÈ|¹­|³¤ÕÈ|Ë«ÊÖ½£|Ë«ÊÖ¸«|Ë«ÊÖ´¸|Ñü´ø|ÊÖÌ×|Ğ¬×Ó|Í·¿ø","3|4")
-SetSaveIndex("Öé±¦|ÃüÔË¿¨|ÒÂ·ş|¶Ü|¼ı´ü|µØÍ¼ËéÆ¬","4")
+SetSaveIndex("Ö÷¶¯¼¼ÄÜ±¦Ê¯|¸¨Öú¼¼ÄÜ±¦Ê¯|Öé±¦|ÃüÔË¿¨|ÒÂ·ş|¶Ü|¼ı´ü|µØÍ¼ËéÆ¬","4")
 SetSaveIndex("ÉúÃüÒ©¼Á|Ä§Á¦Ò©¼Á|¸´ºÏÒ©¼Á|¹¦ÄÜÒ©¼Á","4")
 SetSaveIndex(nil,"4","†¢ÃÉİoÖú","Metadata/Items/Gems/SupportGemAdditionalXP")--¼¼ÄÜŒšÊ¯
 SetSaveIndex(nil,"4","ÙxÓèİoÖú","Metadata/Items/Gems/SupportGemAdditionalLevel")--¼¼ÄÜŒšÊ¯
@@ -164,15 +180,15 @@ g_yuyanCnt=nil				--¹»¶àÉÙÒø±ÒÈ¥Ô¤ÑÔ£¬Ğ¡ÓÚ10Òø±Ò»òÌînil½«²»»á´¥·¢ Èç¹ûÉè¶¨È¥Ô¤ÑÔ
 --SetNotMapGoMap(className,cnt) ÉèÖÃÎŞµØÍ¼»òÎ´µ½µÈ¼¶Ê±ÒªË¢µÄ¾çÇéµØÍ¼ className×Ö·û´®ĞÍ µØÍ¼ÀàÃû cnt=´ÎÊı
 SetNotMapGoMap("2_9_1",10)	--ÎŞµØÍ¼Ê±Ë¢ÑªÉ«Í¨µÀ
 
-g_yiJieLv=73				--¹»ÁË¶àÉÙ¼¶²ÅÈ¥Ë¢Òì½ç
+g_yiJieLv=90				--¹»ÁË¶àÉÙ¼¶²ÅÈ¥Ë¢Òì½ç
 g_checkSellMapCnt=100		--µØÍ¼³¬¹ıÕâ¸öÊıÁ¿²Å»á¼ì²â³öÊÛµØÍ¼
-g_destroyNoUseMap=false		--Ïú»ÙÉÏÃæÉèÖÃ²»Ê¹ÓÃµÄµØÍ¼ nil»òfalseÎª²»Ïú»Ù
-g_mapUseFuHaoLv=76			--´óÓÚµÈÓÚ¶àÉÙ¼¶¶ÔÀ¶Í¼Ê¹ÓÃ¸»ºÀÊ¯ nilÎªÓÀÔ¶²»Ê¹ÓÃ
-g_mapUseZengFuLv=nil			--´óÓÚµÈÓÚ¶àÉÙ¼¶¶ÔÀ¶Í¼Ê¹ÓÃÔö·ùÊ¯ nilÎªÓÀÔ¶²»Ê¹ÓÃ
+g_destroyNoUseMap=true		--Ïú»ÙÉÏÃæÉèÖÃ²»Ê¹ÓÃµÄµØÍ¼ nil»òfalseÎª²»Ïú»Ù
+g_mapUseFuHaoLv=78			--´óÓÚµÈÓÚ¶àÉÙ¼¶¶ÔÀ¶Í¼Ê¹ÓÃ¸»ºÀÊ¯ nilÎªÓÀÔ¶²»Ê¹ÓÃ
+g_mapUseZengFuLv=78			--´óÓÚµÈÓÚ¶àÉÙ¼¶¶ÔÀ¶Í¼Ê¹ÓÃÔö·ùÊ¯ nilÎªÓÀÔ¶²»Ê¹ÓÃ
 g_mapUseDianJingLv=76		--´óÓÚµÈÓÚ¶àÉÙ¼¶¶Ô°×Í¼Ê¹ÓÃµã½ğÊ¯ nilÎªÓÀÔ¶²»Ê¹ÓÃ
 g_mapUseTuiBianLv=72		--´óÓÚµÈÓÚ¶àÉÙ¼¶¶Ô°×Í¼Ê¹ÓÃÍÉ±äÊ¯ nilÎªÓÀÔ¶²»Ê¹ÓÃ
-g_mapUseJiHuiLv=nil			--´óÓÚµÈÓÚ¶àÉÙ¼¶¶Ô°×Í¼Ê¹ÓÃ»ú»áÊ¯ nilÎªÓÀÔ¶²»Ê¹ÓÃ
-g_mapUseWaErLv=82			--´óÓÚµÈÓÚ¶àÉÙ¼¶¶Ô°×¡¢À¶µØÍ¼Ê¹ÓÃÍß¶û±¦Öé nilÎªÓÀÔ¶²»Ê¹ÓÃ
+g_mapUseJiHuiLv=83			--´óÓÚµÈÓÚ¶àÉÙ¼¶¶Ô°×Í¼Ê¹ÓÃ»ú»áÊ¯ nilÎªÓÀÔ¶²»Ê¹ÓÃ
+g_mapUseWaErLv=83			--´óÓÚµÈÓÚ¶àÉÙ¼¶¶Ô°×¡¢À¶µØÍ¼Ê¹ÓÃÍß¶û±¦Öé nilÎªÓÀÔ¶²»Ê¹ÓÃ
 g_mapUseDingZiLv=nil			--´óÓÚµÈÓÚ¶àÉÙ¼¶Ê¹ÓÃÖÆÍ¼¶¤ nilÎªÓÀÔ¶²»Ê¹ÓÃ
 g_noUseMapLv=0				--²»Ê¹ÓÃ¡¢²»¼ñ¶àÉÙ½×¼°ÒÔÉÏµÄµØÍ¼ nil»ò0ÎªºöÂÔ ÉèÖÃÓÅÏÈµÄµØÍ¼³ıÍâ
 
@@ -184,9 +200,11 @@ g_mapUseOrangeMap=false		--trueÎªÊ¹ÓÃ³ÈÍ¼ nil»òfalseÎª²»Ê¹ÓÃ
 
 
 -- SetNoUseMapShuXing(className)--ÉèÖÃ²»Ê¹ÓÃ´øÓĞÄ³ÖÖÊôĞÔµÄµØÍ¼,²ÎÊı classNameÎªÊôĞÔÀàÃû
+SetNoUseMapShuXing("map_monsters_reflect_%_physical_damage")--ÉèÖÃ²»´òÎïÀí·´ÉäÊôĞÔ
 SetNoUseMapShuXing("map_monsters_reflect_%_elemental_damage")--ÉèÖÃ²»´òÄ§·¨·´ÉäÊôĞÔ
 SetNoUseMapShuXing("map_players_no_regeneration_including_es")--ÎŞ·¨»Ø¸´
 SetNoUseMapShuXing("is_blighted_map")--µòÂäµØÍ¼
+
 
 --SetLastEnterSmallMap(mapClassName)--ÉèÖÃĞèÒªºó½øĞ¡·¿¼äµÄÒì½çµØÍ¼
 --mapClassName Òì½çµØÍ¼ÀàÃû ×Ö·û´®ĞÍ
@@ -203,11 +221,8 @@ SetLastEnterSmallMap("MapWorldsArena")--¸‚¼¼ˆö
 SetLastEnterSmallMap("MapWorldsOvergrownRuin")--éL²İßzÛE
 SetLastEnterSmallMap("MapWorldsGorge")--±ù´¨É½Çğ
 
-
-
 --SetSellGoodsData(name,className,cnt,color)--ÉèÖÃÂô(»»)µÄµØÍ¼ 
 --name=ÎïÆ·Ãû className=ÎïÆ·ÀàÃû ÏÈÊ¶±ğÎïÆ·Ãû Ê¶±ğ²»µ½¾ÍÊ¶±ğÀàÃû cnt=¹»¶àÉÙÈ¥Âô color=ÑÕÉ« 0°× 1À¶ 2»Æ ¶à¸öÓÃ|¸ô¿ª
-
 
 SetSellGoodsData("„¡¶¾ÁÖ¹È","Metadata/Items/Maps/MapWorldsJungleValley",3,"0|1|2|")
 SetSellGoodsData("¶¾ÑÀº£¸Û","Metadata/Items/Maps/MapWorldsWharf",3,"0|1|2|")
@@ -270,6 +285,7 @@ SetSellGoodsData("éœªz¼âËş","Metadata/Items/Maps/MapWorldsTower",3,"0|1|2|")
 SetSellGoodsData("»ğÉ½Ñ×¿Ú","Metadata/Items/Maps/MapWorldsCaldera",3,"0|1|2|")
 
 
+
 --SetCompoundDivinationCard(name,className,nType) --ÉèÖÃĞèÒªºÏ³ÉµÄÃüÔË¿¨ name=¿¨Æ¬Ãû className=¿¨Æ¬ÀàÃû nType=ºÏ³É³¡¾° nil»ò²»ÌîÎªÎŞÂÛºÎÊ±¶¼ºÏ³É 0ÎªÃ»ÔÚË¢Òì½ç²ÅºÏ 1ÎªÖ»ÔÚË¢Òì½ç²ÅºÏ
 SetCompoundDivinationCard("ºÚ°µÈıÃæ","Metadata/Items/DivinationCards/DivinationCardThreeFacesInTheDark")--ÉèÖÃºÏ³ÉÖÒ³ÏÃüÔË¿¨
 SetCompoundDivinationCard("ÌmËş¶äÃÔã¯Ö®Û","Metadata/Items/DivinationCards/DivinationCardLantadorsLostLove")--ÉèÖÃºÏ³ÉÖÒ³ÏÃüÔË¿¨
@@ -298,28 +314,26 @@ SetCompoundDivinationCard("¶ÄÍ½","Metadata/Items/DivinationCards/DivinationCardT
 SetCompoundDivinationCard("¹¤½³´óÊ¦","Metadata/Items/DivinationCards/DivinationCardTheMasterArtisan")--ÉèÖÃºÏ³ÉÖÒ³ÏÃüÔË¿¨
 SetCompoundDivinationCard("ÇéÈË","Metadata/Items/DivinationCards/DivinationCardTheLover")--ÉèÖÃºÏ³ÉÖÒ³ÏÃüÔË¿¨
 SetCompoundDivinationCard("¾»°×","Metadata/Items/DivinationCards/DivinationCardTheOpulecent")--ÉèÖÃºÏ³ÉÖÒ³ÏÃüÔË¿¨
-SetCompoundDivinationCard("Ç«Ñ·","Metadata/Items/DivinationCards/DivinationCardHumility")--ÉèÖÃºÏ³ÉÖÒ³ÏÃüÔË¿¨
+SetCompoundDivinationCard("Ç«Ñ·","Metadata/Items/DivinationCards/DivinationCardHumility",0)--ÉèÖÃºÏ³ÉÖÒ³ÏÃüÔË¿¨
 
 --SetNeedBuyGoodsData(name,className,cnt,buyName,buyClassName)--ÉèÖÃ¿ªÊ¼Ë¢Òì½çÊ±¼ä¼ì²â¹ºÂòÖ¸¶¨ÎïÆ·
 --name=×Ô¼ºÓĞµÄÍ¨»õÃû className=×Ô¼ºÓĞµÄÍ¨»õÀàÃû cnt=¹»¶àÉÙ¸ö´¥·¢ 0»ònil ²»»á´¥·¢ buyName=ĞèÒª¹ºÂòµÄÎïÆ·Ãû buyClassName=ĞèÒª¹ºÂòµÄÎïÆ·ÀàÃû
 
 g_buyNpcData={
-mapClassName="1_3_town"
-,className="Metadata/NPC/Act3/ClarissaTown"
-}--½«»áÔÚ3ÕÂ 1_3_town ´ËNPCÏÂ¹ºÂò name:¿¨¶ûÀöÉ¯
+mapClassName="1_1_town"
+,className="Metadata/NPC/Act1/NessaTown"
+}--½«»áÔÚ1ÕÂ 1_1_town ´ËNPCÏÂ¹ºÂò name:ÄÎÉ³
 
---SetNeedBuyGoodsData("ÖªÊ¶¾íÖá","Metadata/Items/Currency/CurrencyIdentification",nil,"´«ËÍ¾íÖá","Metadata/Items/Currency/CurrencyPortal")
---SetNeedBuyGoodsData("´«ËÍ¾íÖá","Metadata/Items/Currency/CurrencyPortal",nil,"ÍÉ±äÊ¯","Metadata/Items/Currency/CurrencyUpgradeToMagic")
-SetNeedBuyGoodsData("»¤¼×Æ¬","Metadata/Items/Currency/CurrencyArmourQuality",20,"Ä¥µ¶Ê¯","Metadata/Items/Currency/CurrencyWeaponQuality")
-SetNeedBuyGoodsData("Ä¥µ¶Ê¯","Metadata/Items/Currency/CurrencyPortal",20,"²£Á§µ¯Öé","Metadata/Items/Currency/CurrencyFlaskQuality")
---SetNeedBuyGoodsData("ÍÉ±äÊ¯","Metadata/Items/Currency/CurrencyUpgradeToMagic",100,"Ôö·ùÊ¯","Metadata/Items/Currency/CurrencyAddModToMagic")
---SetNeedBuyGoodsData("Ôö·ùÊ¯","Metadata/Items/Currency/CurrencyAddModToMagic",100,"¸ÄÔìÊ¯","Metadata/Items/Currency/CurrencyRerollMagic")
---SetNeedBuyGoodsData("¸ÄÔìÊ¯","Metadata/Items/Currency/CurrencyRerollMagic",100,"¹¤½³Ê¯","Metadata/Items/Currency/CurrencyRerollSocketNumbers")
---SetNeedBuyGoodsData("¹¤½³Ê¯","Metadata/Items/Currency/CurrencyRerollSocketNumbers",60,"Á´½áÊ¯","Metadata/Items/Currency/CurrencyRerollSocketLinks")
---SetNeedBuyGoodsData("Á´½áÊ¯","Metadata/Items/Currency/CurrencyRerollSocketLinks",40,"»ú»áÊ¯","Metadata/Items/Currency/CurrencyUpgradeRandomly")
+SetNeedBuyGoodsData("ÖªÊ¶¾íÖá","Metadata/Items/Currency/CurrencyIdentification",nil,"´«ËÍ¾íÖá","Metadata/Items/Currency/CurrencyPortal")
+SetNeedBuyGoodsData("´«ËÍ¾íÖá","Metadata/Items/Currency/CurrencyPortal",nil,"ÍÉ±äÊ¯","Metadata/Items/Currency/CurrencyUpgradeToMagic")
+--SetNeedBuyGoodsData("ÍÉ±äÊ¯","Metadata/Items/Currency/CurrencyUpgradeToMagic",200,"Ôö·ùÊ¯","Metadata/Items/Currency/CurrencyAddModToMagic")
+--SetNeedBuyGoodsData("Ôö·ùÊ¯","Metadata/Items/Currency/CurrencyAddModToMagic",200,"¸ÄÔìÊ¯","Metadata/Items/Currency/CurrencyRerollMagic")
+--SetNeedBuyGoodsData("¸ÄÔìÊ¯","Metadata/Items/Currency/CurrencyRerollMagic",nil,"¹¤½³Ê¯","Metadata/Items/Currency/CurrencyRerollSocketNumbers")
+--SetNeedBuyGoodsData("¹¤½³Ê¯","Metadata/Items/Currency/CurrencyRerollSocketNumbers",100,"Á´½áÊ¯","Metadata/Items/Currency/CurrencyRerollSocketLinks")
+--SetNeedBuyGoodsData("Á´½áÊ¯","Metadata/Items/Currency/CurrencyRerollSocketLinks",100,"»ú»áÊ¯","Metadata/Items/Currency/CurrencyUpgradeRandomly")
 --SetNeedBuyGoodsData("»ú»áÊ¯","Metadata/Items/Currency/CurrencyUpgradeRandomly",100,"ÖØÖıÊ¯","Metadata/Items/Currency/CurrencyConvertToNormal")
---SetNeedBuyGoodsData("ÖØÖıÊ¯","Metadata/Items/Currency/CurrencyConvertToNormal",40,"ºó»ÚÊ¯","Metadata/Items/Currency/CurrencyPassiveRefund")
---SetNeedBuyGoodsData("ºó»ÚÊ¯","Metadata/Items/Currency/CurrencyPassiveRefund",40,"µã½ğÊ¯","Metadata/Items/Currency/CurrencyUpgradeToRare")
+--SetNeedBuyGoodsData("ÖØÖıÊ¯","Metadata/Items/Currency/CurrencyConvertToNormal",nil,"ºó»ÚÊ¯","Metadata/Items/Currency/CurrencyPassiveRefund")
+--SetNeedBuyGoodsData("ºó»ÚÊ¯","Metadata/Items/Currency/CurrencyPassiveRefund",nil,"µã½ğÊ¯","Metadata/Items/Currency/CurrencyUpgradeToRare")
 
 
 --SetGoodsCaoZuo(goodsType,czType,name,className,wordName,wordClassName,pingzhi,cnt,color,socketCnt,lineCnt,checkCangKu)-- ÉèÖÃÒª²Ù×÷µÄÎïÆ·
@@ -336,20 +350,20 @@ SetNeedBuyGoodsData("Ä¥µ¶Ê¯","Metadata/Items/Currency/CurrencyPortal",20,"²£Á§µ¯
 --lineCnt Êı×ÖĞÍ Á¬¶´ÊıÁ¿ ºöÂÔÔòÌî nil
 --checkCangKu ¼ÆËã±£ÁôÊıÁ¿Ê±ÊÇ·ñÁ¬²Ö¿âÄÚµÄÊıÁ¿Ò²¼ÆËã½øÈ¥ nil»òfalseÎª²»¼ÆËã²Ö¿â true ÎªĞèÒª¼ÆËã
 SetGoodsCaoZuo("Í¨»õ|¿É¶ÑµşÍ¨»õ|Òì½çµØÍ¼","0|2")--¶à¸ö´óÀàÉèÖÃ¼ñ´æ
-SetGoodsCaoZuo("Ö÷¶¯¼¼ÄÜ±¦Ê¯|¸¨Öú¼¼ÄÜ±¦Ê¯","0|1",nil,nil,nil,nil,5)--Ê°È¡Æ·ÖÊ³¬¹ı5µÄ¼¼ÄÜ±¦Ê¯
+SetGoodsCaoZuo("Ö÷¶¯¼¼ÄÜ±¦Ê¯|¸¨Öú¼¼ÄÜ±¦Ê¯","0|2",nil,nil,nil,nil,5)--Ê°È¡Æ·ÖÊ³¬¹ı5µÄ¼¼ÄÜ±¦Ê¯
+
 SetGoodsCaoZuo(nil,"0|1|4",nil,nil,nil,nil,nil,nil,"3")--Ê°È¡ ¼ø¶¨ ³öÊÛ³ÈÉ«ÎïÆ·
-SetGoodsCaoZuo(nil,"0|2","µã½ğÊ¯","Metadata/Items/Currency/CurrencyUpgradeToRare")--ÉíÉÏ±£Áô40
-SetGoodsCaoZuo(nil,"0|2","»ú»áÊ¯","Metadata/Items/Currency/CurrencyUpgradeRandomly")--ÉíÉÏ±£Áô40
 SetGoodsCaoZuo(nil,nil,"ÖªÊ¶¾íÖá","Metadata/Items/Currency/CurrencyIdentification",nil,nil,nil,40)--¹»ÁË¾Í²»¼ñÁË
 SetGoodsCaoZuo(nil,nil,"´«ËÍ¾íÖá","Metadata/Items/Currency/CurrencyPortal",nil,nil,nil,80)--¹»ÁË¾Í²»¼ñÁË
+SetGoodsCaoZuo(nil,nil,"µã½ğÊ¯","Metadata/Items/Currency/CurrencyUpgradeToRare",nil,nil,nil,40)--ÉíÉÏ±£Áô40
 SetGoodsCaoZuo(nil,"0|1",nil,nil,nil,nil,nil,nil,"0|1|2",6)--6¶´×°ÉèÖÃ¼ñÂô
 SetGoodsCaoZuo(nil,"0|1",nil,nil,nil,nil,nil,nil,"0|1|2",nil,6)--6Á¬¶´×°ÉèÖÃ¼ñÂô
 SetGoodsCaoZuo("×¦","0|1|4",nil,nil,nil,nil,5,nil,"2")--¼ñÂô¾«Á¼µÄ»Æ×¦×Ó
 SetGoodsCaoZuo("Öé±¦|ÉîÔ¨Öé±¦","0|1|4",nil,nil,nil,nil,nil,nil,"2")--Ê°È¡ ¼ø¶¨ ³öÊÛ»ÆÉ«ÎïÆ·Öé±¦
 SetGoodsCaoZuo(nil,"1|3","ÖÜÄê¸£´ü","Metadata/Items/MicrotransactionCurrency/MicrotransactionTencentEventCoin")--
 SetGoodsCaoZuo(nil,"1|3","²£Á§µ¯Öé","Metadata/Items/Currency/CurrencyFlaskQuality")--
-SetGoodsCaoZuo(nil,"1","Ä¥µ¶Ê¯","Metadata/Items/Currency/CurrencyWeaponQuality")--Ä¥µ¶Ê¯²»´æ
-SetGoodsCaoZuo(nil,"1","»¤¼×Æ¬","Metadata/Items/Currency/CurrencyArmourQuality")--»¤¼×Æ¬²»´æ
+SetGoodsCaoZuo(nil,"0","Ä¥µ¶Ê¯","Metadata/Items/Currency/CurrencyWeaponQuality")--Ä¥µ¶Ê¯²»´æ
+SetGoodsCaoZuo(nil,"0","»¤¼×Æ¬","Metadata/Items/Currency/CurrencyArmourQuality")--»¤¼×Æ¬²»´æ
 SetGoodsCaoZuo(nil,"3","¾íÖáËéÆ¬","Metadata/Items/Currency/CurrencyIdentificationShard")--¾íÖáËéÆ¬¶ª
 SetGoodsCaoZuo(nil,"3","Ô¤ÑÔ","Metadata/Items/Currency/CurrencyItemisedProphecy")--¶ªÔ¤ÑÔ
 SetGoodsCaoZuo(nil,"0|2","ÌmËş¶äÃÔã¯Ö®Û","Metadata/Items/DivinationCards/DivinationCardLantadorsLostLove")
@@ -363,6 +377,8 @@ SetGoodsCaoZuo(nil,"1|3",nil,"Metadata/Items/Metamorphosis/MetamorphosisEye")--å
 SetGoodsCaoZuo(nil,"1|3",nil,"Metadata/Items/Metamorphosis/MetamorphosisLiver")--å€Ä§¸ÎÅK²»¼ñ
 SetGoodsCaoZuo(nil,"1|3",nil,"Metadata/Items/Metamorphosis/MetamorphosisLung")--å€Ä§·ÎÅK²»¼ñ
 SetGoodsCaoZuo(nil,"1|3",nil,"Metadata/Items/Metamorphosis/MetamorphosisHeart")--å€Ä§ĞÄÅK²»¼ñ
+
+
 
 
 SetGoodsCaoZuo("Òì½çµØÍ¼","1|3","ÖÂÃüÑÒ©","Metadata/Items/Maps/MapWorldsCursedCrypt",nil,nil,nil,nil,"3")
@@ -385,7 +401,7 @@ SetGoodsCaoZuo(nil,"1|3","çúçêÓÍÆ¿","Metadata/Items/Currency/Mushrune3")
 SetGoodsCaoZuo(nil,"1|3","´ä¾GÓÍÆ¿","Metadata/Items/Currency/Mushrune4")
 SetGoodsCaoZuo(nil,"1|3","Çå¾GÓÍÆ¿","Metadata/Items/Currency/Mushrune5")
 SetGoodsCaoZuo(nil,"1|3","±ÌË{ÓÍÆ¿","Metadata/Items/Currency/Mushrune6")
-SetGoodsCaoZuo(nil,"1|3","Ô¤ÑÔ","Metadata/Items/Currency/CurrencyItemisedProphecy")
+--SetGoodsCaoZuo(nil,"1|3","Ô¤ÑÔ","Metadata/Items/Currency/CurrencyItemisedProphecy")
 SetGoodsCaoZuo(nil,"1|3","±©Ñ×»¯Ê¯","Metadata/Items/Currency/CurrencyDelveCraftingFire")--¿É¶Ñ¯BÍ¨Ø›
 SetGoodsCaoZuo(nil,"1|3","º®ïL»¯Ê¯","Metadata/Items/Currency/CurrencyDelveCraftingCold")--¿É¶Ñ¯BÍ¨Ø›
 SetGoodsCaoZuo(nil,"1|3","½ğä“»¯Ê¯","Metadata/Items/Currency/CurrencyDelveCraftingLightning")--¿É¶Ñ¯BÍ¨Ø›
