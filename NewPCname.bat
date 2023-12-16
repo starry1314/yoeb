@@ -28,7 +28,7 @@ if not defined ipAddress (
 
 set "ipAddress=%ipAddress: =%"
 set "ipAddress=%ipAddress:.=_%"
-set "newName=%nob%-%ipAddress%"
+set "newName=VM_%nob%"
 
 wmic computersystem where name="%computername%" call rename name="%newName%"
 
