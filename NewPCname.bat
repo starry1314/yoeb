@@ -6,7 +6,6 @@ mshta vbscript:createobject("shell.application").shellexecute("%~s0","goto :runa
 
 setlocal EnableDelayedExpansion
 
-
 set "inifile=C:\Users\Administrator\Desktop\IOT\setnb.ini"
 set "newName="
 set "ipAddress="
@@ -33,8 +32,8 @@ if not defined ipAddress (
 )
 
 set "ipAddress=%ipAddress: =%"
-set "ipAddress=%ipAddress:.=_%"
-set "newName=VM_%nob%_%ipAddress%"
+for /f "tokens=3,4 delims=." %%i in ("%ipAddress%") do set "ipAddress=%%i_%%j"
+set "newName=VM-%nob%-%ipAddress%"
 
 wmic computersystem where name="%computername%" call rename name="%newName%"
 
