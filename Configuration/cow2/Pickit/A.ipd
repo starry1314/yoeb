@@ -2,19 +2,34 @@
 [Type] == "Viridian Jewel" && [Rarity] == "Unique" #   [UniqueName] == "Stormshroud" && [StashItem] == "true"    //風暴籠罩 綠
 [Type] == "Viridian Jewel" && [Rarity] == "Unique" #   [UniqueName] == "Quickening Covenant" && [StashItem] == "true"  //復甦誓約 綠
 [Type] == "Crimson Jewel" && [Rarity] == "Unique" #   [UniqueName] == "Primordial Might" && [StashItem] == "true"   //先祖力量 紅
+[Type] == "Crimson Jewel" && [Rarity] == "Unique" # [UniqueName] == "Inertia" && [StashItem] == "true" //慣性
+[Type] == "Viridian Jewel" && [Rarity] == "Unique" #    [UniqueName] == "Unnatural Instinct" && [StashItem] == "true"     //神感
+[Type] == "Cobalt Jewel" && [Rarity] == "Unique" #    [UniqueName] == "Fortress Covenant" && [StashItem] == "true"     //堅壁誓約
 
 //3.22季初武器
-//[Type] == "Short Bow" && [Rarity] == "Unique" #    [UniqueName] == "Quill Rain" && [StashItem] == "true"    //小雨
+[Type] == "Short Bow" && [Rarity] == "Unique" #    [UniqueName] == "Quill Rain" && [StashItem] == "true"    //小雨
 [Type] == "Prophecy Wand" && [Rarity] == "Unique" #   [UniqueName] == "Void Battery" && [StashItem] == "true"    //電池
 [Type] == "Assassin Bow" && [Rarity] == "Unique" # [UniqueName] == "Darkscorn" && [StashItem] == "true"	//夜吟 暗殺弓
-//[Type] == "Imperial Skean" && [Rarity] == "Unique" # [UniqueName] == "Divinarius" && [StashItem] == "true"	//戒律之影 帝國雙刃匕
+[Type] == "Imperial Skean" && [Rarity] == "Unique" # [UniqueName] == "Divinarius" && [StashItem] == "true"	//戒律之影 帝國雙刃匕
 [Type] == "Fiend Dagger" && [Rarity] == "Unique" #    [UniqueName] == "Arakaali's Fang" && [StashItem] == "true"   //蜘蛛刀
 [Type] == "Spine Bow" && [Rarity] == "Unique" #    [UniqueName] == "Voltaxic Rift" && [StashItem] == "true"   //魔暴
 [Type] == "Maata's Teaching Karui Sceptre" && [Rarity] == "Unique" # [UniqueName] == "" && [StashItem] == "true"	//瑪塔的教導 卡魯權杖
+[Type] == "Ezomyte Staff" && [Rarity] == "Unique" # [UniqueName] == "The Fulcrum" && [StashItem] == "true"// 支點 艾茲麥長杖
+[Type] == "Engraved Greatsword" && [Rarity] == "Unique" # [UniqueName] == "Rakiata's Dance" &&  [StashItem] == "true"//萊基亞塔的舞步
 
 //3.22季初防具
 [Type] == "Necromancer Silks" && [Rarity] == "Unique" #  [UniqueName] == "Fleshcrafter" && [StashItem] == "true"    //人體匠師
 [Type] == "Sadist Garb" && [Rarity] == "Unique" #    [UniqueName] == "Inpulsa's Broken Heart" && [StashItem] == "true" //印卜薩
+[Type] == "Murder Mitts" && [Rarity] == "Unique" # [UniqueName] == "Thunderfist" && [StashItem] == "true"	//轟天雷
+[Type] == "Exquisite Leather" && [Rarity] == "Unique" # [UniqueName] == "Yriel's Fostering" && [StashItem] == "true" // //伊瑞的栽培
+[Type] == "Riveted Boots" && [Rarity] == "Unique" # [UniqueName] == "Ralakesh's Impatience" && [StashItem] == "true"	//芮勒蓋許的急躁
+[Type] == "Carnal Boots" && [Rarity] == "Unique" # [UniqueName] == "Corpsewalker" && [StashItem] == "true"	//行屍走肉
+
+//預兆
+[Type] == "Omen of Connections" # [StashItem] == "true"////6L預兆
+[Type] == "Omen of Blanching" # [StashItem] == "true"////1~3白預兆
+[Type] == "Omen of the Jeweller" # [StashItem] == "true"////6S預兆
+[Type] == "Omen of Fortune" # [StashItem] == "true" //	財富之預兆
 
 //3.22季初傳送門
 [Type] == "Portal" #  [StashItem] == "true"//傳送門
@@ -42,15 +57,15 @@
 //[Type] == "Glorious Plate" && [Rarity] == "Unique" # [UniqueName] == "Kaom's Heart" && [StashItem] == "true"	//岡姆的壯志
 
 //藥水//
-[Type] == "Divine Life Flask"&& [ItemLevel] >= "84" && [ItemLevel] <="100" # [StashItem] == "true" // 不朽生命藥劑
+[Type] == "Divine Life Flask"&& [ItemLevel] >= "80" && [ItemLevel] <="100" # [StashItem] == "true" // 不朽生命藥劑
 //[Type] == "Silver Flask"&& 		[ItemLevel] >= "84" && [ItemLevel] <="100" # [StashItem] == "true" //猛攻
-[Type] == "Diamond Flask"&& 		[ItemLevel] >= "84" && [ItemLevel] <="100" # [StashItem] == "true" //寶鑽
+[Type] == "Diamond Flask"&& 		[ItemLevel] >= "80" && [ItemLevel] <="100" # [StashItem] == "true" //寶鑽
 //[Type] == "Jade Flask"&& 		[ItemLevel] >= "84" && [ItemLevel] <="100" # [StashItem] == "true" //+1500閃避
-//[Type] == "Quicksilver Flask"&& 	[ItemLevel] >= "84" && [ItemLevel] <="100" # [StashItem] == "true" //跑水
+[Type] == "Quicksilver Flask"&& 	[ItemLevel] >= "80" && [ItemLevel] <="100" # [StashItem] == "true" //跑水
 
 
 //[Type] == "Amethyst Flask"&& 		[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" //紫晶
-[Type] == "Bismuth Flask"&& 		[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" //灰岩
+[Type] == "Bismuth Flask"&& 		[ItemLevel] >= "80" && [ItemLevel] <="100" # [StashItem] == "true" //灰岩
 //[Type] == "Granite Flask"&& 		[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" //+1500護甲
 
 //地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖
