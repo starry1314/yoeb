@@ -94,12 +94,13 @@
 [Type] == "Wharf Map" # [StashItem] == "true" //
 [Type] == "Mud Geyser Map" # [StashItem] == "true" //
 [Type] == "Crimson Temple Map" # [StashItem] == "true" //
-[Type] == "Bog Map " # [StashItem] == "true" //
+[Type] == "Bog Map" # [StashItem] == "true" //瘴氣泥沼
+[Type] == "City Square Map" # [StashItem] == "true" //危城廣場
 
 [Type] == "Cemetery Map" # StashItem] == "true" ///
 [Type] == "Bazaar Map" # [StashItem] == "true" //
 [Type] == "Leyline Map" # [StashItem] == "true" //
-[Type] == "Bog Map " # [StashItem] == "true" //
+
 
 [Type]=="Wharf Map" && [MapTier] <= "13" # [ForceSellItem] == "true"
 [Type]=="Crimson Temple Map"&& [MapTier] <= "13" # [ForceSellItem] == "true"
@@ -122,7 +123,10 @@
 [Type]== "Maze of the Minotaur Map"#[StashItem]== "true"//牛頭人謎域 #																								
 [Type]== "Pit of the Chimera Map"#[StashItem]== "true"//奇美拉魔坑 #	
 
-	
+[Type] =="Incandescent Invitation" #	[StashItem]	 == "true" 	//	//熾熱之邀	拾取且存倉
+//[Type] =="Polaric Invitation" #	[StashItem]	 == "true" 	//	//極地之邀	拾取且存倉
+[Type] == "Screaming Invitation" #	[StashItem]	 == "true" 	//	//尖哮之邀	拾取且存倉
+//[Type] =="Writhing Invitation" #	[StashItem]	 == "true" 	//	//纏繞之邀	拾取且存倉	
 
 
 //地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖
