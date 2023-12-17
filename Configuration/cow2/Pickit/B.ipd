@@ -1,3 +1,6 @@
+//3.23
+[Type] == "Valdo's Puzzle Box" # [StashItem] == "true" //瓦爾多的謎盒拾取
+
 //3.22季初珠寶
 [Type] == "Viridian Jewel" && [Rarity] == "Unique" #   [UniqueName] == "Stormshroud" && [StashItem] == "true"    //風暴籠罩 綠
 [Type] == "Viridian Jewel" && [Rarity] == "Unique" #   [UniqueName] == "Quickening Covenant" && [StashItem] == "true"  //復甦誓約 綠
