@@ -91,13 +91,15 @@
 
 
 
-//[Type] == "Wharf Map" # [StashItem] == "true" //
-//[Type] == "Mud Geyser Map" # [StashItem] == "true" //
-//[Type] == "Crimson Temple Map" # [StashItem] == "true" //
+[Type] == "Wharf Map" # [StashItem] == "true" //
+[Type] == "Mud Geyser Map" # [StashItem] == "true" //
+[Type] == "Crimson Temple Map" # [StashItem] == "true" //
+[Type] == "Bog Map " # [StashItem] == "true" //
 
-//[Type] == "Cemetery Map" # StashItem] == "true" ///
-//[Type] == "Bazaar Map" # [StashItem] == "true" //
-//[Type] == "Leyline Map" # [StashItem] == "true" //
+[Type] == "Cemetery Map" # StashItem] == "true" ///
+[Type] == "Bazaar Map" # [StashItem] == "true" //
+[Type] == "Leyline Map" # [StashItem] == "true" //
+[Type] == "Bog Map " # [StashItem] == "true" //
 
 [Type]=="Wharf Map" && [MapTier] <= "13" # [ForceSellItem] == "true"
 [Type]=="Crimson Temple Map"&& [MapTier] <= "13" # [ForceSellItem] == "true"
@@ -108,12 +110,13 @@
 [Type]=="Leyline Map"  && [MapTier] <= "13 "# [ForceSellItem] == "true"
 
 [Category] == "Map" && [Rarity] == "Rare" && [map_contains_citadel] >= "1" # [StashItem] == "true" // 13855 Citadel Maps 征服
-//[Category] == "Map" && [Rarity] == "Rare" && [map_elder_boss_variation] >= "1" # [StashItem] == "true" // 6551 Elder Maps 尊師
+[Category] == "Map" && [Rarity] == "Rare" && [map_elder_boss_variation] >= "1" # [StashItem] == "true" // 6551 Elder Maps 尊師
 [Type] == "Synthesised Map" # [StashItem] == "true" // 追憶系列地圖
 
 
 [Category] == "Map" && [Rarity] == "Rare" && [map_contains_citadel] >= "1" # [StashItem] == "true" // 13855 Citadel Maps 征服圖
-// [Category] == "Map" && [Rarity] == "Rare" && [map_elder_boss_variation] >= "1" # [StashItem] == "true" // 6551 Elder Maps 尊師																	
+ [Category] == "Map" && [Rarity] == "Rare" && [map_elder_boss_variation] >= "1" # [StashItem] == "true" // 6551 Elder Maps 尊師																	
+
 [Type]== "Forge of the Phoenix Map"#[StashItem]== "true"//火鳳凰熔核 #																								
 [Type]== "Lair of the Hydra Map"#[StashItem]== "true"//九頭蛇冰窟 #																								
 [Type]== "Maze of the Minotaur Map"#[StashItem]== "true"//牛頭人謎域 #																								
@@ -358,3 +361,4 @@
 	[Type] == "Elegant Round Shield" && [Rarity] == "Unique" # [UniqueName] == "The Squire" && [StashItem] == "true"	//大地主權貴圓盾
 	[Type] == "Carnal Armour" && [Rarity] == "Unique" # [UniqueName] == "Stasis Prison" && [StashItem] == "true"	//靜止牢籠禁禮之甲
 																	
+
