@@ -37,10 +37,10 @@
 //弓箭手套裝//
 //[Type] == "Praetor Crown" && [Rarity] == "Unique" # [UniqueName] == "Voll's Vision" && [StashItem] == "true"	//福爾的遠見
 [Type] == "Zodiac Leather" && [Rarity] == "Unique" # [UniqueName] == "Hyrri's Ire" && [StashItem] == "true"	//西里的戰衣星辰皮甲
-[Type] == "Titan Gauntlets" && [Rarity] == "Unique" # [UniqueName] == "Kaom's Spirit" && [StashItem] == "true"	//岡姆之魂
+//[Type] == "Titan Gauntlets" && [Rarity] == "Unique" # [UniqueName] == "Kaom's Spirit" && [StashItem] == "true"	//岡姆之魂
 //[Type] == "Rawhide Boots" && [Rarity] == "Unique" # [UniqueName] == "Seven-League Step" && [StashItem] == "true"	//盟誓之跡
 //[Type] == "Rustic Sash" && [Rarity] == "Unique" # [UniqueName] == "Prismweave" && [StashItem] == "true"	//幻彩菱織 腰帶
-[Type] == "Two-Stone Ring" && [Rarity] == "Unique" # [UniqueName] == "Berek's Respite" && [StashItem] == "true"	//貝雷克的火與雷之樂 最少
+[Type] == "Two-Stone Ring" && [Rarity] == "Unique" # [UniqueName] == "Berek's Respite" && [StashItem] == "true"	//貝雷克的火與雷之樂
 //[Type] == "Two-Stone Ring" && [Rarity] == "Unique" # [UniqueName] == "Berek's Grip" && [StashItem] == "true"	//貝雷克的冰與雷之曲
 //[Type] == "Two-Stone Ring" && [Rarity] == "Unique" # [UniqueName] == "Berek's Pass" && [StashItem] == "true"	//貝雷克的冰與火之歌
 [Type] == "Amethyst Ring" && [Rarity] == "Unique" # [UniqueName] == "Death Rush" && [StashItem] == "true"	//亡者呼喚 紫晶戒指
@@ -58,9 +58,9 @@
 
 //藥水//
 [Type] == "Divine Life Flask"&& [ItemLevel] >= "80" && [ItemLevel] <="100" # [StashItem] == "true" // 不朽生命藥劑
-//[Type] == "Silver Flask"&& 		[ItemLevel] >= "80" && [ItemLevel] <="100" # [StashItem] == "true" //猛攻
+//[Type] == "Silver Flask"&& 		[ItemLevel] >= "84" && [ItemLevel] <="100" # [StashItem] == "true" //猛攻
 [Type] == "Diamond Flask"&& 		[ItemLevel] >= "80" && [ItemLevel] <="100" # [StashItem] == "true" //寶鑽
-//[Type] == "Jade Flask"&& 		[ItemLevel] >= "80" && [ItemLevel] <="100" # [StashItem] == "true" //+1500閃避
+//[Type] == "Jade Flask"&& 		[ItemLevel] >= "84" && [ItemLevel] <="100" # [StashItem] == "true" //+1500閃避
 [Type] == "Quicksilver Flask"&& 	[ItemLevel] >= "80" && [ItemLevel] <="100" # [StashItem] == "true" //跑水
 
 
@@ -71,33 +71,36 @@
 //地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖
 
 
-[Type] == "Crimson Temple Map" && [MapTier] >= "14"  && [Rarity] == "Normal"  #[StashItem] == "true" // //普通地圖存倉
-[Type] == "Crimson Temple Map" && [MapTier] >= "14"  && [Rarity] == "Magic"  #[StashItem] == "true" // //藍地圖存倉
-[Type] == "Crimson Temple Map" && [MapTier] >= "14"  && [Rarity] == "Rare"  #[ForceSellItem] == "true" //黃地圖售出
+[Type] == "Crimson Temple Map" && [MapTier] >= "14"  && [Rarity] == "Normal"  #[StashItem] == "true" // //普通地圖普通地圖撿取，普通地圖存倉
+[Type] == "Crimson Temple Map" && [MapTier] >= "14"  && [Rarity] == "Magic"  #[StashItem] == "true" // //藍地圖藍地圖撿取，藍地圖存倉
+[Type] == "Crimson Temple Map" && [MapTier] >= "14"  && [Rarity] == "Rare"  #[StashItem] == "true" // //黃地圖黃地圖不撿，黃地圖售出
 
 [Type] == "City Square Map" && [MapTier] >= "14"  && [Rarity] == "Normal"  #[StashItem] == "true" // //普通地圖普通地圖撿取，普通地圖存倉
 [Type] == "City Square Map" && [MapTier] >= "14"  && [Rarity] == "Magic"  #[StashItem] == "true" // //藍地圖藍地圖撿取，藍地圖存倉
-[Type] == "City Square Map" && [MapTier] >= "14"  && [Rarity] == "Rare"  #[ForceSellItem] == "true" // //黃地圖黃地圖不撿，黃地圖售出
+[Type] == "City Square Map" && [MapTier] >= "14"  && [Rarity] == "Rare"  #[StashItem] == "true" // //黃地圖黃地圖不撿，黃地圖售出
 
 
 [Type] == "Cemetery Map" && [MapTier] >= "14"  && [Rarity] == "Normal"  #[StashItem] == "true" // //普通地圖普通地圖撿取，普通地圖存倉
 [Type] == "Cemetery Map" && [MapTier] >= "14"  && [Rarity] == "Magic"  #[StashItem] == "true" // //藍地圖藍地圖撿取，藍地圖存倉
-[Type] == "Cemetery Map" && [MapTier] >= "14"  && [Rarity] == "Rare"  #[ForceSellItem] == "true" // //黃地圖黃地圖不撿，黃地圖售出
+[Type] == "Cemetery Map" && [MapTier] >= "14"  && [Rarity] == "Rare"  #[StashItem] == "true" // //黃地圖黃地圖不撿，黃地圖售出
 
 [Type] == "Leyline Map" && [MapTier] >= "14"  && [Rarity] == "Normal"  #[StashItem] == "true" // //普通地圖普通地圖撿取，普通地圖存倉
 [Type] == "Leyline Map" && [MapTier] >= "14"  && [Rarity] == "Magic"  #[StashItem] == "true" // //藍地圖藍地圖撿取，藍地圖存倉
-[Type] == "Leyline Map" && [MapTier] >= "14"  && [Rarity] == "Rare"  #[ForceSellItem] == "true" // //黃地圖黃地圖不撿，黃地圖售出
+[Type] == "Leyline Map" && [MapTier] >= "14"  && [Rarity] == "Rare"  #[StashItem] == "true" // //黃地圖黃地圖不撿，黃地圖售出
 
 
 
 
-//[Type] == "Wharf Map" # [StashItem] == "true" //
-//[Type] == "Mud Geyser Map" # [StashItem] == "true" //
-//[Type] == "Crimson Temple Map" # [StashItem] == "true" //
+[Type] == "Wharf Map" # [StashItem] == "true" //
+[Type] == "Mud Geyser Map" # [StashItem] == "true" //
+[Type] == "Crimson Temple Map" # [StashItem] == "true" //
+[Type] == "Bog Map" # [StashItem] == "true" //瘴氣泥沼
+[Type] == "City Square Map" # [StashItem] == "true" //危城廣場
 
-//[Type] == "Cemetery Map" # StashItem] == "true" ///
-//[Type] == "Bazaar Map" # [StashItem] == "true" //
-//[Type] == "Leyline Map" # [StashItem] == "true" //
+[Type] == "Cemetery Map" # StashItem] == "true" ///
+[Type] == "Bazaar Map" # [StashItem] == "true" //
+[Type] == "Leyline Map" # [StashItem] == "true" //
+
 
 [Type]=="Wharf Map" && [MapTier] <= "13" # [ForceSellItem] == "true"
 [Type]=="Crimson Temple Map"&& [MapTier] <= "13" # [ForceSellItem] == "true"
@@ -108,16 +111,22 @@
 [Type]=="Leyline Map"  && [MapTier] <= "13 "# [ForceSellItem] == "true"
 
 [Category] == "Map" && [Rarity] == "Rare" && [map_contains_citadel] >= "1" # [StashItem] == "true" // 13855 Citadel Maps 征服
-//[Category] == "Map" && [Rarity] == "Rare" && [map_elder_boss_variation] >= "1" # [StashItem] == "true" // 6551 Elder Maps 尊師
+[Category] == "Map" && [Rarity] == "Rare" && [map_elder_boss_variation] >= "1" # [StashItem] == "true" // 6551 Elder Maps 尊師
 [Type] == "Synthesised Map" # [StashItem] == "true" // 追憶系列地圖
 
 
 [Category] == "Map" && [Rarity] == "Rare" && [map_contains_citadel] >= "1" # [StashItem] == "true" // 13855 Citadel Maps 征服圖
-// [Category] == "Map" && [Rarity] == "Rare" && [map_elder_boss_variation] >= "1" # [StashItem] == "true" // 6551 Elder Maps 尊師																		
+ [Category] == "Map" && [Rarity] == "Rare" && [map_elder_boss_variation] >= "1" # [StashItem] == "true" // 6551 Elder Maps 尊師																	
+
 [Type]== "Forge of the Phoenix Map"#[StashItem]== "true"//火鳳凰熔核 #																								
 [Type]== "Lair of the Hydra Map"#[StashItem]== "true"//九頭蛇冰窟 #																								
 [Type]== "Maze of the Minotaur Map"#[StashItem]== "true"//牛頭人謎域 #																								
 [Type]== "Pit of the Chimera Map"#[StashItem]== "true"//奇美拉魔坑 #	
+
+[Type] =="Incandescent Invitation" #	[StashItem]	 == "true" 	//	//熾熱之邀	拾取且存倉
+//[Type] =="Polaric Invitation" #	[StashItem]	 == "true" 	//	//極地之邀	拾取且存倉
+[Type] == "Screaming Invitation" #	[StashItem]	 == "true" 	//	//尖哮之邀	拾取且存倉
+//[Type] =="Writhing Invitation" #	[StashItem]	 == "true" 	//	//纏繞之邀	拾取且存倉	
 
 
 //地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖
@@ -206,9 +215,9 @@
 //[Type] == "Blacksmith's Whetstone" # [StashItem] == "true" //	//磨刀石
 //[Type] == "Armourer's Scrap" # [StashItem] == "true" //	//護甲片
 [Type] == "Glassblower's Bauble" # [StashItem] == "true" //	//玻璃彈珠
-[Type] == "Blessed Orb" # [StashItem] == "true" //	//祝福石
+//[Type] == "Blessed Orb" # [StashItem] == "true" //	//祝福石
 
-//[Type] == "Forbidden Tome" #[StashItem] == "true" // 禁忌之書 
+// [Type] == "Forbidden Tome" #[StashItem] == "true" // 禁忌之書 
 
 //[Type] == "Singular Scouting Report" # [StashItem] == "true" //	//卓越偵查報告
 //[Type] == "Otherworldly Scouting Report" # [StashItem] == "true" //	//超凡偵查報告
@@ -356,3 +365,4 @@
 	[Type] == "Elegant Round Shield" && [Rarity] == "Unique" # [UniqueName] == "The Squire" && [StashItem] == "true"	//大地主權貴圓盾
 	[Type] == "Carnal Armour" && [Rarity] == "Unique" # [UniqueName] == "Stasis Prison" && [StashItem] == "true"	//靜止牢籠禁禮之甲
 																	
+
