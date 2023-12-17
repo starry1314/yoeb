@@ -263,6 +263,7 @@
 [Type] == "Empower Support" #[StashItem] == "true"////賦予輔助拾取且存倉
 [Type] == "Enlighten Support" #[StashItem] == "true"////啟蒙輔助拾取且存倉
 
+[Type] == "I See Brothers" # [StashItem] == "true"// 3.23 來的兄弟 破裂石
 
 [Type] == "Fire Of Unknown Origin" # [StashItem] == "true"// 3.22尼米斯卡
 [Type] == "The Fortunate" # [StashItem] == "true"// 3.22神聖卡
