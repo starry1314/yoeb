@@ -25,6 +25,8 @@
 [Type] == "Arcade Map" # [RunMap] == "true"
 [Type]=="Cemetery Map" # [RunMap] == "true"
 [Type]=="Leyline Map" # [RunMap] == "true"
+[Type]=="Grotto Map" # [RunMap] == "true"
+[Type]=="Strand Map" # [RunMap] == "true"
 
 
 
