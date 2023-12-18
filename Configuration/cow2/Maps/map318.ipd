@@ -125,3 +125,32 @@
 	
 	[3248] >= "1" && [Rarity] == "Magic" #	[RerollMods]	=="true
 	[3248] >= "1" && [Rarity] == "Rare" #	[RerollMods]	=="true
+
+==================【避打征服與尊師】=============
+[6831] >= "1" # [IgnoreMap] == "true" // Shaper/Elder maps
+// [6831] == "1" # [IgnoreMap] == "true" // Shaper maps
+// [6831] == "2" # [IgnoreMap] == "true" // Elder maps
+
+// Conquerors
+[13855] >= "1" # [IgnoreMap] == "true" // Conq maps
+// [13855] == "1" # [IgnoreMap] == "true" // Baron maps
+// [13855] == "2" # [IgnoreMap] == "true" // Veritania maps
+// [13855] == "3" # [IgnoreMap] == "true" // Drox maps
+// [13855] == "4" # [IgnoreMap] == "true" // Al-Hezmin maps
+
+[6827] == "1" # [IgnoreMap] == "true" // Elder infuenced maps
+[6827] == "2" # [IgnoreMap] == "true" // Elder infuenced maps
+[6827] == "3" # [IgnoreMap] == "true" // Elder infuenced maps
+[6827] == "4" # [IgnoreMap] == "true" // Elder infuenced maps
+
+[13845] == "1"  # [IgnoreMap] == "true" // Baron maps
+[13845] == "2"  # [IgnoreMap] == "true" // Veritania maps
+[13845] == "3"  # [lgnoreMap] == "true" // Drox maps
+[13845] == "4"  # [lgnoreMap] =="true" // AI-Hezmin maps
+
+[11508] >= "1" # [IgnoreMap] == "true" // Delirium maps
+
+[Type] == "Synthesised Map" # [lgnoreMap] == "true" // Synthesised maps
+[map_contains_citadel] >= "1"            # [IgnoreMap] == "true" // Elder Maps
+[map_elder_boss_variation] >= "1"        # [IgnoreMap] == "true" // Guardian Maps
+[map_atlas_influence_type] >= "1"        # [IgnoreMap] == "true" // Guardian Maps
