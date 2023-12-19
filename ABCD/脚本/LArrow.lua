@@ -37,6 +37,7 @@ g_duobiHpVal=0.2
 
 --添加攻击技能 name=技能名 className=技能类名 noLine=不在直线就能攻击 挑选攻击技能会从上到下寻找，要把厉害的技能加在前面
 AddAttackSkillData("龍捲射擊","tornado_shot",false,100,0)--添加攻击技能
+AddAttackSkillData("閃電箭矢","lightning_arrow",false,99,0)--添加攻击技能
 AddAttackSkillData("普通攻击","melee")
 SetDebuffSkill(nil,"snipers_mark",nil,"curse_snipers_mark")--狙擊者印記
 
