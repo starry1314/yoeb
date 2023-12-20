@@ -198,6 +198,18 @@ SetLastEnterSmallMap("MapWorldsOvergrownRuin")--長草遺跡
 SetLastEnterSmallMap("MapWorldsGorge")--冰川山丘
 
 
+SetMapCfg(name,className,px,noUse,noTf)--添加地图设置
+--name 字符串型 地图物品名字
+--className 字符串型 地图物品类名
+--px 逻辑型 是否使用平行石  true为使用 false或nil为不使用
+--noUse 逻辑型 是否不打这个图 true为不打 false或nil为打
+--noTf 逻辑型 拓地图天赋时是否不打这个图 true为不打 false或nil为打
+--要平行，不刷的地图
+SetMapCfg(nil,"Metadata/Items/Maps/MapWorldsMalformation",true,true)--畸形亡域 有8个通道
+SetMapCfg(nil,"Metadata/Items/Maps/MapWorldsOvergrownRuin",true,true)--长草遗迹
+SetMapCfg(nil,"Metadata/Items/Maps/MapWorldsLaboratory",true,true)--实验密室
+SetMapCfg(nil,"Metadata/Items/Maps/MapWorldsArena",true,true)--競技場
+SetMapCfg(nil,"Metadata/Items/Maps/MapWorldsCore",true,true)--核心
 
 --SetSellGoodsData(name,className,cnt,color)--设置卖(换)的地图 
 --name=物品名 className=物品类名 先识别物品名 识别不到就识别类名 cnt=够多少去卖 color=颜色 0白 1蓝 2黄 多个用|隔开
