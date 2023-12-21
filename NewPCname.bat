@@ -33,7 +33,7 @@ if not defined ipAddress (
 
 set "ipAddress=%ipAddress: =%"
 for /f "tokens=3,4 delims=." %%i in ("%ipAddress%") do set "ipAddress=%%i_%%j"
-set "newName=%nob%-%ipAddress%"
+set "newName=V-%nob%-%ipAddress%"
 
 wmic computersystem where name="%computername%" call rename name="%newName%"
 
