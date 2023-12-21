@@ -109,13 +109,7 @@ AddNeedBuySkillTime(6,"a10q2")	--µÚ10ÕÂµÄËÀÍöºÍÖØÉúÈÎÎñ ¼ì²â¹ºÂòÒ»±é
 AddNeedBuySkillTime(11,"a11q1")	--ÔÚÊ°È¡ËéÆ¬ Õâ¸öÈÎÎñÊ±¼ì²â¹ºÂòÒ»±é
 
 
---Ò©Æ¿°Ú·Å
---SetNeedFlaskData(pos,flask,modsData,minLv)--ÉèÖÃÒ©Æ¿°Ú·Å
-SetNeedFlaskData(1,"ÉúÃüÒ©¼Á","ŸáÇéÑóÒçµÄ,FlaskPartialInstantRecovery3|ÃÜ·âÖ®,FlaskBleedCorruptingBloodImmunity1",90)
-SetNeedFlaskData(2,"Ä§Á¦Ò©¼Á","ÄÍ¾ÃµÄ,FlaskEffectNotRemovedOnFullMana1|ŠWĞgŸÖ®FlaskBuffReducedManaCostWhileHealing4",90)
-SetNeedFlaskData(3,"±¦×êÒ©¼Á","nil")
-SetNeedFlaskData(4,"×Ï¾§Ò©¼Á","nil")
-SetNeedFlaskData(5,"Ë®ÒøÒ©¼Á","nil")
+
 
 --AddNotMakeTaskData(taskClassName)--Ìí¼Ó²»ĞèÒª×öµÄÈÎÎñ taskClassNameÎªÈÎÎñÀàÃû
 AddNotMakeTaskData("a2q5")--ÃÎÖĞÊ¥µØ
@@ -180,15 +174,15 @@ g_yuyanCnt=nil				--¹»¶àÉÙÒø±ÒÈ¥Ô¤ÑÔ£¬Ğ¡ÓÚ10Òø±Ò»òÌînil½«²»»á´¥·¢ Èç¹ûÉè¶¨È¥Ô¤ÑÔ
 --SetNotMapGoMap(className,cnt) ÉèÖÃÎŞµØÍ¼»òÎ´µ½µÈ¼¶Ê±ÒªË¢µÄ¾çÇéµØÍ¼ className×Ö·û´®ĞÍ µØÍ¼ÀàÃû cnt=´ÎÊı
 SetNotMapGoMap("2_9_1",10)	--ÎŞµØÍ¼Ê±Ë¢ÑªÉ«Í¨µÀ
 
-g_yiJieLv=90				--¹»ÁË¶àÉÙ¼¶²ÅÈ¥Ë¢Òì½ç
+g_yiJieLv=70				--¹»ÁË¶àÉÙ¼¶²ÅÈ¥Ë¢Òì½ç
 g_checkSellMapCnt=100		--µØÍ¼³¬¹ıÕâ¸öÊıÁ¿²Å»á¼ì²â³öÊÛµØÍ¼
 g_destroyNoUseMap=true		--Ïú»ÙÉÏÃæÉèÖÃ²»Ê¹ÓÃµÄµØÍ¼ nil»òfalseÎª²»Ïú»Ù
 g_mapUseFuHaoLv=78			--´óÓÚµÈÓÚ¶àÉÙ¼¶¶ÔÀ¶Í¼Ê¹ÓÃ¸»ºÀÊ¯ nilÎªÓÀÔ¶²»Ê¹ÓÃ
 g_mapUseZengFuLv=78			--´óÓÚµÈÓÚ¶àÉÙ¼¶¶ÔÀ¶Í¼Ê¹ÓÃÔö·ùÊ¯ nilÎªÓÀÔ¶²»Ê¹ÓÃ
 g_mapUseDianJingLv=76		--´óÓÚµÈÓÚ¶àÉÙ¼¶¶Ô°×Í¼Ê¹ÓÃµã½ğÊ¯ nilÎªÓÀÔ¶²»Ê¹ÓÃ
 g_mapUseTuiBianLv=72		--´óÓÚµÈÓÚ¶àÉÙ¼¶¶Ô°×Í¼Ê¹ÓÃÍÉ±äÊ¯ nilÎªÓÀÔ¶²»Ê¹ÓÃ
-g_mapUseJiHuiLv=83			--´óÓÚµÈÓÚ¶àÉÙ¼¶¶Ô°×Í¼Ê¹ÓÃ»ú»áÊ¯ nilÎªÓÀÔ¶²»Ê¹ÓÃ
-g_mapUseWaErLv=83			--´óÓÚµÈÓÚ¶àÉÙ¼¶¶Ô°×¡¢À¶µØÍ¼Ê¹ÓÃÍß¶û±¦Öé nilÎªÓÀÔ¶²»Ê¹ÓÃ
+g_mapUseJiHuiLv=75			--´óÓÚµÈÓÚ¶àÉÙ¼¶¶Ô°×Í¼Ê¹ÓÃ»ú»áÊ¯ nilÎªÓÀÔ¶²»Ê¹ÓÃ
+g_mapUseWaErLv=81			--´óÓÚµÈÓÚ¶àÉÙ¼¶¶Ô°×¡¢À¶µØÍ¼Ê¹ÓÃÍß¶û±¦Öé nilÎªÓÀÔ¶²»Ê¹ÓÃ
 g_mapUseDingZiLv=nil			--´óÓÚµÈÓÚ¶àÉÙ¼¶Ê¹ÓÃÖÆÍ¼¶¤ nilÎªÓÀÔ¶²»Ê¹ÓÃ
 g_noUseMapLv=0				--²»Ê¹ÓÃ¡¢²»¼ñ¶àÉÙ½×¼°ÒÔÉÏµÄµØÍ¼ nil»ò0ÎªºöÂÔ ÉèÖÃÓÅÏÈµÄµØÍ¼³ıÍâ
 
@@ -205,6 +199,18 @@ SetNoUseMapShuXing("map_monsters_reflect_%_elemental_damage")--ÉèÖÃ²»´òÄ§·¨·´ÉäÊ
 SetNoUseMapShuXing("map_players_no_regeneration_including_es")--ÎŞ·¨»Ø¸´
 SetNoUseMapShuXing("is_blighted_map")--µòÂäµØÍ¼
 
+--SetMapCfg(name,className,px,noUse,noTf)--Ìí¼ÓµØÍ¼ÉèÖÃ
+--name ×Ö·û´®ĞÍ µØÍ¼ÎïÆ·Ãû×Ö
+--className ×Ö·û´®ĞÍ µØÍ¼ÎïÆ·ÀàÃû
+--px Âß¼­ĞÍ ÊÇ·ñÊ¹ÓÃÆ½ĞĞÊ¯  trueÎªÊ¹ÓÃ false»ònilÎª²»Ê¹ÓÃ
+--noUse Âß¼­ĞÍ ÊÇ·ñ²»´òÕâ¸öÍ¼ trueÎª²»´ò false»ònilÎª´ò
+--noTf Âß¼­ĞÍ ÍØµØÍ¼Ìì¸³Ê±ÊÇ·ñ²»´òÕâ¸öÍ¼ trueÎª²»´ò false»ònilÎª´ò
+--ÒªÆ½ĞĞ£¬²»Ë¢µÄµØÍ¼
+SetMapCfg(nil,"Metadata/Items/Maps/MapWorldsMalformation",true,true)--»ûĞÎÍöÓò ÓĞ8¸öÍ¨µÀ
+SetMapCfg(nil,"Metadata/Items/Maps/MapWorldsOvergrownRuin",true,true)--³¤²İÒÅ¼£
+SetMapCfg(nil,"Metadata/Items/Maps/MapWorldsLaboratory",true,true)--ÊµÑéÃÜÊÒ
+SetMapCfg(nil,"Metadata/Items/Maps/MapWorldsArena",true,true)--¸‚¼¼ˆö
+SetMapCfg(nil,"Metadata/Items/Maps/MapWorldsCore",true,true)--ºËĞÄ
 
 --SetLastEnterSmallMap(mapClassName)--ÉèÖÃĞèÒªºó½øĞ¡·¿¼äµÄÒì½çµØÍ¼
 --mapClassName Òì½çµØÍ¼ÀàÃû ×Ö·û´®ĞÍ

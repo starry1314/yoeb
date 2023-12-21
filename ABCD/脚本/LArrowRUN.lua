@@ -51,12 +51,13 @@ SetSkillLimitMaxLv("鋼筋鐵骨",nil,14)
 
 -- SetYiJieZhaoHuanLingTiData(mapClassName,name,className)--设置异界时召唤的灵体数据 mapClassName=剧情图类名 name=灵体名 className=灵体类名
 
+--药瓶摆放
 --SetNeedFlaskData(pos,flask,modsData,minLv)--设置药瓶摆放
-SetNeedFlaskData(1,"生命药剂","nil")
-SetNeedFlaskData(2,"生命药剂","nil")
-SetNeedFlaskData(3,"水银药剂","nil")
-SetNeedFlaskData(4,"魔力药剂","nil")
-SetNeedFlaskData(5,"魔力药剂","nil")
+SetNeedFlaskData(1,"生命药剂","熱情洋溢的,FlaskPartialInstantRecovery3|密封之,FlaskBleedCorruptingBloodImmunity1",90)
+SetNeedFlaskData(2,"魔力药剂","耐久的,FlaskEffectNotRemovedOnFullMana1|奧術師之FlaskBuffReducedManaCostWhileHealing4",90)
+SetNeedFlaskData(3,"宝钻药剂","nil")
+SetNeedFlaskData(4,"紫晶药剂","nil")
+SetNeedFlaskData(5,"水银药剂","nil")
 
 
 g_addHpVal=0.7--HP低于多少吃红药
