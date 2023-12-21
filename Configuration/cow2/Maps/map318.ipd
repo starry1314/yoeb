@@ -38,6 +38,8 @@
 [Type] == "Arcade Map" # [ExitAfterBossKill] == "true"
 [Type]=="Cemetery Map" # [ExitAfterBossKill] == "true"
 [Type]=="Leyline Map" # [ExitAfterBossKill] == "true"
+[Type]=="Grotto Map" # [ExitAfterBossKill] == "true"
+[Type]=="Strand Map" # [ExitAfterBossKill] == "true"
 
 																		
 																									
