@@ -41,7 +41,7 @@
 [Type] == "Heavy Belt" && [Rarity] == "Unique" # [faster_burn_from_attacks_%] >= "1" && [StashItem] == "true" // 迪安
 [Type] == "Goathide Gloves" && [Rarity] == "Unique" # [base_physical_damage_%_to_convert_to_cold] >= "1" && [StashItem] == "true" // 冰冷之眼
 //[Type]== "Iron Ring" && [Rarity] == "Unique" # [StashItem] == "true" // 寶靈
-[Type]== "Topaz Ring" && [Rarity] == "Unique" # [StashItem] == "true" // 風暴之密
+//[Type]== "Topaz Ring" && [Rarity] == "Unique" # [StashItem] == "true" // 風暴之密
 [Type]=="Primal Arrow Quiver" &&  [Rarity] == "Unique" # [StashItem] == "true" ////優雅迷鏡
 
 //弓箭手套裝//
