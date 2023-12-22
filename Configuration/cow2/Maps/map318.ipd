@@ -19,15 +19,15 @@
 
 [Type] == "City Square Map" #[RunMap] == "true"
 [Type] == "Toxic Sewer Map" #[RunMap] == "true"
-[Type]=="Crimson Temple Map" # [RunMap]=="true"
-[Type]=="Sulphur Vents Map" # [RunMap]=="true"
+[Type] == "Crimson Temple Map" # [RunMap]=="true"
+[Type] == "Sulphur Vents Map" # [RunMap]=="true"
 [Type] == "Canyon Map" # [RunMap] == "true"
 [Type] == "Arcade Map" # [RunMap] == "true"
-[Type]=="Cemetery Map" # [RunMap] == "true"
-[Type]=="Leyline Map" # [RunMap] == "true"
-[Type]=="Grotto Map" # [RunMap] == "true"
-[Type]=="Strand Map" # [RunMap] == "true"
-[Type]=="Bog Map" # [RunMap] == "true"
+[Type] == "Cemetery Map" # [RunMap] == "true"
+[Type] == "Leyline Map" # [RunMap] == "true"
+[Type] == "Grotto Map" # [RunMap] == "true"
+[Type] == "Strand Map" # [RunMap] == "true"
+[Type] == "Bog Map" # [RunMap] == "true"
 
 
 
