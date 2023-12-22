@@ -1,5 +1,7 @@
 //3.23
 [Type] == "Valdo's Puzzle Box" # [StashItem] == "true" //瓦爾多的謎盒拾取
+[Type] == "I See Brothers" # [StashItem] == "true" ////來了兄弟
+[Type] == "Assassin's Gift" # [StashItem] == "true" ////刺客的餽贈
 
 //3.22季初珠寶
 [Type] == "Viridian Jewel" && [Rarity] == "Unique" #   [UniqueName] == "Stormshroud" && [StashItem] == "true"    //風暴籠罩 綠
