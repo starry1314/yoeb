@@ -105,7 +105,7 @@
 [Type] == "Mud Geyser Map" # [StashItem] == "true" //
 [Type] == "Crimson Temple Map" # [StashItem] == "true" //
 [Type] == "Temple Map" # [StashItem] == "true" //奪魂之殿
-//[Type] == "Bog Map" # [StashItem] == "true" //瘴氣泥沼
+[Type] == "Bog Map" # [StashItem] == "true" //瘴氣泥沼
 [Type] == "City Square Map" # [StashItem] == "true" //危城廣場
 
 [Type] == "Cemetery Map" # StashItem] == "true" ///
