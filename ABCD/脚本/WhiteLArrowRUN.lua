@@ -91,7 +91,13 @@ SetAtuoChangeEquipData("游侠","弓","local_maximum_added_cold_damage",5)--
 SetAtuoChangeEquipData("游侠","弓","local_maximum_added_lightning_damage",5)--
 
 --游侠
-
+--药瓶摆放
+--SetNeedFlaskData(pos,flask,modsData,minLv)--设置药瓶摆放
+SetNeedFlaskData(1,"生命药剂","熱情洋溢的,FlaskPartialInstantRecovery3|密封之,FlaskBleedCorruptingBloodImmunity1",90)
+SetNeedFlaskData(2,"魔力药剂","耐久的,FlaskEffectNotRemovedOnFullMana1|奧術師之FlaskBuffReducedManaCostWhileHealing4",90)
+SetNeedFlaskData(3,"宝钻药剂","nil")
+SetNeedFlaskData(4,"紫晶药剂","nil")
+SetNeedFlaskData(5,"水银药剂","nil")
 
 --游侠--孔色
 SetZhengTiColorVarData(2,2,3,1,nil,800,true)
