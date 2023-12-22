@@ -27,6 +27,9 @@
 [Type]=="Leyline Map" # [RunMap] == "true"
 [Type]=="Grotto Map" # [RunMap] == "true"
 [Type]=="Strand Map" # [RunMap] == "true"
+[Type]=="Bog Map" # [RunMap] == "true"
+
+
 
 
 
