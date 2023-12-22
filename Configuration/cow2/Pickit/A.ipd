@@ -1,7 +1,34 @@
 //3.23
 [Type] == "Valdo's Puzzle Box" # [StashItem] == "true" //瓦爾多的謎盒拾取
+[Type] == "Valdo's Puzzle Box" # [StashItem] == "true" //瓦爾多的謎盒拾取
 [Type] == "I See Brothers" # [StashItem] == "true" ////來了兄弟
 [Type] == "Assassin's Gift" # [StashItem] == "true" ////刺客的餽贈
+[Type] == "Eldritch Perfection" # [StashItem] == "true" ////完美異能
+[Type] == "Who Asked" # [StashItem] == "true" ////是誰
+[Type] == "Hinekora's Lock" # [StashItem] == "true" ////悉妮蔻拉的髮絲
+[Type] == "Omen of Acceleration" # [StashItem] == "true" //加速之預兆
+[Type] == "Omen of Adrenaline" # [StashItem] == "true" //腎上腺素之預兆
+[Type] == "Omen of Amelioration" # [StashItem] == "true" //改善之預兆
+[Type] == "Omen of Bequeathal" # [StashItem] == "true" //傳承之預兆
+[Type] == "Omen of Blanching" # [StashItem] == "true" //白化之預兆
+[Type] == "Omen of Brilliance" # [StashItem] == "true" //光輝之預兆
+[Type] == "Omen of Connections" # [StashItem] == "true" //連結之預兆
+[Type] == "Omen of Death's Door" # [StashItem] == "true" //死者大門之預兆
+[Type] == "Omen of Death-dancing" # [StashItem] == "true" //死舞之預兆
+[Type] == "Omen of Fortune" # [StashItem] == "true" //財富之預兆
+[Type] == "Omen of Refreshment" # [StashItem] == "true" //提神之預兆
+[Type] == "Omen of Resurgence" # [StashItem] == "true" //復甦之預兆
+[Type] == "Omen of Return" # [StashItem] == "true" //返回之預兆
+[Type] == "Omen of Revenge" # [StashItem] == "true" //復仇之預兆
+[Type] == "Omen of the Jeweller" # [StashItem] == "true" //工匠之預兆
+[Type] == "Omen of the Soul Devourer" # [StashItem] == "true" //嗜魂者之預兆
+[Type] == "Gamblesprint" && [Rarity] == "Unique" # [UniqueName] == "Hydrascale Boots" && [StashItem] == "true" ////豪賭 火蝮鱗長靴
+[Type] == "Nametaker" && [Rarity] == "Unique" # [UniqueName] == "Graceful Sword" && [StashItem] == "true" ////拉瑪塔克 權貴之劍
+[Type] == "Pragmatism" && [Rarity] == "Unique" # [UniqueName] == "Colosseum Plate" && [StashItem] == "true" ////實用主義 決鬥之鎧
+[Type] == "The Adorned" && [Rarity] == "Unique" # [UniqueName] == "Crimson Jewel" && [StashItem] == "true" ////假掰 赤紅珠寶
+[Type] == "The Flawed Refuge" && [Rarity] == "Unique" # [UniqueName] == "Maple Round Shield" && [StashItem] == "true" ////殘缺庇護 楓木圓盾
+[Type] == "The Trickster's Smile" && [Rarity] == "Unique" # [UniqueName] == "Visored Sallet" && [StashItem] == "true" ////戲法師的微笑 清視護盔
+[Type] == "The Untouched Soul" && [Rarity] == "Unique" # [UniqueName] == "Gold Amulet" && [StashItem] == "true" ////聖潔之魂 帝金護身符
 
 //3.22季初珠寶
 [Type] == "Viridian Jewel" && [Rarity] == "Unique" #   [UniqueName] == "Stormshroud" && [StashItem] == "true"    //風暴籠罩 綠
