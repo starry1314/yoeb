@@ -73,7 +73,7 @@
 [Type]=="Primal Arrow Quiver" &&  [Rarity] == "Unique" # [StashItem] == "true" ////優雅迷鏡
 
 //弓箭手套裝//
-//[Type] == "Praetor Crown" && [Rarity] == "Unique" # [UniqueName] == "Voll's Vision" && [StashItem] == "true"	//福爾的遠見
+[Type] == "Praetor Crown" && [Rarity] == "Unique" # [UniqueName] == "Voll's Vision" && [StashItem] == "true"	//福爾的遠見
 [Type] == "Zodiac Leather" && [Rarity] == "Unique" # [UniqueName] == "Hyrri's Ire" && [StashItem] == "true"	//西里的戰衣星辰皮甲
 //[Type] == "Titan Gauntlets" && [Rarity] == "Unique" # [UniqueName] == "Kaom's Spirit" && [StashItem] == "true"	//岡姆之魂
 //[Type] == "Rawhide Boots" && [Rarity] == "Unique" # [UniqueName] == "Seven-League Step" && [StashItem] == "true"	//盟誓之跡
@@ -134,7 +134,7 @@
 [Type] == "Crimson Temple Map" # [StashItem] == "true" //
 [Type] == "Temple Map" # [StashItem] == "true" //奪魂之殿
 [Type] == "Bog Map" # [StashItem] == "true" //瘴氣泥沼
-[Type] == "City Square Map" # [StashItem] == "true" //危城廣場
+//[Type] == "City Square Map" # [StashItem] == "true" //危城廣場
 
 [Type] == "Cemetery Map" # StashItem] == "true" ///
 [Type] == "Bazaar Map" # [StashItem] == "true" //
