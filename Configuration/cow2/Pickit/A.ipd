@@ -1,6 +1,5 @@
 //3.23
 [Type] == "Valdo's Puzzle Box" # [StashItem] == "true" //瓦爾多的謎盒拾取
-[Type] == "Valdo's Puzzle Box" # [StashItem] == "true" //瓦爾多的謎盒拾取
 [Type] == "I See Brothers" # [StashItem] == "true" ////來了兄弟
 [Type] == "Assassin's Gift" # [StashItem] == "true" ////刺客的餽贈
 [Type] == "Eldritch Perfection" # [StashItem] == "true" ////完美異能
@@ -74,8 +73,8 @@
 //[Type]=="Primal Arrow Quiver" &&  [Rarity] == "Unique" # [StashItem] == "true" ////優雅迷鏡
 
 //弓箭手套裝//
-//[Type] == "Praetor Crown" && [Rarity] == "Unique" # [UniqueName] == "Voll's Vision" && [StashItem] == "true"	//福爾的遠見
-[Type] == "Zodiac Leather" && [Rarity] == "Unique" # [UniqueName] == "Hyrri's Ire" && [StashItem] == "true"	//西里的戰衣星辰皮甲
+[Type] == "Praetor Crown" && [Rarity] == "Unique" # [UniqueName] == "Voll's Vision" && [StashItem] == "true"	//福爾的遠見
+//[Type] == "Zodiac Leather" && [Rarity] == "Unique" # [UniqueName] == "Hyrri's Ire" && [StashItem] == "true"	//西里的戰衣星辰皮甲
 //[Type] == "Titan Gauntlets" && [Rarity] == "Unique" # [UniqueName] == "Kaom's Spirit" && [StashItem] == "true"	//岡姆之魂
 //[Type] == "Rawhide Boots" && [Rarity] == "Unique" # [UniqueName] == "Seven-League Step" && [StashItem] == "true"	//盟誓之跡
 //[Type] == "Rustic Sash" && [Rarity] == "Unique" # [UniqueName] == "Prismweave" && [StashItem] == "true"	//幻彩菱織 腰帶
