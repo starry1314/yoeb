@@ -132,6 +132,7 @@
 [Type] == "Wharf Map" # [StashItem] == "true" //
 [Type] == "Mud Geyser Map" # [StashItem] == "true" //
 [Type] == "Crimson Temple Map" # [StashItem] == "true" //
+[Type] == "Maze Map" # [StashItem] == "true" // 冥神之域
 [Type] == "Temple Map" # [StashItem] == "true" //奪魂之殿
 [Type] == "Bog Map" # [StashItem] == "true" //瘴氣泥沼
 //[Type] == "City Square Map" # [StashItem] == "true" //危城廣場
