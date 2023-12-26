@@ -28,7 +28,7 @@
 [Type] == "Grotto Map" # [RunMap] == "true"
 [Type] == "Strand Map" # [RunMap] == "true"
 [Type] == "Bog Map" # [RunMap] == "true"
-
+[Type] == "Maze Map" # [RunMap] == "true" // 冥神之域
 
 
 
