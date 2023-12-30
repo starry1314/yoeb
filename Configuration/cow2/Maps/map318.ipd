@@ -29,6 +29,8 @@
 [Type] == "Strand Map" # [RunMap] == "true"
 [Type] == "Bog Map" # [RunMap] == "true"
 [Type] == "Maze Map" # [RunMap] == "true" // 冥神之域
+[Type] == "Shore Map" # [RunMap] == "true" // 墓光海灘
+[Type] == "Dry Sea Map" # [RunMap] == "true" // 乾海
 
 
 
@@ -43,6 +45,8 @@
 [Type]=="Leyline Map" # [ExitAfterBossKill] == "true"
 [Type]=="Grotto Map" # [ExitAfterBossKill] == "true"
 [Type]=="Strand Map" # [ExitAfterBossKill] == "true"
+[Type] == "Shore Map" # [ExitAfterBossKill] == "true" // 墓光海灘
+[Type] == "Dry Sea Map" # [ExitAfterBossKill] == "true" // 乾海
 
 																		
 																									
