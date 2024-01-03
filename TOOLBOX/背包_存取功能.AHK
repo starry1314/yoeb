@@ -93,7 +93,7 @@ StoreItems() {
             MouseMove, x, y
             Sleep, 50
             Send, ^{Click}
-            Sleep, 50
+            
         }
     }
     storeRunning := false
@@ -112,7 +112,30 @@ ToggleRetrieve() {
 
 ; 取倉功能
 RetrieveItems() {
-    ; 省略，與原始腳本相同
+    global retrieveRunning
+    pixelX := 0
+    pixelY := 0
+    maxAttempts := 1200
+    attempts := 0
+    Send, {Ctrl Down}
+    while (retrieveRunning && attempts < maxAttempts) {
+        PixelSearch, pixelX, pixelY, 16, 95, 364, 451, 0x77B4E7, 3, Fast
+        if (ErrorLevel) {
+		Send, {Ctrl Up}
+            Send, {Ctrl Up}
+			Send, {Ctrl Up}
+            break
+        } else {
+            gemx := pixelX + 2
+            gemy := pixelY + 2
+            Click, %gemx%, %gemy%
+            Sleep, 60
+            attempts++
+        }
+		Send, {Ctrl Up}
+    }
+    Send, {Ctrl Up}
+	Send, {Ctrl Up}
 }
 
 ; 重新啟動腳本
