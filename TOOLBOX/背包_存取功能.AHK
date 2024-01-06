@@ -16,7 +16,7 @@ Gui, Add, Text,, F11 - 重新啟動
 
 ; 設定 GUI 的尺寸並顯示在螢幕右上角
 guiWidth := 400  ; GUI 的寬度
-guiHeight := 100  ; GUI 的高度
+guiHeight := 140  ; GUI 的高度
 screenWidth := A_ScreenWidth
 screenHeight := A_ScreenHeight
 guiX := screenWidth - guiWidth  ; GUI 的 x 座標
@@ -91,7 +91,7 @@ StoreItems() {
                 return
             x := startX + (A_Index - 1) * offsetX
             MouseMove, x, y
-            Sleep, 50
+            Sleep, 60
             Send, ^{Click}
             
         }
@@ -117,22 +117,26 @@ RetrieveItems() {
     pixelY := 0
     maxAttempts := 1200
     attempts := 0
-    Send, {Ctrl Down}
+	
+   
     while (retrieveRunning && attempts < maxAttempts) {
         PixelSearch, pixelX, pixelY, 16, 95, 364, 451, 0x77B4E7, 3, Fast
         if (ErrorLevel) {
 		Send, {Ctrl Up}
-            Send, {Ctrl Up}
-			Send, {Ctrl Up}
+        Send, {Ctrl Up}
             break
         } else {
             gemx := pixelX + 2
             gemy := pixelY + 2
+			 Send, {Ctrl Down}
             Click, %gemx%, %gemy%
-            Sleep, 60
+			
+            Sleep, 50
             attempts++
+			Send, {Ctrl Up}
+
         }
-		Send, {Ctrl Up}
+		
     }
     Send, {Ctrl Up}
 	Send, {Ctrl Up}
