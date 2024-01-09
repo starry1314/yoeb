@@ -1,3 +1,9 @@
+//3.23有價紋身、預兆
+[Type] == "Omen of Connections" # 			[StashItem] == "true"////6L預兆
+[Type] == "Omen of Blanching" # 			[StashItem] == "true"////1~3白預兆
+[Type] == "Omen of the Jeweller" # 			[StashItem] == "true"////6S預兆
+[Type] == "Hinekora's Lock" # 				[StashItem] == "true"////髮絲
+[Type] == "Omen of Fortune" # 				[StashItem] == "true"////麻雀變鳳凰
 //3.23
 [Type] == "Valdo's Puzzle Box" # [StashItem] == "true" //瓦爾多的謎盒拾取
 [Type] == "I See Brothers" # [StashItem] == "true" ////來了兄弟
