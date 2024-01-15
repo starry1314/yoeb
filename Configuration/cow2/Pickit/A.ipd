@@ -4,6 +4,7 @@
 [Type] == "Omen of the Jeweller" # 			[StashItem] == "true"////6S預兆
 [Type] == "Hinekora's Lock" # 				[StashItem] == "true"////髮絲
 [Type] == "Omen of Fortune" # 				[StashItem] == "true"////麻雀變鳳凰
+[Type] == "The Risk" # 	[StashItem]	 == "true" // 2.0 C	//	危機(賭神芬多)
 
 //3.23
 [Type] == "Valdo's Puzzle Box" # [StashItem] == "true" //瓦爾多的謎盒拾取
