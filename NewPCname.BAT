@@ -1,12 +1,5 @@
 ﻿@echo off
-title AutoUAC
-color 0B
 
-:: 以下指令會令執行此bat檔案時、(call vbs) 自動以系統管理員啟動
-PUSHD %~DP0 & cd /d "%~dp0"
-%1 %2
-mshta vbscript:createobject("shell.application").shellexecute("%~s0","goto :runas","","runas",1)(window.close)&goto :eof
-:runas
 REM 移動到腳本目錄
 PUSHD %~DP0 & cd /d "%~dp0"
 
