@@ -75,7 +75,7 @@
 
 //3.23套裝//
 [Type] == "Heavy Belt" && [Rarity] == "Unique" # [faster_burn_from_attacks_%] >= "1" && [StashItem] == "true" // 迪安
-//[Type] == "Goathide Gloves" && [Rarity] == "Unique" # [base_physical_damage_%_to_convert_to_cold] >= "1" && [StashItem] == "true" // 冰冷之眼
+[Type] == "Goathide Gloves" && [Rarity] == "Unique" # [base_physical_damage_%_to_convert_to_cold] >= "1" && [StashItem] == "true" // 冰冷之眼
 //[Type]== "Iron Ring" && [Rarity] == "Unique" # [StashItem] == "true" // 寶靈
 //[Type]== "Topaz Ring" && [Rarity] == "Unique" # [StashItem] == "true" // 風暴之密
 //[Type]=="Primal Arrow Quiver" &&  [Rarity] == "Unique" # [StashItem] == "true" ////優雅迷鏡
@@ -83,16 +83,16 @@
 //弓箭手套裝//
 [Type] == "Praetor Crown" && [Rarity] == "Unique" # [UniqueName] == "Voll's Vision" && [StashItem] == "true"	//福爾的遠見
 [Type] == "Zodiac Leather" && [Rarity] == "Unique" # [UniqueName] == "Hyrri's Ire" && [StashItem] == "true"	//西里的戰衣星辰皮甲
-//[Type] == "Titan Gauntlets" && [Rarity] == "Unique" # [UniqueName] == "Kaom's Spirit" && [StashItem] == "true"	//岡姆之魂
-//[Type] == "Rawhide Boots" && [Rarity] == "Unique" # [UniqueName] == "Seven-League Step" && [StashItem] == "true"	//盟誓之跡
-//[Type] == "Rustic Sash" && [Rarity] == "Unique" # [UniqueName] == "Prismweave" && [StashItem] == "true"	//幻彩菱織 腰帶
+[Type] == "Titan Gauntlets" && [Rarity] == "Unique" # [UniqueName] == "Kaom's Spirit" && [StashItem] == "true"	//岡姆之魂
+[Type] == "Rawhide Boots" && [Rarity] == "Unique" # [UniqueName] == "Seven-League Step" && [StashItem] == "true"	//盟誓之跡
+[Type] == "Rustic Sash" && [Rarity] == "Unique" # [UniqueName] == "Prismweave" && [StashItem] == "true"	//幻彩菱織 腰帶
 [Type] == "Two-Stone Ring" && [Rarity] == "Unique" # [UniqueName] == "Berek's Respite" && [StashItem] == "true"	//貝雷克的火與雷之樂
-//[Type] == "Two-Stone Ring" && [Rarity] == "Unique" # [UniqueName] == "Berek's Grip" && [StashItem] == "true"	//貝雷克的冰與雷之曲
-//[Type] == "Two-Stone Ring" && [Rarity] == "Unique" # [UniqueName] == "Berek's Pass" && [StashItem] == "true"	//貝雷克的冰與火之歌
+[Type] == "Two-Stone Ring" && [Rarity] == "Unique" # [UniqueName] == "Berek's Grip" && [StashItem] == "true"	//貝雷克的冰與雷之曲
+[Type] == "Two-Stone Ring" && [Rarity] == "Unique" # [UniqueName] == "Berek's Pass" && [StashItem] == "true"	//貝雷克的冰與火之歌
 [Type] == "Amethyst Ring" && [Rarity] == "Unique" # [UniqueName] == "Death Rush" && [StashItem] == "true"	//亡者呼喚 紫晶戒指
 [Type] == "Jade Amulet" && [Rarity] == "Unique" # [UniqueName] == "Hyrri's Truth" && [StashItem] == "true"	//西里的真理
-//[Type] == "Primal Arrow Quiver" && [Rarity] == "Unique" # [UniqueName] == "The Poised Prism" && [StashItem] == "true"	//優雅迷鏡
-//[Type] == "Stealth Boots" && [Rarity] == "Unique" # [cannot_have_life_leeched_from] >= "1" && [StashItem] == "true" // 敏銳思維 匿蹤短靴
+[Type] == "Primal Arrow Quiver" && [Rarity] == "Unique" # [UniqueName] == "The Poised Prism" && [StashItem] == "true"	//優雅迷鏡
+[Type] == "Stealth Boots" && [Rarity] == "Unique" # [cannot_have_life_leeched_from] >= "1" && [StashItem] == "true" // 敏銳思維 匿蹤短靴
 
 //迷宮裝//
 //[Type] == "Plank Kite Shield" && [Rarity] == "Unique" # [UniqueName] == "Springleaf" && [StashItem] == "true"	//新生之徽
@@ -103,16 +103,16 @@
 //[Type] == "Glorious Plate" && [Rarity] == "Unique" # [UniqueName] == "Kaom's Heart" && [StashItem] == "true"	//岡姆的壯志
 
 //藥水//
-//[Type] == "Divine Life Flask"&& [ItemLevel] >= "80" && [ItemLevel] <="100" # [StashItem] == "true" // 不朽生命藥劑
-//[Type] == "Silver Flask"&& 		[ItemLevel] >= "84" && [ItemLevel] <="100" # [StashItem] == "true" //猛攻
-//[Type] == "Diamond Flask"&& 		[ItemLevel] >= "80" && [ItemLevel] <="100" # [StashItem] == "true" //寶鑽
+[Type] == "Divine Life Flask"&& [ItemLevel] >= "80" && [ItemLevel] <="100" # [StashItem] == "true" // 不朽生命藥劑
+[Type] == "Silver Flask"&& 		[ItemLevel] >= "75" && [ItemLevel] <="100" # [StashItem] == "true" //猛攻
+[Type] == "Diamond Flask"&& 		[ItemLevel] >= "75" && [ItemLevel] <="100" # [StashItem] == "true" //寶鑽
 //[Type] == "Jade Flask"&& 		[ItemLevel] >= "84" && [ItemLevel] <="100" # [StashItem] == "true" //+1500閃避
-//[Type] == "Quicksilver Flask"&& 	[ItemLevel] >= "80" && [ItemLevel] <="100" # [StashItem] == "true" //跑水
+[Type] == "Quicksilver Flask"&& 	[ItemLevel] >= "75" && [ItemLevel] <="100" # [StashItem] == "true" //跑水
 
 
 //[Type] == "Amethyst Flask"&& 		[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" //紫晶
-//[Type] == "Bismuth Flask"&& 		[ItemLevel] >= "80" && [ItemLevel] <="100" # [StashItem] == "true" //灰岩
-//[Type] == "Granite Flask"&& 		[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" //+1500護甲
+[Type] == "Bismuth Flask"&& 		[ItemLevel] >= "75" && [ItemLevel] <="100" # [StashItem] == "true" //灰岩
+[Type] == "Granite Flask"&& 		[ItemLevel] >= "75" && [ItemLevel] <="100" # [StashItem] == "true" //+1500護甲
 
 //地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖
 
@@ -253,25 +253,25 @@
 
 //季初開啟////季初開啟////季初開啟////季初開啟////季初開啟////季初開啟////季初開啟////季初開啟////季初開啟////季初開啟////季初開啟////季初開啟//
 
-//[Type] == "Orb of Alteration" # [StashItem] == "true"////改造石拾取且存倉
-//[Type] == "Orb of Regret"# [StashItem] == "true"////後悔石拾取且存倉//
+[Type] == "Orb of Alteration" # [StashItem] == "true"////改造石拾取且存倉
+[Type] == "Orb of Regret"# [StashItem] == "true"////後悔石拾取且存倉//
 [Type] == "Orb of Unmaking"# [StashItem] == "true"////撤銷石拾取且存倉
 [Type] == "Enkindling Orb"# [StashItem] == "true"////點燃石拾取且存倉
 [Type] == "Instilling Orb" # [StashItem] == "true" //	//滴注石
-//[Type] == "Orb of Scouring"# [StashItem] == "true"////重鑄 拾取且存倉
-//[Type] == "Regal Orb" # [StashItem] == "true"////富豪
+[Type] == "Orb of Scouring"# [StashItem] == "true"////重鑄 拾取且存倉
+[Type] == "Regal Orb" # [StashItem] == "true"////富豪
 [Type] == "Orb of Horizons"# [StashItem] == "true"////地平石拾取且存倉
 [Type] == "Enhance Support" #[StashItem] == "true"////增幅輔助
-//[Type] == "Blacksmith's Whetstone" # [StashItem] == "true" //	//磨刀石
-//[Type] == "Armourer's Scrap" # [StashItem] == "true" //	//護甲片
+[Type] == "Blacksmith's Whetstone" # [StashItem] == "true" //	//磨刀石
+[Type] == "Armourer's Scrap" # [StashItem] == "true" //	//護甲片
 [Type] == "Glassblower's Bauble" # [StashItem] == "true" //	//玻璃彈珠
-//[Type] == "Blessed Orb" # [StashItem] == "true" //	//祝福石
+[Type] == "Blessed Orb" # [StashItem] == "true" //	//祝福石
 
- //[Type] == "Forbidden Tome" #[StashItem] == "true" // 禁忌之書 
+[Type] == "Forbidden Tome" #[StashItem] == "true" // 禁忌之書 
 
-//[Type] == "Singular Scouting Report" # [StashItem] == "true" //	//卓越偵查報告
-//[Type] == "Otherworldly Scouting Report" # [StashItem] == "true" //	//超凡偵查報告
-//[Type] == "Influenced Scouting Report" # [StashItem] == "true" //	//勢力偵查報告
+[Type] == "Singular Scouting Report" # [StashItem] == "true" //	//卓越偵查報告
+[Type] == "Otherworldly Scouting Report" # [StashItem] == "true" //	//超凡偵查報告
+[Type] == "Influenced Scouting Report" # [StashItem] == "true" //	//勢力偵查報告
 
 //[Type] =="Polaric Invitation" #[StashItem] == "true" ////極地之邀不撿不存倉
 //[Type] =="Writhing Invitation" #[StashItem] == "true" ////纏繞之邀不撿不存倉
