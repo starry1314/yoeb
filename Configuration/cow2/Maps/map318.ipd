@@ -54,7 +54,12 @@
 	[Type]== "Forge of the Phoenix Map"#[IgnoreMap]== "true"//火鳳凰熔核 #																								
 	[Type]== "Lair of the Hydra Map"#[IgnoreMap]== "true"//九頭蛇冰窟 #																								
 	[Type]== "Maze of the Minotaur Map"#[IgnoreMap]== "true"//牛頭人謎域 #																								
-	[Type]== "Pit of the Chimera Map"#[IgnoreMap]== "true"//奇美拉魔坑 #																								
+	[Type]== "Pit of the Chimera Map"#[IgnoreMap]== "true"//奇美拉魔坑 #	
+	//T17
+	[Type]== "MapWorldsFortress Map"#[IgnoreMap]== "true"//T17 #																								
+	[Type]== "Abomination Map"#[IgnoreMap]== "true"//T17 #	
+
+
 	////Unique Map//// #																								
 //請勿更動//	//[Type]== "Overgrown Shrine Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
 	[Type]== "Siege Map"&& [Rarity] == "Unique"#[IgnoreMap]== "true"// #																								
