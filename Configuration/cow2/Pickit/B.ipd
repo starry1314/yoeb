@@ -137,28 +137,21 @@
 
 
 
-//[Type] == "Wharf Map" # [StashItem] == "true" //
-//[Type] == "Mud Geyser Map" # [StashItem] == "true" //
-//[Type] == "Crimson Temple Map" # [StashItem] == "true" //
-//[Type] == "Maze Map" # [StashItem] == "true" // 冥神之域
-//[Type] == "Temple Map" # [StashItem] == "true" //奪魂之殿
-//[Type] == "Bog Map" # [StashItem] == "true" //瘴氣泥沼
-//[Type] == "City Square Map" # [StashItem] == "true" //危城廣場
-[Type] == "Shore Map" # [StashItem] == "true" //慕光海灘
-[Type] == "Dry Sea Map" # [StashItem] == "true" //乾海
+[Type] == "Wharf Map" # [StashItem] == "true" //
+[Type] == "Mud Geyser Map" # [StashItem] == "true" //
+[Type] == "Maze Map" # [StashItem] == "true" // 冥神之域
+[Type] == "Crimson Temple Map" # [StashItem] == "true" //
+[Type] == "Temple Map" # [StashItem] == "true" //奪魂之殿
+[Type] == "Bog Map" # [StashItem] == "true" //瘴氣泥沼
+[Type] == "City Square Map" # [StashItem] == "true" //危城廣場
+[Type] == "Shore Map" # [StashItem] == "true" // 墓光海灘
+[Type] == "Dry Sea Map" # [StashItem] == "true" // 乾海
 
-//[Type] == "Cemetery Map" # StashItem] == "true" ///
-//[Type] == "Bazaar Map" # [StashItem] == "true" //
-//[Type] == "Leyline Map" # [StashItem] == "true" //
+[Type] == "Cemetery Map" # StashItem] == "true" ///
+[Type] == "Bazaar Map" # [StashItem] == "true" //
+[Type] == "Leyline Map" # [StashItem] == "true" //
 
 
-[Type]=="Wharf Map" && [MapTier] <= "13" # [ForceSellItem] == "true"
-[Type]=="Crimson Temple Map"&& [MapTier] <= "13" # [ForceSellItem] == "true"
-[Type] == "Mud Geyser Map" && [MapTier] <= "13" # [ForceSellItem] == "true"
-[Type] == "City Square Map" && [MapTier] <= "13" # [ForceSellItem] == "true"
-[Type] == "Cemetery Map"  && [MapTier] <= "13" # [ForceSellItem] == "true"
-[Type] == "Bazaar Map"  && [MapTier] <= "13"  # [ForceSellItem] == "true"
-[Type]=="Leyline Map"  && [MapTier] <= "13 "# [ForceSellItem] == "true"
 
 [Category] == "Map" && [Rarity] == "Rare" && [map_contains_citadel] >= "1" # [StashItem] == "true" // 13855 Citadel Maps 征服
 //[Category] == "Map" && [Rarity] == "Rare" && [map_elder_boss_variation] >= "1" # [StashItem] == "true" // 6551 Elder Maps 尊師
@@ -166,7 +159,7 @@
 
 
 [Category] == "Map" && [Rarity] == "Rare" && [map_contains_citadel] >= "1" # [StashItem] == "true" // 13855 Citadel Maps 征服圖
-//[Category] == "Map" && [Rarity] == "Rare" && [map_elder_boss_variation] >= "1" # [StashItem] == "true" // 6551 Elder Maps 尊師																	
+ //[Category] == "Map" && [Rarity] == "Rare" && [map_elder_boss_variation] >= "1" # [StashItem] == "true" // 6551 Elder Maps 尊師																	
 
 [Type]== "Forge of the Phoenix Map"#[StashItem]== "true"//火鳳凰熔核 #																								
 [Type]== "Lair of the Hydra Map"#[StashItem]== "true"//九頭蛇冰窟 #																								
@@ -210,7 +203,7 @@
 //下面是3.19以前
 
 [Type] =="Maven's Invitation: The Elderslayers" #	[StashItem]	 == "true" 		//尊師殺手	拾取且存倉
-[Type] =="Maven's Invitation: The Forgotten" #	[StashItem]	 == "true" 		//釋界之邀：遺忘	拾取且存倉
+//[Type] =="Maven's Invitation: The Forgotten" #	[StashItem]	 == "true" 		//釋界之邀：遺忘	拾取且存倉
 [Type] =="Maven's Invitation: The Formed" #	[StashItem]	 == "true" 		//釋界之邀：塑型	拾取且存倉
 [Type] =="Maven's Invitation: The Twisted" #	[StashItem]	 == "true" 		//釋界之邀：扭曲	拾取且存倉
 
