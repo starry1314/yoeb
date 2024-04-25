@@ -7,6 +7,7 @@
 [Type] == "Fortress" # [statshltem] == "true" //    //新T17�?        不打
 [Type] == "Abomination" # statshltem] == "true" //    //新T17�?        不打
 [Type] == "Ziggurat" # [statshltem] == "true" //    //新T17�?        不打
+[Type] == "Screaming Invitation" # [StashItem]  == "true" // 
 
 //3.23
 [Type] == "Valdo's Puzzle Box" # [StashItem] == "true" //瓦爾多的謎盒拾取
@@ -199,7 +200,6 @@
 //[Type] =="Polaric Invitation" #[StashItem] == "true" ////極地之邀不撿不存�?//[Type] =="Writhing Invitation" #[StashItem] == "true" ////纏繞之邀不撿不存�?
 
 //季初開啟////季初開啟////季初開啟////季初開啟////季初開啟////季初開啟////季初開啟////季初開啟////季初開啟////季初開啟////季初開啟////季初開啟//
-
 [Type] == "Vaal Orb" # [StashItem] == "true" //	//瓦爾寶珠
 [Type] == "Chaos Orb" # [StashItem] == "true"////混沌石拾取且存�?[Type] == "Divine Orb" # [StashItem] == "true"////神聖石拾取且存�?[Type] == "Exalted Orb" # [StashItem] == "true"////崇高石拾取且存�?[Type] == "Mirror of Kalandra" # [StashItem] == "true"////卡蘭德的魔鏡拾取且存�?[Type] == "Ancient Orb"# [StashItem] == "true"////古變石拾取且存�?[Type] == "Mirror Shard"# [StashItem] == "true"////魔鏡碎片拾取且存�?[Type] == "Ancient Shard"# [StashItem] == "true"////古變石碎片拾取且存�?[Type] == "Exalted Shard"# [StashItem] == "true"////崇高石碎片拾取且存�?
 [Type] == "Orb of Annulment"# [StashItem] == "true"////無效 拾取且存�?[Type] == "Gemcutter's Prism"# [StashItem] == "true"////GCP 拾取且存�?[Type] == "Awakened Sextant" # [StashItem] == "true"////六分
