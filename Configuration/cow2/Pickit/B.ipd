@@ -44,6 +44,12 @@
 [Type] == "Omen of Blanching" # [StashItem] == "true"////1~3白預兆
 [Type] == "Omen of the Jeweller" # [StashItem] == "true"////6S預兆
 [Type] == "Omen of Fortune" # [StashItem] == "true" //	財富之預兆
+[Type] == "Allflame Ember of Meatsacks" # [StashItem] == "true" //	
+[Type] == "Allflame Ember of Manifested Wealth" # [StashItem] == "true" //
+[Type] == "Allflame Ember of Frogs" # [StashItem] == "true" //
+[Type] == "Allflame Ember of Rats" # [StashItem] == "true" //
+[Type] == "Allflame Ember of Anarchy" # [StashItem] == "true" //
+
 
 //3.22季初傳送門
 
