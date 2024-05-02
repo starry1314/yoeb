@@ -49,6 +49,7 @@
 [Type] == "Allflame Ember of Frogs" # [StashItem] == "true" //
 [Type] == "Allflame Ember of Rats" # [StashItem] == "true" //
 [Type] == "Allflame Ember of Anarchy" # [StashItem] == "true" //
+[Type] == "Allflame Ember of The Shaper" # [StashItem] == "true" //
 
 
 //3.22季初傳送門
