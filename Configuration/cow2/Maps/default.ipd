@@ -17,6 +17,7 @@
 
 
 
+
 [Type] == "City Square Map" #[RunMap] == "true"
 [Type] == "Toxic Sewer Map" #[RunMap] == "true"
 [Type] == "Crimson Temple Map" # [RunMap]=="true"
@@ -33,7 +34,7 @@
 
 
 
-//[Type] == "City Square Map" # [ExitAfterBossKill] == "true" //危城廣場
+[Type] == "City Square Map" # [ExitAfterBossKill] == "true" //危城廣場
 [Type] == "Toxic Sewer Map" # [ExitAfterBossKill] == "true"
 [Type]=="Crimson Temple Map" # [ExitAfterBossKill] == "true"
 [Type]=="Sulphur Vents Map" # [ExitAfterBossKill] == "true"
@@ -43,6 +44,8 @@
 [Type]=="Leyline Map" # [ExitAfterBossKill] == "true"
 [Type]=="Grotto Map" # [ExitAfterBossKill] == "true"
 [Type]=="Strand Map" # [ExitAfterBossKill] == "true"
+[Type]=="Bog Map" # [ExitAfterBossKill] == "true"
+[Type]=="Dunes Map" # [ExitAfterBossKill] == "true"
 
 																		
 																									
