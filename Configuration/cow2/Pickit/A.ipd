@@ -251,8 +251,8 @@
 [Type] == "Otherworldly Scouting Report" # [StashItem] == "true" //	//超凡偵查報告
 [Type] == "Influenced Scouting Report" # [StashItem] == "true" //	//勢力偵查報告
 
-[Type] =="Polaric Invitation" #[StashItem] == "true" ////極地之邀不撿不存倉
-[Type] =="Writhing Invitation" #[StashItem] == "true" ////纏繞之邀不撿不存倉
+//[Type] =="Polaric Invitation" #[StashItem] == "true" ////極地之邀不撿不存倉
+//[Type] =="Writhing Invitation" #[StashItem] == "true" ////纏繞之邀不撿不存倉
 
 
 //季初開啟////季初開啟////季初開啟////季初開啟////季初開啟////季初開啟////季初開啟////季初開啟////季初開啟////季初開啟////季初開啟////季初開啟//
