@@ -122,7 +122,7 @@
 
 //賣圖設定//
 
-//[Category] == "Map" # [StashItem] == "true" //輿圖全撿
+[Category] == "Map" # [ForceSellItem] == "true" //輿圖全撿
 //[Category] == "Map" && [MapTier] <= "10" # [ForceSellItem] == "true" //黃圖全賣
 //[Category] == "Map" && [MapTier] <= "5" # [ForceSellItem] == "true" //白圖全賣
 
