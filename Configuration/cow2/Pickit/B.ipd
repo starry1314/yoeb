@@ -163,13 +163,13 @@
 [Type]== "Maze of the Minotaur Map"#[StashItem]== "true"//牛頭人謎域 #																								
 [Type]== "Pit of the Chimera Map"#[StashItem]== "true"//奇美拉魔坑 #		
 
-[Type] == "Sanctuary # [StashItem] == true" //T17地圖
-[Type] == "Citadel # [StashItem] == true" //T17地圖
-[Type] == "Fortress # [StashItem] == true" //T17地圖
-[Type] == "Abomination # [StashItem] == true" //T17地圖
-[Type] == "Ziggurat # [StashItem] == true" //T17地圖
+[Type] == "Sanctuary Map" # [StashItem] == true" //T17地圖
+[Type] == "Citadel Map" # [StashItem] == true" //T17地圖
+[Type] == "Fortress Map" # [StashItem] == true" //T17地圖
+[Type] == "Abomination Map" # [StashItem] == true" //T17地圖
+[Type] == "Ziggurat Map" # [StashItem] == true" //T17地圖
 
-//[Category] == "Map" && [MapTier] >= "14 #[StashItem] == "true" //全存
+[Category] == "Map" && [MapTier] >= "14 #[StashItem] == "true" //全存
 
 
 //地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖
