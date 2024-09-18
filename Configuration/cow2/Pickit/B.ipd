@@ -13,31 +13,31 @@
 //[Type] == "Blueprint: Mansion" # [StashItem] == "true" //	//藍圖：官邸
 
 //3.22季初珠寶
-[Type] == "Viridian Jewel" && [Rarity] == "Unique" #   [UniqueName] == "Stormshroud" && [StashItem] == "true"    //風暴籠罩 綠
-[Type] == "Viridian Jewel" && [Rarity] == "Unique" #   [UniqueName] == "Quickening Covenant" && [StashItem] == "true"  //復甦誓約 綠
-[Type] == "Crimson Jewel" && [Rarity] == "Unique" #   [UniqueName] == "Primordial Might" && [StashItem] == "true"   //先祖力量 紅
-[Type] == "Crimson Jewel" && [Rarity] == "Unique" # [UniqueName] == "Inertia" && [StashItem] == "true" //慣性
-[Type] == "Viridian Jewel" && [Rarity] == "Unique" #    [UniqueName] == "Unnatural Instinct" && [StashItem] == "true"     //神感
-[Type] == "Cobalt Jewel" && [Rarity] == "Unique" #    [UniqueName] == "Fortress Covenant" && [StashItem] == "true"     //堅壁誓約
+//[Type] == "Viridian Jewel" && [Rarity] == "Unique" #   [UniqueName] == "Stormshroud" && [StashItem] == "true"    //風暴籠罩 綠
+//[Type] == "Viridian Jewel" && [Rarity] == "Unique" #   [UniqueName] == "Quickening Covenant" && [StashItem] == "true"  //復甦誓約 綠
+//[Type] == "Crimson Jewel" && [Rarity] == "Unique" #   [UniqueName] == "Primordial Might" && [StashItem] == "true"   //先祖力量 紅
+//[Type] == "Crimson Jewel" && [Rarity] == "Unique" # [UniqueName] == "Inertia" && [StashItem] == "true" //慣性
+//[Type] == "Viridian Jewel" && [Rarity] == "Unique" #    [UniqueName] == "Unnatural Instinct" && [StashItem] == "true"     //神感
+//[Type] == "Cobalt Jewel" && [Rarity] == "Unique" #    [UniqueName] == "Fortress Covenant" && [StashItem] == "true"     //堅壁誓約
 
 //3.22季初武器//
 //[Type] == "Short Bow" && [Rarity] == "Unique" #    [UniqueName] == "Quill Rain" && [StashItem] == "true"    //小雨
-[Type] == "Prophecy Wand" && [Rarity] == "Unique" #   [UniqueName] == "Void Battery" && [StashItem] == "true"    //電池
-[Type] == "Assassin Bow" && [Rarity] == "Unique" # [UniqueName] == "Darkscorn" && [StashItem] == "true"	//夜吟 暗殺弓
-[Type] == "Imperial Skean" && [Rarity] == "Unique" # [UniqueName] == "Divinarius" && [StashItem] == "true"	//戒律之影 帝國雙刃匕
-[Type] == "Fiend Dagger" && [Rarity] == "Unique" #    [UniqueName] == "Arakaali's Fang" && [StashItem] == "true"   //蜘蛛刀
-[Type] == "Spine Bow" && [Rarity] == "Unique" #    [UniqueName] == "Voltaxic Rift" && [StashItem] == "true"   //魔暴
+//[Type] == "Prophecy Wand" && [Rarity] == "Unique" #   [UniqueName] == "Void Battery" && [StashItem] == "true"    //電池
+//[Type] == "Assassin Bow" && [Rarity] == "Unique" # [UniqueName] == "Darkscorn" && [StashItem] == "true"	//夜吟 暗殺弓
+//[Type] == "Imperial Skean" && [Rarity] == "Unique" # [UniqueName] == "Divinarius" && [StashItem] == "true"	//戒律之影 帝國雙刃匕
+//[Type] == "Fiend Dagger" && [Rarity] == "Unique" #    [UniqueName] == "Arakaali's Fang" && [StashItem] == "true"   //蜘蛛刀
+//[Type] == "Spine Bow" && [Rarity] == "Unique" #    [UniqueName] == "Voltaxic Rift" && [StashItem] == "true"   //魔暴
 //[Type] == "Maata's Teaching Karui Sceptre" && [Rarity] == "Unique" # [UniqueName] == "" && [StashItem] == "true"	//瑪塔的教導 卡魯權杖
 //[Type] == "Ezomyte Staff" && [Rarity] == "Unique" # [UniqueName] == "The Fulcrum" && [StashItem] == "true"// 支點 艾茲麥長杖
 //[Type] == "Engraved Greatsword" && [Rarity] == "Unique" # [UniqueName] == "Rakiata's Dance" &&  [StashItem] == "true"//萊基亞塔的舞步
 
 //3.22季初防具
-[Type] == "Necromancer Silks" && [Rarity] == "Unique" #  [UniqueName] == "Fleshcrafter" && [StashItem] == "true"    //人體匠師
-[Type] == "Sadist Garb" && [Rarity] == "Unique" #    [UniqueName] == "Inpulsa's Broken Heart" && [StashItem] == "true" //印卜薩
-[Type] == "Murder Mitts" && [Rarity] == "Unique" # [UniqueName] == "Thunderfist" && [StashItem] == "true"	//轟天雷
-[Type] == "Exquisite Leather" && [Rarity] == "Unique" # [UniqueName] == "Yriel's Fostering" && [StashItem] == "true" // //伊瑞的栽培
-[Type] == "Riveted Boots" && [Rarity] == "Unique" # [UniqueName] == "Ralakesh's Impatience" && [StashItem] == "true"	//芮勒蓋許的急躁
-[Type] == "Carnal Boots" && [Rarity] == "Unique" # [UniqueName] == "Corpsewalker" && [StashItem] == "true"	//行屍走肉
+//[Type] == "Necromancer Silks" && [Rarity] == "Unique" #  [UniqueName] == "Fleshcrafter" && [StashItem] == "true"    //人體匠師
+//[Type] == "Sadist Garb" && [Rarity] == "Unique" #    [UniqueName] == "Inpulsa's Broken Heart" && [StashItem] == "true" //印卜薩
+//[Type] == "Murder Mitts" && [Rarity] == "Unique" # [UniqueName] == "Thunderfist" && [StashItem] == "true"	//轟天雷
+//[Type] == "Exquisite Leather" && [Rarity] == "Unique" # [UniqueName] == "Yriel's Fostering" && [StashItem] == "true" // //伊瑞的栽培
+//[Type] == "Riveted Boots" && [Rarity] == "Unique" # [UniqueName] == "Ralakesh's Impatience" && [StashItem] == "true"	//芮勒蓋許的急躁
+//[Type] == "Carnal Boots" && [Rarity] == "Unique" # [UniqueName] == "Corpsewalker" && [StashItem] == "true"	//行屍走肉
 //[Type] == "Sinner Tricorne" && [Rarity] == "Unique" # [UniqueName] == "Alpha's Howl" && [StashItem] == "true" // 白狼頭
 //預兆
 [Type] == "Omen of Connections" # [StashItem] == "true"////6L預兆
@@ -58,16 +58,16 @@
 
 //弓箭手套裝//
 //[Type] == "Praetor Crown" && [Rarity] == "Unique" # [UniqueName] == "Voll's Vision" && [StashItem] == "true"	//福爾的遠見
-[Type] == "Zodiac Leather" && [Rarity] == "Unique" # [UniqueName] == "Hyrri's Ire" && [StashItem] == "true"	//西里的戰衣星辰皮甲
+//[Type] == "Zodiac Leather" && [Rarity] == "Unique" # [UniqueName] == "Hyrri's Ire" && [StashItem] == "true"	//西里的戰衣星辰皮甲
 //[Type] == "Titan Gauntlets" && [Rarity] == "Unique" # [UniqueName] == "Kaom's Spirit" && [StashItem] == "true"	//岡姆之魂
-[Type] == "Rawhide Boots" && [Rarity] == "Unique" # [UniqueName] == "Seven-League Step" && [StashItem] == "true"	//盟誓之跡
-[Type] == "Rustic Sash" && [Rarity] == "Unique" # [UniqueName] == "Prismweave" && [StashItem] == "true"	//幻彩菱織 腰帶
-[Type] == "Two-Stone Ring" && [Rarity] == "Unique" # [UniqueName] == "Berek's Respite" && [StashItem] == "true"	//貝雷克的火與雷之樂
-[Type] == "Two-Stone Ring" && [Rarity] == "Unique" # [UniqueName] == "Berek's Grip" && [StashItem] == "true"	//貝雷克的冰與雷之曲
-[Type] == "Two-Stone Ring" && [Rarity] == "Unique" # [UniqueName] == "Berek's Pass" && [StashItem] == "true"	//貝雷克的冰與火之歌
-[Type] == "Amethyst Ring" && [Rarity] == "Unique" # [UniqueName] == "Death Rush" && [StashItem] == "true"	//亡者呼喚 紫晶戒指
-[Type] == "Jade Amulet" && [Rarity] == "Unique" # [UniqueName] == "Hyrri's Truth" && [StashItem] == "true"	//西里的真理
-[Type] == "Primal Arrow Quiver" && [Rarity] == "Unique" # [UniqueName] == "The Poised Prism" && [StashItem] == "true"	//優雅迷鏡
+//[Type] == "Rawhide Boots" && [Rarity] == "Unique" # [UniqueName] == "Seven-League Step" && [StashItem] == "true"	//盟誓之跡
+//[Type] == "Rustic Sash" && [Rarity] == "Unique" # [UniqueName] == "Prismweave" && [StashItem] == "true"	//幻彩菱織 腰帶
+//[Type] == "Two-Stone Ring" && [Rarity] == "Unique" # [UniqueName] == "Berek's Respite" && [StashItem] == "true"	//貝雷克的火與雷之樂
+//[Type] == "Two-Stone Ring" && [Rarity] == "Unique" # [UniqueName] == "Berek's Grip" && [StashItem] == "true"	//貝雷克的冰與雷之曲
+//[Type] == "Two-Stone Ring" && [Rarity] == "Unique" # [UniqueName] == "Berek's Pass" && [StashItem] == "true"	//貝雷克的冰與火之歌
+//[Type] == "Amethyst Ring" && [Rarity] == "Unique" # [UniqueName] == "Death Rush" && [StashItem] == "true"	//亡者呼喚 紫晶戒指
+//[Type] == "Jade Amulet" && [Rarity] == "Unique" # [UniqueName] == "Hyrri's Truth" && [StashItem] == "true"	//西里的真理
+//[Type] == "Primal Arrow Quiver" && [Rarity] == "Unique" # [UniqueName] == "The Poised Prism" && [StashItem] == "true"	//優雅迷鏡
 [Type] == "Orb of Alchemy" # [StashItem] == "true" //
 //迷宮裝//
 //[Type] == "Plank Kite Shield" && [Rarity] == "Unique" # [UniqueName] == "Springleaf" && [StashItem] == "true"	//新生之徽
@@ -122,7 +122,7 @@
 
 //賣圖設定//
 
-[Category] == "Map" # [ForceSellItem] == "true" //輿圖全撿
+//[Category] == "Map" # [ForceSellItem] == "true" //輿圖全麥
 //[Category] == "Map" && [MapTier] <= "10" # [ForceSellItem] == "true" //黃圖全賣
 //[Category] == "Map" && [MapTier] <= "5" # [ForceSellItem] == "true" //白圖全賣
 
@@ -135,15 +135,21 @@
 //[Type] == "Lookout Map"  && [MapTier] <= "13" # [ForceSellItem] == "true" //如履危牆
 
 
-[Type] == "Strand Map" && [MapTier] >= "14"  && [Rarity] == "Normal"  #[StashItem] == "true" // //劇毒林谷
-[Type] == "Strand Map" && [MapTier] >= "14"  && [Rarity] == "Magic"  #[StashItem] == "true" // //藍地圖藍地圖撿取，藍地圖存倉
-[Type] == "Strand Map" && [MapTier] >= "14"  && [Rarity] == "Rare"  #[StashItem] == "true" // //黃地圖黃地圖不撿，黃地圖售出
+[Type] == "Strand Map" && [MapTier] >= "14"  && [Rarity] == "Normal"  #[ForceSellItem] == "true" // //劇毒林谷
+[Type] == "Strand Map" && [MapTier] >= "14"  && [Rarity] == "Magic"  #[ForceSellItem] == "true" // //藍地圖藍地圖撿取，藍地圖存倉
+[Type] == "Strand Map" && [MapTier] >= "14"  && [Rarity] == "Rare"  #[ForceSellItem] == "true" // //黃地圖黃地圖不撿，黃地圖售出
 
-[Type] == "Arcade Map" && [MapTier] >= "14"  && [Rarity] == "Normal"  #[StashItem] == "true" // //乾枯湖岸
-[Type] == "Arcade Map" && [MapTier] >= "14"  && [Rarity] == "Magic"  #[StashItem] == "true" // //藍地圖藍地圖撿取，藍地圖存倉
-[Type] == "Arcade Map" && [MapTier] >= "14"  && [Rarity] == "Rare"  #[StashItem] == "true" // //黃地圖黃地圖不撿，黃地圖售出
+[Type] == "Arcade Map" && [MapTier] >= "14"  && [Rarity] == "Normal"  #[ForceSellItem] == "true" // //乾枯湖岸
+[Type] == "Arcade Map" && [MapTier] >= "14"  && [Rarity] == "Magic"  #[ForceSellItem] == "true" // //藍地圖藍地圖撿取，藍地圖存倉
+[Type] == "Arcade Map" && [MapTier] >= "14"  && [Rarity] == "Rare"  #[ForceSellItem] == "true" // //黃地圖黃地圖不撿，黃地圖售出
 
+[Type] == "Bog Map" && [MapTier] >= "14"  && [Rarity] == "Normal"  #[ForceSellItem] == "true" // //脹氣泥沼
+[Type] == "Bog Map" && [MapTier] >= "14"  && [Rarity] == "Magic"  #[ForceSellItem] == "true" // //藍地圖藍地圖撿取，藍地圖存倉
+[Type] == "Bog Map" && [MapTier] >= "14"  && [Rarity] == "Rare"  #[ForceSellItem] == "true" // //黃地圖黃地圖不撿，黃地圖售出
 
+[Type] == "Dunes Map" && [MapTier] >= "14"  && [Rarity] == "Normal"  #[ForceSellItem] == "true" // //乾枯湖岸
+[Type] == "Dunes Map" && [MapTier] >= "14"  && [Rarity] == "Magic"  #[ForceSellItem] == "true" // //藍地圖藍地圖撿取，藍地圖存倉
+[Type] == "Dunes Map" && [MapTier] >= "14"  && [Rarity] == "Rare"  #[ForceSellItem] == "true" // //黃地圖黃地圖不撿，黃地圖售出
 
 
 [Category] == "Map" && [Rarity] == "Rare" && [map_contains_citadel] >= "1" # [StashItem] == "true" // 13855 Citadel Maps
@@ -163,7 +169,7 @@
 [Type] == "Abomination # [StashItem] == true" //T17地圖
 [Type] == "Ziggurat # [StashItem] == true" //T17地圖
 
-[Category] == "Map" && [MapTier] >= "14 #[StashItem] == "true"
+//[Category] == "Map" && [MapTier] >= "14 #[StashItem] == "true" //全存
 
 
 //地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖
