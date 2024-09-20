@@ -119,7 +119,8 @@
 [Type] == "Jungle Valley Map" && [Rarity] == "Magic" # [StashItem] == "true" //
 [Type] == "Lookout Map" && [Rarity] == "Magic" # [StashItem] == "true" //
 
-
+[Type] == "Wisdom Scroll" # 	[StashItem]	 == "true"	//	//知識卷軸	不撿不存倉
+[Type] == "Portal Scroll" # 	[StashItem]	 == "true"	//	//傳送卷軸	不撿不存倉
 //賣圖設定//
 
 //[Category] == "Map" # [ForceSellItem] == "true" //輿圖全麥
