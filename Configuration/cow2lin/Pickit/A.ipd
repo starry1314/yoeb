@@ -165,7 +165,8 @@
 
 [Category] == "Map" && [MapTier] >= "14 #[StashItem] == "true"
 
-
+[Type] == "Wisdom Scroll" # 	[StashItem]	 == "true"	//	//知識卷軸	不撿不存倉
+[Type] == "Portal Scroll" # 	[StashItem]	 == "true"	//	//傳送卷軸	不撿不存倉
 //地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖
 
 //卡蘭德之觸
