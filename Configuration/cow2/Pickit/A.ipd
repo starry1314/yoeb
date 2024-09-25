@@ -244,7 +244,7 @@
 //[Type] == "Armourer's Scrap" # [StashItem] == "true" //	//護甲片
 [Type] == "Glassblower's Bauble" # [StashItem] == "true" //	//玻璃彈珠
 //[Type] == "Blessed Orb" # [StashItem] == "true" //	//祝福石
-
+[Type] == "Cartographer's Chisel" #     [StashItem]     == "true"    //    //製圖釘    拾取且存倉
 //[Type] == "Forbidden Tome" # [StashItem] == "true" // 禁忌之書 
 
 [Type] == "Singular Scouting Report" # [StashItem] == "true" //	//卓越偵查報告
