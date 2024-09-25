@@ -1,6 +1,7 @@
 //	//				//中文判斷																				
 	//3.17 橘貓輿圖檔 ////藍色文字代表不能更改的欄位，不要去改																								
-//	[Quality]<="16"&& [Rarity]=="Normal"#[UpgradeQuality]== "true"//使用製圖釘			//使用製圖釘	不//使用製圖釘																				
+	[Quality]<="16"&& [Rarity]=="Normal"#[UpgradeQuality]== "true"//使用製圖釘			//使用製圖釘	不//使用製圖釘		
+	[Quality]<="16"&& [Rarity]=="Rare"#[UpgradeQuality]== "true"//使用製圖釘   //使用製圖釘 不//使用製圖釘
 	[MapTier]>= "1" && [MapTier] <= "16"#[RunMap]== "true"//執行輿圖			//這橫行請勿更動																					
 //	[Rarity]== "Normal"#[UpgradeToMagic]== "true"//使用蛻變石			//使用蛻變	不//使用蛻變																				
 //	[Rarity]== "Magic"#[AugmentIfPossible]== "true"//使用增幅石			//使用增幅	不//使用增幅																				
