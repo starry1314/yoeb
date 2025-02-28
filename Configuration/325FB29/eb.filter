@@ -7613,7 +7613,7 @@ Show # %DS2 $type->currency->stackedthree $tier->t7
 #   [3507] Heist Coins
 #------------------------------------
 
-Show # %H5 $type->currency->heist $tier->highstack
+Hide # %H5 $type->currency->heist $tier->highstack
 	StackSize >= 500
 	Class == "Stackable Currency"
 	BaseType == "Rogue's Marker"
@@ -7623,7 +7623,7 @@ Show # %H5 $type->currency->heist $tier->highstack
 	SetBackgroundColor 150 90 70 255
 	PlayEffect Orange
 
-Show # %H4 $type->currency->heist $tier->any
+Hide # %H4 $type->currency->heist $tier->any
 	Class == "Stackable Currency"
 	BaseType == "Rogue's Marker"
 	SetFontSize 45
