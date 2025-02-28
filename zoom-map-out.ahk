@@ -143,8 +143,9 @@ DetectAndClick()
 				FindText().Click(376, 463, "L")
                 Send, {Ctrl up}
 				sleep 1000
-				FindText().Click(364, 503, "L")
+				FindText().Click(364, 508, "L")
 				sleep 2000
+				FindText().Click(364, 508, "L")
 				send {F12}
 				
 				
