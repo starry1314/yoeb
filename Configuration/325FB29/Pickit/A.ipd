@@ -1,3 +1,7 @@
+//3.25 魚竿
+[Type] == "Fishing Rod" && [Rarity] == "Rare" # [StashItem] == "true"
+[Type] == "Fishing Rod" && [Rarity] == "Magic" # [StashItem] == "true"
+[Type] == "Fishing Rod" && [Rarity] == "Normal" # [StashItem] == "true"
 //3.23有價紋身、預兆
 [Type] == "Omen of Connections" # 			[StashItem] == "true"////6L預兆
 [Type] == "Omen of Blanching" # 			[StashItem] == "true"////1~3白預兆
