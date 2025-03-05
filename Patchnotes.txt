@@ -1,3 +1,91 @@
+v0.96
+Bot should always click properly on map device activate button
+Bot should detect if a map is in map device inventory
+
+v0.95k
+Fixed offsets for game version 3.25.3d.
+
+v0.95j
+Fixed offsets for game version 3.25.3.
+
+v0.95i
+Fixed scarabs issues.
+
+v0.95h
+Fixed offsets for game version 3.25.2.
+
+v0.95g
+Fixed offsets for game version 3.25.1c.
+Added Summon Holy Relic gems support.
+
+v0.95f
+Fixed offsets for game version 3.25.0 (new small update).
+
+v0.95e
+Fixed offsets for game version 3.25.0.
+
+0.95d
+Fixed offsets for game version 3.24.3b.
+
+v0.95c
+Fixed offsets for game version 3.24.3.
+
+v0.95b
+Bot should not stash 40 stack of scrolls anymore when max amount in inventory is reached.
+Bot will skip adding map in map device only if item inside is a map (so user can run bot preloading it with scarabs and wanted map).
+
+v0.95
+Added Influence item detection (better late than never).
+Updated default pickit files to errorless ones.
+
+v0.94h
+Fixed hotcool agent Garena TW login.
+Bot won't try to stash Filled Coffin in currency stash tab.
+Updated default pickit files.
+
+v0.94g
+Fixed map opening for necropolis league.
+Fixed item level and required level detection.
+Fixed mirrored item detection.
+Added Tempest Shield, Envy, Automation and Call to arms auras.
+
+v0.94f
+Fixed offsets for game version 3.24.0.
+
+v0.94e
+Fixed offsets for game version 3.23.2.
+
+v0.94d
+Fixed offsets for game version 3.23.1.
+
+v0.94c
+Added feature that cleans viridian wildwood from affliction league.
+
+v0.94b
+Fixed gem leveling.
+
+v0.94
+Fixed offsets for game version 3.23.0.
+
+v0.93e
+Fixed offsets for game version 3.22.2b.
+
+v0.93d
+Fixed offsets for game version 3.22.2.
+
+v0.93c
+Fixed offsets for game version 3.22.1.
+
+v0.93b
+Fixed mirrored item detection. 
+
+v0.93
+Fixed offsets for game version 3.22.0.
+Added support for Corrupting Fever buff skill.
+
+v0.92e
+Fixed offsets for game version 3.21.2b.
+
 v0.92d
 Fixed wardloop routine buff detection.
 Auras should be recasted properly in hideout after death.
