@@ -234,7 +234,7 @@
 [Type] == "Orb of Alteration" # [StashItem] == "true"////改造石拾取且存倉
 [Type] == "Orb of Regret"# [StashItem] == "true"////後悔石拾取且存倉//
 [Type] == "Orb of Unmaking"# [StashItem] == "true"////撤銷石拾取且存倉
-//[Type] == "Enkindling Orb"# [StashItem] == "true"////點燃石拾取且存倉
+[Type] == "Enkindling Orb"# [StashItem] == "true"////點燃石拾取且存倉
 [Type] == "Instilling Orb" # [StashItem] == "true" //	//滴注石
 [Type] == "Orb of Scouring"# [StashItem] == "true"////重鑄 拾取且存倉
 [Type] == "Regal Orb" # [StashItem] == "true"////富豪
@@ -243,9 +243,9 @@
 //[Type] == "Blacksmith's Whetstone" # [StashItem] == "true" //	//磨刀石
 //[Type] == "Armourer's Scrap" # [StashItem] == "true" //	//護甲片
 [Type] == "Glassblower's Bauble" # [StashItem] == "true" //	//玻璃彈珠
-//[Type] == "Blessed Orb" # [StashItem] == "true" //	//祝福石
+[Type] == "Blessed Orb" # [StashItem] == "true" //	//祝福石
 [Type] == "Cartographer's Chisel" #     [StashItem]     == "true"    //    //製圖釘    拾取且存倉
-//[Type] == "Forbidden Tome" # [StashItem] == "true" // 禁忌之書 
+[Type] == "Forbidden Tome" # [StashItem] == "true" // 禁忌之書 
 
 [Type] == "Singular Scouting Report" # [StashItem] == "true" //	//卓越偵查報告
 [Type] == "Otherworldly Scouting Report" # [StashItem] == "true" //	//超凡偵查報告
