@@ -1,6 +1,76 @@
+v0.101d
+Fixed gem leveling.
+Fixed ipd editor erasing the file with a pointer address instead of add the content.
+
+v0.101c
+Fixed bot getting stuck trying to explore areas behind removed breach blockers.
+Fixed strongbox detection.
+Fixed waypoint activation when bot is close to unactivated waypoint.
+
+v0.101b
+Fixed offset for instance count detection.
+Added party mode support (configurable in config.ini in party section, no GUI available yet).
+
+v0.101
+Fixed offsets for game version 3.27.0.
+
+v0.100
+Fixed offsets for game version 3.26.0i.
+Fixed a bug that would cause the bot to leave areas before completion when exploration failed.
+
+v0.99h
+Fixed offsets for game version 3.26.0g.
+
+v0.99g
+Bot now identifies unidentified corrupted items.
+Fixed waypoint state detection.
+Added item name being picked up in logs.
+
+v0.99f
+Added Bladefall of Trarthus support (as an aura).
+
+v0.99e
+Bot now recognizes Sanctuary, Abomination, Citadel, Fortress, and Ziggurat maps.
+Essence monolith monsters have higher priority looting to avoid bot getting stucked trying to loot item behind essence monster label
+
+0.99d
+Bot now can open sulphite chests in maps (open_sulphite_chest in config.ini, true by default).
+Fixed bot not adding 5th scarab in map device bug.
+Fixed essence monoliths ignored unless super close bug.
+
+0.99c
+Fixed a bug where bot would stand idling in hideout after finishing a map.
+
+0.99b
+Fixed scarab retrieval logic for multiple scarabs of the same type.
+Bot now correctly retrieves and places multiple scarabs when the same scarab type is configured for multiple slots.
+
+0.99
+Added scarab handling for map device.
+Bot can now automatically retrieve configured scarabs from stash and place them in map device before opening maps.
+Scarab selection and priority can be configured per slot (enable_map_device_scarabs, map_device_scarab_slot1-5 keys in config.ini).
+Fixed a crash that would occur occasionally when trying to load the map.
+
+0.98
+Fixed Accept button clicking when selling items to vendors.
+Improved town movement and interaction accuracy (bot no longer gets stuck trying to click map portals).
+Bot now automatically uses augmentation orbs on maps when possible (when explicit mod count is below maximum).
+Fixed a bug that prevented the bot from properly exploring and completing maps.
+Bot keeps stash open between currency applications on maps.
+
+v0.97b
+Fixed bot missing Selling Items button for act NPCs.
+Improved terrain pathfinding accuracy.
+
+v0.97
+Fixed offsets for game version 3.26.0b.
+
+v0.96b
+Fixed offsets for game version 3.25.3f.
+
 v0.96
-Bot should always click properly on map device activate button
-Bot should detect if a map is in map device inventory
+Bot should always click properly on map device activate button.
+Bot should detect if a map is in map device inventory;
 
 v0.95k
 Fixed offsets for game version 3.25.3d.
