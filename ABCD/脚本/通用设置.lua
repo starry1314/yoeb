@@ -1185,7 +1185,7 @@ AddJiaoYiTime(0,24)--晚上11点到8点前会检测交易
 --公会仓库存仓 fanxing
 AddJiaoYiBossName("gost_go",nil,nil,nil,true)
 
-SetSaveIndex("可堆叠通货|通货","2|16",nil,nil,nil,nil,nil,true)
+SetSaveIndex("可堆叠通货|通货","2|1|16",nil,nil,nil,nil,nil,true)
 SetSaveIndex("珠宝","1|20",nil,nil,nil,nil,nil,true)
 SetSaveIndex("蓝图","1|20|5|6|7|8|9|10|11|12",nil,nil,nil,nil,nil,true)
 SetSaveIndex("主动技能宝石|辅助技能宝石","1|6",nil,nil,nil,nil,nil,true)
@@ -1500,6 +1500,9 @@ SetSaveIndex(nil,"23|1","錯亂精髓","Metadata/Items/Currency/CurrencyEssenceInsan
 SetSaveIndex(nil,"23|1","極恐精髓","Metadata/Items/Currency/CurrencyEssenceHorror1",nil,nil,nil,true)--极恐精华
 SetSaveIndex(nil,"23|1","譫妄精髓","Metadata/Items/Currency/CurrencyEssenceDelirium1",nil,nil,nil,true)--谵妄精华
 SetSaveIndex(nil,"23|1","遗忘的污染器皿","Metadata/Items/Currency/CurrencyCorruptMonolith",nil,nil,nil)
+
+--聖甲蟲
+SetSaveIndex(nil,"1|23","通牒贿赂之圣甲虫","Metadata/Items/Scarabs/ScarabUltimatum2",nil,nil,nil)
 
 SetSaveIndex(nil,"20|21|22|1",nil,nil,nil,"Lioneye's Remorse",nil,true)--"狮眼的荣耀塔盾"
 SetSaveIndex(nil,"20|21|22|1",nil,nil,nil,"Skullhead",nil,true)--"光辉之颅"
@@ -2550,7 +2553,7 @@ SetJiaoYiGoods(nil,nil,"Metadata/Items/Scarabs/ScarabPerandus4")--圣甲虫：展翅探
 --SetJiaoYiGoods(nil,nil,"Metadata/Items/Scarabs/ScarabAbyss1")--圣甲虫：鏽蚀深渊
 --SetJiaoYiGoods(nil,nil,"Metadata/Items/Scarabs/ScarabAbyss2")--圣甲虫：圆滑深渊
 SetJiaoYiGoods(nil,nil,"Metadata/Items/Scarabs/ScarabAbyss3")--圣甲虫：镀金深渊
-SetJiaoYiGoods(nil,nil,"Metadata/Items/Scarabs/ScarabAbyss3")--圣甲虫：展翅深渊
+SetJiaoYiGoods(nil,nil,"Metadata/Items/Scarabs/ScarabAbyss4")--圣甲虫：展翅深渊
 --SetJiaoYiGoods(nil,nil,"Metadata/Items/Scarabs/ScarabBlight1")--圣甲虫：鏽蚀深渊
 --SetJiaoYiGoods(nil,nil,"Metadata/Items/Scarabs/ScarabBlight2")--圣甲虫：鏽蚀深渊
 SetJiaoYiGoods(nil,nil,"Metadata/Items/Scarabs/ScarabBlight3")--圣甲虫：鏽蚀深渊
