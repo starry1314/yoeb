@@ -26,14 +26,14 @@ global FindTextObj := FindText()  ; 獲取 FindText 對象
 ; 全域變數
 ; ===================================================================
 global activeFunction := ""                ; 目前執行中的功能 ("Continuous", "Store", "Retrieve", "OfflineShop")
-global continuousClickRunning := false
-global storeRunning := false
-global retrieveRunning := false
-global offlineShopRunning := false
-global continuousClickPaused := false
-global storePaused := false
-global retrievePaused := false
-global offlineShopPaused := false
+global continuousClickRunning := false     ; F2 連續點擊執行中
+global storeRunning := false               ; F5 存倉執行中
+global retrieveRunning := false            ; F3 取倉執行中
+global offlineShopRunning := false         ; F6 離線商店執行中
+; F2 連續點擊無暫停功能,已移除 continuousClickPaused
+global storePaused := false                ; F5 存倉暫停狀態
+global retrievePaused := false             ; F3 取倉暫停狀態
+global offlineShopPaused := false          ; F6 離線商店暫停狀態
 global gameWindowTitle := "Path of Exile"
 global storeCoords := []                    ; 存倉用座標陣列
 global storeIndex := 1
@@ -69,6 +69,29 @@ global lastNpcClickTime := 0                ; 上次點擊倉庫 NPC 的時間
 global lastShopClickTime := 0               ; 上次點擊販售 NPC 的時間
 global npcClickWaitTime := 5000             ; 點擊 NPC 後等待時間 (5秒)
 
+; POE 驗證碼工具設定
+global verificationUserIni := A_ScriptDir . "\user.ini"  ; 使用當前目錄的 user.ini
+global verificationApiUrl := "http://43.100.2.99:8080/api/message/lastmail"
+global verificationApiToken := "123456"
+global verificationAccount := ""
+global verificationCode := ""
+global verificationMonitoring := false
+global verificationMonitoringPaused := false
+global VerificationAccountInput := ""  ; GUI 控件 - 帳號輸入框
+global VerificationCodeDisplay := ""  ; GUI 控件 - 驗證碼顯示
+
+; 驗證碼自動監控相關變數
+global Text_驗證碼視窗 := ""  ; FindText 文字碼 - 驗證碼輸入窗口
+global verificationClickX := 960  ; 輸入框點擊座標 X (預設螢幕中心)
+global verificationClickY := 540  ; 輸入框點擊座標 Y (預設螢幕中心)
+global verificationSubmitX := 960  ; 送出按鈕座標 X (預設螢幕中心)
+global verificationSubmitY := 600  ; 送出按鈕座標 Y (預設螢幕中心)
+global VerificationMonitorBtn := ""  ; GUI 控件 - 監控按鈕
+global VerificationClickXInput := ""  ; GUI 控件 - 輸入框 X 座標
+global VerificationClickYInput := ""  ; GUI 控件 - 輸入框 Y 座標
+global VerificationSubmitXInput := ""  ; GUI 控件 - 送出按鈕 X 座標
+global VerificationSubmitYInput := ""  ; GUI 控件 - 送出按鈕 Y 座標
+
 ; 座標設定 (可透過 GUI 調整)
 ; 背包區域: 左上角(455,375) 右下角(805,520) 格子大小30x30
 ; 實測座標: 第1格(約450-460,370) 第49格(450,490) 第12格(780,370)
@@ -85,9 +108,9 @@ global searchX2 := 364                      ; 搜尋區域 X2
 global searchY2 := 451                      ; 搜尋區域 Y2
 
 ; 動態延遲設定
-global baseDelay := 30                      ; 基礎延遲 (毫秒)
-global currentDelay := 30                   ; 當前延遲
-global minDelay := 20                       ; 最小延遲
+global baseDelay := 35                      ; 基礎延遲 (毫秒) - 已調降15%速度
+global currentDelay := 35                   ; 當前延遲
+global minDelay := 25                       ; 最小延遲 - 已調降15%速度
 global maxDelay := 100                      ; 最大延遲
 global errorCount := 0                      ; 錯誤計數
 global successCount := 0                    ; 成功計數
@@ -102,16 +125,25 @@ Gui, Main:Color, 1a1a2e
 ; 隱藏 GUI 的 AHK 特徵
 WinSet, ExStyle, +0x80, A  ; WS_EX_TOOLWINDOW - 讓窗口不出現在任務切換器
 
-; 標題列 (自訂) - 可拖曳
+; 標題列背景
+Gui, Main:Add, Progress, x0 y0 w420 h45 Background2d3250 Disabled
+
+; 標題列文字 (可拖曳區域，避開右側按鈕)
 Gui, Main:Font, s12 bold cFFFFFF, Microsoft JhengHei
-Gui, Main:Add, Text, x0 y0 w420 h45 Background2d3250 Center 0x200 gDragGUI, POE 倉庫管理助手
+Gui, Main:Add, Text, x0 y0 w350 h45 BackgroundTrans Center 0x200 gDragGUI, POE 倉庫管理助手
+
+; 視窗控制按鈕 (最小化 & 關閉) - 必須在標題列文字之後添加才能顯示在上層
+Gui, Main:Font, s12 bold ccccccc, Segoe UI
+Gui, Main:Add, Text, x360 y10 w25 h25 Center gMinimizeMainGUI BackgroundTrans, —
+Gui, Main:Font, s11 bold ccccccc, Segoe UI
+Gui, Main:Add, Text, x390 y10 w20 h25 Center gCloseMainGUI BackgroundTrans, ✕
 
 ; 狀態顯示區
 Gui, Main:Font, s9 norm c00ff88, Microsoft JhengHei
 Gui, Main:Add, Text, x15 y55 w390 vStatusText, 🟢 待機中 | 按下熱鍵啟動功能
 
 ; 功能區塊背景
-Gui, Main:Add, Progress, x10 y85 w400 h230 Background16213e Disabled
+Gui, Main:Add, Progress, x10 y85 w400 h305 Background16213e Disabled
 
 ; 功能說明 - 使用圖示與顏色區分
 Gui, Main:Font, s10 bold c4ecdc4, Microsoft JhengHei
@@ -134,38 +166,60 @@ Gui, Main:Add, Text, x25 y170, 🏪 F6
 Gui, Main:Font, s9 norm cadd8e6
 Gui, Main:Add, Text, x70 y172, 離線商店上架 (Ctrl+左鍵+視窗檢測) | 再按關閉
 
-Gui, Main:Font, s10 bold cff6b6b, Microsoft JhengHei
-Gui, Main:Add, Text, x25 y195, ⏸️ Ctrl+F2/F3/F5/F6
+Gui, Main:Font, s10 bold c00d9ff, Microsoft JhengHei
+Gui, Main:Add, Text, x25 y195, 💰 Ctrl+F6
 Gui, Main:Font, s9 norm cadd8e6
-Gui, Main:Add, Text, x150 y197, 暫停/恢復對應功能
+Gui, Main:Add, Text, x100 y197, 價格管理視窗 (支援中英文物品名稱)
+
+Gui, Main:Font, s10 bold cff6b6b, Microsoft JhengHei
+Gui, Main:Add, Text, x25 y220, ⏸️ Ctrl+F3/F5
+Gui, Main:Font, s9 norm cadd8e6
+Gui, Main:Add, Text, x125 y222, 暫停/恢復對應功能 (F2無暫停)
 
 Gui, Main:Font, s10 bold cff66cc, Microsoft JhengHei
-Gui, Main:Add, Text, x25 y220, 🔍 F7
+Gui, Main:Add, Text, x25 y245, 🔍 F7
 Gui, Main:Font, s9 norm cadd8e6
-Gui, Main:Add, Text, x70 y222, 圖片識別測試
+Gui, Main:Add, Text, x70 y247, 圖片識別測試
 
 Gui, Main:Font, s10 bold c00d9ff, Microsoft JhengHei
-Gui, Main:Add, Text, x25 y245, 📸 F8
+Gui, Main:Add, Text, x25 y270, 📸 F8
 Gui, Main:Font, s9 norm cadd8e6
-Gui, Main:Add, Text, x70 y247, BMP 截圖工具
+Gui, Main:Add, Text, x70 y272, FindText 抓圖工具
 
 Gui, Main:Font, s10 bold cffa500, Microsoft JhengHei
-Gui, Main:Add, Text, x25 y270, ⚙️ F9
+Gui, Main:Add, Text, x25 y295, ⚙️ F9
 Gui, Main:Font, s9 norm cadd8e6
-Gui, Main:Add, Text, x70 y272, 座標設定
+Gui, Main:Add, Text, x70 y297, 座標設定
+
+Gui, Main:Font, s10 bold cff00ff, Microsoft JhengHei
+Gui, Main:Add, Text, x25 y320, 🤖 F10
+Gui, Main:Font, s9 norm cadd8e6
+Gui, Main:Add, Text, x70 y322, 完整自動化 (倉庫→取物→販售→上架)
+Gui, Main:Font, s8 bold c00d9ff, Microsoft JhengHei
+Gui, Main:Add, Text, x340 y322 gShowF10Help, [說明?]
 
 Gui, Main:Font, s10 bold cff9f43, Microsoft JhengHei
-Gui, Main:Add, Text, x25 y295, 🔄 F11
+Gui, Main:Add, Text, x25 y345, 🔄 F11
 Gui, Main:Font, s9 norm cadd8e6
-Gui, Main:Add, Text, x70 y297, 重新啟動腳本
+Gui, Main:Add, Text, x70 y347, 重新啟動腳本
+
+Gui, Main:Font, s10 bold cff4444, Microsoft JhengHei
+Gui, Main:Add, Text, x25 y370, ⛔ F12
+Gui, Main:Font, s9 norm cadd8e6
+Gui, Main:Add, Text, x70 y372, 關閉程序
+
+Gui, Main:Font, s10 bold c00d4ff, Microsoft JhengHei
+Gui, Main:Add, Text, x25 y395, 🔑 Insert
+Gui, Main:Font, s9 norm cadd8e6
+Gui, Main:Add, Text, x70 y397, POE 驗證碼工具
 
 ; 提示區
 Gui, Main:Font, s8 italic c7f8c8d, Microsoft JhengHei
-Gui, Main:Add, Text, x15 y325, ℹ️ 按 F7 測試圖片 | F8 截圖 | BMP圖片放在 bmp 資料夾
+Gui, Main:Add, Text, x15 y425, ℹ️ 按 Ctrl+F6 管理價格 | F7 測試圖片 | 詳見 FindText使用指南.txt
 
 ; GUI 顯示在螢幕右上角
 guiWidth := 420
-guiHeight := 380
+guiHeight := 480
 guiX := A_ScreenWidth - guiWidth - 10
 guiY := 50
 Gui, Main:Show, w%guiWidth% h%guiHeight% x%guiX% y%guiY%, POE倉庫管理
@@ -175,6 +229,16 @@ Return
 ; GUI 拖曳功能
 DragGUI:
     PostMessage, 0xA1, 2
+Return
+
+; GUI 最小化按鈕
+MinimizeMainGUI:
+    Gui, Main:Minimize
+Return
+
+; GUI 關閉按鈕
+CloseMainGUI:
+    ExitApp
 Return
 
 ;------------------------------
@@ -188,24 +252,25 @@ F8::OpenFindTextGUI()  ; 啟動 FindText 抓圖工具
 F9::ShowCoordSettings()
 F10::ToggleFullAuto()
 F11::ReloadScript()
+Insert::OpenVerificationCodeTool()
+^F6::OpenPriceManager()  ; Ctrl+F6 開啟價格管理視窗
 
 ; 暫停／恢復熱鍵 (僅作用於目前執行中的功能)
-^F2::TogglePauseContinuousClick()
+; F2 連續點擊無暫停功能,已移除 ^F2
+; Ctrl+F6 已改為價格管理視窗,離線商店上架無暫停功能
 ^F3::TogglePauseRetrieve()
 ^F5::TogglePauseStore()
-^F6::TogglePauseOfflineShop()
 
 ;------------------------------
 ; 停止所有功能，確保任一時刻只有一個功能在執行
 StopAllFunctions() {
     global continuousClickRunning, storeRunning, retrieveRunning, offlineShopRunning
-    global continuousClickPaused, storePaused, retrievePaused, offlineShopPaused
+    global storePaused, retrievePaused, offlineShopPaused
     global activeFunction, retrieveEmptyCount
     continuousClickRunning := false
     storeRunning := false
     retrieveRunning := false
     offlineShopRunning := false
-    continuousClickPaused := false
     storePaused := false
     retrievePaused := false
     offlineShopPaused := false
@@ -214,6 +279,7 @@ StopAllFunctions() {
     SetTimer, ProcessStore, Off
     SetTimer, ProcessRetrieve, Off
     SetTimer, ProcessOfflineShop, Off
+    ; 安全釋放所有修飾鍵
     Send, {Ctrl Up}
     Send, {Alt Up}
     activeFunction := ""
@@ -356,21 +422,29 @@ GetItemNameFromClipboard() {
     Return ""
 }
 
-; 隨機延遲 - 模擬人類操作 (加強版)
+; 隨機延遲 - 模擬人類操作 (增強版 - 更自然的延遲模式)
 RandomSleep(min, max) {
+    ; 基礎隨機延遲
     Random, delay, %min%, %max%
 
-    ; 20% 機率加入微小額外延遲，模擬人類反應時間波動
+    ; 30% 機率加入額外延遲，模擬人類思考/分心
     Random, extraChance, 1, 100
-    if (extraChance <= 20) {
-        Random, extraDelay, 10, 50
+    if (extraChance <= 30) {
+        Random, extraDelay, 20, 100
         delay += extraDelay
+    }
+
+    ; 5% 機率加入更長延遲，模擬人類偶爾停頓
+    Random, pauseChance, 1, 100
+    if (pauseChance <= 5) {
+        Random, pauseDelay, 100, 300
+        delay += pauseDelay
     }
 
     Sleep, %delay%
 }
 
-; 人性化滑鼠移動 (非直線，帶有曲線)
+; 人性化滑鼠移動 (非直線，帶有曲線和速度變化)
 HumanMouseMove(targetX, targetY, speed := 2) {
     MouseGetPos, startX, startY
 
@@ -383,45 +457,102 @@ HumanMouseMove(targetX, targetY, speed := 2) {
         Return
     }
 
-    ; 分段移動，加入隨機偏移
-    steps := Ceil(distance / 20)  ; 每 20 像素一步
+    ; 分段移動，加入隨機偏移和速度變化
+    steps := Ceil(distance / 15)  ; 每 15 像素一步 (更細膩)
+
+    ; 隨機選擇曲線方向 (左彎或右彎)
+    Random, curveDirection, 0, 1
+    curveFactor := curveDirection ? 1 : -1
 
     Loop, %steps%
     {
         progress := A_Index / steps
 
         ; 貝塞爾曲線控制點 (模擬手部移動弧線)
-        Random, curveOffset, -5, 5
-        currentX := startX + (targetX - startX) * progress + curveOffset
-        currentY := startY + (targetY - startY) * progress + curveOffset
+        ; 使用拋物線函數製造自然弧度
+        curveIntensity := Sin(progress * 3.14159) * 8 * curveFactor
+        Random, curveNoise, -3, 3  ; 加入噪音
+
+        currentX := startX + (targetX - startX) * progress + curveIntensity + curveNoise
+        currentY := startY + (targetY - startY) * progress + curveIntensity + curveNoise
 
         MouseMove, %currentX%, %currentY%, 0
-        Random, stepDelay, 1, 3
-        Sleep, %stepDelay%
+
+        ; 速度變化：開始慢 → 中間快 → 結束慢 (模擬人類滑鼠移動)
+        if (progress < 0.3)
+            stepDelay := 3  ; 起始階段較慢
+        else if (progress > 0.7)
+            stepDelay := 2  ; 結束階段減速
+        else
+            stepDelay := 1  ; 中間階段較快
+
+        Random, delayNoise, 0, 2
+        Sleep, stepDelay + delayNoise
     }
 
-    ; 最後移動到精確位置
+    ; 最後移動到精確位置,並加入微小抖動
     MouseMove, %targetX%, %targetY%, 0
+    MouseJitter()  ; 到達後的自然抖動
 }
 
-; 人性化鍵盤輸入 (隨機按鍵間隔)
+; 人性化鍵盤輸入 (隨機按鍵間隔和速度變化)
 HumanSend(text) {
+    textLength := StrLen(text)
     Loop, Parse, text
     {
         Send, %A_LoopField%
-        Random, keyDelay, 30, 80  ; 每個字元間隔 30-80ms
+
+        ; 基礎隨機延遲 40-100ms
+        Random, keyDelay, 40, 100
+
+        ; 10% 機率打字較快 (模擬熟練區段)
+        Random, fastChance, 1, 100
+        if (fastChance <= 10) {
+            keyDelay := keyDelay * 0.6  ; 減少 40% 延遲
+        }
+
+        ; 15% 機率打字較慢 (模擬思考/猶豫)
+        Random, slowChance, 1, 100
+        if (slowChance <= 15) {
+            Random, slowExtra, 50, 150
+            keyDelay += slowExtra
+        }
+
         Sleep, %keyDelay%
     }
 }
 
-; 模擬滑鼠抖動 (人類不可能完全靜止)
+; 模擬滑鼠抖動 (人類不可能完全靜止 - 增強版)
 MouseJitter() {
     MouseGetPos, mx, my
-    Random, jitterX, -2, 2
-    Random, jitterY, -2, 2
+
+    ; 70% 機率產生抖動 (不是每次都抖)
+    Random, jitterChance, 1, 100
+    if (jitterChance > 70)
+        Return
+
+    ; 隨機抖動幅度 (-3 到 +3 像素)
+    Random, jitterX, -3, 3
+    Random, jitterY, -3, 3
+
+    ; 第一次抖動
     MouseMove, mx + jitterX, my + jitterY, 0
-    RandomSleep(10, 30)
-    MouseMove, mx, my, 0
+    RandomSleep(15, 40)
+
+    ; 50% 機率產生第二次微調
+    Random, doubleJitter, 1, 100
+    if (doubleJitter <= 50) {
+        Random, jitterX2, -1, 1
+        Random, jitterY2, -1, 1
+        MouseMove, mx + jitterX2, my + jitterY2, 0
+        RandomSleep(10, 25)
+    }
+
+    ; 回到原位 (有時不完全回到原位,模擬真實情況)
+    Random, returnExact, 1, 100
+    if (returnExact <= 80) {
+        MouseMove, mx, my, 0
+    }
 }
 
 ; ===================================================================
@@ -524,36 +655,35 @@ SmartSleep(multiplier := 1) {
 }
 
 ;------------------------------
-; 連續點擊功能 (F2)
+; 連續點擊功能 (F2) - 只有啟動和關閉,無暫停功能
 ToggleContinuousClick() {
-    global continuousClickRunning, continuousClickPaused, activeFunction
+    global continuousClickRunning, activeFunction
     if (activeFunction = "Continuous") {
+        ; 關閉功能,安全釋放 Ctrl
         continuousClickRunning := false
-        continuousClickPaused := false
         SetTimer, PerformContinuousClick, Off
         Send, {Ctrl Up}
         activeFunction := ""
         UpdateStatusText("🟢 待機中 | 按下熱鍵啟動功能")
         Return
     } else {
+        ; 啟動功能
         if (activeFunction != "")
             StopAllFunctions()
         activeFunction := "Continuous"
         continuousClickRunning := true
-        continuousClickPaused := false
         Send, {Ctrl Down}
         SetTimer, PerformContinuousClick, 50
         UpdateStatusText("⚡ 連續點擊執行中... | 再按 F2 停止")
     }
 }
 PerformContinuousClick:
-    global continuousClickRunning, continuousClickPaused
+    global continuousClickRunning
     if (!continuousClickRunning) {
         SetTimer, PerformContinuousClick, Off
         Return
     }
-    if (continuousClickPaused)
-        Return
+    ; Ctrl 保持按住,直接點擊
     Click
 Return
 
@@ -599,8 +729,8 @@ ToggleStore() {
         totalSlots := bagRows * bagCols
         ; 開始前先按下 Ctrl 並保持按住
         Send, {Ctrl Down}
-        ; 使用較穩定的間隔進行座標處理
-        SetTimer, ProcessStore, 100
+        ; 使用較穩定的間隔進行座標處理 (已調降15%速度避免Request interrupted)
+        SetTimer, ProcessStore, 115
         UpdateStatusText("💾 存倉執行中... (0/" . totalSlots . ") | 再按 F5 停止")
     }
 }
@@ -611,6 +741,7 @@ ProcessStore:
         Return
     }
     if (storePaused) {
+        ; 暫停時安全釋放 Ctrl
         Send, {Ctrl Up}
         UpdateStatusText("⏸️ 存倉已暫停 | Ctrl+F5 恢復")
         Return
@@ -618,7 +749,7 @@ ProcessStore:
     if (storeIndex > storeCoords.MaxIndex()) {
         storeRunning := false
         SetTimer, ProcessStore, Off
-        ; 全部座標處理完畢後再放開 Ctrl
+        ; 全部座標處理完畢後安全釋放 Ctrl
         Send, {Ctrl Up}
         activeFunction := ""
         UpdateStatusText("✅ 存倉完成 (60/60)")
@@ -630,8 +761,8 @@ ProcessStore:
     ; 移動至指定座標並延遲，確保位置穩定
     MouseMove, coord.x, coord.y, 0
     SmartSleep(1)
-    ; 執行左鍵點擊（在 Ctrl 按下狀態下）
-    MouseClick, left, coord.x, coord.y, 1, 0
+    ; 執行左鍵點擊（Ctrl 保持按住狀態，不重複按放）
+    Click
     SmartSleep(1)
 
     ; 動態調整延遲 (假設成功)
@@ -649,6 +780,7 @@ Return
 ToggleRetrieve() {
     global retrieveRunning, retrievePaused, activeFunction, retrieveEmptyCount
     if (activeFunction = "Retrieve") {
+        ; 關閉功能,安全釋放 Ctrl
         retrieveRunning := false
         retrievePaused := false
         retrieveEmptyCount := 0
@@ -658,12 +790,15 @@ ToggleRetrieve() {
         UpdateStatusText("🟢 待機中 | 按下熱鍵啟動功能")
         Return
     } else {
+        ; 啟動功能
         if (activeFunction != "")
             StopAllFunctions()
         activeFunction := "Retrieve"
         retrieveRunning := true
         retrievePaused := false
         retrieveEmptyCount := 0
+        ; 啟動時按住 Ctrl 並保持
+        Send, {Ctrl Down}
         SetTimer, ProcessRetrieve, 50
         UpdateStatusText("📦 取倉執行中... (搜尋物品) | 再按 F3 停止")
     }
@@ -674,11 +809,10 @@ ProcessRetrieve:
     global searchX1, searchY1, searchX2, searchY2
     if (!retrieveRunning) {
         SetTimer, ProcessRetrieve, Off
-        Send, {Ctrl Up}
-        activeFunction := ""
         Return
     }
     if (retrievePaused) {
+        ; 暫停時安全釋放 Ctrl
         Send, {Ctrl Up}
         UpdateStatusText("⏸️ 取倉已暫停 | Ctrl+F3 恢復")
         Return
@@ -690,7 +824,7 @@ ProcessRetrieve:
         retrieveEmptyCount++
         ; 檢查是否超過閾值
         if (retrieveEmptyCount >= retrieveEmptyThreshold) {
-            ; 自動關閉功能
+            ; 自動關閉功能,安全釋放 Ctrl
             retrieveRunning := false
             retrieveEmptyCount := 0
             SetTimer, ProcessRetrieve, Off
@@ -702,39 +836,27 @@ ProcessRetrieve:
         }
         Return
     }
-    ; 找到物品,重置計數器
+    ; 找到物品,重置計數器並點擊 (Ctrl 保持按住狀態)
     retrieveEmptyCount := 0
     x := pixelX + 2, y := pixelY + 2
-    Send, {Ctrl Down}
     Click, %x%, %y%
-    Send, {Ctrl Up}
     UpdateStatusText("📦 取倉執行中... (找到物品!) | 再按 F3 停止")
 Return
 
 ;------------------------------
 ; 暫停／恢復 熱鍵 (僅作用於目前執行中的功能)
-TogglePauseContinuousClick() {
-    global continuousClickRunning, continuousClickPaused, activeFunction
-    if (activeFunction != "Continuous")
-        Return
-    continuousClickPaused := !continuousClickPaused
-    if (continuousClickPaused) {
-        Send, {Ctrl Up}
-        UpdateStatusText("⏸️ 連續點擊已暫停 | Ctrl+F2 恢復")
-    } else {
-        Send, {Ctrl Down}
-        UpdateStatusText("⚡ 連續點擊執行中... | 再按 F2 停止")
-    }
-}
+; F2 連續點擊已移除暫停功能
 TogglePauseRetrieve() {
     global retrieveRunning, retrievePaused, activeFunction
     if (activeFunction != "Retrieve")
         Return
     retrievePaused := !retrievePaused
     if (retrievePaused) {
+        ; 暫停時安全釋放 Ctrl
         Send, {Ctrl Up}
         UpdateStatusText("⏸️ 取倉已暫停 | Ctrl+F3 恢復")
     } else {
+        ; 恢復時重新按下 Ctrl
         Send, {Ctrl Down}
         UpdateStatusText("📦 取倉執行中... (搜尋物品) | 再按 F3 停止")
     }
@@ -745,9 +867,11 @@ TogglePauseStore() {
         Return
     storePaused := !storePaused
     if (storePaused) {
+        ; 暫停時安全釋放 Ctrl
         Send, {Ctrl Up}
         UpdateStatusText("⏸️ 存倉已暫停 | Ctrl+F5 恢復")
     } else {
+        ; 恢復時重新按下 Ctrl
         Send, {Ctrl Down}
         progress := storeIndex
         total := storeCoords.MaxIndex()
@@ -839,17 +963,12 @@ ToggleOfflineShop() {
 }
 
 ProcessOfflineShop:
-    global offlineShopRunning, offlineShopPaused, activeFunction
+    global offlineShopRunning, activeFunction
     global storeCoords, offlineShopIndex, bmpFiles, bmpPrices
     global bagStartX, bagStartY, bagOffsetX, bagOffsetY, bagRows, bagCols
 
     if (!offlineShopRunning) {
         SetTimer, ProcessOfflineShop, Off
-        Return
-    }
-    if (offlineShopPaused) {
-        Send, {Alt Up}
-        UpdateStatusText("⏸️ 離線商店已暫停 | Ctrl+F6 恢復")
         Return
     }
 
@@ -882,9 +1001,9 @@ ProcessOfflineShop:
 
     coord := storeCoords[offlineShopIndex]
 
-    ; 使用剪貼簿判斷模式 (加入隨機延遲模擬人類)
-    ; 1. 移動滑鼠到格子
-    MouseMove, coord.x, coord.y, 0
+    ; 使用剪貼簿判斷模式 (人性化操作)
+    ; 1. 人性化移動滑鼠到格子
+    HumanMouseMove(coord.x, coord.y, 2)
     RandomSleep(60, 120)  ; 隨機延遲 60-120ms
 
     ; 2. 清空剪貼簿
@@ -931,15 +1050,17 @@ ProcessOfflineShop:
         ; 有價格設定,執行上架 (Ctrl+左鍵)
         global sellBmp, sellOkBmp
 
-        MouseMove, coord.x, coord.y, 0
+        ; 使用人性化滑鼠移動
+        HumanMouseMove(coord.x, coord.y, 2)
         RandomSleep(80, 150)  ; 隨機延遲
 
-        ; 使用 Ctrl+左鍵開啟上架視窗
+        ; 使用 Ctrl+左鍵開啟上架視窗 (人性化按鍵)
         Send, {Ctrl Down}
-        RandomSleep(20, 50)
-        MouseClick, left, coord.x, coord.y, 1, 0
+        RandomSleep(30, 70)  ; 按住 Ctrl 後的自然延遲
+        Click
+        RandomSleep(50, 100)  ; 點擊後的短暫延遲
         Send, {Ctrl Up}
-        RandomSleep(100, 200)  ; 等待視窗開啟
+        RandomSleep(150, 250)  ; 等待視窗開啟,增加隨機性
 
         ; === 階段 1: 循環等待上架視窗 (sell.bmp) 出現 ===
         ; 限制搜尋範圍為 1024x768 (視窗大小),容錯度 150
@@ -979,13 +1100,15 @@ ProcessOfflineShop:
 
         ; === 階段 2: 視窗已確認出現,輸入價格 ===
         UpdateStatusText("🏪 上架中... (" . offlineShopIndex . "/" . totalSlots . ") 📝 輸入價格:" . matchedFileName . " = " . price)
-        RandomSleep(150, 250)  ; 模擬人類反應時間
-        SendRaw, %price%
-        RandomSleep(100, 180)  ; 確保價格輸入完成
+        RandomSleep(150, 300)  ; 模擬人類反應時間
+
+        ; 使用人性化鍵盤輸入
+        HumanSend(price)
+        RandomSleep(120, 200)  ; 確保價格輸入完成
 
         ; 按下 Enter 確認
         Send, {Enter}
-        RandomSleep(200, 350)  ; 等待視窗反應,避免重複按 Enter
+        RandomSleep(250, 400)  ; 等待視窗反應,增加隨機性
 
         ; === 階段 3: 循環等待確認按鈕 (sell-ok) 出現 ===
         global Text_SellOK
@@ -1028,20 +1151,7 @@ ProcessOfflineShop:
     SetTimer, ProcessOfflineShop, 100
 Return
 
-TogglePauseOfflineShop() {
-    global offlineShopRunning, offlineShopPaused, activeFunction, offlineShopIndex
-    global bagRows, bagCols
-    if (activeFunction != "OfflineShop")
-        Return
-    offlineShopPaused := !offlineShopPaused
-    if (offlineShopPaused) {
-        Send, {Alt Up}
-        UpdateStatusText("⏸️ 離線商店已暫停 | Ctrl+F6 恢復")
-    } else {
-        totalSlots := bagRows * bagCols
-        UpdateStatusText("🏪 離線商店上架中... (" . offlineShopIndex . "/" . totalSlots . ") | F6 停止")
-    }
-}
+; 離線商店上架功能已移除暫停功能 (Ctrl+F6 改為價格管理視窗)
 
 ;------------------------------
 ; F7 - 圖片識別測試工具
@@ -1488,16 +1598,121 @@ CloseImageTest:
     UpdateStatusText("🟢 待機中 | 按下熱鍵啟動功能")
 Return
 
+;------------------------------
+; F10 完整自動化說明
+ShowF10Help() {
+    helpText := "
+    (
+🤖 F10 完整自動化功能說明
+═══════════════════════════════════════════════
+
+【功能概述】
+F10 整合了倉庫取物、NPC 互動、商店上架的完整流程，
+實現一鍵自動化操作。
+
+【執行流程】
+┌─────────────────────────────────────────┐
+│ 階段 1: 尋找倉庫 NPC                      │
+│  → 自動偵測並點擊倉庫 NPC                 │
+│  → 等待倉庫介面開啟 (5秒倒數)            │
+│  → 如未開啟則重新點擊                    │
+├─────────────────────────────────────────┤
+│ 階段 2: 掃描倉庫並取出物品                │
+│  → 掃描 12x12 共 144 格倉庫              │
+│  → 使用剪貼簿模式 (Ctrl+C) 識別物品      │
+│  → 自動取出有價格設定的物品 (Ctrl+點擊)  │
+│  → 最多取出 60 個物品                    │
+├─────────────────────────────────────────┤
+│ 階段 3: 尋找販售 NPC                      │
+│  → 關閉倉庫                              │
+│  → 自動偵測並點擊販售 NPC                │
+│  → 等待對話窗出現 (5秒倒數)              │
+├─────────────────────────────────────────┤
+│ 階段 4: 點擊管理商店選項                  │
+│  → 偵測對話窗並點擊「管理商店」選項      │
+│  → 使用獨立的對話窗偏移量                │
+│  → 等待管理商店開啟 (5秒倒數)            │
+│  → 如未開啟則重新點擊選項                │
+├─────────────────────────────────────────┤
+│ 階段 5: 等待背包出現                      │
+│  → 確認管理商店和背包都已開啟            │
+│  → 自動啟動 F6 上架功能                  │
+└─────────────────────────────────────────┘
+
+【使用前準備】
+1. ✅ 填入所有 FindText 文字碼
+   - 按 F8 截取 8 個圖片生成文字碼
+   - 填入 FindText文字碼庫.ahk
+   - 按 F7 測試所有文字碼
+
+2. ✅ 設定物品價格
+   - 編輯 sell\prices.ini
+   - 格式: 物品名稱=價格
+   - 物品名稱必須與遊戲內 Ctrl+C 複製的名稱一致
+
+3. ✅ 調整偏移量 (如需要)
+   - 按 F9 開啟座標設定
+   - NPC 偏移: 調整 NPC 點擊位置
+   - 對話窗偏移: 調整選項點擊位置
+
+【操作步驟】
+1. 站在倉庫 NPC 附近
+2. 按 F10 啟動自動化
+3. 觀察狀態訊息，確認流程執行
+4. 如需停止，再按 F10
+
+【故障排除】
+❓ 找不到 NPC？
+  → 檢查 NPC 文字碼是否填入
+  → 靠近 NPC 讓 NPC 顯示在畫面中
+  → 按 F7 測試 NPC 識別
+
+❓ 物品沒有被取出？
+  → 檢查 prices.ini 物品名稱是否正確
+  → 按 Ctrl+C 複製物品，貼到記事本查看名稱
+  → 確保名稱完全一致 (包括空格)
+
+❓ 點擊位置不對？
+  → 按 F9 調整偏移量
+  → NPC 偏移: 用於階段 1, 3 (NPC 點擊)
+  → 對話窗偏移: 用於階段 4 (選項點擊)
+
+❓ 5秒後重新點擊？
+  → 這是正常的重試機制
+  → 如果介面未開啟，會自動重新點擊
+  → 檢查偏移量是否正確
+
+【熱鍵】
+F10:    啟動/停止自動化
+F7:     測試文字碼識別
+F8:     開啟 FindText 截圖工具
+F9:     調整偏移量座標
+F11:    重新啟動程式
+Insert: 開啟驗證碼工具
+
+【詳細文件】
+FindText使用指南.txt - FindText 截圖教學
+優化更新說明.txt     - 技術細節說明
+
+═══════════════════════════════════════════════
+    )"
+
+    MsgBox, 64, F10 完整自動化使用說明, %helpText%
+}
+Return
+
 CloseTestResult:
     Gui, TestResult:Destroy
 Return
 
 TestImageGuiClose:
+TestImageGuiEscape:
     Gui, TestImage:Destroy
     UpdateStatusText("🟢 待機中 | 按下熱鍵啟動功能")
 Return
 
 TestResultGuiClose:
+TestResultGuiEscape:
     Gui, TestResult:Destroy
 Return
 
@@ -1907,7 +2122,308 @@ Return
 
 CloseBMPCapture:
 BMPCaptureGuiClose:
+BMPCaptureGuiEscape:
     Gui, BMPCapture:Destroy
+Return
+
+;------------------------------
+;------------------------------
+; 價格管理視窗 (Ctrl+F6)
+OpenPriceManager() {
+    global bmpFolder, bmpPrices, PriceListView, EditItemName, EditItemPrice
+
+    ; 重新載入價格
+    LoadPrices()
+
+    ; 創建視窗
+    Gui, PriceManager:New, +AlwaysOnTop +Resize
+    Gui, PriceManager:Color, 2d2d44
+    Gui, PriceManager:Font, s11 bold cFFFFFF, Microsoft JhengHei
+
+    ; 標題
+    Gui, PriceManager:Add, Text, x20 y15 w500, 💰 價格管理 - prices.ini
+
+    ; 說明文字
+    Gui, PriceManager:Font, s9 normal cDDDDDD
+    Gui, PriceManager:Add, Text, x20 y45 w500, 物品名稱必須與遊戲內 Ctrl+C 複製的名稱完全一致 (支援中英文)
+
+    ; 價格列表
+    Gui, PriceManager:Font, s10 normal cFFFFFF
+    Gui, PriceManager:Add, Text, x20 y75, 📋 現有價格設定:
+
+    ; ListView 顯示價格列表
+    Gui, PriceManager:Font, s9 normal c000000
+    Gui, PriceManager:Add, ListView, x20 y100 w560 h300 vPriceListView gPriceListClick, 序號|物品名稱|價格
+
+    ; 填充 ListView
+    itemIndex := 1
+    for itemName, price in bmpPrices {
+        LV_Add("", itemIndex, itemName, price)
+        itemIndex++
+    }
+
+    ; 調整欄寬
+    LV_ModifyCol(1, 60)   ; 序號
+    LV_ModifyCol(2, 320)  ; 物品名稱
+    LV_ModifyCol(3, 150)  ; 價格
+
+    ; 新增/編輯區域
+    Gui, PriceManager:Font, s10 bold cFFFFFF
+    Gui, PriceManager:Add, Text, x20 y420, ✏️ 新增/編輯價格:
+
+    Gui, PriceManager:Font, s9 normal cDDDDDD
+    Gui, PriceManager:Add, Text, x20 y450, 物品名稱:
+    Gui, PriceManager:Font, s9 normal c000000
+    Gui, PriceManager:Add, Edit, x110 y448 w320 vEditItemName
+
+    Gui, PriceManager:Font, s9 normal cDDDDDD
+    Gui, PriceManager:Add, Text, x20 y485, 價格:
+    Gui, PriceManager:Font, s9 normal c000000
+    Gui, PriceManager:Add, Edit, x110 y483 w150 vEditItemPrice
+
+    ; 按鈕區域
+    Gui, PriceManager:Font, s10 bold c000000, Microsoft JhengHei
+    Gui, PriceManager:Add, Button, x20 y530 w120 h40 gAddPrice, ➕ 新增
+    Gui, PriceManager:Add, Button, x150 y530 w120 h40 gUpdatePrice, 💾 更新
+    Gui, PriceManager:Add, Button, x280 y530 w120 h40 gDeletePrice, 🗑️ 刪除
+    Gui, PriceManager:Add, Button, x410 y530 w120 h40 gClearInputs, 🔄 清空
+
+    ; 底部按鈕
+    Gui, PriceManager:Font, s10 bold c000000
+    Gui, PriceManager:Add, Button, x20 y590 w150 h45 gSavePrices, 💾 保存到檔案
+    Gui, PriceManager:Add, Button, x180 y590 w150 h45 gReloadPrices, 🔄 重新載入
+    Gui, PriceManager:Add, Button, x340 y590 w150 h45 gOpenPricesIni, 📝 開啟 INI
+    Gui, PriceManager:Add, Button, x500 y590 w80 h45 gClosePriceManager, 關閉
+
+    ; 顯示視窗
+    Gui, PriceManager:Show, w600 h660, 價格管理器
+    Return
+}
+
+; ListView 點擊事件 - 填充到編輯框
+PriceListClick:
+    if (A_GuiEvent = "DoubleClick") {
+        selectedRow := LV_GetNext(0)
+        if (selectedRow) {
+            LV_GetText(itemName, selectedRow, 2)
+            LV_GetText(price, selectedRow, 3)
+            GuiControl, PriceManager:, EditItemName, %itemName%
+            GuiControl, PriceManager:, EditItemPrice, %price%
+        }
+    }
+Return
+
+; 新增價格
+AddPrice:
+    global bmpPrices, EditItemName, EditItemPrice
+    Gui, PriceManager:Submit, NoHide
+
+    if (EditItemName = "" || EditItemPrice = "") {
+        MsgBox, 48, 提示, 請輸入物品名稱和價格!
+        Return
+    }
+
+    ; 檢查是否已存在
+    if (bmpPrices.HasKey(EditItemName)) {
+        MsgBox, 36, 確認, 物品「%EditItemName%」已存在!`n`n是否要更新價格?
+        IfMsgBox, Yes
+            Goto, UpdatePrice
+        Return
+    }
+
+    ; 新增到字典
+    bmpPrices[EditItemName] := EditItemPrice
+
+    ; 新增到 ListView
+    LV_Add("", LV_GetCount() + 1, EditItemName, EditItemPrice)
+
+    ; 清空輸入框
+    GuiControl, PriceManager:, EditItemName,
+    GuiControl, PriceManager:, EditItemPrice,
+
+    MsgBox, 64, 成功, 已新增物品「%EditItemName%」價格: %EditItemPrice%`n`n記得點擊「保存到檔案」!
+Return
+
+; 更新價格
+UpdatePrice:
+    global bmpPrices, EditItemName, EditItemPrice
+    Gui, PriceManager:Submit, NoHide
+
+    if (EditItemName = "" || EditItemPrice = "") {
+        MsgBox, 48, 提示, 請輸入物品名稱和價格!
+        Return
+    }
+
+    ; 更新字典
+    bmpPrices[EditItemName] := EditItemPrice
+
+    ; 更新 ListView
+    foundRow := 0
+    Loop, % LV_GetCount() {
+        LV_GetText(existingName, A_Index, 2)
+        if (existingName = EditItemName) {
+            foundRow := A_Index
+            Break
+        }
+    }
+
+    if (foundRow) {
+        LV_Modify(foundRow, "", foundRow, EditItemName, EditItemPrice)
+        MsgBox, 64, 成功, 已更新物品「%EditItemName%」價格: %EditItemPrice%`n`n記得點擊「保存到檔案」!
+    } else {
+        ; 如果不存在就新增
+        LV_Add("", LV_GetCount() + 1, EditItemName, EditItemPrice)
+        MsgBox, 64, 成功, 已新增物品「%EditItemName%」價格: %EditItemPrice%`n`n記得點擊「保存到檔案」!
+    }
+
+    ; 清空輸入框
+    GuiControl, PriceManager:, EditItemName,
+    GuiControl, PriceManager:, EditItemPrice,
+Return
+
+; 刪除價格
+DeletePrice:
+    selectedRow := LV_GetNext(0)
+    if (!selectedRow) {
+        MsgBox, 48, 提示, 請先在列表中選擇要刪除的項目!
+        Return
+    }
+
+    LV_GetText(itemName, selectedRow, 2)
+    LV_GetText(price, selectedRow, 3)
+
+    MsgBox, 36, 確認刪除, 確定要刪除以下項目嗎？`n`n物品: %itemName%`n價格: %price%
+    IfMsgBox, No
+        Return
+
+    global bmpPrices
+
+    ; 從字典中刪除
+    bmpPrices.Delete(itemName)
+
+    ; 從 ListView 刪除
+    LV_Delete(selectedRow)
+
+    ; 重新編號
+    Loop, % LV_GetCount() {
+        LV_Modify(A_Index, "", A_Index)
+    }
+
+    MsgBox, 64, 成功, 已刪除物品「%itemName%」!`n`n記得點擊「保存到檔案」!
+Return
+
+; 清空輸入框
+ClearInputs:
+    GuiControl, PriceManager:, EditItemName,
+    GuiControl, PriceManager:, EditItemPrice,
+Return
+
+; 保存價格到檔案
+SavePrices:
+    global bmpFolder, bmpPrices
+    pricesFile := bmpFolder . "\prices.ini"
+
+    ; 備份舊檔案
+    backupFile := bmpFolder . "\prices.ini.backup"
+    FileCopy, %pricesFile%, %backupFile%, 1
+
+    ; 刪除舊檔案
+    FileDelete, %pricesFile%
+
+    ; 寫入檔案頭 (UTF-8 with BOM)
+    FileAppend,
+    (
+`; ===================================================================
+`; 物品名稱與價格對照表 (剪貼簿模式)
+`; ===================================================================
+`;
+`; 格式說明:
+`; 物品名稱=價格
+`;
+`; 重要提示:
+`; 1. 物品名稱必須與遊戲內 Ctrl+C 複製的名稱完全一致
+`; 2. 物品名稱會自動從 ---- 分隔線上方提取
+`; 3. 支援中文名稱 (例如: 熾熱之邀=80)
+`; 4. 價格可以是整數或小數 (例如: 1, 150, 0.5)
+`; 5. 分號 `; 開頭的行會被忽略
+`; 6. 空行會被忽略
+`; 7. 本檔案使用 UTF-8 編碼,支援中文
+`;
+`; 如何設定:
+`; 1. 在遊戲中將滑鼠移到物品上
+`; 2. 按 Ctrl+C 複製物品資訊
+`; 3. 貼到記事本查看物品名稱 (第一個 ---- 上方的文字)
+`; 4. 在下方新增: 物品名稱=價格
+`;
+`; 範例:
+`; 混沌石=1
+`; 崇高石=150
+`; 神聖石=80
+`; 點金石=50
+`; 改造石=0.1
+`; 重鑄石=0.2
+`; 後悔石=2
+`; 熾熱之邀=80
+`; 17 級地圖=40
+`;
+`; ===================================================================
+`; 請在下方新增你的物品價格設定:
+`; ===================================================================
+
+    ), %pricesFile%, UTF-8
+
+    ; 寫入價格資料
+    for itemName, price in bmpPrices {
+        FileAppend, %itemName%=%price%`n, %pricesFile%, UTF-8
+    }
+
+    itemCount := LV_GetCount()
+    MsgBox, 64, 保存成功, 價格設定已保存到:`n%pricesFile%`n`n共保存 %itemCount% 個項目!`n`n舊檔案已備份為: prices.ini.backup
+Return
+
+; 重新載入價格
+ReloadPrices:
+    MsgBox, 36, 確認, 確定要重新載入檔案？`n`n未保存的修改將會遺失!
+    IfMsgBox, No
+        Return
+
+    ; 重新載入
+    LoadPrices()
+
+    ; 清空 ListView
+    LV_Delete()
+
+    ; 重新填充
+    global bmpPrices
+    itemIndex := 1
+    for itemName, price in bmpPrices {
+        LV_Add("", itemIndex, itemName, price)
+        itemIndex++
+    }
+
+    itemCount := LV_GetCount()
+    MsgBox, 64, 成功, 已重新載入價格設定!`n`n共載入 %itemCount% 個項目!
+Return
+
+; 開啟 prices.ini
+OpenPricesIni:
+    global bmpFolder
+    pricesFile := bmpFolder . "\prices.ini"
+
+    IfNotExist, %pricesFile%
+    {
+        MsgBox, 48, 檔案不存在, prices.ini 不存在!`n`n將自動建立範例檔案。
+        LoadPrices()
+    }
+
+    Run, notepad.exe "%pricesFile%"
+Return
+
+; 關閉視窗
+ClosePriceManager:
+PriceManagerGuiClose:
+PriceManagerGuiEscape:
+    Gui, PriceManager:Destroy
 Return
 
 ;------------------------------
@@ -2072,6 +2588,7 @@ CancelCoordSettings:
 Return
 
 CoordSettingsGuiClose:
+CoordSettingsGuiEscape:
     Gui, CoordSettings:Destroy
 Return
 
@@ -2276,14 +2793,16 @@ ProcessFullAuto:
                 ; 檢查是否有價格設定
                 price := bmpPrices[itemName]
                 if (price != "") {
-                    ; 有價格,取出物品 (Ctrl+左鍵) - 加入隨機延遲
-                    RandomSleep(50, 100)
+                    ; 有價格,取出物品 (Ctrl+左鍵) - 人性化操作
+                    RandomSleep(80, 150)
                     Send, {Ctrl Down}
-                    MouseClick, left, %x%, %y%, 1, 0
+                    RandomSleep(30, 70)  ; Ctrl 按住後的自然延遲
+                    Click, %x%, %y%
+                    RandomSleep(40, 80)  ; 點擊後的短暫延遲
                     Send, {Ctrl Up}
                     stashFoundCount++
                     UpdateStatusText("🤖 自動化 [2/6] 掃描中... " . stashScanIndex . "/" . totalSlots . " | 已找到: " . stashFoundCount . "/60 | " . itemName . " (價格:" . price . ")")
-                    RandomSleep(120, 200)  ; 取出物品後隨機延遲
+                    RandomSleep(150, 250)  ; 取出物品後隨機延遲,增加變化
                 } else {
                     ; 有物品但無價格設定，跳過
                     UpdateStatusText("🤖 自動化 [2/6] 掃描中... " . stashScanIndex . "/" . totalSlots . " | 跳過: " . itemName . " (無價格設定)")
@@ -2475,7 +2994,425 @@ ReloadScript() {
     Reload
 }
 
+; ===================================================================
+; POE 驗證碼工具 - AHK + FindText 實作
+; ===================================================================
+
+; 載入驗證碼帳號設定
+LoadVerificationAccount() {
+    global verificationUserIni, verificationAccount
+
+    ; 先嘗試從 user.ini 讀取帳號模式
+    IniRead, accountMode, %verificationUserIni%, Account, mode, direct
+
+    ; 模式 1: 直接從 user.ini 讀取 (direct)
+    if (accountMode = "direct") {
+        IfNotExist, %verificationUserIni%
+        {
+            MsgBox, 48, 錯誤, 找不到 user.ini 配置檔！`n`n路徑: %verificationUserIni%`n`n請確認檔案存在。
+            Return false
+        }
+
+        IniRead, account, %verificationUserIni%, Account, username, ERROR
+        if (account = "ERROR" || account = "") {
+            MsgBox, 48, 錯誤, 無法讀取帳號！`n`n請檢查 user.ini 中的 [Account] username 設定。
+            Return false
+        }
+
+        verificationAccount := account
+        Return true
+    }
+
+    ; 模式 2: 從 IOT 目錄讀取 (iot)
+    else if (accountMode = "iot") {
+        ; 讀取 setnb.ini 中的 nob 值
+        setnbPath := "C:\IOT\setnb.ini"
+        IfNotExist, %setnbPath%
+        {
+            MsgBox, 48, 錯誤, 找不到 setnb.ini！`n`n路徑: %setnbPath%`n`n請確認檔案存在。
+            Return false
+        }
+
+        ; 直接讀取 nob 參數
+        IniRead, nob, %setnbPath%, OutputVar, nob, ERROR
+        if (nob = "ERROR" || nob = "") {
+            MsgBox, 48, 錯誤, 無法讀取 setnb.ini 中的 nob 值！`n`n請檢查 [OutputVar] nob 設定。
+            Return false
+        }
+
+        ; 讀取 list.txt 的第 nob 行
+        listPath := "C:\IOT\list.txt"
+        IfNotExist, %listPath%
+        {
+            MsgBox, 48, 錯誤, 找不到 list.txt！`n`n路徑: %listPath%`n`n請確認檔案存在。
+            Return false
+        }
+
+        FileReadLine, accountLine, %listPath%, %nob%
+        if (ErrorLevel) {
+            MsgBox, 48, 錯誤, 無法讀取 list.txt 第 %nob% 行！`n`n請檢查檔案內容。
+            Return false
+        }
+
+        ; 解析 list.txt 行,提取帳號 (第10個欄位,k79281346 或 partylin 或 dbkpuawv660@outlook.com)
+        StringSplit, listParts, accountLine, `,
+        if (listParts0 < 10) {
+            MsgBox, 48, 錯誤, list.txt 第 %nob% 行格式錯誤！`n`n無法解析帳號。
+            Return false
+        }
+
+        account := listParts10  ; 第10個欄位是帳號
+
+        ; 移除前後空白
+        account := Trim(account)
+
+        if (account = "") {
+            MsgBox, 48, 錯誤, list.txt 第 %nob% 行帳號為空！
+            Return false
+        }
+
+        verificationAccount := account
+        Return true
+    }
+
+    ; 模式未知
+    else {
+        MsgBox, 48, 錯誤, 未知的帳號模式: %accountMode%`n`n請在 user.ini 中設定 mode = direct 或 mode = iot
+        Return false
+    }
+}
+
+; 從 API 取得驗證碼
+FetchVerificationCode() {
+    global verificationApiUrl, verificationApiToken, verificationAccount, verificationCode
+
+    ; 檢查帳號
+    if (verificationAccount = "") {
+        if (!LoadVerificationAccount()) {
+            Return false
+        }
+    }
+
+    ; 建立 HTTP 請求
+    try {
+        http := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+        url := verificationApiUrl . "?token=" . verificationApiToken . "&account=" . verificationAccount
+
+        ; 發送請求
+        http.Open("GET", url, false)
+        http.SetRequestHeader("User-Agent", "POE-Verification-Tool/1.0")
+        http.Send()
+
+        ; 等待回應
+        http.WaitForResponse(10)
+
+        ; 檢查狀態碼
+        statusCode := http.Status
+        if (statusCode != 200) {
+            MsgBox, 48, API 錯誤, API 請求失敗！`n`n狀態碼: %statusCode%`n`n請檢查網路連線或 API 伺服器狀態。
+            Return false
+        }
+
+        ; 取得回應內容
+        responseText := http.ResponseText
+
+        ; 使用正則表達式提取驗證碼 (格式: xxx-xxx-xxx)
+        ; 尋找 "access code" 後面的驗證碼,避免匹配到日期
+        if RegExMatch(responseText, "access code[^:]*:\s*([a-z0-9]+-[a-z0-9]+-[a-z0-9]+)", match) {
+            verificationCode := match1  ; match1 是第一個捕獲組
+            Return true
+        } else {
+            MsgBox, 48, 解析錯誤, 無法從郵件中提取驗證碼！`n`n請確認郵件已送達,或聯繫管理員。`n`n回應內容:`n%responseText%
+            Return false
+        }
+    } catch e {
+        MsgBox, 48, 網路錯誤, HTTP 請求失敗！`n`n錯誤訊息: %e%`n`n請檢查網路連線。
+        Return false
+    }
+}
+
+; 自動輸入驗證碼
+AutoInputVerificationCode(countdown := 3) {
+    global verificationCode
+
+    if (verificationCode = "") {
+        MsgBox, 48, 錯誤, 尚未取得驗證碼！`n`n請先點擊「取得驗證碼」。
+        Return
+    }
+
+    ; 倒數提示
+    Loop, %countdown% {
+        remaining := countdown - A_Index + 1
+        UpdateStatusText("🔑 驗證碼自動輸入倒數... " . remaining . " 秒")
+        Sleep, 1000
+    }
+
+    ; 使用貼上功能輸入 (避免中文輸入法干擾)
+    UpdateStatusText("📋 貼上驗證碼: " . verificationCode)
+    Clipboard := verificationCode
+    Sleep, 50
+    Send, ^v
+
+    UpdateStatusText("✅ 驗證碼已輸入: " . verificationCode)
+    Sleep, 2000
+    UpdateStatusText("🟢 待機中 | 按下熱鍵啟動功能")
+}
+
+; 開啟驗證碼工具 GUI (Insert)
+OpenVerificationCodeTool() {
+    ShowVerificationGUI()
+}
+
+; 顯示驗證碼工具 GUI
+ShowVerificationGUI() {
+    global verificationAccount, verificationCode
+
+    ; 載入帳號
+    LoadVerificationAccount()
+
+    ; 建立 GUI
+    Gui, Verification:New, , POE 驗證碼工具
+    Gui, Verification:+AlwaysOnTop -MinimizeBox
+    Gui, Verification:Margin, 20, 20
+    Gui, Verification:Color, 1a1a2e
+
+    ; 標題
+    Gui, Verification:Font, s14 bold cFFFFFF, Microsoft JhengHei
+    Gui, Verification:Add, Text, x20 y20 w460 Center, 🔑 POE 驗證碼自動取得工具
+
+    ; 帳號資訊區
+    Gui, Verification:Add, Progress, x20 y60 w460 h90 Background2d3250 Disabled
+
+    Gui, Verification:Font, s10 norm cadd8e6, Microsoft JhengHei
+    Gui, Verification:Add, Text, x35 y75, 當前帳號: (可直接修改)
+    Gui, Verification:Font, s10 bold cBlack, Microsoft JhengHei
+    Gui, Verification:Add, Edit, x35 y100 w410 h28 vVerificationAccountInput BackgroundWhite, %verificationAccount%
+
+    ; 驗證碼顯示區
+    Gui, Verification:Add, Progress, x20 y165 w460 h120 Background2d3250 Disabled
+
+    Gui, Verification:Font, s10 norm cadd8e6, Microsoft JhengHei
+    Gui, Verification:Add, Text, x35 y180, 驗證碼:
+
+    Gui, Verification:Font, s16 bold cFFFFFF, Consolas
+    Gui, Verification:Add, Edit, x35 y205 w410 h35 Center ReadOnly vVerificationCodeDisplay BackgroundBlack c00ff88, %verificationCode%
+
+    ; 按鈕區
+    Gui, Verification:Font, s10 norm cFFFFFF, Microsoft JhengHei
+    Gui, Verification:Add, Button, x35 y255 w130 h40 gFetchCodeButton, 📥 取得驗證碼
+    Gui, Verification:Add, Button, x175 y255 w130 h40 gCopyCodeButton, 📋 複製到剪貼簿
+    Gui, Verification:Add, Button, x315 y255 w130 h40 gAutoInputButton, ⌨️ 自動輸入(3秒)
+
+    ; 自動監控區域
+    Gui, Verification:Add, Progress, x20 y315 w460 h210 Background2d3250 Disabled
+
+    Gui, Verification:Font, s11 bold cadd8e6, Microsoft JhengHei
+    Gui, Verification:Add, Text, x35 y330, 🔍 自動監控設定
+
+    Gui, Verification:Font, s9 norm cadd8e6, Microsoft JhengHei
+    Gui, Verification:Add, Text, x35 y360, 輸入框 X:
+    Gui, Verification:Font, s9 norm cBlack, Microsoft JhengHei
+    Gui, Verification:Add, Edit, x110 y358 w70 h22 vVerificationClickXInput BackgroundWhite, %verificationClickX%
+
+    Gui, Verification:Font, s9 norm cadd8e6, Microsoft JhengHei
+    Gui, Verification:Add, Text, x200 y360, Y:
+    Gui, Verification:Font, s9 norm cBlack, Microsoft JhengHei
+    Gui, Verification:Add, Edit, x220 y358 w70 h22 vVerificationClickYInput BackgroundWhite, %verificationClickY%
+
+    Gui, Verification:Font, s8 italic c7f8c8d, Microsoft JhengHei
+    Gui, Verification:Add, Text, x310 y360 w150, (點擊後輸入驗證碼)
+
+    Gui, Verification:Font, s9 norm cadd8e6, Microsoft JhengHei
+    Gui, Verification:Add, Text, x35 y390, 送出按鈕 X:
+    Gui, Verification:Font, s9 norm cBlack, Microsoft JhengHei
+    Gui, Verification:Add, Edit, x125 y388 w70 h22 vVerificationSubmitXInput BackgroundWhite, %verificationSubmitX%
+
+    Gui, Verification:Font, s9 norm cadd8e6, Microsoft JhengHei
+    Gui, Verification:Add, Text, x210 y390, Y:
+    Gui, Verification:Font, s9 norm cBlack, Microsoft JhengHei
+    Gui, Verification:Add, Edit, x230 y388 w70 h22 vVerificationSubmitYInput BackgroundWhite, %verificationSubmitY%
+
+    Gui, Verification:Font, s8 italic c7f8c8d, Microsoft JhengHei
+    Gui, Verification:Add, Text, x310 y390 w150, (輸入後點擊送出)
+
+    Gui, Verification:Font, s8 italic c7f8c8d, Microsoft JhengHei
+    Gui, Verification:Add, Text, x35 y420 w410, ℹ️ 使用 Window Spy 取得座標,輸入後會自動點擊送出按鈕
+
+    Gui, Verification:Font, s10 norm cFFFFFF, Microsoft JhengHei
+    Gui, Verification:Add, Button, x35 y455 w200 h40 gToggleMonitorButton vVerificationMonitorBtn, ▶️ 開始自動監控
+    Gui, Verification:Add, Button, x245 y455 w200 h40 gSaveCoordinatesButton, 💾 儲存座標設定
+
+    ; 說明文字
+    Gui, Verification:Font, s8 italic c7f8c8d, Microsoft JhengHei
+    Gui, Verification:Add, Text, x20 y510 w460 Center, ℹ️ 請先使用 F8 截取驗證碼視窗並填入 Text_驗證碼視窗 文字碼
+
+    ; 顯示視窗
+    Gui, Verification:Show, w500 h550
+    Return
+
+    ; 按鈕事件處理
+    FetchCodeButton:
+        ; 先從輸入框讀取帳號
+        Gui, Verification:Submit, NoHide
+        verificationAccount := VerificationAccountInput
+
+        UpdateStatusText("🔑 正在取得驗證碼...")
+        if (FetchVerificationCode()) {
+            GuiControl, Verification:, VerificationCodeDisplay, %verificationCode%
+            UpdateStatusText("✅ 驗證碼已取得: " . verificationCode)
+            Sleep, 1500
+            UpdateStatusText("🟢 待機中 | 按下熱鍵啟動功能")
+        }
+    Return
+
+    CopyCodeButton:
+        if (verificationCode = "") {
+            MsgBox, 48, 提示, 尚未取得驗證碼！`n`n請先點擊「取得驗證碼」。
+            Return
+        }
+        Clipboard := verificationCode
+        UpdateStatusText("📋 驗證碼已複製: " . verificationCode)
+        Sleep, 1500
+        UpdateStatusText("🟢 待機中 | 按下熱鍵啟動功能")
+    Return
+
+    AutoInputButton:
+        Gui, Verification:Hide
+        AutoInputVerificationCode(3)
+    Return
+
+    ToggleMonitorButton:
+        if (verificationMonitoring) {
+            StopVerificationMonitoring()
+        } else {
+            StartVerificationMonitoring()
+        }
+    Return
+
+    SaveCoordinatesButton:
+        Gui, Verification:Submit, NoHide
+        verificationClickX := VerificationClickXInput
+        verificationClickY := VerificationClickYInput
+        verificationSubmitX := VerificationSubmitXInput
+        verificationSubmitY := VerificationSubmitYInput
+        UpdateStatusText("💾 座標已儲存 | 輸入框: (" . verificationClickX . ", " . verificationClickY . ") 送出: (" . verificationSubmitX . ", " . verificationSubmitY . ")")
+        Sleep, 2000
+        UpdateStatusText("🟢 待機中 | 按下熱鍵啟動功能")
+    Return
+
+    VerificationGuiClose:
+    VerificationGuiEscape:
+        ; 關閉視窗時停止監控
+        if (verificationMonitoring) {
+            StopVerificationMonitoring()
+        }
+        Gui, Verification:Destroy
+    Return
+}
+
+; 開始驗證碼自動監控
+StartVerificationMonitoring() {
+    global verificationMonitoring, Text_驗證碼視窗, verificationAccount
+    global verificationClickX, verificationClickY, verificationSubmitX, verificationSubmitY
+
+    ; 檢查是否已設定 FindText 文字碼
+    if (Text_驗證碼視窗 = "") {
+        MsgBox, 48, 警告, 尚未設定驗證碼視窗的 FindText 文字碼！`n`n請先使用 F8 截取驗證碼輸入視窗，`n生成 FindText 文字碼後填入程式中的 Text_驗證碼視窗 變數。
+        Return
+    }
+
+    ; 儲存座標設定和帳號
+    Gui, Verification:Submit, NoHide
+    verificationAccount := VerificationAccountInput
+    verificationClickX := VerificationClickXInput
+    verificationClickY := VerificationClickYInput
+    verificationSubmitX := VerificationSubmitXInput
+    verificationSubmitY := VerificationSubmitYInput
+
+    ; 開始監控
+    verificationMonitoring := true
+    GuiControl, Verification:, VerificationMonitorBtn, ⏸️ 停止監控
+    UpdateStatusText("🔍 驗證碼自動監控已啟動...")
+
+    ; 啟動監控計時器 (每 2 秒檢測一次)
+    SetTimer, ProcessVerificationMonitoring, 2000
+}
+
+; 停止驗證碼自動監控
+StopVerificationMonitoring() {
+    global verificationMonitoring
+
+    verificationMonitoring := false
+    SetTimer, ProcessVerificationMonitoring, Off
+    GuiControl, Verification:, VerificationMonitorBtn, ▶️ 開始自動監控
+    UpdateStatusText("⏹️ 驗證碼自動監控已停止")
+    Sleep, 1500
+    UpdateStatusText("🟢 待機中 | 按下熱鍵啟動功能")
+}
+
+; 處理驗證碼監控循環
+ProcessVerificationMonitoring:
+    if (!verificationMonitoring) {
+        Return
+    }
+
+    ; 使用 FindText 偵測驗證碼視窗
+    result := FindImage_Tiered(Text_驗證碼視窗)
+
+    if (result.found) {
+        ; 找到驗證碼視窗
+        UpdateStatusText("✅ 偵測到驗證碼視窗! 位置: " . result.x . ", " . result.y)
+
+        ; 取得驗證碼
+        UpdateStatusText("🔑 正在取得驗證碼...")
+        if (FetchVerificationCode()) {
+            GuiControl, Verification:, VerificationCodeDisplay, %verificationCode%
+            UpdateStatusText("✅ 驗證碼已取得: " . verificationCode)
+
+            ; 點擊指定座標
+            RandomSleep(300, 500)
+            UpdateStatusText("🖱️ 點擊座標: X=" . verificationClickX . " Y=" . verificationClickY)
+            HumanMouseMove(verificationClickX, verificationClickY, 2)
+            RandomSleep(100, 200)
+            Click
+
+            ; 等待後使用貼上功能輸入驗證碼 (避免中文輸入法干擾)
+            RandomSleep(500, 800)
+            UpdateStatusText("📋 貼上驗證碼: " . verificationCode)
+
+            ; 複製到剪貼簿
+            Clipboard := verificationCode
+            RandomSleep(50, 100)
+
+            ; 使用 Ctrl+V 貼上
+            Send, ^v
+            RandomSleep(200, 400)
+
+            ; 點擊送出按鈕
+            UpdateStatusText("🖱️ 點擊送出按鈕: X=" . verificationSubmitX . " Y=" . verificationSubmitY)
+            HumanMouseMove(verificationSubmitX, verificationSubmitY, 2)
+            RandomSleep(100, 200)
+            Click
+            RandomSleep(100, 200)
+
+            UpdateStatusText("✅ 驗證碼已自動輸入並送出完成!")
+
+            ; 完成後暫停監控 10 秒,避免重複觸發
+            verificationMonitoringPaused := true
+            Sleep, 10000
+            verificationMonitoringPaused := false
+            UpdateStatusText("🔍 驗證碼自動監控運行中...")
+        } else {
+            UpdateStatusText("❌ 取得驗證碼失敗,繼續監控...")
+        }
+    }
+Return
+
 ; GUI 關閉事件
 MainGuiClose:
     ExitApp
+Return
+
+MainGuiEscape:
+    ; 主 GUI 按 Escape 不做任何動作，避免誤關閉
 Return
