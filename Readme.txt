@@ -2,8 +2,8 @@ PLEASE READ EVERYTHING AND YOU WILL BE FINE! ;-)
 
 After purchasing a license you will find your key here: https://exiled-bot.net/community/clients/purchases/
 
-If you need help to configure the bot, please connect to our Discord Server. Community and Support will help you!
-Use this link: https://discord.gg/BeKCcXjKCm
+If you need help to configure the bot, please connect to our Slack Server and ask in #general. Community and Support will help you!
+Use this link: https://join.slack.com/t/exiled-bot-group/shared_invite/zt-1qnrohstt-vrG2bYws_znhDjtbNRUGTw
 
 
 DISCLAIMER
@@ -22,12 +22,8 @@ As already stated before - bans are almost never happening when you are experien
 
 
 SOFTWARE REQUIREMENTS
-DirectX End-User Runtime: https://www.microsoft.com/en-US/download/details.aspx?id=35
+DirectX End-User Runtime: https://www.microsoft.com/en-us/download/details.aspx?DisplayLang=en&id=35
 Visual C++ 2017 Redistributable Package (x64): https://aka.ms/vs/15/release/vc_redist.x64.exe
-
-ALTERNATIVE LINKS:
-DirectX End-User Runtime: https://workupload.com/file/VREuB9S48bd
-Visual C++ 2017 Redistributable Package (x64): https://workupload.com/file/8ccMDmbamcq
 
 
 SETUP REQUIREMENTS
@@ -55,17 +51,4 @@ For Garena TW users, see: https://exiled-bot.net/community/index.php/topic/3329-
 
 Official Site : http://www.exiled-bot.net/
 Official Forum : http://www.exiled-bot.net/community/
-Lastest Release : https://exiled-bot.net/community/forum/1-exiled-bot-teams-releases/
-
-
-5 SLOT MAP DEVICE
-look at: ...\EB\Configuration\default\coordinates.ini
-
-change the values to this
-; Map Device
-map_device_inventory_x=218
-map_device_inventory_y=279
-map_device_open_button_x=150
-map_device_open_button_y=500
-map_device_offset_x=17
-map_device_offset_y=17
+Lastest Release : http://exiled-bot.net/#download

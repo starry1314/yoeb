@@ -1,1 +1,1 @@
-rasdial 宽带连接 86231042@hinet.net d73a7d40
+rasdial 宽带连接 76426119@hinet.net dxezgitm
