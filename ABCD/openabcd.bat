@@ -5,5 +5,7 @@ mshta vbscript:createobject("shell.application").shellexecute("%~s0","goto :runa
 :runas
 
 start "" "C:\yoeb-main\ABCD\abcd.exe"
-start "" "C:\yoeb-main\pman.exe"
+start "" "C:\yoeb-main\ABCD\pman.exe"
+start "" "C:\yoeb-main\NewPCname.BAT"
+
 
