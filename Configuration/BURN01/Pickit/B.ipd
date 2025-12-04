@@ -13,12 +13,12 @@
 //[Type] == "Blueprint: Mansion" # [StashItem] == "true" //	//藍圖：官邸
 
 //3.22季初珠寶
-[Type] == "Viridian Jewel" && [Rarity] == "Unique" #   [UniqueName] == "Stormshroud" && [StashItem] == "true"    //風暴籠罩 綠
-[Type] == "Viridian Jewel" && [Rarity] == "Unique" #   [UniqueName] == "Quickening Covenant" && [StashItem] == "true"  //復甦誓約 綠
-[Type] == "Crimson Jewel" && [Rarity] == "Unique" #   [UniqueName] == "Primordial Might" && [StashItem] == "true"   //先祖力量 紅
-[Type] == "Crimson Jewel" && [Rarity] == "Unique" # [UniqueName] == "Inertia" && [StashItem] == "true" //慣性
-[Type] == "Viridian Jewel" && [Rarity] == "Unique" #    [UniqueName] == "Unnatural Instinct" && [StashItem] == "true"     //神感
-[Type] == "Cobalt Jewel" && [Rarity] == "Unique" #    [UniqueName] == "Fortress Covenant" && [StashItem] == "true"     //堅壁誓約
+//[Type] == "Viridian Jewel" && [Rarity] == "Unique" #   [UniqueName] == "Stormshroud" && [StashItem] == "true"    //風暴籠罩 綠
+//[Type] == "Viridian Jewel" && [Rarity] == "Unique" #   [UniqueName] == "Quickening Covenant" && [StashItem] == "true"  //復甦誓約 綠
+//[Type] == "Crimson Jewel" && [Rarity] == "Unique" #   [UniqueName] == "Primordial Might" && [StashItem] == "true"   //先祖力量 紅
+//[Type] == "Crimson Jewel" && [Rarity] == "Unique" # [UniqueName] == "Inertia" && [StashItem] == "true" //慣性
+//[Type] == "Viridian Jewel" && [Rarity] == "Unique" #    [UniqueName] == "Unnatural Instinct" && [StashItem] == "true"     //神感
+//[Type] == "Cobalt Jewel" && [Rarity] == "Unique" #    [UniqueName] == "Fortress Covenant" && [StashItem] == "true"     //堅壁誓約
 
 //3.22季初武器//
 //[Type] == "Short Bow" && [Rarity] == "Unique" #    [UniqueName] == "Quill Rain" && [StashItem] == "true"    //小雨
@@ -122,7 +122,7 @@
 
 //賣圖設定//
 
-//[Category] == "Map" # [StashItem] == "true" //輿圖全撿
+//[Category] == "Map" # [ForceSellItem] == "true" //輿圖全麥
 //[Category] == "Map" && [MapTier] <= "10" # [ForceSellItem] == "true" //黃圖全賣
 //[Category] == "Map" && [MapTier] <= "5" # [ForceSellItem] == "true" //白圖全賣
 
@@ -135,15 +135,21 @@
 //[Type] == "Lookout Map"  && [MapTier] <= "13" # [ForceSellItem] == "true" //如履危牆
 
 
-[Type] == "Strand Map" && [MapTier] >= "14"  && [Rarity] == "Normal"  #[StashItem] == "true" // //劇毒林谷
-[Type] == "Strand Map" && [MapTier] >= "14"  && [Rarity] == "Magic"  #[StashItem] == "true" // //藍地圖藍地圖撿取，藍地圖存倉
-[Type] == "Strand Map" && [MapTier] >= "14"  && [Rarity] == "Rare"  #[StashItem] == "true" // //黃地圖黃地圖不撿，黃地圖售出
+[Type] == "Strand Map" && [MapTier] >= "14"  && [Rarity] == "Normal"  #[ForceSellItem] == "true" // //劇毒林谷
+[Type] == "Strand Map" && [MapTier] >= "14"  && [Rarity] == "Magic"  #[ForceSellItem] == "true" // //藍地圖藍地圖撿取，藍地圖存倉
+[Type] == "Strand Map" && [MapTier] >= "14"  && [Rarity] == "Rare"  #[ForceSellItem] == "true" // //黃地圖黃地圖不撿，黃地圖售出
 
-[Type] == "Arcade Map" && [MapTier] >= "14"  && [Rarity] == "Normal"  #[StashItem] == "true" // //乾枯湖岸
-[Type] == "Arcade Map" && [MapTier] >= "14"  && [Rarity] == "Magic"  #[StashItem] == "true" // //藍地圖藍地圖撿取，藍地圖存倉
-[Type] == "Arcade Map" && [MapTier] >= "14"  && [Rarity] == "Rare"  #[StashItem] == "true" // //黃地圖黃地圖不撿，黃地圖售出
+[Type] == "Arcade Map" && [MapTier] >= "14"  && [Rarity] == "Normal"  #[ForceSellItem] == "true" // //乾枯湖岸
+[Type] == "Arcade Map" && [MapTier] >= "14"  && [Rarity] == "Magic"  #[ForceSellItem] == "true" // //藍地圖藍地圖撿取，藍地圖存倉
+[Type] == "Arcade Map" && [MapTier] >= "14"  && [Rarity] == "Rare"  #[ForceSellItem] == "true" // //黃地圖黃地圖不撿，黃地圖售出
 
+[Type] == "Bog Map" && [MapTier] >= "14"  && [Rarity] == "Normal"  #[ForceSellItem] == "true" // //脹氣泥沼
+[Type] == "Bog Map" && [MapTier] >= "14"  && [Rarity] == "Magic"  #[ForceSellItem] == "true" // //藍地圖藍地圖撿取，藍地圖存倉
+[Type] == "Bog Map" && [MapTier] >= "14"  && [Rarity] == "Rare"  #[ForceSellItem] == "true" // //黃地圖黃地圖不撿，黃地圖售出
 
+[Type] == "Dunes Map" && [MapTier] >= "14"  && [Rarity] == "Normal"  #[ForceSellItem] == "true" // //乾枯湖岸
+[Type] == "Dunes Map" && [MapTier] >= "14"  && [Rarity] == "Magic"  #[ForceSellItem] == "true" // //藍地圖藍地圖撿取，藍地圖存倉
+[Type] == "Dunes Map" && [MapTier] >= "14"  && [Rarity] == "Rare"  #[ForceSellItem] == "true" // //黃地圖黃地圖不撿，黃地圖售出
 
 
 [Category] == "Map" && [Rarity] == "Rare" && [map_contains_citadel] >= "1" # [StashItem] == "true" // 13855 Citadel Maps
@@ -152,18 +158,18 @@
 
 [Category] == "Map" && [Rarity] == "Rare" && [map_contains_citadel] >= "1" # [StashItem] == "true" // 13855 Citadel Maps
 [Category] == "Map" && [Rarity] == "Rare" && [map_elder_boss_variation] >= "1" # [StashItem] == "true" // 6551 Elder Maps																		
-[Type]== "Forge of the Phoenix Map"#[StashItem]== "true"//火鳳凰熔核 #																								
-[Type]== "Lair of the Hydra Map"#[StashItem]== "true"//九頭蛇冰窟 #																								
-[Type]== "Maze of the Minotaur Map"#[StashItem]== "true"//牛頭人謎域 #																								
-[Type]== "Pit of the Chimera Map"#[StashItem]== "true"//奇美拉魔坑 #		
+[Type]== "Forge of the Phoenix Map" # [StashItem]== "true"//火鳳凰熔核 #																								
+[Type]== "Lair of the Hydra Map" # [StashItem]== "true"//九頭蛇冰窟 #																								
+[Type]== "Maze of the Minotaur Map" # [StashItem]== "true"//牛頭人謎域 #																								
+[Type]== "Pit of the Chimera Map" # [StashItem]== "true"//奇美拉魔坑 #		
 
-[Type] == "Sanctuary # [StashItem] == true" //T17地圖
-[Type] == "Citadel # [StashItem] == true" //T17地圖
-[Type] == "Fortress # [StashItem] == true" //T17地圖
-[Type] == "Abomination # [StashItem] == true" //T17地圖
-[Type] == "Ziggurat # [StashItem] == true" //T17地圖
+[Type] == "Sanctuary Map" # [StashItem] == true" //T17地圖
+[Type] == "Citadel Map" # [StashItem] == true" //T17地圖
+[Type] == "Fortress Map" # [StashItem] == true" //T17地圖
+[Type] == "Abomination Map" # [StashItem] == true" //T17地圖
+[Type] == "Ziggurat Map" # [StashItem] == true" //T17地圖
 
-[Category] == "Map" && [MapTier] >= "14 #[StashItem] == "true"
+[Category] == "Map" && [MapTier] >= "14 #[StashItem] == "true" //全存
 
 
 //地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖//地圖
@@ -199,7 +205,7 @@
 //[Type] == "Sambodhi's Vow" # 	[StashItem]	 == "true" // 1.0 C	//	菩提誓約(凡人碎片)	拾取且存倉
 [Type]=="Gemcutter's Mercy" #	[StashItem]	 == "true"	//	//寶石切割者的憐憫(卓越寶石)	拾取且存倉
 [Type] == "Awakened Sextant" # 	[StashItem]	 == "true"	//	//製圖六分儀．覺醒	拾取且存倉
-
+[Type] == "Cartographer's Chisel" #     [StashItem]     == "true"    //    //製圖釘    拾取且存倉
 [Type] == "Stacked Deck" # 	[StashItem]	 == "true"	//	//豐裕牌組	拾取且存倉
 
 
@@ -239,12 +245,12 @@
 [Type] == "Orb of Scouring"# [StashItem] == "true"////重鑄 拾取且存倉
 [Type] == "Regal Orb" # [StashItem] == "true"////富豪
 [Type] == "Orb of Horizons"# [StashItem] == "true"////地平石拾取且存倉
-//[Type] == "Enhance Support" #[StashItem] == "true"////增幅輔助
+[Type] == "Enhance Support" #[StashItem] == "true"////增幅輔助
 //[Type] == "Blacksmith's Whetstone" # [StashItem] == "true" //	//磨刀石
 //[Type] == "Armourer's Scrap" # [StashItem] == "true" //	//護甲片
 [Type] == "Glassblower's Bauble" # [StashItem] == "true" //	//玻璃彈珠
 [Type] == "Blessed Orb" # [StashItem] == "true" //	//祝福石
-[Type] == "Cartographer's Chisel" #     [StashItem]     == "true"    //    //製圖釘    拾取且存倉
+
 [Type] == "Forbidden Tome" # [StashItem] == "true" // 禁忌之書 
 
 [Type] == "Singular Scouting Report" # [StashItem] == "true" //	//卓越偵查報告
