@@ -30,7 +30,7 @@ SetGoodsCaoZuo(
 
 -- 阶段2: 11-30级 - 2洞以上 (提高标准)
 SetGoodsCaoZuo(
-    "衣服|头盔|手套|鞋子|法杖|盾",
+    "衣服|头盔|手套|鞋子|短杖|盾",
     "0|2",
     nil, nil, nil, nil, nil, nil,
     "0", 2, nil, nil,
@@ -57,7 +57,7 @@ SetGoodsCaoZuo(
     end
 )
 
-print("[装备拾取] 已启用分阶段白装拾取 (1-10级:1洞 / 11-30级:2洞 / 含法杖)")
+print("[装备拾取] 已启用分阶段白装拾取 (1-10级:1洞 / 11-30级:2洞 / 含短杖)")
 
 g_needSuDiLv=99             --大于等于多少级打宿敌
 g_needLieXiLv=99			--大於等于多少级打裂缝
@@ -94,7 +94,7 @@ SetNeedFlaskData(5,"魔力药剂")
 SetNeedFlaskData(1,"生命药剂","緩解之,FlaskBleedCorruptingBloodImmunity2",68,"永恆生命藥劑","Metadata/Items/Flasks/FlaskLife12",true)
 SetNeedFlaskData(2,"生命药剂","緩解之,FlaskBleedCorruptingBloodImmunity2",68,"永恆生命藥劑","Metadata/Items/Flasks/FlaskLife12",true)
 --SetJiaoYiGoods(goodsType,name,className,wordName,wordClassName,color,chufaCnt,bossJiaoYiCnt,giveFaZhuang,baoliuCnt,lineSocketCnt,shuXingLimit,funcCheck)-- 设置要交易的物品
---goodsType 字符串型 操作的物品类型忽略类型请填 nil 支持以下种类 多种类型以|分开 --saveType 类型 支持以下种类 多种类型以|分开 生命药剂|魔力药剂|复合药剂|通货|项链|戒指|爪|匕首|法杖|单手剑|细剑|单手斧|单手锤|符文匕首|短杖|战杖|弓|长杖|双手剑|双手斧|双手锤|主动技能宝石|辅助技能宝石|箭袋|腰带|手套|鞋子|衣服|头盔|盾|小型圣物|中型圣物|大型圣物|可堆叠通货|任务物品|短杖|功能药剂|暴击药剂|异界地图||鱼竿|地图碎片|藏身处装饰|商城物品|珠宝|命运卡|迷宫物品|迷宫饰品|异界迷宫物品|裂隙之石|赛季石|神灵之魂|传奇装备碎片|深渊珠宝|穿越通货|地心探索：可镶嵌的通货|孕育石|碎片|破碎之心|符文匕首|战杖|地心探索可堆叠可插入通货|
+--goodsType 字符串型 操作的物品类型忽略类型请填 nil 支持以下种类 多种类型以|分开 --saveType 类型 支持以下种类 多种类型以|分开 生命药剂|魔力药剂|复合药剂|通货|项链|戒指|爪|匕首|短杖|单手剑|细剑|单手斧|单手锤|符文匕首|短杖|战杖|弓|长杖|双手剑|双手斧|双手锤|主动技能宝石|辅助技能宝石|箭袋|腰带|手套|鞋子|衣服|头盔|盾|小型圣物|中型圣物|大型圣物|可堆叠通货|任务物品|短杖|功能药剂|暴击药剂|异界地图||鱼竿|地图碎片|藏身处装饰|商城物品|珠宝|命运卡|迷宫物品|迷宫饰品|异界迷宫物品|裂隙之石|赛季石|神灵之魂|传奇装备碎片|深渊珠宝|穿越通货|地心探索：可镶嵌的通货|孕育石|碎片|破碎之心|符文匕首|战杖|地心探索可堆叠可插入通货|
 --name 字符串型 物品的名字
 --className 字符串型 物品的类名
 --wordName 字符串型 物品的词缀名
@@ -159,12 +159,12 @@ SetTaskMiGongDataByLv(80,3)
 g_newRoleJob="野蛮人"
 --升华职业 勇士、暴徒、酋长、侠客、锐眼、追猎者、秘术家、元素使、召唤师、处刑者、卫士、冠军、判官、圣宗、守护者、暗影大师、欺诈师、破坏者、升华使徒、
 g_shengHuaJob="暴徒"
---SetUseWeapon(str)--设置使用的武器 支持(盾}箭袋}爪}匕首|法杖|单手剑|细剑|单手斧|单手锤|符文匕首|短杖|战杖|弓|长杖|双手剑|双手斧|双手锤) 如果需要用两样中间用|分开
-SetUseWeapon("法杖|盾")
+--SetUseWeapon(str)--设置使用的武器 支持(盾}箭袋}爪}匕首|短杖|单手剑|细剑|单手斧|单手锤|符文匕首|短杖|战杖|弓|长杖|双手剑|双手斧|双手锤) 如果需要用两样中间用|分开
+SetUseWeapon("短杖|盾")
 
 --SetUseZhuangBeiTypeData(typeStr,pos)--设置自己用的装备类型 
 --typeStr=类型 支持("StrDex"为决斗者装+护甲闪避 "Str"为野蛮人装+护甲 "DexInt"为暗影装+闪避护盾 "Int"为野蛮人装+护盾 "Dex"为游侠装+闪避 "StrInt"为圣堂武僧装+力量护盾)
---pos=部位支持部位 支持(戒指|项链|腰带|鞋子|手套|衣服|头盔|盾|箭袋|爪}匕首|法杖|单手剑|细剑|单手斧|单手锤|符文匕首|短杖|战杖|弓|长杖|双手剑|双手斧|双手锤) 不填或nil为设置所有
+--pos=部位支持部位 支持(戒指|项链|腰带|鞋子|手套|衣服|头盔|盾|箭袋|爪}匕首|短杖|单手剑|细剑|单手斧|单手锤|符文匕首|短杖|战杖|弓|长杖|双手剑|双手斧|双手锤) 不填或nil为设置所有
 SetUseZhuangBeiTypeData("Str|StrInt","盾")
 SetUseZhuangBeiTypeData("Int|StrInt","衣服")
 SetUseZhuangBeiTypeData("Int|StrInt","头盔")
@@ -306,7 +306,7 @@ SetNeedZhaoHuanMonster(nil,"Metadata/Monsters/Revenant/RevenantMapBossStandalone
 ---------------------------------------换装设置
 --SetAtuoChangeEquipData(job,pos,name,val,yijie) 计算方式如下 定义过的属性值乘以比重值  哪样装备高就会用哪样
 --job 职业 支持(暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧) 可填多个，中间用|隔开
---pos 部位 支持(戒指|项链|腰带|鞋子|手套|衣服|头盔|盾|箭袋|爪}匕首|法杖|单手剑|细剑|单手斧|单手锤|符文匕首|短杖|战杖|弓|长杖|双手剑|双手斧|双手锤) 可填多个，中间用|隔开
+--pos 部位 支持(戒指|项链|腰带|鞋子|手套|衣服|头盔|盾|箭袋|爪}匕首|短杖|单手剑|细剑|单手斧|单手锤|符文匕首|短杖|战杖|弓|长杖|双手剑|双手斧|双手锤) 可填多个，中间用|隔开
 --name 属性名 支持游戏内的装备属性名 还有其他的自定义名(物理伤害、护甲、护盾、闪避、连洞、总洞)
 --val 比重值 支持小数
 --nType 换装类型 0或nil或不填为一直有效 1为跑图时才有效 2为异界时才有效
@@ -335,14 +335,14 @@ SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","手套","sacrifi
 SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","头盔","you_cannot_have_non_spectre_minions",-99999)--减分 不能有非幽魂的召喚物
 SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","腰带","you_have_no_armour_or_energy_shield",-99999)--减分 你沒有護甲和能量護盾
 SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","腰带","FireResistance",-99999)--减分 戴亚迪安的晨曦
-SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","法杖","life_reserved_by_stat_%",-99999)--减分 冥约
+SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","短杖","life_reserved_by_stat_%",-99999)--减分 冥约
 SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","衣服","local_has_no_sockets",-99999)--减分 岡姆
 
 --剧情有效
 SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","盾","护甲",5,1)                                                   --护甲
 SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","盾","base_maximum_life",10,1)                                     --加基礎最大生命
-SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","法杖","minion_damage_+%",10,1)                                    --召唤伤害基底
-SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","法杖","minion_attack_and_cast_speed_+%",5,1)                      --后缀施法速度
+SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","短杖","minion_damage_+%",10,1)                                    --召唤伤害基底
+SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","短杖","minion_attack_and_cast_speed_+%",5,1)                      --后缀施法速度
 SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","项链","base_maximum_life",5,1)                                    --加基礎最大生命                 
 SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","项链","additional_strength",10,1)                                  --力量
 SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","戒指","base_resist_all_elements_%",20,1)                          --全元素抗性 %
@@ -353,20 +353,20 @@ SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","戒指|项链|腰带
 SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","戒指|项链|腰带|鞋子|手套|衣服|头盔","fire_damage_resistance_%",4,1)           --火焰抗性 %
 SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","戒指|项链|腰带|鞋子|手套|衣服|头盔","cold_damage_resistance_%",3,1)           --冰霜抗性 %
 SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","戒指|项链|腰带|鞋子|手套|衣服|头盔","lightning_damage_resistance_%",3,1)      --闪电抗性 %
-SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","鞋子|手套|头盔|衣服|盾|法杖","总洞",30,1)                        --每加1孔加50点比重
-SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","鞋子|手套|头盔|衣服|盾|法杖","连洞",30,1)                        --每連1孔加40点比重
+SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","鞋子|手套|头盔|衣服|盾|短杖","总洞",30,1)                        --每加1孔加50点比重
+SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","鞋子|手套|头盔|衣服|盾|短杖","连洞",30,1)                        --每連1孔加40点比重
 
 --异界有效
 SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","盾","护甲",10,2)                                                 --护甲
 SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","盾","base_maximum_life",20,2)                                    --加基礎最大生命
 SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","鞋子","movement_velocity_+%",30,2)                               --移动速度 +%
 SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","鞋子","base_movement_velocity_+%",40,2)                          --基础移动速度 +%
-SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","法杖","minion_critical_strike_multiplier_+",30,2)               --召唤暴击加成
-SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","法杖","minion_critical_strike_chance_+%",30,2)                  --召唤暴击
-SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","法杖","minion_attack_and_cast_speed_+%",40,2)                  --召唤攻擊和施放速度
-SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","法杖","minion_damage_+%",45,2)                                 --召唤伤害
-SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","法杖","spell_skill_gem_level_+%",100,2)                        --全部法术等级+1
-SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","法杖","minion_skill_gem_level_+%",120,2)                        --召唤物等级+1
+SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","短杖","minion_critical_strike_multiplier_+",30,2)               --召唤暴击加成
+SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","短杖","minion_critical_strike_chance_+%",30,2)                  --召唤暴击
+SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","短杖","minion_attack_and_cast_speed_+%",40,2)                  --召唤攻擊和施放速度
+SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","短杖","minion_damage_+%",45,2)                                 --召唤伤害
+SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","短杖","spell_skill_gem_level_+%",100,2)                        --全部法术等级+1
+SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","短杖","minion_skill_gem_level_+%",120,2)                        --召唤物等级+1
 SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","戒指","minion_damage_+%",40,2)                                 --召唤伤害
 SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","戒指","minion_attack_and_cast_speed_+%",35,2)                  --召唤攻擊和施放速度
 SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","戒指","minion_movement_speed_+%",20,2)                          --召喚移動速度
@@ -382,10 +382,10 @@ SetAtuoChangeEquipData("暗影|野蛮人|决斗者|野蛮人|游侠|圣堂武僧","戒指|项链|腰带
 -- 召唤物额外核心属性 (伤害优先配置)
 ------------------------------------------------------------
 
--- 法杖 - 召唤物生存与输出
-SetAtuoChangeEquipData("野蛮人","法杖","minion_maximum_life_+%",35,2)                -- 召唤生命
-SetAtuoChangeEquipData("野蛮人","法杖","minion_life_regeneration_rate_per_minute_%",18,2) -- 召唤回复
-SetAtuoChangeEquipData("野蛮人","法杖","minion_accuracy_rating_+%",20,2)             -- 召唤命中
+-- 短杖 - 召唤物生存与输出
+SetAtuoChangeEquipData("野蛮人","短杖","minion_maximum_life_+%",35,2)                -- 召唤生命
+SetAtuoChangeEquipData("野蛮人","短杖","minion_life_regeneration_rate_per_minute_%",18,2) -- 召唤回复
+SetAtuoChangeEquipData("野蛮人","短杖","minion_accuracy_rating_+%",20,2)             -- 召唤命中
 
 -- 戒指 - 召唤物生存
 SetAtuoChangeEquipData("野蛮人","戒指","minion_maximum_life_+%",30,2)                
@@ -407,14 +407,14 @@ SetAtuoChangeEquipData("野蛮人","腰带","base_resist_all_elements_%",20,2)
 -- 法术伤害系统 (赦免/火球等技能)
 ------------------------------------------------------------
 
--- 法杖法术评分
-SetAtuoChangeEquipData("野蛮人","法杖","spell_damage_+%",25,2)                       -- 法术伤害
-SetAtuoChangeEquipData("野蛮人","法杖","base_cast_speed_+%",22,2)                    -- 施法速度
-SetAtuoChangeEquipData("野蛮人","法杖","spell_critical_strike_chance_+%",18,2)       -- 法术爆击
-SetAtuoChangeEquipData("野蛮人","法杖","spell_critical_strike_multiplier_+",18,2)    -- 法术爆击伤
-SetAtuoChangeEquipData("野蛮人","法杖","fire_damage_+%",15,2)                        -- 火焰伤害
-SetAtuoChangeEquipData("野蛮人","法杖","lightning_damage_+%",15,2)                   -- 闪电伤害
-SetAtuoChangeEquipData("野蛮人","法杖","elemental_damage_+%",20,2)                   -- 元素伤害
+-- 短杖法术评分
+SetAtuoChangeEquipData("野蛮人","短杖","spell_damage_+%",25,2)                       -- 法术伤害
+SetAtuoChangeEquipData("野蛮人","短杖","base_cast_speed_+%",22,2)                    -- 施法速度
+SetAtuoChangeEquipData("野蛮人","短杖","spell_critical_strike_chance_+%",18,2)       -- 法术爆击
+SetAtuoChangeEquipData("野蛮人","短杖","spell_critical_strike_multiplier_+",18,2)    -- 法术爆击伤
+SetAtuoChangeEquipData("野蛮人","短杖","fire_damage_+%",15,2)                        -- 火焰伤害
+SetAtuoChangeEquipData("野蛮人","短杖","lightning_damage_+%",15,2)                   -- 闪电伤害
+SetAtuoChangeEquipData("野蛮人","短杖","elemental_damage_+%",20,2)                   -- 元素伤害
 
 -- 戒指法术评分
 SetAtuoChangeEquipData("野蛮人","戒指","spell_damage_+%",18,2)                       
@@ -448,8 +448,8 @@ SetAtuoChangeEquipData("野蛮人","盾","base_maximum_energy_shield",28,2)
 SetAtuoChangeEquipData("野蛮人","盾","energy_shield_recharge_rate_+%",15,2)          
 
 -- 魔力相关
-SetAtuoChangeEquipData("野蛮人","法杖|项链","base_maximum_mana",15,2)                -- 最大魔力
-SetAtuoChangeEquipData("野蛮人","法杖|项链","base_mana_regeneration_rate_per_minute",12,2) -- 魔力回复
+SetAtuoChangeEquipData("野蛮人","短杖|项链","base_maximum_mana",15,2)                -- 最大魔力
+SetAtuoChangeEquipData("野蛮人","短杖|项链","base_mana_regeneration_rate_per_minute",12,2) -- 魔力回复
 SetAtuoChangeEquipData("野蛮人","戒指","base_maximum_mana",12,2)                     
 
 -- 项链法术评分
@@ -598,20 +598,20 @@ SetGaoJiHuanZhuangData("野蛮人",nil,nil,nil,nil,3,15,nil,10,nil,nil,nil,nil,nil,
 
 -- 武器: 优先3连 (召唤物管理技能)
 ------------------------------------------------------------
--- 前期武器自動切換策略 (錘子轉法杖) [替換原有的3連武器設置]
+-- 前期武器自動切換策略 (錘子轉短杖) [替換原有的3連武器設置]
 ------------------------------------------------------------
 
 -- 階段1: 1-12級 強制使用 單手錘 (配合裂地之擊)
 -- 分數給 1000，確保絕對優先於其他雜物
 SetGaoJiHuanZhuangData("野蛮人", nil, "单手锤", nil, nil, nil, nil, nil, 3, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 1000, nil, 1, 12)
 
--- 階段2: 12級開始 強制使用 法杖 (配合召喚技能)
--- 分數給 2000，確保轉型後只拿法杖，不拿斧劍
-SetGaoJiHuanZhuangData("野蛮人", nil, "法杖", nil, nil, nil, nil, nil, 3, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 2000, nil, 12, nil)
+-- 階段2: 12級開始 強制使用 短杖 (配合召喚技能)
+-- 分數給 2000，確保轉型後只拿短杖，不拿斧劍
+SetGaoJiHuanZhuangData("野蛮人", nil, "短杖", nil, nil, nil, nil, nil, 3, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 2000, nil, 12, nil)
 
--- 階段3: 12級以上，如果有 "3連的法杖"，額外加分 (優化)
--- 這樣既限制了必須是法杖，又鼓勵拿多孔的
-SetGaoJiHuanZhuangData("野蛮人", nil, "法杖", nil, nil, 3, 15, nil, 3, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 3000, nil, 13, nil)
+-- 階段3: 12級以上，如果有 "3連的短杖"，額外加分 (優化)
+-- 這樣既限制了必須是短杖，又鼓勵拿多孔的
+SetGaoJiHuanZhuangData("野蛮人", nil, "短杖", nil, nil, 3, 15, nil, 3, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 3000, nil, 13, nil)
 
 ------------------------------------------------------------
 -- 70级后传奇装备 (以下为原有配置)
