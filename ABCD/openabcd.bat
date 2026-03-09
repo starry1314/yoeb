@@ -46,8 +46,6 @@ echo 啟動 abcd.exe...
 start "" /D "C:\yoeb-main\ABCD" "C:\yoeb-main\ABCD\abcd.exe"
 timeout /t 2 /nobreak >nul
 
-echo 啟動 pman.exe...
-start "" /D "C:\yoeb-main\ABCD" "C:\yoeb-main\ABCD\pman.exe"
 
 echo 啟動 NewPCname.BAT...
 start "" /D "C:\yoeb-main\" "C:\yoeb-main\NewPCname.BAT"
@@ -55,4 +53,5 @@ start "" /D "C:\yoeb-main\" "C:\yoeb-main\NewPCname.BAT"
 echo.
 echo 程式已啟動
 echo ========================================
+
 
