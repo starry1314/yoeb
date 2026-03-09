@@ -291,7 +291,7 @@ SetNeedZhaoHuanMonster("恶魔奴隶","Metadata/Monster/CageSpider/CageSpider2",3)
 --minLv 数字型 满多少级才会去仓库号家召唤 nil为忽略等级总是去
 --SetNeedZhaoHuanMonster("Flayed Lookout","Metadata/Monsters/LeagueBetrayal/BetrayalSkeletonRangedSpectre",7)
 --FANXING
-SetHaveLingTiBossName("FAN_GOST",30)--设置灵体仓库号 如果灵体号的灵体比身上的更好，他就会去灵体号所在位置召唤灵体
+SetHaveLingTiBossName("尺餞仿匙螢",30)--设置灵体仓库号 如果灵体号的灵体比身上的更好，他就会去灵体号所在位置召唤灵体
 SetNeedZhaoHuanMonster(nil,"Metadata/Monsters/Revenant/RevenantMapBossStandalone_AtlasUber",99999)
 --SetNeedZhaoHuanMonster("霜寒自動巡守","Metadata/Monsters/LeagueHeist/Robot/RobotClockworkGolemCold",99999)
 
