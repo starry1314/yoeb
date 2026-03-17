@@ -153,7 +153,7 @@ SetTaskShengJiData("a9q3",nil,"2_9_1",60)--滲血水道
 SetTaskMiGongData("a5q2",nil,1)--在复活的梦魇这个任务时 做迷宫1
 SetTaskMiGongData("a9q1",nil,2)--在复活的梦魇这个任务时 做迷宫2
 --SetTaskMiGongDataByLv(lv,mgIndex)--设置到等级时做迷宫 lv 数字型 为大于等于多少级做 mgIndex=迷宫索引 数字型，只支持 1 2 3 对应3个迷宫
-SetTaskMiGongDataByLv(80,3)
+SetTaskMiGongDataByLv(75,3)
 
 --指定职业  野蛮人、野蛮人、贵族、游侠、决斗者、暗影、圣堂武僧、
 g_newRoleJob="野蛮人"
