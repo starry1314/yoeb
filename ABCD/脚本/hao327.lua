@@ -542,7 +542,7 @@ AddShengJiZhuangBeiGoodsData("富豪石","Metadata/Items/Currency/CurrencyUpgradeMa
 --mohu true为模糊匹配 false 或 nil 或不填为完整匹配 逻辑型
 --isComputerName 逻辑型 发装号名字是否是电脑名 true 为是 false或nil 为不是
 --發裝號
-SetZhuangBeiBoss("Fan_gost",nil,nil,nil,true) --用发装号电脑名的方式指定发装号
+---SetZhuangBeiBoss("Fan_gost",nil,nil,nil,true) --用发装号电脑名的方式指定发装号
 
 ---------------------------------------高级换装
 --SetGaoJiHuanZhuangData(job,name,className,wordName,wordClassName,lineSocketCnt,goodsLv,flaskPos,zbPos,color,nType,yxName,yxClassName,yxWordName,yxWordClassName,wxName,wxClassName,wxWordName,wxWordClassName,val) 高级换装设置 设置换指定的装备
