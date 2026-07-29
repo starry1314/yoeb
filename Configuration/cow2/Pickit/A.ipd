@@ -214,8 +214,8 @@
 [Type] == "Otherworldly Scouting Report" # [StashItem] == "true" //	//
 [Type] == "Influenced Scouting Report" # [StashItem] == "true" //	//
 
-//[Type] =="Polaric Invitation" #[StashItem] == "true" ////
-//[Type] =="Writhing Invitation" #[StashItem] == "true" ////
+[Type] =="Polaric Invitation" #[StashItem] == "true" ////
+[Type] =="Writhing Invitation" #[StashItem] == "true" ////
 
 
 ////
