@@ -1,21 +1,3 @@
-//[Type] == "Provisioning Wombgift" # [StashItem] == "true" 
-//[Type] == "Lavish Wombgift" # [StashItem] == "true" 
-//[Type] == "Ancient Wombgift" # [StashItem] == "true" 
-//[Type] == "Growing Wombgift" # [StashItem] == "true" 
-//[Type] == "Mysterious Wombgift" # [StashItem] == "true" 
-
-[Type] == "Reflecting Mist" # [StashItem] == "true"//
-//
-//[Type] == "Blueprint: Bunker" # [StashItem] == "true" 
-//[Type] == "Blueprint: Laboratory" # [StashItem] == "true" 
-//[Type] == "Blueprint: Prohibited Library" # [StashItem] == "true" 
-//[Type] == "Blueprint: Records Office" # [StashItem] == "true" 
-//[Type] == "Blueprint: Repository" # [StashItem] == "true" 
-//[Type] == "Blueprint: Smuggler's Den" # [StashItem] == "true" 
-//[Type] == "Blueprint: Tunnels" # [StashItem] == "true" 
-//[Type] == "Blueprint: Underbelly" # [StashItem] == "true" 
-//[Type] == "Blueprint: Mansion" # [StashItem] == "true" 
-
 //Tier0 Weapon Unique
 
 [Type] == "Imperial Skean" && [Rarity] == "Unique" # [UniqueName] == "Divinarius" && [StashItem] == "true"
@@ -36,8 +18,8 @@
 
 //3.22//
 //[Type] == "Short Bow" && [Rarity] == "Unique" #  [UniqueName] == "Quill Rain" && [StashItem] == "true"  
-[Type] == "Prophecy Wand" && [Rarity] == "Unique" # [UniqueName] == "Void Battery" && [StashItem] == "true"  
-[Type] == "Assassin Bow" && [Rarity] == "Unique" # [UniqueName] == "Darkscorn" && [StashItem] == "true"	
+//[Type] == "Prophecy Wand" && [Rarity] == "Unique" # [UniqueName] == "Void Battery" && [StashItem] == "true"  
+//[Type] == "Assassin Bow" && [Rarity] == "Unique" # [UniqueName] == "Darkscorn" && [StashItem] == "true"	
 //[Type] == "Imperial Skean" && [Rarity] == "Unique" # [UniqueName] == "Divinarius" && [StashItem] == "true"	
 [Type] == "Fiend Dagger" && [Rarity] == "Unique" #  [UniqueName] == "Arakaali's Fang" && [StashItem] == "true" 
 [Type] == "Spine Bow" && [Rarity] == "Unique" #  [UniqueName] == "Voltaxic Rift" && [StashItem] == "true" 
@@ -51,72 +33,48 @@
 //[Type] == "Murder Mitts" && [Rarity] == "Unique" # [UniqueName] == "Thunderfist" && [StashItem] == "true"	
 //[Type] == "Exquisite Leather" && [Rarity] == "Unique" # [UniqueName] == "Yriel's Fostering" && [StashItem] == "true" 
 //[Type] == "Riveted Boots" && [Rarity] == "Unique" # [UniqueName] == "Ralakesh's Impatience" && [StashItem] == "true"	
-[Type] == "Carnal Boots" && [Rarity] == "Unique" # [UniqueName] == "Corpsewalker" && [StashItem] == "true"	
+//[Type] == "Carnal Boots" && [Rarity] == "Unique" # [UniqueName] == "Corpsewalker" && [StashItem] == "true"	
 //[Type] == "Sinner Tricorne" && [Rarity] == "Unique" # [UniqueName] == "Alpha's Howl" && [StashItem] == "true" 
 //
 [Type] == "Omen of Connections" # [StashItem] == "true"////
 [Type] == "Omen of Blanching" # [StashItem] == "true"////
 [Type] == "Omen of the Jeweller" # [StashItem] == "true"////
 [Type] == "Omen of Fortune" # [StashItem] == "true" //	
+
 [Type] == "Incandescent Invitation" # [StashItem] == "true"//
-
-//3.22
-
-//[Type] == "Portal" # [StashItem] == "true"
-
-//
-//[Type] == "Praetor Crown" && [Rarity] == "Unique" # [UniqueName] == "Voll's Vision" && [StashItem] == "true"	
-//[Type] == "Zodiac Leather" && [Rarity] == "Unique" # [UniqueName] == "Hyrri's Ire" && [StashItem] == "true"	
-//[Type] == "Titan Gauntlets" && [Rarity] == "Unique" # [UniqueName] == "Kaom's Spirit" && [StashItem] == "true"	
-//[Type] == "Rawhide Boots" && [Rarity] == "Unique" # [UniqueName] == "Seven-League Step" && [StashItem] == "true"	
-//[Type] == "Rustic Sash" && [Rarity] == "Unique" # [UniqueName] == "Prismweave" && [StashItem] == "true"	
-//[Type] == "Two-Stone Ring" && [Rarity] == "Unique" # [UniqueName] == "Berek's Respite" && [StashItem] == "true"	
-//[Type] == "Two-Stone Ring" && [Rarity] == "Unique" # [UniqueName] == "Berek's Grip" && [StashItem] == "true"	
-//[Type] == "Two-Stone Ring" && [Rarity] == "Unique" # [UniqueName] == "Berek's Pass" && [StashItem] == "true"	
-//[Type] == "Amethyst Ring" && [Rarity] == "Unique" # [UniqueName] == "Death Rush" && [StashItem] == "true"	
-//[Type] == "Jade Amulet" && [Rarity] == "Unique" # [UniqueName] == "Hyrri's Truth" && [StashItem] == "true"	
-//[Type] == "Primal Arrow Quiver" && [Rarity] == "Unique" # [UniqueName] == "The Poised Prism" && [StashItem] == "true"	
-
-
-//
-//[Type] == "Plank Kite Shield" && [Rarity] == "Unique" # [UniqueName] == "Springleaf" && [StashItem] == "true"	
-//[Type] == "Topaz Ring" && [Rarity] == "Unique" # [UniqueName] == "Kikazaru" && [StashItem] == "true"	
-//[Type] == "Agate Amulet" && [Rarity] == "Unique" # [UniqueName] == "Shaper's Seed" && [StashItem] == "true"	
-//[Type] == "Leather Belt" && [Rarity] == "Unique" # [UniqueName] == "Immortal Flesh" && [StashItem] == "true"	
-//[Type] == "Basket Rapier" && [Rarity] == "Unique" # [UniqueName] == "Aurumvorax" && [StashItem] == "true"	
-//[Type] == "Glorious Plate" && [Rarity] == "Unique" # [UniqueName] == "Kaom's Heart" && [StashItem] == "true"	
-
-
-//
-//[Type] == "Divine Life Flask"&& [ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" 
-//[Type] == "Silver Flask"&& 		[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" 
-//[Type] == "Diamond Flask"&& 		[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" 
-//[Type] == "Jade Flask"&& 		[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" 
-//[Type] == "Quicksilver Flask"&& 	[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" 
-
-
-//[Type] == "Amethyst Flask"&& 		[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" 
-//[Type] == "Bismuth Flask"&& 		[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" 
-//[Type] == "Granite Flask"&& 		[ItemLevel] >= "85" && [ItemLevel] <="100" # [StashItem] == "true" 
+[Type] == "Screaming Invitation" # [StashItem] == "true"//
 
 //// 3.28 Map ////
+/////////
+[Type] == "Nightmare Map" # [StashItem] == "true" 
+[Type] == "Map (Tier 16)" && [Rarity] == "Normal" # [StashItem] == "true" 
+[Type] == "Map (Tier 16)" && [Rarity] == "Magic" # [StashItem] == "true" 
+[Type] == "Map (Tier 16)" && [Rarity] == "Rare" # [StashItem] == "true" 
 
-[Type] == "Map" && [Rarity] == "Magic"  # [StashItem] == "true" //
-[Type] == "Map" && [Rarity] == "Normal"  # [StashItem] == "true" //
-[Type] == "Map" && [Rarity] == "Rare"  # [StashItem] == "true" //
+////////////////////////////////ForceSell/////////////////////////////////
 
-[Category] == "Map" # [StashItem] == "true" 
+[Type] == "Map (Tier 16)" && [map_zana_influence] >= "1" # [ForceSellItem] =="true" 
+[Type] == "Map (Tier 16)" && [map_contains_citadel]>="1"# [ForceSellItem] =="true" 
+[Type] == "Map (Tier 16)" && [map_elder_boss_variation]>="1"# [ForceSellItem] =="true" 
+
+
+[Type] == "Map (Tier 16)" && [map_monsters_reflect_%_physical_damage] 	>= "1" && [Rarity] == "Magic" # [ForceSellItem] == "true" // Punishing -- Monsters Reflect % Physical Damage
+[Type] == "Map (Tier 16)" && [map_players_no_regeneration_including_es] 	>= "1" && [Rarity] == "Magic" # [ForceSellItem] == "true" // Of Statis -- Players have no Life or Mana Regeneration
+[Type] == "Map (Tier 16)" && [map_players_cannot_leech] >= "1" && [Rarity] == "Magic" # [ForceSellItem] == "true" // Of Congealment -- Cannot Leech Life/Mana From Monsters
+[Type] == "Map (Tier 16)" && [map_monsters_cannot_be_leeched_from] >= "1" && [Rarity] == "Magic" # [ForceSellItem] == "true" // Of Congealment -- Cannot Leech Life/Mana From Monsters
+[Type] == "Map (Tier 16)" && [map_player_has_level_X_temporal_chains] >= "1" && [Rarity] == "Magic" # [ForceSellItem] == "true" // Of Temporal Chains -- Players are cursed with Temporal Chains
+[Type] == "Map (Tier 16)" && [map_monsters_steal_charges] >= "1" && [Rarity] == "Magic" #    [ForceSellItem] == "true" //
+
 
 
 //Specil Map//
-
 [Type] == "Synthesised Map" # [StashItem] == "true" 
-[Category] == "Map" && [Rarity] == "Rare" && [map_contains_citadel] >= "1" # [StashItem] == "true" // 13855 Citadel Maps
-[Category] == "Map" && [Rarity] == "Rare" && [map_elder_boss_variation] >= "1" # [StashItem] == "true" // 6551 Elder Maps																		
-[Category] == "Map" && [map_zana_influence] == "1" # [StashItem] == "true" 
+[Type] == "Map (Tier 16)" && [Rarity] == "Unique" # [UniqueName] == "Doryani's Machinarium" && [StashItem] == "true"	
+[Type] == "Map (Tier 16)" && [Rarity] == "Unique" # [UniqueName] == "Untainted Paradise" && [StashItem] == "true"	
+
 
 [Type] == "Nightmare Map" # [StashItem] == true" //
-[Type] == "Shaper Guardian Map" # [StashItem] == true" //
+//[Type] == "Shaper Guardian Map" # [StashItem] == true" //
 
 //3.28 currency//
 
@@ -140,12 +98,10 @@
 [Type] == "Coin of Skill" # [StashItem] == "true" //
 [Type] == "The Black Barya" # [StashItem] == "true" //
 
-
-
 ////
 
-[Type] == "Ring" && [Rarity] == "Unique" # 	[StashItem]	 == "true" //
-[Type] == "Voidborn Reliquary Key" # 	[StashItem]	 == "true" // 
+[Type] == "Ring" && [Rarity] == "Unique" #  [StashItem] == "true" //
+[Type] == "Voidborn Reliquary Key" # [StashItem]  == "true" // 
 [Type] == "Valdo's Puzzle Box" # [StashItem] == "true" // 
 
 [Type]=="Divine Beauty" #[StashItem] == "true" //
@@ -192,30 +148,23 @@
 
 ////
 
-[Type] == "Orb of Alteration" # [StashItem] == "true"////
-[Type] == "Orb of Regret"# [StashItem] == "true"////
-[Type] == "Orb of Unmaking"# [StashItem] == "true"////
-[Type] == "Enkindling Orb"# [StashItem] == "true"////
-[Type] == "Instilling Orb" # [StashItem] == "true" //	//
-[Type] == "Orb of Scouring"# [StashItem] == "true"////
-[Type] == "Regal Orb" # [StashItem] == "true"////
+//[Type] == "Orb of Alteration" # [StashItem] == "true"////
+//[Type] == "Orb of Regret"# [StashItem] == "true"////
+//[Type] == "Orb of Unmaking"# [StashItem] == "true"////
+//[Type] == "Enkindling Orb"# [StashItem] == "true"////
+//[Type] == "Instilling Orb" # [StashItem] == "true" //	//
+//[Type] == "Orb of Scouring"# [StashItem] == "true"////
+//[Type] == "Regal Orb" # [StashItem] == "true"////
 //[Type] == "Orb of Horizons"# [StashItem] == "true"////
 [Type] == "Enhance Support" #[StashItem] == "true"////
 //[Type] == "Blacksmith's Whetstone" # [StashItem] == "true" //	//
 //[Type] == "Armourer's Scrap" # [StashItem] == "true" //	//
-[Type] == "Glassblower's Bauble" # [StashItem] == "true" //	//
-[Type] == "Blessed Orb" # [StashItem] == "true" //	//
+//[Type] == "Glassblower's Bauble" # [StashItem] == "true" //	//
+//[Type] == "Blessed Orb" # [StashItem] == "true" //	//
 
 [Type] == "Orb of Alchemy" # [StashItem] =="true"// Dian Jin
 
-//[Type] == "Forbidden Tome" # [StashItem] == "true" // 
-[Type] == "Comprehensive Scouting Report" # [StashItem] == "true" // 
-[Type] == "Singular Scouting Report" # [StashItem] == "true" //	//
-[Type] == "Otherworldly Scouting Report" # [StashItem] == "true" //	//
-[Type] == "Influenced Scouting Report" # [StashItem] == "true" //	//
 
-[Type] =="Polaric Invitation" #[StashItem] == "true" ////
-[Type] =="Writhing Invitation" #[StashItem] == "true" ////
 
 
 ////
@@ -232,20 +181,20 @@
 
 [Type] == "Orb of Annulment"# [StashItem] == "true"////
 [Type] == "Gemcutter's Prism"# [StashItem] == "true"////
-[Type] == "Awakened Sextant" # [StashItem] == "true"////
-
 [Type] == "Hinekora's Lock" # [StashItem] == "true" //	//
 
-[Type] == "Timeless Eternal Empire Splinter" # [StashItem] == "true"////
-[Type] == "Timeless Karui Splinter"# [StashItem] == "true"////
-[Type] == "Timeless Maraketh Splinter"# [StashItem] == "true"////
-[Type] == "Timeless Templar Splinter"# [StashItem] == "true"////
-[Type] == "Timeless Vaal Splinter" # [StashItem] == "true"////
-[Type] == "Timeless Eternal Emblem" # [StashItem] == "true"////
-[Type] == "Timeless Karui Emblem"# [StashItem] == "true"////
-[Type] == "Timeless Maraketh Emblem" # [StashItem] == "true"////
-[Type] == "Timeless Templar Emblem" # [StashItem] == "true"////
-[Type] == "Timeless Vaal Emblem"# [StashItem] == "true"////
+
+//Woo Jun 5 kings
+//[Type] == "Timeless Eternal Empire Splinter" # [StashItem] == "true"////
+//[Type] == "Timeless Karui Splinter"# [StashItem] == "true"////
+//[Type] == "Timeless Maraketh Splinter"# [StashItem] == "true"////
+//[Type] == "Timeless Templar Splinter"# [StashItem] == "true"////
+//[Type] == "Timeless Vaal Splinter" # [StashItem] == "true"////
+//[Type] == "Timeless Eternal Emblem" # [StashItem] == "true"////
+//[Type] == "Timeless Karui Emblem"# [StashItem] == "true"////
+//[Type] == "Timeless Maraketh Emblem" # [StashItem] == "true"////
+//[Type] == "Timeless Templar Emblem" # [StashItem] == "true"////
+//[Type] == "Timeless Vaal Emblem"# [StashItem] == "true"////
 
 [Type] == "Empower Support" #[StashItem] == "true"////
 [Type] == "Enlighten Support" #[StashItem] == "true"////
@@ -337,226 +286,70 @@
 [Type] == "The Forbidden Fruit" # [StashItem] == "true" //
 [Type] == "The Miracle" # [StashItem] == "true" //
 [Type] == "The Silly Boy" # [StashItem] == "true" //
-[Type] == "The Slumbering Beast" # [ForceSellItem] == "true" //
+[Type] == "The Slumbering Beast" # [StashItem] == "true" //
 
 /////////
 
 //[Category] == "Map" && [MapTier] >= "1" && [Rarity] == "Unique" #[ForceSellItem] == "true" // //
 
-[Sockets] == "6" && [Linked] >= "6" #[ForceSellItem] == "true" // //
+//[Sockets] == "6" && [Linked] >= "6" #[ForceSellItem] == "true" // //
 
 
-	[Type] == "Fishing Rod" && [Rarity] == "Unique" # [UniqueName] == "Song of the Sirens" && [StashItem] == "true"	
-	[Type] == "Fishing Rod" && [Rarity] == "Unique" # [UniqueName] == "Reefbane" && [StashItem] == "true"	
-	[Type] == "Ring" && [Rarity] == "Unique" # [UniqueName] == "Kalandra's Touch" && [StashItem] == "true"	
-	[Type] == "Amber Amulet" && [Rarity] == "Unique" # [UniqueName] == "Xoph's Heart" && [StashItem] == "true"	
-	[Type] == "Jade Amulet" && [Rarity] == "Unique" # [UniqueName] == "The Halcyon" && [StashItem] == "true"	
-	[Type] == "Turquoise Amulet" && [Rarity] == "Unique" # [UniqueName] == "Badge of the Brotherhood" && [StashItem] == "true"	
-	[Type] == "Unset Amulet" && [Rarity] == "Unique" # [UniqueName] == "Uul-Netol's Vow" && [StashItem] == "true"	
+[Type] == "Fishing Rod" && [Rarity] == "Unique" # [UniqueName] == "Song of the Sirens" && [StashItem] == "true"	
+[Type] == "Fishing Rod" && [Rarity] == "Unique" # [UniqueName] == "Reefbane" && [StashItem] == "true"	
+[Type] == "Ring" && [Rarity] == "Unique" # [UniqueName] == "Kalandra's Touch" && [StashItem] == "true"	
+[Type] == "Amber Amulet" && [Rarity] == "Unique" # [UniqueName] == "Xoph's Heart" && [StashItem] == "true"	
+[Type] == "Jade Amulet" && [Rarity] == "Unique" # [UniqueName] == "The Halcyon" && [StashItem] == "true"	
+[Type] == "Turquoise Amulet" && [Rarity] == "Unique" # [UniqueName] == "Badge of the Brotherhood" && [StashItem] == "true"	
+[Type] == "Unset Amulet" && [Rarity] == "Unique" # [UniqueName] == "Uul-Netol's Vow" && [StashItem] == "true"	
 
-	[Type] == "Leather Belt" && [Rarity] == "Unique" # [UniqueName] == "Headhunter" && [StashItem] == "true"	
-	[Type] == "Heavy Belt" && [Rarity] == "Unique" # [UniqueName] == "Mageblood" && [StashItem] == "true"	
+[Type] == "Leather Belt" && [Rarity] == "Unique" # [UniqueName] == "Headhunter" && [StashItem] == "true"	
+[Type] == "Heavy Belt" && [Rarity] == "Unique" # [UniqueName] == "Mageblood" && [StashItem] == "true"	
 
-	[Type] == "Crimson Jewel" && [Rarity] == "Unique" # [UniqueName] == "Inspired Learning" && [StashItem] == "true"	
-	[Type] == "Crimson Jewel" && [Rarity] == "Unique" # [UniqueName] == "Rain of Splinters" && [StashItem] == "true"	
-	[Type] == "Crimson Jewel" && [Rarity] == "Unique" # [UniqueName] == "Thread of Hope" && [StashItem] == "true"	
-	[Type] == "Crimson Jewel" && [Rarity] == "Unique" # [UniqueName] == "Immutable Force" && [StashItem] == "true"	
-	[Type] == "Crimson Jewel" && [Rarity] == "Unique" # [UniqueName] == "Bloodnotch" && [StashItem] == "true"	
-	[Type] == "Viridian Jewel" && [Rarity] == "Unique" # [UniqueName] == "Intuitive Leap" && [StashItem] == "true"	
-	[Type] == "Viridian Jewel" && [Rarity] == "Unique" # [UniqueName] == "Lioneye's Fall" && [StashItem] == "true"	
-	[Type] == "Viridian Jewel" && [Rarity] == "Unique" # [UniqueName] == "Impossible Escape" && [StashItem] == "true"	
-	[Type] == "Viridian Jewel" && [Rarity] == "Unique" # [UniqueName] == "Ancestral Vision" && [StashItem] == "true"	
+[Type] == "Crimson Jewel" && [Rarity] == "Unique" # [UniqueName] == "Inspired Learning" && [StashItem] == "true"	
+[Type] == "Crimson Jewel" && [Rarity] == "Unique" # [UniqueName] == "Rain of Splinters" && [StashItem] == "true"	
+[Type] == "Crimson Jewel" && [Rarity] == "Unique" # [UniqueName] == "Thread of Hope" && [StashItem] == "true"	
+[Type] == "Crimson Jewel" && [Rarity] == "Unique" # [UniqueName] == "Immutable Force" && [StashItem] == "true"	
+[Type] == "Crimson Jewel" && [Rarity] == "Unique" # [UniqueName] == "Bloodnotch" && [StashItem] == "true"	
+[Type] == "Viridian Jewel" && [Rarity] == "Unique" # [UniqueName] == "Intuitive Leap" && [StashItem] == "true"	
+[Type] == "Viridian Jewel" && [Rarity] == "Unique" # [UniqueName] == "Lioneye's Fall" && [StashItem] == "true"	
+[Type] == "Viridian Jewel" && [Rarity] == "Unique" # [UniqueName] == "Impossible Escape" && [StashItem] == "true"	
+[Type] == "Viridian Jewel" && [Rarity] == "Unique" # [UniqueName] == "Ancestral Vision" && [StashItem] == "true"	
 //	[Type] == "Cobalt Jewel" && [Rarity] == "Unique" # [UniqueName] == "Energy From Within" && [StashItem] == "true"	
 
-	[Type] == "Synthesised Map" && [Rarity] == "Unique" # [UniqueName] == "Cortex" && [StashItem] == "true"	
-	[Type] == "Synthesised Map" && [Rarity] == "Unique" # [UniqueName] == "Altered Distant Memory" && [StashItem] == "true"	
-	[Type] == "Synthesised Map" && [Rarity] == "Unique" # [UniqueName] == "Augmented Distant Memory" && [StashItem] == "true"	
-	[Type] == "Synthesised Map" && [Rarity] == "Unique" # [UniqueName] == "Twisted Distant Memory" && [StashItem] == "true"	
-	[Type] == "Synthesised Map" && [Rarity] == "Unique" # [UniqueName] == "Rewritten Distant Memory" && [StashItem] == "true"	
+[Type] == "Synthesised Map" && [Rarity] == "Unique" # [UniqueName] == "Cortex" && [StashItem] == "true"	
+[Type] == "Synthesised Map" && [Rarity] == "Unique" # [UniqueName] == "Altered Distant Memory" && [StashItem] == "true"	
+[Type] == "Synthesised Map" && [Rarity] == "Unique" # [UniqueName] == "Augmented Distant Memory" && [StashItem] == "true"	
+[Type] == "Synthesised Map" && [Rarity] == "Unique" # [UniqueName] == "Twisted Distant Memory" && [StashItem] == "true"	
+[Type] == "Synthesised Map" && [Rarity] == "Unique" # [UniqueName] == "Rewritten Distant Memory" && [StashItem] == "true"	
 
 //	[Type] == "Prophecy Wand" && [Rarity] == "Unique" # [UniqueName] == "Void Battery" && [StashItem] == "true"	
-	[Type] == "Archon Kite Shield" && [Rarity] == "Unique" # [UniqueName] == "Prism Guardian" && [StashItem] == "true"	
-	[Type] == "Champion Kite Shield" && [Rarity] == "Unique" # [UniqueName] == "Aegis Aurora" && [StashItem] == "true"	
-	[Type] == "Spidersilk Robe" && [Rarity] == "Unique" # [UniqueName] == "The Covenant" && [StashItem] == "true"	
-	[Type] == "Sage's Robe" && [Rarity] == "Unique" # [UniqueName] == "Dialla's Malefaction" && [StashItem] == "true"	
-	[Type] == "Siege Axe" && [Rarity] == "Unique" # [UniqueName] == "Soul Taker" && [StashItem] == "true"	
-	[Type] == "Elegant Round Shield" && [Rarity] == "Unique" # [UniqueName] == "The Squire" && [StashItem] == "true"	
-	[Type] == "Carnal Armour" && [Rarity] == "Unique" # [UniqueName] == "Stasis Prison" && [StashItem] == "true"	
-[Type] == "Defiance of Destiny" && [Rarity] == "Unique" # [UniqueName] == "" && [StashItem] == "true"	
+//	[Type] == "Archon Kite Shield" && [Rarity] == "Unique" # [UniqueName] == "Prism Guardian" && [StashItem] == "true"	
+//	[Type] == "Champion Kite Shield" && [Rarity] == "Unique" # [UniqueName] == "Aegis Aurora" && [StashItem] == "true"	
+[Type] == "Spidersilk Robe" && [Rarity] == "Unique" # [UniqueName] == "The Covenant" && [StashItem] == "true"	
+[Type] == "Sage's Robe" && [Rarity] == "Unique" # [UniqueName] == "Dialla's Malefaction" && [StashItem] == "true"	
+[Type] == "Siege Axe" && [Rarity] == "Unique" # [UniqueName] == "Soul Taker" && [StashItem] == "true"	
+[Type] == "Elegant Round Shield" && [Rarity] == "Unique" # [UniqueName] == "The Squire" && [StashItem] == "true"	
+[Type] == "Carnal Armour" && [Rarity] == "Unique" # [UniqueName] == "Stasis Prison" && [StashItem] == "true"	
+[Type] == "Paua Amulet" && [Rarity] == "Unique" # [UniqueName] == "Defiance of Destiny" && [StashItem] == "true"	
 
 //
-////
-//
-//3.27 
-[Type] == "Ambush Scarab of Containment" # [ForceSellItem] == "true" //
-[Type] == "Ultimatum Scarab of Catalysing" # [ForceSellItem] == "true" //
-[Type] == "Horned Scarab of Preservation" # [ForceSellItem] == "true" //
-[Type] == "Horned Scarab of Pandemonium" # [ForceSellItem] == "true" //
-[Type] == "Horned Scarab of Awakening" # [ForceSellItem] == "true" //
-[Type] == "Horned Scarab of Bloodlines" # [ForceSellItem] == "true" //
-[Type] == "Blight Scarab of Invigoration" # [ForceSellItem] == "true" //
-[Type] == "Domination Scarab of Terrors" # [ForceSellItem] == "true" //
-[Type] == "Essence Scarab of Calcification" # [ForceSellItem] == "true" //
-[Type] == "Cartography Scarab of Risk" # [ForceSellItem] == "true" //
-[Type] == "Harvest Scarab of Cornucopia" # [ForceSellItem] == "true" //
-[Type] == "Essence Scarab of Adaptation" # [ForceSellItem] == "true" //
-[Type] == "Harbinger Scarab of Regency" # [ForceSellItem] == "true" //
-[Type] == "Breach Scarab of Snares" # [ForceSellItem] == "true" //
-[Type] == "Ambush Scarab of Discernment" # [ForceSellItem] == "true" //
-[Type] == "Ritual Scarab of Abundance" # [ForceSellItem] == "true" //
-[Type] == "Blight Scarab of Blooming" # [ForceSellItem] == "true" //
-[Type] == "Incursion Scarab of Timelines" # [ForceSellItem] == "true" //
-[Type] == "Harbinger Scarab of Warhoards" # [ForceSellItem] == "true" //
-[Type] == "Divination Scarab of The Cloister" # [ForceSellItem] == "true" //
-[Type] == "Divination Scarab of Pilfering" # [ForceSellItem] == "true" //
-[Type] == "Ultimatum Scarab of Dueling" # [ForceSellItem] == "true" //
-[Type] == "Kalguuran Scarab of Refinement" # [ForceSellItem] == "true" //
-[Type] == "Harvest Scarab of Doubling" # [ForceSellItem] == "true" //
-[Type] == "Ultimatum Scarab of Bribing" # [ForceSellItem] == "true" //
-[Type] == "Ultimatum Scarab of Inscription" # [ForceSellItem] == "true" //
-[Type] == "Essence Scarab of Adaptation" # [ForceSellItem] == "true" //
-[Type] == "Horned Scarab of Glittering" # [ForceSellItem] == "true" //
-[Type] == "Bestiary Scarab of Duplicating" # [ForceSellItem] == "true" //
+//[Type] == "Blueprint: Bunker" # [ForceSellItem] == "true" 
+//[Type] == "Blueprint: Laboratory" # [ForceSellItem] == "true" 
+//[Type] == "Blueprint: Prohibited Library" # [ForceSellItem] == "true" 
+//[Type] == "Blueprint: Records Office" # [ForceSellItem] == "true" 
+//[Type] == "Blueprint: Repository" # [ForceSellItem] == "true" 
+//[Type] == "Blueprint: Smuggler's Den" # [ForceSellItem] == "true" 
+//[Type] == "Blueprint: Tunnels" # [ForceSellItem] == "true" 
+//[Type] == "Blueprint: Underbelly" # [ForceSellItem] == "true" 
+//[Type] == "Blueprint: Mansion" # [ForceSellItem] == "true" 
 
-// Sell all bad map//
-
-[Type] == "Lookout Map" # [ForceSellItem] == "true" //
-[Type] == "Beach Map" # [ForceSellItem] == "true" //
-[Type] == "Graveyard Map" # [ForceSellItem] == "true" //
-[Type] == "Dungeon Map" # [ForceSellItem] == "true" //
-[Type] == "Foundry Map" # [ForceSellItem] == "true" //
-[Type] == "Alleyways Map" # [ForceSellItem] == "true" //
-[Type] == "Pen Map" # [ForceSellItem] == "true" //
-[Type] == "Desert Map" # [ForceSellItem] == "true" //
-[Type] == "Arid Lake Map" # [ForceSellItem] == "true" //
-[Type] == "Flooded Mine Map" # [ForceSellItem] == "true" //
-[Type] == "Marshes Map" # [ForceSellItem] == "true" //
-[Type] == "Iceberg Map" # [ForceSellItem] == "true" //
-[Type] == "Cage Map" # [ForceSellItem] == "true" //
-[Type] == "Fungal Hollow Map" # [ForceSellItem] == "true" //
-[Type] == "Excavation Map" # [ForceSellItem] == "true" //
-[Type] == "Leyline Map" # [ForceSellItem] == "true" //
-[Type] == "Peninsula Map" # [ForceSellItem] == "true" //
-[Type] == "Port Map" # [ForceSellItem] == "true" //
-[Type] == "Burial Chambers Map" # [ForceSellItem] == "true" //
-[Type] == "Cells Map" # [ForceSellItem] == "true" //
-[Type] == "Arcade Map" # [ForceSellItem] == "true" //
-[Type] == "City Square Map" # [ForceSellItem] == "true" //
-[Type] == "Relic Chambers Map" # [ForceSellItem] == "true" //
-[Type] == "Courthouse Map" # [ForceSellItem] == "true" //
-[Type] == "Strand Map" # [ForceSellItem] == "true" //
-[Type] == "Chateau Map" # [ForceSellItem] == "true" //
-[Type] == "Grotto Map" # [ForceSellItem] == "true" //
-[Type] == "Glacier Map" # [ForceSellItem] == "true" //
-//[Type] == "Volcano Map" # [ForceSellItem] == "true" //
-[Type] == "Lighthouse Map" # [ForceSellItem] == "true" //
-[Type] == "Frozen Cabins Map" # [ForceSellItem] == "true" //
-[Type] == "Grave Trough Map" # [ForceSellItem] == "true" //
-[Type] == "Crimson Township Map" # [ForceSellItem] == "true" //
-[Type] == "Forking River Map" # [ForceSellItem] == "true" //
-[Type] == "Cold River Map" # [ForceSellItem] == "true" //
-[Type] == "Forbidden Woods Map" # [ForceSellItem] == "true" //
-[Type] == "Conservatory Map" # [ForceSellItem] == "true" //
-[Type] == "Sulphur Vents Map" # [ForceSellItem] == "true" //
-[Type] == "Haunted Mansion Map" # [ForceSellItem] == "true" //
-[Type] == "Maze Map" # [ForceSellItem] == "true" //
-[Type] == "Channel Map" # [ForceSellItem] == "true" //
-[Type] == "Ancient City Map" # [ForceSellItem] == "true" //
-[Type] == "Ivory Temple Map" # [ForceSellItem] == "true" //
-[Type] == "Spider Lair Map" # [ForceSellItem] == "true" //
-[Type] == "Barrows Map" # [ForceSellItem] == "true" //
-[Type] == "Mausoleum Map" # [ForceSellItem] == "true" //
-[Type] == "Fields Map" # [ForceSellItem] == "true" //
-[Type] == "Jungle Valley Map" # [ForceSellItem] == "true" //
-[Type] == "Phantasmagoria Map" # [ForceSellItem] == "true" //
-[Type] == "Academy Map" # [ForceSellItem] == "true" //
-//[Type] == "Thicket Map" # [ForceSellItem] == "true" //
-[Type] == "Wharf Map" # [ForceSellItem] == "true" //
-//[Type] == "Ashen Wood Map" # [ForceSellItem] == "true" //
-[Type] == "Atoll Map" # [ForceSellItem] == "true" //
-[Type] == "Cemetery Map" # [ForceSellItem] == "true" //
-[Type] == "Underground Sea Map" # [ForceSellItem] == "true" //
-[Type] == "Crater Map" # [ForceSellItem] == "true" //
-[Type] == "Coral Ruins Map" # [ForceSellItem] == "true" //
-[Type] == "Lava Chamber Map" # [ForceSellItem] == "true" //
-[Type] == "Residence Map" # [ForceSellItem] == "true" //
-[Type] == "Ramparts Map" # [ForceSellItem] == "true" //
-//[Type] == "Bone Crypt Map" # [ForceSellItem] == "true" //
-[Type] == "Underground River Map" # [ForceSellItem] == "true" //
-[Type] == "Gardens Map" # [ForceSellItem] == "true" //
-[Type] == "Arachnid Nest Map" # [ForceSellItem] == "true" //
-[Type] == "Bazaar Map" # [ForceSellItem] == "true" //
-[Type] == "Laboratory Map" # [ForceSellItem] == "true" //
-[Type] == "Infested Valley Map" # [ForceSellItem] == "true" //
-[Type] == "Overgrown Ruin Map" # [ForceSellItem] == "true" //
-[Type] == "Vaal Pyramid Map" # [ForceSellItem] == "true" //
-[Type] == "Geode Map" # [ForceSellItem] == "true" //
-[Type] == "Armoury Map" # [ForceSellItem] == "true" //
-[Type] == "Courtyard Map" # [ForceSellItem] == "true" //
-[Type] == "Shore Map" # [ForceSellItem] == "true" //
-[Type] == "Tropical Island Map" # [ForceSellItem] == "true" //
-[Type] == "Mineral Pools Map" # [ForceSellItem] == "true" //
-[Type] == "Moon Temple Map" # [ForceSellItem] == "true" //
-[Type] == "Sepulchre Map" # [ForceSellItem] == "true" //
-[Type] == "Tower Map" # [ForceSellItem] == "true" //
-[Type] == "Waste Pool Map" # [ForceSellItem] == "true" //
-[Type] == "Plateau Map" # [ForceSellItem] == "true" //
-[Type] == "Estuary Map" # [ForceSellItem] == "true" //
-[Type] == "Vault Map" # [ForceSellItem] == "true" //
-[Type] == "Temple Map" # [ForceSellItem] == "true" //
-[Type] == "Arena Map" # [ForceSellItem] == "true" //
-[Type] == "Museum Map" # [ForceSellItem] == "true" //
-[Type] == "Scriptorium Map" # [ForceSellItem] == "true" //
-[Type] == "Siege Map" # [ForceSellItem] == "true" //
-//[Type] == "Shipyard Map" # [ForceSellItem] == "true" //
-[Type] == "Belfry Map" # [ForceSellItem] == "true" //
-[Type] == "Arachnid Tomb Map" # [ForceSellItem] == "true" //
-[Type] == "Wasteland Map" # [ForceSellItem] == "true" //
-[Type] == "Precinct Map" # [ForceSellItem] == "true" //
-[Type] == "Bog Map" # [ForceSellItem] == "true" //
-[Type] == "Pier Map" # [ForceSellItem] == "true" //
-[Type] == "Cursed Crypt Map" # [ForceSellItem] == "true" //
-[Type] == "Orchard Map" # [ForceSellItem] == "true" //
-[Type] == "Promenade Map" # [ForceSellItem] == "true" //
-[Type] == "Lair Map" # [ForceSellItem] == "true" //
-[Type] == "Colonnade Map" # [ForceSellItem] == "true" //
-[Type] == "Primordial Pool Map" # [ForceSellItem] == "true" //
-[Type] == "Spider Forest Map" # [ForceSellItem] == "true" //
-//[Type] == "Coves Map" # [ForceSellItem] == "true" //
-[Type] == "Waterways Map" # [ForceSellItem] == "true" //
-[Type] == "Factory Map" # [ForceSellItem] == "true" //
-[Type] == "Mesa Map" # [ForceSellItem] == "true" //
-[Type] == "Pit Map" # [ForceSellItem] == "true" //
-[Type] == "Dry Sea Map" # [ForceSellItem] == "true" //
-[Type] == "Summit Map" # [ForceSellItem] == "true" //
-[Type] == "Overgrown Shrine Map" # [ForceSellItem] == "true" //
-[Type] == "Castle Ruins Map" # [ForceSellItem] == "true" //
-[Type] == "Crystal Ore Map" # [ForceSellItem] == "true" //
-[Type] == "Villa Map" # [ForceSellItem] == "true" //
-[Type] == "Primordial Blocks Map" # [ForceSellItem] == "true" //
-//[Type] == "Necropolis Map" # [ForceSellItem] == "true" //
-[Type] == "Racecourse Map" # [ForceSellItem] == "true" //
-[Type] == "Caldera Map" # [ForceSellItem] == "true" //
-[Type] == "Ghetto Map" # [ForceSellItem] == "true" //
-[Type] == "Park Map" # [ForceSellItem] == "true" //
-[Type] == "Malformation Map" # [ForceSellItem] == "true" //
-[Type] == "Terrace Map" # [ForceSellItem] == "true" //
-[Type] == "Shrine Map" # [ForceSellItem] == "true" //
-[Type] == "Arsenal Map" # [ForceSellItem] == "true" //
-[Type] == "Desert Spring Map" # [ForceSellItem] == "true" //
-[Type] == "Core Map" # [ForceSellItem] == "true" //
-[Type] == "Colosseum Map" # [ForceSellItem] == "true" //
-[Type] == "Acid Caverns Map" # [ForceSellItem] == "true" //
-[Type] == "Dark Forest Map" # [ForceSellItem] == "true" //
-[Type] == "Crimson Temple Map" # [ForceSellItem] == "true" //
-[Type] == "Plaza Map" # [ForceSellItem] == "true" //
-[Type] == "Dig Map" # [ForceSellItem] == "true" //
-[Type] == "Palace Map" # [ForceSellItem] == "true" //
-[Type] == "Lava Lake Map" # [ForceSellItem] == "true" //
-[Type] == "Basilica Map" # [ForceSellItem] == "true" //
-[Type] == "Sunken City Map" # [ForceSellItem] == "true" //
-[Type] == "Reef Map" # [ForceSellItem] == "true" //
-[Type] == "Carcass Map" # [ForceSellItem] == "true" //
-[Type] == "Stagnation Map" # [ForceSellItem] == "true" //
-[Type] == "Bramble Valley Map" # [ForceSellItem] == "true" //
-[Type] == "Silo Map" # [ForceSellItem] == "true" //
+//[Type] == "Contract: Bunker" # [ForceSellItem] == "true" //
+//[Type] == "Contract: Smuggler's Den" # [ForceSellItem] == "true" //
+//[Type] == "Contract: Laboratory" # [ForceSellItem] == "true" //
+//[Type] == "Contract: Repository" # [ForceSellItem] == "true" //
+//[Type] == "Contract: Prohibited Library" # [ForceSellItem] == "true" //
+//[Type] == "Contract: Tunnels" # [ForceSellItem] == "true" //
+//[Type] == "Contract: Underbelly" # [ForceSellItem] == "true" //
+//[Type] == "Contract: Records Office" # [ForceSellItem] == "true" //
+//[Type] == "Contract: Mansion" # [ForceSellItem] == "true" //
