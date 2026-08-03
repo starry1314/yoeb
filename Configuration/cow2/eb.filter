@@ -23,7 +23,7 @@
 # 【特殊語法-六連裝備】0001
 
 #地圖已汙染
-Hide
+show
 　　Corrupted True
     Class "Maps"
     MapTier <= 16
