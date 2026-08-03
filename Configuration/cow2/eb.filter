@@ -20,10 +20,25 @@
 # 【特殊語法-六洞裝備】0002
 #============
 
+
+#極地之邀隱藏
+Show
+    BaseType "Polaric Invitation"
+    SetTextColor 255 255 255
+    SetBackgroundColor 33 19 38
+    SetBorderColor 255 0 0
+    SetFontSize 44
+
+# 【特殊語法-六連裝備】0001
+Show
+    Rarity <= Rare
+    Class "Helmets" "Body Armours" "Gloves" "Boots" "Belts" "Rings" "Amulets" "One Hand Axes" "Two Hand Axes" "Bows" "Claws" "Daggers" "One Hand Maces" "Two Hand Maces" "Sceptres" "Staves" "One Hand Swords" "Two Hand Swords" "Wands" "Shields" "Quivers"
+    LinkedSockets <= 5
+
 # 【特殊語法-六連裝備】0001
 
 #地圖已汙染
-show
+Show
 　　Corrupted True
     Class "Maps"
     MapTier <= 16
@@ -246,7 +261,7 @@ Show # 通貨 - 高級 - 無效石
     MinimapIcon 0 Red Diamond
     PlayEffect Red
 
-Show # 通貨 - 高級 - 撤銷石
+Hide # 通貨 - 高級 - 撤銷石
     Class "Currency"
     BaseType "Orb of Unmaking"
     SetTextColor 0 0 0 255
@@ -347,7 +362,7 @@ Show # 通貨 - 普通 - 混沌石
     MinimapIcon 2 Green Diamond
     PlayEffect Green
 
-Show # 通貨 - 普通 - 富豪石
+Hide # 通貨 - 普通 - 富豪石
     Class "Currency"
     BaseType "Regal Orb"
     SetTextColor 0 0 0
@@ -369,7 +384,7 @@ Show # 通貨 - 普通 - 寶石匠的稜鏡
     PlayEffect Green
     PlayAlertSound ShChaos 200
 
-Show # 通貨 - 普通 - 後悔石
+Hide # 通貨 - 普通 - 後悔石
     Class "Currency"
     BaseType "Orb of Regret"
     SetTextColor 0 0 0
@@ -380,7 +395,7 @@ Show # 通貨 - 普通 - 後悔石
     PlayEffect Green
     PlayAlertSound ShChaos 200
 
-Show # 通貨 - 普通 - 鏈結石
+Hide # 通貨 - 普通 - 鏈結石
     Class "Currency"
     BaseType "Orb of Fusing"
     SetTextColor 0 0 0
@@ -391,7 +406,7 @@ Show # 通貨 - 普通 - 鏈結石
     PlayEffect Green
     PlayAlertSound ShChaos 200
 
-Show # 通貨 - 普通 - 祝福石
+Hide # 通貨 - 普通 - 祝福石
     Class "Currency"
     BaseType "Blessed Orb"
     SetTextColor 0 0 0
@@ -402,7 +417,7 @@ Show # 通貨 - 普通 - 祝福石
     PlayEffect Green
     PlayAlertSound ShChaos 200
 
-Show # 通貨 - 普通 - 重鑄石
+Hide # 通貨 - 普通 - 重鑄石
     Class "Currency"
     BaseType "Orb of Scouring"
     SetTextColor 0 0 0
@@ -424,7 +439,7 @@ Show # 通貨 - 普通 - 瓦爾石
     MinimapIcon 2 Green Diamond
     PlayEffect Green
 
-Show # 通貨 - 普通 - 製圖丁
+Hide # 通貨 - 普通 - 製圖丁
     Class "Currency"
     BaseType "Cartographer's Chisel"
     SetTextColor 0 0 0
@@ -435,7 +450,7 @@ Show # 通貨 - 普通 - 製圖丁
     MinimapIcon 2 Green Diamond
     PlayEffect Green
 
-Show # 通貨 - 普通 - 地平石
+Hide # 通貨 - 普通 - 地平石
     Class "Currency"
     BaseType "Orb of Horizons"
     SetTextColor 0 0 0
@@ -468,7 +483,7 @@ Show # 通貨 - 普通 - 工程石
     MinimapIcon 2 Green Diamond
     PlayEffect Green
 
-Show # 通貨 - 普通 - 束縛石
+Hide # 通貨 - 普通 - 束縛石
     Class "Currency"
     BaseType "Orb of Binding"
     SetTextColor 0 0 0
@@ -580,8 +595,8 @@ Show # 通貨 - 初始 - 改造石
     SetBorderColor 128 128 186
     SetFontSize 45
     PlayAlertSound 9 300
-
-Show # 通貨 - 初始 - 機會石
+	
+Hide # 通貨 - 初始 - 機會石
     Class "Currency"
     BaseType "Orb of Chance"
     SetTextColor 0 0 0
@@ -590,7 +605,7 @@ Show # 通貨 - 初始 - 機會石
     SetFontSize 40
     PlayAlertSound 9 300
 
-Show # 通貨 - 初始 - 工匠石
+Hide # 通貨 - 初始 - 工匠石
     Class "Currency"
     BaseType "Jeweller's Orb"
     SetTextColor 0 0 0
@@ -599,7 +614,7 @@ Show # 通貨 - 初始 - 工匠石
     SetFontSize 45
     PlayAlertSound 9 300
 
-Show # 通貨 - 初始 - 幻色石
+Hide # 通貨 - 初始 - 幻色石
     Class "Currency"
     BaseType "Chromatic Orb"
     SetTextColor 0 0 0
@@ -616,7 +631,7 @@ Show # 通貨 - 初始 - 玻璃彈珠
     SetBorderColor 250 250 250
     SetFontSize 40
 
-Show # 通貨 - 初始 - 點燃石
+Hide # 通貨 - 初始 - 點燃石
     Class "Currency"
     BaseType "Enkindling Orb"
     SetTextColor 0 0 0
@@ -625,7 +640,7 @@ Show # 通貨 - 初始 - 點燃石
     SetFontSize 40
     PlayEffect Brown
 
-Show # 通貨 - 初始 - 滴注石
+Hide # 通貨 - 初始 - 滴注石
     Class "Currency"
     BaseType "Instilling Orb"
     SetTextColor 0 0 0
@@ -636,25 +651,25 @@ Show # 通貨 - 初始 - 滴注石
 
 #【通貨-垃圾】1005
 
-Show # 通貨 - 垃圾 - 磨刀石
+Hide # 通貨 - 垃圾 - 磨刀石
     Class "Currency"
     BaseType "Blacksmith's Whetstone"
     SetTextColor 210 150 255
     SetFontSize 45
 
-Show # 通貨 - 垃圾 - 護甲片
+Hide # 通貨 - 垃圾 - 護甲片
     Class "Currency"
     BaseType "Armourer's Scrap"
     SetTextColor 210 150 255
     SetFontSize 45
 
-Show # 通貨 - 垃圾 - 蛻變石
+Hide # 通貨 - 垃圾 - 蛻變石
     Class "Currency"
     BaseType "Orb of Transmutation"
     SetTextColor 210 150 255
     SetFontSize 45
 
-Show # 通貨 - 垃圾 - 增幅石
+Hide # 通貨 - 垃圾 - 增幅石
     Class "Currency"
     BaseType "Orb of Augmentation"
     SetTextColor 210 150 255
@@ -1358,7 +1373,7 @@ Show # 聯盟 - 3.13祭祀 - 浸血碑器
     MinimapIcon 0 Red Star
 # 【聯盟-3.12劫盜】3020
 
-Hide # 聯盟 - 3.12劫盜 - 盜賊之印
+Show # 聯盟 - 3.12劫盜 - 盜賊之印
     Class "Currency"
     BaseType "Rogue's Marker"
     SetTextColor 255 178 102
@@ -3887,7 +3902,7 @@ Show # 裝備 - 傳奇裝備 - 一般傳奇
 
 # 【藥劑-功能藥劑】7001
 
-Show # 藥劑 - 功能藥劑
+Hide # 藥劑 - 功能藥劑
     Class "Utility Flasks"
     SetTextColor 255 255 255
     SetBackgroundColor 163 141 109
@@ -3916,7 +3931,7 @@ Hide # 藥劑 - 生命藥劑 - 中階(高階/聖語/祝福)
     SetBorderColor 153 0 0
     SetFontSize 40
 
-Show # 藥劑 - 生命藥劑 - 高階(聖化/不朽/永恆)
+Hide # 藥劑 - 生命藥劑 - 高階(聖化/不朽/永恆)
     Class "Life Flasks"
     BaseType "Sanctified Life Flask" "Divine Life Flask" "Eternal Life Flask"
     SetTextColor 153 0 0
@@ -3944,7 +3959,7 @@ Hide # 藥劑 - 魔力藥劑 - 中階(高階/聖語/祝福)
     SetBorderColor 0 102 204
     SetFontSize 40
 
-Show # 藥劑 - 魔力藥劑 - 高階(聖化/不朽/永恆)
+Hide # 藥劑 - 魔力藥劑 - 高階(聖化/不朽/永恆)
     Rarity <= Magic
     Class "Mana Flasks"
     BaseType "Sanctified Mana Flask" "Divine Mana Flask" "Eternal Mana Flask"
@@ -3973,7 +3988,7 @@ Hide # 藥劑 - 複合藥劑 - 中階(大型/高階)
     SetBorderColor 76 0 153
     SetFontSize 40
 
-Show # 藥劑 - 複合藥劑 - 高階(聖語/祝福)
+Hide # 藥劑 - 複合藥劑 - 高階(聖語/祝福)
     Rarity <= Magic
     Class "Hybrid Flasks"
     BaseType "Sacred Hybrid Flask" "Hallowed Hybrid Flask"
@@ -3984,7 +3999,7 @@ Show # 藥劑 - 複合藥劑 - 高階(聖語/祝福)
 
 # 【裝備-高T詞綴裝備】
 
-Show # 裝備 - 高T詞綴裝備 - 魔法 - 單物傷詞綴
+Hide # 裝備 - 高T詞綴裝備 - 魔法 - 單物傷詞綴
 	  Corrupted False
 	  Rarity = Magic
     HasExplicitMod "Merciless"
@@ -3994,7 +4009,7 @@ Show # 裝備 - 高T詞綴裝備 - 魔法 - 單物傷詞綴
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Show # 裝備 - 高T詞綴裝備 - 魔法 - 雙物理詞綴
+Hide # 裝備 - 高T詞綴裝備 - 魔法 - 雙物理詞綴
 	  Corrupted False
 	  Rarity = Magic
 	  Class "Dagger" "Wands" "Claws" "One Hand" "Bow"
@@ -4397,15 +4412,6 @@ Show # 裝備 - 特殊裝備 - 3色連洞 (2*2體積)
     SetBackgroundColor 255 255 255
     SetBorderColor 0 0 0
     SetFontSize 45
-
-Show # 裝備 - 特殊裝備 - ALL
-    LinkedSockets >= 3
-    SocketGroup "RGB"
-    SetTextColor 255 0 0
-    SetBackgroundColor 255 255 255
-    SetBorderColor 0 0 0
-    SetFontSize 45
-
 
 Show # 裝備 - 特殊裝備 - 石錘、破岩錘、堅錘Q10+
     Quality >= 10
