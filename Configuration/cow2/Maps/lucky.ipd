@@ -390,13 +390,15 @@
 // Example: Run rare Maps level less than 3
 
 // [MapTier] >= "1" && [MapTier] < "3" && [Rarity] == "Rare" # [RunMap] == "true"
+//打完boss就跑路
 
 
 [Type] == "Coves Map" # [ExitAfterBossKill] == "true" //
 [Type] == "Dunes Map" # [ExitAfterBossKill] == "true" //
-[Type] == "Strand Map" # [ExitAfterBossKill] == true 
-[Type]=="Strand Map" # [ExitAfterBossKill] == "1
-"
+[Type] == "Cemetery Map" # [ExitAfterBossKill] == "true" //
+[Type] == "Map" # [ExitAfterBossKill] == "true" //
+[Category] == "Map" #  [ExitAfterBossKill]  == "true"//
+[Type] == "Toxic Sewer" #  [ExitAfterBossKill] == "true" //
 
 // 9 -- Post Script
 
