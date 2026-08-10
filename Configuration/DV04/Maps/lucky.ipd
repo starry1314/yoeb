@@ -67,7 +67,7 @@
 // Map Types IgnoreMap
 //  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-[map_zana_influence] == "1" # [IgnoreMap] == "true" // Originator Maps
+// [map_zana_influence] == "1" # [IgnoreMap] == "true" // Originator Maps 16.5
 [6545]  == "1" # [IgnoreMap] == "true" // Elder influenced maps
 [6545]  == "2" # [IgnoreMap] == "true" // Elder influenced maps
 [6545]  == "3" # [IgnoreMap] == "true" // Elder influenced maps
