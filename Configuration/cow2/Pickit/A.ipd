@@ -1,3 +1,6 @@
+[Type] == "Map (Tier 16)" && [map_zana_influence] >= "1" # [ForceSellItem] =="true" 
+[Type] == "Map (Tier 16)" && [map_contains_citadel]>="1"# [ForceSellItem] =="true" 
+[Type] == "Map (Tier 16)" && [map_elder_boss_variation]>="1"# [ForceSellItem] =="true"
 //[Type] == "Provisioning Wombgift" # [StashItem] == "true" 
 //[Type] == "Lavish Wombgift" # [StashItem] == "true" 
 //[Type] == "Ancient Wombgift" # [StashItem] == "true" 
