@@ -1,3 +1,22 @@
+//3.29金幣
+[Type] == "Rotmother's Ducat"  # [StashItem] =="true"
+[Type] == "Brinehook's Ducat"  # [StashItem] =="true"
+[Type] == "Kishara's Ducat"  # [StashItem] =="true"
+[Type] == "The Genteel's Ducat"  # [StashItem] =="true"
+[Type] == "Katakohi's Ducat"  # [StashItem] =="true"
+[Type] == "Merrick's Ducat"  # [StashItem] =="true"
+[Type] == "Cyaxan's Ducat"  # [StashItem] =="true"
+[Type] == "The Changeling's Ducat"  # [StashItem] =="true"
+[Type] == "Telesia's Ducat"  # [StashItem] =="true"
+[Type] == "Tzamoto's Ducat"  # [StashItem] =="true"
+[Type] == "Ukatoa's Ducat"  # [StashItem] =="true"
+//3.29 海圖 販售
+[Type] == "Sandy Seabed Chart" # [ForceSellItem] == "true"
+[Type] == "Coral Forest Chart" # [ForceSellItem] == "true"
+[Type] == "Coral Reef Chart" # [ForceSellItem] == "true"
+[Type] == "Thermal Vents Chart" # [ForceSellItem] == "true"
+
+//
 [Type] == "Map (Tier 16)" && [map_zana_influence] >= "1" # [ForceSellItem] =="true" 
 [Type] == "Map (Tier 16)" && [map_contains_citadel]>="1"# [ForceSellItem] =="true" 
 [Type] == "Map (Tier 16)" && [map_elder_boss_variation]>="1"# [ForceSellItem] =="true"
