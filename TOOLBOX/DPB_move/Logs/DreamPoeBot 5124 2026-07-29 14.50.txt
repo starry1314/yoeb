@@ -1,0 +1,122 @@
+2026-07-29 14:50:35,084 [1] INFO  Logger - DreamPoeBot Version: 0.3.29.5
+Path: C:\Users\<Username>\Desktop\DPB_3_29_05\<ExeName>
+Arguments: C:\Users\Administrator\Desktop\DPB_3_29_05\DreamPoeBot.exe
+
+OS Name: Microsoft Windows 10 企业版 2016 长期服务版
+OS Version: 10.0.14393
+OS Architecture: 64 位
+InstalledUICulture: zh-CN [Chinese (Simplified, China)]
+CurrentUICulture: zh-CN [Chinese (Simplified, China)]
+CurrentCulture: zh-CN [Chinese (Simplified, China)]
+
+2026-07-29 14:50:35,134 [1] INFO  Logger - Now setting up JitProfiles...
+2026-07-29 14:50:35,137 [1] INFO  Logger - JitProfiles successfully setup!
+2026-07-29 14:50:35,139 [1] INFO  Logger - Now checking prerequisites...
+2026-07-29 14:50:35,140 [1] INFO  Logger - Prerequisite check complete!
+2026-07-29 14:50:39,066 [1] INFO  Logger - [DreamAuthAuto] auth.dreamauth.top passed: 262144 bytes in 1500 ms; version response 1411 ms.
+2026-07-29 14:50:39,067 [1] INFO  Logger - [DreamAuthAuto] ru.dreamauth.top passed: 262144 bytes in 1575 ms; version response 1455 ms.
+2026-07-29 14:50:39,068 [1] INFO  Logger - [DreamAuthAuto] api.dreampoeauth.cloud passed: 262144 bytes in 345 ms; version response 597 ms.
+2026-07-29 14:50:39,069 [1] INFO  Logger - [DreamAuthAuto] api.dreampoeauth.xyz passed: 262144 bytes in 1076 ms; version response 1111 ms.
+2026-07-29 14:50:39,069 [1] INFO  Logger - [DreamAuthAuto] Selected proxy: api.dreampoeauth.cloud.
+2026-07-29 14:50:39,070 [1] INFO  Logger - DreamAuth signed updater test mode is enabled; legacy pre-login updater skipped.
+2026-07-29 14:50:39,194 [13] INFO  Logger - [Pre-Login] Connecting to BestLatency (15.235.186.246)
+2026-07-29 14:50:41,160 [13] INFO  Logger - Region: sea
+2026-07-29 14:50:41,160 [13] INFO  Logger - Loader authentication completed.
+2026-07-29 14:50:41,162 [13] INFO  Logger - [DreamUpdate] Signed release channel enabled; mode=apply, currentVersion=0.3.29.5.
+2026-07-29 14:50:41,531 [13] INFO  Logger - [DreamUpdate] Current build is up to date; signedVersion=0.3.29.5, artifact=dpb1-release-0-3-29-5-14.
+2026-07-29 14:50:42,710 [1] INFO  BotManager - [BotManager] MsBetweenTicks = 80
+2026-07-29 14:50:44,450 [7] INFO  Logger - Pattern scan completed.
+2026-07-29 14:50:44,463 [7] INFO  Logger - IngameState: 4DF77FD1010
+2026-07-29 14:51:03,050 [7] INFO  Logger - [Dat] Now building the Stat lookup table.
+2026-07-29 14:51:05,373 [7] INFO  Logger - [Dat] The Stat lookup table has been built.
+2026-07-29 14:51:05,428 [7] INFO  Logger - [Dat] Now building the Passive Skills lookup table.
+2026-07-29 14:51:06,099 [7] INFO  Logger - [Dat] The Passive Skills lookup table has been built.
+2026-07-29 14:51:06,151 [7] INFO  Logger - Core memory roots initialized.
+2026-07-29 14:51:37,866 [7] WARN  Logger - [HookManager] The injected runtime is still initializing after 30 seconds; waiting up to 375 seconds. BootstrapStage=4 (delegation_response_sent), BootstrapError=0 (none), BootstrapWin32Error=0 (none), BootstrapPipe=present.
+2026-07-29 14:51:38,966 [7] INFO  Logger - [DreamAuthAreaObserve] ARMED|generation=1|intervalMs=1000
+2026-07-29 14:51:39,136 [7] DEBUG ThirdPartyLoader - Loading start.
+2026-07-29 14:51:39,147 [7] DEBUG ThirdPartyLoader - Now loading [PluginLoader].
+2026-07-29 14:51:39,159 [7] DEBUG ThirdPartyLoader - [PluginLoader] will be loaded as [PluginLoader]. The base path is [].
+2026-07-29 14:51:39,161 [7] INFO  ThirdPartyLoader - Now asynchronously compiling dependency free content...
+2026-07-29 14:51:40,421 [8] DEBUG Logger - [DreamAuthAreaObserve] SKIP|epoch=1|reason=Xd901yY8DcWY8agBXK9O
+2026-07-29 14:51:45,743 [7] INFO  Logger - [PluginLoader] Detected plugins: 
+-----------------
+	C:\Users\Administrator\Desktop\DPB_3_29_05\Plugins\PalLoader.dll
+-----------------
+2026-07-29 14:51:45,758 [7] INFO  Logger - [PalLoader] Key found. Loading ExileFriend, PalRoutine and Palmover...
+2026-07-29 14:51:50,270 [5] INFO  Logger - [PalLoader] Bot type from ExileFriend: ExileFriend.ExileFriend
+2026-07-29 14:51:50,659 [20] WARN  Logger - [_window_PropertyChanged] Handle: 459730
+2026-07-29 14:51:50,671 [5] INFO  Logger - [PalLoader] Loaded ExileFriend: ExileFriend v0.2.3
+2026-07-29 14:51:50,799 [21] WARN  Logger - [_window_PropertyChanged] X: 280
+2026-07-29 14:51:50,800 [21] WARN  Logger - [_window_PropertyChanged] Y: 29
+2026-07-29 14:51:51,645 [5] INFO  Logger - [PalLoader] Routine type from PalRoutine: PalRoutine.PalRoutine
+2026-07-29 14:51:51,649 [5] INFO  Logger - [PalLoader] Loaded PalRoutine: PalRoutine v0.1.0
+2026-07-29 14:51:52,615 [5] INFO  Logger - [PalLoader] Loaded mover: Palmover v0.0.1
+2026-07-29 14:51:53,035 [1] INFO  Logger - [Initialize] ExileFriend.ExileFriend
+2026-07-29 14:51:53,157 [1] INFO  Logger - [Initialize] PalRoutine.PalRoutine
+2026-07-29 14:51:53,222 [1] INFO  Logger - [Initialize] Palmover.Palmover
+2026-07-29 14:51:53,228 [1] INFO  Logger - [PalLoader] Registered in-memory content via ThirdPartyLoader: ExileFriend, PalRoutine, Palmover.
+2026-07-29 14:51:53,232 [7] INFO  Logger - [PalLoader] Loaded ExileFriend, PalRoutine, and Palmover. Select the bot you want from the bot dropdown, PalRoutine from the routine dropdown, and Palmover from the mover dropdown.
+2026-07-29 14:51:53,233 [7] INFO  Logger - [[PluginLoader] Loaded: palLoader v1.5 <pallala> - Protected ExileFriend, PalRoutine, and Palmover loader
+2026-07-29 14:51:53,234 [7] INFO  ThirdPartyLoader - PluginLoader
+2026-07-29 14:51:53,237 [7] INFO  ThirdPartyLoader -                    [Bots] : 
+2026-07-29 14:51:53,239 [7] INFO  ThirdPartyLoader -                    [Plugins] : PluginLoader (PluginLoader: 1.0)
+2026-07-29 14:51:53,239 [7] INFO  ThirdPartyLoader -                    [Routines] : 
+2026-07-29 14:51:53,240 [7] INFO  ThirdPartyLoader -                    [Content] : 
+2026-07-29 14:51:53,240 [7] INFO  ThirdPartyLoader -                    [PlayerMovers] : 
+2026-07-29 14:51:53,240 [7] INFO  ThirdPartyLoader - Content compiled in 00:00:14.0785617.
+2026-07-29 14:51:53,241 [7] DEBUG ThirdPartyLoader - Loading finished!
+2026-07-29 14:51:53,251 [7] ERROR ThirdPartyLoader - Please put your plugins into respective subdirectories!
+2026-07-29 14:51:53,487 [7] INFO  Logger - [Initialize] DreamPoeBot.Loki.Bot.SkillBlacklist
+2026-07-29 14:51:53,538 [7] INFO  Logger - [Initialize] ExileFriend.ExileFriend
+2026-07-29 14:51:53,554 [1] INFO  Logger - [ItemEvaluator] Instance = DreamPoeBot.Loki.Bot.DefaultItemEvaluator.
+2026-07-29 14:51:53,663 [7] INFO  Logger - [Initialize] PalRoutine.PalRoutine
+2026-07-29 14:51:53,743 [1] INFO  Logger - [ItemEvaluator] Instance = DreamPoeBot.Loki.Bot.DefaultItemEvaluator.
+2026-07-29 14:51:53,745 [1] INFO  Logger - [PalLoader] Applied preferred bot selection via reflection: ExileFriend
+2026-07-29 14:51:53,747 [23] INFO  Logger - [PalLoader] Preferred bot restore confirmed after attempt 1.
+2026-07-29 14:51:53,779 [7] INFO  Logger - [Initialize] Palmover.Palmover
+2026-07-29 14:51:53,877 [7] INFO  Logger - [PluginLoader] Detected plugins: 
+-----------------
+	C:\Users\Administrator\Desktop\DPB_3_29_05\Plugins\PalLoader.dll
+-----------------
+2026-07-29 14:51:53,878 [7] INFO  Logger - [[PluginLoader] Loaded: palLoader v1.5 <pallala> - Protected ExileFriend, PalRoutine, and Palmover loader
+2026-07-29 14:51:53,888 [7] INFO  Logger - [Initialize] ExileFriend.Banner.BannerManager
+2026-07-29 14:51:53,889 [7] INFO  Logger - [BannerManager] Initialized.
+2026-07-29 14:51:53,890 [7] INFO  Logger - [Initialize] ExileFriend.Link.LinkManager
+2026-07-29 14:51:53,891 [7] INFO  Logger - [LinkManager] Initialized.
+2026-07-29 14:51:53,891 [7] INFO  Logger - [Initialize] PalLoader.PalLoader
+2026-07-29 14:51:53,892 [7] INFO  Logger - [Initialize] PluginLoader.PluginLoader
+2026-07-29 14:51:53,895 [7] INFO  Logger - [Initialize] ExileFriend.SmartFlask.SmartFlaskManager
+2026-07-29 14:51:53,896 [7] INFO  Logger - [SmartFlaskManager] Initialized.
+2026-07-29 14:51:53,900 [7] INFO  Logger - [Initialize] ExileFriend.Warcry.WarcryManager
+2026-07-29 14:51:53,901 [7] INFO  Logger - [WarcryManager] Initialized.
+2026-07-29 14:51:53,902 [7] INFO  Logger - [Enable] PalLoader.PalLoader
+2026-07-29 14:51:53,904 [7] INFO  Logger - [Enable] PluginLoader.PluginLoader
+2026-07-29 14:51:54,120 [1] INFO  Logger - [ItemEvaluator] Instance = DreamPoeBot.Loki.Bot.DefaultItemEvaluator.
+2026-07-29 14:51:54,128 [1] DEBUG Logger - Current 'Bot' set to ExileFriend.
+2026-07-29 14:51:54,591 [1] INFO  Logger - [ExileFriendGui] GUI constructed successfully.
+2026-07-29 14:51:54,607 [1] DEBUG Logger - Current 'Routine' set to PalRoutine.
+2026-07-29 14:51:54,819 [1] DEBUG Logger - Current 'PlayerMover' set to Palmover.
+2026-07-29 14:51:54,886 [7] INFO  Logger - Registering default Hotkeys:
+2026-07-29 14:51:54,908 [7] INFO  Logger - 
+
+
+2026-07-29 15:00:49,356 [1] INFO  Logger - [PluginManager.Deinitialize] ExileFriend.Banner.BannerManager
+2026-07-29 15:00:49,358 [1] INFO  Logger - [BannerManager] Deinitialized.
+2026-07-29 15:00:49,359 [1] INFO  Logger - [PluginManager.Deinitialize] ExileFriend.Link.LinkManager
+2026-07-29 15:00:49,360 [1] INFO  Logger - [LinkManager] Deinitialized.
+2026-07-29 15:00:49,361 [1] INFO  Logger - [PluginManager.Deinitialize] PalLoader.PalLoader
+2026-07-29 15:00:49,422 [1] INFO  Logger - [Initialize] ExileFriend.ExileFriend
+2026-07-29 15:00:49,493 [1] INFO  Logger - [Initialize] PalRoutine.PalRoutine
+2026-07-29 15:00:49,588 [1] INFO  Logger - [Initialize] Palmover.Palmover
+2026-07-29 15:00:49,589 [10] INFO  Logger - The Bot window is closed, now terminating DPB
+2026-07-29 15:00:49,591 [1] INFO  Logger - [PluginManager.Deinitialize] PluginLoader.PluginLoader
+2026-07-29 15:00:49,592 [1] INFO  Logger - [PluginManager.Deinitialize] ExileFriend.SmartFlask.SmartFlaskManager
+2026-07-29 15:00:49,593 [1] INFO  Logger - [SmartFlaskManager] Deinitialized.
+2026-07-29 15:00:49,593 [1] INFO  Logger - [PluginManager.Deinitialize] ExileFriend.Warcry.WarcryManager
+2026-07-29 15:00:49,594 [1] INFO  Logger - [WarcryManager] Deinitialized.
+2026-07-29 15:00:49,596 [1] INFO  Logger - [PlayerMoverManager.Deinitialize] Palmover.Palmover
+2026-07-29 15:00:49,597 [1] INFO  Logger - [RoutineManager.Deinitialize] PalRoutine.PalRoutine
+2026-07-29 15:00:49,599 [1] INFO  BotManager - [BotManager.Deinitialize] ExileFriend.ExileFriend
+2026-07-29 15:00:49,600 [1] INFO  Logger - [ContentManager.Deinitialize] DreamPoeBot.Loki.Bot.SkillBlacklist
+2026-07-29 15:00:50,591 [18] DEBUG Logger - DreamAuth heartbeat worker stopped during application shutdown.

@@ -1,0 +1,44 @@
+2026-07-29 14:44:04,336 [1] INFO  Logger - DreamPoeBot Version: 0.3.29.5
+Path: C:\Users\<Username>\Desktop\DPB_3_29_05\<ExeName>
+Arguments: C:\Users\Administrator\Desktop\DPB_3_29_05\DreamPoeBot.exe
+
+OS Name: Microsoft Windows 10 企业版 2016 长期服务版
+OS Version: 10.0.14393
+OS Architecture: 64 位
+InstalledUICulture: zh-CN [Chinese (Simplified, China)]
+CurrentUICulture: zh-CN [Chinese (Simplified, China)]
+CurrentCulture: zh-CN [Chinese (Simplified, China)]
+
+2026-07-29 14:44:04,448 [1] INFO  Logger - Now setting up JitProfiles...
+2026-07-29 14:44:04,453 [1] INFO  Logger - JitProfiles successfully setup!
+2026-07-29 14:44:04,460 [1] INFO  Logger - Now checking prerequisites...
+2026-07-29 14:44:04,461 [1] INFO  Logger - Prerequisite check complete!
+2026-07-29 14:44:21,995 [1] INFO  Logger - [DreamAuthAuto] auth.dreamauth.top passed: 262144 bytes in 1485 ms; version response 1462 ms.
+2026-07-29 14:44:21,999 [1] INFO  Logger - [DreamAuthAuto] ru.dreamauth.top passed: 262144 bytes in 1472 ms; version response 1473 ms.
+2026-07-29 14:44:22,000 [1] INFO  Logger - [DreamAuthAuto] api.dreampoeauth.cloud passed: 262144 bytes in 388 ms; version response 812 ms.
+2026-07-29 14:44:22,000 [1] INFO  Logger - [DreamAuthAuto] api.dreampoeauth.xyz passed: 262144 bytes in 1076 ms; version response 1217 ms.
+2026-07-29 14:44:22,003 [1] INFO  Logger - [DreamAuthAuto] Selected proxy: api.dreampoeauth.cloud.
+2026-07-29 14:44:22,003 [1] INFO  Logger - DreamAuth signed updater test mode is enabled; legacy pre-login updater skipped.
+2026-07-29 14:44:55,044 [12] INFO  Logger - [Pre-Login] Connecting to BestLatency (15.235.186.246)
+2026-07-29 14:44:56,324 [12] INFO  Logger - Region: sea
+2026-07-29 14:44:56,325 [12] INFO  Logger - Loader authentication completed.
+2026-07-29 14:44:56,350 [12] INFO  Logger - [DreamUpdate] Signed release channel enabled; mode=apply, currentVersion=0.3.29.5.
+2026-07-29 14:44:56,771 [12] INFO  Logger - [DreamUpdate] Current build is up to date; signedVersion=0.3.29.5, artifact=dpb1-release-0-3-29-5-14.
+2026-07-29 14:44:58,013 [1] INFO  BotManager - [BotManager] MsBetweenTicks = 80
+2026-07-29 14:44:59,712 [8] INFO  Logger - Pattern scan completed.
+2026-07-29 14:44:59,732 [8] INFO  Logger - IngameState: 233F0910C10
+2026-07-29 14:45:32,249 [8] INFO  Logger - [Dat] Now building the Stat lookup table.
+2026-07-29 14:45:34,366 [8] INFO  Logger - [Dat] The Stat lookup table has been built.
+2026-07-29 14:45:34,421 [8] INFO  Logger - [Dat] Now building the Passive Skills lookup table.
+2026-07-29 14:45:34,688 [8] ERROR Logger - System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.ThrowHelper.ThrowKeyNotFoundException()
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 DreamPoeBot.Loki.Game.GameData.DatPassiveSkillWrapper..ctor(PassiveSkillDatStruct native, Int32 index)
+   在 DreamPoeBot.Loki.Game.GameData.Dat.<get_PassiveSkills>d__115.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 DreamPoeBot.Loki.Game.GameData.Dat.bMD5nNi890()
+   在 DreamPoeBot.Loki.Game.LokiPoe.WNpWaqTKIf()
+   在 DreamPoeBot.Loki.Game.LokiPoe.rmeWIEy3B2(Process  , String&  )
+2026-07-29 14:45:35,798 [13] INFO  Logger - The Game Proces is closed, now terminating DPB
+2026-07-29 14:45:36,814 [9] DEBUG Logger - DreamAuth heartbeat worker stopped during application shutdown.

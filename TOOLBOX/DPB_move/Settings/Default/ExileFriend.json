@@ -1,0 +1,487 @@
+{
+  "_portOutThreshold": 0,
+  "IgnoreHiddenAuras": false,
+  "EnableCastAuraTask": true,
+  "EnableAspectsOfTheAvian": false,
+  "EnableAspectsOfTheCat": false,
+  "EnableAspectsOfTheCrab": false,
+  "EnableAspectsOfTheSpider": false,
+  "BloorOrSand": 1,
+  "EnableMarchOfTheLegion": false,
+  "MarchOfTheLegionInHideout": false,
+  "EnableAnimateGuardianInHideout": true,
+  "MarchOfTheLegionAuraNames": [],
+  "EnableLegionFlaskTrick": false,
+  "LegionManaDumpSkill": "",
+  "InviteWhiteList": "",
+  "FollowDistance": 5,
+  "MaxFollowDistance": 10,
+  "MaxCombatDistance": 40,
+  "MaxLootDistance": 40,
+  "EnableBlightTowerAutomation": false,
+  "BlightTowerCoordinationMode": 1,
+  "BlightTowerUpgradeMode": 0,
+  "BlightTowerBuildMode": 0,
+  "BlightTowerWhitelist": "",
+  "BlightTowerMaxDistance": 55,
+  "PortOutThreshold": 0,
+  "ShouldKill": false,
+  "EnableShrineClicking": true,
+  "FollowDebugTrace": false,
+  "BlockExampleRoutineShrines": true,
+  "ShrineBlacklist": "",
+  "ShouldLoot": false,
+  "LootAllVisibleItems": true,
+  "UseStalkerSentinel": false,
+  "DontPortOutofMap": false,
+  "EnableAutoStash": false,
+  "StashInventoryThresholdPercent": 75,
+  "OverflowStashTabs": "",
+  "AutoStashDestination": "Player stash",
+  "EnableStashDebug": false,
+  "EnableQuestAutomation": false,
+  "QuestAutoTalkToNpcsWithIcons": true,
+  "QuestTakeRewards": true,
+  "QuestNpcBlacklist": "",
+  "QuestCooldownSeconds": 5,
+  "QuestDebugLogging": false,
+  "EnableCampaignObjectives": false,
+  "CampaignObjectivesDebugLogging": false,
+  "GraceSequenceEnabled": false,
+  "GraceBreakPosition": 1,
+  "GraceSequenceUseSpecificPlayerGate": false,
+  "GraceSequenceSpecificPlayerName": "",
+  "MirrorLeaderMode": false,
+  "BlightTowerPreferences": [
+    {
+      "Family": "Cold",
+      "Enabled": true,
+      "BuildPriority": 80,
+      "Target": "Glacial Cage Tower"
+    },
+    {
+      "Family": "Lightning",
+      "Enabled": true,
+      "BuildPriority": 75,
+      "Target": "Arc Tower"
+    },
+    {
+      "Family": "Empowering",
+      "Enabled": true,
+      "BuildPriority": 100,
+      "Target": "Smothering Tower"
+    },
+    {
+      "Family": "Physical",
+      "Enabled": true,
+      "BuildPriority": 65,
+      "Target": "Temporal Tower"
+    },
+    {
+      "Family": "Summoning",
+      "Enabled": true,
+      "BuildPriority": 55,
+      "Target": "Scout Tower"
+    },
+    {
+      "Family": "Fire",
+      "Enabled": true,
+      "BuildPriority": 90,
+      "Target": "Meteor Tower"
+    }
+  ],
+  "UltimatumModifierWeights": [
+    {
+      "Name": "Limited Arena",
+      "Weight": 50
+    },
+    {
+      "Name": "Deadly Swarm",
+      "Weight": 45
+    },
+    {
+      "Name": "Empowered Foes",
+      "Weight": 40
+    },
+    {
+      "Name": "Choking Miasma",
+      "Weight": 38
+    },
+    {
+      "Name": "Stormcaller Runes",
+      "Weight": 37
+    },
+    {
+      "Name": "Toxic Fumes",
+      "Weight": 36
+    },
+    {
+      "Name": "Noxious Cloud",
+      "Weight": 35
+    },
+    {
+      "Name": "Blistering Cold",
+      "Weight": 34
+    },
+    {
+      "Name": "Icy Torrent",
+      "Weight": 33
+    },
+    {
+      "Name": "Frozen Ground",
+      "Weight": 32
+    },
+    {
+      "Name": "Raging Dead",
+      "Weight": 31
+    },
+    {
+      "Name": "Infernal Horde",
+      "Weight": 30
+    },
+    {
+      "Name": "Quicksand I",
+      "Weight": 29
+    },
+    {
+      "Name": "Restless Ground",
+      "Weight": 28
+    },
+    {
+      "Name": "Unquiet Graves",
+      "Weight": 27
+    },
+    {
+      "Name": "Dexterous Monsters",
+      "Weight": 26
+    },
+    {
+      "Name": "Spirit Wrath",
+      "Weight": 26
+    },
+    {
+      "Name": "Unlucky Criticals",
+      "Weight": 25
+    },
+    {
+      "Name": "Unstoppable Monsters",
+      "Weight": 25
+    },
+    {
+      "Name": "Resistant Monsters",
+      "Weight": 25
+    },
+    {
+      "Name": "Stone Gaze",
+      "Weight": 25
+    },
+    {
+      "Name": "Precise Monsters",
+      "Weight": 24
+    },
+    {
+      "Name": "Hindering Monsters",
+      "Weight": 24
+    },
+    {
+      "Name": "Impenetrable Monsters",
+      "Weight": 23
+    },
+    {
+      "Name": "Razor Dance",
+      "Weight": 23
+    },
+    {
+      "Name": "Escalating Monster Speed",
+      "Weight": 22
+    },
+    {
+      "Name": "Shielding Monsters",
+      "Weight": 22
+    },
+    {
+      "Name": "Spinning Blades",
+      "Weight": 22
+    },
+    {
+      "Name": "Whirling Death",
+      "Weight": 21
+    },
+    {
+      "Name": "Shattered Shield",
+      "Weight": 20
+    },
+    {
+      "Name": "Hindering Flasks",
+      "Weight": 20
+    },
+    {
+      "Name": "Buffs Expire Faster",
+      "Weight": 20
+    },
+    {
+      "Name": "Putrid Monsters",
+      "Weight": 20
+    },
+    {
+      "Name": "Burning Flames",
+      "Weight": 20
+    },
+    {
+      "Name": "Reduced Recovery",
+      "Weight": 19
+    },
+    {
+      "Name": "Stalking Ruin",
+      "Weight": 18
+    },
+    {
+      "Name": "Profane Monsters",
+      "Weight": 18
+    },
+    {
+      "Name": "Lethal Rare Monsters",
+      "Weight": 18
+    },
+    {
+      "Name": "Unrelenting Apparition",
+      "Weight": 17
+    },
+    {
+      "Name": "Overwhelming Monsters",
+      "Weight": 16
+    },
+    {
+      "Name": "Siphoning Monsters",
+      "Weight": 16
+    },
+    {
+      "Name": "Ancestral Spirits",
+      "Weight": 16
+    },
+    {
+      "Name": "Waning Spirit",
+      "Weight": 15
+    },
+    {
+      "Name": "Less Cooldown Recovery",
+      "Weight": 15
+    },
+    {
+      "Name": "Totem of Costly Might",
+      "Weight": 15
+    },
+    {
+      "Name": "Deadly Monsters",
+      "Weight": 14
+    },
+    {
+      "Name": "Totem of Costly Potency",
+      "Weight": 14
+    },
+    {
+      "Name": "Lessened Reach",
+      "Weight": 13
+    },
+    {
+      "Name": "Blood Altar",
+      "Weight": 12
+    },
+    {
+      "Name": "Random Projectiles",
+      "Weight": 12
+    },
+    {
+      "Name": "Prismatic Monsters",
+      "Weight": 12
+    },
+    {
+      "Name": "Siphoned Charges",
+      "Weight": 10
+    },
+    {
+      "Name": "Escalating Damage Taken",
+      "Weight": 10
+    },
+    {
+      "Name": "Ailment and Curse Reflection",
+      "Weight": 8
+    },
+    {
+      "Name": "Treacherous Auras",
+      "Weight": 8
+    },
+    {
+      "Name": "Impurity",
+      "Weight": 6
+    },
+    {
+      "Name": "Occasional Impotence",
+      "Weight": 5
+    },
+    {
+      "Name": "Drought",
+      "Weight": 5
+    },
+    {
+      "Name": "Lightning Damage from Mana Costs",
+      "Weight": 4
+    },
+    {
+      "Name": "Ruin",
+      "Weight": 3
+    },
+    {
+      "Name": "The Trialmaster",
+      "Weight": 1
+    }
+  ],
+  "DefensiveSkills": [
+    {
+      "Name": "Vaal Molten Shell",
+      "Enabled": false,
+      "UseEs": false,
+      "Threshold": 0,
+      "SleepSeconds": 0.0,
+      "CastOnLeader": false,
+      "IsReadyToCast": true,
+      "LinkWhitelist": ""
+    },
+    {
+      "Name": "Vaal Discipline",
+      "Enabled": false,
+      "UseEs": false,
+      "Threshold": 0,
+      "SleepSeconds": 0.0,
+      "CastOnLeader": false,
+      "IsReadyToCast": true,
+      "LinkWhitelist": ""
+    },
+    {
+      "Name": "Molten Shell",
+      "Enabled": false,
+      "UseEs": false,
+      "Threshold": 0,
+      "SleepSeconds": 0.0,
+      "CastOnLeader": false,
+      "IsReadyToCast": true,
+      "LinkWhitelist": ""
+    },
+    {
+      "Name": "Steelskin",
+      "Enabled": false,
+      "UseEs": false,
+      "Threshold": 0,
+      "SleepSeconds": 0.0,
+      "CastOnLeader": false,
+      "IsReadyToCast": true,
+      "LinkWhitelist": ""
+    }
+  ],
+  "GemDebugStatements": false,
+  "LevelOffhandOnly": false,
+  "LevelAllGems": false,
+  "GlobalNameIgnoreList": [],
+  "TeleportToLeaderChatCommand": "Tele",
+  "StopFollowChatCommand": "R",
+  "StartFollowChatCommand": "T",
+  "StopLootChatCommand": "StopL",
+  "StartLootChatCommand": "StartL",
+  "StopAttackChatCommand": "StopA",
+  "StartAttackChatCommand": "StartA",
+  "StopSentinelChatCommand": "StopD",
+  "StartSentinelChatCommand": "StartD",
+  "StopAutoTeleportChatCommand": "StopP",
+  "StartAutoTeleportChatCommand": "StartP",
+  "OpenTownPortalChatCommand": "OpenP",
+  "LeaveMapChatCommand": "LeaveMap",
+  "EnableOverlay": false,
+  "DrawInBackground": false,
+  "DrawMobs": false,
+  "DrawCorpses": false,
+  "FPS": 30,
+  "OverlayXCoord": 15,
+  "OverlayYCoord": 70,
+  "OverlayTransparency": 70,
+  "EnableTradeAccept": false,
+  "TradeWhiteList": "",
+  "TradeOfferAll": false,
+  "TradeItemCategories": [
+    {
+      "Name": "Currency",
+      "Enabled": true
+    },
+    {
+      "Name": "Maps",
+      "Enabled": true
+    },
+    {
+      "Name": "Fragments",
+      "Enabled": true
+    },
+    {
+      "Name": "Scarabs",
+      "Enabled": true
+    },
+    {
+      "Name": "Divination Cards",
+      "Enabled": true
+    },
+    {
+      "Name": "Skill Gems",
+      "Enabled": true
+    },
+    {
+      "Name": "Uniques",
+      "Enabled": true
+    },
+    {
+      "Name": "Body Armour",
+      "Enabled": true
+    },
+    {
+      "Name": "Helmets",
+      "Enabled": true
+    },
+    {
+      "Name": "Gloves",
+      "Enabled": true
+    },
+    {
+      "Name": "Boots",
+      "Enabled": true
+    },
+    {
+      "Name": "One-Hand Weapons",
+      "Enabled": true
+    },
+    {
+      "Name": "Two-Hand Weapons",
+      "Enabled": true
+    },
+    {
+      "Name": "Rings",
+      "Enabled": true
+    },
+    {
+      "Name": "Amulets",
+      "Enabled": true
+    },
+    {
+      "Name": "Belts",
+      "Enabled": true
+    },
+    {
+      "Name": "Flasks",
+      "Enabled": false
+    },
+    {
+      "Name": "Jewels",
+      "Enabled": true
+    },
+    {
+      "Name": "Other",
+      "Enabled": false
+    }
+  ]
+}

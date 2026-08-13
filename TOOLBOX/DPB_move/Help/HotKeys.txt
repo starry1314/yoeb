@@ -1,0 +1,19 @@
+DreamPoeBot Default Hotkeys
+Last updated: July 29, 2026
+
+These shortcuts must be pressed while the Path of Exile window has focus.
+Configurable shortcuts may be changed or disabled in DreamPoeBot settings.
+
+Start or stop the bot: Alt+Shift+S
+Force-stop the bot: Ctrl+Shift+S
+Focus the DreamPoeBot window: Alt+Shift+W
+Log the mouse cursor position: Alt+Shift+X
+
+Enable ProcessHookManager: Alt+Shift+E
+Disable ProcessHookManager: Alt+Shift+D
+Reset ProcessHookManager key states: Alt+Shift+R
+
+Dump the target under the player: Alt+Shift+T
+Dump the UI frame under the cursor: Alt+Shift+A
+Dump the Delve cell under the cursor: Alt+Shift+L
+Toggle diagnostic rendering: Alt+Shift+Z

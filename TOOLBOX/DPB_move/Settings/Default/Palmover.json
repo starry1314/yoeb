@@ -1,0 +1,91 @@
+{
+  "ForceAdjustCombatAreas": false,
+  "AvoidWallHugging": true,
+  "DebugInputApi": false,
+  "DebugDecisionTrace": false,
+  "EnableSkillMovement": false,
+  "EnableForcedUnstuckSkills": true,
+  "SkillCheckClosedDoors": true,
+  "SkillDisableDuringGracePeriod": true,
+  "SkillDisableInConflictArea": true,
+  "IgnoreSkillManaRequirements": false,
+  "PathRefreshRateMs": 20,
+  "SkillMinManaPercent": 20,
+  "SkillAttemptWindowMs": 350,
+  "SkillFailureThreshold": 2,
+  "SkillFailureCooldownMs": 1200,
+  "MoveRange": 35,
+  "LookaheadDistance": 60,
+  "SingleUseDistance": 18,
+  "StopDistance": 6,
+  "HoldRefreshRateMs": 250,
+  "SteeringDeadzone": 6,
+  "MaxTurnAngleDegrees": 20,
+  "HoldReissueDistance": 22,
+  "StuckCheckMs": 220,
+  "MaxStuckCount": 3,
+  "PointJitter": 2,
+  "SkillOptions": [
+    {
+      "Name": "Phase Run",
+      "Enabled": false,
+      "MinDistance": 1,
+      "MaxDistance": 120
+    },
+    {
+      "Name": "Withering Step",
+      "Enabled": false,
+      "MinDistance": 1,
+      "MaxDistance": 120
+    },
+    {
+      "Name": "Dash",
+      "Enabled": true,
+      "MinDistance": 33,
+      "MaxDistance": 65
+    },
+    {
+      "Name": "Flame Dash",
+      "Enabled": true,
+      "MinDistance": 27,
+      "MaxDistance": 65
+    },
+    {
+      "Name": "Frostblink",
+      "Enabled": true,
+      "MinDistance": 33,
+      "MaxDistance": 65
+    },
+    {
+      "Name": "Leap Slam",
+      "Enabled": true,
+      "MinDistance": 25,
+      "MaxDistance": 65
+    },
+    {
+      "Name": "Shield Charge",
+      "Enabled": true,
+      "MinDistance": 27,
+      "MaxDistance": 65
+    },
+    {
+      "Name": "Whirling Blades",
+      "Enabled": true,
+      "MinDistance": 25,
+      "MaxDistance": 65
+    },
+    {
+      "Name": "Blink Arrow",
+      "Enabled": false,
+      "MinDistance": 20,
+      "MaxDistance": 65
+    },
+    {
+      "Name": "Lightning Warp",
+      "Enabled": false,
+      "MinDistance": 20,
+      "MaxDistance": 65
+    }
+  ],
+  "FallbackToDirectMove": true
+}

@@ -1,0 +1,32 @@
+2026-07-30 17:24:00,262 [1] INFO  Logger - DreamPoeBot Version: 0.3.29.14
+Path: C:\Users\<Username>\Desktop\豪 DPB_3_29_05\DPB_3_29_05\DPB_3_29_05\<ExeName>
+Arguments: C:\Users\Administrator\Desktop\豪 DPB_3_29_05\DPB_3_29_05\DPB_3_29_05\DreamPoeBot.exe
+
+OS Name: Microsoft Windows 10 企业版 2016 长期服务版
+OS Version: 10.0.14393
+OS Architecture: 64 位
+InstalledUICulture: zh-CN [Chinese (Simplified, China)]
+CurrentUICulture: zh-CN [Chinese (Simplified, China)]
+CurrentCulture: zh-CN [Chinese (Simplified, China)]
+
+2026-07-30 17:24:00,293 [1] INFO  Logger - Now setting up JitProfiles...
+2026-07-30 17:24:00,293 [1] INFO  Logger - JitProfiles successfully setup!
+2026-07-30 17:24:00,309 [1] INFO  Logger - Now checking prerequisites...
+2026-07-30 17:24:00,309 [1] INFO  Logger - Prerequisite check complete!
+2026-07-30 17:24:05,887 [1] INFO  Logger - [DreamAuthAuto] auth.dreamauth.top passed: 262144 bytes in 1497 ms; version response 1328 ms.
+2026-07-30 17:24:05,887 [1] INFO  Logger - [DreamAuthAuto] ru.dreamauth.top passed: 262144 bytes in 1543 ms; version response 2118 ms.
+2026-07-30 17:24:05,887 [1] INFO  Logger - [DreamAuthAuto] api.dreampoeauth.cloud passed: 262144 bytes in 324 ms; version response 600 ms.
+2026-07-30 17:24:05,903 [1] INFO  Logger - [DreamAuthAuto] api.dreampoeauth.xyz passed: 262144 bytes in 1061 ms; version response 1113 ms.
+2026-07-30 17:24:05,903 [1] INFO  Logger - [DreamAuthAuto] Selected proxy: api.dreampoeauth.cloud.
+2026-07-30 17:24:05,903 [1] INFO  Logger - DreamAuth signed updater test mode is enabled; legacy pre-login updater skipped.
+2026-07-30 17:24:06,216 [11] INFO  Logger - [Pre-Login] Connecting to BestLatency (15.235.186.246)
+2026-07-30 17:24:07,392 [11] INFO  Logger - Region: sea
+2026-07-30 17:24:07,392 [11] INFO  Logger - Loader authentication completed.
+2026-07-30 17:24:07,428 [11] ERROR Logger - [DreamUpdate] Rollback confirmation/maintenance failed closed.
+DreamUpdater.Core.UpdateSecurityException: rollback_receipt_invalid
+   at DreamUpdater.Core.RollbackReceiptStore.ValidateReceipt(String path, RollbackReceipt receipt)
+   at DreamUpdater.Core.RollbackReceiptStore.ReadReceipt(String path)
+   at oNsV65sHQJ6UFEMbL9s6.YvtshICMhlc(String , oNsV65sHQJ6UFEMbL9s6 )
+   at vTgXiPKmUog51U9SE3.fYtViEu7CIAfVByJixS3.wDhu77OSVEE()
+   at vTgXiPKmUog51U9SE3.fYtViEu7CIAfVByJixS3.Q4cu79w8OsI(dx3n85lloSwA8pQdaWE  )
+2026-07-30 17:24:28,799 [1] INFO  BotManager - [BotManager] MsBetweenTicks = 80

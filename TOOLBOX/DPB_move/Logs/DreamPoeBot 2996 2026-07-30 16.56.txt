@@ -1,0 +1,31 @@
+2026-07-30 16:56:06,978 [1] INFO  Logger - DreamPoeBot Version: 0.3.29.5
+Path: C:\Users\<Username>\Desktop\DPB_3_29_05\DPB_3_29_05\<ExeName>
+Arguments: C:\Users\Administrator\Desktop\DPB_3_29_05\DPB_3_29_05\DreamPoeBot.exe
+
+OS Name: Microsoft Windows 10 企业版 2016 长期服务版
+OS Version: 10.0.14393
+OS Architecture: 64 位
+InstalledUICulture: zh-CN [Chinese (Simplified, China)]
+CurrentUICulture: zh-CN [Chinese (Simplified, China)]
+CurrentCulture: zh-CN [Chinese (Simplified, China)]
+
+2026-07-30 16:56:07,007 [1] INFO  Logger - Now setting up JitProfiles...
+2026-07-30 16:56:07,008 [1] INFO  Logger - JitProfiles successfully setup!
+2026-07-30 16:56:07,010 [1] INFO  Logger - Now checking prerequisites...
+2026-07-30 16:56:07,010 [1] INFO  Logger - Prerequisite check complete!
+2026-07-30 16:56:10,548 [1] INFO  Logger - [DreamAuthAuto] auth.dreamauth.top passed: 262144 bytes in 1506 ms; version response 1377 ms.
+2026-07-30 16:56:10,548 [1] INFO  Logger - [DreamAuthAuto] ru.dreamauth.top passed: 262144 bytes in 1546 ms; version response 1494 ms.
+2026-07-30 16:56:10,549 [1] INFO  Logger - [DreamAuthAuto] api.dreampoeauth.cloud passed: 262144 bytes in 332 ms; version response 628 ms.
+2026-07-30 16:56:10,549 [1] INFO  Logger - [DreamAuthAuto] api.dreampoeauth.xyz passed: 262144 bytes in 1032 ms; version response 1083 ms.
+2026-07-30 16:56:10,550 [1] INFO  Logger - [DreamAuthAuto] Selected proxy: api.dreampoeauth.cloud.
+2026-07-30 16:56:10,550 [1] INFO  Logger - DreamAuth signed updater test mode is enabled; legacy pre-login updater skipped.
+2026-07-30 16:56:10,621 [12] INFO  Logger - [Pre-Login] Connecting to BestLatency (15.235.186.246)
+2026-07-30 16:56:11,582 [12] INFO  Logger - Region: sea
+2026-07-30 16:56:11,584 [12] INFO  Logger - Loader authentication completed.
+2026-07-30 16:56:11,584 [12] INFO  Logger - [DreamUpdate] Signed release channel enabled; mode=apply, currentVersion=0.3.29.5.
+2026-07-30 16:56:11,920 [12] INFO  Logger - [DreamUpdate] Signed update available; version=0.3.29.14, artifact=dpb1-release-0-3-29-14-23, policy=optional.
+2026-07-30 16:56:11,972 [12] INFO  Logger - [DreamUpdate] Signed package download starting; artifact=dpb1-release-0-3-29-14-23, expectedBytes=11776000.
+2026-07-30 16:56:14,908 [12] INFO  Logger - [DreamUpdate] Signed package download completed; artifact=dpb1-release-0-3-29-14-23, bytes=11776000.
+2026-07-30 16:56:15,878 [12] INFO  Logger - [DreamUpdate] Package verified and staged; version=0.3.29.14, artifact=dpb1-release-0-3-29-14-23.
+2026-07-30 16:56:15,978 [12] INFO  Logger - [DreamUpdate] Apply helper started for artifact=dpb1-release-0-3-29-14-23; DPB1 will close cleanly.
+2026-07-30 16:56:16,382 [1] INFO  BotManager - [BotManager] MsBetweenTicks = 80

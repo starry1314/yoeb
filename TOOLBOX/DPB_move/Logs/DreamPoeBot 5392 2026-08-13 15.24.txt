@@ -1,0 +1,282 @@
+2026-08-13 15:24:48,879 [1] INFO  Logger - DreamPoeBot Version: 0.3.29.32
+Path: C:\Users\<Username>\Desktop\豪 DPB_3_29_05\DPB_3_29_05\DPB_3_29_05\<ExeName>
+Arguments: C:\Users\Administrator\Desktop\豪 DPB_3_29_05\DPB_3_29_05\DPB_3_29_05\DreamPoeBot.exe
+
+OS Name: Microsoft Windows 10 企业版 2016 长期服务版
+OS Version: 10.0.14393
+OS Architecture: 64 位
+InstalledUICulture: zh-CN [Chinese (Simplified, China)]
+CurrentUICulture: zh-CN [Chinese (Simplified, China)]
+CurrentCulture: zh-CN [Chinese (Simplified, China)]
+
+2026-08-13 15:24:48,963 [1] INFO  Logger - Now setting up JitProfiles...
+2026-08-13 15:24:48,966 [1] INFO  Logger - JitProfiles successfully setup!
+2026-08-13 15:24:48,971 [1] INFO  Logger - Now checking prerequisites...
+2026-08-13 15:24:48,971 [1] INFO  Logger - Prerequisite check complete!
+2026-08-13 15:24:51,503 [1] INFO  Logger - [DreamAuthAuto] Selected proxy: api.dreampoeauth.cloud.
+2026-08-13 15:24:51,505 [1] INFO  Logger - DreamAuth signed updater test mode is enabled; legacy pre-login updater skipped.
+2026-08-13 15:24:51,646 [13] INFO  Logger - [Pre-Login] Connecting to BestLatency (15.235.186.246)
+2026-08-13 15:24:53,559 [13] INFO  Logger - Region: sea
+2026-08-13 15:24:53,560 [13] INFO  Logger - Loader authentication completed.
+2026-08-13 15:24:53,581 [13] ERROR Logger - [DreamUpdate] Rollback confirmation/maintenance failed closed.
+DreamUpdater.Core.UpdateSecurityException: rollback_receipt_invalid
+   at DreamUpdater.Core.RollbackReceiptStore.ValidateReceipt(String path, RollbackReceipt receipt)
+   at DreamUpdater.Core.RollbackReceiptStore.ReadReceipt(String path)
+   at wg1ptT1bLQ22Xv3lDL2e.kIN1B00lv7r(String , wg1ptT1bLQ22Xv3lDL2e )
+   at Qq1v1dUkGciaAKhuAq.NR7wfU2EpRo3SZOiLgte.Ssu2latuRsH()
+   at Qq1v1dUkGciaAKhuAq.NR7wfU2EpRo3SZOiLgte.I2Y2EOUI2wV(MuSfdrooGcH2JDtlsLI  )
+2026-08-13 15:24:54,732 [1] INFO  BotManager - [BotManager] MsBetweenTicks = 80
+2026-08-13 15:24:56,199 [7] INFO  Logger - Pattern scan completed.
+2026-08-13 15:24:56,209 [7] INFO  Logger - IngameState: 2BA9BFF1410
+2026-08-13 15:25:05,370 [7] ERROR Logger - [PreloadBaseItemTypes-Missing]  Metadata_Items_QuestItems_Deepwater_DeepwaterQuestDucat1
+2026-08-13 15:25:05,370 [7] ERROR Logger - [PreloadBaseItemTypes-Missing]  Metadata_Items_QuestItems_Deepwater_DeepwaterQuestDucat2
+2026-08-13 15:25:05,370 [7] ERROR Logger - [PreloadBaseItemTypes-Missing]  Metadata_Items_QuestItems_Deepwater_DeepwaterQuestDucat3
+2026-08-13 15:25:05,370 [7] ERROR Logger - [PreloadBaseItemTypes-Missing]  Metadata_Items_QuestItems_Deepwater_DeepwaterQuestDucat4
+2026-08-13 15:25:05,372 [7] ERROR Logger - [PreloadBaseItemTypes-Missing]  Metadata_Items_QuestItems_Deepwater_DeepwaterQuestDucat5
+2026-08-13 15:25:05,372 [7] ERROR Logger - [PreloadBaseItemTypes-Missing]  Metadata_Items_QuestItems_Deepwater_DeepwaterQuestDucat6
+2026-08-13 15:25:06,213 [7] INFO  Logger - [Dat] Now building the Stat lookup table.
+2026-08-13 15:25:07,432 [7] INFO  Logger - [Dat] The Stat lookup table has been built.
+2026-08-13 15:25:07,485 [7] INFO  Logger - [Dat] Now building the Passive Skills lookup table.
+2026-08-13 15:25:07,994 [7] INFO  Logger - [Dat] The Passive Skills lookup table has been built.
+2026-08-13 15:25:08,045 [7] INFO  Logger - Core memory roots initialized.
+2026-08-13 15:25:11,831 [7] INFO  Logger - Game settings resolved through Windows Known Folders.
+2026-08-13 15:25:11,837 [7] INFO  Logger - Loading game settings from C:\Users\Administrator\Documents\My Games\Path of Exile\production_Config.ini.
+2026-08-13 15:25:11,870 [7] DEBUG ThirdPartyLoader - Loading start.
+2026-08-13 15:25:11,879 [7] DEBUG ThirdPartyLoader - Now loading [PluginLoader].
+2026-08-13 15:25:11,888 [7] DEBUG ThirdPartyLoader - [PluginLoader] will be loaded as [PluginLoader]. The base path is [].
+2026-08-13 15:25:11,892 [7] INFO  ThirdPartyLoader - Now asynchronously compiling dependency free content...
+2026-08-13 15:25:13,201 [9] INFO  Logger - [DreamAuthRuntime] Runtime endpoint selected; Host=asia Failovers=0.
+2026-08-13 15:25:18,469 [7] INFO  Logger - [PluginLoader] Detected plugins: 
+-----------------
+	C:\Users\Administrator\Desktop\豪 DPB_3_29_05\DPB_3_29_05\DPB_3_29_05\Plugins\PalLoader.dll
+-----------------
+2026-08-13 15:25:18,486 [7] INFO  Logger - [PalLoader] Key found. Loading ExileFriend, PalRoutine and Palmover...
+2026-08-13 15:25:22,932 [22] INFO  Logger - [PalLoader] Bot type from ExileFriend: ExileFriend.ExileFriend
+2026-08-13 15:25:23,319 [23] WARN  Logger - [_window_PropertyChanged] Handle: 656492
+2026-08-13 15:25:23,327 [22] INFO  Logger - [PalLoader] Loaded ExileFriend: ExileFriend v0.2.9
+2026-08-13 15:25:23,414 [24] WARN  Logger - [_window_PropertyChanged] X: 100
+2026-08-13 15:25:23,415 [24] WARN  Logger - [_window_PropertyChanged] Y: 50
+2026-08-13 15:25:24,212 [15] INFO  Logger - [PalLoader] Routine type from PalRoutine: PalRoutine.PalRoutine
+2026-08-13 15:25:24,218 [15] INFO  Logger - [PalLoader] Loaded PalRoutine: PalRoutine v0.1.0
+2026-08-13 15:25:25,071 [22] INFO  Logger - [PalLoader] Loaded mover: Palmover v0.0.1
+2026-08-13 15:25:25,767 [1] INFO  Logger - [Initialize] ExileFriend.ExileFriend
+2026-08-13 15:25:25,922 [1] INFO  Logger - [Initialize] PalRoutine.PalRoutine
+2026-08-13 15:25:26,013 [1] INFO  Logger - [Initialize] Palmover.Palmover
+2026-08-13 15:25:26,019 [1] INFO  Logger - [PalLoader] Registered in-memory content via ThirdPartyLoader: ExileFriend, PalRoutine, Palmover.
+2026-08-13 15:25:26,023 [7] INFO  Logger - [PalLoader] Loaded ExileFriend, PalRoutine, and Palmover. Select the bot you want from the bot dropdown, PalRoutine from the routine dropdown, and Palmover from the mover dropdown.
+2026-08-13 15:25:26,024 [7] INFO  Logger - [[PluginLoader] Loaded: palLoader v1.5 <pallala> - Protected ExileFriend, PalRoutine, and Palmover loader
+2026-08-13 15:25:26,025 [7] INFO  ThirdPartyLoader - PluginLoader
+2026-08-13 15:25:26,026 [7] INFO  ThirdPartyLoader -                    [Bots] : 
+2026-08-13 15:25:26,029 [7] INFO  ThirdPartyLoader -                    [Plugins] : PluginLoader (PluginLoader: 1.0)
+2026-08-13 15:25:26,030 [7] INFO  ThirdPartyLoader -                    [Routines] : 
+2026-08-13 15:25:26,031 [7] INFO  ThirdPartyLoader -                    [Content] : 
+2026-08-13 15:25:26,032 [7] INFO  ThirdPartyLoader -                    [PlayerMovers] : 
+2026-08-13 15:25:26,033 [7] INFO  ThirdPartyLoader - Content compiled in 00:00:14.1403657.
+2026-08-13 15:25:26,035 [7] DEBUG ThirdPartyLoader - Loading finished!
+2026-08-13 15:25:26,061 [7] ERROR ThirdPartyLoader - Please put your plugins into respective subdirectories!
+2026-08-13 15:25:26,205 [7] INFO  Logger - [Initialize] DreamPoeBot.Loki.Bot.SkillBlacklist
+2026-08-13 15:25:26,258 [7] INFO  Logger - [Initialize] ExileFriend.ExileFriend
+2026-08-13 15:25:26,274 [1] INFO  Logger - [ItemEvaluator] Instance = DreamPoeBot.Loki.Bot.DefaultItemEvaluator.
+2026-08-13 15:25:26,374 [7] INFO  Logger - [Initialize] PalRoutine.PalRoutine
+2026-08-13 15:25:26,456 [7] INFO  Logger - [Initialize] Palmover.Palmover
+2026-08-13 15:25:26,534 [1] INFO  Logger - [ItemEvaluator] Instance = DreamPoeBot.Loki.Bot.DefaultItemEvaluator.
+2026-08-13 15:25:26,536 [1] INFO  Logger - [PalLoader] Applied preferred bot selection via reflection: ExileFriend
+2026-08-13 15:25:26,537 [8] INFO  Logger - [PalLoader] Preferred bot restore confirmed after attempt 1.
+2026-08-13 15:25:26,539 [7] INFO  Logger - [PluginLoader] Detected plugins: 
+-----------------
+	C:\Users\Administrator\Desktop\豪 DPB_3_29_05\DPB_3_29_05\DPB_3_29_05\Plugins\PalLoader.dll
+-----------------
+2026-08-13 15:25:26,540 [7] INFO  Logger - [[PluginLoader] Loaded: palLoader v1.5 <pallala> - Protected ExileFriend, PalRoutine, and Palmover loader
+2026-08-13 15:25:26,556 [7] INFO  Logger - [Initialize] ExileFriend.AutoPassive.AutoPassiveManager
+2026-08-13 15:25:26,557 [7] INFO  Logger - [AutoPassive] Initialized.
+2026-08-13 15:25:26,562 [7] INFO  Logger - [Initialize] ExileFriend.Banner.BannerManager
+2026-08-13 15:25:26,562 [7] INFO  Logger - [BannerManager] Initialized.
+2026-08-13 15:25:26,570 [7] INFO  Logger - [Initialize] ExileFriend.Link.LinkManager
+2026-08-13 15:25:26,571 [7] INFO  Logger - [LinkManager] Initialized.
+2026-08-13 15:25:26,571 [7] INFO  Logger - [Initialize] PalLoader.PalLoader
+2026-08-13 15:25:26,572 [7] INFO  Logger - [Initialize] PluginLoader.PluginLoader
+2026-08-13 15:25:26,591 [7] INFO  Logger - [Initialize] ExileFriend.SmartFlask.SmartFlaskManager
+2026-08-13 15:25:26,592 [7] INFO  Logger - [SmartFlaskManager] Initialized.
+2026-08-13 15:25:26,618 [7] INFO  Logger - [Initialize] ExileFriend.Warcry.WarcryManager
+2026-08-13 15:25:26,619 [7] INFO  Logger - [WarcryManager] Initialized.
+2026-08-13 15:25:26,620 [7] INFO  Logger - [Enable] PalLoader.PalLoader
+2026-08-13 15:25:26,622 [7] INFO  Logger - [Enable] PluginLoader.PluginLoader
+2026-08-13 15:25:26,806 [1] INFO  Logger - [ItemEvaluator] Instance = DreamPoeBot.Loki.Bot.DefaultItemEvaluator.
+2026-08-13 15:25:26,808 [1] DEBUG Logger - Current 'Bot' set to ExileFriend.
+2026-08-13 15:25:26,893 [1] INFO  Logger - [ExileFriendGui] GUI constructed successfully.
+2026-08-13 15:25:26,905 [1] DEBUG Logger - Current 'Routine' set to PalRoutine.
+2026-08-13 15:25:27,163 [1] DEBUG Logger - Current 'PlayerMover' set to Palmover.
+2026-08-13 15:25:27,270 [7] INFO  Logger - Registering default Hotkeys:
+2026-08-13 15:25:27,275 [7] INFO  Logger - 
+For setup and usage guidance, visit:
+https://www.dreampoebot.com/
+2026-08-13 15:25:29,196 [1] INFO  BotManager - [Start] Now creating the BotThread.
+2026-08-13 15:25:29,231 [1] INFO  Logger - Game settings resolved through Windows Known Folders.
+2026-08-13 15:25:29,232 [1] INFO  Logger - Loading game settings from C:\Users\Administrator\Documents\My Games\Path of Exile\production_Config.ini.
+2026-08-13 15:25:29,245 [27] INFO  BotManager - [Start] ExileFriend.ExileFriend
+2026-08-13 15:25:29,249 [27] INFO  Logger - [ItemEvaluator] Instance = DreamPoeBot.Loki.Bot.DefaultItemEvaluator.
+2026-08-13 15:25:29,251 [27] INFO  Logger - [ComplexExplorer] ExileFriend settings provider has been added.
+2026-08-13 15:25:29,252 [27] INFO  Logger - Game settings resolved through Windows Known Folders.
+2026-08-13 15:25:29,253 [27] INFO  Logger - Loading game settings from C:\Users\Administrator\Documents\My Games\Path of Exile\production_Config.ini.
+2026-08-13 15:25:29,264 [27] DEBUG Logger - [Start] MsBetweenTicks: 80.
+2026-08-13 15:25:29,265 [27] DEBUG Logger - [Start] PlayerMover.Instance: Palmover.Palmover.
+2026-08-13 15:25:29,272 [27] INFO  Logger - [ExilePather] BlockLockedDoors = Disabled.
+2026-08-13 15:25:29,273 [27] INFO  Logger - [ExilePather] BlockLockedTempleDoors = Disabled.
+2026-08-13 15:25:29,274 [27] INFO  Logger - [ExilePather] BlockTrialOfAscendancy = Disabled.
+2026-08-13 15:25:29,315 [27] INFO  Logger - Now reloading the WorldArea cache.
+2026-08-13 15:25:29,513 [27] INFO  Logger - The WorldArea cache has been reloaded.
+2026-08-13 15:25:29,728 [8] INFO  Logger - [ExilePather] Navmesh + height map ready in 100.5 ms.
+2026-08-13 15:25:29,845 [27] DEBUG TaskManagerBase<ITask> - [Add] Now adding [ClearCursorTask] This task places any item left on the cursor into the inventory..
+2026-08-13 15:25:29,848 [27] DEBUG TaskManagerBase<ITask> - [Add] Now adding [AnimateGuardianHideoutTask] Casts Animate Guardian when entering hideout if it is not already active..
+2026-08-13 15:25:29,849 [27] DEBUG TaskManagerBase<ITask> - [Add] Now adding [DefenseAndFlaskTask] This task provides a logic to use defensive skills and flasks..
+2026-08-13 15:25:29,850 [27] DEBUG TaskManagerBase<ITask> - [Add] Now adding [TradeTask] Handles accept-trade invites and the full trade loop with category filtering..
+2026-08-13 15:25:29,851 [27] DEBUG TaskManagerBase<ITask> - [Add] Now adding [UltimatumMirrorTask] Automatically selects the best Ultimatum modifier based on weighted scoring.
+2026-08-13 15:25:29,852 [27] DEBUG TaskManagerBase<ITask> - [Add] Now adding [LootItemTask] Task that handles item looting..
+2026-08-13 15:25:29,853 [27] DEBUG TaskManagerBase<ITask> - [Add] Now adding [PreCombatFollowTask] This task will keep the bot under a specific distance from the leader, in combat situation..
+2026-08-13 15:25:29,864 [27] DEBUG TaskManagerBase<ITask> - [Add] Now adding [BlightTowerTask] Builds and upgrades Blight towers while respecting a dedicated leader-distance leash..
+2026-08-13 15:25:29,865 [27] DEBUG TaskManagerBase<ITask> - [Add] Now adding [ShrineTask] Handles shrine clicking from ExileFriend instead of depending on a routine-specific shrine hook..
+2026-08-13 15:25:29,866 [27] DEBUG TaskManagerBase<ITask> - [Add] Now adding [CombatTask (Leash 50)] This task executes routine logic for combat..
+2026-08-13 15:25:29,867 [27] DEBUG TaskManagerBase<ITask> - [Add] Now adding [PostCombatHookTask] This task provides a coroutine hook for executing user logic after combat has completed..
+2026-08-13 15:25:29,870 [27] DEBUG TaskManagerBase<ITask> - [Add] Now adding [LevelGemsTask] This task will Level gems..
+2026-08-13 15:25:29,871 [27] DEBUG TaskManagerBase<ITask> - [Add] Now adding [AutoPassiveTask] Auto-allocates passive points from a PoE planner URL..
+2026-08-13 15:25:29,871 [27] DEBUG TaskManagerBase<ITask> - [Add] Now adding [CombatTask (Leash -1)] This task executes routine logic for combat..
+2026-08-13 15:25:29,879 [27] DEBUG TaskManagerBase<ITask> - [Add] Now adding [CastAuraTask] Task for casting auras before entering a map..
+2026-08-13 15:25:29,880 [27] DEBUG TaskManagerBase<ITask> - [Add] Now adding [AutoStashTask] Stashes picked items in town or hideout..
+2026-08-13 15:25:29,881 [27] DEBUG TaskManagerBase<ITask> - [Add] Now adding [QuestTask] Talks to quest NPCs in town and takes rewards..
+2026-08-13 15:25:29,882 [27] DEBUG TaskManagerBase<ITask> - [Add] Now adding [TravelToPartyZone] This task will travel to party grind zone..
+2026-08-13 15:25:29,883 [27] DEBUG TaskManagerBase<ITask> - [Add] Now adding [FollowTask] This task will Follow a Leader..
+2026-08-13 15:25:29,885 [27] DEBUG TaskManagerBase<ITask> - [Add] Now adding [CampaignObjectiveTask] Walks to and interacts with campaign quest objectives in combat areas..
+2026-08-13 15:25:29,886 [27] DEBUG TaskManagerBase<ITask> - [Add] Now adding [OpenWaypointTask] Task that handles waypoint opening..
+2026-08-13 15:25:29,887 [27] DEBUG TaskManagerBase<ITask> - [Add] Now adding [JoinPartyTask] This task will ask for party..
+2026-08-13 15:25:29,888 [27] DEBUG TaskManagerBase<ITask> - [Add] Now adding [FallbackTask] This task is the last task executed. It should not execute..
+2026-08-13 15:25:29,890 [27] INFO  Logger - [Start] PalLoader.PalLoader
+2026-08-13 15:25:29,891 [27] INFO  Logger - [Start] PluginLoader.PluginLoader
+2026-08-13 15:25:29,892 [27] INFO  Logger - [Start] PalRoutine.PalRoutine
+2026-08-13 15:25:29,901 [27] INFO  Logger - [TradeTask] Task Loaded.
+2026-08-13 15:25:29,903 [27] INFO  Logger - [UltimatumMirrorTask] Task started - automatic best modifier selection enabled
+2026-08-13 15:25:29,904 [27] INFO  Logger - [PreCombatFollowTask] Task Loaded.
+2026-08-13 15:25:29,911 [27] INFO  Logger - [FollowTask] Task Loaded.
+2026-08-13 15:25:29,913 [27] INFO  Logger - [JoinPartyTask] Task Loaded.
+2026-08-13 15:25:29,914 [27] DEBUG Logger - [Start] The plugin palLoader is enabled.
+2026-08-13 15:25:29,914 [27] DEBUG Logger - [Start] The plugin PluginLoader is enabled.
+2026-08-13 15:25:29,921 [27] INFO  Logger - [Start] AutoLogin: disabled
+2026-08-13 15:25:29,921 [27] DEBUG Logger - [Start] PlayerMover.Instance: Palmover.Palmover.
+2026-08-13 15:25:30,335 [27] INFO  Logger - [Events] Ingame bot start.
+2026-08-13 15:25:30,377 [27] INFO  Logger - [Events] Area changed (null -> Cartographer's Hideout)
+2026-08-13 15:25:30,563 [27] DEBUG Logger - [FiveWayCarry] === RESET called ===
+2026-08-13 15:25:30,566 [27] DEBUG Logger - [FiveWayCarry] All keys released.
+2026-08-13 15:25:30,916 [27] INFO  Logger - [InjectKeyEvent1] 137 ms sleep for 8.
+2026-08-13 15:25:31,702 [27] INFO  Logger - [InjectKeyEvent1] 116 ms sleep for 13.
+2026-08-13 15:25:31,941 [27] INFO  Logger - Now creating the ActiveSkills cache.
+2026-08-13 15:25:32,341 [27] DEBUG Logger - [AnimateGuardianHideoutTask] Animate Guardian not found in usable skills list. Skipping.
+2026-08-13 15:25:32,418 [27] DEBUG Logger - [LevelGemsTask] InventoryUi.HandlePendingLevelUps returned None.
+2026-08-13 15:25:32,558 [27] INFO  Logger - [CloseBlockingWindows] IsLeftPanelShown || IsRightPanelShown. Closing them.
+2026-08-13 15:25:32,559 [27] INFO  Logger - [InjectKeyEvent1] 108 ms sleep for 32.
+2026-08-13 15:25:32,891 [27] DEBUG Logger - [CastAuraTask] Now summoning "Summon Stone Golem".
+2026-08-13 15:25:32,920 [27] INFO  Logger - [InjectKeyEvent1] 103 ms sleep for 4.
+2026-08-13 15:25:33,649 [27] DEBUG Logger - [CastAuraTask] Now summoning "Summon Stone Golem".
+2026-08-13 15:25:34,567 [27] INFO  Logger - [CloseBlockingWindows] IsLeftPanelShown || IsRightPanelShown. Closing them.
+2026-08-13 15:25:34,815 [27] DEBUG Logger - [CastAuraTask] Now summoning "Summon Stone Golem".
+2026-08-13 15:25:35,876 [27] DEBUG Logger - [CastAuraTask] Now summoning "Summon Stone Golem".
+2026-08-13 15:25:36,877 [27] DEBUG Logger - [CastAuraTask] Now summoning "Summon Stone Golem".
+2026-08-13 15:25:38,192 [27] DEBUG Logger - [LevelGemsTask] SkillGemHud.HandlePendingLevelUps returned GemDismissed.
+2026-08-13 15:25:38,203 [27] DEBUG Logger - [CastAuraTask] Now summoning "Summon Stone Golem".
+2026-08-13 15:25:38,774 [1] INFO  BotManager - [Stop] Now requesting the BotThread to stop.
+2026-08-13 15:25:38,781 [27] INFO  BotManager - [Stop] ExileFriend.ExileFriend
+2026-08-13 15:25:38,783 [27] INFO  Logger - [UltimatumMirrorTask] Task stopped
+2026-08-13 15:25:38,805 [27] INFO  Logger - [Stop] PalLoader.PalLoader
+2026-08-13 15:25:38,805 [27] INFO  Logger - [Stop] PluginLoader.PluginLoader
+2026-08-13 15:25:38,807 [27] INFO  Logger - [Stop] PalRoutine.PalRoutine
+2026-08-13 15:25:39,822 [27] ERROR BotManager - [Stop] Exception during execution:
+DreamPoeBot.Loki.Coroutine.CoroutineStoppedException: Coroutine was stopped
+   at DreamPoeBot.Loki.Coroutine.Coroutine.lI8wh4SGwBTQ2uxy1BB7.wlvSG6QVkT4()
+   at DreamPoeBot.Loki.Coroutine.Coroutine.eiAmDYSGNjH4X0Wj4slB.System.Runtime.CompilerServices.IAsyncStateMachine.MoveNext()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.MoveNextRunner.Run()
+   at DreamPoeBot.Loki.Coroutine.Coroutine.eKK2uh6a4gd(Boolean  )
+   at DreamPoeBot.Loki.Coroutine.Coroutine.Dispose()
+   at ExileFriend.ExileFriend.Stop()
+   at DreamPoeBot.Loki.Bot.BotManager.FMX2wZIWkbS(IBot  )
+2026-08-13 15:25:39,824 [27] DEBUG BotManager - [BotThreadFunction] An InjectionDesyncException was detected. DreamPoeBot.Loki.Coroutine.CoroutineStoppedException: Coroutine was stopped
+   at DreamPoeBot.Loki.Coroutine.Coroutine.lI8wh4SGwBTQ2uxy1BB7.wlvSG6QVkT4()
+   at DreamPoeBot.Loki.Coroutine.Coroutine.eiAmDYSGNjH4X0Wj4slB.System.Runtime.CompilerServices.IAsyncStateMachine.MoveNext()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.MoveNextRunner.Run()
+   at DreamPoeBot.Loki.Coroutine.Coroutine.eKK2uh6a4gd(Boolean  )
+   at DreamPoeBot.Loki.Coroutine.Coroutine.Dispose()
+   at ExileFriend.ExileFriend.Stop()
+   at DreamPoeBot.Loki.Bot.BotManager.FMX2wZIWkbS(IBot  )
+   at DreamPoeBot.Loki.Bot.BotManager.lco2wQR04eO()
+2026-08-13 15:25:39,824 [27] DEBUG BotManager - [StopReason] core_gui_button => The user has pressed the Stop button.
+2026-08-13 15:25:57,379 [1] INFO  BotManager - [Start] Now creating the BotThread.
+2026-08-13 15:25:57,394 [1] INFO  Logger - Game settings resolved through Windows Known Folders.
+2026-08-13 15:25:57,396 [1] INFO  Logger - Loading game settings from C:\Users\Administrator\Documents\My Games\Path of Exile\production_Config.ini.
+2026-08-13 15:25:57,402 [29] INFO  BotManager - [Start] ExileFriend.ExileFriend
+2026-08-13 15:25:57,403 [29] INFO  Logger - [ItemEvaluator] Instance = DreamPoeBot.Loki.Bot.DefaultItemEvaluator.
+2026-08-13 15:25:57,403 [29] INFO  Logger - [ComplexExplorer] ExileFriend settings provider has been added.
+2026-08-13 15:25:57,403 [29] INFO  Logger - Game settings resolved through Windows Known Folders.
+2026-08-13 15:25:57,403 [29] INFO  Logger - Loading game settings from C:\Users\Administrator\Documents\My Games\Path of Exile\production_Config.ini.
+2026-08-13 15:25:57,408 [29] DEBUG Logger - [Start] MsBetweenTicks: 80.
+2026-08-13 15:25:57,408 [29] DEBUG Logger - [Start] PlayerMover.Instance: Palmover.Palmover.
+2026-08-13 15:25:57,410 [29] DEBUG TaskManagerBase<ITask> - [Add] Now adding [ClearCursorTask] This task places any item left on the cursor into the inventory..
+2026-08-13 15:25:57,410 [29] DEBUG TaskManagerBase<ITask> - [Add] Now adding [AnimateGuardianHideoutTask] Casts Animate Guardian when entering hideout if it is not already active..
+2026-08-13 15:25:57,411 [29] DEBUG TaskManagerBase<ITask> - [Add] Now adding [DefenseAndFlaskTask] This task provides a logic to use defensive skills and flasks..
+2026-08-13 15:25:57,411 [29] DEBUG TaskManagerBase<ITask> - [Add] Now adding [TradeTask] Handles accept-trade invites and the full trade loop with category filtering..
+2026-08-13 15:25:57,412 [29] DEBUG TaskManagerBase<ITask> - [Add] Now adding [UltimatumMirrorTask] Automatically selects the best Ultimatum modifier based on weighted scoring.
+2026-08-13 15:25:57,412 [29] DEBUG TaskManagerBase<ITask> - [Add] Now adding [LootItemTask] Task that handles item looting..
+2026-08-13 15:25:57,412 [29] DEBUG TaskManagerBase<ITask> - [Add] Now adding [PreCombatFollowTask] This task will keep the bot under a specific distance from the leader, in combat situation..
+2026-08-13 15:25:57,413 [29] DEBUG TaskManagerBase<ITask> - [Add] Now adding [BlightTowerTask] Builds and upgrades Blight towers while respecting a dedicated leader-distance leash..
+2026-08-13 15:25:57,413 [29] DEBUG TaskManagerBase<ITask> - [Add] Now adding [ShrineTask] Handles shrine clicking from ExileFriend instead of depending on a routine-specific shrine hook..
+2026-08-13 15:25:57,413 [29] DEBUG TaskManagerBase<ITask> - [Add] Now adding [CombatTask (Leash 50)] This task executes routine logic for combat..
+2026-08-13 15:25:57,414 [29] DEBUG TaskManagerBase<ITask> - [Add] Now adding [PostCombatHookTask] This task provides a coroutine hook for executing user logic after combat has completed..
+2026-08-13 15:25:57,414 [29] DEBUG TaskManagerBase<ITask> - [Add] Now adding [LevelGemsTask] This task will Level gems..
+2026-08-13 15:25:57,414 [29] DEBUG TaskManagerBase<ITask> - [Add] Now adding [AutoPassiveTask] Auto-allocates passive points from a PoE planner URL..
+2026-08-13 15:25:57,415 [29] DEBUG TaskManagerBase<ITask> - [Add] Now adding [CombatTask (Leash -1)] This task executes routine logic for combat..
+2026-08-13 15:25:57,415 [29] DEBUG TaskManagerBase<ITask> - [Add] Now adding [CastAuraTask] Task for casting auras before entering a map..
+2026-08-13 15:25:57,415 [29] DEBUG TaskManagerBase<ITask> - [Add] Now adding [AutoStashTask] Stashes picked items in town or hideout..
+2026-08-13 15:25:57,416 [29] DEBUG TaskManagerBase<ITask> - [Add] Now adding [QuestTask] Talks to quest NPCs in town and takes rewards..
+2026-08-13 15:25:57,416 [29] DEBUG TaskManagerBase<ITask> - [Add] Now adding [TravelToPartyZone] This task will travel to party grind zone..
+2026-08-13 15:25:57,416 [29] DEBUG TaskManagerBase<ITask> - [Add] Now adding [FollowTask] This task will Follow a Leader..
+2026-08-13 15:25:57,416 [29] DEBUG TaskManagerBase<ITask> - [Add] Now adding [CampaignObjectiveTask] Walks to and interacts with campaign quest objectives in combat areas..
+2026-08-13 15:25:57,418 [29] DEBUG TaskManagerBase<ITask> - [Add] Now adding [OpenWaypointTask] Task that handles waypoint opening..
+2026-08-13 15:25:57,418 [29] DEBUG TaskManagerBase<ITask> - [Add] Now adding [JoinPartyTask] This task will ask for party..
+2026-08-13 15:25:57,418 [29] DEBUG TaskManagerBase<ITask> - [Add] Now adding [FallbackTask] This task is the last task executed. It should not execute..
+2026-08-13 15:25:57,418 [29] INFO  Logger - [Start] PalLoader.PalLoader
+2026-08-13 15:25:57,420 [29] INFO  Logger - [Start] PluginLoader.PluginLoader
+2026-08-13 15:25:57,420 [29] INFO  Logger - [Start] PalRoutine.PalRoutine
+2026-08-13 15:25:57,420 [29] INFO  Logger - [TradeTask] Task Loaded.
+2026-08-13 15:25:57,421 [29] INFO  Logger - [UltimatumMirrorTask] Task started - automatic best modifier selection enabled
+2026-08-13 15:25:57,421 [29] INFO  Logger - [PreCombatFollowTask] Task Loaded.
+2026-08-13 15:25:57,421 [29] INFO  Logger - [FollowTask] Task Loaded.
+2026-08-13 15:25:57,422 [29] INFO  Logger - [JoinPartyTask] Task Loaded.
+2026-08-13 15:25:57,422 [29] DEBUG Logger - [Start] The plugin palLoader is enabled.
+2026-08-13 15:25:57,422 [29] DEBUG Logger - [Start] The plugin PluginLoader is enabled.
+2026-08-13 15:25:57,422 [29] INFO  Logger - [Start] AutoLogin: disabled
+2026-08-13 15:25:57,423 [29] DEBUG Logger - [Start] PlayerMover.Instance: Palmover.Palmover.
+2026-08-13 15:25:57,423 [29] INFO  Logger - [Events] Ingame bot start.
+2026-08-13 15:25:57,655 [29] DEBUG Logger - [LevelGemsTask] SkillGemHud.HandlePendingLevelUps returned GemDismissed.
+2026-08-13 15:25:57,667 [29] DEBUG Logger - [CastAuraTask] Now summoning "Summon Stone Golem".
+2026-08-13 15:25:58,162 [29] WARN  Logger - IsInSameZone returned false for IC_KGG retry [1/3]
+2026-08-13 15:25:58,245 [29] INFO  Logger - [InjectKeyEvent1] 110 ms sleep for 73.
+2026-08-13 15:25:58,429 [29] DEBUG Logger - [ArtificialDelay] Now waiting for 35 ms.
+2026-08-13 15:25:58,611 [29] DEBUG Logger - [LevelGemsTask] InventoryUi.HandlePendingLevelUps returned None.
+2026-08-13 15:25:58,612 [29] INFO  Logger - [CloseBlockingWindows] IsLeftPanelShown || IsRightPanelShown. Closing them.
+2026-08-13 15:25:58,754 [29] DEBUG Logger - [CastAuraTask] Now summoning "Summon Stone Golem".
+2026-08-13 15:25:59,255 [29] WARN  Logger - IsInSameZone returned false for IC_KGG retry [2/3]
+2026-08-13 15:25:59,348 [29] DEBUG Logger - [CastAuraTask] Now summoning "Summon Stone Golem".
+2026-08-13 15:26:03,404 [36] INFO  Logger - [ExilePather] Navmesh + height map ready in 75.4 ms.
+2026-08-13 15:26:03,506 [29] INFO  Logger - [Events] Area changed (Cartographer's Hideout -> Highgate)
+2026-08-13 15:26:03,521 [29] DEBUG Logger - [FiveWayCarry] === RESET called ===
+2026-08-13 15:26:03,527 [29] DEBUG Logger - [FiveWayCarry] All keys released.
+2026-08-13 15:26:07,385 [1] INFO  BotManager - [Stop] Now requesting the BotThread to stop.
+2026-08-13 15:26:07,430 [29] INFO  BotManager - [Stop] ExileFriend.ExileFriend
+2026-08-13 15:26:07,431 [29] INFO  Logger - [UltimatumMirrorTask] Task stopped
+2026-08-13 15:26:07,432 [29] DEBUG Logger - [MoveRelease] Pre-combat follow stopped.
+2026-08-13 15:26:07,437 [29] INFO  Logger - [Stop] PalLoader.PalLoader
+2026-08-13 15:26:07,437 [29] INFO  Logger - [Stop] PluginLoader.PluginLoader
+2026-08-13 15:26:07,437 [29] INFO  Logger - [Stop] PalRoutine.PalRoutine
+2026-08-13 15:26:08,452 [29] DEBUG BotManager - [StopReason] core_gui_button => The user has pressed the Stop button.
+2026-08-13 15:26:08,546 [24] WARN  Logger - [_window_PropertyChanged] X: -32000
+2026-08-13 15:26:08,547 [24] WARN  Logger - [_window_PropertyChanged] Y: -32000

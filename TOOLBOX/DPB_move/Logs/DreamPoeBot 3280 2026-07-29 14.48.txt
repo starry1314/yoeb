@@ -1,0 +1,83 @@
+2026-07-29 14:48:08,319 [1] INFO  Logger - DreamPoeBot Version: 0.3.29.5
+Path: C:\Users\<Username>\Desktop\DPB_3_29_05\<ExeName>
+Arguments: C:\Users\Administrator\Desktop\DPB_3_29_05\DreamPoeBot.exe
+
+OS Name: Microsoft Windows 10 企业版 2016 长期服务版
+OS Version: 10.0.14393
+OS Architecture: 64 位
+InstalledUICulture: zh-CN [Chinese (Simplified, China)]
+CurrentUICulture: zh-CN [Chinese (Simplified, China)]
+CurrentCulture: zh-CN [Chinese (Simplified, China)]
+
+2026-07-29 14:48:08,374 [1] INFO  Logger - Now setting up JitProfiles...
+2026-07-29 14:48:08,376 [1] INFO  Logger - JitProfiles successfully setup!
+2026-07-29 14:48:08,378 [1] INFO  Logger - Now checking prerequisites...
+2026-07-29 14:48:08,380 [1] INFO  Logger - Prerequisite check complete!
+2026-07-29 14:48:12,182 [1] INFO  Logger - [DreamAuthAuto] auth.dreamauth.top passed: 262144 bytes in 1474 ms; version response 1309 ms.
+2026-07-29 14:48:12,184 [1] INFO  Logger - [DreamAuthAuto] ru.dreamauth.top passed: 262144 bytes in 1490 ms; version response 1328 ms.
+2026-07-29 14:48:12,184 [1] INFO  Logger - [DreamAuthAuto] api.dreampoeauth.cloud passed: 262144 bytes in 345 ms; version response 577 ms.
+2026-07-29 14:48:12,185 [1] INFO  Logger - [DreamAuthAuto] api.dreampoeauth.xyz passed: 262144 bytes in 1072 ms; version response 1075 ms.
+2026-07-29 14:48:12,186 [1] INFO  Logger - [DreamAuthAuto] Selected proxy: api.dreampoeauth.cloud.
+2026-07-29 14:48:12,186 [1] INFO  Logger - DreamAuth signed updater test mode is enabled; legacy pre-login updater skipped.
+2026-07-29 14:48:12,359 [12] INFO  Logger - [Pre-Login] Connecting to BestLatency (15.235.186.246)
+2026-07-29 14:48:13,698 [12] INFO  Logger - Region: sea
+2026-07-29 14:48:13,699 [12] INFO  Logger - Loader authentication completed.
+2026-07-29 14:48:13,714 [12] INFO  Logger - [DreamUpdate] Signed release channel enabled; mode=apply, currentVersion=0.3.29.5.
+2026-07-29 14:48:14,193 [12] INFO  Logger - [DreamUpdate] Current build is up to date; signedVersion=0.3.29.5, artifact=dpb1-release-0-3-29-5-14.
+2026-07-29 14:48:15,426 [1] INFO  BotManager - [BotManager] MsBetweenTicks = 80
+2026-07-29 14:48:17,068 [7] INFO  Logger - Pattern scan completed.
+2026-07-29 14:48:17,088 [7] INFO  Logger - IngameState: 4DF77FD1010
+2026-07-29 14:48:41,628 [7] INFO  Logger - [Dat] Now building the Stat lookup table.
+2026-07-29 14:48:43,350 [7] INFO  Logger - [Dat] The Stat lookup table has been built.
+2026-07-29 14:48:43,404 [7] INFO  Logger - [Dat] Now building the Passive Skills lookup table.
+2026-07-29 14:48:43,903 [7] INFO  Logger - [Dat] The Passive Skills lookup table has been built.
+2026-07-29 14:48:43,955 [7] INFO  Logger - Core memory roots initialized.
+2026-07-29 14:48:47,626 [7] INFO  Logger - [DreamAuthAreaObserve] ARMED|generation=1|intervalMs=1000
+2026-07-29 14:48:47,831 [7] DEBUG ThirdPartyLoader - Loading start.
+2026-07-29 14:48:47,841 [7] DEBUG ThirdPartyLoader - Now loading [PluginLoader].
+2026-07-29 14:48:47,851 [7] DEBUG ThirdPartyLoader - [PluginLoader] will be loaded as [PluginLoader]. The base path is [].
+2026-07-29 14:48:47,853 [7] INFO  ThirdPartyLoader - Now asynchronously compiling dependency free content...
+2026-07-29 14:48:48,961 [6] DEBUG Logger - [DreamAuthAreaObserve] SKIP|epoch=1|reason=Xd901yY8DcWY8agBXK9O
+2026-07-29 14:48:53,907 [7] INFO  Logger - [PluginLoader] Detected plugins: 
+-----------------
+	C:\Users\Administrator\Desktop\DPB_3_29_05\Plugins\PalLoader.dll
+-----------------
+2026-07-29 14:48:53,941 [7] INFO  Logger - [PalLoader] Key found. Loading ExileFriend, PalRoutine and Palmover...
+2026-07-29 14:48:55,194 [13] WARN  Logger - [PalLoader] Session start rejected (403): {"error":"Forbidden."}
+2026-07-29 14:48:55,212 [13] WARN  Logger - [PalLoader] ExileFriend load failed: Could not establish session. Check your key and internet connection.
+2026-07-29 14:48:56,202 [15] WARN  Logger - [PalLoader] Session start rejected (403): {"error":"Forbidden."}
+2026-07-29 14:48:56,203 [15] WARN  Logger - [PalLoader] PalRoutine load failed: Could not establish session. Check your key and internet connection.
+2026-07-29 14:48:56,206 [7] ERROR Logger - [PalLoader] Load failed: ExileFriend load failed: Could not establish session. Check your key and internet connection.
+2026-07-29 14:48:56,208 [7] INFO  Logger - [[PluginLoader] Loaded: palLoader v1.5 <pallala> - Protected ExileFriend, PalRoutine, and Palmover loader
+2026-07-29 14:48:56,209 [7] INFO  ThirdPartyLoader - PluginLoader
+2026-07-29 14:48:56,210 [7] INFO  ThirdPartyLoader -                    [Bots] : 
+2026-07-29 14:48:56,211 [7] INFO  ThirdPartyLoader -                    [Plugins] : PluginLoader (PluginLoader: 1.0)
+2026-07-29 14:48:56,213 [7] INFO  ThirdPartyLoader -                    [Routines] : 
+2026-07-29 14:48:56,214 [7] INFO  ThirdPartyLoader -                    [Content] : 
+2026-07-29 14:48:56,214 [7] INFO  ThirdPartyLoader -                    [PlayerMovers] : 
+2026-07-29 14:48:56,214 [7] INFO  ThirdPartyLoader - Content compiled in 00:00:08.3606092.
+2026-07-29 14:48:56,216 [7] DEBUG ThirdPartyLoader - Loading finished!
+2026-07-29 14:48:56,250 [7] ERROR ThirdPartyLoader - Please put your plugins into respective subdirectories!
+2026-07-29 14:48:56,664 [7] INFO  Logger - [Initialize] DreamPoeBot.Loki.Bot.SkillBlacklist
+2026-07-29 14:48:56,918 [7] INFO  Logger - [PluginLoader] Detected plugins: 
+-----------------
+	C:\Users\Administrator\Desktop\DPB_3_29_05\Plugins\PalLoader.dll
+-----------------
+2026-07-29 14:48:56,919 [7] INFO  Logger - [PalLoader] Another PalLoader instance is already active in this DreamPoeBot process. Skipping duplicate load.
+2026-07-29 14:48:56,919 [7] INFO  Logger - [[PluginLoader] Loaded: palLoader v1.5 <pallala> - Protected ExileFriend, PalRoutine, and Palmover loader
+2026-07-29 14:48:56,919 [7] INFO  Logger - [PalLoader] Another PalLoader instance is already active in this DreamPoeBot process. Skipping duplicate load.
+2026-07-29 14:48:56,925 [7] INFO  Logger - [Initialize] PalLoader.PalLoader
+2026-07-29 14:48:56,926 [7] INFO  Logger - [Initialize] PluginLoader.PluginLoader
+2026-07-29 14:48:56,927 [7] INFO  Logger - [Enable] PalLoader.PalLoader
+2026-07-29 14:48:57,081 [7] INFO  Logger - Registering default Hotkeys:
+2026-07-29 14:48:57,099 [7] INFO  Logger - 
+
+
+2026-07-29 14:49:39,474 [1] INFO  Logger - [Enable] PluginLoader.PluginLoader
+2026-07-29 14:50:32,812 [1] INFO  Logger - [PluginManager.Deinitialize] PalLoader.PalLoader
+2026-07-29 14:50:33,062 [1] INFO  Logger - [PluginManager.Deinitialize] PluginLoader.PluginLoader
+2026-07-29 14:50:33,076 [1] INFO  Logger - [ContentManager.Deinitialize] DreamPoeBot.Loki.Bot.SkillBlacklist
+2026-07-29 14:50:33,226 [17] WARN  Logger - DreamAuth control heartbeat failed. Retrying every 10-15 seconds for up to 294 seconds.
+2026-07-29 14:50:33,227 [17] INFO  Logger - Waiting for SID...
+2026-07-29 14:50:33,820 [11] INFO  Logger - The Bot window is closed, now terminating DPB
+2026-07-29 14:50:34,229 [17] INFO  Logger - Waiting for SID...

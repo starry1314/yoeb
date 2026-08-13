@@ -1,0 +1,520 @@
+2026-07-30 17:04:48,106 [1] INFO  Logger - DreamPoeBot Version: 0.3.29.14
+Path: C:\Users\<Username>\Desktop\DPB_3_29_05\DPB_3_29_05\<ExeName>
+Arguments: C:\Users\Administrator\Desktop\DPB_3_29_05\DPB_3_29_05\DreamPoeBot.exe
+
+OS Name: Microsoft Windows 10 企业版 2016 长期服务版
+OS Version: 10.0.14393
+OS Architecture: 64 位
+InstalledUICulture: zh-CN [Chinese (Simplified, China)]
+CurrentUICulture: zh-CN [Chinese (Simplified, China)]
+CurrentCulture: zh-CN [Chinese (Simplified, China)]
+
+2026-07-30 17:04:48,150 [1] INFO  Logger - Now setting up JitProfiles...
+2026-07-30 17:04:48,153 [1] INFO  Logger - JitProfiles successfully setup!
+2026-07-30 17:04:48,160 [1] INFO  Logger - Now checking prerequisites...
+2026-07-30 17:04:48,160 [1] INFO  Logger - Prerequisite check complete!
+2026-07-30 17:04:51,703 [1] INFO  Logger - [DreamAuthAuto] auth.dreamauth.top passed: 262144 bytes in 1496 ms; version response 1378 ms.
+2026-07-30 17:04:51,704 [1] INFO  Logger - [DreamAuthAuto] ru.dreamauth.top passed: 262144 bytes in 1512 ms; version response 1418 ms.
+2026-07-30 17:04:51,705 [1] INFO  Logger - [DreamAuthAuto] api.dreampoeauth.cloud passed: 262144 bytes in 313 ms; version response 574 ms.
+2026-07-30 17:04:51,705 [1] INFO  Logger - [DreamAuthAuto] api.dreampoeauth.xyz passed: 262144 bytes in 1238 ms; version response 1076 ms.
+2026-07-30 17:04:51,706 [1] INFO  Logger - [DreamAuthAuto] Selected proxy: api.dreampoeauth.cloud.
+2026-07-30 17:04:51,706 [1] INFO  Logger - DreamAuth signed updater test mode is enabled; legacy pre-login updater skipped.
+2026-07-30 17:05:32,853 [10] INFO  Logger - [Pre-Login] Connecting to BestLatency (15.235.186.246)
+2026-07-30 17:05:34,109 [10] INFO  Logger - Region: sea
+2026-07-30 17:05:34,109 [10] INFO  Logger - Loader authentication completed.
+2026-07-30 17:05:34,180 [10] INFO  Logger - [DreamUpdate] Post-login update confirmation recorded; artifact=dpb1-release-0-3-29-14-23, rollbackRetainedUntilUtc=2026-08-06T16:56:19.0193357+08:00.
+2026-07-30 17:05:34,186 [10] INFO  Logger - [DreamUpdate] Signed release channel enabled; mode=apply, currentVersion=0.3.29.14, restartAfterApply=True.
+2026-07-30 17:05:34,530 [10] INFO  Logger - [DreamUpdate] Current build is up to date; signedVersion=0.3.29.14, artifact=dpb1-release-0-3-29-14-23.
+2026-07-30 17:05:35,636 [1] INFO  BotManager - [BotManager] MsBetweenTicks = 80
+2026-07-30 17:05:36,542 [8] INFO  Logger - Pattern scan completed.
+2026-07-30 17:05:36,555 [8] INFO  Logger - IngameState: 28E97680C10
+2026-07-30 17:05:56,123 [8] INFO  Logger - [Dat] Now building the Stat lookup table.
+2026-07-30 17:05:57,314 [8] INFO  Logger - [Dat] The Stat lookup table has been built.
+2026-07-30 17:05:57,367 [8] INFO  Logger - [Dat] Now building the Passive Skills lookup table.
+2026-07-30 17:05:57,709 [8] INFO  Logger - [Dat] The Passive Skills lookup table has been built.
+2026-07-30 17:05:57,760 [8] INFO  Logger - Core memory roots initialized.
+2026-07-30 17:06:29,536 [8] WARN  Logger - [HookManager] The injected runtime is still initializing after 30 seconds; waiting up to 375 seconds. BootstrapStage=4 (delegation_response_sent), BootstrapError=0 (none), BootstrapWin32Error=0 (none), BootstrapPipe=present.
+2026-07-30 17:06:59,539 [8] WARN  Logger - [HookManager] The injected runtime is still initializing after 60 seconds; waiting up to 375 seconds. BootstrapStage=4 (delegation_response_sent), BootstrapError=0 (none), BootstrapWin32Error=0 (none), BootstrapPipe=present.
+2026-07-30 17:07:07,874 [8] INFO  Logger - [DreamAuthAreaObserve] ARMED|generation=1|intervalMs=1000
+2026-07-30 17:07:07,955 [8] DEBUG ThirdPartyLoader - Loading start.
+2026-07-30 17:07:07,960 [8] DEBUG ThirdPartyLoader - Now loading [PluginLoader].
+2026-07-30 17:07:07,964 [8] DEBUG ThirdPartyLoader - [PluginLoader] will be loaded as [PluginLoader]. The base path is [].
+2026-07-30 17:07:07,965 [8] INFO  ThirdPartyLoader - Now asynchronously compiling dependency free content...
+2026-07-30 17:07:09,437 [14] DEBUG Logger - [DreamAuthAreaObserve] SKIP|epoch=1|reason=d8JNyDujtOb2tHXYtUm9
+2026-07-30 17:07:11,506 [8] INFO  Logger - [PluginLoader] Detected plugins: 
+-----------------
+	C:\Users\Administrator\Desktop\DPB_3_29_05\DPB_3_29_05\Plugins\PalLoader.dll
+-----------------
+2026-07-30 17:07:11,513 [8] INFO  Logger - [PalLoader] Key found. Loading ExileFriend, PalRoutine and Palmover...
+2026-07-30 17:07:14,333 [5] INFO  Logger - [PalLoader] Bot type from ExileFriend: ExileFriend.ExileFriend
+2026-07-30 17:07:14,553 [6] WARN  Logger - [_window_PropertyChanged] Handle: 1311964
+2026-07-30 17:07:14,567 [5] INFO  Logger - [PalLoader] Loaded ExileFriend: ExileFriend v0.2.5
+2026-07-30 17:07:14,613 [19] WARN  Logger - [_window_PropertyChanged] X: 175
+2026-07-30 17:07:14,615 [19] WARN  Logger - [_window_PropertyChanged] Y: 41
+2026-07-30 17:07:15,353 [5] INFO  Logger - [PalLoader] Routine type from PalRoutine: PalRoutine.PalRoutine
+2026-07-30 17:07:15,355 [5] INFO  Logger - [PalLoader] Loaded PalRoutine: PalRoutine v0.1.0
+2026-07-30 17:07:16,148 [22] INFO  Logger - [PalLoader] Loaded mover: Palmover v0.0.1
+2026-07-30 17:07:16,401 [1] INFO  Logger - [Initialize] ExileFriend.ExileFriend
+2026-07-30 17:07:16,483 [1] INFO  Logger - [Initialize] PalRoutine.PalRoutine
+2026-07-30 17:07:16,551 [1] INFO  Logger - [Initialize] Palmover.Palmover
+2026-07-30 17:07:16,555 [1] INFO  Logger - [PalLoader] Registered in-memory content via ThirdPartyLoader: ExileFriend, PalRoutine, Palmover.
+2026-07-30 17:07:16,558 [8] INFO  Logger - [PalLoader] Loaded ExileFriend, PalRoutine, and Palmover. Select the bot you want from the bot dropdown, PalRoutine from the routine dropdown, and Palmover from the mover dropdown.
+2026-07-30 17:07:16,559 [8] INFO  Logger - [[PluginLoader] Loaded: palLoader v1.5 <pallala> - Protected ExileFriend, PalRoutine, and Palmover loader
+2026-07-30 17:07:16,561 [8] INFO  ThirdPartyLoader - PluginLoader
+2026-07-30 17:07:16,561 [8] INFO  ThirdPartyLoader -                    [Bots] : 
+2026-07-30 17:07:16,562 [8] INFO  ThirdPartyLoader -                    [Plugins] : PluginLoader (PluginLoader: 1.0)
+2026-07-30 17:07:16,562 [8] INFO  ThirdPartyLoader -                    [Routines] : 
+2026-07-30 17:07:16,563 [8] INFO  ThirdPartyLoader -                    [Content] : 
+2026-07-30 17:07:16,563 [8] INFO  ThirdPartyLoader -                    [PlayerMovers] : 
+2026-07-30 17:07:16,564 [8] INFO  ThirdPartyLoader - Content compiled in 00:00:08.5976146.
+2026-07-30 17:07:16,564 [8] DEBUG ThirdPartyLoader - Loading finished!
+2026-07-30 17:07:16,571 [8] ERROR ThirdPartyLoader - Please put your plugins into respective subdirectories!
+2026-07-30 17:07:16,658 [8] INFO  Logger - [Initialize] DreamPoeBot.Loki.Bot.SkillBlacklist
+2026-07-30 17:07:16,702 [8] INFO  Logger - [Initialize] ExileFriend.ExileFriend
+2026-07-30 17:07:16,708 [1] INFO  Logger - [ItemEvaluator] Instance = DreamPoeBot.Loki.Bot.DefaultItemEvaluator.
+2026-07-30 17:07:16,766 [8] INFO  Logger - [Initialize] PalRoutine.PalRoutine
+2026-07-30 17:07:16,834 [8] INFO  Logger - [Initialize] Palmover.Palmover
+2026-07-30 17:07:16,897 [8] INFO  Logger - [PluginLoader] Detected plugins: 
+-----------------
+	C:\Users\Administrator\Desktop\DPB_3_29_05\DPB_3_29_05\Plugins\PalLoader.dll
+-----------------
+2026-07-30 17:07:16,898 [8] INFO  Logger - [[PluginLoader] Loaded: palLoader v1.5 <pallala> - Protected ExileFriend, PalRoutine, and Palmover loader
+2026-07-30 17:07:16,906 [8] INFO  Logger - [Initialize] ExileFriend.Banner.BannerManager
+2026-07-30 17:07:16,907 [8] INFO  Logger - [BannerManager] Initialized.
+2026-07-30 17:07:16,910 [8] INFO  Logger - [Initialize] ExileFriend.Link.LinkManager
+2026-07-30 17:07:16,910 [8] INFO  Logger - [LinkManager] Initialized.
+2026-07-30 17:07:16,910 [8] INFO  Logger - [Initialize] PalLoader.PalLoader
+2026-07-30 17:07:16,910 [8] INFO  Logger - [Initialize] PluginLoader.PluginLoader
+2026-07-30 17:07:16,922 [8] INFO  Logger - [Initialize] ExileFriend.SmartFlask.SmartFlaskManager
+2026-07-30 17:07:16,923 [8] INFO  Logger - [SmartFlaskManager] Initialized.
+2026-07-30 17:07:16,937 [8] INFO  Logger - [Initialize] ExileFriend.Warcry.WarcryManager
+2026-07-30 17:07:16,938 [8] INFO  Logger - [WarcryManager] Initialized.
+2026-07-30 17:07:16,938 [8] INFO  Logger - [Enable] PalLoader.PalLoader
+2026-07-30 17:07:16,938 [8] INFO  Logger - [Enable] PluginLoader.PluginLoader
+2026-07-30 17:07:17,033 [1] DEBUG Logger - Current 'Bot' set to ExileFriend.
+2026-07-30 17:07:17,262 [1] INFO  Logger - [ExileFriendGui] GUI constructed successfully.
+2026-07-30 17:07:17,269 [1] DEBUG Logger - Current 'Routine' set to PalRoutine.
+2026-07-30 17:07:17,364 [1] DEBUG Logger - Current 'PlayerMover' set to Palmover.
+2026-07-30 17:07:17,404 [8] INFO  Logger - Registering default Hotkeys:
+2026-07-30 17:07:17,408 [8] INFO  Logger - 
+For setup and usage guidance, visit:
+https://www.dreampoebot.com/
+2026-07-30 17:07:17,427 [1] INFO  Logger - [ItemEvaluator] Instance = DreamPoeBot.Loki.Bot.DefaultItemEvaluator.
+2026-07-30 17:07:17,428 [1] INFO  Logger - [PalLoader] Applied preferred bot selection via reflection: ExileFriend
+2026-07-30 17:07:17,429 [8] INFO  Logger - [PalLoader] Preferred bot restore confirmed after attempt 1.
+2026-07-30 17:07:30,719 [1] INFO  BotManager - [Start] Now creating the BotThread.
+2026-07-30 17:07:30,818 [26] INFO  BotManager - [Start] ExileFriend.ExileFriend
+2026-07-30 17:07:30,822 [26] INFO  Logger - [ItemEvaluator] Instance = DreamPoeBot.Loki.Bot.DefaultItemEvaluator.
+2026-07-30 17:07:30,830 [26] INFO  Logger - [ComplexExplorer] ExileFriend settings provider has been added.
+2026-07-30 17:07:30,874 [26] DEBUG Logger - [Start] MsBetweenTicks: 80.
+2026-07-30 17:07:30,875 [26] DEBUG Logger - [Start] PlayerMover.Instance: Palmover.Palmover.
+2026-07-30 17:07:30,881 [26] INFO  Logger - [ExilePather] BlockLockedDoors = Disabled.
+2026-07-30 17:07:30,882 [26] INFO  Logger - [ExilePather] BlockLockedTempleDoors = Disabled.
+2026-07-30 17:07:30,883 [26] INFO  Logger - [ExilePather] BlockTrialOfAscendancy = Disabled.
+2026-07-30 17:07:30,907 [26] INFO  Logger - Now reloading the WorldArea cache.
+2026-07-30 17:07:31,039 [26] INFO  Logger - The WorldArea cache has been reloaded.
+2026-07-30 17:07:31,206 [8] INFO  Logger - [ExilePather] Navmesh + height map ready in 83.5 ms.
+2026-07-30 17:07:31,308 [26] DEBUG TaskManagerBase<ITask> - [Add] Now adding [ClearCursorTask] This task places any item left on the cursor into the inventory..
+2026-07-30 17:07:31,310 [26] DEBUG TaskManagerBase<ITask> - [Add] Now adding [AnimateGuardianHideoutTask] Casts Animate Guardian when entering hideout if it is not already active..
+2026-07-30 17:07:31,312 [26] DEBUG TaskManagerBase<ITask> - [Add] Now adding [DefenseAndFlaskTask] This task provides a logic to use defensive skills and flasks..
+2026-07-30 17:07:31,312 [26] DEBUG TaskManagerBase<ITask> - [Add] Now adding [TradeTask] Handles accept-trade invites and the full trade loop with category filtering..
+2026-07-30 17:07:31,313 [26] DEBUG TaskManagerBase<ITask> - [Add] Now adding [UltimatumMirrorTask] Automatically selects the best Ultimatum modifier based on weighted scoring.
+2026-07-30 17:07:31,314 [26] DEBUG TaskManagerBase<ITask> - [Add] Now adding [LootItemTask] Task that handles item looting..
+2026-07-30 17:07:31,314 [26] DEBUG TaskManagerBase<ITask> - [Add] Now adding [PreCombatFollowTask] This task will keep the bot under a specific distance from the leader, in combat situation..
+2026-07-30 17:07:31,321 [26] DEBUG TaskManagerBase<ITask> - [Add] Now adding [BlightTowerTask] Builds and upgrades Blight towers while respecting a dedicated leader-distance leash..
+2026-07-30 17:07:31,323 [26] DEBUG TaskManagerBase<ITask> - [Add] Now adding [ShrineTask] Handles shrine clicking from ExileFriend instead of depending on a routine-specific shrine hook..
+2026-07-30 17:07:31,324 [26] DEBUG TaskManagerBase<ITask> - [Add] Now adding [CombatTask (Leash 50)] This task executes routine logic for combat..
+2026-07-30 17:07:31,325 [26] DEBUG TaskManagerBase<ITask> - [Add] Now adding [PostCombatHookTask] This task provides a coroutine hook for executing user logic after combat has completed..
+2026-07-30 17:07:31,325 [26] DEBUG TaskManagerBase<ITask> - [Add] Now adding [LevelGemsTask] This task will Level gems..
+2026-07-30 17:07:31,327 [26] DEBUG TaskManagerBase<ITask> - [Add] Now adding [CombatTask (Leash -1)] This task executes routine logic for combat..
+2026-07-30 17:07:31,329 [26] DEBUG TaskManagerBase<ITask> - [Add] Now adding [CastAuraTask] Task for casting auras before entering a map..
+2026-07-30 17:07:31,330 [26] DEBUG TaskManagerBase<ITask> - [Add] Now adding [AutoStashTask] Stashes picked items in town or hideout..
+2026-07-30 17:07:31,331 [26] DEBUG TaskManagerBase<ITask> - [Add] Now adding [QuestTask] Talks to quest NPCs in town and takes rewards..
+2026-07-30 17:07:31,331 [26] DEBUG TaskManagerBase<ITask> - [Add] Now adding [TravelToPartyZone] This task will travel to party grind zone..
+2026-07-30 17:07:31,332 [26] DEBUG TaskManagerBase<ITask> - [Add] Now adding [FollowTask] This task will Follow a Leader..
+2026-07-30 17:07:31,332 [26] DEBUG TaskManagerBase<ITask> - [Add] Now adding [CampaignObjectiveTask] Walks to and interacts with campaign quest objectives in combat areas..
+2026-07-30 17:07:31,333 [26] DEBUG TaskManagerBase<ITask> - [Add] Now adding [OpenWaypointTask] Task that handles waypoint opening..
+2026-07-30 17:07:31,334 [26] DEBUG TaskManagerBase<ITask> - [Add] Now adding [JoinPartyTask] This task will ask for party..
+2026-07-30 17:07:31,334 [26] DEBUG TaskManagerBase<ITask> - [Add] Now adding [FallbackTask] This task is the last task executed. It should not execute..
+2026-07-30 17:07:31,335 [26] INFO  Logger - [Start] PalLoader.PalLoader
+2026-07-30 17:07:31,336 [26] INFO  Logger - [Start] PluginLoader.PluginLoader
+2026-07-30 17:07:31,336 [26] INFO  Logger - [Start] PalRoutine.PalRoutine
+2026-07-30 17:07:31,342 [26] INFO  Logger - [TradeTask] Task Loaded.
+2026-07-30 17:07:31,343 [26] INFO  Logger - [UltimatumMirrorTask] Task started - automatic best modifier selection enabled
+2026-07-30 17:07:31,345 [26] INFO  Logger - [PreCombatFollowTask] Task Loaded.
+2026-07-30 17:07:31,349 [26] INFO  Logger - [FollowTask] Task Loaded.
+2026-07-30 17:07:31,350 [26] INFO  Logger - [JoinPartyTask] Task Loaded.
+2026-07-30 17:07:31,350 [26] DEBUG Logger - [Start] The plugin palLoader is enabled.
+2026-07-30 17:07:31,351 [26] DEBUG Logger - [Start] The plugin PluginLoader is enabled.
+2026-07-30 17:07:31,351 [26] INFO  Logger - [Start] AutoLogin: disabled
+2026-07-30 17:07:31,351 [26] DEBUG Logger - [Start] PlayerMover.Instance: Palmover.Palmover.
+2026-07-30 17:07:31,353 [26] INFO  Logger - [ExileFriend] Area hash changed — skipping 5 ticks for DPB cache build.
+2026-07-30 17:07:31,761 [26] INFO  Logger - [Events] Ingame bot start.
+2026-07-30 17:07:31,783 [26] INFO  Logger - [Events] Area changed (null -> Cartographer's Hideout)
+2026-07-30 17:07:31,873 [26] INFO  Logger - Now creating the Stats cache.
+2026-07-30 17:07:32,377 [26] DEBUG Logger - [FiveWayCarry] === RESET called ===
+2026-07-30 17:07:33,208 [26] INFO  Logger - [InjectKeyEvent1] 113 ms sleep for 13.
+2026-07-30 17:07:33,421 [26] INFO  Logger - Now creating the ActiveSkills cache.
+2026-07-30 17:07:33,679 [26] DEBUG Logger - [AnimateGuardianHideoutTask] Animate Guardian not found in usable skills list. Skipping.
+2026-07-30 17:07:34,042 [26] INFO  Logger - [LevelGemsTask] SkillGemHud.HandlePendingLevelUps returned GemDismissed.
+2026-07-30 17:07:35,316 [26] INFO  Logger - [LevelGemsTask] SkillGemHud.HandlePendingLevelUps returned GemDismissed.
+2026-07-30 17:07:35,337 [26] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:07:35,679 [26] INFO  Logger - [LevelGemsTask] SkillGemHud.HandlePendingLevelUps returned GemDismissed.
+2026-07-30 17:07:36,114 [26] INFO  Logger - [InjectKeyEvent1] 144 ms sleep for 73.
+2026-07-30 17:07:36,328 [26] DEBUG Logger - [ArtificialDelay] Now waiting for 18 ms.
+2026-07-30 17:07:36,687 [26] INFO  Logger - [LevelGemsTask] InventoryUi.HandlePendingLevelUps returned GemLeveled.
+2026-07-30 17:07:37,123 [26] INFO  Logger - [LevelGemsTask] InventoryUi.HandlePendingLevelUps returned None.
+2026-07-30 17:07:37,124 [26] INFO  Logger - [CloseBlockingWindows] IsLeftPanelShown || IsRightPanelShown. Closing them.
+2026-07-30 17:07:37,124 [26] INFO  Logger - [InjectKeyEvent1] 100 ms sleep for 32.
+2026-07-30 17:08:05,413 [26] INFO  Logger - [CloseBlockingWindows] IsLeftPanelShown || IsRightPanelShown. Closing them.
+2026-07-30 17:08:06,580 [26] INFO  Logger - [CloseBlockingWindows] IsLeftPanelShown || IsRightPanelShown. Closing them.
+2026-07-30 17:08:07,848 [26] INFO  Logger - [CloseBlockingWindows] IsLeftPanelShown || IsRightPanelShown. Closing them.
+2026-07-30 17:08:09,274 [26] INFO  Logger - [CloseBlockingWindows] IsLeftPanelShown || IsRightPanelShown. Closing them.
+2026-07-30 17:08:11,952 [26] INFO  Logger - [CloseBlockingWindows] IsLeftPanelShown || IsRightPanelShown. Closing them.
+2026-07-30 17:08:15,254 [1] INFO  BotManager - [Stop] Now requesting the BotThread to stop.
+2026-07-30 17:08:15,282 [26] INFO  BotManager - [Stop] ExileFriend.ExileFriend
+2026-07-30 17:08:15,284 [26] INFO  Logger - [UltimatumMirrorTask] Task stopped
+2026-07-30 17:08:15,292 [26] DEBUG Logger - [MoveRelease] Pre-combat follow stopped.
+2026-07-30 17:08:15,301 [26] INFO  Logger - [Stop] PalLoader.PalLoader
+2026-07-30 17:08:15,302 [26] INFO  Logger - [Stop] PluginLoader.PluginLoader
+2026-07-30 17:08:15,302 [26] INFO  Logger - [Stop] PalRoutine.PalRoutine
+2026-07-30 17:08:16,316 [26] DEBUG BotManager - [StopReason] core_gui_button => The user has pressed the Stop button.
+2026-07-30 17:08:19,203 [1] INFO  BotManager - [Start] Now creating the BotThread.
+2026-07-30 17:08:19,306 [39] INFO  BotManager - [Start] ExileFriend.ExileFriend
+2026-07-30 17:08:19,307 [39] INFO  Logger - [ItemEvaluator] Instance = DreamPoeBot.Loki.Bot.DefaultItemEvaluator.
+2026-07-30 17:08:19,307 [39] INFO  Logger - [ComplexExplorer] ExileFriend settings provider has been added.
+2026-07-30 17:08:19,353 [39] DEBUG Logger - [Start] MsBetweenTicks: 80.
+2026-07-30 17:08:19,355 [39] DEBUG Logger - [Start] PlayerMover.Instance: Palmover.Palmover.
+2026-07-30 17:08:19,355 [39] DEBUG TaskManagerBase<ITask> - [Add] Now adding [ClearCursorTask] This task places any item left on the cursor into the inventory..
+2026-07-30 17:08:19,355 [39] DEBUG TaskManagerBase<ITask> - [Add] Now adding [AnimateGuardianHideoutTask] Casts Animate Guardian when entering hideout if it is not already active..
+2026-07-30 17:08:19,355 [39] DEBUG TaskManagerBase<ITask> - [Add] Now adding [DefenseAndFlaskTask] This task provides a logic to use defensive skills and flasks..
+2026-07-30 17:08:19,356 [39] DEBUG TaskManagerBase<ITask> - [Add] Now adding [TradeTask] Handles accept-trade invites and the full trade loop with category filtering..
+2026-07-30 17:08:19,356 [39] DEBUG TaskManagerBase<ITask> - [Add] Now adding [UltimatumMirrorTask] Automatically selects the best Ultimatum modifier based on weighted scoring.
+2026-07-30 17:08:19,356 [39] DEBUG TaskManagerBase<ITask> - [Add] Now adding [LootItemTask] Task that handles item looting..
+2026-07-30 17:08:19,356 [39] DEBUG TaskManagerBase<ITask> - [Add] Now adding [PreCombatFollowTask] This task will keep the bot under a specific distance from the leader, in combat situation..
+2026-07-30 17:08:19,356 [39] DEBUG TaskManagerBase<ITask> - [Add] Now adding [BlightTowerTask] Builds and upgrades Blight towers while respecting a dedicated leader-distance leash..
+2026-07-30 17:08:19,359 [39] DEBUG TaskManagerBase<ITask> - [Add] Now adding [ShrineTask] Handles shrine clicking from ExileFriend instead of depending on a routine-specific shrine hook..
+2026-07-30 17:08:19,359 [39] DEBUG TaskManagerBase<ITask> - [Add] Now adding [CombatTask (Leash 50)] This task executes routine logic for combat..
+2026-07-30 17:08:19,360 [39] DEBUG TaskManagerBase<ITask> - [Add] Now adding [PostCombatHookTask] This task provides a coroutine hook for executing user logic after combat has completed..
+2026-07-30 17:08:19,360 [39] DEBUG TaskManagerBase<ITask> - [Add] Now adding [LevelGemsTask] This task will Level gems..
+2026-07-30 17:08:19,360 [39] DEBUG TaskManagerBase<ITask> - [Add] Now adding [CombatTask (Leash -1)] This task executes routine logic for combat..
+2026-07-30 17:08:19,360 [39] DEBUG TaskManagerBase<ITask> - [Add] Now adding [CastAuraTask] Task for casting auras before entering a map..
+2026-07-30 17:08:19,360 [39] DEBUG TaskManagerBase<ITask> - [Add] Now adding [AutoStashTask] Stashes picked items in town or hideout..
+2026-07-30 17:08:19,360 [39] DEBUG TaskManagerBase<ITask> - [Add] Now adding [QuestTask] Talks to quest NPCs in town and takes rewards..
+2026-07-30 17:08:19,360 [39] DEBUG TaskManagerBase<ITask> - [Add] Now adding [TravelToPartyZone] This task will travel to party grind zone..
+2026-07-30 17:08:19,361 [39] DEBUG TaskManagerBase<ITask> - [Add] Now adding [FollowTask] This task will Follow a Leader..
+2026-07-30 17:08:19,362 [39] DEBUG TaskManagerBase<ITask> - [Add] Now adding [CampaignObjectiveTask] Walks to and interacts with campaign quest objectives in combat areas..
+2026-07-30 17:08:19,362 [39] DEBUG TaskManagerBase<ITask> - [Add] Now adding [OpenWaypointTask] Task that handles waypoint opening..
+2026-07-30 17:08:19,362 [39] DEBUG TaskManagerBase<ITask> - [Add] Now adding [JoinPartyTask] This task will ask for party..
+2026-07-30 17:08:19,362 [39] DEBUG TaskManagerBase<ITask> - [Add] Now adding [FallbackTask] This task is the last task executed. It should not execute..
+2026-07-30 17:08:19,363 [39] INFO  Logger - [Start] PalLoader.PalLoader
+2026-07-30 17:08:19,363 [39] INFO  Logger - [Start] PluginLoader.PluginLoader
+2026-07-30 17:08:19,363 [39] INFO  Logger - [Start] PalRoutine.PalRoutine
+2026-07-30 17:08:19,363 [39] INFO  Logger - [TradeTask] Task Loaded.
+2026-07-30 17:08:19,363 [39] INFO  Logger - [UltimatumMirrorTask] Task started - automatic best modifier selection enabled
+2026-07-30 17:08:19,363 [39] INFO  Logger - [PreCombatFollowTask] Task Loaded.
+2026-07-30 17:08:19,363 [39] INFO  Logger - [FollowTask] Task Loaded.
+2026-07-30 17:08:19,363 [39] INFO  Logger - [JoinPartyTask] Task Loaded.
+2026-07-30 17:08:19,364 [39] DEBUG Logger - [Start] The plugin palLoader is enabled.
+2026-07-30 17:08:19,364 [39] DEBUG Logger - [Start] The plugin PluginLoader is enabled.
+2026-07-30 17:08:19,365 [39] INFO  Logger - [Start] AutoLogin: disabled
+2026-07-30 17:08:19,365 [39] DEBUG Logger - [Start] PlayerMover.Instance: Palmover.Palmover.
+2026-07-30 17:08:19,365 [39] INFO  Logger - [Events] Ingame bot start.
+2026-07-30 17:08:19,458 [39] DEBUG Logger - [ArtificialDelay] Now waiting for 15 ms.
+2026-07-30 17:08:19,841 [39] INFO  Logger - [LevelGemsTask] InventoryUi.HandlePendingLevelUps returned GemLeveled.
+2026-07-30 17:08:20,402 [39] INFO  Logger - [LevelGemsTask] InventoryUi.HandlePendingLevelUps returned None.
+2026-07-30 17:08:20,404 [39] INFO  Logger - [CloseBlockingWindows] IsLeftPanelShown || IsRightPanelShown. Closing them.
+2026-07-30 17:08:20,647 [39] WARN  Logger - IsInSameZone returned false for 看守者_ICE retry [1/3]
+2026-07-30 17:08:20,827 [39] WARN  Logger - IsInSameZone returned false for 看守者_ICE retry [2/3]
+2026-07-30 17:08:20,927 [39] DEBUG Logger - [MoveRelease] Fast traveling to party zone.
+2026-07-30 17:08:22,691 [39] INFO  Logger - [ExileFriend] Area hash changed — skipping 5 ticks for DPB cache build.
+2026-07-30 17:08:23,682 [38] INFO  Logger - [ExilePather] Navmesh + height map ready in 201.6 ms.
+2026-07-30 17:08:23,684 [39] INFO  Logger - [Events] Area changed (Cartographer's Hideout -> Cartographer's Hideout)
+2026-07-30 17:08:23,690 [39] DEBUG Logger - [FiveWayCarry] === RESET called ===
+2026-07-30 17:08:24,050 [16] DEBUG Logger - [DreamAuthAreaObserve] SKIP|epoch=2|reason=d8JNyDujtOb2tHXYtUm9
+2026-07-30 17:08:24,202 [39] DEBUG Logger - [AnimateGuardianHideoutTask] Animate Guardian not found in usable skills list. Skipping.
+2026-07-30 17:08:24,223 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:08:25,293 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:08:26,315 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:08:27,373 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:08:28,433 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:08:29,505 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:08:30,552 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:08:31,623 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:08:32,656 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:08:33,736 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:08:34,768 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:08:35,830 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:08:36,870 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:08:37,897 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:08:38,920 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:08:39,955 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:08:40,980 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:08:42,014 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:08:43,050 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:08:44,093 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:08:45,125 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:08:46,169 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:08:47,194 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:08:48,246 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:08:49,273 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:08:50,303 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:08:51,312 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:08:52,341 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:08:53,360 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:08:54,409 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:08:55,428 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:08:56,458 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:08:57,480 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:08:58,510 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:08:59,524 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:00,582 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:01,614 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:02,624 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:03,634 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:04,675 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:05,711 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:06,732 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:07,771 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:08,807 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:09,842 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:10,874 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:11,888 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:12,920 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:13,946 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:14,990 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:16,005 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:17,031 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:18,045 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:19,077 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:20,111 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:21,154 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:22,179 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:23,219 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:24,252 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:25,282 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:26,304 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:27,329 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:28,351 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:29,384 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:30,405 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:31,435 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:32,453 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:33,483 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:34,519 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:35,564 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:36,601 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:37,620 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:38,634 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:39,677 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:40,692 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:41,722 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:42,768 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:43,805 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:44,832 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:45,872 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:46,893 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:47,921 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:48,938 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:49,967 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:50,991 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:52,020 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:53,053 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:54,086 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:55,131 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:56,159 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:57,179 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:09:58,229 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:09:59,252 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:00,291 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:01,320 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:02,325 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:03,363 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:04,379 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:05,420 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:06,446 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:07,483 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:08,519 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:09,542 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:10,573 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:11,605 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:12,630 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:13,659 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:14,703 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:15,737 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:16,788 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:17,821 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:18,866 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:19,901 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:20,932 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:21,967 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:23,002 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:24,033 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:25,067 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:26,146 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:27,190 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:28,223 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:29,253 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:30,268 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:31,302 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:32,339 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:33,380 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:34,399 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:35,422 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:36,457 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:37,491 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:38,522 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:39,557 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:40,578 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:41,609 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:42,626 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:43,672 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:44,683 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:45,740 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:46,758 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:47,792 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:48,809 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:49,837 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:50,862 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:51,888 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:52,904 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:53,949 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:54,977 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:56,015 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:57,047 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:10:58,069 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:10:59,111 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:00,159 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:01,184 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:02,211 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:03,233 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:04,272 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:05,296 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:06,339 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:07,358 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:08,388 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:09,423 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:10,455 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:11,495 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:12,522 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:13,552 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:14,584 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:15,631 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:16,678 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:17,695 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:18,729 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:19,754 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:20,789 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:21,820 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:22,915 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:23,101 [19] WARN  Logger - [_window_PropertyChanged] X: 233
+2026-07-30 17:11:23,101 [19] WARN  Logger - [_window_PropertyChanged] Y: 40
+2026-07-30 17:11:23,951 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:25,004 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:26,032 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:27,071 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:28,081 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:29,103 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:30,138 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:31,175 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:32,200 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:33,248 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:34,268 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:35,322 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:36,347 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:37,387 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:38,412 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:39,469 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:40,497 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:41,540 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:42,559 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:43,590 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:44,599 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:45,635 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:46,653 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:47,658 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:48,685 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:49,726 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:50,739 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:51,780 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:52,813 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:53,852 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:54,871 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:55,919 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:56,943 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:11:57,978 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:11:59,000 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:12:00,043 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:12:01,071 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:12:02,111 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:12:03,146 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:12:04,181 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:12:05,200 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:12:06,230 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:12:07,257 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:12:08,290 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:12:09,329 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:12:10,357 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:12:11,377 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:12:12,427 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:12:13,439 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:12:14,493 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:12:15,519 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:12:16,554 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:12:17,586 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:12:18,621 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:12:19,638 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:12:20,673 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:12:21,689 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:12:22,736 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:12:23,751 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:12:24,790 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:12:25,813 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:12:26,871 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:12:27,898 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:12:28,920 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:12:29,930 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:12:30,959 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:12:31,993 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:12:33,044 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:12:34,079 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:12:35,110 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:12:36,120 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:12:37,137 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:12:38,170 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:12:38,355 [39] INFO  Logger - [CloseBlockingWindows] IsEscapeStateActive == true. Closing it.
+2026-07-30 17:12:39,239 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:12:40,272 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:12:41,306 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:12:42,338 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:12:43,378 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:12:44,412 [39] DEBUG Logger - [MoveRelease] Already in leader zone.
+2026-07-30 17:12:45,437 [39] DEBUG Logger - [MoveRelease] Follow unavailable in current area/state.
+2026-07-30 17:12:46,310 [1] INFO  BotManager - [Stop] Now requesting the BotThread to stop.
+2026-07-30 17:12:46,338 [39] INFO  BotManager - [Stop] ExileFriend.ExileFriend
+2026-07-30 17:12:46,339 [39] INFO  Logger - [UltimatumMirrorTask] Task stopped
+2026-07-30 17:12:46,355 [39] INFO  Logger - [Stop] PalLoader.PalLoader
+2026-07-30 17:12:46,355 [39] INFO  Logger - [Stop] PluginLoader.PluginLoader
+2026-07-30 17:12:46,356 [39] INFO  Logger - [Stop] PalRoutine.PalRoutine
+2026-07-30 17:12:47,357 [39] DEBUG BotManager - [StopReason] core_gui_button => The user has pressed the Stop button.
+2026-07-30 17:12:52,809 [1] INFO  Logger - [ExileFriendGui] Parent ContentPresenter IsEnabled=false. Forcing true.
+2026-07-30 17:13:07,528 [1] INFO  Logger - [ExileFriendGui] Parent ContentPresenter IsEnabled=false. Forcing true.
+2026-07-30 17:15:19,958 [1] INFO  Logger - [PluginManager.Deinitialize] ExileFriend.Banner.BannerManager
+2026-07-30 17:15:19,962 [1] INFO  Logger - [BannerManager] Deinitialized.
+2026-07-30 17:15:19,962 [1] INFO  Logger - [PluginManager.Deinitialize] ExileFriend.Link.LinkManager
+2026-07-30 17:15:19,967 [1] INFO  Logger - [LinkManager] Deinitialized.
+2026-07-30 17:15:19,967 [1] INFO  Logger - [PluginManager.Deinitialize] PalLoader.PalLoader
+2026-07-30 17:15:20,014 [1] INFO  Logger - [Initialize] ExileFriend.ExileFriend
+2026-07-30 17:15:20,061 [1] INFO  Logger - [Initialize] PalRoutine.PalRoutine
+2026-07-30 17:15:20,105 [1] INFO  Logger - [Initialize] Palmover.Palmover
+2026-07-30 17:15:20,108 [1] INFO  Logger - [PluginManager.Deinitialize] PluginLoader.PluginLoader
+2026-07-30 17:15:20,108 [1] INFO  Logger - [PluginManager.Deinitialize] ExileFriend.SmartFlask.SmartFlaskManager
+2026-07-30 17:15:20,110 [1] INFO  Logger - [SmartFlaskManager] Deinitialized.
+2026-07-30 17:15:20,110 [1] INFO  Logger - [PluginManager.Deinitialize] ExileFriend.Warcry.WarcryManager
+2026-07-30 17:15:20,110 [1] INFO  Logger - [WarcryManager] Deinitialized.
+2026-07-30 17:15:20,111 [1] INFO  Logger - [PlayerMoverManager.Deinitialize] Palmover.Palmover
+2026-07-30 17:15:20,113 [1] INFO  Logger - [RoutineManager.Deinitialize] PalRoutine.PalRoutine
+2026-07-30 17:15:20,114 [1] INFO  BotManager - [BotManager.Deinitialize] ExileFriend.ExileFriend
+2026-07-30 17:15:20,115 [1] INFO  Logger - [ContentManager.Deinitialize] DreamPoeBot.Loki.Bot.SkillBlacklist
+2026-07-30 17:15:20,671 [13] INFO  Logger - The Bot window is closed, now terminating DPB
+2026-07-30 17:15:21,674 [9] DEBUG Logger - DreamAuth heartbeat worker stopped during application shutdown.

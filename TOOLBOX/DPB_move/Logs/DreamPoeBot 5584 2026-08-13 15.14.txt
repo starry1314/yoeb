@@ -1,0 +1,223 @@
+2026-08-13 15:14:09,800 [1] INFO  Logger - DreamPoeBot Version: 0.3.29.14
+Path: C:\Users\<Username>\Desktop\豪 DPB_3_29_05\DPB_3_29_05\DPB_3_29_05\<ExeName>
+Arguments: C:\Users\Administrator\Desktop\豪 DPB_3_29_05\DPB_3_29_05\DPB_3_29_05\DreamPoeBot.exe
+
+OS Name: Microsoft Windows 10 企业版 2016 长期服务版
+OS Version: 10.0.14393
+OS Architecture: 64 位
+InstalledUICulture: zh-CN [Chinese (Simplified, China)]
+CurrentUICulture: zh-CN [Chinese (Simplified, China)]
+CurrentCulture: zh-CN [Chinese (Simplified, China)]
+
+2026-08-13 15:14:09,840 [1] INFO  Logger - Now setting up JitProfiles...
+2026-08-13 15:14:09,843 [1] INFO  Logger - JitProfiles successfully setup!
+2026-08-13 15:14:09,846 [1] INFO  Logger - Now checking prerequisites...
+2026-08-13 15:14:09,846 [1] INFO  Logger - Prerequisite check complete!
+2026-08-13 15:14:14,042 [1] INFO  Logger - [DreamAuthAuto] auth.dreamauth.top passed: 262144 bytes in 1698 ms; version response 1326 ms.
+2026-08-13 15:14:14,044 [1] INFO  Logger - [DreamAuthAuto] ru.dreamauth.top passed: 262144 bytes in 1777 ms; version response 1380 ms.
+2026-08-13 15:14:14,044 [1] INFO  Logger - [DreamAuthAuto] api.dreampoeauth.cloud passed: 262144 bytes in 577 ms; version response 592 ms.
+2026-08-13 15:14:14,044 [1] INFO  Logger - [DreamAuthAuto] api.dreampoeauth.xyz passed: 262144 bytes in 1443 ms; version response 1059 ms.
+2026-08-13 15:14:14,046 [1] INFO  Logger - [DreamAuthAuto] Selected proxy: api.dreampoeauth.cloud.
+2026-08-13 15:14:14,047 [1] INFO  Logger - DreamAuth signed updater test mode is enabled; legacy pre-login updater skipped.
+2026-08-13 15:14:14,139 [12] INFO  Logger - [Pre-Login] Connecting to BestLatency (15.235.186.246)
+2026-08-13 15:14:15,535 [12] INFO  Logger - Region: sea
+2026-08-13 15:14:15,536 [12] INFO  Logger - Loader authentication completed.
+2026-08-13 15:14:15,598 [12] ERROR Logger - [DreamUpdate] Rollback confirmation/maintenance failed closed.
+DreamUpdater.Core.UpdateSecurityException: rollback_receipt_invalid
+   at DreamUpdater.Core.RollbackReceiptStore.ValidateReceipt(String path, RollbackReceipt receipt)
+   at DreamUpdater.Core.RollbackReceiptStore.ReadReceipt(String path)
+   at oNsV65sHQJ6UFEMbL9s6.YvtshICMhlc(String , oNsV65sHQJ6UFEMbL9s6 )
+   at vTgXiPKmUog51U9SE3.fYtViEu7CIAfVByJixS3.wDhu77OSVEE()
+   at vTgXiPKmUog51U9SE3.fYtViEu7CIAfVByJixS3.Q4cu79w8OsI(dx3n85lloSwA8pQdaWE  )
+2026-08-13 15:14:16,794 [1] INFO  BotManager - [BotManager] MsBetweenTicks = 80
+2026-08-13 15:14:18,017 [7] INFO  Logger - Pattern scan completed.
+2026-08-13 15:14:18,040 [7] INFO  Logger - IngameState: 337B4631410
+2026-08-13 15:14:43,276 [7] ERROR Logger - [PreloadBaseItemTypes-Missing]  Metadata_Items_QuestItems_Deepwater_DeepwaterQuestDucat1
+2026-08-13 15:14:43,276 [7] ERROR Logger - [PreloadBaseItemTypes-Missing]  Metadata_Items_QuestItems_Deepwater_DeepwaterQuestDucat2
+2026-08-13 15:14:43,276 [7] ERROR Logger - [PreloadBaseItemTypes-Missing]  Metadata_Items_QuestItems_Deepwater_DeepwaterQuestDucat3
+2026-08-13 15:14:43,276 [7] ERROR Logger - [PreloadBaseItemTypes-Missing]  Metadata_Items_QuestItems_Deepwater_DeepwaterQuestDucat4
+2026-08-13 15:14:43,278 [7] ERROR Logger - [PreloadBaseItemTypes-Missing]  Metadata_Items_QuestItems_Deepwater_DeepwaterQuestDucat5
+2026-08-13 15:14:43,278 [7] ERROR Logger - [PreloadBaseItemTypes-Missing]  Metadata_Items_QuestItems_Deepwater_DeepwaterQuestDucat6
+2026-08-13 15:14:43,282 [7] ERROR Logger - [PreloadBaseItemTypes-Missing]  Metadata_Items_Deepwater_DeepwaterEldritch
+2026-08-13 15:14:43,283 [7] ERROR Logger - [PreloadBaseItemTypes-Missing]  Metadata_Items_GhostItems_GhostItem1x1
+2026-08-13 15:14:43,284 [7] ERROR Logger - [PreloadBaseItemTypes-Missing]  Metadata_Items_GhostItems_GhostItem1x2
+2026-08-13 15:14:43,284 [7] ERROR Logger - [PreloadBaseItemTypes-Missing]  Metadata_Items_GhostItems_GhostItem1x3
+2026-08-13 15:14:43,284 [7] ERROR Logger - [PreloadBaseItemTypes-Missing]  Metadata_Items_GhostItems_GhostItem1x4
+2026-08-13 15:14:43,285 [7] ERROR Logger - [PreloadBaseItemTypes-Missing]  Metadata_Items_GhostItems_GhostItem2x1
+2026-08-13 15:14:43,285 [7] ERROR Logger - [PreloadBaseItemTypes-Missing]  Metadata_Items_GhostItems_GhostItem2x2
+2026-08-13 15:14:43,285 [7] ERROR Logger - [PreloadBaseItemTypes-Missing]  Metadata_Items_GhostItems_GhostItem2x3
+2026-08-13 15:14:43,286 [7] ERROR Logger - [PreloadBaseItemTypes-Missing]  Metadata_Items_GhostItems_GhostItem2x4
+2026-08-13 15:14:43,286 [7] ERROR Logger - [PreloadBaseItemTypes-Missing]  Metadata_Items_GhostItems_GhostItem3x2
+2026-08-13 15:14:43,286 [7] ERROR Logger - [PreloadBaseItemTypes-Missing]  Metadata_Items_GhostItems_GhostItem3x1
+2026-08-13 15:14:43,287 [7] ERROR Logger - [PreloadBaseItemTypes-Missing]  Metadata_Items_GhostItems_GhostItem4x1
+2026-08-13 15:14:44,117 [7] INFO  Logger - [Dat] Now building the Stat lookup table.
+2026-08-13 15:14:45,945 [7] INFO  Logger - [Dat] The Stat lookup table has been built.
+2026-08-13 15:14:45,998 [7] INFO  Logger - [Dat] Now building the Passive Skills lookup table.
+2026-08-13 15:14:46,508 [7] INFO  Logger - [Dat] The Passive Skills lookup table has been built.
+2026-08-13 15:14:46,560 [7] INFO  Logger - Core memory roots initialized.
+2026-08-13 15:14:50,779 [7] INFO  Logger - [DreamAuthAreaObserve] ARMED|generation=1|intervalMs=1000
+2026-08-13 15:14:50,971 [7] DEBUG ThirdPartyLoader - Loading start.
+2026-08-13 15:14:50,979 [7] DEBUG ThirdPartyLoader - Now loading [PluginLoader].
+2026-08-13 15:14:50,988 [7] DEBUG ThirdPartyLoader - [PluginLoader] will be loaded as [PluginLoader]. The base path is [].
+2026-08-13 15:14:50,990 [7] INFO  ThirdPartyLoader - Now asynchronously compiling dependency free content...
+2026-08-13 15:14:52,142 [8] DEBUG Logger - [DreamAuthAreaObserve] SKIP|epoch=1|reason=d8JNyDujtOb2tHXYtUm9
+2026-08-13 15:14:56,833 [7] INFO  Logger - [PluginLoader] Detected plugins: 
+-----------------
+	C:\Users\Administrator\Desktop\豪 DPB_3_29_05\DPB_3_29_05\DPB_3_29_05\Plugins\PalLoader.dll
+-----------------
+2026-08-13 15:14:56,842 [7] INFO  Logger - [PalLoader] Key found. Loading ExileFriend, PalRoutine and Palmover...
+2026-08-13 15:15:01,518 [15] INFO  Logger - [PalLoader] Bot type from ExileFriend: ExileFriend.ExileFriend
+2026-08-13 15:15:01,880 [21] WARN  Logger - [_window_PropertyChanged] Handle: 1246128
+2026-08-13 15:15:01,893 [15] INFO  Logger - [PalLoader] Loaded ExileFriend: ExileFriend v0.2.9
+2026-08-13 15:15:01,963 [23] WARN  Logger - [_window_PropertyChanged] X: 211
+2026-08-13 15:15:01,964 [23] WARN  Logger - [_window_PropertyChanged] Y: 41
+2026-08-13 15:15:03,051 [15] INFO  Logger - [PalLoader] Routine type from PalRoutine: PalRoutine.PalRoutine
+2026-08-13 15:15:03,056 [15] INFO  Logger - [PalLoader] Loaded PalRoutine: PalRoutine v0.1.0
+2026-08-13 15:15:04,082 [25] INFO  Logger - [PalLoader] Loaded mover: Palmover v0.0.1
+2026-08-13 15:15:04,484 [1] INFO  Logger - [Initialize] ExileFriend.ExileFriend
+2026-08-13 15:15:04,613 [1] INFO  Logger - [Initialize] PalRoutine.PalRoutine
+2026-08-13 15:15:04,706 [1] INFO  Logger - [Initialize] Palmover.Palmover
+2026-08-13 15:15:04,711 [1] INFO  Logger - [PalLoader] Registered in-memory content via ThirdPartyLoader: ExileFriend, PalRoutine, Palmover.
+2026-08-13 15:15:04,715 [7] INFO  Logger - [PalLoader] Loaded ExileFriend, PalRoutine, and Palmover. Select the bot you want from the bot dropdown, PalRoutine from the routine dropdown, and Palmover from the mover dropdown.
+2026-08-13 15:15:04,717 [7] INFO  Logger - [[PluginLoader] Loaded: palLoader v1.5 <pallala> - Protected ExileFriend, PalRoutine, and Palmover loader
+2026-08-13 15:15:04,717 [7] INFO  ThirdPartyLoader - PluginLoader
+2026-08-13 15:15:04,718 [7] INFO  ThirdPartyLoader -                    [Bots] : 
+2026-08-13 15:15:04,719 [7] INFO  ThirdPartyLoader -                    [Plugins] : PluginLoader (PluginLoader: 1.0)
+2026-08-13 15:15:04,720 [7] INFO  ThirdPartyLoader -                    [Routines] : 
+2026-08-13 15:15:04,720 [7] INFO  ThirdPartyLoader -                    [Content] : 
+2026-08-13 15:15:04,721 [7] INFO  ThirdPartyLoader -                    [PlayerMovers] : 
+2026-08-13 15:15:04,722 [7] INFO  ThirdPartyLoader - Content compiled in 00:00:13.7303987.
+2026-08-13 15:15:04,722 [7] DEBUG ThirdPartyLoader - Loading finished!
+2026-08-13 15:15:04,732 [7] ERROR ThirdPartyLoader - Please put your plugins into respective subdirectories!
+2026-08-13 15:15:04,874 [7] INFO  Logger - [Initialize] DreamPoeBot.Loki.Bot.SkillBlacklist
+2026-08-13 15:15:04,936 [7] INFO  Logger - [Initialize] ExileFriend.ExileFriend
+2026-08-13 15:15:04,957 [1] INFO  Logger - [ItemEvaluator] Instance = DreamPoeBot.Loki.Bot.DefaultItemEvaluator.
+2026-08-13 15:15:05,044 [7] INFO  Logger - [Initialize] PalRoutine.PalRoutine
+2026-08-13 15:15:05,126 [7] INFO  Logger - [Initialize] Palmover.Palmover
+2026-08-13 15:15:05,206 [7] INFO  Logger - [PluginLoader] Detected plugins: 
+-----------------
+	C:\Users\Administrator\Desktop\豪 DPB_3_29_05\DPB_3_29_05\DPB_3_29_05\Plugins\PalLoader.dll
+-----------------
+2026-08-13 15:15:05,207 [7] INFO  Logger - [[PluginLoader] Loaded: palLoader v1.5 <pallala> - Protected ExileFriend, PalRoutine, and Palmover loader
+2026-08-13 15:15:05,224 [7] INFO  Logger - [Initialize] ExileFriend.AutoPassive.AutoPassiveManager
+2026-08-13 15:15:05,224 [1] INFO  Logger - [ItemEvaluator] Instance = DreamPoeBot.Loki.Bot.DefaultItemEvaluator.
+2026-08-13 15:15:05,226 [7] INFO  Logger - [AutoPassive] Initialized.
+2026-08-13 15:15:05,226 [1] INFO  Logger - [PalLoader] Applied preferred bot selection via reflection: ExileFriend
+2026-08-13 15:15:05,228 [11] INFO  Logger - [PalLoader] Preferred bot restore confirmed after attempt 1.
+2026-08-13 15:15:05,231 [7] INFO  Logger - [Initialize] ExileFriend.Banner.BannerManager
+2026-08-13 15:15:05,231 [7] INFO  Logger - [BannerManager] Initialized.
+2026-08-13 15:15:05,238 [7] INFO  Logger - [Initialize] ExileFriend.Link.LinkManager
+2026-08-13 15:15:05,239 [7] INFO  Logger - [LinkManager] Initialized.
+2026-08-13 15:15:05,239 [7] INFO  Logger - [Initialize] PalLoader.PalLoader
+2026-08-13 15:15:05,244 [7] INFO  Logger - [Initialize] PluginLoader.PluginLoader
+2026-08-13 15:15:05,263 [7] INFO  Logger - [Initialize] ExileFriend.SmartFlask.SmartFlaskManager
+2026-08-13 15:15:05,264 [7] INFO  Logger - [SmartFlaskManager] Initialized.
+2026-08-13 15:15:05,284 [7] INFO  Logger - [Initialize] ExileFriend.Warcry.WarcryManager
+2026-08-13 15:15:05,285 [7] INFO  Logger - [WarcryManager] Initialized.
+2026-08-13 15:15:05,286 [7] INFO  Logger - [Enable] PalLoader.PalLoader
+2026-08-13 15:15:05,287 [7] INFO  Logger - [Enable] PluginLoader.PluginLoader
+2026-08-13 15:15:05,429 [1] INFO  Logger - [ItemEvaluator] Instance = DreamPoeBot.Loki.Bot.DefaultItemEvaluator.
+2026-08-13 15:15:05,430 [1] DEBUG Logger - Current 'Bot' set to ExileFriend.
+2026-08-13 15:15:05,503 [1] INFO  Logger - [ExileFriendGui] GUI constructed successfully.
+2026-08-13 15:15:05,514 [1] DEBUG Logger - Current 'Routine' set to PalRoutine.
+2026-08-13 15:15:05,759 [1] DEBUG Logger - Current 'PlayerMover' set to Palmover.
+2026-08-13 15:15:05,866 [7] INFO  Logger - Registering default Hotkeys:
+2026-08-13 15:15:05,871 [7] INFO  Logger - 
+For setup and usage guidance, visit:
+https://www.dreampoebot.com/
+2026-08-13 15:15:09,526 [1] INFO  BotManager - [Start] Now creating the BotThread.
+2026-08-13 15:15:09,652 [31] INFO  BotManager - [Start] ExileFriend.ExileFriend
+2026-08-13 15:15:09,660 [31] INFO  Logger - [ItemEvaluator] Instance = DreamPoeBot.Loki.Bot.DefaultItemEvaluator.
+2026-08-13 15:15:09,665 [31] INFO  Logger - [ComplexExplorer] ExileFriend settings provider has been added.
+2026-08-13 15:15:09,733 [31] DEBUG Logger - [Start] MsBetweenTicks: 80.
+2026-08-13 15:15:09,734 [31] DEBUG Logger - [Start] PlayerMover.Instance: Palmover.Palmover.
+2026-08-13 15:15:09,738 [31] INFO  Logger - [ExilePather] BlockLockedDoors = Disabled.
+2026-08-13 15:15:09,739 [31] INFO  Logger - [ExilePather] BlockLockedTempleDoors = Disabled.
+2026-08-13 15:15:09,741 [31] INFO  Logger - [ExilePather] BlockTrialOfAscendancy = Disabled.
+2026-08-13 15:15:09,767 [31] DEBUG TaskManagerBase<ITask> - [Add] Now adding [ClearCursorTask] This task places any item left on the cursor into the inventory..
+2026-08-13 15:15:09,771 [31] DEBUG TaskManagerBase<ITask> - [Add] Now adding [AnimateGuardianHideoutTask] Casts Animate Guardian when entering hideout if it is not already active..
+2026-08-13 15:15:09,771 [31] DEBUG TaskManagerBase<ITask> - [Add] Now adding [DefenseAndFlaskTask] This task provides a logic to use defensive skills and flasks..
+2026-08-13 15:15:09,772 [31] DEBUG TaskManagerBase<ITask> - [Add] Now adding [TradeTask] Handles accept-trade invites and the full trade loop with category filtering..
+2026-08-13 15:15:09,773 [31] DEBUG TaskManagerBase<ITask> - [Add] Now adding [UltimatumMirrorTask] Automatically selects the best Ultimatum modifier based on weighted scoring.
+2026-08-13 15:15:09,775 [31] DEBUG TaskManagerBase<ITask> - [Add] Now adding [LootItemTask] Task that handles item looting..
+2026-08-13 15:15:09,776 [31] DEBUG TaskManagerBase<ITask> - [Add] Now adding [PreCombatFollowTask] This task will keep the bot under a specific distance from the leader, in combat situation..
+2026-08-13 15:15:09,786 [31] DEBUG TaskManagerBase<ITask> - [Add] Now adding [BlightTowerTask] Builds and upgrades Blight towers while respecting a dedicated leader-distance leash..
+2026-08-13 15:15:09,787 [31] DEBUG TaskManagerBase<ITask> - [Add] Now adding [ShrineTask] Handles shrine clicking from ExileFriend instead of depending on a routine-specific shrine hook..
+2026-08-13 15:15:09,788 [31] DEBUG TaskManagerBase<ITask> - [Add] Now adding [CombatTask (Leash 50)] This task executes routine logic for combat..
+2026-08-13 15:15:09,789 [31] DEBUG TaskManagerBase<ITask> - [Add] Now adding [PostCombatHookTask] This task provides a coroutine hook for executing user logic after combat has completed..
+2026-08-13 15:15:09,791 [31] DEBUG TaskManagerBase<ITask> - [Add] Now adding [LevelGemsTask] This task will Level gems..
+2026-08-13 15:15:09,792 [31] DEBUG TaskManagerBase<ITask> - [Add] Now adding [AutoPassiveTask] Auto-allocates passive points from a PoE planner URL..
+2026-08-13 15:15:09,792 [31] DEBUG TaskManagerBase<ITask> - [Add] Now adding [CombatTask (Leash -1)] This task executes routine logic for combat..
+2026-08-13 15:15:09,799 [31] DEBUG TaskManagerBase<ITask> - [Add] Now adding [CastAuraTask] Task for casting auras before entering a map..
+2026-08-13 15:15:09,800 [31] DEBUG TaskManagerBase<ITask> - [Add] Now adding [AutoStashTask] Stashes picked items in town or hideout..
+2026-08-13 15:15:09,802 [31] DEBUG TaskManagerBase<ITask> - [Add] Now adding [QuestTask] Talks to quest NPCs in town and takes rewards..
+2026-08-13 15:15:09,803 [31] DEBUG TaskManagerBase<ITask> - [Add] Now adding [TravelToPartyZone] This task will travel to party grind zone..
+2026-08-13 15:15:09,803 [31] DEBUG TaskManagerBase<ITask> - [Add] Now adding [FollowTask] This task will Follow a Leader..
+2026-08-13 15:15:09,805 [31] DEBUG TaskManagerBase<ITask> - [Add] Now adding [CampaignObjectiveTask] Walks to and interacts with campaign quest objectives in combat areas..
+2026-08-13 15:15:09,806 [31] DEBUG TaskManagerBase<ITask> - [Add] Now adding [OpenWaypointTask] Task that handles waypoint opening..
+2026-08-13 15:15:09,807 [31] DEBUG TaskManagerBase<ITask> - [Add] Now adding [JoinPartyTask] This task will ask for party..
+2026-08-13 15:15:09,807 [31] DEBUG TaskManagerBase<ITask> - [Add] Now adding [FallbackTask] This task is the last task executed. It should not execute..
+2026-08-13 15:15:09,813 [31] INFO  Logger - [Start] PalLoader.PalLoader
+2026-08-13 15:15:09,813 [31] INFO  Logger - [Start] PluginLoader.PluginLoader
+2026-08-13 15:15:09,814 [31] INFO  Logger - [Start] PalRoutine.PalRoutine
+2026-08-13 15:15:09,821 [31] INFO  Logger - Now reloading the WorldArea cache.
+2026-08-13 15:15:10,113 [31] INFO  Logger - The WorldArea cache has been reloaded.
+2026-08-13 15:15:10,119 [31] INFO  Logger - [TradeTask] Task Loaded.
+2026-08-13 15:15:10,120 [31] INFO  Logger - [UltimatumMirrorTask] Task started - automatic best modifier selection enabled
+2026-08-13 15:15:10,121 [31] INFO  Logger - [PreCombatFollowTask] Task Loaded.
+2026-08-13 15:15:10,124 [31] INFO  Logger - [FollowTask] Task Loaded.
+2026-08-13 15:15:10,125 [31] INFO  Logger - [JoinPartyTask] Task Loaded.
+2026-08-13 15:15:10,126 [31] DEBUG Logger - [Start] The plugin palLoader is enabled.
+2026-08-13 15:15:10,126 [31] DEBUG Logger - [Start] The plugin PluginLoader is enabled.
+2026-08-13 15:15:10,133 [31] INFO  Logger - [Start] AutoLogin: disabled
+2026-08-13 15:15:10,134 [31] DEBUG Logger - [Start] PlayerMover.Instance: Palmover.Palmover.
+2026-08-13 15:19:09,407 [1] INFO  BotManager - [Stop] Now requesting the BotThread to stop.
+2026-08-13 15:19:09,474 [31] INFO  BotManager - [Stop] ExileFriend.ExileFriend
+2026-08-13 15:19:09,476 [31] INFO  Logger - [UltimatumMirrorTask] Task stopped
+2026-08-13 15:19:09,491 [31] INFO  Logger - [Stop] PalLoader.PalLoader
+2026-08-13 15:19:09,492 [31] INFO  Logger - [Stop] PluginLoader.PluginLoader
+2026-08-13 15:19:09,493 [31] INFO  Logger - [Stop] PalRoutine.PalRoutine
+2026-08-13 15:19:10,502 [31] ERROR BotManager - [Stop] Exception during execution:
+DreamPoeBot.Loki.Coroutine.CoroutineStoppedException: Coroutine was stopped
+   at DreamPoeBot.Loki.Coroutine.Coroutine.EfdMLVZjntlMvDF4N2QU.nXTZjccChNj()
+   at DreamPoeBot.Loki.Coroutine.Coroutine.kkLNxfZjIB2v34jaaGKR.System.Runtime.CompilerServices.IAsyncStateMachine.MoveNext()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.MoveNextRunner.Run()
+   at DreamPoeBot.Loki.Coroutine.Coroutine.QFLua70n88d(Boolean  )
+   at DreamPoeBot.Loki.Coroutine.Coroutine.Dispose()
+   at ExileFriend.ExileFriend.Stop()
+   at DreamPoeBot.Loki.Bot.BotManager.IwNutTvr3D4(IBot  )
+2026-08-13 15:19:10,504 [31] DEBUG BotManager - [BotThreadFunction] An InjectionDesyncException was detected. DreamPoeBot.Loki.Coroutine.CoroutineStoppedException: Coroutine was stopped
+   at DreamPoeBot.Loki.Coroutine.Coroutine.EfdMLVZjntlMvDF4N2QU.nXTZjccChNj()
+   at DreamPoeBot.Loki.Coroutine.Coroutine.kkLNxfZjIB2v34jaaGKR.System.Runtime.CompilerServices.IAsyncStateMachine.MoveNext()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.MoveNextRunner.Run()
+   at DreamPoeBot.Loki.Coroutine.Coroutine.QFLua70n88d(Boolean  )
+   at DreamPoeBot.Loki.Coroutine.Coroutine.Dispose()
+   at ExileFriend.ExileFriend.Stop()
+   at DreamPoeBot.Loki.Bot.BotManager.IwNutTvr3D4(IBot  )
+   at DreamPoeBot.Loki.Bot.BotManager.pZlutFx8wnS()
+2026-08-13 15:19:10,504 [31] DEBUG BotManager - [StopReason] core_gui_button => The user has pressed the Stop button.
+2026-08-13 15:19:10,813 [9] INFO  Logger - The Bot window is closed, now terminating DPB
+2026-08-13 15:19:10,999 [1] INFO  Logger - [PluginManager.Deinitialize] ExileFriend.AutoPassive.AutoPassiveManager
+2026-08-13 15:19:11,001 [1] INFO  Logger - [AutoPassive] Deinitialized.
+2026-08-13 15:19:11,001 [1] INFO  Logger - [PluginManager.Deinitialize] ExileFriend.Banner.BannerManager
+2026-08-13 15:19:11,002 [1] INFO  Logger - [BannerManager] Deinitialized.
+2026-08-13 15:19:11,003 [1] INFO  Logger - [PluginManager.Deinitialize] ExileFriend.Link.LinkManager
+2026-08-13 15:19:11,003 [1] INFO  Logger - [LinkManager] Deinitialized.
+2026-08-13 15:19:11,003 [1] INFO  Logger - [PluginManager.Deinitialize] PalLoader.PalLoader
+2026-08-13 15:19:11,061 [1] INFO  Logger - [Initialize] ExileFriend.ExileFriend
+2026-08-13 15:19:11,112 [1] INFO  Logger - [Initialize] PalRoutine.PalRoutine
+2026-08-13 15:19:11,167 [1] INFO  Logger - [Initialize] Palmover.Palmover
+2026-08-13 15:19:11,170 [1] INFO  Logger - [PluginManager.Deinitialize] PluginLoader.PluginLoader
+2026-08-13 15:19:11,171 [1] INFO  Logger - [PluginManager.Deinitialize] ExileFriend.SmartFlask.SmartFlaskManager
+2026-08-13 15:19:11,172 [1] INFO  Logger - [SmartFlaskManager] Deinitialized.
+2026-08-13 15:19:11,172 [1] INFO  Logger - [PluginManager.Deinitialize] ExileFriend.Warcry.WarcryManager
+2026-08-13 15:19:11,174 [1] INFO  Logger - [WarcryManager] Deinitialized.
+2026-08-13 15:19:11,175 [1] INFO  Logger - [PlayerMoverManager.Deinitialize] Palmover.Palmover
+2026-08-13 15:19:11,177 [1] INFO  Logger - [RoutineManager.Deinitialize] PalRoutine.PalRoutine
+2026-08-13 15:19:11,178 [1] INFO  BotManager - [BotManager.Deinitialize] ExileFriend.ExileFriend
+2026-08-13 15:19:11,180 [1] INFO  Logger - [ContentManager.Deinitialize] DreamPoeBot.Loki.Bot.SkillBlacklist
+2026-08-13 15:19:11,816 [17] DEBUG Logger - DreamAuth heartbeat worker stopped during application shutdown.

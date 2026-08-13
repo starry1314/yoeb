@@ -1,0 +1,48 @@
+{
+  "Enabled": true,
+  "EnableInHideout": false,
+  "LifeHpPercent": 75,
+  "LifeHpPercentInstant": 50,
+  "DruggeryMode": false,
+  "DruggeryIntervalMs": 4000,
+  "ManaPercent": 30,
+  "EsPercent": 50,
+  "RemoveFreeze": false,
+  "RemoveShock": false,
+  "RemoveIgnite": false,
+  "RemoveBleed": false,
+  "RemovePoison": false,
+  "RemoveCurse": false,
+  "MinPoisonStacks": 1,
+  "MinCbloodStacks": 1,
+  "QuicksilverMode": 2,
+  "QuicksilverRange": 80,
+  "SlotPostUseDelayMs": 1000,
+  "SlotConfigs": [
+    {
+      "SlotIndex": 1,
+      "Enabled": false,
+      "Triggers": []
+    },
+    {
+      "SlotIndex": 2,
+      "Enabled": false,
+      "Triggers": []
+    },
+    {
+      "SlotIndex": 3,
+      "Enabled": false,
+      "Triggers": []
+    },
+    {
+      "SlotIndex": 4,
+      "Enabled": false,
+      "Triggers": []
+    },
+    {
+      "SlotIndex": 5,
+      "Enabled": false,
+      "Triggers": []
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+2026-07-29 14:45:39,501 [1] INFO  Logger - DreamPoeBot Version: 0.3.29.5
+Path: C:\Users\<Username>\Desktop\DPB_3_29_05\<ExeName>
+Arguments: C:\Users\Administrator\Desktop\DPB_3_29_05\DreamPoeBot.exe
+
+OS Name: Microsoft Windows 10 企业版 2016 长期服务版
+OS Version: 10.0.14393
+OS Architecture: 64 位
+InstalledUICulture: zh-CN [Chinese (Simplified, China)]
+CurrentUICulture: zh-CN [Chinese (Simplified, China)]
+CurrentCulture: zh-CN [Chinese (Simplified, China)]
+
+2026-07-29 14:45:39,532 [1] INFO  Logger - Now setting up JitProfiles...
+2026-07-29 14:45:39,548 [1] INFO  Logger - JitProfiles successfully setup!
+2026-07-29 14:45:39,548 [1] INFO  Logger - Now checking prerequisites...
+2026-07-29 14:45:39,548 [1] INFO  Logger - Prerequisite check complete!
+2026-07-29 14:45:43,335 [1] INFO  Logger - [DreamAuthAuto] auth.dreamauth.top passed: 262144 bytes in 1507 ms; version response 1328 ms.
+2026-07-29 14:45:43,335 [1] INFO  Logger - [DreamAuthAuto] ru.dreamauth.top passed: 262144 bytes in 1541 ms; version response 1383 ms.
+2026-07-29 14:45:43,335 [1] INFO  Logger - [DreamAuthAuto] api.dreampoeauth.cloud passed: 262144 bytes in 345 ms; version response 581 ms.
+2026-07-29 14:45:43,335 [1] INFO  Logger - [DreamAuthAuto] api.dreampoeauth.xyz passed: 262144 bytes in 1073 ms; version response 1074 ms.
+2026-07-29 14:45:43,335 [1] INFO  Logger - [DreamAuthAuto] Selected proxy: api.dreampoeauth.cloud.
+2026-07-29 14:45:43,335 [1] INFO  Logger - DreamAuth signed updater test mode is enabled; legacy pre-login updater skipped.
+2026-07-29 14:45:43,475 [12] INFO  Logger - [Pre-Login] Connecting to BestLatency (15.235.186.246)
+2026-07-29 14:45:44,957 [12] INFO  Logger - Region: sea
+2026-07-29 14:45:44,957 [12] INFO  Logger - Loader authentication completed.
+2026-07-29 14:45:44,971 [12] INFO  Logger - [DreamUpdate] Signed release channel enabled; mode=apply, currentVersion=0.3.29.5.
+2026-07-29 14:45:45,394 [12] INFO  Logger - [DreamUpdate] Current build is up to date; signedVersion=0.3.29.5, artifact=dpb1-release-0-3-29-5-14.
+2026-07-29 14:45:57,695 [1] INFO  BotManager - [BotManager] MsBetweenTicks = 80
+2026-07-29 14:45:59,438 [6] INFO  Logger - Pattern scan completed.
+2026-07-29 14:45:59,461 [6] INFO  Logger - IngameState: 4DF77FD1010
+2026-07-29 14:46:25,956 [6] INFO  Logger - [Dat] Now building the Stat lookup table.
+2026-07-29 14:46:27,873 [6] INFO  Logger - [Dat] The Stat lookup table has been built.
+2026-07-29 14:46:27,979 [6] INFO  Logger - Core memory roots initialized.
+2026-07-29 14:47:00,897 [6] WARN  Logger - [HookManager] The injected runtime is still initializing after 30 seconds; waiting up to 375 seconds. BootstrapStage=2 (bootstrap_request_validated), BootstrapError=0 (none), BootstrapWin32Error=0 (none), BootstrapPipe=present.
+2026-07-29 14:47:01,877 [11] DEBUG Logger - [DreamAuthAreaObserve] WAITING|reason=no_active_area
+2026-07-29 14:47:01,877 [6] INFO  Logger - [DreamAuthAreaObserve] ARMED|generation=1|intervalMs=1000
+2026-07-29 14:47:02,066 [6] DEBUG ThirdPartyLoader - Loading start.
+2026-07-29 14:47:02,078 [6] DEBUG ThirdPartyLoader - Now loading [PluginLoader].
+2026-07-29 14:47:02,108 [6] DEBUG ThirdPartyLoader - [PluginLoader] will be loaded as [PluginLoader]. The base path is [].
+2026-07-29 14:47:02,110 [6] INFO  ThirdPartyLoader - Now asynchronously compiling dependency free content...
+2026-07-29 14:47:09,475 [6] INFO  Logger - [PluginLoader] Detected plugins: 
+-----------------
+	C:\Users\Administrator\Desktop\DPB_3_29_05\Plugins\PalLoader.dll
+-----------------
+2026-07-29 14:47:09,497 [6] INFO  Logger - [PalLoader] No key saved. Enter your key in the palLoader settings tab.
+2026-07-29 14:47:09,499 [6] INFO  Logger - [[PluginLoader] Loaded: palLoader v1.5 <pallala> - Protected ExileFriend, PalRoutine, and Palmover loader
+2026-07-29 14:47:09,501 [6] INFO  ThirdPartyLoader - PluginLoader
+2026-07-29 14:47:09,502 [6] INFO  ThirdPartyLoader -                    [Bots] : 
+2026-07-29 14:47:09,502 [6] INFO  ThirdPartyLoader -                    [Plugins] : PluginLoader (PluginLoader: 1.0)
+2026-07-29 14:47:09,503 [6] INFO  ThirdPartyLoader -                    [Routines] : 
+2026-07-29 14:47:09,504 [6] INFO  ThirdPartyLoader -                    [Content] : 
+2026-07-29 14:47:09,509 [6] INFO  ThirdPartyLoader -                    [PlayerMovers] : 
+2026-07-29 14:47:09,510 [6] INFO  ThirdPartyLoader - Content compiled in 00:00:07.3989496.
+2026-07-29 14:47:09,511 [6] DEBUG ThirdPartyLoader - Loading finished!
+2026-07-29 14:47:09,521 [6] ERROR ThirdPartyLoader - Please put your plugins into respective subdirectories!
+2026-07-29 14:47:10,432 [6] INFO  Logger - [Initialize] DreamPoeBot.Loki.Bot.SkillBlacklist
+2026-07-29 14:47:10,823 [6] INFO  Logger - [PluginLoader] Detected plugins: 
+-----------------
+	C:\Users\Administrator\Desktop\DPB_3_29_05\Plugins\PalLoader.dll
+-----------------
+2026-07-29 14:47:10,824 [6] INFO  Logger - [PalLoader] Another PalLoader instance is already active in this DreamPoeBot process. Skipping duplicate load.
+2026-07-29 14:47:10,824 [6] INFO  Logger - [[PluginLoader] Loaded: palLoader v1.5 <pallala> - Protected ExileFriend, PalRoutine, and Palmover loader
+2026-07-29 14:47:10,825 [6] INFO  Logger - [PalLoader] Another PalLoader instance is already active in this DreamPoeBot process. Skipping duplicate load.
+2026-07-29 14:47:10,831 [6] INFO  Logger - [Initialize] PalLoader.PalLoader
+2026-07-29 14:47:10,831 [6] INFO  Logger - [Initialize] PluginLoader.PluginLoader
+2026-07-29 14:47:11,039 [6] INFO  Logger - Registering default Hotkeys:
+2026-07-29 14:47:11,050 [6] INFO  Logger - 
+
+
+2026-07-29 14:47:16,803 [15] DEBUG Logger - [DreamAuthAreaObserve] SKIP|epoch=1|reason=Xd901yY8DcWY8agBXK9O
+2026-07-29 14:47:42,392 [1] INFO  Logger - [Enable] PalLoader.PalLoader
+2026-07-29 14:48:03,494 [1] INFO  Logger - [PluginManager.Deinitialize] PalLoader.PalLoader
+2026-07-29 14:48:03,662 [1] INFO  Logger - [PluginManager.Deinitialize] PluginLoader.PluginLoader
+2026-07-29 14:48:03,666 [1] INFO  Logger - [ContentManager.Deinitialize] DreamPoeBot.Loki.Bot.SkillBlacklist
+2026-07-29 14:48:04,193 [8] INFO  Logger - The Bot window is closed, now terminating DPB
+2026-07-29 14:48:05,198 [17] DEBUG Logger - DreamAuth heartbeat worker stopped during application shutdown.

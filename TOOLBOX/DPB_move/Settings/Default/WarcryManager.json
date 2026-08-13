@@ -1,0 +1,12 @@
+{
+  "Enabled": false,
+  "MinManaPercent": 20,
+  "EarlyMinSeconds": 1.0,
+  "EarlyMaxSeconds": 4.0,
+  "MinIntervalMs": 800,
+  "AdvancedMode": false,
+  "MaxWarcryRange": 40,
+  "StaggerDelayMs": 1000,
+  "DefaultCooldownSeconds": 8.0,
+  "WarcryCooldowns": {}
+}

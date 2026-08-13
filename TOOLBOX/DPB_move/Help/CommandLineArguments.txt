@@ -1,0 +1,106 @@
+DreamPoeBot Command-Line Arguments
+Last updated: August 7, 2026
+
+Syntax
+------
+Arguments accept -, --, or / as a prefix. Values may be separated with : or =.
+Quote values that contain spaces.
+
+Argument: log_path
+Usage: Stores logs in the specified subfolder of the Logs directory.
+Example: --log_path:MyCharacter
+
+Argument: global_override
+Usage: Uses a different GlobalSettings JSON file so multiple clients can keep independent global settings.
+Example: --global_override:MyCharacter.json
+
+Argument: pid
+Usage: Attaches DreamPoeBot to an existing Path of Exile process by process ID.
+Example: --pid:1234
+
+Argument: pname
+Usage: Attaches DreamPoeBot to an existing Path of Exile process by process name.
+Example: --pname:PathOfExile
+
+Argument: gamesetting
+Usage: Loads Path of Exile input bindings from the specified settings directory instead of searching the game user's Documents folders.
+Example: --GameSetting:"D:\PoE Settings"
+Expected files: production_Config.ini or garena_tw_production_Config.ini
+Note: Argument names are case-insensitive. The selected directory must contain a supported settings file.
+
+Argument: noautoattach
+Usage: Disables automatic attachment when exactly one compatible Path of Exile process is running.
+Example: --noautoattach
+
+Argument: bot
+Usage: Selects a bot by name during startup.
+Example: --bot:MyBot
+
+Argument: routine
+Usage: Selects a routine by name during startup.
+Example: --routine:MyRoutine
+
+Argument: mover
+Usage: Selects a player mover by name during startup.
+Example: --mover:MyMover
+
+Argument: silent
+Usage: Suppresses most message boxes that require user interaction.
+Example: --silent
+
+Argument: exitoncompileerrors
+Usage: Exits when content compilation errors are detected.
+Example: --exitoncompileerrors
+Exit code: ApplicationExitCodes.CompileErrors (7)
+
+Argument: exitonloaderrors
+Usage: Exits when content loading errors are detected.
+Example: --exitonloaderrors
+Exit code: ApplicationExitCodes.LoadErrors (9)
+
+Argument: autostart
+Usage: Starts the selected bot automatically after DreamPoeBot finishes loading.
+Example: --autostart
+Note: Auto-start is cancelled when LokiPoe.CancelAutoStart is true.
+
+Argument: autominimize
+Usage: Minimizes DreamPoeBot automatically after startup.
+Example: --autominimize
+
+Argument: authkey
+Usage: Supplies the DreamAuth key used by the login screen.
+Example: --authkey:YOUR_KEY
+Security: Command-line arguments may be visible to other local processes. Prefer the saved-key option on shared computers.
+
+Argument: autoauthlogin
+Usage: Submits the saved or supplied DreamAuth key automatically.
+Example: --autoauthlogin
+Note: The saved Auto Login setting provides the same behavior.
+
+Argument: config
+Usage: Selects the DreamPoeBot configuration used for settings.
+Example: --config:MyConfiguration
+Note: This overrides the last used configuration.
+
+Argument: global_backup_directory
+Usage: Restores GlobalSettings.json from the specified backup directory before settings are loaded.
+Example: --global_backup_directory:"D:\DreamPoeBot Backups"
+
+Argument: autoupdate
+Usage: Enables automatic application of updates through the signed DreamAuth updater.
+Example: --autoupdate
+Note: noupdate, the saved Disable Update Check setting, and a manual rollback hold still take precedence.
+
+Argument: autoupdatenorestart
+Usage: Applies an available update through the signed DreamAuth updater, closes DreamPoeBot, and leaves it stopped.
+Example: --autoupdatenorestart
+Note: This argument implies autoupdate. Start DreamPoeBot manually after the update completes.
+
+Argument: noupdate
+Usage: Skips both the signed updater and the legacy update check.
+Example: --noupdate
+
+Argument: language
+Usage: Selects the interface language during startup.
+Example: --language:en
+Accepted values: en, ru, fr, de, es, zh-CN, iv
