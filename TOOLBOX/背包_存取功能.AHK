@@ -150,6 +150,12 @@ global bagCoordMode := "window"
 global bagCalibrating := false              ; 是否處於背包校正模式 (Ctrl+F9)
 global bagGridMarkers := []                 ; 校正模式的網格 overlay 視窗名稱清單
 
+; 存倉速度與跳過空格 (settings.ini [Store])
+global storeInterval := 115                 ; 存倉每格間隔 (ms), 越小越快 (夾在 30-300)
+global storeSkipEmpty := true               ; 是否跳過空格 (需先校正 emptyCellColor 才會生效)
+global emptyCellColor := ""                 ; 空格背景色 0xRRGGBB; 空字串=未校正=永不跳過(安全)
+global emptyCellTolerance := 25             ; 空格顏色比對容差 (每通道 0-255, 越小越嚴格)
+
 ; 啟動時載入設定檔
 LoadSettings()
 
@@ -375,6 +381,10 @@ Right::NudgeBagGrid(1, 0)
 +Right::NudgeBagGrid(5, 0)
 Space::SetBagStartFromMouse()
 Enter::SetBagStartFromMouse()
+c::CaptureEmptyColor()          ; 取滑鼠處為空格背景色
+e::ToggleSkipEmpty()            ; 開關跳過空格
+[::AdjustStoreInterval(-5)      ; 加速 (間隔 -5ms)
+]::AdjustStoreInterval(5)       ; 減速 (間隔 +5ms)
 Escape::ToggleBagCalibration()
 #If
 
@@ -454,8 +464,8 @@ AppendLog(category, message) {
 ; 返回 true 如果遊戲視窗在焦點,否則返回 false
 IsGameWindowActive() {
     global gameProcessName
-    WinGet, activeProcess, ProcessName, A
-    return (activeProcess = gameProcessName)
+    ; 直接用 ahk_exe 判斷焦點視窗是否為遊戲程序 (不受外掛竄改標題影響)
+    return WinActive("ahk_exe " . gameProcessName) ? true : false
 }
 
 ; 尋找並激活遊戲視窗 (以程序名稱為主, 不受外掛竄改標題影響; 視窗類別為備援)
@@ -495,6 +505,7 @@ LoadSettings() {
     global npcOffsetX, npcOffsetY, dialogOffsetX, dialogOffsetY
     global bagStartX, bagStartY, bagOffsetX, bagOffsetY, bagRows, bagCols
     global bagCoordMode
+    global storeInterval, storeSkipEmpty, emptyCellColor, emptyCellTolerance
     global searchX1, searchY1, searchX2, searchY2
 
     ; 如果設定檔不存在,使用預設值
@@ -533,6 +544,16 @@ LoadSettings() {
     IniRead, val, %settingsFile%, Bag, bagCoordMode, %bagCoordMode%
     bagCoordMode := val
 
+    ; 存倉速度與跳過空格
+    IniRead, val, %settingsFile%, Store, storeInterval, %storeInterval%
+    storeInterval := val
+    IniRead, val, %settingsFile%, Store, storeSkipEmpty, %storeSkipEmpty%
+    storeSkipEmpty := val
+    IniRead, val, %settingsFile%, Store, emptyCellColor, NONE
+    emptyCellColor := (val = "NONE" || val = "ERROR" || val = "") ? "" : val
+    IniRead, val, %settingsFile%, Store, emptyCellTolerance, %emptyCellTolerance%
+    emptyCellTolerance := val
+
     ; 搜尋區域
     IniRead, val, %settingsFile%, Search, searchX1, %searchX1%
     searchX1 := val
@@ -551,6 +572,7 @@ SaveSettings() {
     global npcOffsetX, npcOffsetY, dialogOffsetX, dialogOffsetY
     global bagStartX, bagStartY, bagOffsetX, bagOffsetY, bagRows, bagCols
     global bagCoordMode
+    global storeInterval, storeSkipEmpty, emptyCellColor, emptyCellTolerance
     global searchX1, searchY1, searchX2, searchY2
 
     ; 遊戲程序名稱
@@ -572,6 +594,12 @@ SaveSettings() {
     IniWrite, %bagRows%, %settingsFile%, Bag, bagRows
     IniWrite, %bagCols%, %settingsFile%, Bag, bagCols
     IniWrite, %bagCoordMode%, %settingsFile%, Bag, bagCoordMode
+
+    ; 存倉速度與跳過空格
+    IniWrite, %storeInterval%, %settingsFile%, Store, storeInterval
+    IniWrite, %storeSkipEmpty%, %settingsFile%, Store, storeSkipEmpty
+    IniWrite, % (emptyCellColor = "" ? "NONE" : emptyCellColor), %settingsFile%, Store, emptyCellColor
+    IniWrite, %emptyCellTolerance%, %settingsFile%, Store, emptyCellTolerance
 
     ; 搜尋區域
     IniWrite, %searchX1%, %settingsFile%, Search, searchX1
@@ -663,7 +691,11 @@ LoadPrices() {
 
 ; 取得遊戲視窗範圍
 GetGameWindowRect() {
-    WinGet, hwnd, ID, ahk_class POEWindowClass
+    global gameProcessName
+    ; 以程序名稱為主 (標題會被外掛竄改); 視窗類別為備援
+    WinGet, hwnd, ID, ahk_exe %gameProcessName%
+    if (!hwnd)
+        WinGet, hwnd, ID, ahk_class POEWindowClass
     if (!hwnd) {
         Return {x: 0, y: 0, w: A_ScreenWidth, h: A_ScreenHeight}
     }
@@ -966,6 +998,30 @@ BuildBagCoordinates() {
     Return coords
 }
 
+; 兩個顏色是否接近 (每個 R/G/B 通道差都 <= tol)
+; 取樣一致即可, 不在意 PixelGetColor 是 RGB/BGR 順序 (兩邊都同樣取)
+ColorsClose(c1, c2, tol) {
+    r1 := (c1 >> 16) & 0xFF, g1 := (c1 >> 8) & 0xFF, b1 := c1 & 0xFF
+    r2 := (c2 >> 16) & 0xFF, g2 := (c2 >> 8) & 0xFF, b2 := c2 & 0xFF
+    Return (Abs(r1 - r2) <= tol && Abs(g1 - g2) <= tol && Abs(b1 - b2) <= tol)
+}
+
+; 判斷背包格 (中心 cx,cy) 是否為空格
+; 保守判定: 取中心+四點, 全部都像空背景色才算空 → 只要一點不同就當有物品(照點, 不漏存)
+; 未校正 emptyCellColor 時一律回傳 false (永不跳過, 安全)
+IsSlotEmpty(cx, cy) {
+    global emptyCellColor, emptyCellTolerance
+    if (emptyCellColor = "")
+        Return false
+    offsets := [[0, 0], [-6, -6], [6, -6], [-6, 6], [6, 6]]
+    for i, o in offsets {
+        PixelGetColor, c, cx + o[1], cy + o[2], RGB
+        if (!ColorsClose(c, emptyCellColor, emptyCellTolerance))
+            Return false   ; 有一點不像空背景 → 視為有物品
+    }
+    Return true            ; 全部都像空背景 → 空格
+}
+
 ; ===================================================================
 ; 背包座標校正模式 (Ctrl+F9) - 網格預覽 + 方向鍵微調 + 滑鼠取點
 ; ===================================================================
@@ -1052,9 +1108,45 @@ SetBagStartFromMouse() {
     ShowBagCalibrationTip()
 }
 
+; 取滑鼠位置像素為「空格背景色」(校正跳空格用)
+; 先清掉網格 overlay、並把游標暫時移開, 避免讀到紅點或游標本身的像素
+CaptureEmptyColor() {
+    global emptyCellColor
+    ClearBagGrid()
+    CoordMode, Mouse, Screen
+    CoordMode, Pixel, Screen
+    MouseGetPos, mx, my
+    MouseMove, mx + 60, my + 60, 0   ; 游標移開目標格
+    Sleep, 40
+    PixelGetColor, c, mx, my, RGB
+    MouseMove, mx, my, 0             ; 移回原位
+    emptyCellColor := c
+    DrawBagGrid()
+    ShowBagCalibrationTip()
+}
+
+; 開/關 跳過空格
+ToggleSkipEmpty() {
+    global storeSkipEmpty
+    storeSkipEmpty := !storeSkipEmpty
+    ShowBagCalibrationTip()
+}
+
+; 調整存倉每格間隔 (速度), 夾在 30-300ms
+AdjustStoreInterval(delta) {
+    global storeInterval
+    storeInterval += delta
+    if (storeInterval < 30)
+        storeInterval := 30
+    if (storeInterval > 300)
+        storeInterval := 300
+    ShowBagCalibrationTip()
+}
+
 ; 校正模式操作提示 (螢幕左上角 ToolTip)
 ShowBagCalibrationTip() {
     global bagStartX, bagStartY, bagOffsetX, bagOffsetY, bagRows, bagCols, bagCoordMode
+    global storeInterval, storeSkipEmpty, emptyCellColor, emptyCellTolerance
     modeText := (bagCoordMode = "window") ? "相對遊戲視窗" : "螢幕絕對"
     warn := ""
     if (bagCoordMode = "window") {
@@ -1062,12 +1154,16 @@ ShowBagCalibrationTip() {
         if (!origin.found)
             warn := "`n⚠️ 找不到遊戲視窗! 先開啟遊戲再校正"
     }
+    colorText := (emptyCellColor = "") ? "未校正(不跳空格)" : emptyCellColor
+    skipState := (!storeSkipEmpty) ? "關" : ((emptyCellColor = "") ? "開(待校正顏色)" : "開")
     CoordMode, ToolTip, Screen
     ToolTip, % "🎯 背包校正模式 (" . modeText . ")`n"
         . "起點: (" . bagStartX . ", " . bagStartY . ")   間距: " . bagOffsetX . "x" . bagOffsetY . "   格數: " . bagRows . "x" . bagCols . "`n"
+        . "存倉間隔: " . storeInterval . "ms   跳空格: " . skipState . "   空格色: " . colorText . " (容差" . emptyCellTolerance . ")`n"
         . "──────────────────────`n"
-        . "滑鼠移到背包第1格中心 → [空白鍵/Enter] 取點設起點`n"
-        . "[方向鍵] 平移 ±1     [Shift+方向鍵] 平移 ±5`n"
+        . "【座標】滑鼠移到第1格中心→[空白/Enter]取點  [方向鍵]平移±1  [Shift+方向鍵]±5`n"
+        . "【跳空格】滑鼠移到空格→[C]取空格色   [E]開關跳空格`n"
+        . "【速度】[ [ ]加速(間隔-5)  [ ] ]減速(間隔+5)`n"
         . "[Esc / Ctrl+F9] 存檔並離開" . warn, 20, 40
 }
 
@@ -1188,6 +1284,7 @@ Return
 ToggleStore() {
     global storeRunning, storePaused, activeFunction, gameProcessName, storeCoords, storeIndex
     global bagStartX, bagStartY, bagOffsetX, bagOffsetY, bagRows, bagCols
+    global storeInterval, storeSkipEmpty, emptyCellColor
     if (activeFunction = "Store") {
         storeRunning := false
         storePaused := false
@@ -1218,15 +1315,19 @@ ToggleStore() {
         totalSlots := bagRows * bagCols
         ; 開始前先按下 Ctrl 並保持按住
         Send, {Ctrl Down}
-        ; 使用較穩定的間隔進行座標處理 (已調降15%速度避免Request interrupted)
-        SetTimer, ProcessStore, 115
-        AppendLog("F5", "存倉已啟動 (" . totalSlots . " 格)")
+        ; 使用可調間隔進行座標處理 (storeInterval, F9/校正模式可調)
+        storeIntervalSafe := storeInterval
+        if (storeIntervalSafe < 30)
+            storeIntervalSafe := 30
+        SetTimer, ProcessStore, %storeIntervalSafe%
+        AppendLog("F5", "存倉已啟動 (" . totalSlots . " 格, 間隔 " . storeIntervalSafe . "ms, 跳空格:" . (storeSkipEmpty && emptyCellColor != "" ? "開" : "關") . ")")
         UpdateStatusText("💾 存倉執行中... (0/" . totalSlots . ") | 再按 F5 停止")
     }
 }
 ProcessStore:
     try {
         global storeRunning, storeCoords, storeIndex, storePaused, activeFunction
+        global storeSkipEmpty, emptyCellColor
         if (!storeRunning) {
             SetTimer, ProcessStore, Off
             Return
@@ -1240,14 +1341,25 @@ ProcessStore:
             UpdateStatusText("⏸️ 存倉已暫停 | Ctrl+F5 恢復")
             Return
         }
-        if (storeIndex > storeCoords.MaxIndex()) {
+        total := storeCoords.MaxIndex()
+        ; 快速跳過連續空格 (像素判定, 不點擊不延遲) — 同一個 tick 內略過所有空格
+        if (storeSkipEmpty && emptyCellColor != "") {
+            while (storeIndex <= total) {
+                c := storeCoords[storeIndex]
+                if (IsSlotEmpty(c.x, c.y))
+                    storeIndex++          ; 空格 → 直接跳過
+                else
+                    break                  ; 遇到有物品的格子, 停下來處理
+            }
+        }
+        if (storeIndex > total) {
             storeRunning := false
             SetTimer, ProcessStore, Off
             ; 全部座標處理完畢後安全釋放修飾鍵
             ReleaseAllModifiers()
             activeFunction := ""
-            AppendLog("F5", "存倉完成 (60/60)")
-            UpdateStatusText("✅ 存倉完成 (60/60)")
+            AppendLog("F5", "存倉完成 (" . total . "/" . total . ")")
+            UpdateStatusText("✅ 存倉完成 (" . total . "/" . total . ")")
             Sleep, 1500
             UpdateStatusText("🟢 待機中 | 按下熱鍵啟動功能")
             Return
@@ -1265,7 +1377,6 @@ ProcessStore:
 
         ; 更新進度
         progress := storeIndex
-        total := storeCoords.MaxIndex()
         UpdateStatusText("💾 存倉執行中... (" . progress . "/" . total . ") 延遲:" . currentDelay . "ms")
         storeIndex++
     } catch e {
@@ -1935,10 +2046,9 @@ TestNPCImages:
     global Text_倉庫NPC, Text_倉庫已開啟, Text_販售NPC, Text_販售管理商店對話窗
     global Text_販售管理商店已開啟, Text_Sell視窗, Text_SellOK, Text_Bag
 
-    ; 先激活遊戲視窗
-    WinGet, poeWinID, ID, ahk_class POEWindowClass
+    ; 先激活遊戲視窗 (以程序名稱為主, 不受外掛改標題影響)
+    poeWinID := ActivateGameWindow()
     if (poeWinID) {
-        WinActivate, ahk_id %poeWinID%
         Sleep, 300  ; 等待視窗激活
         UpdateStatusText("🎮 遊戲視窗已激活，開始測試...")
         Sleep, 200
@@ -3301,11 +3411,8 @@ ProcessFullAuto_Stage1_OpenStash(gameWin) {
 
     ; 每次循環都重新偵測倉庫 NPC
     if (Text_倉庫NPC != "") {
-        WinGet, poeWinID, ID, ahk_class POEWindowClass
-        if (poeWinID) {
-            WinActivate, ahk_id %poeWinID%
+        if (ActivateGameWindow())
             Sleep, 50
-        }
         npcResult := FindNPC(Text_倉庫NPC, npcOffsetX, npcOffsetY, gameWin.x, gameWin.y, gameWin.x + gameWin.w, gameWin.y + gameWin.h)
         if (npcResult.found) {
             toleranceText := (npcResult.tolerance = 0) ? "精確" : (npcResult.tolerance = 0.05) ? "*50" : "*100"
@@ -3420,11 +3527,8 @@ ProcessFullAuto_Stage3_SellNPC(gameWin) {
 
     ; 偵測販售 NPC
     if (Text_販售NPC != "") {
-        WinGet, poeWinID, ID, ahk_class POEWindowClass
-        if (poeWinID) {
-            WinActivate, ahk_id %poeWinID%
+        if (ActivateGameWindow())
             Sleep, 50
-        }
         npcResult := FindNPC(Text_販售NPC, npcOffsetX, npcOffsetY, gameWin.x, gameWin.y, gameWin.x + gameWin.w, gameWin.y + gameWin.h)
         if (npcResult.found) {
             toleranceText := (npcResult.tolerance = 0) ? "精確" : (npcResult.tolerance = 0.05) ? "*50" : "*100"
