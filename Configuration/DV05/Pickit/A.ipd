@@ -65,8 +65,8 @@
 ////////////////////////////////ForceSell/////////////////////////////////
 
 [Type] == "Map (Tier 16)" && [map_zana_influence] >= "1" # [ForceSellItem] == "true" // 本源(Zana/Originator)地圖 → 販售
-[Type] == "Map (Tier 16)" && [map_contains_citadel]>="1" # [StashItem] =="true" // 含要塞(Citadel)
-[Type] == "Map (Tier 16)" && [map_elder_boss_variation]>="1" # [StashItem] =="true" // 尊師(Elder)影響地圖
+[Type] == "Map (Tier 16)" && [map_contains_citadel]>="1" # [ForceSellItem] =="true" // 含要塞(Citadel)
+[Type] == "Map (Tier 16)" && [map_elder_boss_variation]>="1" # [ForceSellItem] =="true" // 尊師(Elder)影響地圖
 
 //Specil Map//
 [Type] == "Synthesised Map" # [StashItem] == "true" // 合成地圖
