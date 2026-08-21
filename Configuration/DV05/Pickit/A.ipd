@@ -1,4 +1,4 @@
-//[Type] == "Scrying Orb" # [StashItem] == "true" // 占卜寶珠
+[Type] == "Scrying Orb" # [StashItem] == "true" // 占卜寶珠
 
 //Tier0 Weapon Unique
 
@@ -48,10 +48,11 @@
 
 //3.29//
 [Type] == "Polaric Invitation" # [StashItem] == "true" // 極地之邀
-[Type] == "Sandy Seabed Chart" # [StashItem] == "true" // 沙質海床海圖
-[Type] == "Coral Forest Chart" # [StashItem] == "true" // 珊瑚林海圖
-[Type] == "Coral Reef Chart" # [StashItem] == "true" // 珊瑚礁海圖
-[Type] == "Thermal Vents Chart" # [StashItem] == "true" // 海底熱泉海圖
+//[Type] == "Sandy Seabed Chart" # [StashItem] == "true" // 沙質海床海圖（停用）
+//[Type] == "Coral Forest Chart" # [StashItem] == "true" // 珊瑚林海圖（停用）
+//[Type] == "Coral Reef Chart" # [StashItem] == "true" // 珊瑚礁海圖（停用）
+//[Type] == "Thermal Vents Chart" # [StashItem] == "true" // 海底熱泉海圖（停用）
+//// 海圖全部不撿：Clam-infested Shelf 為「測繪後揭露的航程目的地」，非可拾取基底，拾取階段無法辨識海圖顏色/價值 ////
 [Type] == "The Last Supper" # [StashItem] == "true" // 最後晚宴
 
 //// 3.28 Map ////
@@ -65,8 +66,13 @@
 ////////////////////////////////ForceSell/////////////////////////////////
 
 [Type] == "Map (Tier 16)" && [map_zana_influence] >= "1" # [ForceSellItem] == "true" // 本源(Zana/Originator)地圖 → 販售
-[Type] == "Map (Tier 16)" && [map_contains_citadel]>="1" # [ForceSellItem] =="true" // 含要塞(Citadel)
-[Type] == "Map (Tier 16)" && [map_elder_boss_variation]>="1" # [ForceSellItem] =="true" // 尊師(Elder)影響地圖
+[Type] == "Map (Tier 16)" # [ForceSellItem] == "true" // 含要塞(Citadel)
+[Type] == "Map (Tier 16)" # [ForceSellItem] == "true" // 尊師(Elder)影響地圖
+
+//// T1-T15 地圖 → 販售 (只賣 一般/魔法/稀有，不含傳奇 Unique) ////
+[Category] == "Map" && ([MapTier] >= "1" && [MapTier] <= "15") && [Rarity] == "Normal" # [ForceSellItem] == "true" // T1-T15 白地圖 → 販售
+[Category] == "Map" && ([MapTier] >= "1" && [MapTier] <= "15") && [Rarity] == "Magic"  # [ForceSellItem] == "true" // T1-T15 藍地圖 → 販售
+[Category] == "Map" && ([MapTier] >= "1" && [MapTier] <= "15") && [Rarity] == "Rare"   # [ForceSellItem] == "true" // T1-T15 稀有地圖 → 販售
 
 //Specil Map//
 [Type] == "Synthesised Map" # [StashItem] == "true" // 合成地圖
