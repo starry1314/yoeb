@@ -46,13 +46,13 @@
 [Type] == "Incandescent Invitation" # [StashItem] == "true" // 熾熱之邀
 [Type] == "Screaming Invitation" # [StashItem] == "true" // 尖嘯之邀
 
-//3.29//
 [Type] == "Polaric Invitation" # [StashItem] == "true" // 極地之邀
-//[Type] == "Sandy Seabed Chart" # [StashItem] == "true" // 沙質海床海圖（停用）
-//[Type] == "Coral Forest Chart" # [StashItem] == "true" // 珊瑚林海圖（停用）
-//[Type] == "Coral Reef Chart" # [StashItem] == "true" // 珊瑚礁海圖（停用）
-//[Type] == "Thermal Vents Chart" # [StashItem] == "true" // 海底熱泉海圖（停用）
-//// 海圖全部不撿：Clam-infested Shelf 為「測繪後揭露的航程目的地」，非可拾取基底，拾取階段無法辨識海圖顏色/價值 ////
+
+//3.29//
+
+//// 海圖(方案A)：撿所有稀有(Rare)海圖。[22910]=所有海圖通用標記(local_display_deepwater_chart_implicit)
+//// 【目前停用】要啟用：把下面那行最前面的 // 去掉。無法按目的地(Anchorfield等)篩，bot 引擎讀不到，需人工挑。////
+//[22910] == "1" && [Rarity] == "Rare" # [StashItem] == "true" // 所有稀有海圖 → 保存（停用中）
 [Type] == "The Last Supper" # [StashItem] == "true" // 最後晚宴
 
 //// 3.28 Map ////
