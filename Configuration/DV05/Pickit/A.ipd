@@ -70,9 +70,9 @@
 [Type] == "Map (Tier 16)" # [ForceSellItem] == "true" // 尊師(Elder)影響地圖
 
 //// T1-T15 地圖 → 販售 (只賣 一般/魔法/稀有，不含傳奇 Unique) ////
-[Category] == "Map" && ([MapTier] >= "1" && [MapTier] <= "15") && [Rarity] == "Normal" # [ForceSellItem] == "true" // T1-T15 白地圖 → 販售
-[Category] == "Map" && ([MapTier] >= "1" && [MapTier] <= "15") && [Rarity] == "Magic"  # [ForceSellItem] == "true" // T1-T15 藍地圖 → 販售
-[Category] == "Map" && ([MapTier] >= "1" && [MapTier] <= "15") && [Rarity] == "Rare"   # [ForceSellItem] == "true" // T1-T15 稀有地圖 → 販售
+//[Category] == "Map" && ([MapTier] >= "1" && [MapTier] <= "15") && [Rarity] == "Normal" # [ForceSellItem] == "true" // T1-T15 白地圖 → 販售
+//[Category] == "Map" && ([MapTier] >= "1" && [MapTier] <= "15") && [Rarity] == "Magic"  # [ForceSellItem] == "true" // T1-T15 藍地圖 → 販售
+//[Category] == "Map" && ([MapTier] >= "1" && [MapTier] <= "15") && [Rarity] == "Rare"   # [ForceSellItem] == "true" // T1-T15 稀有地圖 → 販售
 
 //Specil Map//
 [Type] == "Synthesised Map" # [StashItem] == "true" // 合成地圖
