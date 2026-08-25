@@ -401,12 +401,12 @@
 // [MapTier] >= "1" && [MapTier] < "3" && [Rarity] == "Rare" # [RunMap] == "true"
 
 
-//[Type] == "Coves Map" # [ExitAfterBossKill] == "true" // 疾風峽灣
-//[Type] == "Dunes Map" # [ExitAfterBossKill] == "true" // 暮色沙丘
-//[Type] == "Cemetery Map" # [ExitAfterBossKill] == "true" // 晨曦墓地
-//[Type] == "Map" # [ExitAfterBossKill] == "true" // 地圖
-//[Category] == "Map" # [ExitAfterBossKill]  == "true" // 地圖
-//[Type] == "Toxic Sewer" #  [ExitAfterBossKill] == "true" //
+[Type] == "Coves Map" # [ExitAfterBossKill] == "true" // 疾風峽灣
+[Type] == "Dunes Map" # [ExitAfterBossKill] == "true" // 暮色沙丘
+[Type] == "Cemetery Map" # [ExitAfterBossKill] == "true" // 晨曦墓地
+[Type] == "Map" # [ExitAfterBossKill] == "true" // 地圖
+[Category] == "Map" # [ExitAfterBossKill]  == "true" // 地圖
+[Type] == "Toxic Sewer" #  [ExitAfterBossKill] == "true" //
 
 // 9 -- Post Script
 
