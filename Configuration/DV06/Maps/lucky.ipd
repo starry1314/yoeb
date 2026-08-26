@@ -120,6 +120,25 @@
 [map_monsters_steal_charges] >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // 怪物偷取充能
 
 
+// -- 高死亡率詞綴 → 洗掉(2026-08-26 依效率分析:死亡率52%,新增避打)
+[map_additional_player_maximum_resistances_%] < "0" && [Rarity] == "Magic" # [RerollMods] == "true" // Of Exposure -- 玩家最大抗性 -X%（最致命）
+[map_additional_player_maximum_resistances_%] < "0" && [Rarity] == "Rare" # [RerollMods] == "true" // Of Exposure -- 玩家最大抗性 -X%（最致命）
+[map_monsters_damage_+%] >= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // Savage -- 怪物傷害 +%
+[map_monsters_damage_+%] >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Savage -- 怪物傷害 +%
+[map_monsters_%_physical_damage_to_add_as_fire] >= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // Burning -- 怪物額外火焰傷害
+[map_monsters_%_physical_damage_to_add_as_fire] >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Burning -- 怪物額外火焰傷害
+[map_monsters_%_physical_damage_to_add_as_cold] >= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // Freezing -- 怪物額外冰冷傷害
+[map_monsters_%_physical_damage_to_add_as_cold] >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Freezing -- 怪物額外冰冷傷害
+[map_monsters_%_physical_damage_to_add_as_lightning] >= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // Shocking -- 怪物額外閃電傷害
+[map_monsters_%_physical_damage_to_add_as_lightning] >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Shocking -- 怪物額外閃電傷害
+[map_monsters_critical_strike_chance_+%] >= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // Of Deadliness -- 怪物暴擊率/暴擊加成
+[map_monsters_critical_strike_chance_+%] >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Of Deadliness -- 怪物暴擊率/暴擊加成
+[map_player_has_level_X_elemental_weakness] >= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // Of Elemental Weakness -- 玩家被元素脆弱詛咒
+[map_player_has_level_X_elemental_weakness] >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Of Elemental Weakness -- 玩家被元素脆弱詛咒
+[map_player_has_level_X_vulnerability] >= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // Of Vulnerability -- 玩家被易傷詛咒
+[map_player_has_level_X_vulnerability] >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Of Vulnerability -- 玩家被易傷詛咒
+
+
 
 
 // [map_monsters_reflect_%_physical_damage] 	>= "1" && [Rarity] == "Rare" # [IgnoreMap] == "true" // Punishing -- Monsters Reflect % Physical Damage
