@@ -112,12 +112,12 @@
 
 [map_monsters_cannot_be_leeched_from] >= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // Of Congealment -- Cannot Leech Life/Mana From Monsters ｜ 無法從怪物汲取
 [map_monsters_cannot_be_leeched_from] >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Of Congealment -- Cannot Leech Life/Mana From Monsters ｜ 無法從怪物汲取
-[map_player_has_level_X_temporal_chains] >= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // Of Temporal Chains -- Players are cursed with Temporal Chains ｜ 玩家被時光之鏈詛咒
-[map_player_has_level_X_temporal_chains] >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Of Temporal Chains -- Players are cursed with Temporal Chains ｜ 玩家被時光之鏈詛咒
+//[map_player_has_level_X_temporal_chains] >= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // Of Temporal Chains -- Players are cursed with Temporal Chains ｜ 玩家被時光之鏈詛咒
+//[map_player_has_level_X_temporal_chains] >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // Of Temporal Chains -- Players are cursed with Temporal Chains ｜ 玩家被時光之鏈詛咒
 
 
-[map_monsters_steal_charges] >= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // 怪物偷取充能
-[map_monsters_steal_charges] >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // 怪物偷取充能
+//[map_monsters_steal_charges] >= "1" && [Rarity] == "Magic" # [RerollMods] == "true" // 怪物偷取充能
+//[map_monsters_steal_charges] >= "1" && [Rarity] == "Rare" # [RerollMods] == "true" // 怪物偷取充能
 
 
 // -- 高死亡率詞綴 → 洗掉【目前停用 2026-08-29,要再避打把下面各行開頭 // 去掉】
