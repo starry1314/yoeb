@@ -420,12 +420,13 @@
 // [MapTier] >= "1" && [MapTier] < "3" && [Rarity] == "Rare" # [RunMap] == "true"
 
 
-[Type] == "Coves Map" # [ExitAfterBossKill] == "true" // 疾風峽灣
-[Type] == "Dunes Map" # [ExitAfterBossKill] == "true" // 暮色沙丘
-[Type] == "Cemetery Map" # [ExitAfterBossKill] == "true" // 晨曦墓地
-[Type] == "Map" # [ExitAfterBossKill] == "true" // 地圖
-[Category] == "Map" # [ExitAfterBossKill]  == "true" // 地圖
-[Type] == "Toxic Sewer" #  [ExitAfterBossKill] == "true" //
+// 【停用 2026-08-29:打完王立刻退出會導致沒清圖、通貨少。改讓 bot 自然清到 map_clean_percent】
+//[Type] == "Coves Map" # [ExitAfterBossKill] == "true" // 疾風峽灣
+//[Type] == "Dunes Map" # [ExitAfterBossKill] == "true" // 暮色沙丘
+//[Type] == "Cemetery Map" # [ExitAfterBossKill] == "true" // 晨曦墓地
+//[Type] == "Map" # [ExitAfterBossKill] == "true" // 地圖
+//[Category] == "Map" # [ExitAfterBossKill]  == "true" // 地圖
+//[Type] == "Toxic Sewer" #  [ExitAfterBossKill] == "true" //
 
 // 9 -- Post Script
 
