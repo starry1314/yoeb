@@ -50,10 +50,9 @@
 
 //3.29//
 
-//// 海圖(Chart/Deepwater)：【決定=不撿】保持無任何生效規則。智慧拾取下沒規則命中=不主動撿，海圖留在地上。
-//// EB 無「不撿」動作旗標，也無 ignore_chart；[22910]=所有海圖通用標記(local_display_deepwater_chart_implicit)。
-//// 若要改成撿(存倉)：把下面那行最前面的 // 去掉。無法按目的地(Anchorfield等)篩，引擎讀不到，需人工挑。////
-//[22910] == "1" && [Rarity] == "Rare" # [StashItem] == "true" // 所有稀有海圖 → 保存（停用中）
+//// 海圖(Chart/Deepwater)：【決定=撿稀有海圖→存倉 2026-08-29】[22910]=所有海圖通用標記(local_display_deepwater_chart_implicit)。
+//// 要撿「所有稀有度」→ 把 && [Rarity] == "Rare" 刪掉;要改回不撿 → 該行開頭加 //。無法按目的地(Anchorfield等)篩,引擎讀不到。////
+[22910] == "1" && [Rarity] == "Rare" # [StashItem] == "true" // 所有稀有海圖 → 存倉
 [Type] == "The Last Supper" # [StashItem] == "true" // 最後晚宴
 
 //// 3.28 Map ////
