@@ -49,7 +49,7 @@
 [Type] == "Incandescent Invitation" # [StashItem] == "true" // 熾熱之邀
 [Type] == "Screaming Invitation" # [StashItem] == "true" // 尖嘯之邀
 
-[Type] == "Polaric Invitation" # [StashItem] == "true" // 極地之邀
+//[Type] == "Polaric Invitation" # [StashItem] == "true" // 極地之邀
 
 //3.29//
 
