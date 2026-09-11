@@ -690,11 +690,76 @@
             </summary>
       <returns></returns>
     </member>
+    <member name="M:DreamPoeBot.Loki.Bot.Coroutines.NativeInteract(DreamPoeBot.Loki.Game.Objects.NetworkObject,System.Boolean,System.Int32,System.UInt16)">
+      <summary>
+            Interacts with a supported NetworkObject through the native game dispatcher.
+            The object is resolved again from the current area's object map by its
+            network ID immediately before dispatch, so callers must not reuse an
+            object across an area transition.
+            </summary>
+      <remarks>
+            Native behavior is currently enabled for WorldItem, Portal, Chest,
+            Monolith and every AreaTransition, including transitions whose
+            TransitionType is Unknown.
+            Other object types are rejected locally without publishing a mailbox
+            request and must continue through the legacy interaction path.
+            </remarks>
+      <param name="obj">A current-area WorldItem, Portal, Chest, Monolith or AreaTransition.</param>
+      <param name="shouldMove">If false, targets farther than 20 game units are rejected with ShouldMove.</param>
+      <param name="timeout">Maximum time to wait for the game-thread mailbox result.</param>
+      <param name="flags">One of the flags accepted by WorldInteractionContract.</param>
+      <returns>The native mailbox/dispatcher result.</returns>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Bot.Coroutines.NativeMove(DreamPoeBot.Common.Vector2i,System.Int32)">
+      <summary>
+            Dispatches one native Move action to a game-world destination. A held
+            native Move input was observed to use the same single dispatch.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Bot.Coroutines.NativeSelectTangleAltarOption(DreamPoeBot.Loki.Game.Objects.TangleAltar,DreamPoeBot.Loki.Game.TangleAltarOption,System.Int32)">
+      <summary>
+            Selects one of the two native options exposed by a current TangleAltar.
+            The request contains only the current-area NetworkObject ID and the
+            verified native selector; it does not synthesize a mouse click.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Bot.Coroutines.NativeSelectTangleAltarTopOption(DreamPoeBot.Loki.Game.Objects.TangleAltar,System.Int32)">
+      <summary>Selects the upper native Tangle altar option.</summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Bot.Coroutines.NativeSelectTangleAltarBottomOption(DreamPoeBot.Loki.Game.Objects.TangleAltar,System.Int32)">
+      <summary>Selects the lower native Tangle altar option.</summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Bot.Coroutines.NativeUpgradeBlightTower(DreamPoeBot.Loki.Game.Objects.BlightDefensiveTower,DreamPoeBot.Loki.Game.BlightTowerUpgrade,System.Int32)">
+      <summary>
+            Upgrades one current Blight tower without opening or clicking its UI.
+            The upgrade value is the verified BlightTowers.dat row ID.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Bot.Coroutines.IsNativeInteractionSupported(DreamPoeBot.Loki.Game.Objects.NetworkObject)">
+      <summary>
+            Returns whether native interaction has been verified for this object's
+            concrete API type.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Bot.Coroutines.Loot(DreamPoeBot.Loki.Game.Objects.NetworkObject,System.Boolean,System.Int32)">
+      <summary>
+            Try to interact with a WorldItem game object.
+            Use this to loot WorldItems faster.
+            Pls remember that if you are more than distance 20 from the object, you char will move to the object before to loot with it.
+            </summary>
+      <param name="obj">The NetworkObject to interact with, MUST BE A WorldItem.</param>
+      <param name="shouldMove">If set to false, the method will return immediatly in case we need to move to loot.</param>
+      <param name="tmeout">The max time the function will wait for the action to complete, keep in mind that looting objects at distance &gt; 20, will trigget a movment before the loot, this time should account for that.</param>
+      <returns>LootResult.None or the relative error.</returns>
+    </member>
     <member name="M:DreamPoeBot.Loki.Bot.Coroutines.InteractWith(DreamPoeBot.Loki.Game.Objects.NetworkObject,System.Boolean)">
       <summary>
             Try to interact with a generic game object.
             Use this to interact with the game world, for example to loot a item, to interact with a a npc, a area transition etc etc.
             Pls remember that if you are more than distance 18 from the object, you char will move to the object before to interact with it.
+            The native dispatcher is used only for WorldItem, Portal, Chest,
+            Monolith and AreaTransition; every other NetworkObject keeps the legacy
+            click path.
             </summary>
       <param name="obj">The NetworkObject to interact with.</param>
       <param name="holdCtrl">Should we keep the control button pressed while interacting?</param>
@@ -705,6 +770,8 @@
             Try to interact with a specific game object, all specific game object inherit from NetworkObject.
             Use this to interact with the game world, for example to loot a item, to interact with a a npc, a area transition etc etc.
             Pls remember that if you are more than distance 18 from the object, you char will move to the object before to interact with it. 
+            The native dispatcher is used only for WorldItem, Portal, Chest,
+            Monolith and AreaTransition; every other type keeps the legacy path.
             </summary>
       <typeparam name="T">The specific NetworkObject, es NPC, WorldItem etc etc.</typeparam>
       <param name="obj">The NetworkObject to interact with.</param>
@@ -1395,7 +1462,7 @@
     <member name="T:DreamPoeBot.Loki.Bot.Pathfinding.RDWrapper.Core.PfMemCache">
       <summary>
                 In-memory cache for live Pathfinder instances keyed by area hash.
-                No disk IO. Evicts stale instances (by last access time) on each request.
+                No disk IO. An area remains cached for the complete TTL after it stops being active.
             </summary>
     </member>
     <member name="P:DreamPoeBot.Loki.Bot.Pathfinding.RDWrapper.Core.PfMemCache.EntryTtl">
@@ -1410,7 +1477,8 @@
     <member name="M:DreamPoeBot.Loki.Bot.Pathfinding.RDWrapper.Core.PfMemCache.GetOrCreateForAreaHash(DreamPoeBot.Loki.Game.CachedTerrainData,DreamPoeBot.Loki.Bot.Pathfinding.RDWrapper.Types.RecastMeshSettings)">
       <summary>
                 Gets an existing Pathfinder for the area or creates it using provided terrain data.
-                Updates last access and evicts stale entries before returning.
+                Marks the requested area as active and starts the full idle TTL for every area
+                that was active immediately before it.
             </summary>
     </member>
     <member name="M:DreamPoeBot.Loki.Bot.Pathfinding.RDWrapper.Core.PfMemCache.RemoveForAreaHash(System.UInt32)">
@@ -1423,7 +1491,7 @@
       <summary>Removes and disposes all cached instances.</summary>
     </member>
     <member name="M:DreamPoeBot.Loki.Bot.Pathfinding.RDWrapper.Core.PfMemCache.CleanupStale(System.Nullable{System.UInt32})">
-      <summary>Evicts and disposes entries idle longer than EntryTtl.</summary>
+      <summary>Evicts and disposes entries that have been inactive longer than EntryTtl.</summary>
     </member>
     <member name="M:DreamPoeBot.Loki.Bot.Pathfinding.RDWrapper.Core.PfMemCache.SafeDispose(DreamPoeBot.Loki.Bot.Pathfinding.RDWrapper.Core.Pathfinder)">
       <summary>
@@ -1432,11 +1500,13 @@
     </member>
     <member name="T:DreamPoeBot.Loki.Bot.Pathfinding.RDWrapper.Core.PfMemCache.CacheEntry">
       <summary>
-                Internal cache record holding a lazily-created Pathfinder and last-access timestamp.
+                Internal cache record holding a lazily-created Pathfinder and its inactive timestamp.
             </summary>
     </member>
-    <member name="F:DreamPoeBot.Loki.Bot.Pathfinding.RDWrapper.Core.PfMemCache.CacheEntry.LastAccessTicks">
-      <summary>UTC ticks of the most recent successful access to this entry.</summary>
+    <member name="F:DreamPoeBot.Loki.Bot.Pathfinding.RDWrapper.Core.PfMemCache.CacheEntry.InactiveSinceTimestamp">
+      <summary>
+                Monotonic timestamp captured when the area stopped being active, or zero while active.
+            </summary>
     </member>
     <member name="F:DreamPoeBot.Loki.Bot.Pathfinding.RDWrapper.Core.PfMemCache.CacheEntry.Lazy">
       <summary>Lazy-constructed Pathfinder instance (created once per area hash).</summary>
@@ -1732,6 +1802,51 @@
              Return the deepwater room stats and values.
             </summary>
     </member>
+    <member name="T:DreamPoeBot.Loki.Components.Projectile">
+      <summary>
+            Runtime projectile graph. The component itself is only 0x30 bytes in the
+            current client; trajectory data belongs to the owner's Positioned component.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.Projectile.Snapshot">
+      <summary>
+            Coherent per-frame view of origin, skill, trajectory and circular hull.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.Projectile.Caster">
+      <summary>
+            Entity that launched the projectile. Capture this near projectile birth:
+            the client can clear or recycle the backlink during despawn.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.Projectile.SourceSkillAddress">
+      <summary>
+            Skill pointer retained by the first Positioned skill-state chain.
+            Falls back to the parallel chain when the first one is unavailable.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.Projectile.SourceSkill">
+      <summary>
+            Source skill resolved against the caster's Actor component.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Components.Projectile.GetPointAlongTrajectory(System.Single)">
+      <summary>
+            Returns a point at a signed spatial distance along the projectile axis.
+            It intentionally does not assume a time unit for EffectiveSpeed.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Components.Projectile.DistanceFromHull(DreamPoeBot.Common.Vector2)">
+      <summary>
+            Euclidean distance from a point to the outside of the projectile's
+            circular narrow-phase hull. Zero means inside or touching.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Components.Projectile.IntersectsCircle(DreamPoeBot.Common.Vector2,System.Single)">
+      <summary>
+            Client-equivalent radial overlap test with an optional second radius.
+            </summary>
+    </member>
     <member name="P:DreamPoeBot.Loki.Components.Tincture.BaseManaburnMsTick">
       <summary>
             The base milliseconds between tick of Manaburn. Pls note, stats on the item might modify it.
@@ -1740,6 +1855,93 @@
     <member name="P:DreamPoeBot.Loki.Components.Tincture.BaseMsCooldown">
       <summary>
             The base milliseconds cooldown after deactivation. Pls note, stats on the item might modify it.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.Animated.Snapshot">
+      <summary>
+            Compact per-frame view of the current animation and internal render geometry.
+            </summary>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Components.AnimatedSnapshot">
+      <summary>
+            Coherent, compact view of the useful state exposed by an Animated component.
+            The native animated-entity graph remains an implementation detail.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.AnimatedSnapshot.Metadata">
+      <summary>The animated-properties resource, usually a Metadata/.../*.ao path.</summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.AnimatedSnapshot.HasAnimation">
+      <summary>True when the current animation-controller state was read coherently.</summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.AnimatedSnapshot.AnimationStage">
+      <summary>Raw controller stage/state value. It is not assumed to be a zero-based list index.</summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.AnimatedSnapshot.AnimationProgress">
+      <summary>Current controller-cycle progress normalized to the 0..1 range.</summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.AnimatedSnapshot.AnimationSpeed">
+      <summary>Observed animation speed multiplier.</summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.AnimatedSnapshot.HasTransform">
+      <summary>True when the live native affine transform was valid.</summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.AnimatedSnapshot.WorldPosition">
+      <summary>World-space translation of the animated effect/model transform.</summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.AnimatedSnapshot.GridCenter">
+      <summary>World-space translation converted to the PoE integer map grid.</summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.AnimatedSnapshot.Scale">
+      <summary>Lengths of the transform basis axes. Uniform effects have equal components.</summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.AnimatedSnapshot.RotationRadians">
+      <summary>Rotation around the world Z axis, in radians.</summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.AnimatedSnapshot.HasLocalBounds">
+      <summary>True when AnimatedRender supplied a coherent local AABB.</summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.AnimatedSnapshot.LocalBounds">
+      <summary>Untransformed bounds owned by the internal AnimatedRender component.</summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.AnimatedSnapshot.EstimatedHorizontalRadius">
+      <summary>
+            Conservative horizontal radius derived from local XY bounds and transform scale.
+            For circular effects such as arena_limit.ao this is the rendered boundary radius.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.AnimatedSnapshot.EstimatedGridRadius">
+      <summary>Estimated horizontal radius converted to PoE map-grid units.</summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.Positioned.ObjectSize">
+      <summary>
+            Native collision extent used by the spatial broad and narrow phase.
+            This is the authoritative byte at Positioned+0x1E3, not the two visual scale factors.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.Positioned.CharacterSize">
+      <summary>
+            Compatibility name for callers that used CharacterSize as the collision extent.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.Positioned.EffectiveSpeed">
+      <summary>
+            Effective movement/projectile speed scalar after live stat modifiers.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.Positioned.SizeFactorA">
+      <summary>
+            First native visual-size factor. It is not the collision radius.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.Positioned.SizeFactorB">
+      <summary>
+            Second native visual-size factor. It is not the collision radius.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Components.Positioned.FacingDirection">
+      <summary>
+            Unit vector matching the client's world-space heading convention.
             </summary>
     </member>
     <member name="T:DreamPoeBot.Loki.Coroutine.Coroutine">
@@ -1924,6 +2126,12 @@
     <member name="M:DreamPoeBot.Loki.Elements.AffinitieCheckbox.ClickCheckBox">
       <summary>
             Click this checkbox.
+            </summary>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Elements.SpecificElement.ComboBoxElement">
+      <summary>
+            Compatibility wrapper over the native ComboBox layout shared with
+            GenericComboBoxElement. The former +0x438/+0x5C0 interpretation was stale.
             </summary>
     </member>
     <member name="P:DreamPoeBot.Loki.Elements.DivineFontUiElement.TransfigureOption.IsSelected">
@@ -2148,6 +2356,13 @@
             DatSkillGemWrapper describing the gem.
             </summary>
     </member>
+    <member name="T:DreamPoeBot.Loki.FilesInMemory.DatStringCanonicalizer">
+      <summary>
+            Canonicalizes repeated DAT strings while a file is being loaded. The
+            lookup table is intentionally owned by the loader and becomes collectible
+            immediately after loading completes.
+            </summary>
+    </member>
     <member name="T:DreamPoeBot.Loki.Game.ApplicationExitCodes">
       <summary>
             Process exit codes exposed when DreamPoeBot terminates.
@@ -2189,6 +2404,42 @@
     <member name="F:DreamPoeBot.Loki.Game.ApplicationExitCodes.MissingPrerequisites">
       <summary>The application cannot run because a prerequisite is missing.</summary>
     </member>
+    <member name="T:DreamPoeBot.Loki.Game.GameData.GeometryTriggerKind">
+      <summary>
+            Native discriminator stored in GeometryTrigger.datc64.
+            </summary>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.GameData.GeometryTriggerPrimitive">
+      <summary>
+            Shape inferred from the native kind and its geometric parameters.
+            This is deliberately independent from the trigger's world transform.
+            </summary>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.GameData.GeometryTriggerShape">
+      <summary>
+            Immutable, process-independent view of a GeometryTrigger shape.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.GameData.GeometryTriggerShape.PrimarySize">
+      <summary>
+            Outer radius for polar shapes and first dimension for rectangles.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.GameData.GeometryTriggerShape.SecondarySize">
+      <summary>
+            Inner radius for polar shapes and second dimension for rectangles.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.GameData.GeometryTriggerShape.RawAngularExtentDegrees">
+      <summary>
+            Native angular value. Zero means a complete 360-degree sweep.
+            </summary>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.GameData.DatGeometryTriggerWrapper">
+      <summary>
+            Live-memory view of a packed GeometryTrigger.datc64 row.
+            </summary>
+    </member>
     <member name="T:DreamPoeBot.Loki.Game.GameData.StatTypeGGG">
       <summary>
             Stats Type as rapresented in the game ggpk file.
@@ -2199,6 +2450,12 @@
             Returns true if item is deferred in <see cref="T:DreamPoeBot.Loki.Game.LokiPoe.InGameState.RitualFavorsUi" /> InventoryControl
             </summary>
       <param name="localId">local id of the item in ritual rewards window.</param>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.InventoryControlWrapper.GetItemsHighlightedByRegex">
+      <summary>
+                Return a List of Items actually Highlighted by the search regex.
+            </summary>
+      <returns>List of Item.</returns>
     </member>
     <member name="T:DreamPoeBot.Loki.Game.LokiPoe.ObjectManager">
       <summary>
@@ -2866,6 +3123,13 @@
             Paste a specific text into a text field.
             </summary>
       <param name="msg">The text to paste.</param>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.Input.PasteText(System.String,System.Boolean)">
+      <summary>
+            Paste a specific text into a text field.
+            </summary>
+      <param name="msg">The text to paste.</param>
+      <param name="useSend">If true, SendMessage will be used instead of PostMessage, it is a little more slower, but 100% garantee the message to be fully inserted, while PostMessage is fast, but might fail on low fps, or overloaded cpu scenarios.</param>
     </member>
     <member name="M:DreamPoeBot.Loki.Game.LokiPoe.Input.MoveMouse(System.Single,System.Single)">
       <summary>
@@ -3911,237 +4175,904 @@
             Aclass that describe a Labyrinth room.
             </summary>
     </member>
-    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager">
-      <summary>
-            A static class to retieve information and controll the Hook manager that controll the game during the bot running state.
-            </summary>
-    </member>
-    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.DebugStateManager(System.Boolean)">
-      <summary>
-            Only here for internal testing.
-            </summary>
-      <param name="state"></param>
-    </member>
-    <member name="F:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.OnInjectionDisabledByIngecion">
-      <summary>
-            Event that indicate a Injection desync due to Authentication failure.
-            </summary>
-    </member>
-    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.ClearAllKeyStates">
-      <summary>
-            Fuction to clear all the eventually pressed keys.
-            </summary>
-    </member>
-    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.ClearAllKeyStatesBeside(System.Collections.Generic.HashSet{System.Windows.Forms.Keys})">
-      <summary>
-            	Reset all the key state to unpressed, but preserve the state of the passed keys.
-            </summary>
-      <param name="keys">Keys to preserve.</param>
-    </member>
-    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.IsEnabled">
-      <summary>
-            Return true is the Hook is active.
-            </summary>
-    </member>
-    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.State">
-      <summary>
-            Return a StateEnum enumerator representing the actua hook state.
-            </summary>
-    </member>
-    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.StateEnum">
-      <summary>
-            An enumerator representing the possible Hook states.
-            </summary>
-    </member>
-    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.Enable">
-      <summary>
-            Activate the Hook.
-            </summary>
-    </member>
-    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.Disable">
-      <summary>
-            Deactivate the Hook.
-            </summary>
-    </member>
-    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.SetKeyState(System.Windows.Forms.Keys,System.Int16,System.Boolean,System.Windows.Forms.Keys)">
-      <summary>
-            Set a specific key to a specific value, Exemple: to set a key in a pressed state use `ProcessHookManager.SetKeyState(Keys.ControlKey, -32768);`, to set it in release state use `ProcessHookManager.SetKeyState(Keys.ControlKey, 0);`
-            </summary>
-      <param name="key">A valid System.Window.Form Key.</param>
-      <param name="value">A short indicating the state, use `-32768` for pressed, and `0` for not pressed.</param>
-            /// <param name="modifier">The modifier key Ctrl, Alt, Shift, that this key binging require.</param></member>
-    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.GetKeyState(System.Windows.Forms.Keys)">
-      <summary>
-            Retrieve the state of a specific key
-            </summary>
-      <param name="key">A valid System.Window.Form Key.</param>
-      <returns>Return a short indicating the state, `-32768` for pressed, and `0` for not pressed.</returns>
-    </member>
-    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.IsKeyDown(System.Windows.Forms.Keys)">
-      <summary>
-            Return true if a specific Key is in pressed state.
-            </summary>
-      <param name="key">A valid System.Window.Form Key.</param>
-      <returns>Return true if the Key is in pressed state..</returns>
-    </member>
-    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.Reset">
-      <summary>
-            Fuction to clear all the eventually pressed keys.
-            </summary>
-    </member>
-    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.ResetCursor">
-      <summary>
-            Reset the Curson at the center of the Game window.
-            </summary>
-    </member>
-    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.ReadCursorPos(System.Int32@,System.Int32@,System.Int32@)">
-      <summary>
-            Read the position of the cursor.
-            </summary>
-      <param name="x">The retrived cursor X position.</param>
-      <param name="y">The retrived cursor Y position.</param>
-      <param name="result">Unused, its always 1.</param>
-    </member>
-    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.TemporaryPerformanceProfiler">
-      <summary>
-            Temporary Performance Profiler used for internal performance test purpose.
-            </summary>
-    </member>
-    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.AnnotatedContainerProfiler">
-      <summary>
-            Annotated Container Profiler used for internal performance test purpose.
-            </summary>
-    </member>
-    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.AnnotatedProfiler">
-      <summary>
-            Annotated Profiler used for internal performance test purpose.
-            </summary>
-    </member>
-    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.CaracterCreationState">
-      <summary>
-            This class retive informations and perform tasks on the Caracter Creation State Ui.
-            </summary>
-    </member>
-    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.CaracterCreationState.SelectedLeague">
-      <summary>
-            Return the currently selected League.
-            </summary>
-    </member>
-    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.CaracterCreationState.SelectedCharacterClass">
-      <summary>
-            Return the currently selected Class.
-            </summary>
-    </member>
-    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.CaracterCreationState.CreateNonRaceCharacter(DreamPoeBot.Loki.Game.LokiPoe.CaracterCreationState.League,DreamPoeBot.Loki.Game.GameData.CharacterClass,System.String)">
-      <summary>
-            This function attemp to create a new character, given a League, a Class and a Name.
-            </summary>
-      <param name="league">The desired League.</param>
-      <param name="characterClass">The desired character Class.</param>
-      <param name="name">The desire character Name.</param>
-      <returns></returns>
-    </member>
-    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.CaracterCreationState.CharacterCreationResult">
-      <summary>
-            An enumerator representing the CharacterCreationResult.
-            </summary>
-    </member>
-    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.CaracterCreationState.League">
-      <summary>
-            An enumerator representing the avaiable leagues.
-            </summary>
-    </member>
-    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.SelectCharacterState">
-      <summary>
-            This class retive informations and perform tasks on the Select Character State Ui.
-            </summary>
-    </member>
-    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.SelectCharacterState.IsCharacterListLoaded">
-      <summary>
-            Return true if the list of aviable characters is fully loaded.
-            </summary>
-    </member>
-    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.SelectCharacterState.Characters">
-      <summary>
-            Retrieve an IEnumerable of CharacterEntry representing the list of aviable characters.
-            </summary>
-    </member>
-    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.SelectCharacterState.SelectCharacter(System.String)">
-      <summary>
-            Select a specific character given a name, and click the Play button.
-            </summary>
-      <param name="name">The name of the character to select.</param>
-      <returns>Return a SelectCharacterError enumerator error or None if successfull.</returns>
-    </member>
-    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.SelectCharacterState.PressCreateCharacter">
-      <summary>
-            Click the Create Character button.
-            </summary>
-    </member>
-    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.SelectCharacterState.CreateNonRaceCharacter">
-      <summary>
-            This function is actually Disabled.
-            </summary>
-      <returns></returns>
-    </member>
-    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.EscapeState">
-      <summary>
-            This class retive informations and perform tasks on the Escape State Ui, the menu can be open with the 'Esc' key.
-            </summary>
-    </member>
-    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.EscapeState.ActivateEscapeState">
-      <summary>
-            Try to activate the Escape state Menu using the 'Esc' key.
-            </summary>
-      <returns>Return true if the Escape state is already active or if active at the completition of the function.</returns>
-    </member>
-    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.EscapeState.ExitGame">
-      <summary>
-            Try to open the Escape state menu and clicke the Exit Game button.
-            </summary>
-      <returns>Return an EscapeState.LogoutError enumerator indicating ta error or None if the function sucessfully completed.</returns>
-    </member>
-    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.EscapeState.ExitGame(System.Int32)">
-      <summary>
-            Try to open the Escape state menu and clicke the Exit Game button.
-            </summary>
-      <param name="delayBetweenMenuAndClickMs"> Millisecond to wait before to click the button after the menu appear.</param>
-      <returns>Return an EscapeState.LogoutError enumerator indicating ta error or None if the function sucessfully completed.</returns>
-    </member>
-    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.EscapeState.LogoutToTitleScreen">
-      <summary>
-            Try to open the Escape state menu and clicke the Logout To Title Screen button.
-            </summary>
-      <returns>Return an EscapeState.LogoutError enumerator indicating ta error or None if the function sucessfully completed.</returns>
-    </member>
-    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.EscapeState.LogoutToTitleScreen(System.Int32)">
-      <summary>
-            Try to open the Escape state menu and clicke the Logout To Title Screen button.
-            </summary>
-      <param name="delayBetweenMenuAndClickMs"> Millisecond to wait before to click the button after the menu appear.</param>
-      <returns>Return an EscapeState.LogoutError enumerator indicating ta error or None if the function sucessfully completed.</returns>
-    </member>
-    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.EscapeState.LogoutToCharacterSelection">
-      <summary>
-            Try to open the Escape state menu and clicke the Logout To Character Selection button.
-            </summary>
-      <returns>Return an EscapeState.LogoutError enumerator indicating ta error or None if the function sucessfully completed.</returns>
-    </member>
-    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.EscapeState.LogoutToCharacterSelection(System.Int32)">
-      <summary>
-            Try to open the Escape state menu and clicke the Logout To Character Selection button.
-            </summary>
-      <param name="delayBetweenMenuAndClickMs"> Millisecond to wait before to click the button after the menu appear.</param>
-      <returns>Return an EscapeState.LogoutError enumerator indicating ta error or None if the function sucessfully completed.</returns>
-    </member>
-    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.EscapeState.LogoutError">
-      <summary>
-            EscapeState.LogoutError enumerator.
-            </summary>
-    </member>
     <member name="T:DreamPoeBot.Loki.Game.LokiPoe.InGameState">
       <summary>
             This is one of the most important class of the Framework, its purpose, is to offer easy to use wrappers members and methods to retrieve informations and interact with the game intefraces.
+            </summary>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.InGameState.CadirosOfferUi">
+      <summary>
+            This class let you interact with the  Cadiro's Offer panel.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.CadirosOfferUi.IsOpened">
+      <summary>
+            Return true if the  Cadiro's Offer panel visible.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.CadirosOfferUi.Purchase">
+      <summary>
+            	Click the Purchase button.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.CadirosOfferUi.Skip">
+      <summary>
+            	Click the Skip button.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.CadirosOfferUi.GoldCost">
+      <summary>
+            	return the gold cost.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.CadirosOfferUi.RemainingSkips">
+      <summary>
+            	return the number of remaining skips.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.CadirosOfferUi.OfferedItem">
+      <summary>
+            	An Item class describing the item offered.
+            </summary>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch">
+      <summary>
+            Retrieve information and perform actions over various Kingsmarch panels.
+            </summary>
+      <summary>
+            Retrieve information and perform actions over various Kingsmarch panels.
+            </summary>
+      <summary>
+            Retieve information and perform actions over various Kingsmarch panel.
+            </summary>
+      <summary>
+            Retieve information and perform actions over various Kingsmarch panel.
+            </summary>
+      <summary>
+            Retrieve information and perform actions over various Kingsmarch panels.
+            </summary>
+      <summary>
+            Retieve information and perform actions over various Kingsmarch panel.
+            </summary>
+      <summary>
+            Retieve information and perform actions over various Kingsmarch panel.
+            </summary>
+      <summary>
+            Retieve information and perform actions over various Kingsmarch panel.
+            </summary>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.DisenchantPanelUi">
+      <summary>
+            Retrieve information and perform actions over the Kingsmarch Disenchant panel.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.DisenchantPanelUi.IsOpened">
+      <summary>
+            Return true if the Kingsmarch Disenchant panel is open.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.DisenchantPanelUi.ThaumaturgicDust">
+      <summary>
+             Return the current Thaumaturgic Dust.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.DisenchantPanelUi.CurrentItemDisenchantTime">
+      <summary>
+            Return the time it take to disenchant the current item.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.DisenchantPanelUi.AllItemDisenchantTime">
+      <summary>
+            Return the time it take to disenchant all item.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.DisenchantPanelUi.CurrentWorkers">
+      <summary>
+            Return the current mappers in this device.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.DisenchantPanelUi.MaxWorkers">
+      <summary>
+            Return the max mappers in this device.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.DisenchantPanelUi.InventoryControl">
+      <summary>
+            Return a InventoryControlWrapper to interact with the Disenchant inventory.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.DisenchantPanelUi.ItemDisenchanted">
+      <summary>
+            Return the item currently disenchanted.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.DisenchantPanelUi.ManageWorkers">
+      <summary>
+            Click to open the WorkersPanelUi.
+            </summary>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi">
+      <summary>
+            Retrieve information and perform actions over the Kingsmarch Harbour panel.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.IsOpened">
+      <summary>
+            Return true if the Harbour panel is open.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Ships">
+      <summary>
+            Return the ships currently displayed by the Harbour panel.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Ports">
+      <summary>
+            Return the ports currently available on the Harbour map.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Ship.Name">
+      <summary>
+            Return the name of this ship.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Ship.ShipStatus">
+      <summary>
+            Return the ship status.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Ship.Crew">
+      <summary>
+            Return the ship crew.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Ship.CurrentCrew">
+      <summary>
+            Return the current number of assigned crew members.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Ship.MaxCrew">
+      <summary>
+            Return the maximum crew capacity.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Ship.Shipment">
+      <summary>
+            Return the ship shipment displayed by this ship card.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Ship.RiskPct">
+      <summary>
+            Return the risk percent.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Ship.PrepareCrew">
+      <summary>
+            Click to open the worker UI.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Ship.PrepareShipment">
+      <summary>
+            Click to open the shipment UI.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Ship.CanSelectPort">
+      <summary>
+            Return true if the Select Port is visible and enabled.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Ship.SelectPort">
+      <summary>
+            Click to open the port selection.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Ship.Destination">
+      <summary>
+            The actual ship destination.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Ship.TravelTime">
+      <summary>
+            The remaining travel time.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Ship.Wage">
+      <summary>
+            The ship travel cost per hour.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Ship.CanCancelDestination">
+      <summary>
+            Return true if the Select Port is visible and enabled.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Ship.CancelDestination">
+      <summary>
+            Click to cancel destination.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Ship.CanSetsail">
+      <summary>
+            Return true if the Select Port is visible and enabled.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Ship.Setsail">
+      <summary>
+            Click to set sail.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Ship.CanAbandon">
+      <summary>
+            Return true if the Select Port is visible and enabled.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Ship.Abandon">
+      <summary>
+            Click to abandon.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Port.Name">
+      <summary>
+            Return the name of this port.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Port.Distance">
+      <summary>
+            Distance in km from Kingsmarch.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Port.RerollCost">
+      <summary>
+            Gold cost for rerolling this port's favoured resources.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Port.FavoredResources">
+      <summary>
+            Return the port's favoured resources.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Port.SelectPort">
+      <summary>
+            Click to select the port.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.Port.RerollFavorites">
+      <summary>
+            Right-click to reroll favoured resources.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.FavoredResource.Name">
+      <summary>
+            Return the name of this resource.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.FavoredResource.Supplied">
+      <summary>
+            Return the amount already supplied.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.FavoredResource.Requested">
+      <summary>
+            Return the amount requested.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.FavoredResource.BonusPct">
+      <summary>
+            Return the bonus percent.
+            </summary>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.PrepareShipmentUi">
+      <summary>
+            Retrieve information and perform actions over the Kingsmarch Harbour Prepare Shipment panel.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.PrepareShipmentUi.IsOpened">
+      <summary>
+            Return true if the Prepare Shipment panel is open.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.PrepareShipmentUi.ShipmentValue">
+      <summary>
+            Return the shipment value.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.PrepareShipmentUi.Cargo">
+      <summary>
+            Return all products that can be loaded onto the ship.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.PrepareShipmentUi.Done">
+      <summary>
+            Click the Done button.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.PrepareShipmentUi.Clear">
+      <summary>
+            Click the Clear button.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.PrepareShipmentUi.Product.Name">
+      <summary>
+            Return the name of this product.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.PrepareShipmentUi.Product.Available">
+      <summary>
+            Return the amount available for trade.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.HarbourPanelUi.PrepareShipmentUi.Product.Loaded">
+      <summary>
+            Get or set the amount loaded.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.Worker.Name">
+      <summary>
+            Return the worker Name
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.Worker.CurrentActivity">
+      <summary>
+            Return the worker Current activity.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.Worker.Wage">
+      <summary>
+            return the worker Wage.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.Worker.Jobs">
+      <summary>
+            return a list of job this worker can do, and the rank.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.Worker.Action">
+      <summary>
+            Click to Dismiss this worker.
+            </summary>
+      <returns></returns>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi">
+      <summary>
+            Retieve information and perform actions over the Kingsmarch panel.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeData">
+      <summary>
+             Read the Kingsmarch client model directly from memory. This is an
+             explicit alternative to the UI-backed properties below. Before the
+             panel has initialized its display cache, values marked by IsLive ==
+             false are the last authoritative server snapshot.
+            
+             IsLive become true only when the KingsmarchPanelUi is open.
+             </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.IsOpened">
+      <summary>
+            Return true if the Kingsmarch, panel is open.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.TreasuryGold">
+      <summary>
+             Return the current treasury gold.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.AddTreasuryGold(System.Int32)">
+      <summary>
+            Add golds to the Treasury.
+            </summary>
+      <param name="golds">the ammount to add.</param>
+      <returns>true if the a rise exactly of the ammount wanted.</returns>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.RemoveTreasuryGold(System.Int32)">
+      <summary>
+            Add golds to the Treasury.
+            </summary>
+      <param name="golds">the ammount to add.</param>
+      <returns>true if the treasury rise exactly of the ammount wanted.</returns>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.CurrentPopulation">
+      <summary>
+            Return the current Population you have.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.MaxPopulation">
+      <summary>
+            Return the max Population you can have.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.WagePerHour">
+      <summary>
+            Return the current wage per hour.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.TreasuryEmptyIn">
+      <summary>
+            Return the time it take to depleat your treasury.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.Ores">
+      <summary>
+            Return a List or Resources describing the Ore status.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.Bars">
+      <summary>
+            Return a List or Resources describing the Bars status.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.ThaumaturgicDust">
+      <summary>
+            Return a Resources describing the Thaumaturgic Dust status.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.Crops">
+      <summary>
+            Return a List or Resources describing the Crops status.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.CanAdd">
+      <summary>
+            Return true if the Add button is visible and enabled.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.AddGold">
+      <summary>
+            Click the Add button to add gold to the treasury.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.CanRemove">
+      <summary>
+            Return true if the Remove button is visible and enabled.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.RemoveGold">
+      <summary>
+            Click the Remove button to remove gold from the treasury.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.CanCancel">
+      <summary>
+            Return true if the Cancel button is visible and enabled.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.Cancel">
+      <summary>
+            Click the Cancel button to cancel the current operation.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.IsTreasuryTextboxEnabled">
+      <summary>
+            Return true if the TreasuryTextbox is visible and enabled.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.TreasuryTextboxValue">
+      <summary>
+            Return true if the TreasuryTextbox is visible and enabled.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.EditTreasuryTextbox(System.Int32)">
+      <summary>
+            Click the Cancel button to cancel the current operation.
+            </summary>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeKingsmarchData">
+      <summary>
+            Represents Kingsmarch data read directly from the client model or its initialized live caches.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeKingsmarchData.IsAvailable">
+      <summary>
+            Gets whether the Kingsmarch client model was available when the data was read.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeKingsmarchData.IsLive">
+      <summary>
+            Gets whether the values come from initialized, continuously updated client caches. Opening the Ui once, initialize the dada.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeKingsmarchData.ServerTimestamp">
+      <summary>
+            Gets the Unix timestamp associated with the authoritative server snapshot.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeKingsmarchData.TreasuryGold">
+      <summary>
+            Gets the treasury gold value.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeKingsmarchData.WagePerHour">
+      <summary>
+            Gets the total worker wage per hour, or -1 when the live cache is unavailable.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeKingsmarchData.TreasuryEmptyIn">
+      <summary>
+            Gets the estimated time until the treasury is empty.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeKingsmarchData.CurrentPopulation">
+      <summary>
+            Gets the number of workers currently present in the Kingsmarch model.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeKingsmarchData.MaxPopulation">
+      <summary>
+            Gets the maximum worker population, or -1 before the live cache is initialized.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeKingsmarchData.Ores">
+      <summary>
+            Gets the current ore quantities.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeKingsmarchData.Bars">
+      <summary>
+            Gets the current smelted-bar quantities.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeKingsmarchData.ThaumaturgicDust">
+      <summary>
+            Gets the current thaumaturgic-dust quantity.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeKingsmarchData.Crops">
+      <summary>
+            Gets the current crop quantities.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeKingsmarchData.Workers">
+      <summary>
+            Gets the workers decoded from the Kingsmarch client model.
+            </summary>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeWorker">
+      <summary>
+            Represents a Kingsmarch worker and the worker's current assignment and skills.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeWorker.Name">
+      <summary>
+            Gets the worker's full name.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeWorker.Wage">
+      <summary>
+            Gets the worker's individual hourly wage.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeWorker.Activity">
+      <summary>
+            Gets the worker's current activity description.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeWorker.ActivityType">
+      <summary>
+            Gets the category of the worker's current activity.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeWorker.Skills">
+      <summary>
+            Gets the worker's available job skills and ranks.
+            </summary>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeWorkerSkill">
+      <summary>
+            Represents a worker's rank in a Kingsmarch job.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeWorkerSkill.Job">
+      <summary>
+            Gets the job name.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeWorkerSkill.Rank">
+      <summary>
+            Gets the worker's rank in the job.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.NativeWorkerSkill.#ctor(System.String,System.Int32)">
+      <summary>
+            Initializes a worker skill.
+            </summary>
+      <param name="job">The job name.</param>
+      <param name="rank">The worker's rank in the job.</param>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.Resource">
+      <summary>
+            Represents a Kingsmarch resource quantity and, when available, its amount being processed.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.Resource.Name">
+      <summary>
+            Gets the resource name.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.Resource.Acquired">
+      <summary>
+            Gets the acquired quantity.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.Resource.Processed">
+      <summary>
+            Gets the quantity being processed, or -1 when it is unavailable.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.KingsmarchPanelUi.Resource.#ctor(System.String,System.Int32,System.Int32)">
+      <summary>
+            Initializes a Kingsmarch resource value.
+            </summary>
+      <param name="name">The resource name.</param>
+      <param name="acuired">The acquired quantity.</param>
+      <param name="processed">The quantity being processed.</param>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.MappingPanelUi.IsOpened">
+      <summary>
+            Return true if the Kingsmarch Mapping panel is open.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.MappingPanelUi.CanOpenMap">
+      <summary>
+            Return true is the Open Map button is enabled.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.MappingPanelUi.OpenMap">
+      <summary>
+            Click the Open Map button.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.MappingPanelUi.IsMapperDiedDisplayed">
+      <summary>
+            Return true if Mapper Died message is displayed.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.MappingPanelUi.ConfirmIsMapperDied">
+      <summary>
+            Click the Confirm button, for the Mapper died window.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.MappingPanelUi.IsMapperKidnappedDisplayed">
+      <summary>
+            Return true if Mapper Kidnapped message is displayed.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.MappingPanelUi.AbandonAtlasRunners">
+      <summary>
+            Click the Abandon button.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.MappingPanelUi.RescueAtlasRunners">
+      <summary>
+            Click the Rescue button.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.MappingPanelUi.CanPayRansom">
+      <summary>
+            Return true the Ransom button is Visible and Enabled.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.MappingPanelUi.RansomAtlasRunners">
+      <summary>
+            Click the Ransom button.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.MappingPanelUi.CanExitMap">
+      <summary>
+            Return true the Exit Map button is Visible and Enabled.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.MappingPanelUi.ExitMap">
+      <summary>
+            Click the Exit Map button.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.MappingPanelUi.CanSuspendMapping">
+      <summary>
+            Return true the Suspend Mapping button is Visible and Enabled.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.MappingPanelUi.SuspendMapping">
+      <summary>
+            Click the Suspend Mapping button.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.MappingPanelUi.CurrentWorkers">
+      <summary>
+            Return the current mappers in this device.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.MappingPanelUi.MaxWorkers">
+      <summary>
+            Return the max mappers in this device.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.MappingPanelUi.ManageWorkers">
+      <summary>
+            Click to open the WorkersPanelUi.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.MappingPanelUi.RunnableMap.Map">
+      <summary>
+            Return the Item corresponding this map.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.MappingPanelUi.RunnableMap.Completed">
+      <summary>
+            Return true if this map is completed.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.MappingPanelUi.RunnableMap.Running">
+      <summary>
+            Return true if this map is running.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.MappingPanelUi.RunnableMap.Click">
+      <summary>
+            Click the map slot to remove the map or to get rewards.
+            </summary>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RecruitPanelUi">
+      <summary>
+            Retieve information and perform actions over the Kingsmarch Recruit panel.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RecruitPanelUi.IsOpened">
+      <summary>
+            Return true if the Kingsmarch Recruits panel is open.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RecruitPanelUi.Recruits">
+      <summary>
+            Return alist or Recruits, with info and functions. Pls NOTE: every time you perform some operation, like hire a recruit, you need to re-get this property to get a fresh list.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RecruitPanelUi.Workers">
+      <summary>
+            Return alist or Workers, with info and functions. Pls NOTE: every time you perform some operation, like dismiss a worker, you need to re-get this property to get a fresh list.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RecruitPanelUi.CanHire">
+      <summary>
+            Return true is the Hire button is enabled.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RecruitPanelUi.Hire">
+      <summary>
+            Click the Hire button to hire the selected recruit.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RecruitPanelUi.RerollRecruits">
+      <summary>
+            Click the Reroll Recruits button.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RecruitPanelUi.RerollQualityRecruits">
+      <summary>
+            Click the Reroll High Quality Recruits button.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RecruitPanelUi.CurrentWorkers">
+      <summary>
+            Return the current number of recruits you have.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RecruitPanelUi.MaxWorkers">
+      <summary>
+            Return the max number of recruits you can have.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RecruitPanelUi.Recruit.Name">
+      <summary>
+            Return the worker Name
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RecruitPanelUi.Recruit.Cost">
+      <summary>
+            Return the worker Cost.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RecruitPanelUi.Recruit.Wage">
+      <summary>
+            return the worker Wage.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RecruitPanelUi.Recruit.Jobs">
+      <summary>
+            return a list of job this worker can do, and the rank.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RecruitPanelUi.Recruit.IsSelected">
+      <summary>
+            Return true if the worker is currently selected.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RecruitPanelUi.Recruit.Select">
+      <summary>
+            Scroll and click to select a worker.
+            </summary>
+      <returns></returns>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RecruitPanelUi.Employers.Dismiss">
+      <summary>
+            Click to Dismiss this worker.
+            </summary>
+      <returns></returns>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.WorkersPanelUi.IsOpened">
+      <summary>
+            Return true if the Kingsmarch, Workers panel is open.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.WorkersPanelUi.AssignedWorkers">
+      <summary>
+            Return alist or Workers, with info and functions. Pls NOTE: every time you perform some operation, like dismiss a worker, you need to re-get this property to get a fresh list.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.WorkersPanelUi.AvaiableWorkers">
+      <summary>
+            Return alist or Workers, with info and functions. Pls NOTE: every time you perform some operation, like dismiss a worker, you need to re-get this property to get a fresh list.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.WorkersPanelUi.AssignedWorker.Remove">
+      <summary>
+            Click to Remove this worker.
+            </summary>
+      <returns></returns>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.WorkersPanelUi.AvaiableWorker.Assign">
+      <summary>
+            Click to Assign this worker.
+            </summary>
+      <returns></returns>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RewardPanelUi">
+      <summary>
+            Retieve information and perform actions over the Kingsmarch Reward panel.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RewardPanelUi.IsOpened">
+      <summary>
+            Return true if the Kingsmarch, Reward inventory panel is open.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RewardPanelUi.TabControl">
+      <summary>
+            Return a TabControlWrapper with information about the Kingsmarch, Reward panel Tabs.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RewardPanelUi.InventoryControl">
+      <summary>
+            Return a InventoryControlWrapper to interact with the Kingsmarch, Reward current Tab inventory.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RewardPanelUi.TakeAll">
+      <summary>
+            Click the Take All button
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RewardPanelUi.DiscardAll">
+      <summary>
+            Click the Discard All button
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.LegionCocoonWindowUi.IsOpened">
+      <summary>
+            Return true if the panel is open.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.LegionCocoonWindowUi.Insert">
+      <summary>
+            	Click the Insert button.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.LegionCocoonWindowUi.Close">
+      <summary>
+            	Click the Close button.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.LegionCocoonWindowUi.InventoryControl">
+      <summary>
+            	An InventoryControlWrapper class describing the item slot.
             </summary>
     </member>
     <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.FrameUnderCursor">
@@ -4482,6 +5413,11 @@
             </summary>
     </member>
     <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.AtlasUi.UsableNodes">
+      <summary>
+            Return a list of AtlasNodeRecord rapresenting all usable atlas nodes.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.AtlasUi.VisibleNodes">
       <summary>
             Return a list of AtlasNodeRecord rapresenting all usable atlas nodes.
             </summary>
@@ -5931,11 +6867,6 @@
             </summary>
       <returns>return true on success.</returns>
     </member>
-    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.InGameState.ExpeditionDealerUi.Deal">
-      <summary>
-            This class rapresent the small Parchase window that appear when you buy items from a Deal interface (Rog, the Dealer)
-            </summary>
-    </member>
     <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.ExpeditionDealerUi.Deal.Purchase.IsOpen">
       <summary>
             Return true if the Purchaise window is visible
@@ -6942,41 +7873,6 @@
             </summary>
     </member>
     <!-- Badly formed XML comment ignored for member "M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.InventoryUi.HandlePendingLevelUps(System.Func{DreamPoeBot.Loki.Game.Inventory,DreamPoeBot.Loki.Game.Objects.Item,DreamPoeBot.Loki.Game.Objects.Item,System.Boolean},System.Boolean)" -->
-    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch">
-      <summary>
-            Retieve information and perform actions over various Kingsmarch panel.
-            </summary>
-    </member>
-    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RewardPanelUi">
-      <summary>
-            Retieve information and perform actions over the Kingsmarch Reward panel.
-            </summary>
-    </member>
-    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RewardPanelUi.IsOpened">
-      <summary>
-            Return true if the Kingsmarch, Reward inventory panel is open.
-            </summary>
-    </member>
-    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RewardPanelUi.TabControl">
-      <summary>
-            Return a TabControlWrapper with information about the Kingsmarch, Reward panel Tabs.
-            </summary>
-    </member>
-    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RewardPanelUi.InventoryControl">
-      <summary>
-            Return a InventoryControlWrapper to interact with the Kingsmarch, Reward current Tab inventory.
-            </summary>
-    </member>
-    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RewardPanelUi.TakeAll">
-      <summary>
-            Click the Take All button
-            </summary>
-    </member>
-    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.Kingsmarch.RewardPanelUi.DiscardAll">
-      <summary>
-            Click the Discard All button
-            </summary>
-    </member>
     <member name="T:DreamPoeBot.Loki.Game.LokiPoe.InGameState.KiracMissionsUi">
       <summary>
             Retrieve informations and let you interact with the Kirac Mission interface.
@@ -7463,6 +8359,16 @@
     <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.MercenaryEncounterUi.IsRematchActive">
       <summary>
             Return true if Rematch is enabled.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.MercenaryEncounterUi.IsShouldRecruitActive">
+      <summary>
+            	Return true if the Should Recruit Checkbox is checked.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.MercenaryEncounterUi.ClickShouldRecruit">
+      <summary>
+            Click the Should Recruit checkbox.
             </summary>
     </member>
     <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.MercenaryEncounterUi.TakeItem">
@@ -8234,6 +9140,16 @@
     <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.PurchaseUi.HighlightedItems">
       <summary>
             Return a list of currently highlighted Items, like the violet blinking canvas when you buy from other players.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.InGameState.PurchaseUi.HighlightItemsTextBox">
+      <summary>
+                Get or set the value of the Hightlight Items search bar.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.PurchaseUi.ClearSearchText">
+      <summary>
+            Clear the search text.
             </summary>
     </member>
     <member name="T:DreamPoeBot.Loki.Game.LokiPoe.InGameState.QuickFlaskHud">
@@ -9718,6 +10634,13 @@
             </summary>
       <returns>TakeWaypointResult.None on success, or the relative error.</returns>
     </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.WorldUi.GoToMonasteryOfKeepers">
+      <summary>
+            Click The Monastery of the Keepers button.
+            Please Note: to ensure Monastery of the Keepers button is visible, you can check The Sovereign quest state.
+            </summary>
+      <returns>TakeWaypointResult.None on success, or the relative error.</returns>
+    </member>
     <member name="M:DreamPoeBot.Loki.Game.LokiPoe.InGameState.WorldUi.TakeWaypoint(System.String,System.Boolean,System.Int32,System.Boolean)">
       <summary>
             Click on a specific Waypoint.
@@ -9810,6 +10733,332 @@
             Click the activate button.
             </summary>
       <returns>ActivateZanaMissionResult.None on success, or the relative error.</returns>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.WorldInteraction">
+      <summary>
+            Internal low-level native action transport through the injected
+            runtime's game-thread mailbox. Public callers continue to use the
+            established gameplay APIs, which select this backend when available.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.WorldInteraction.Availability">
+      <summary>
+            Gets the current injected-runtime interaction capability and
+            resolver state.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.WorldInteraction.TryQueue(System.UInt32,System.UInt16,DreamPoeBot.Common.Vector2i,DreamPoeBot.Loki.Game.WorldInteractionRequest@,DreamPoeBot.Loki.Game.WorldInteractionResult@,System.Int32)">
+      <summary>
+            Queues one interaction without waiting for its completion.
+            </summary>
+      <remarks>
+            Only one request can be outstanding. A managed timeout does not
+            make the mailbox reusable while the original command remains
+            pending or executing.
+            </remarks>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.WorldInteraction.TryQueueMove(DreamPoeBot.Common.Vector2i,DreamPoeBot.Loki.Game.WorldInteractionRequest@,DreamPoeBot.Loki.Game.WorldInteractionResult@,System.Int32)">
+      <summary>
+            Queues one atomic native Move action without waiting for it.
+            A held native Move input was observed to produce the same single
+            dispatch, so this API intentionally has no repeat/hold mode.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.WorldInteraction.TryQueueTangleAltarOption(System.UInt32,DreamPoeBot.Loki.Game.TangleAltarOption,DreamPoeBot.Loki.Game.WorldInteractionRequest@,DreamPoeBot.Loki.Game.WorldInteractionResult@,System.Int32)">
+      <summary>
+            Queues one native Tangle altar option callback without waiting.
+            The injected runtime resolves the object again by ID and invokes
+            the matching verified game callback on the game thread.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.WorldInteraction.TryQueueBlightTowerUpgrade(System.UInt32,DreamPoeBot.Loki.Game.BlightTowerUpgrade,DreamPoeBot.Loki.Game.WorldInteractionRequest@,DreamPoeBot.Loki.Game.WorldInteractionResult@,System.Int32)">
+      <summary>
+            Queues one native Blight tower upgrade without waiting. The
+            injected runtime resolves the tower by its current-area ID and
+            sends the same compact packet as PoE's verified UI callback.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.WorldInteraction.TryQueueStrongboxCurrency(System.UInt32,System.UInt32,System.UInt32,DreamPoeBot.Loki.Game.WorldInteractionRequest@,DreamPoeBot.Loki.Game.WorldInteractionResult@,System.Int32)">
+      <summary>
+            Queues one native Strongbox currency operation. ItemLocalId is
+            the selected inventory stack instance, not a currency type ID.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.WorldInteraction.Wait(DreamPoeBot.Loki.Game.WorldInteractionRequest,System.Int32)">
+      <summary>
+            Waits briefly for a previously queued request without busy
+            spinning. The wait can be resumed with the same request after a
+            managed timeout.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.WorldInteraction.Interact(System.UInt32,System.UInt16,DreamPoeBot.Common.Vector2i,System.Int32,System.Boolean)">
+      <summary>
+            Queues and waits for one native NetworkObject interaction. A zero network
+            object ID is rejected without publishing or dispatching a
+            command. The fallback position remains explicit for ABI
+            compatibility but does not enable zero-ID interaction. When
+            movement is disabled, targets farther than 20 units are
+            rejected locally without touching the mailbox.
+            </summary>
+      <remarks>
+            A Dispatched result means that the game dispatcher was invoked;
+            it does not independently confirm the resulting game-side effect.
+            This low-level method cannot determine the NetworkObject API
+            type from an ID and therefore does not apply the high-level
+            WorldItem/Portal/AreaTransition/Chest whitelist.
+            </remarks>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.WorldInteraction.Move(DreamPoeBot.Common.Vector2i,System.Int32)">
+      <summary>
+            Queues and waits for one atomic native Move dispatch to the
+            supplied game-world destination.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.WorldInteraction.SelectTangleAltarOption(System.UInt32,DreamPoeBot.Loki.Game.TangleAltarOption,System.Int32)">
+      <summary>
+            Selects one of the two native options for a current Tangle altar.
+            This low-level ID API cannot validate the managed object type;
+            callers should normally use Coroutines.NativeSelectTangleAltarOption.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.WorldInteraction.UpgradeBlightTower(System.UInt32,DreamPoeBot.Loki.Game.BlightTowerUpgrade,System.Int32)">
+      <summary>
+            Upgrades one current Blight tower using its network object ID
+            and the verified BlightTowers.dat row ID.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.WorldInteraction.ApplyStrongboxCurrency(System.UInt32,System.UInt32,System.UInt32,System.Int32)">
+      <summary>
+            Applies one inventory currency stack to a current Strongbox.
+            </summary>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager">
+      <summary>
+            A static class to retieve information and controll the Hook manager that controll the game during the bot running state.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.DebugStateManager(System.Boolean)">
+      <summary>
+            Only here for internal testing.
+            </summary>
+      <param name="state"></param>
+    </member>
+    <member name="F:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.OnInjectionDisabledByIngecion">
+      <summary>
+            Event that indicate a Injection desync due to Authentication failure.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.ClearAllKeyStates">
+      <summary>
+            Fuction to clear all the eventually pressed keys.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.ClearAllKeyStatesBeside(System.Collections.Generic.HashSet{System.Windows.Forms.Keys})">
+      <summary>
+            	Reset all the key state to unpressed, but preserve the state of the passed keys.
+            </summary>
+      <param name="keys">Keys to preserve.</param>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.IsEnabled">
+      <summary>
+            Return true is the Hook is active.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.State">
+      <summary>
+            Return a StateEnum enumerator representing the actua hook state.
+            </summary>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.StateEnum">
+      <summary>
+            An enumerator representing the possible Hook states.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.Enable">
+      <summary>
+            Activate the Hook.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.Disable">
+      <summary>
+            Deactivate the Hook.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.SetKeyState(System.Windows.Forms.Keys,System.Int16,System.Boolean,System.Windows.Forms.Keys)">
+      <summary>
+            Set a specific key to a specific value, Exemple: to set a key in a pressed state use `ProcessHookManager.SetKeyState(Keys.ControlKey, -32768);`, to set it in release state use `ProcessHookManager.SetKeyState(Keys.ControlKey, 0);`
+            </summary>
+      <param name="key">A valid System.Window.Form Key.</param>
+      <param name="value">A short indicating the state, use `-32768` for pressed, and `0` for not pressed.</param>
+            /// <param name="modifier">The modifier key Ctrl, Alt, Shift, that this key binging require.</param></member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.GetKeyState(System.Windows.Forms.Keys)">
+      <summary>
+            Retrieve the state of a specific key
+            </summary>
+      <param name="key">A valid System.Window.Form Key.</param>
+      <returns>Return a short indicating the state, `-32768` for pressed, and `0` for not pressed.</returns>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.IsKeyDown(System.Windows.Forms.Keys)">
+      <summary>
+            Return true if a specific Key is in pressed state.
+            </summary>
+      <param name="key">A valid System.Window.Form Key.</param>
+      <returns>Return true if the Key is in pressed state..</returns>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.Reset">
+      <summary>
+            Fuction to clear all the eventually pressed keys.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.ResetCursor">
+      <summary>
+            Reset the Curson at the center of the Game window.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.ProcessHookManager.ReadCursorPos(System.Int32@,System.Int32@,System.Int32@)">
+      <summary>
+            Read the position of the cursor.
+            </summary>
+      <param name="x">The retrived cursor X position.</param>
+      <param name="y">The retrived cursor Y position.</param>
+      <param name="result">Unused, its always 1.</param>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.TemporaryPerformanceProfiler">
+      <summary>
+            Temporary Performance Profiler used for internal performance test purpose.
+            </summary>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.AnnotatedContainerProfiler">
+      <summary>
+            Annotated Container Profiler used for internal performance test purpose.
+            </summary>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.AnnotatedProfiler">
+      <summary>
+            Annotated Profiler used for internal performance test purpose.
+            </summary>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.CaracterCreationState">
+      <summary>
+            This class retive informations and perform tasks on the Caracter Creation State Ui.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.CaracterCreationState.SelectedLeague">
+      <summary>
+            Return the currently selected League.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.CaracterCreationState.SelectedCharacterClass">
+      <summary>
+            Return the currently selected Class.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.CaracterCreationState.CreateNonRaceCharacter(DreamPoeBot.Loki.Game.LokiPoe.CaracterCreationState.League,DreamPoeBot.Loki.Game.GameData.CharacterClass,System.String)">
+      <summary>
+            This function attemp to create a new character, given a League, a Class and a Name.
+            </summary>
+      <param name="league">The desired League.</param>
+      <param name="characterClass">The desired character Class.</param>
+      <param name="name">The desire character Name.</param>
+      <returns></returns>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.CaracterCreationState.CharacterCreationResult">
+      <summary>
+            An enumerator representing the CharacterCreationResult.
+            </summary>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.CaracterCreationState.League">
+      <summary>
+            An enumerator representing the avaiable leagues.
+            </summary>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.SelectCharacterState">
+      <summary>
+            This class retive informations and perform tasks on the Select Character State Ui.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.SelectCharacterState.IsCharacterListLoaded">
+      <summary>
+            Return true if the list of aviable characters is fully loaded.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.LokiPoe.SelectCharacterState.Characters">
+      <summary>
+            Retrieve an IEnumerable of CharacterEntry representing the list of aviable characters.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.SelectCharacterState.SelectCharacter(System.String)">
+      <summary>
+            Select a specific character given a name, and click the Play button.
+            </summary>
+      <param name="name">The name of the character to select.</param>
+      <returns>Return a SelectCharacterError enumerator error or None if successfull.</returns>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.SelectCharacterState.PressCreateCharacter">
+      <summary>
+            Click the Create Character button.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.SelectCharacterState.CreateNonRaceCharacter">
+      <summary>
+            This function is actually Disabled.
+            </summary>
+      <returns></returns>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.EscapeState">
+      <summary>
+            This class retive informations and perform tasks on the Escape State Ui, the menu can be open with the 'Esc' key.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.EscapeState.ActivateEscapeState">
+      <summary>
+            Try to activate the Escape state Menu using the 'Esc' key.
+            </summary>
+      <returns>Return true if the Escape state is already active or if active at the completition of the function.</returns>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.EscapeState.ExitGame">
+      <summary>
+            Try to open the Escape state menu and clicke the Exit Game button.
+            </summary>
+      <returns>Return an EscapeState.LogoutError enumerator indicating ta error or None if the function sucessfully completed.</returns>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.EscapeState.ExitGame(System.Int32)">
+      <summary>
+            Try to open the Escape state menu and clicke the Exit Game button.
+            </summary>
+      <param name="delayBetweenMenuAndClickMs"> Millisecond to wait before to click the button after the menu appear.</param>
+      <returns>Return an EscapeState.LogoutError enumerator indicating ta error or None if the function sucessfully completed.</returns>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.EscapeState.LogoutToTitleScreen">
+      <summary>
+            Try to open the Escape state menu and clicke the Logout To Title Screen button.
+            </summary>
+      <returns>Return an EscapeState.LogoutError enumerator indicating ta error or None if the function sucessfully completed.</returns>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.EscapeState.LogoutToTitleScreen(System.Int32)">
+      <summary>
+            Try to open the Escape state menu and clicke the Logout To Title Screen button.
+            </summary>
+      <param name="delayBetweenMenuAndClickMs"> Millisecond to wait before to click the button after the menu appear.</param>
+      <returns>Return an EscapeState.LogoutError enumerator indicating ta error or None if the function sucessfully completed.</returns>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.EscapeState.LogoutToCharacterSelection">
+      <summary>
+            Try to open the Escape state menu and clicke the Logout To Character Selection button.
+            </summary>
+      <returns>Return an EscapeState.LogoutError enumerator indicating ta error or None if the function sucessfully completed.</returns>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.LokiPoe.EscapeState.LogoutToCharacterSelection(System.Int32)">
+      <summary>
+            Try to open the Escape state menu and clicke the Logout To Character Selection button.
+            </summary>
+      <param name="delayBetweenMenuAndClickMs"> Millisecond to wait before to click the button after the menu appear.</param>
+      <returns>Return an EscapeState.LogoutError enumerator indicating ta error or None if the function sucessfully completed.</returns>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.LokiPoe.EscapeState.LogoutError">
+      <summary>
+            EscapeState.LogoutError enumerator.
+            </summary>
     </member>
     <member name="T:DreamPoeBot.Loki.Game.LokiPoe.LoginState">
       <summary>
@@ -10146,6 +11395,57 @@
             The metadata name for this room.
             </summary>
     </member>
+    <member name="T:DreamPoeBot.Loki.Game.TangleAltarOption">
+      <summary>
+            Selects one of the two native options exposed by a supported Tangle altar.
+            Values match the option selector observed in PoE's native callback packet.
+            </summary>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Game.BlightTowerUpgrade">
+      <summary>
+            Identifies a native Blight tower upgrade. Values are the persistent
+            BlightTowers.dat row IDs written by PoE's own upgrade callback.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.WorldInteractionResult.DispatcherReturn">
+      <summary>
+            Gets the diagnostic dispatcher return value. It is not an
+            independent game-side effect confirmation and is meaningful only
+            when diagnostic timings are advertised by the injected runtime.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.WorldInteractionResult.WasDispatched">
+      <summary>
+            Gets whether the runtime invoked the game dispatcher. This does not
+            independently confirm that the game accepted or completed the
+            requested interaction.
+            </summary>
+    </member>
+    <member name="F:DreamPoeBot.Loki.Game.WorldInteractionContract.DefaultInteractionFlag">
+      <summary>
+            Default native world-interaction mode. Its semantics are currently
+            enabled for WorldItem, Portal, AreaTransition and Chest objects.
+            </summary>
+    </member>
+    <member name="F:DreamPoeBot.Loki.Game.WorldInteractionContract.CursorInteractionFlag">
+      <summary>
+            Alternate interaction mode observed when a WorldItem is placed on
+            the cursor while the inventory is open.
+            </summary>
+    </member>
+    <member name="F:DreamPoeBot.Loki.Game.WorldInteractionContract.DefaultMoveFlag">
+      <summary>
+            Flag observed for one atomic native Move dispatch. A held Move
+            input also produced one dispatch, without repeated wrapper calls.
+            </summary>
+    </member>
+    <member name="F:DreamPoeBot.Loki.Game.WorldInteractionContract.MaximumStationaryInteractionDistance">
+      <summary>
+            Gets the maximum integer game distance, as reported by
+            Vector2i.Distance, at which an interaction can be requested without
+            allowing the game to move the character.
+            </summary>
+    </member>
     <member name="P:DreamPoeBot.Loki.Game.Objects.Actor.ManaPercent">
       <summary>
             Return the Actual pct of mana available, accounting for all the reserved mana (fixed and pct). (please note, if you have 50% of mana ManaReservedPercent, and a total of 1000 mana, this will return 100.0 when you are full mana, and decrease as you cast more spells.)
@@ -10200,7 +11500,8 @@
     </member>
     <member name="M:DreamPoeBot.Loki.Game.Objects.Chest.UpgradeChest(System.String)">
       <summary>
-            Click a specific upgrade option to upgrade the chest.
+            Apply a specific upgrade option to the chest. Uses the native
+            Strongbox command when available and otherwise keeps the UI click path.
             </summary>
       <param name="itemName">The exact name of the Item, ex. Scroll of Wisdom, Orb of Alteration etc.</param>
       <returns>True on sucess.</returns>
@@ -10348,6 +11649,31 @@
             PLS NOTE! This only work for Skill Gems, it do not work for Support gems. Go get the Index of a support gem, or in general to get a more satisfaing result, use public int GetSocketIndexOfGem(Item gem).
             </summary>
     </member>
+    <member name="P:DreamPoeBot.Loki.Game.Objects.Item.IsMirrored">
+      <summary>
+                Return true if this item Is Mirrored
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.Objects.Item.IsSynthesized">
+      <summary>
+                Return true if this item Is Synthesized
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.Objects.Item.IsVestigial">
+      <summary>
+                Return true if this item is a Vestigial
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.Objects.Item.IsFractured">
+      <summary>
+                Return true if this item is a Is Fractured
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.Objects.Item.IsCorrupted">
+      <summary>
+                Return true if this item is a Is Corrupted
+            </summary>
+    </member>
     <member name="P:DreamPoeBot.Loki.Game.Objects.Item.GemImbuedSupportGem">
       <summary>
             Return a IndexadleSupportGemsRecord class describing the Imbued gem, or null.
@@ -10365,7 +11691,9 @@
     </member>
     <member name="M:DreamPoeBot.Loki.Game.Objects.Monolith.Upgrade(System.String)">
       <summary>
-            Click a specific upgrade option to upgrade the monolith.
+            Apply a specific upgrade option to the monolith. Uses the verified
+            native inventory-item command when available and otherwise keeps the
+            UI click path.
             </summary>
       <param name="itemName">The exact name of the Item, ex. Vaal Orb, etc.</param>
       <returns>True on sucess.</returns>
@@ -10374,6 +11702,12 @@
       <summary>
             Return true if Npc for currency exchange of shop, has floating icon indicating a complete sell.
             </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.Objects.Projectile.Caster">
+      <summary>Entity that created this projectile, when the live backlink is still valid.</summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Game.Objects.Projectile.SourceSkill">
+      <summary>Skill that created this projectile, resolved through the caster Actor.</summary>
     </member>
     <member name="M:DreamPoeBot.Loki.Game.Objects.TangleAltar.HideUi">
       <summary>
@@ -10392,12 +11726,18 @@
     </member>
     <member name="P:DreamPoeBot.Loki.Game.Objects.TangleAltar.Option.Text">
       <summary>
-            The full text of this option divided by lines   
+            The full text of this option divided by lines
             </summary>
     </member>
     <member name="M:DreamPoeBot.Loki.Game.Objects.TangleAltar.Option.Activate">
       <summary>
             Click this option.
+            </summary>
+    </member>
+    <member name="M:DreamPoeBot.Loki.Game.Objects.TangleAltar.Option.#ctor(DreamPoeBot.Loki.Element)">
+      <summary>
+            Preserves the historical constructor. Options created outside
+            TangleAltar.Options use the legacy UI activation path.
             </summary>
     </member>
     <member name="F:DreamPoeBot.Loki.Game.Std.MarshalCache`1.Size">
@@ -10500,6 +11840,17 @@
             This is an internal data class, you usually don't directly access this data.
             </summary>
     </member>
+    <member name="P:DreamPoeBot.Loki.Component.Owner">
+      <summary>
+            Entity that owns this component. Every component stores the backlink at +0x08.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Component.OwnerEntity">
+      <summary>
+            Lifetime-aware owner when the component was obtained through Entity.GetComponent.
+            Falls back to the native +0x08 backlink for directly-created component wrappers.
+            </summary>
+    </member>
     <member name="P:DreamPoeBot.Loki.Controllers.FsController.BaseItemTypes">
       <summary>
             Wraps content of BaseItemTypes.dat
@@ -10535,12 +11886,51 @@
             This is an internal data class, you usually don't directly access this data.
             </summary>
     </member>
+    <member name="P:DreamPoeBot.Loki.Controllers.EscapeStateClass.Menu">
+      <summary>Typed view of every verified Escape-menu entry.</summary>
+    </member>
+    <member name="T:DreamPoeBot.Loki.Controllers.EscapeMenuElements">
+      <summary>
+            Stable pointer table owned by EscapeState. This object is not itself an
+            Element; each property dereferences one native Element pointer.
+            </summary>
+    </member>
     <member name="T:DreamPoeBot.Loki.Element">
       <summary>
             Describe properties of a Ui Element, like its position (X,Y), size (Width,Height), scale (Scale), and many other properties.
             The whole Game user interface, is a `Matrioska` of Elements and childs element.
             You usually dont need to care about this informations, the LokiPoe.IngameState, offer convenient wrappers for all the implemented interfaces. 
             </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Element.NativeVTableAddress">
+      <summary>Absolute native vtable address for this UI object.</summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Element.NativeVTableRva">
+      <summary>Vtable relative to the current PathOfExile module.</summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Element.NativeAllocationSize">
+      <summary>
+            Number of bytes allocated by the native UI factory. Element+0x08 is a
+            class-size tag and must not be interpreted as a semantic enum.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Element.ControlType">
+      <summary>
+            Compatibility alias. The historic name was misleading: this value is
+            the native allocation size, not a control type.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Element.NativeTypeFingerprint">
+      <summary>Build-local pair used to identify a native UI class safely.</summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Element.NativeTypeNames">
+      <summary>
+            Exact native factory names for this build. The list can contain aliases
+            when two registered names share both vtable and allocation size.
+            </summary>
+    </member>
+    <member name="P:DreamPoeBot.Loki.Element.NativeTypeName">
+      <summary>Native type name, or null for unknown/unsupported client builds.</summary>
     </member>
     <member name="M:DreamPoeBot.Loki.Element.CenterClickLocation(System.Double,System.Double)">
       <summary>
@@ -10549,6 +11939,18 @@
       <param name="min"> a value between 1 and 0 multiplayed width and height to reduce the search boundry</param>
       <param name="max"> a value between 1 and 0 multiplayed width and height to reduce the search boundry</param>
       <returns></returns>
+    </member>
+    <member name="T:DreamPoeBot.Loki.ElementNativeTypeFingerprint">
+      <summary>
+            Build-local identity of a native UI object. Vtable alone is insufficient:
+            some registered classes share it while using different allocation sizes.
+            </summary>
+    </member>
+    <member name="T:DreamPoeBot.Loki.ElementNativeTypeRegistry">
+      <summary>
+            Exact factory identities generated by Dpb1.OffsetRediscovery for one client
+            hash. A hash mismatch deliberately resolves no names instead of guessing.
+            </summary>
     </member>
     <member name="M:DreamPoeBot.Loki.Entity.Invalidate">
       <summary>
@@ -10614,6 +12016,12 @@
     <member name="F:DreamPoeBot.Loki.MarshalCache`1.TypeRequiresMarshal">
       <summary> True if this type requires the Marshaler to map variables. (No direct pointer dereferencing) </summary>
     </member>
+    <member name="T:DreamPoeBot.Loki.RuntimeMemoryLayout">
+      <summary>
+            Central catalog of verified runtime layouts used by DPB1. Consumers should
+            reference these constants instead of copying offsets into wrappers.
+            </summary>
+    </member>
     <member name="M:DreamPoeBot.Structures.ns13.Class104.GetHostName">
       <summary>
             Builds a diagnostic label for the HTTPS authentication host.
@@ -10674,6 +12082,13 @@
             App
             </summary>
     </member>
+    <member name="M:DreamPoeBot.App.ConfigureRenderingMode">
+      <summary>
+            Enables opt-in software rendering before WPF creates
+            the first application window. This affects WPF only; independent
+            Direct2D or SharpDX renderers owned by plugins keep their own mode.
+            </summary>
+    </member>
     <member name="M:DreamPoeBot.App.TryWriteDreamUpdateHealthMarker">
       <summary>
             Confirms to the out-of-process updater that the replacement executable
@@ -10691,402 +12106,6 @@
       <summary>
             Application Entry Point.
             </summary>
-    </member>
-    <member name="T:DreamPoeBot.Properties.Resources">
-      <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
-            </summary>
-    </member>
-    <member name="P:DreamPoeBot.Properties.Resources.ResourceManager">
-      <summary>
-              Returns the cached ResourceManager instance used by this class.
-            </summary>
-    </member>
-    <member name="P:DreamPoeBot.Properties.Resources.Culture">
-      <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
-            </summary>
-    </member>
-    <member name="P:DreamPoeBot.Properties.Resources.BlightStashTabLayout">
-      <summary>
-               Looks up a localized string similar to Id,BaseItemTypesKey,Unknown0,Unknown1,Unknown2,Unknown3,Unknown4,Unknown5,Unknown6,Unknown7,Unknown8,Unknown9
-            Metadata/Items/Currency/Mushrune1,"&lt;9615, 0&gt;",50,45,0,1,1,60,True,False,False,False
-            Metadata/Items/Currency/Mushrune2,"&lt;9616, 0&gt;",140,45,1,1,1,60,True,False,False,False
-            Metadata/Items/Currency/Mushrune3,"&lt;9617, 0&gt;",234,45,2,1,1,60,True,False,False,False
-            Metadata/Items/Currency/Mushrune4,"&lt;9618, 0&gt;",327,45,3,1,1,60,True,False,False,False
-            Metadata/Items/Currency/Mushrune5,"&lt;9619, 0&gt;",419,45,4,1,1 [rest of string was truncated]";.
-             </summary>
-    </member>
-    <member name="P:DreamPoeBot.Properties.Resources.blightstashtablayout1">
-      <summary>
-              Looks up a localized string similar to [
-             {
-               "_rid": 0,
-               "Id": "Metadata/Items/Currency/Mushrune1",
-               "StoredItem": 3860,
-               "XOffset": 50,
-               "YOffset": 45,
-               "FirstSlotIndex": 0,
-               "Width": 1,
-               "Height": 1,
-               "SlotSize": 60,
-               "Unknown9": true,
-               "Unknown10": false,
-               "Unknown11": false,
-               "Unknown12": false,
-               "Unknown13": false
-             },
-             {
-               "_rid": 1,
-               "Id": "Metadata/Items/Currency/Mushrune2",
-               "StoredItem": 3861,
-               "XOffset": 140,
-               "YOffset": 45,
-               "FirstSlotIndex": 1,
-                [rest of string was truncated]";.
-            </summary>
-    </member>
-    <member name="P:DreamPoeBot.Properties.Resources.breachstashtablayout1">
-      <summary>
-               Looks up a localized string similar to [
-              {
-                "_rid": 0,
-                "Id": "Metadata/Items/Currency/CurrencyDelveCraftingFire",
-                "StoredItem": 269,
-                "XOffset": 530,
-                "YOffset": 75,
-                "FirstSlotIndex": 0,
-                "Width": 1,
-                "Height": 1,
-                "SlotSize": 72,
-                "HideIfEmpty": false,
-                "Image": ""
-              }
-            ].
-             </summary>
-    </member>
-    <member name="P:DreamPoeBot.Properties.Resources.CurrencyStashTabLayout">
-      <summary>
-               Looks up a localized string similar to Id,BaseItemTypesKey,Unknown0,Unknown1,Unknown2,Unknown3,Unknown4,Unknown5,Unknown6
-            Metadata/Items/Currency/CurrencyWeaponQuality,"&lt;0, 0&gt;",507,79,0,1,1,True,0
-            Metadata/Items/Currency/CurrencyIdentification,"&lt;1, 0&gt;",113,79,1,1,1,True,0
-            Metadata/Items/Currency/CurrencyRerollRare,"&lt;2, 0&gt;",760,179,2,1,1,True,0
-            Metadata/Items/Currency/CurrencyArmourQuality,"&lt;4, 0&gt;",590,78,3,1,1,True,0
-            Metadata/Items/Currency/CurrencyDuplicate,"&lt;5, 0&gt;",478,179,4,1,1,True,0
-            Metadata/Items/Currency/CurrencyUpgradeToRare,"&lt;6, 0 [rest of string was truncated]";.
-             </summary>
-    </member>
-    <member name="P:DreamPoeBot.Properties.Resources.currencystashtablayout1">
-      <summary>
-              Looks up a localized string similar to [
-             {
-               "_rid": 0,
-               "Id": "Metadata/Items/Currency/CurrencyWeaponQuality",
-               "StoredItem": 0,
-               "XOffset": 591,
-               "YOffset": 79,
-               "FirstSlotIndex": 0,
-               "Width": 1,
-               "Height": 1,
-               "ShowIfEmpty": true,
-               "SlotGroup": 0
-             },
-             {
-               "_rid": 1,
-               "Id": "Metadata/Items/Currency/CurrencyIdentification",
-               "StoredItem": 1,
-               "XOffset": 113,
-               "YOffset": 79,
-               "FirstSlotIndex": 1,
-               "Width": 1,
-               "Height": 1,
-               "ShowIfEmpty": true,
-               "SlotGroup": 0
-            [rest of string was truncated]";.
-            </summary>
-    </member>
-    <member name="P:DreamPoeBot.Properties.Resources.deliriumstashtablayout1">
-      <summary>
-              Looks up a localized string similar to [
-             {
-               "_rid": 0,
-               "Id": "Metadata/Items/Currency/CurrencyAfflictionOrbCurrency",
-               "StoredItem": 66,
-               "XOffset": 161,
-               "YOffset": 348,
-               "FirstSlotIndex": 0,
-               "Width": 1,
-               "Height": 1,
-               "SlotSize": 72,
-               "HideIfEmpty": false
-             },
-             {
-               "_rid": 1,
-               "Id": "Metadata/Items/Currency/CurrencyAfflictionOrbUniques",
-               "StoredItem": 67,
-               "XOffset": 59,
-               "YOffset": 143,
-               "FirstSlotIndex": 1,
-               "Width": 1,
-               "Height": 1,
-               "SlotSize": 72,
-               "HideIfEmpty": false
-             },
-            [rest of string was truncated]";.
-            </summary>
-    </member>
-    <member name="P:DreamPoeBot.Properties.Resources.delvestashtablayout1">
-      <summary>
-              Looks up a localized string similar to [
-             {
-               "_rid": 0,
-               "Id": "Metadata/Items/Currency/CurrencyDelveCraftingFire",
-               "StoredItem": 269,
-               "XOffset": 530,
-               "YOffset": 75,
-               "FirstSlotIndex": 0,
-               "Width": 1,
-               "Height": 1,
-               "SlotSize": 72,
-               "HideIfEmpty": false,
-               "Image": ""
-             },
-             {
-               "_rid": 1,
-               "Id": "Metadata/Items/Currency/CurrencyDelveCraftingCold",
-               "StoredItem": 270,
-               "XOffset": 334,
-               "YOffset": 75,
-               "FirstSlotIndex": 1,
-               "Width": 1,
-               "Height": 1,
-               "SlotSize": 72,
-               "HideIfEmpty":  [rest of string was truncated]";.
-            </summary>
-    </member>
-    <member name="P:DreamPoeBot.Properties.Resources.DivinationCardStashTabLayout">
-      <summary>
-               Looks up a localized string similar to BaseItemTypesKey,IsInGame,IsEnabled
-            "&lt;8869, 0&gt;",True,True
-            "&lt;8870, 0&gt;",True,True
-            "&lt;8871, 0&gt;",True,True
-            "&lt;8872, 0&gt;",True,True
-            "&lt;8873, 0&gt;",True,True
-            "&lt;8874, 0&gt;",True,True
-            "&lt;8875, 0&gt;",True,True
-            "&lt;8876, 0&gt;",True,True
-            "&lt;8877, 0&gt;",True,True
-            "&lt;8878, 0&gt;",True,True
-            "&lt;8879, 0&gt;",True,True
-            "&lt;8880, 0&gt;",True,True
-            "&lt;8881, 0&gt;",True,True
-            "&lt;8882, 0&gt;",True,True
-            "&lt;8883, 0&gt;",True,True
-            "&lt;8884, 0&gt;",True,True
-            "&lt;8885, 0&gt;",True,True
-            "&lt;8886, 0&gt;",True,True
-            "&lt;8887, 0&gt;",True,True
-            "&lt;8888, 0&gt;",True,True
-            "&lt;8889, 0&gt;",Tru [rest of string was truncated]";.
-             </summary>
-    </member>
-    <member name="P:DreamPoeBot.Properties.Resources.divinationcardstashtablayout1">
-      <summary>
-              Looks up a localized string similar to [
-             {
-               "_rid": 0,
-               "StoredItem": 3087,
-               "IsInGame": true,
-               "IsEnabled": true
-             },
-             {
-               "_rid": 1,
-               "StoredItem": 3088,
-               "IsInGame": true,
-               "IsEnabled": true
-             },
-             {
-               "_rid": 2,
-               "StoredItem": 3089,
-               "IsInGame": true,
-               "IsEnabled": true
-             },
-             {
-               "_rid": 3,
-               "StoredItem": 3090,
-               "IsInGame": true,
-               "IsEnabled": true
-             },
-             {
-               "_rid": 4,
-               "StoredItem": 3091,
-               "IsInGame": true,
-               "IsEnabled": true
-             },
-             {
-               "_rid": 5, [rest of string was truncated]";.
-            </summary>
-    </member>
-    <member name="P:DreamPoeBot.Properties.Resources.essencestashtablayout1">
-      <summary>
-              Looks up a localized string similar to [
-             {
-               "_rid": 0,
-               "Id": "Metadata/Items/Currency/CurrencyEssenceHatred1",
-               "StoredItem": 98,
-               "XOffset": 480,
-               "YOffset": 183,
-               "FirstSlotIndex": 0,
-               "Width": 1,
-               "Height": 1,
-               "IsUpgradableEssenceSlot": true
-             },
-             {
-               "_rid": 1,
-               "Id": "Metadata/Items/Currency/CurrencyEssenceHatred2",
-               "StoredItem": 99,
-               "XOffset": 408,
-               "YOffset": 183,
-               "FirstSlotIndex": 1,
-               "Width": 1,
-               "Height": 1,
-               "IsUpgradableEssenceSlot": true
-             },
-             {
-               "_rid": 2,
-               "Id": " [rest of string was truncated]";.
-            </summary>
-    </member>
-    <member name="P:DreamPoeBot.Properties.Resources.FragmentStashTabLayout">
-      <summary>
-               Looks up a localized string similar to Id,XOffset,YOffset,FirstSlotIndex,Width,Height,Unknown0,Tab,SlotSize,HideIfEmpty,Subtab,StoredItems,Unknown1,Unknown2,Unknown3
-            Metadata/Items/MapFragments/CurrencyVaalFragment1_1,220,74,0,1,1,False,0,70,False,0,"[&lt;7395, 0&gt;]",False,,0
-            Metadata/Items/MapFragments/CurrencyVaalFragment1_2,220,169,1,1,1,False,0,70,False,0,"[&lt;7396, 0&gt;]",False,,0
-            Metadata/Items/MapFragments/CurrencyVaalFragment1_3,122,169,2,1,1,False,0,70,False,0,"[&lt;7397, 0&gt;]",False,,0
-            Metadata/Items/MapFragments/CurrencyVaalFragment1_4,122,74 [rest of string was truncated]";.
-             </summary>
-    </member>
-    <member name="P:DreamPoeBot.Properties.Resources.fragmentstashtablayout1">
-      <summary>
-              Looks up a localized string similar to [
-             {
-               "_rid": 0,
-               "Id": "Metadata/Items/MapFragments/CurrencyVaalFragment1_1",
-               "XOffset": 198,
-               "YOffset": 96,
-               "FirstSlotIndex": 0,
-               "Width": 1,
-               "Height": 1,
-               "Unknown7": false,
-               "Tab": 0,
-               "SlotSize": 66,
-               "HideIfEmpty": false,
-               "Subtab": 0,
-               "StoredItems": [
-                 2994
-               ],
-               "Unknown13": false,
-               "Unknown14": "",
-               "Unknown15": 0,
-               "Unknown16": false
-             },
-             {
-               "_rid": 1,
-               "Id": "Metadata/Items/MapFragments/CurrencyVaalFra [rest of string was truncated]";.
-            </summary>
-    </member>
-    <member name="P:DreamPoeBot.Properties.Resources.icons8_run_96">
-      <summary>
-              Looks up a localized resource of type System.Byte[].
-            </summary>
-    </member>
-    <member name="P:DreamPoeBot.Properties.Resources.icons8_stop_96">
-      <summary>
-              Looks up a localized resource of type System.Byte[].
-            </summary>
-    </member>
-    <member name="P:DreamPoeBot.Properties.Resources.metamorphstashtablayout1">
-      <summary>
-              Looks up a localized string similar to [
-             {
-               "_rid": 0,
-               "Id": "Metadata/Items/Currency/CurrencyJewelleryQualityElemental",
-               "StoredItem": 312,
-               "XOffset": 285,
-               "YOffset": 153,
-               "FirstSlotIndex": 0,
-               "Width": 1,
-               "Height": 1,
-               "SlotSize": 72
-             },
-             {
-               "_rid": 1,
-               "Id": "Metadata/Items/Currency/CurrencyJewelleryQualityCaster",
-               "StoredItem": 313,
-               "XOffset": 383,
-               "YOffset": 153,
-               "FirstSlotIndex": 1,
-               "Width": 1,
-               "Height": 1,
-               "SlotSize": 72
-             },
-             {
-               "_rid": 2,
-            [rest of string was truncated]";.
-            </summary>
-    </member>
-    <member name="P:DreamPoeBot.Properties.Resources.PantheonSouls">
-      <summary>
-               Looks up a localized string similar to WorldArea,CapturedVessel,QuestFlag,CapturedMonster,PanelLayout,CapturedMonsterDescription
-            "&lt;1172, 0&gt;","&lt;9498, 0&gt;","&lt;1389, 0&gt;","[&lt;2451, 0&gt;]","&lt;0, 0&gt;",
-            "&lt;1145, 0&gt;","&lt;9499, 0&gt;","&lt;1390, 0&gt;","[&lt;2398, 0&gt;]","&lt;0, 0&gt;",
-            "&lt;1244, 0&gt;","&lt;9500, 0&gt;","&lt;1391, 0&gt;","[&lt;5251, 0&gt;]","&lt;0, 0&gt;",
-            "&lt;1215, 0&gt;","&lt;9501, 0&gt;","&lt;1392, 0&gt;","[&lt;5886, 0&gt;]","&lt;1, 0&gt;",
-            "&lt;1158, 0&gt;","&lt;9502, 0&gt;","&lt;1393, 0&gt;","[&lt;2425, 0&gt;]","&lt;1, 0&gt;",
-            "&lt;1135, 0&gt;","&lt;9503, 0&gt;","&lt;1394, 0&gt;","[&lt;2429, 0&gt;]","&lt;1, 0&gt;",
-            "&lt;1140, 0&gt;","&lt;9504, 0&gt;","&lt;1395, 0&gt;",....
-             </summary>
-    </member>
-    <member name="P:DreamPoeBot.Properties.Resources.pantheonsouls1">
-      <summary>
-              Looks up a localized string similar to [
-             {
-               "_rid": 0,
-               "WorldArea": 1249,
-               "CapturedVessel": 3613,
-               "QuestFlagUpgrade": 1389,
-               "CapturedMonster": [
-                 5496
-               ],
-               "PanelLayout": 0,
-               "CapturedMonsterDescription": "",
-               "Unknown7": 1324,
-               "QuestFlagDowngrade": 3178
-             },
-             {
-               "_rid": 1,
-               "WorldArea": 1152,
-               "CapturedVessel": 3614,
-               "QuestFlagUpgrade": 1390,
-               "CapturedMonster": [
-                 4660
-               ],
-               "PanelLayout": 0,
-               "CapturedMonsterDescription": "",
-               "Unknown7": 1325,
-            [rest of string was truncated]";.
-            </summary>
-    </member>
-    <member name="P:DreamPoeBot.Properties.Resources.StatDescription">
-      <summary>
-               Looks up a localized string similar to base_can_gain_banner_resource,While you have this Skill and have no placed Banner, you can gain Valour
-            can_gain_banner_resource_while_banner_is_placed,While you have this Skill and have no placed Banner, you can gain Valour
-            off_hand_local_minimum_added_cold_damage,{0} to {1} Base Off Hand Cold Damage
-            off_hand_local_maximum_added_cold_damage,{0} to {1} Base Off Hand Cold Damage
-            off_hand_local_minimum_added_fire_damage,{0} to {1} Base Off Hand Fire Damage
-            off_hand_local_maximum_added_fire_damage,{0} to { [rest of string was truncated]";.
-             </summary>
     </member>
     <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
       <summary>

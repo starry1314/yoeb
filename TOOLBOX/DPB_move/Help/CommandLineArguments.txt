@@ -1,5 +1,5 @@
 DreamPoeBot Command-Line Arguments
-Last updated: August 7, 2026
+Last updated: August 25, 2026
 
 Syntax
 ------
@@ -66,6 +66,11 @@ Note: Auto-start is cancelled when LokiPoe.CancelAutoStart is true.
 Argument: autominimize
 Usage: Minimizes DreamPoeBot automatically after startup.
 Example: --autominimize
+
+Argument: softwarerendering
+Usage: Renders the DreamPoeBot WPF interface in software instead of using WPF hardware acceleration.
+Example: --softwarerendering
+Note: This affects the DreamPoeBot WPF interface only. Independent plugin renderers may continue to use the GPU. Restart DreamPoeBot to change the rendering mode.
 
 Argument: authkey
 Usage: Supplies the DreamAuth key used by the login screen.
