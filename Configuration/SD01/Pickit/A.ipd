@@ -155,7 +155,7 @@
 [Type]=="Tainted Blacksmith's Whetstone" # [StashItem] == "true" // 玷污的磨刀石
 [Type]=="Tainted Divine Teardrop" # [StashItem] == "true" // 玷污的神聖淚珠
 
-[Type] == "Rogue's Marker" # [StashItem] == "true" // 盜賊之印
+//[Type] == "Rogue's Marker" # [StashItem] == "true" // 盜賊之印
 
 
 ////
@@ -331,6 +331,80 @@
 [Type] == "Viridian Jewel" && [Rarity] == "Unique" # [UniqueName] == "Impossible Escape" && [StashItem] == "true" // 逃脫不能
 [Type] == "Viridian Jewel" && [Rarity] == "Unique" # [UniqueName] == "Ancestral Vision" && [StashItem] == "true" // 先祖預視
 //[Type] == "Cobalt Jewel" && [Rarity] == "Unique" # [UniqueName] == "Energy From Within" && [StashItem] == "true" // 潛能防護
+
+//// 深淵珠寶：相同元素點傷 + 爆傷 / 攻速（兩詞都有即收，值≥1；殺戮之眼/搜尋之眼）2026-09-13 ////
+//// 說明：符合基底+稀有才會撿，鑑定後不符詞綴會自動賣店（EB 機制）。點傷用該元素「最大附加值」index 判定。 ////
+//== 物理 點傷（index 32）==
+// 物理 點傷 + 爆傷（全域爆擊傷害 96）
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [32] >= "1" && [96] >= "1" && [StashItem] == "true" // 殺戮之眼:物理點傷+爆傷
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [32] >= "1" && [96] >= "1" && [StashItem] == "true" // 搜尋之眼:物理點傷+爆傷
+// 物理 點傷 + 攻速（弓80/劍81/雙手337/短杖82/斧75/通用71）
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [32] >= "1" && [80] >= "1" && [StashItem] == "true" // 殺戮之眼:物理點傷+弓攻速
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [32] >= "1" && [80] >= "1" && [StashItem] == "true" // 搜尋之眼:物理點傷+弓攻速
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [32] >= "1" && [81] >= "1" && [StashItem] == "true" // 殺戮之眼:物理點傷+劍攻速
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [32] >= "1" && [81] >= "1" && [StashItem] == "true" // 搜尋之眼:物理點傷+劍攻速
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [32] >= "1" && [337] >= "1" && [StashItem] == "true" // 殺戮之眼:物理點傷+雙手近戰攻速
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [32] >= "1" && [337] >= "1" && [StashItem] == "true" // 搜尋之眼:物理點傷+雙手近戰攻速
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [32] >= "1" && [82] >= "1" && [StashItem] == "true" // 殺戮之眼:物理點傷+短杖攻速
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [32] >= "1" && [82] >= "1" && [StashItem] == "true" // 搜尋之眼:物理點傷+短杖攻速
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [32] >= "1" && [75] >= "1" && [StashItem] == "true" // 殺戮之眼:物理點傷+斧攻速
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [32] >= "1" && [75] >= "1" && [StashItem] == "true" // 搜尋之眼:物理點傷+斧攻速
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [32] >= "1" && [71] >= "1" && [StashItem] == "true" // 殺戮之眼:物理點傷+通用攻速
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [32] >= "1" && [71] >= "1" && [StashItem] == "true" // 搜尋之眼:物理點傷+通用攻速
+
+//== 火 點傷（index 47）==
+// 火 點傷 + 爆傷（全域爆擊傷害 96）
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [47] >= "1" && [96] >= "1" && [StashItem] == "true" // 殺戮之眼:火點傷+爆傷
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [47] >= "1" && [96] >= "1" && [StashItem] == "true" // 搜尋之眼:火點傷+爆傷
+// 火 點傷 + 攻速（弓80/劍81/雙手337/短杖82/斧75/通用71）
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [47] >= "1" && [80] >= "1" && [StashItem] == "true" // 殺戮之眼:火點傷+弓攻速
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [47] >= "1" && [80] >= "1" && [StashItem] == "true" // 搜尋之眼:火點傷+弓攻速
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [47] >= "1" && [81] >= "1" && [StashItem] == "true" // 殺戮之眼:火點傷+劍攻速
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [47] >= "1" && [81] >= "1" && [StashItem] == "true" // 搜尋之眼:火點傷+劍攻速
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [47] >= "1" && [337] >= "1" && [StashItem] == "true" // 殺戮之眼:火點傷+雙手近戰攻速
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [47] >= "1" && [337] >= "1" && [StashItem] == "true" // 搜尋之眼:火點傷+雙手近戰攻速
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [47] >= "1" && [82] >= "1" && [StashItem] == "true" // 殺戮之眼:火點傷+短杖攻速
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [47] >= "1" && [82] >= "1" && [StashItem] == "true" // 搜尋之眼:火點傷+短杖攻速
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [47] >= "1" && [75] >= "1" && [StashItem] == "true" // 殺戮之眼:火點傷+斧攻速
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [47] >= "1" && [75] >= "1" && [StashItem] == "true" // 搜尋之眼:火點傷+斧攻速
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [47] >= "1" && [71] >= "1" && [StashItem] == "true" // 殺戮之眼:火點傷+通用攻速
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [47] >= "1" && [71] >= "1" && [StashItem] == "true" // 搜尋之眼:火點傷+通用攻速
+
+//== 冰 點傷（index 54）==
+// 冰 點傷 + 爆傷（全域爆擊傷害 96）
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [54] >= "1" && [96] >= "1" && [StashItem] == "true" // 殺戮之眼:冰點傷+爆傷
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [54] >= "1" && [96] >= "1" && [StashItem] == "true" // 搜尋之眼:冰點傷+爆傷
+// 冰 點傷 + 攻速（弓80/劍81/雙手337/短杖82/斧75/通用71）
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [54] >= "1" && [80] >= "1" && [StashItem] == "true" // 殺戮之眼:冰點傷+弓攻速
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [54] >= "1" && [80] >= "1" && [StashItem] == "true" // 搜尋之眼:冰點傷+弓攻速
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [54] >= "1" && [81] >= "1" && [StashItem] == "true" // 殺戮之眼:冰點傷+劍攻速
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [54] >= "1" && [81] >= "1" && [StashItem] == "true" // 搜尋之眼:冰點傷+劍攻速
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [54] >= "1" && [337] >= "1" && [StashItem] == "true" // 殺戮之眼:冰點傷+雙手近戰攻速
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [54] >= "1" && [337] >= "1" && [StashItem] == "true" // 搜尋之眼:冰點傷+雙手近戰攻速
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [54] >= "1" && [82] >= "1" && [StashItem] == "true" // 殺戮之眼:冰點傷+短杖攻速
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [54] >= "1" && [82] >= "1" && [StashItem] == "true" // 搜尋之眼:冰點傷+短杖攻速
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [54] >= "1" && [75] >= "1" && [StashItem] == "true" // 殺戮之眼:冰點傷+斧攻速
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [54] >= "1" && [75] >= "1" && [StashItem] == "true" // 搜尋之眼:冰點傷+斧攻速
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [54] >= "1" && [71] >= "1" && [StashItem] == "true" // 殺戮之眼:冰點傷+通用攻速
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [54] >= "1" && [71] >= "1" && [StashItem] == "true" // 搜尋之眼:冰點傷+通用攻速
+
+//== 雷 點傷（index 61）==
+// 雷 點傷 + 爆傷（全域爆擊傷害 96）
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [61] >= "1" && [96] >= "1" && [StashItem] == "true" // 殺戮之眼:雷點傷+爆傷
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [61] >= "1" && [96] >= "1" && [StashItem] == "true" // 搜尋之眼:雷點傷+爆傷
+// 雷 點傷 + 攻速（弓80/劍81/雙手337/短杖82/斧75/通用71）
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [61] >= "1" && [80] >= "1" && [StashItem] == "true" // 殺戮之眼:雷點傷+弓攻速
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [61] >= "1" && [80] >= "1" && [StashItem] == "true" // 搜尋之眼:雷點傷+弓攻速
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [61] >= "1" && [81] >= "1" && [StashItem] == "true" // 殺戮之眼:雷點傷+劍攻速
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [61] >= "1" && [81] >= "1" && [StashItem] == "true" // 搜尋之眼:雷點傷+劍攻速
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [61] >= "1" && [337] >= "1" && [StashItem] == "true" // 殺戮之眼:雷點傷+雙手近戰攻速
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [61] >= "1" && [337] >= "1" && [StashItem] == "true" // 搜尋之眼:雷點傷+雙手近戰攻速
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [61] >= "1" && [82] >= "1" && [StashItem] == "true" // 殺戮之眼:雷點傷+短杖攻速
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [61] >= "1" && [82] >= "1" && [StashItem] == "true" // 搜尋之眼:雷點傷+短杖攻速
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [61] >= "1" && [75] >= "1" && [StashItem] == "true" // 殺戮之眼:雷點傷+斧攻速
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [61] >= "1" && [75] >= "1" && [StashItem] == "true" // 搜尋之眼:雷點傷+斧攻速
+[Type] == "Murderous Eye Jewel" && [Rarity] == "Rare" # [61] >= "1" && [71] >= "1" && [StashItem] == "true" // 殺戮之眼:雷點傷+通用攻速
+[Type] == "Searching Eye Jewel" && [Rarity] == "Rare" # [61] >= "1" && [71] >= "1" && [StashItem] == "true" // 搜尋之眼:雷點傷+通用攻速
 
 [Type] == "Synthesised Map" && [Rarity] == "Unique" # [UniqueName] == "Cortex" && [StashItem] == "true" // 合成地圖→深沉記憶
 [Type] == "Synthesised Map" && [Rarity] == "Unique" # [UniqueName] == "Altered Distant Memory" && [StashItem] == "true" // 合成地圖→遙遠記憶：編造
