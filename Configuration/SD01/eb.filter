@@ -1364,7 +1364,7 @@ Show # 聯盟 - 3.13祭祀 - 浸血碑器
 
 # 【聯盟-3.12劫盜】3020
 
-Show # 聯盟 - 3.12劫盜 - 盜賊之印
+Hide # 聯盟 - 3.12劫盜 - 盜賊之印
     Class "Currency"
     BaseType "Rogue's Marker"
     SetTextColor 255 178 102
