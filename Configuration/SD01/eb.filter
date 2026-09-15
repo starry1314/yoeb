@@ -1,23 +1,23 @@
-# Script edited with Filtration - https://github.com/ben-wallis/Filtration
+ï»¿# Script edited with Filtration - https://github.com/ben-wallis/Filtration
 # EnableBlockGroups
 #
 #============
-# ¡¾===¿‚Ä¿ä›===¡¿
-# ¡¾ÌØÊâÕZ·¨¡¿0000
-# ¡¾Í¨Ø›¡¿1000
-# ¡¾µØˆD¡¿2000
-# ¡¾Â“ÃË¡¿3000
-# ¡¾Ãüß\¿¨¡¿4000
-# ¡¾İ›ˆDÎïÆ·¡¿5000
-# ¡¾¼¼ÄÜ¡¿6000
-# ¡¾Ë„©¡¿7000
-# ¡¾Ñb‚ä¡¿8000
+# ã€===ç¸½ç›®éŒ„===ã€‘
+# ã€ç‰¹æ®Šèªæ³•ã€‘0000
+# ã€é€šè²¨ã€‘1000
+# ã€åœ°åœ–ã€‘2000
+# ã€è¯ç›Ÿã€‘3000
+# ã€å‘½é‹å¡ã€‘4000
+# ã€è¼¿åœ–ç‰©å“ã€‘5000
+# ã€æŠ€èƒ½ã€‘6000
+# ã€è—¥åŠ‘ã€‘7000
+# ã€è£å‚™ã€‘8000
 #============
 
 #============
-# ¡¾ÌØÊâÕZ·¨-ÕfÃ÷™Ú¡¿0000
-# ¡¾ÌØÊâÕZ·¨-ÁùßBÑb‚ä¡¿0001
-# ¡¾ÌØÊâÕZ·¨-Áù¶´Ñb‚ä¡¿0002
+# ã€ç‰¹æ®Šèªæ³•-èªªæ˜æ¬„ã€‘0000
+# ã€ç‰¹æ®Šèªæ³•-å…­é€£è£å‚™ã€‘0001
+# ã€ç‰¹æ®Šèªæ³•-å…­æ´è£å‚™ã€‘0002
 #============
 Show
     BaseType "Polaric Invitation"
@@ -25,12 +25,12 @@ Show
     SetBackgroundColor 33 19 38
     SetBorderColor 255 0 0
     SetFontSize 44
-# ¡¾ÌØÊâÕZ·¨-ÁùßBÑb‚ä¡¿0001
-#µØˆDÒÑ›@È¾
+# ã€ç‰¹æ®Šèªæ³•-å…­é€£è£å‚™ã€‘0001
+#åœ°åœ–å·²æ±™æŸ“
 
-#µØˆDÒÑ›@È¾
+#åœ°åœ–å·²æ±™æŸ“
 Hide
-	Corrupted True
+ã€€ã€€Corrupted True
     Class "Maps"
     MapTier <= 16
     Rarity <= Rare
@@ -39,9 +39,9 @@ Hide
     SetBorderColor 255 0 0
     SetFontSize 44
 
-# µØˆDÒÑÑ}Ñu
+# åœ°åœ–å·²è¤‡è£½
 Hide
-	Mirrored True
+ã€€ã€€Mirrored True
     Class "Maps"
     MapTier <= 16
     Rarity <= Rare
@@ -50,7 +50,7 @@ Hide
     SetBorderColor 255 0 0
     SetFontSize 44
 
-Show # ÌØÊâÕZ·¨ - ÁùßBÑb‚ä
+Show # ç‰¹æ®Šèªæ³• - å…­é€£è£å‚™
     LinkedSockets = 6
     SetTextColor 175 96 37
     SetBackgroundColor 255 255 255
@@ -60,9 +60,9 @@ Show # ÌØÊâÕZ·¨ - ÁùßBÑb‚ä
     MinimapIcon 0 Brown UpsideDownHouse
     PlayEffect Brown
 
-# ¡¾ÌØÊâÕZ·¨-Áù¶´Ñb‚ä¡¿0002
+# ã€ç‰¹æ®Šèªæ³•-å…­æ´è£å‚™ã€‘0002
 
-Show # ÌØÊâÕZ·¨ - Áù¶´Ñb‚ä
+Show # ç‰¹æ®Šèªæ³• - å…­æ´è£å‚™
     Sockets = 6
     SetTextColor 0 0 0
     SetBackgroundColor 224 224 224
@@ -73,19 +73,19 @@ Show # ÌØÊâÕZ·¨ - Áù¶´Ñb‚ä
     PlayEffect White
 
 #============
-# ¡¾Í¨Ø›-ÕfÃ÷™Ú¡¿1000
-# ¡¾Í¨Ø›-í”¼‰¡¿1001
-# ¡¾Í¨Ø›-¸ß¼‰¡¿1002
-# ¡¾Í¨Ø›-ÆÕÍ¨¡¿1003
-# ¡¾Í¨Ø›-³õÊ¼¡¿1004
-# ¡¾Í¨Ø›-À¬»ø¡¿1005
-# ¡¾Í¨Ø›-ÌØÊâ¡¿1006
-# ¡¾Í¨Ø›-®ÄÜ¡¿1007
+# ã€é€šè²¨-èªªæ˜æ¬„ã€‘1000
+# ã€é€šè²¨-é ‚ç´šã€‘1001
+# ã€é€šè²¨-é«˜ç´šã€‘1002
+# ã€é€šè²¨-æ™®é€šã€‘1003
+# ã€é€šè²¨-åˆå§‹ã€‘1004
+# ã€é€šè²¨-åƒåœ¾ã€‘1005
+# ã€é€šè²¨-ç‰¹æ®Šã€‘1006
+# ã€é€šè²¨-ç•°èƒ½ã€‘1007
 #============
 
-# ¡¾Í¨Ø›-í”¼‰¡¿1001
+# ã€é€šè²¨-é ‚ç´šã€‘1001
 
-Show # Í¨Ø› - í”¼‰ - ¿¨ÌmµÂÄ§çR
+Show # é€šè²¨ - é ‚ç´š - å¡è˜­å¾·é­”é¡
     Class "Currency"
     BaseType "Mirror of Kalandra"
     SetTextColor 210 0 0
@@ -96,7 +96,7 @@ Show # Í¨Ø› - í”¼‰ - ¿¨ÌmµÂÄ§çR
     MinimapIcon 0 Red Diamond
     PlayEffect Red
 
-Show # Í¨Ø› - í”¼‰ - ÓÀaÖéŒš
+Show # é€šè²¨ - é ‚ç´š - æ°¸æ†ç å¯¶
     Class "Currency"
     BaseType "Eternal Orb"
     SetTextColor 0 0 0
@@ -107,7 +107,7 @@ Show # Í¨Ø› - í”¼‰ - ÓÀaÖéŒš
     PlayEffect Red
     PlayAlertSound ShExalted 250
 
-Show # Í¨Ø› - í”¼‰ - Ä§çRËéÆ¬
+Show # é€šè²¨ - é ‚ç´š - é­”é¡ç¢ç‰‡
     Class "Currency"
     BaseType "Mirror Shard"
     SetTextColor 0 0 0
@@ -118,7 +118,7 @@ Show # Í¨Ø› - í”¼‰ - Ä§çRËéÆ¬
     PlayEffect Red
     PlayAlertSound ShExalted 250
 
-Show # Í¨Ø› - í”¼‰ - ³ç¸ßÊ¯
+Show # é€šè²¨ - é ‚ç´š - å´‡é«˜çŸ³
     Class "Currency"
     BaseType "Exalted Orb"
     SetTextColor 0 0 0
@@ -129,7 +129,7 @@ Show # Í¨Ø› - í”¼‰ - ³ç¸ßÊ¯
     PlayEffect Red
     PlayAlertSound ShExalted 250
 
-Show # Í¨Ø› - í”¼‰ - Â}‘ğÊ¿³ç¸ßÊ¯
+Show # é€šè²¨ - é ‚ç´š - è–æˆ°å£«å´‡é«˜çŸ³
     Class "Currency"
     BaseType "Crusader's Exalted Orb"
     SetTextColor 0 0 0
@@ -140,7 +140,7 @@ Show # Í¨Ø› - í”¼‰ - Â}‘ğÊ¿³ç¸ßÊ¯
     PlayEffect Red
     PlayAlertSound ShExalted 250
 
-Show # Í¨Ø› - í”¼‰ - ¾ÈÚHÕß³ç¸ßÊ¯
+Show # é€šè²¨ - é ‚ç´š - æ•‘è´–è€…å´‡é«˜çŸ³
     Class "Currency"
     BaseType "Redeemer's Exalted Orb"
     SetTextColor 0 0 0
@@ -151,7 +151,7 @@ Show # Í¨Ø› - í”¼‰ - ¾ÈÚHÕß³ç¸ßÊ¯
     PlayEffect Red
     PlayAlertSound ShExalted 250
 
-Show # Í¨Ø› - í”¼‰ - á÷«CÕß³ç¸ßÊ¯
+Show # é€šè²¨ - é ‚ç´š - ç‹©çµè€…å´‡é«˜çŸ³
     Class "Currency"
     BaseType "Hunter's Exalted Orb"
     SetTextColor 0 0 0
@@ -162,7 +162,7 @@ Show # Í¨Ø› - í”¼‰ - á÷«CÕß³ç¸ßÊ¯
     PlayEffect Red
     PlayAlertSound ShExalted 250
 
-Show # Í¨Ø› - í”¼‰ - ¿‚¶½ÜŠ³ç¸ßÊ¯
+Show # é€šè²¨ - é ‚ç´š - ç¸½ç£è»å´‡é«˜çŸ³
     Class "Currency"
     BaseType "Warlord's Exalted Orb"
     SetTextColor 0 0 0
@@ -173,7 +173,7 @@ Show # Í¨Ø› - í”¼‰ - ¿‚¶½ÜŠ³ç¸ßÊ¯
     PlayEffect Red
     PlayAlertSound ShExalted 250
 
-Show # Í¨Ø› - í”¼‰ - †¾ĞÑÕßÖ®Óñ
+Show # é€šè²¨ - é ‚ç´š - å–šé†’è€…ä¹‹ç‰
     Class "Currency"
     BaseType "Awakener's Orb"
     SetTextColor 0 0 0
@@ -184,7 +184,7 @@ Show # Í¨Ø› - í”¼‰ - †¾ĞÑÕßÖ®Óñ
     PlayEffect Red
     PlayAlertSound ShExalted 250
 
-Show # Í¨Ø› - í”¼‰ - ½yîIÖ®Óñ(Ô­áŒ½çÖ®Óñ)
+Show # é€šè²¨ - é ‚ç´š - çµ±é ˜ä¹‹ç‰(åŸé‡‹ç•Œä¹‹ç‰)
     Class "Currency"
     BaseType "Orb of Dominance"
     SetTextColor 0 0 0
@@ -195,7 +195,7 @@ Show # Í¨Ø› - í”¼‰ - ½yîIÖ®Óñ(Ô­áŒ½çÖ®Óñ)
     PlayEffect Red
     PlayAlertSound ShExalted 250
 
-Show # Í¨Ø› - í”¼‰ - °×»¯µÄÓğÃ«
+Show # é€šè²¨ - é ‚ç´š - ç™½åŒ–çš„ç¾½æ¯›
     Class "Currency"
     BaseType "Albino Rhoa Feather" 
     SetBorderColor 1 255 208
@@ -204,7 +204,7 @@ Show # Í¨Ø› - í”¼‰ - °×»¯µÄÓğÃ«
     MinimapIcon 0 Red Diamond
     PlayEffect Red
 
-Show # Í¨Ø› - í”¼‰ - Ó¡Ó›
+Show # é€šè²¨ - é ‚ç´š - å°è¨˜
     Class "Currency"
     BaseType "Imprint"
     SetTextColor 180 96 0
@@ -215,9 +215,9 @@ Show # Í¨Ø› - í”¼‰ - Ó¡Ó›
     MinimapIcon 0 Red Diamond
     PlayEffect Red
 
-# ¡¾Í¨Ø›-¸ß¼‰¡¿1002
+# ã€é€šè²¨-é«˜ç´šã€‘1002
 
-Show # Í¨Ø› - ¸ß¼‰ - Â}Óñ
+Show # é€šè²¨ - é«˜ç´š - è–ç‰
     Class "Currency"
     BaseType "Sacred Orb"
     SetTextColor 0 0 0 255
@@ -228,7 +228,7 @@ Show # Í¨Ø› - ¸ß¼‰ - Â}Óñ
     MinimapIcon 0 Red Diamond
     PlayEffect Red
 
-Show # Í¨Ø› - ¸ß¼‰ - ÉñÂ}Ê¯
+Show # é€šè²¨ - é«˜ç´š - ç¥è–çŸ³
     Class "Currency"
     BaseType "Divine Orb"
     SetTextColor 0 0 0 255
@@ -240,7 +240,7 @@ Show # Í¨Ø› - ¸ß¼‰ - ÉñÂ}Ê¯
     PlayEffect Red
 
 
-Show # Í¨Ø› - ¸ß¼‰ - ŸoĞ§Ê¯
+Show # é€šè²¨ - é«˜ç´š - ç„¡æ•ˆçŸ³
     Class "Currency"
     BaseType "Orb of Annulment"
     SetTextColor 0 0 0 255
@@ -251,7 +251,7 @@ Show # Í¨Ø› - ¸ß¼‰ - ŸoĞ§Ê¯
     MinimapIcon 0 Red Diamond
     PlayEffect Red
 	
-Show # Í¨Ø› - ¸ß¼‰ - ³·äNÊ¯
+Show # é€šè²¨ - é«˜ç´š - æ’¤éŠ·çŸ³
     Class "Currency"
     BaseType "Orb of Unmaking"
     SetTextColor 0 0 0 255
@@ -262,7 +262,7 @@ Show # Í¨Ø› - ¸ß¼‰ - ³·äNÊ¯
     MinimapIcon 0 Red Diamond
     PlayEffect Red
 
-Show # Í¨Ø› - ¸ß¼‰ - ¹Å×ƒÊ¯
+Show # é€šè²¨ - é«˜ç´š - å¤è®ŠçŸ³
     Class "Currency"
     BaseType "Ancient Orb"
     SetTextColor 0 0 0 255
@@ -273,7 +273,7 @@ Show # Í¨Ø› - ¸ß¼‰ - ¹Å×ƒÊ¯
     MinimapIcon 0 Red Diamond
     PlayEffect Red
 
-Show # Í¨Ø› - ¸ß¼‰ - ÉñÖIÊ¯
+Show # é€šè²¨ - é«˜ç´š - ç¥è«­çŸ³
     Class "Currency"
     BaseType "Harbinger's Orb"
     SetTextColor 0 0 0 255
@@ -284,7 +284,7 @@ Show # Í¨Ø› - ¸ß¼‰ - ÉñÖIÊ¯
     MinimapIcon 0 Red Diamond
     PlayEffect Red
 
-Show # Í¨Ø› - ¸ß¼‰ - ³ç¸ßÊ¯ËéÆ¬
+Show # é€šè²¨ - é«˜ç´š - å´‡é«˜çŸ³ç¢ç‰‡
     Class "Currency"
     BaseType "Exalted Shard"
     SetTextColor 0 0 0 255
@@ -295,7 +295,7 @@ Show # Í¨Ø› - ¸ß¼‰ - ³ç¸ßÊ¯ËéÆ¬
     MinimapIcon 0 Red Diamond
     PlayEffect Red
 
-Show # Í¨Ø› - ¸ß¼‰ - ³õëAºY·ÖÖ®çR
+Show # é€šè²¨ - é«˜ç´š - åˆéšç¯©åˆ†ä¹‹é¡
     Class "Currency"
     BaseType "Prime Regrading Lens"
     SetTextColor 0 0 0 255
@@ -306,7 +306,7 @@ Show # Í¨Ø› - ¸ß¼‰ - ³õëAºY·ÖÖ®çR
     MinimapIcon 0 Red Diamond
     PlayEffect Red
 
-Show # Í¨Ø› - ¸ß¼‰ - ´ÎëAºY·ÖÖ®çR
+Show # é€šè²¨ - é«˜ç´š - æ¬¡éšç¯©åˆ†ä¹‹é¡
     Class "Currency"
     BaseType "Secondary Regrading Lens"
     SetTextColor 0 0 0 255
@@ -317,7 +317,7 @@ Show # Í¨Ø› - ¸ß¼‰ - ´ÎëAºY·ÖÖ®çR
     MinimapIcon 0 Red Diamond
     PlayEffect Red
 
-Show # Í¨Ø› - ¸ß¼‰ - ´ãå€Ê¯
+Show # é€šè²¨ - é«˜ç´š - æ·¬éŠçŸ³
     Class "Currency"
     BaseType "Tempering Orb"
     SetTextColor 0 0 0 255
@@ -328,7 +328,7 @@ Show # Í¨Ø› - ¸ß¼‰ - ´ãå€Ê¯
     MinimapIcon 0 Red Diamond
     PlayEffect Red
 
-Show # Í¨Ø› - ¸ß¼‰ - ²Ã¿pÊ¯
+Show # é€šè²¨ - é«˜ç´š - è£ç¸«çŸ³
     Class "Currency"
     BaseType "Tailoring Orb"
     SetTextColor 0 0 0 255
@@ -339,9 +339,9 @@ Show # Í¨Ø› - ¸ß¼‰ - ²Ã¿pÊ¯
     MinimapIcon 0 Red Diamond
     PlayEffect Red
 
-#¡¾Í¨Ø›-ÆÕÍ¨¡¿1003
+#ã€é€šè²¨-æ™®é€šã€‘1003
 
-Show # Í¨Ø› - ÆÕÍ¨ - »ìãçÊ¯
+Show # é€šè²¨ - æ™®é€š - æ··æ²ŒçŸ³
     Class "Currency"
     BaseType "Chaos Orb"
     SetTextColor 0 0 0
@@ -352,7 +352,7 @@ Show # Í¨Ø› - ÆÕÍ¨ - »ìãçÊ¯
     MinimapIcon 2 Green Diamond
     PlayEffect Green
 
-Show # Í¨Ø› - ÆÕÍ¨ - ¸»ºÀÊ¯
+Show # é€šè²¨ - æ™®é€š - å¯Œè±ªçŸ³
     Class "Currency"
     BaseType "Regal Orb"
     SetTextColor 0 0 0
@@ -363,7 +363,7 @@ Show # Í¨Ø› - ÆÕÍ¨ - ¸»ºÀÊ¯
     PlayEffect Green
     PlayAlertSound ShChaos 200
 
-Show # Í¨Ø› - ÆÕÍ¨ - ŒšÊ¯½³µÄ¶ çR
+Show # é€šè²¨ - æ™®é€š - å¯¶çŸ³åŒ çš„ç¨œé¡
     Class "Currency"
     BaseType "Gemcutter's Prism"
     SetTextColor 0 0 0
@@ -374,7 +374,7 @@ Show # Í¨Ø› - ÆÕÍ¨ - ŒšÊ¯½³µÄ¶ çR
     PlayEffect Green
     PlayAlertSound ShChaos 200
 
-Show # Í¨Ø› - ÆÕÍ¨ - áá»ÚÊ¯
+Show # é€šè²¨ - æ™®é€š - å¾Œæ‚”çŸ³
     Class "Currency"
     BaseType "Orb of Regret"
     SetTextColor 0 0 0
@@ -385,7 +385,7 @@ Show # Í¨Ø› - ÆÕÍ¨ - áá»ÚÊ¯
     PlayEffect Green
     PlayAlertSound ShChaos 200
 
-Show # Í¨Ø› - ÆÕÍ¨ - æœ½YÊ¯
+Show # é€šè²¨ - æ™®é€š - éˆçµçŸ³
     Class "Currency"
     BaseType "Orb of Fusing"
     SetTextColor 0 0 0
@@ -396,7 +396,7 @@ Show # Í¨Ø› - ÆÕÍ¨ - æœ½YÊ¯
     PlayEffect Green
     PlayAlertSound ShChaos 200
 
-Show # Í¨Ø› - ÆÕÍ¨ - ×£¸£Ê¯
+Show # é€šè²¨ - æ™®é€š - ç¥ç¦çŸ³
     Class "Currency"
     BaseType "Blessed Orb"
     SetTextColor 0 0 0
@@ -407,7 +407,7 @@ Show # Í¨Ø› - ÆÕÍ¨ - ×£¸£Ê¯
     PlayEffect Green
     PlayAlertSound ShChaos 200
 
-Show # Í¨Ø› - ÆÕÍ¨ - ÖØèTÊ¯
+Show # é€šè²¨ - æ™®é€š - é‡é‘„çŸ³
     Class "Currency"
     BaseType "Orb of Scouring"
     SetTextColor 0 0 0
@@ -418,7 +418,7 @@ Show # Í¨Ø› - ÆÕÍ¨ - ÖØèTÊ¯
     PlayEffect Green
     PlayAlertSound ShChaos 200
 
-Show # Í¨Ø› - ÆÕÍ¨ - Íß –Ê¯
+Show # é€šè²¨ - æ™®é€š - ç“¦çˆ¾çŸ³
     Class "Currency"
     BaseType "Vaal Orb"
     SetTextColor 0 0 0
@@ -429,7 +429,7 @@ Show # Í¨Ø› - ÆÕÍ¨ - Íß –Ê¯
     MinimapIcon 2 Green Diamond
     PlayEffect Green
 
-Show # Í¨Ø› - ÆÕÍ¨ - ÑuˆD¶¡
+Show # é€šè²¨ - æ™®é€š - è£½åœ–ä¸
     Class "Currency"
     BaseType "Cartographer's Chisel"
     SetTextColor 0 0 0
@@ -440,7 +440,7 @@ Show # Í¨Ø› - ÆÕÍ¨ - ÑuˆD¶¡
     MinimapIcon 2 Green Diamond
     PlayEffect Green
 
-Show # Í¨Ø› - ÆÕÍ¨ - µØÆ½Ê¯
+Show # é€šè²¨ - æ™®é€š - åœ°å¹³çŸ³
     Class "Currency"
     BaseType "Orb of Horizons"
     SetTextColor 0 0 0
@@ -451,7 +451,7 @@ Show # Í¨Ø› - ÆÕÍ¨ - µØÆ½Ê¯
     MinimapIcon 2 Green Diamond
     PlayEffect Green
 
-Show # Í¨Ø› - ÆÕÍ¨ - ØSÔ£ÅÆ½M
+Show # é€šè²¨ - æ™®é€š - è±è£•ç‰Œçµ„
     Class "Currency"
     BaseType "Stacked Deck"
     SetTextColor 0 0 0
@@ -462,7 +462,7 @@ Show # Í¨Ø› - ÆÕÍ¨ - ØSÔ£ÅÆ½M
     MinimapIcon 2 Green Diamond
     PlayEffect Green
 
-Show # Í¨Ø› - ÆÕÍ¨ - ¹¤³ÌÊ¯
+Show # é€šè²¨ - æ™®é€š - å·¥ç¨‹çŸ³
     Class "Currency"
     BaseType "Engineer's Orb"
     SetTextColor 0 0 0
@@ -473,7 +473,7 @@ Show # Í¨Ø› - ÆÕÍ¨ - ¹¤³ÌÊ¯
     MinimapIcon 2 Green Diamond
     PlayEffect Green
 
-Show # Í¨Ø› - ÆÕÍ¨ - Êø¿`Ê¯
+Show # é€šè²¨ - æ™®é€š - æŸç¸›çŸ³
     Class "Currency"
     BaseType "Orb of Binding"
     SetTextColor 0 0 0
@@ -484,7 +484,7 @@ Show # Í¨Ø› - ÆÕÍ¨ - Êø¿`Ê¯
     MinimapIcon 2 Green Diamond
     PlayEffect Green
 
-Show # Í¨Ø› - ÆÕÍ¨ - ß€Ô­Óñ
+Show # é€šè²¨ - æ™®é€š - é‚„åŸç‰
     Class "Currency"
     BaseType "Unshaping Orb"
     SetTextColor 0 0 0
@@ -495,7 +495,7 @@ Show # Í¨Ø› - ÆÕÍ¨ - ß€Ô­Óñ
     MinimapIcon 2 Green Diamond
     PlayEffect Green
 
-Show # Í¨Ø› - ÆÕÍ¨ - üc½ğÊ¯
+Show # é€šè²¨ - æ™®é€š - é»é‡‘çŸ³
     Class "Currency"
     BaseType "Orb of Alchemy"
     SetTextColor 0 0 0
@@ -506,7 +506,7 @@ Show # Í¨Ø› - ÆÕÍ¨ - üc½ğÊ¯
     PlayEffect Yellow
     PlayAlertSound ShGeneral 300
 
-Show # Í¨Ø› - ÆÕÍ¨ - ŸoĞ§Ê¯ËéÆ¬
+Show # é€šè²¨ - æ™®é€š - ç„¡æ•ˆçŸ³ç¢ç‰‡
     Class "Currency"
     BaseType "Annulment Shard"
     SetTextColor 0 0 0
@@ -517,7 +517,7 @@ Show # Í¨Ø› - ÆÕÍ¨ - ŸoĞ§Ê¯ËéÆ¬
     MinimapIcon 2 Green Diamond
     PlayEffect Red
 
-Show # Í¨Ø› - ÆÕÍ¨ - ÉñÖIÊ¯ËéÆ¬
+Show # é€šè²¨ - æ™®é€š - ç¥è«­çŸ³ç¢ç‰‡
     Class "Currency"
     BaseType "Harbinger's Shard"
     SetTextColor 0 0 0
@@ -528,7 +528,7 @@ Show # Í¨Ø› - ÆÕÍ¨ - ÉñÖIÊ¯ËéÆ¬
     MinimapIcon 2 Green Diamond
     PlayEffect Red
 
-Show # Í¨Ø› - ÆÕÍ¨ - ¹Å×ƒÊ¯ËéÆ¬
+Show # é€šè²¨ - æ™®é€š - å¤è®ŠçŸ³ç¢ç‰‡
     Class "Currency"
     BaseType "Ancient Shard"
     SetTextColor 0 0 0
@@ -539,9 +539,9 @@ Show # Í¨Ø› - ÆÕÍ¨ - ¹Å×ƒÊ¯ËéÆ¬
     MinimapIcon 2 Green Diamond
     PlayEffect Red
 
-#¡¾Í¨Ø›-³õÊ¼¡¿1004
+#ã€é€šè²¨-åˆå§‹ã€‘1004
 
-Show # Í¨Ø› - ³õÊ¼ - Öª×R¾íİS
+Show # é€šè²¨ - åˆå§‹ - çŸ¥è­˜å·è»¸
     Class "Currency"
     BaseType "Scroll of Wisdom"
     SetTextColor 248 172 184 255
@@ -550,7 +550,7 @@ Show # Í¨Ø› - ³õÊ¼ - Öª×R¾íİS
     SetFontSize 40
     MinimapIcon 2 Red Diamond
 
-Show # Í¨Ø› - ³õÊ¼ - ‚÷ËÍ¾íİS
+Show # é€šè²¨ - åˆå§‹ - å‚³é€å·è»¸
     Class "Currency"
     BaseType "Portal Scroll"
     SetTextColor 185 206 255
@@ -559,7 +559,7 @@ Show # Í¨Ø› - ³õÊ¼ - ‚÷ËÍ¾íİS
     SetFontSize 40
     MinimapIcon 2 Blue Diamond
 
-Show # Í¨Ø› - ³õÊ¼ - »ìãçÊ¯ËéÆ¬
+Show # é€šè²¨ - åˆå§‹ - æ··æ²ŒçŸ³ç¢ç‰‡
     Class "Currency"
     BaseType "Chaos Shard"
     SetTextColor 0 0 0
@@ -568,7 +568,7 @@ Show # Í¨Ø› - ³õÊ¼ - »ìãçÊ¯ËéÆ¬
     SetFontSize 40
     PlayAlertSound 9 300
 
-Show # Í¨Ø› - ³õÊ¼ - ¸»ºÀÊ¯ËéÆ¬
+Show # é€šè²¨ - åˆå§‹ - å¯Œè±ªçŸ³ç¢ç‰‡
     Class "Currency"
     BaseType "Regal Shard"
     SetTextColor 0 0 0
@@ -577,7 +577,7 @@ Show # Í¨Ø› - ³õÊ¼ - ¸»ºÀÊ¯ËéÆ¬
     SetFontSize 40
     PlayAlertSound 9 300
 
-Show # Í¨Ø› - ³õÊ¼ - ¸ÄÔìÊ¯
+Show # é€šè²¨ - åˆå§‹ - æ”¹é€ çŸ³
     Class "Currency"
     BaseType "Orb of Alteration"
     SetTextColor 0 0 0
@@ -586,7 +586,7 @@ Show # Í¨Ø› - ³õÊ¼ - ¸ÄÔìÊ¯
     SetFontSize 45
     PlayAlertSound 9 300
 
-Show # Í¨Ø› - ³õÊ¼ - ™C•şÊ¯
+Show # é€šè²¨ - åˆå§‹ - æ©ŸæœƒçŸ³
     Class "Currency"
     BaseType "Orb of Chance"
     SetTextColor 0 0 0
@@ -595,7 +595,7 @@ Show # Í¨Ø› - ³õÊ¼ - ™C•şÊ¯
     SetFontSize 40
     PlayAlertSound 9 300
 
-Show # Í¨Ø› - ³õÊ¼ - ¹¤½³Ê¯
+Show # é€šè²¨ - åˆå§‹ - å·¥åŒ çŸ³
     Class "Currency"
     BaseType "Jeweller's Orb"
     SetTextColor 0 0 0
@@ -604,7 +604,7 @@ Show # Í¨Ø› - ³õÊ¼ - ¹¤½³Ê¯
     SetFontSize 45
     PlayAlertSound 9 300
 
-Show # Í¨Ø› - ³õÊ¼ - »ÃÉ«Ê¯
+Show # é€šè²¨ - åˆå§‹ - å¹»è‰²çŸ³
     Class "Currency"
     BaseType "Chromatic Orb"
     SetTextColor 0 0 0
@@ -613,7 +613,7 @@ Show # Í¨Ø› - ³õÊ¼ - »ÃÉ«Ê¯
     SetFontSize 45
     PlayAlertSound 9 300
 
-Show # Í¨Ø› - ³õÊ¼ - ²£Á§—Öé
+Show # é€šè²¨ - åˆå§‹ - ç»ç’ƒå½ˆç 
     Class "Currency"
     BaseType "Glassblower's Bauble"
     SetTextColor 0 0 0
@@ -621,7 +621,7 @@ Show # Í¨Ø› - ³õÊ¼ - ²£Á§—Öé
     SetBorderColor 250 250 250
     SetFontSize 40
 
-Show # Í¨Ø› - ³õÊ¼ - ücÈ¼Ê¯
+Show # é€šè²¨ - åˆå§‹ - é»ç‡ƒçŸ³
     Class "Currency"
     BaseType "Enkindling Orb"
     SetTextColor 0 0 0
@@ -630,7 +630,7 @@ Show # Í¨Ø› - ³õÊ¼ - ücÈ¼Ê¯
     SetFontSize 40
     PlayEffect Brown
 
-Show # Í¨Ø› - ³õÊ¼ - µÎ×¢Ê¯
+Show # é€šè²¨ - åˆå§‹ - æ»´æ³¨çŸ³
     Class "Currency"
     BaseType "Instilling Orb"
     SetTextColor 0 0 0
@@ -639,33 +639,33 @@ Show # Í¨Ø› - ³õÊ¼ - µÎ×¢Ê¯
     SetFontSize 40
     PlayEffect Brown
 
-#¡¾Í¨Ø›-À¬»ø¡¿1005
+#ã€é€šè²¨-åƒåœ¾ã€‘1005
 
-Show # Í¨Ø› - À¬»ø - Ä¥µ¶Ê¯
+Show # é€šè²¨ - åƒåœ¾ - ç£¨åˆ€çŸ³
     Class "Currency"
     BaseType "Blacksmith's Whetstone"
     SetTextColor 210 150 255
     SetFontSize 45
 
-Show # Í¨Ø› - À¬»ø - ×o¼×Æ¬
+Show # é€šè²¨ - åƒåœ¾ - è­·ç”²ç‰‡
     Class "Currency"
     BaseType "Armourer's Scrap"
     SetTextColor 210 150 255
     SetFontSize 45
 
-Show # Í¨Ø› - À¬»ø - Í‘×ƒÊ¯
+Show # é€šè²¨ - åƒåœ¾ - è›»è®ŠçŸ³
     Class "Currency"
     BaseType "Orb of Transmutation"
     SetTextColor 210 150 255
     SetFontSize 45
 
-Show # Í¨Ø› - À¬»ø - Ôö·ùÊ¯
+Show # é€šè²¨ - åƒåœ¾ - å¢å¹…çŸ³
     Class "Currency"
     BaseType "Orb of Augmentation"
     SetTextColor 210 150 255
     SetFontSize 45
 
-Show # Í¨Ø› - À¬»ø - ÆÕÌmµÂË¹½ğÅ
+Show # é€šè²¨ - åƒåœ¾ - æ™®è˜­å¾·æ–¯é‡‘å¹£
     Class "Currency"
     BaseType "Perandus Coin"
     SetTextColor 255 255 0 152
@@ -673,7 +673,7 @@ Show # Í¨Ø› - À¬»ø - ÆÕÌmµÂË¹½ğÅ
     SetFontSize 40
     MinimapIcon 2 Yellow Circle
 
-Show # Í¨Ø› - À¬»ø - µØÆ½Ê¯ËéÆ¬
+Show # é€šè²¨ - åƒåœ¾ - åœ°å¹³çŸ³ç¢ç‰‡
     Class "Currency"
     BaseType "Horizon Shard"
     SetTextColor 0 0 0
@@ -681,7 +681,7 @@ Show # Í¨Ø› - À¬»ø - µØÆ½Ê¯ËéÆ¬
     SetBorderColor 0 0 0
     SetFontSize 45
 
-Show # Í¨Ø› - À¬»ø - ¹¤³ÌÊ¯ËéÆ¬
+Show # é€šè²¨ - åƒåœ¾ - å·¥ç¨‹çŸ³ç¢ç‰‡
     Class "Currency"
     BaseType "Engineer's Shard"
     SetTextColor 0 0 0
@@ -690,27 +690,27 @@ Show # Í¨Ø› - À¬»ø - ¹¤³ÌÊ¯ËéÆ¬
     SetFontSize 45
     PlayAlertSound ShAlchemy 300
 
-Hide # Í¨Ø› - À¬»ø - ¾íİSËéÆ¬
+Hide # é€šè²¨ - åƒåœ¾ - å·è»¸ç¢ç‰‡
     Class "Currency"
     BaseType "Scroll Fragment"
     SetTextColor 215 190 160
 
-Hide # Í¨Ø› - À¬»ø - Í‘×ƒÊ¯ËéÆ¬
+Hide # é€šè²¨ - åƒåœ¾ - è›»è®ŠçŸ³ç¢ç‰‡
     Class "Currency"
     BaseType "Transmutation Shard"
     SetTextColor 215 190 160
 
-Hide # Í¨Ø› - À¬»ø - ¸ÄÔìÊ¯ËéÆ¬
+Hide # é€šè²¨ - åƒåœ¾ - æ”¹é€ çŸ³ç¢ç‰‡
     Class "Currency"
     BaseType "Alteration Shard"
     SetTextColor 215 190 160
 
-Show # Í¨Ø› - À¬»ø - üc½ğÊ¯ËéÆ¬
+Show # é€šè²¨ - åƒåœ¾ - é»é‡‘çŸ³ç¢ç‰‡
     Class "Currency"
     BaseType "Alchemy Shard"
     SetTextColor 215 190 160
 
-Show # Í¨Ø› - À¬»ø - Êø¿`Ê¯ËéÆ¬
+Show # é€šè²¨ - åƒåœ¾ - æŸç¸›çŸ³ç¢ç‰‡
     Class "Currency"
     BaseType "Binding Shard"
     SetTextColor 0 0 0
@@ -718,9 +718,9 @@ Show # Í¨Ø› - À¬»ø - Êø¿`Ê¯ËéÆ¬
     SetBorderColor 0 0 0
     SetFontSize 45
 
-#¡¾Í¨Ø›-ÌØÊâ¡¿1006
+#ã€é€šè²¨-ç‰¹æ®Šã€‘1006
 
-Show # Í¨Ø› - ÌØÊâ - Áù·Öƒx£®´óŸ
+Show # é€šè²¨ - ç‰¹æ®Š - å…­åˆ†å„€ï¼å¤§å¸«
     Class "Currency"
     BaseType "Awakened Sextant"
     SetTextColor 0 0 0
@@ -731,7 +731,7 @@ Show # Í¨Ø› - ÌØÊâ - Áù·Öƒx£®´óŸ
     MinimapIcon 2 Red Triangle
     PlayEffect Red
 
-Show # Í¨Ø› - ÌØÊâ - Áù·Öƒx£®¸ßÉĞ
+Show # é€šè²¨ - ç‰¹æ®Š - å…­åˆ†å„€ï¼é«˜å°š
     Class "Currency"
     BaseType "Elevated Sextant"
     SetTextColor 0 0 0
@@ -741,7 +741,7 @@ Show # Í¨Ø› - ÌØÊâ - Áù·Öƒx£®¸ßÉĞ
     MinimapIcon 1 Blue Triangle
     PlayAlertSound 16 250
 
-Show # Í¨Ø› - ÌØÊâ - œyÁ¿†TµÄÁ_±P
+Show # é€šè²¨ - ç‰¹æ®Š - æ¸¬é‡å“¡çš„ç¾…ç›¤
     Class "Currency"
     BaseType "Surveyor's Compass"
     SetTextColor 100 50 0
@@ -751,7 +751,7 @@ Show # Í¨Ø› - ÌØÊâ - œyÁ¿†TµÄÁ_±P
     MinimapIcon 2 Red Diamond
     PlayEffect Red
 
-Show # Í¨Ø› - ÌØÊâ - ³äÄÜµÄÁ_±P
+Show # é€šè²¨ - ç‰¹æ®Š - å……èƒ½çš„ç¾…ç›¤
     Class "Currency"
     BaseType "Charged Compass"
     SetTextColor 100 50 0
@@ -761,7 +761,7 @@ Show # Í¨Ø› - ÌØÊâ - ³äÄÜµÄÁ_±P
     MinimapIcon 2 Red Diamond
     PlayEffect Red
 
-Show # Í¨Ø› - ÌØÊâ - ‚É²éˆó¸æ
+Show # é€šè²¨ - ç‰¹æ®Š - åµæŸ¥å ±å‘Š
     Class "Currency"
     BaseType "Scouting Report"
     SetTextColor 100 50 0
@@ -771,7 +771,7 @@ Show # Í¨Ø› - ÌØÊâ - ‚É²éˆó¸æ
     MinimapIcon 2 Red Diamond
     PlayEffect Red
 
-Show # Í¨Ø› - ÌØÊâ - ÍÚÓÍ™C
+Show # é€šè²¨ - ç‰¹æ®Š - æŒ–æ²¹æ©Ÿ
     Class "Currency"
     BaseType "Oil Extractor"
     SetTextColor 255 255 200
@@ -779,9 +779,9 @@ Show # Í¨Ø› - ÌØÊâ - ÍÚÓÍ™C
     SetBorderColor 0 255 255
     SetFontSize 40
 
-#¡¾Í¨Ø›-®ÄÜ¡¿1008
+#ã€é€šè²¨-ç•°èƒ½ã€‘1008
 
-Show # Í¨Ø› - ®ÄÜ - ®ÄÜ»Ò a
+Show # é€šè²¨ - ç•°èƒ½ - ç•°èƒ½ç°ç‡¼
     Class "Currency"
     BaseType "Eldritch Ember"
     SetTextColor 219 48 14
@@ -791,7 +791,7 @@ Show # Í¨Ø› - ®ÄÜ - ®ÄÜ»Ò a
     MinimapIcon 2 Red Diamond
     PlayEffect Red
 
-Show # Í¨Ø› - ®ÄÜ - ®ÄÜì`Òº
+Show # é€šè²¨ - ç•°èƒ½ - ç•°èƒ½éˆæ¶²
     Class "Currency"
     BaseType "Eldritch Ichor"
     SetTextColor 0 255 255
@@ -802,7 +802,7 @@ Show # Í¨Ø› - ®ÄÜ - ®ÄÜì`Òº
     MinimapIcon 2 Cyan Diamond
     PlayEffect Cyan
 
-Show # Í¨Ø› - ®ÄÜ - ĞnÍ»ŒšÖé
+Show # é€šè²¨ - ç•°èƒ½ - è¡çªå¯¶ç 
     Class "Currency"
     BaseType "Orb of Conflict"
     SetTextColor 219 48 14
@@ -813,7 +813,7 @@ Show # Í¨Ø› - ®ÄÜ - ĞnÍ»ŒšÖé
     PlayEffect Red
     PlayAlertSound ShMirror 300
 
-Show # Í¨Ø› - ®ÄÜ - ®ÄÜ³ç¸ßÊ¯
+Show # é€šè²¨ - ç•°èƒ½ - ç•°èƒ½å´‡é«˜çŸ³
     Class "Currency"
     BaseType "Eldritch Exalted Orb"
     SetTextColor 219 48 14
@@ -824,7 +824,7 @@ Show # Í¨Ø› - ®ÄÜ - ®ÄÜ³ç¸ßÊ¯
     PlayEffect Red
     PlayAlertSound ShMirror 300
 
-Show # Í¨Ø› - ®ÄÜ - ®ÄÜŸoĞ§Ê¯
+Show # é€šè²¨ - ç•°èƒ½ - ç•°èƒ½ç„¡æ•ˆçŸ³
     Class "Currency"
     BaseType "Eldritch Orb of Annulment"
     SetTextColor 219 48 14
@@ -834,7 +834,7 @@ Show # Í¨Ø› - ®ÄÜ - ®ÄÜŸoĞ§Ê¯
     MinimapIcon 0 Red Diamond
     PlayEffect Red
 
-Show # Í¨Ø› - ®ÄÜ - ®ÄÜ»ìãçÊ¯
+Show # é€šè²¨ - ç•°èƒ½ - ç•°èƒ½æ··æ²ŒçŸ³
     Class "Currency"
     BaseType "Eldritch Chaos Orb"
     SetTextColor 219 48 14
@@ -845,17 +845,17 @@ Show # Í¨Ø› - ®ÄÜ - ®ÄÜ»ìãçÊ¯
     PlayEffect Red
 
 #============
-# ¡¾µØˆDÕfÃ÷™Ú¡¿2000
-# ¡¾µØˆD-µòÂäµØˆD¡¿2005
-# ¡¾µØˆD-„İÁ¦µØˆD¡¿2004
-# ¡¾µØˆD-×dÍıµØˆD¡¿2003
-# ¡¾µØˆD-‚÷ÆæµØˆD¡¿2002
-# ¡¾µØˆD-ÆÕÍ¨İ›ˆD¡¿2001
+# ã€åœ°åœ–èªªæ˜æ¬„ã€‘2000
+# ã€åœ°åœ–-å‡‹è½åœ°åœ–ã€‘2005
+# ã€åœ°åœ–-å‹¢åŠ›åœ°åœ–ã€‘2004
+# ã€åœ°åœ–-è­«å¦„åœ°åœ–ã€‘2003
+# ã€åœ°åœ–-å‚³å¥‡åœ°åœ–ã€‘2002
+# ã€åœ°åœ–-æ™®é€šè¼¿åœ–ã€‘2001
 #============
 
-# ¡¾µØˆD-µòÂäµØˆD¡¿2005
+# ã€åœ°åœ–-å‡‹è½åœ°åœ–ã€‘2005
 
-Show # µØˆD - µòÂäİ›ˆD - T14+
+Show # åœ°åœ– - å‡‹è½è¼¿åœ– - T14+
     MapTier >= 14
     BlightedMap True
     Class "Maps"
@@ -867,7 +867,7 @@ Show # µØˆD - µòÂäİ›ˆD - T14+
     PlayEffect Red
      PlayAlertSound 3 250
 
-Show # µØˆD - µòÂäİ›ˆD - T11~13
+Show # åœ°åœ– - å‡‹è½è¼¿åœ– - T11~13
     MapTier >= 11
     BlightedMap True
     Class "Maps"
@@ -879,7 +879,7 @@ Show # µØˆD - µòÂäİ›ˆD - T11~13
     PlayEffect Red
      PlayAlertSound 3 250
 
-Show # µØˆD - µòÂäİ›ˆD - T6~10
+Show # åœ°åœ– - å‡‹è½è¼¿åœ– - T6~10
     MapTier >= 6
     BlightedMap True
     Class "Maps"
@@ -891,7 +891,7 @@ Show # µØˆD - µòÂäİ›ˆD - T6~10
     PlayEffect Yellow
      PlayAlertSound 3 250
 
-Show # µØˆD - µòÂäİ›ˆD - T1
+Show # åœ°åœ– - å‡‹è½è¼¿åœ– - T1
     MapTier >= 1
     BlightedMap True
     Class "Maps"
@@ -903,9 +903,9 @@ Show # µØˆD - µòÂäİ›ˆD - T1
     PlayEffect White
      PlayAlertSound 3 250
 
-# ¡¾µØˆD-„İÁ¦µØˆD¡¿2004
+# ã€åœ°åœ–-å‹¢åŠ›åœ°åœ–ã€‘2004
 
-Show # µØˆD - „İÁ¦µØˆD - ËÜ½çµØˆD
+Show # åœ°åœ– - å‹¢åŠ›åœ°åœ– - å¡‘ç•Œåœ°åœ–
     HasInfluence Shaper 
     MapTier >= 1
     SetBackgroundColor 200 0 0
@@ -915,7 +915,7 @@ Show # µØˆD - „İÁ¦µØˆD - ËÜ½çµØˆD
     PlayEffect Red
      PlayAlertSound 3 250
 
-Show # µØˆD - „İÁ¦µØˆD - ×ğŸµØˆD
+Show # åœ°åœ– - å‹¢åŠ›åœ°åœ– - å°Šå¸«åœ°åœ–
     HasInfluence Elder
     MapTier >= 1
     SetBackgroundColor 85 26 139
@@ -924,7 +924,7 @@ Show # µØˆD - „İÁ¦µØˆD - ×ğŸµØˆD
     MinimapIcon 0 Red Circle
      PlayAlertSound 3 250
 
-Show # µØˆD - „İÁ¦µØˆD - Å£î^ÈËÃÔÓò
+Show # åœ°åœ– - å‹¢åŠ›åœ°åœ– - ç‰›é ­äººè¿·åŸŸ
     MapTier = 16
     Class "Maps"
     BaseType "Maze of the Minotaur Map"
@@ -936,7 +936,7 @@ Show # µØˆD - „İÁ¦µØˆD - Å£î^ÈËÃÔÓò
     PlayEffect Red
      PlayAlertSound 3 250
 
-Show # µØˆD - „İÁ¦µØˆD - ÆæÃÀÀ­Ä§¿Ó
+Show # åœ°åœ– - å‹¢åŠ›åœ°åœ– - å¥‡ç¾æ‹‰é­”å‘
     MapTier = 16
     Class "Maps"
     BaseType "Pit of the Chimera Map"
@@ -948,7 +948,7 @@ Show # µØˆD - „İÁ¦µØˆD - ÆæÃÀÀ­Ä§¿Ó
     PlayEffect Red
      PlayAlertSound 3 250
 
-Show # µØˆD - „İÁ¦µØˆD - ¾Åî^Éß±ù¿ß
+Show # åœ°åœ– - å‹¢åŠ›åœ°åœ– - ä¹é ­è›‡å†°çªŸ
     MapTier = 16
     Class "Maps"
     BaseType "Lair of the Hydra Map"
@@ -960,7 +960,7 @@ Show # µØˆD - „İÁ¦µØˆD - ¾Åî^Éß±ù¿ß
     PlayEffect Red
      PlayAlertSound 3 250
 
-Show # µØˆD - „İÁ¦µØˆD - »ğøP»ËÈÛºË
+Show # åœ°åœ– - å‹¢åŠ›åœ°åœ– - ç«é³³å‡°ç†”æ ¸
     MapTier = 16
     Class "Maps"
     BaseType "Forge of the Phoenix Map"
@@ -972,9 +972,9 @@ Show # µØˆD - „İÁ¦µØˆD - »ğøP»ËÈÛºË
     PlayEffect Red
      PlayAlertSound 3 250
 
-# ¡¾µØˆD-×dÍıµØˆD¡¿2003
+# ã€åœ°åœ–-è­«å¦„åœ°åœ–ã€‘2003
 
-Show # µØˆD - ×dÍıµØˆD - T14+
+Show # åœ°åœ– - è­«å¦„åœ°åœ– - T14+
     AnyEnchantment True
     MapTier >= 14
     Class "Maps"
@@ -986,7 +986,7 @@ Show # µØˆD - ×dÍıµØˆD - T14+
     PlayEffect Red
     PlayAlertSound 3 250
 
-Show # µØˆD - ×dÍıµØˆD - T11~13
+Show # åœ°åœ– - è­«å¦„åœ°åœ– - T11~13
     AnyEnchantment True
     MapTier >= 11
     Class "Maps"
@@ -998,7 +998,7 @@ Show # µØˆD - ×dÍıµØˆD - T11~13
     PlayEffect Red
     PlayAlertSound 3 250
 
-Show # µØˆD - ×dÍıµØˆD - T6~10
+Show # åœ°åœ– - è­«å¦„åœ°åœ– - T6~10
     AnyEnchantment True
     MapTier >= 6
     Class "Maps"
@@ -1010,7 +1010,7 @@ Show # µØˆD - ×dÍıµØˆD - T6~10
     PlayEffect Yellow
     PlayAlertSound 3 250
 
-Show # µØˆD - ×dÍıµØˆD - T1~5
+Show # åœ°åœ– - è­«å¦„åœ°åœ– - T1~5
     AnyEnchantment True
     MapTier >= 1
     SetBackgroundColor 83 83 83
@@ -1020,9 +1020,9 @@ Show # µØˆD - ×dÍıµØˆD - T1~5
     MinimapIcon 2 White Circle
     PlayEffect White
 
-# ¡¾µØˆD-‚÷ÆæµØˆD¡¿2002
+# ã€åœ°åœ–-å‚³å¥‡åœ°åœ–ã€‘2002
 
-Show # µØˆD - ‚÷Ææİ›ˆD - ‚÷ÆæµØˆD
+Show # åœ°åœ– - å‚³å¥‡è¼¿åœ– - å‚³å¥‡åœ°åœ–
     Rarity = Unique
     Class "Maps"
     SetBackgroundColor 255 255 255
@@ -1032,9 +1032,9 @@ Show # µØˆD - ‚÷Ææİ›ˆD - ‚÷ÆæµØˆD
     MinimapIcon 0 Red Circle
     PlayEffect Red
 
-# ¡¾µØˆD-ÆÕÍ¨İ›ˆD¡¿2001
+# ã€åœ°åœ–-æ™®é€šè¼¿åœ–ã€‘2001
 
-Show # µØˆD - ÆÕÍ¨İ›ˆD - T14+ÆÕÍ¨
+Show # åœ°åœ– - æ™®é€šè¼¿åœ– - T14+æ™®é€š
     MapTier >= 14
     Rarity = Normal
     Class "Maps"
@@ -1046,7 +1046,7 @@ Show # µØˆD - ÆÕÍ¨İ›ˆD - T14+ÆÕÍ¨
     MinimapIcon 1 Red Circle
     PlayEffect Red
 
-Show # µØˆD - ÆÕÍ¨İ›ˆD - T14+Ä§·¨/Ï¡ÓĞ
+Show # åœ°åœ– - æ™®é€šè¼¿åœ– - T14+é­”æ³•/ç¨€æœ‰
     MapTier >= 13
     Class "Maps"
     SetBackgroundColor 255 0 85
@@ -1056,7 +1056,7 @@ Show # µØˆD - ÆÕÍ¨İ›ˆD - T14+Ä§·¨/Ï¡ÓĞ
     MinimapIcon 1 Red Circle
     PlayEffect Red
 
-Show # µØˆD - ÆÕÍ¨İ›ˆD - T11~13ÆÕÍ¨
+Show # åœ°åœ– - æ™®é€šè¼¿åœ– - T11~13æ™®é€š
     MapTier >= 11
     Rarity = Normal
     Class "Maps"
@@ -1068,7 +1068,7 @@ Show # µØˆD - ÆÕÍ¨İ›ˆD - T11~13ÆÕÍ¨
     PlayEffect Red
     PlayAlertSound 3 250
 
-Show # µØˆD - ÆÕÍ¨İ›ˆD - T11~13Ä§·¨/Ï¡ÓĞ
+Show # åœ°åœ– - æ™®é€šè¼¿åœ– - T11~13é­”æ³•/ç¨€æœ‰
     MapTier >= 11
     Class "Maps"
     SetTextColor 255 255 255
@@ -1079,7 +1079,7 @@ Show # µØˆD - ÆÕÍ¨İ›ˆD - T11~13Ä§·¨/Ï¡ÓĞ
     PlayEffect Red
     PlayAlertSound 3 250
 
-Show # µØˆD - ÆÕÍ¨İ›ˆD - T6~10ÆÕÍ¨
+Show # åœ°åœ– - æ™®é€šè¼¿åœ– - T6~10æ™®é€š
     MapTier >= 6
     Rarity = Normal
     Class "Maps"
@@ -1091,7 +1091,7 @@ Show # µØˆD - ÆÕÍ¨İ›ˆD - T6~10ÆÕÍ¨
     MinimapIcon 2 Yellow Circle
     PlayEffect Yellow
 
-Show # µØˆD - ÆÕÍ¨İ›ˆD - T6~10Ä§·¨/Ï¡ÓĞ
+Show # åœ°åœ– - æ™®é€šè¼¿åœ– - T6~10é­”æ³•/ç¨€æœ‰
     MapTier >= 6
     Class "Maps"
     SetTextColor 255 255 0 
@@ -1102,7 +1102,7 @@ Show # µØˆD - ÆÕÍ¨İ›ˆD - T6~10Ä§·¨/Ï¡ÓĞ
     MinimapIcon 2 Yellow Circle
     PlayEffect Yellow
 
-Show # µØˆD - ÆÕÍ¨İ›ˆD - T1~5ÆÕÍ¨
+Show # åœ°åœ– - æ™®é€šè¼¿åœ– - T1~5æ™®é€š
     MapTier >= 1
     Rarity = Normal
     Class "Maps"
@@ -1114,7 +1114,7 @@ Show # µØˆD - ÆÕÍ¨İ›ˆD - T1~5ÆÕÍ¨
     MinimapIcon 2 White Circle
     PlayEffect White
 
-Show # µØˆD - ÆÕÍ¨İ›ˆD - T1~5Ä§·¨/Ï¡ÓĞ
+Show # åœ°åœ– - æ™®é€šè¼¿åœ– - T1~5é­”æ³•/ç¨€æœ‰
     MapTier >= 1
     Class "Maps"
     SetBackgroundColor 83 83 83
@@ -1125,37 +1125,37 @@ Show # µØˆD - ÆÕÍ¨İ›ˆD - T1~5Ä§·¨/Ï¡ÓĞ
     PlayEffect White
 
 #============
-# ¡¾Â“ÃË-ÕfÃ÷™Ú¡¿
-# ¡¾Â“ÃË-3.17ËŞ”³¡¿3025
-# ¡¾Â“ÃË-3.16Äô|¡¿3024
-# ¡¾Â“ÃË-3.15Ì½ëU¡¿3023
-# ¡¾Â“ÃË-3.14Í¨ëº¡¿3022
-# ¡¾Â“ÃË-3.13¼Àìë¡¿3021
-# ¡¾Â“ÃË-3.12½Ù±I¡¿3020
-# ¡¾Â“ÃË-3.11»¨ˆ@¡¿3019
-# ¡¾Â“ÃË-3.10×dÍı¡¿3018
-# ¡¾Â“ÃË-3.9å€Ä§¡¿3017
-# ¡¾Â“ÃË-3.8µòÂä¡¿3016
-# ¡¾Â“ÃË-3.7‘ğy¡¿3015
-# ¡¾Â“ÃË-3.6×·‘›¡¿3014
-# ¡¾Â“ÃË-3.5ÃÜ½Ì¡¿3013
-# ¡¾Â“ÃË-3.4¾òªz¡¿3012
-# ¡¾Â“ÃË-3.3´©Ô½¡¿3011
-# ¡¾Â“ÃË-3.2«F«C¡¿3010
-# ¡¾Â“ÃË-3.1ÉîœY¡¿3009
-# ¡¾Â“ÃË-3.0ÉñÖI¡¿3008
-# ¡¾Â“ÃË-2.6²»Ğà¡¿3007
-# ¡¾Â“ÃË-2.5ÁÑºÛ¡¿3006
-# ¡¾Â“ÃË-2.4¾«Ëè¡¿3005
-# ¡¾Â“ÃË-2.3îAÑÔ¡¿3004
-# ¡¾Â“ÃË-2.2•NÈA¡¿3003
-# ¡¾Â“ÃË-2.1Ä§·û¡¿3002
-# ¡¾Â“ÃË-2.0ÜŠˆF¡¿3001
+# ã€è¯ç›Ÿ-èªªæ˜æ¬„ã€‘
+# ã€è¯ç›Ÿ-3.17å®¿æ•µã€‘3025
+# ã€è¯ç›Ÿ-3.16ç½é­˜ã€‘3024
+# ã€è¯ç›Ÿ-3.15æ¢éšªã€‘3023
+# ã€è¯ç›Ÿ-3.14é€šç‰’ã€‘3022
+# ã€è¯ç›Ÿ-3.13ç¥­ç¥€ã€‘3021
+# ã€è¯ç›Ÿ-3.12åŠ«ç›œã€‘3020
+# ã€è¯ç›Ÿ-3.11èŠ±åœ’ã€‘3019
+# ã€è¯ç›Ÿ-3.10è­«å¦„ã€‘3018
+# ã€è¯ç›Ÿ-3.9éŠé­”ã€‘3017
+# ã€è¯ç›Ÿ-3.8å‡‹è½ã€‘3016
+# ã€è¯ç›Ÿ-3.7æˆ°äº‚ã€‘3015
+# ã€è¯ç›Ÿ-3.6è¿½æ†¶ã€‘3014
+# ã€è¯ç›Ÿ-3.5å¯†æ•™ã€‘3013
+# ã€è¯ç›Ÿ-3.4æ˜ç„ã€‘3012
+# ã€è¯ç›Ÿ-3.3ç©¿è¶Šã€‘3011
+# ã€è¯ç›Ÿ-3.2ç¸çµã€‘3010
+# ã€è¯ç›Ÿ-3.1æ·±æ·µã€‘3009
+# ã€è¯ç›Ÿ-3.0ç¥è«­ã€‘3008
+# ã€è¯ç›Ÿ-2.6ä¸æœ½ã€‘3007
+# ã€è¯ç›Ÿ-2.5è£‚ç—•ã€‘3006
+# ã€è¯ç›Ÿ-2.4ç²¾é«“ã€‘3005
+# ã€è¯ç›Ÿ-2.3é è¨€ã€‘3004
+# ã€è¯ç›Ÿ-2.2æ˜‡è¯ã€‘3003
+# ã€è¯ç›Ÿ-2.1é­”ç¬¦ã€‘3002
+# ã€è¯ç›Ÿ-2.0è»åœ˜ã€‘3001
 #============
 
-# ¡¾Â“ÃË-3.17ËŞ”³¡¿3025
+# ã€è¯ç›Ÿ-3.17å®¿æ•µã€‘3025
 
-Show # Â“ÃË - 3.17ËŞ”³ - ËŞ”³
+Show # è¯ç›Ÿ - 3.17å®¿æ•µ - å®¿æ•µ
     Class "Archnemesis Mod"
     SetFontSize 45
     SetTextColor 170 158 129
@@ -1164,9 +1164,9 @@ Show # Â“ÃË - 3.17ËŞ”³ - ËŞ”³
     PlayEffect Green
     MinimapIcon 1 Green Pentagon
 
-# ¡¾Â“ÃË-3.16Äô|¡¿3024
+# ã€è¯ç›Ÿ-3.16ç½é­˜ã€‘3024
 
-Show # Â“ÃË - 3.16Äô| - çè›@µÄÍ¨Ø› - çè›@µÄ³ç¸ßÊ¯
+Show # è¯ç›Ÿ - 3.16ç½é­˜ - ç·æ±™çš„é€šè²¨ - ç·æ±™çš„å´‡é«˜çŸ³
     Class "Currency"
     BaseType "Tainted Exalted Orb"
     SetTextColor 255 40 0
@@ -1176,7 +1176,7 @@ Show # Â“ÃË - 3.16Äô| - çè›@µÄÍ¨Ø› - çè›@µÄ³ç¸ßÊ¯
     MinimapIcon 0 Red Diamond
     PlayEffect Red
 
-Show # Â“ÃË - 3.16Äô| - çè›@µÄÍ¨Ø› - çè›@µÄ×£¸£Ê¯
+Show # è¯ç›Ÿ - 3.16ç½é­˜ - ç·æ±™çš„é€šè²¨ - ç·æ±™çš„ç¥ç¦çŸ³
     Class "Currency"
     BaseType "Tainted Blessing"
     SetTextColor 255 40 0
@@ -1186,7 +1186,7 @@ Show # Â“ÃË - 3.16Äô| - çè›@µÄÍ¨Ø› - çè›@µÄ×£¸£Ê¯
     MinimapIcon 0 Red Diamond
     PlayEffect Red
 
-Show # Â“ÃË - 3.16Äô| - çè›@µÄÍ¨Ø› - çè›@µÄÉñÂ}œIÖé
+Show # è¯ç›Ÿ - 3.16ç½é­˜ - ç·æ±™çš„é€šè²¨ - ç·æ±™çš„ç¥è–æ·šç 
     Class "Currency"
     BaseType "Tainted Divine Teardrop"
     SetTextColor 255 40 0
@@ -1196,7 +1196,7 @@ Show # Â“ÃË - 3.16Äô| - çè›@µÄÍ¨Ø› - çè›@µÄÉñÂ}œIÖé
     MinimapIcon 0 Red Diamond
     PlayEffect Red
 
-Show # Â“ÃË - 3.16Äô| - çè›@µÄÍ¨Ø› - çè›@µÄÉñÔ’Ê¯
+Show # è¯ç›Ÿ - 3.16ç½é­˜ - ç·æ±™çš„é€šè²¨ - ç·æ±™çš„ç¥è©±çŸ³
     Class "Currency"
     BaseType "Tainted Mythic Orb"
     SetTextColor 255 40 0
@@ -1206,7 +1206,7 @@ Show # Â“ÃË - 3.16Äô| - çè›@µÄÍ¨Ø› - çè›@µÄÉñÔ’Ê¯
     MinimapIcon 0 Red Diamond
     PlayEffect Red
 
-Show # Â“ÃË - 3.16Äô| - çè›@µÄÍ¨Ø› - çè›@µÄæœ½YÊ¯
+Show # è¯ç›Ÿ - 3.16ç½é­˜ - ç·æ±™çš„é€šè²¨ - ç·æ±™çš„éˆçµçŸ³
     Class "Currency"
     BaseType "Tainted Orb of Fusing"
     SetTextColor 255 40 0
@@ -1216,7 +1216,7 @@ Show # Â“ÃË - 3.16Äô| - çè›@µÄÍ¨Ø› - çè›@µÄæœ½YÊ¯
     MinimapIcon 2 Green Diamond
     PlayEffect Green
 
-Show # Â“ÃË - 3.16Äô| - çè›@µÄÍ¨Ø› - çè›@µÄ»ìãçÊ¯
+Show # è¯ç›Ÿ - 3.16ç½é­˜ - ç·æ±™çš„é€šè²¨ - ç·æ±™çš„æ··æ²ŒçŸ³
     Class "Currency"
     BaseType "Tainted Chaos Orb"
     SetTextColor 255 40 0
@@ -1226,7 +1226,7 @@ Show # Â“ÃË - 3.16Äô| - çè›@µÄÍ¨Ø› - çè›@µÄ»ìãçÊ¯
     MinimapIcon 2 Green Diamond
     PlayEffect Green
 
-Show # Â“ÃË - 3.16Äô| - çè›@µÄÍ¨Ø› - çè›@µÄ»ÃÉ«Ê¯	
+Show # è¯ç›Ÿ - 3.16ç½é­˜ - ç·æ±™çš„é€šè²¨ - ç·æ±™çš„å¹»è‰²çŸ³	
     Class "Currency"
     BaseType "Tainted Chromatic Orb"
     SetTextColor 255 40 0
@@ -1235,7 +1235,7 @@ Show # Â“ÃË - 3.16Äô| - çè›@µÄÍ¨Ø› - çè›@µÄ»ÃÉ«Ê¯
     SetFontSize 45
     PlayAlertSound 9 300
 
-Show # Â“ÃË - 3.16Äô| - çè›@µÄÍ¨Ø› - çè›@µÄ¹¤½³Ê¯	
+Show # è¯ç›Ÿ - 3.16ç½é­˜ - ç·æ±™çš„é€šè²¨ - ç·æ±™çš„å·¥åŒ çŸ³	
     Class "Currency"
     BaseType "Tainted Jeweller's Orb"
     SetTextColor 255 40 0
@@ -1244,7 +1244,7 @@ Show # Â“ÃË - 3.16Äô| - çè›@µÄÍ¨Ø› - çè›@µÄ¹¤½³Ê¯
     SetFontSize 45
     PlayAlertSound 9 300
 
-Show # Â“ÃË - 3.16Äô| - çè›@µÄÍ¨Ø› - çè›@µÄÄ¥µ¶Ê¯
+Show # è¯ç›Ÿ - 3.16ç½é­˜ - ç·æ±™çš„é€šè²¨ - ç·æ±™çš„ç£¨åˆ€çŸ³
     Class "Currency"
     BaseType "Tainted Blacksmith's Whetstone"
     SetTextColor 255 40 0
@@ -1253,7 +1253,7 @@ Show # Â“ÃË - 3.16Äô| - çè›@µÄÍ¨Ø› - çè›@µÄÄ¥µ¶Ê¯
     SetFontSize 45
     PlayAlertSound 9 300
 
-Show # Â“ÃË - 3.16Äô| - çè›@µÄÍ¨Ø› - çè›@µÄ×o¼×Æ¬
+Show # è¯ç›Ÿ - 3.16ç½é­˜ - ç·æ±™çš„é€šè²¨ - ç·æ±™çš„è­·ç”²ç‰‡
     Class "Currency"
     BaseType "Tainted Armourer's Scrap"
     SetTextColor 255 40 0
@@ -1262,9 +1262,9 @@ Show # Â“ÃË - 3.16Äô| - çè›@µÄÍ¨Ø› - çè›@µÄ×o¼×Æ¬
     SetFontSize 45
     PlayAlertSound 9 300
 
-# ¡¾Â“ÃË-3.15Ì½ëU¡¿3023
+# ã€è¯ç›Ÿ-3.15æ¢éšªã€‘3023
 
-Show # Â“ÃË - 3.15Ì½ëU - Ë¢ĞÂÎï(®ÓòèTÅ/U½ğŒÙ/üSÜÎ/ÂñÔáª„ÕÂ)
+Show # è¯ç›Ÿ - 3.15æ¢éšª - åˆ·æ–°ç‰©(ç•°åŸŸé‘„å¹£/å»¢é‡‘å±¬/é»ƒèŠª/åŸ‹è‘¬çç« )
     Class "Currency"
     BaseType "Exotic Coinage" "Scrap Metal" "Astragali" "Burial Medallion"
     SetTextColor 255 255 255
@@ -1275,7 +1275,7 @@ Show # Â“ÃË - 3.15Ì½ëU - Ë¢ĞÂÎï(®ÓòèTÅ/U½ğŒÙ/üSÜÎ/ÂñÔáª„ÕÂ)
     MinimapIcon 0 Blue Star
     PlayEffect Blue
 
-Show # Â“ÃË - 3.15Ì½ëU - ÎÄÎï
+Show # è¯ç›Ÿ - 3.15æ¢éšª - æ–‡ç‰©
     Class "Currency"
     BaseType "Artifact"
     SetTextColor 0 0 0 255
@@ -1286,7 +1286,7 @@ Show # Â“ÃË - 3.15Ì½ëU - ÎÄÎï
     MinimapIcon 0 Blue Star
     PlayEffect Blue
 
-Show # Â“ÃË - 3.15Ì½ëU - Ì½ëUÈÕÓ›
+Show # è¯ç›Ÿ - 3.15æ¢éšª - æ¢éšªæ—¥è¨˜
     Class "Expedition Logbook"
     BaseType "Expedition Logbook"
     SetTextColor 0 0 255
@@ -1297,7 +1297,7 @@ Show # Â“ÃË - 3.15Ì½ëU - Ì½ëUÈÕÓ›
     MinimapIcon 0 Blue Circle
     PlayEffect Blue
 
-Show # Â“ÃË - 3.15Ì½ëU - Ä§·û×oÊÖ
+Show # è¯ç›Ÿ - 3.15æ¢éšª - é­”ç¬¦è­·æ‰‹
     Class "Gloves"
     BaseType "Runic Gloves" "Runic Gages" "Runic Gauntlets"
     SetBorderColor 138 71 255
@@ -1307,7 +1307,7 @@ Show # Â“ÃË - 3.15Ì½ëU - Ä§·û×oÊÖ
     MinimapIcon 0 Purple UpsideDownHouse
     PlayEffect Purple
 
-Show # Â“ÃË - 3.15Ì½ëU - Ä§·û»Ê¹Ú
+Show # è¯ç›Ÿ - 3.15æ¢éšª - é­”ç¬¦çš‡å† 
     Class "Helmets"
     BaseType "Runic Helm" "Runic Crest" "Runic Crown"
     SetBorderColor 138 71 255
@@ -1317,7 +1317,7 @@ Show # Â“ÃË - 3.15Ì½ëU - Ä§·û»Ê¹Ú
     MinimapIcon 0 Purple UpsideDownHouse
     PlayEffect Purple
 
-Show # Â“ÃË - 3.15Ì½ëU - Ä§·ûÃ„¼×
+Show # è¯ç›Ÿ - 3.15æ¢éšª - é­”ç¬¦è„›ç”²
     Class "Boots"
     BaseType "Runic Greaves" "Runic Sollerets" "Runic Sabatons"
     SetBorderColor 138 71 255
@@ -1327,9 +1327,9 @@ Show # Â“ÃË - 3.15Ì½ëU - Ä§·ûÃ„¼×
     MinimapIcon 0 Purple UpsideDownHouse
     PlayEffect Purple
 
-# ¡¾Â“ÃË-3.14Í¨ëº¡¿3022
+# ã€è¯ç›Ÿ-3.14é€šç‰’ã€‘3022
 
-Show # Â“ÃË - 3.14Í¨ëº - Í¨ëºµñ¿Ì
+Show # è¯ç›Ÿ - 3.14é€šç‰’ - é€šç‰’é›•åˆ»
     Class "Misc Map Items"
     BaseType "Inscribed Ultimatum"
     SetTextColor 255 180 135
@@ -1340,9 +1340,9 @@ Show # Â“ÃË - 3.14Í¨ëº - Í¨ëºµñ¿Ì
     MinimapIcon 0 Red Star
     PlayEffect Blue
 
-# ¡¾Â“ÃË-3.13¼Àìë¡¿3021
+# ã€è¯ç›Ÿ-3.13ç¥­ç¥€ã€‘3021
 
-Show # Â“ÃË - 3.13¼Àìë - ¼Àìë±®Æ÷/¼ÀìëÁÑÆ¬
+Show # è¯ç›Ÿ - 3.13ç¥­ç¥€ - ç¥­ç¥€ç¢‘å™¨/ç¥­ç¥€è£‚ç‰‡
     Class "Currency"
     BaseType "Ritual Splinter" "Ritual Vessel"
     SetTextColor 255 255 255
@@ -1352,7 +1352,7 @@ Show # Â“ÃË - 3.13¼Àìë - ¼Àìë±®Æ÷/¼ÀìëÁÑÆ¬
     PlayAlertSound 9 300
     MinimapIcon 0 Brown Star
 
-Show # Â“ÃË - 3.13¼Àìë - ½şÑª±®Æ÷
+Show # è¯ç›Ÿ - 3.13ç¥­ç¥€ - æµ¸è¡€ç¢‘å™¨
     Class "Map Fragments"
     BaseType "Blood-filled Vessel"
     SetTextColor 210 0 0
@@ -1362,9 +1362,9 @@ Show # Â“ÃË - 3.13¼Àìë - ½şÑª±®Æ÷
     PlayAlertSound 6 300
     MinimapIcon 0 Red Star
 
-# ¡¾Â“ÃË-3.12½Ù±I¡¿3020
+# ã€è¯ç›Ÿ-3.12åŠ«ç›œã€‘3020
 
-Hide # Â“ÃË - 3.12½Ù±I - ±IÙ\Ö®Ó¡
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - ç›œè³Šä¹‹å°
     Class "Currency"
     BaseType "Rogue's Marker"
     SetTextColor 255 178 102
@@ -1372,7 +1372,7 @@ Hide # Â“ÃË - 3.12½Ù±I - ±IÙ\Ö®Ó¡
     SetBorderColor 255 178 102
     SetFontSize 40
 
-Show # Â“ÃË - 3.12½Ù±I - ½Ù±IÄ¿˜Ë
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - åŠ«ç›œç›®æ¨™
     Class "Heist Target"
     SetTextColor 74 230 58
     SetBackgroundColor 0 0 0 150
@@ -1380,7 +1380,7 @@ Show # Â“ÃË - 3.12½Ù±I - ½Ù±IÄ¿˜Ë
     SetFontSize 45
     MinimapIcon 2 Green Star
 
-Show # Â“ÃË - 3.12½Ù±I - ±IÙ\ï—Æ·
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - ç›œè³Šé£¾å“
     Class "Trinket"
     BaseType "Thief's Trinket"
     SetTextColor 0 51 0
@@ -1391,14 +1391,14 @@ Show # Â“ÃË - 3.12½Ù±I - ±IÙ\ï—Æ·
     MinimapIcon 0 Green Triangle
     PlayEffect Green
 
-Show # Â“ÃË - 3.12½Ù±I - Æõ¼s•ø
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - å¥‘ç´„æ›¸
     BaseType "Contract"
     SetTextColor 100 50 0
     SetBackgroundColor 255 178 102
     SetBorderColor 204 102 0
     SetFontSize 40
 
-Show # Â“ÃË - 3.12½Ù±I - ºÏÍ¬
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - åˆåŒ
     Class "Quest Item"
     BaseType "Contract"
     SetTextColor 0 255 0
@@ -1409,7 +1409,7 @@ Show # Â“ÃË - 3.12½Ù±I - ºÏÍ¬
     MinimapIcon 0 Green Triangle
     PlayEffect Green
 
-Show # Â“ÃË - 3.12½Ù±I - Ë{ˆD
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - è—åœ–
     BaseType "Blueprint"
     SetTextColor 0 0 204
     SetBackgroundColor 255 178 102
@@ -1419,7 +1419,7 @@ Show # Â“ÃË - 3.12½Ù±I - Ë{ˆD
     MinimapIcon 2 Red Circle
     PlayEffect Red
 
-Show # Â“ÃË - 3.12½Ù±I - ½Ù±IÑb‚ä
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - åŠ«ç›œè£å‚™
     Class "Heist Cloak" "Heist Brooch" "Heist Tool" "Heist Gear"
     SetTextColor 254 186 255
     SetBackgroundColor 128 0 128 255
@@ -1429,7 +1429,7 @@ Show # Â“ÃË - 3.12½Ù±I - ½Ù±IÑb‚ä
     MinimapIcon 2 Red Star
     PlayEffect Red
 
-Show # Â“ÃË - 3.12½Ù±I - Ìæ´ú¼¼ÄÜ
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - æ›¿ä»£æŠ€èƒ½
     AlternateQuality True
     SetTextColor 0 255 255
     SetBorderColor 0 255 255
@@ -1438,7 +1438,7 @@ Show # Â“ÃË - 3.12½Ù±I - Ìæ´ú¼¼ÄÜ
     MinimapIcon 0 Blue Star
     PlayEffect Blue
 
-Show # Â“ÃË - 3.12½Ù±I - ÚIÆ·Ñb‚ä
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - è´—å“è£å‚™
     Replica True
     SetTextColor 255 165 0 255
     SetBackgroundColor 177 123 63 111
@@ -1448,7 +1448,7 @@ Show # Â“ÃË - 3.12½Ù±I - ÚIÆ·Ñb‚ä
     MinimapIcon 0 Orange UpsideDownHouse
     PlayEffect Orange
 
-Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - ÄÜÁ¿·¨ÕÈ
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - è£å‚™ - èƒ½é‡æ³•æ–
     Class "Wands"
     BaseType "Assembler Wand" "Congregator Wand" "Accumulator Wand"
     SetBorderColor 180 255 0
@@ -1457,7 +1457,7 @@ Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - ÄÜÁ¿·¨ÕÈ
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - ÖĞ¶¾Ø°Ê×
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - è£å‚™ - ä¸­æ¯’åŒ•é¦–
     Class "Daggers"
     BaseType "Hollowpoint Dagger" "Pressurised Dagger" "Pneumatic Dagger"
     SetBorderColor 180 255 0
@@ -1466,7 +1466,7 @@ Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - ÖĞ¶¾Ø°Ê×
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - ÁÒĞnØ°Ê×
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - è£å‚™ - çƒˆè¡åŒ•é¦–
     Class "Rune Daggers"
     BaseType "Flickerflame Blade" "Flashfire Blade" "Infernal Blade"
     SetBorderColor 180 255 0
@@ -1475,7 +1475,7 @@ Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - ÁÒĞnØ°Ê×
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - »ìüc×¦
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - è£å‚™ - æ··é»çˆª
     Class "Claws"
     BaseType "Shadow Fangs" "Malign Fangs" "Void Fangs"
     SetBorderColor 180 255 0
@@ -1484,7 +1484,7 @@ Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - »ìüc×¦
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - Ê¢Å­¸«
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - è£å‚™ - ç››æ€’æ–§
     Class "One Hand Axes"
     BaseType "Maltreatment Axe" "Disapprobation Axe" "Psychotic Axe"
     SetBorderColor 180 255 0
@@ -1493,7 +1493,7 @@ Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - Ê¢Å­¸«
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - ÎïŞDÔª„¦
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - è£å‚™ - ç‰©è½‰å…ƒåŠ
     Class "One Hand Swords"
     BaseType "Fickle Spiritblade" "Capricious Spiritblade" "Anarchic Spiritblade"
     SetBorderColor 180 255 0
@@ -1502,7 +1502,7 @@ Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - ÎïŞDÔª„¦
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - ŸëŸáĞn“ôåN
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - è£å‚™ - ç†¾ç†±è¡æ“ŠéŒ˜
     Class "One Hand Maces"
     BaseType "Flare Mace" "Crack Mace" "Boom Mace"
     SetBorderColor 180 255 0
@@ -1511,7 +1511,7 @@ Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - ŸëŸáĞn“ôåN
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - ÔªËØ³¬İd/ÔªËØÖ®Ïà/Ä¥ëyÃØĞÁ™àÕÈ
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - è£å‚™ - å…ƒç´ è¶…è¼‰/å…ƒç´ ä¹‹ç›¸/ç£¨é›£ç§˜è¾›æ¬Šæ–
     Class "Sceptres"
     BaseType "Oscillating Sceptre" "Stabilising Sceptre" "Alternating Sceptre"
     SetBorderColor 180 255 0
@@ -1520,7 +1520,7 @@ Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - ÔªËØ³¬İd/ÔªËØÖ®Ïà/Ä¥ëyÃØĞÁ™àÕÈ
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - »ğüc¹­
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - è£å‚™ - ç«é»å¼“
     Class "Bows"
     BaseType "Hedron Bow" "Foundry Bow" "Solarine Bow"
     SetBorderColor 180 255 0
@@ -1529,7 +1529,7 @@ Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - »ğüc¹­
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - EBéLÕÈ
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - è£å‚™ - EBé•·æ–
     BaseType "Transformer Staff" "Reciprocation Staff" "Battery Staff"
     SetBorderColor 180 255 0
     SetFontSize 43
@@ -1537,7 +1537,7 @@ Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - EBéLÕÈ
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - Ë{¼tÇòéLÕÈ
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - è£å‚™ - è—ç´…çƒé•·æ–
     Class "Warstaves"
     BaseType "Capacity Rod" "Potentiality Rod"
     SetBorderColor 180 255 0
@@ -1546,7 +1546,7 @@ Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - Ë{¼tÇòéLÕÈ
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - Æ·Ù|¿³¸«
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - è£å‚™ - å“è³ªç æ–§
     Class "Two Hand Axes"
     BaseType "Prime Cleaver" "Honed Cleaver" "Apex Cleaver"
     SetBorderColor 180 255 0
@@ -1555,7 +1555,7 @@ Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - Æ·Ù|¿³¸«
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - Ôª´©ëpÊÖ„¦
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - è£å‚™ - å…ƒç©¿é›™æ‰‹åŠ
     Class "Two Hand Swords"
     BaseType "Rebuking Blade" "Blasting Blade" "Banishing Blade"
     SetBorderColor 180 255 0
@@ -1564,7 +1564,7 @@ Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - Ôª´©ëpÊÖ„¦
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - ‘ğºğëpÊÖåN
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - è£å‚™ - æˆ°å¼é›™æ‰‹éŒ˜
     Class "Two Hand Maces"
     BaseType "Blunt Force Condenser" "Crushing Force Magnifier" "Impact Force Propagator"
     SetBorderColor 180 255 0
@@ -1573,7 +1573,7 @@ Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - ‘ğºğëpÊÖåN
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - šˆ´­¶Ü
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - è£å‚™ - æ®˜å–˜ç›¾
     Class "Shields"
     BaseType "Exhausting Spirit Shield" "Subsuming Spirit Shield" "Transfer-attuned Spirit Shield"
     SetBorderColor 180 255 0
@@ -1582,7 +1582,7 @@ Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - šˆ´­¶Ü
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - ½¹×Æ¶Ü
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - è£å‚™ - ç„¦ç¼ç›¾
     Class "Shields"
     BaseType "Exothermic Tower Shield" "Magmatic Tower Shield" "Heat-attuned Tower Shield"
     SetBorderColor 180 255 0
@@ -1591,7 +1591,7 @@ Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - ½¹×Æ¶Ü
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - Ò×Ëé¶Ü
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - è£å‚™ - æ˜“ç¢ç›¾
     Class "Shields"
     BaseType "Endothermic Buckler" "Polar Buckler" "Cold-attuned Buckler"
     SetBorderColor 180 255 0
@@ -1600,7 +1600,7 @@ Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - Ò×Ëé¶Ü
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - ÌØÊâÑü§
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - è£å‚™ - ç‰¹æ®Šè…°å¸¶
     Class "Belts"
     BaseType "Micro-Distillery Belt" "Mechalarm Belt"
     SetBorderColor 180 255 0
@@ -1609,7 +1609,7 @@ Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - ÌØÊâÑü§
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - ÌØÊâí—å€
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - è£å‚™ - ç‰¹æ®Šé …éŠ
     Class "Amulets"
     BaseType "Astrolabe Amulet" "Simplex Amulet"
     SetBorderColor 180 255 0
@@ -1618,7 +1618,7 @@ Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - ÌØÊâí—å€
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - ÌØÊâ½äÖ¸
+Show # è¯ç›Ÿ - 3.12åŠ«ç›œ - è£å‚™ - ç‰¹æ®Šæˆ’æŒ‡
     Class "Rings"
     BaseType "Cogwork Ring" "Geodesic Ring"
     SetBorderColor 180 255 0
@@ -1627,9 +1627,9 @@ Show # Â“ÃË - 3.12½Ù±I - Ñb‚ä - ÌØÊâ½äÖ¸
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-# ¡¾Â“ÃË-3.11»¨ˆ@¡¿3019
+# ã€è¯ç›Ÿ-3.11èŠ±åœ’ã€‘3019
 
-Show # Â“ÃË - 3.11»¨ˆ@ - ÙMË¹ÌØÖ®çR
+Show # è¯ç›Ÿ - 3.11èŠ±åœ’ - è²»æ–¯ç‰¹ä¹‹é¡
     Class "Stackable Currency"
     BaseType "Facetor's Lens"
     SetTextColor 255 0 0
@@ -1640,7 +1640,7 @@ Show # Â“ÃË - 3.11»¨ˆ@ - ÙMË¹ÌØÖ®çR
     MinimapIcon 0 Blue Star
     PlayEffect Blue
 
-Show # Â“ÃË - 3.11»¨ˆ@ - ÉñÖIÉı¼‰¾íİS
+Show # è¯ç›Ÿ - 3.11èŠ±åœ’ - ç¥è«­å‡ç´šå·è»¸
     Class "Stackable Currency"
     BaseType "Time-light Scroll" "Specularity Scroll" "Haemocombustion Scroll" "Fragmentation Scroll" "Electroshock Scroll" "Deregulation Scroll"
     SetTextColor 0 0 153
@@ -1651,7 +1651,7 @@ Show # Â“ÃË - 3.11»¨ˆ@ - ÉñÖIÉı¼‰¾íİS
     MinimapIcon 0 Blue Star
     PlayEffect Blue
 
-Show # Â“ÃË - 3.11»¨ˆ@ - Ò°«FÕTğD
+Show # è¯ç›Ÿ - 3.11èŠ±åœ’ - é‡ç¸èª˜é¤Œ
     Class "Map Fragments"
     BaseType "Craicic Lure" "Saqawine Lure" "Fenumal Lure" "Farric Lure"
     SetTextColor 255 165 0
@@ -1662,7 +1662,7 @@ Show # Â“ÃË - 3.11»¨ˆ@ - Ò°«FÕTğD
     MinimapIcon 0 Orange Star
     PlayEffect Orange
 
-Show # Â“ÃË - 3.11»¨ˆ@ - Å®ÉñÉı¼‰°æ
+Show # è¯ç›Ÿ - 3.11èŠ±åœ’ - å¥³ç¥å‡ç´šç‰ˆ
     Class "Map Fragments"
     BaseType "Gift to the Goddess" "Dedication to the Goddess" "Tribute to the Goddess"
     SetTextColor 51 153 255
@@ -1672,7 +1672,7 @@ Show # Â“ÃË - 3.11»¨ˆ@ - Å®ÉñÉı¼‰°æ
     MinimapIcon 0 Blue Star
     PlayEffect Blue
 
-Show # Â“ÃË - 3.11»¨ˆ@ - Õ¹³áÂ}¼×Ïx
+Show # è¯ç›Ÿ - 3.11èŠ±åœ’ - å±•ç¿…è–ç”²èŸ²
     Class "Map Fragments"
     BaseType "Winged"
     SetTextColor 210 150 255
@@ -1683,7 +1683,7 @@ Show # Â“ÃË - 3.11»¨ˆ@ - Õ¹³áÂ}¼×Ïx
     MinimapIcon 0 Yellow Hexagon
     PlayEffect Yellow
 
-Show # Â“ÃË - 3.11»¨ˆ@ - ÉñÂ}Ö®»¨
+Show # è¯ç›Ÿ - 3.11èŠ±åœ’ - ç¥è–ä¹‹èŠ±
     Class "Map Fragments"
     BaseType "Sacred Blossom"
     SetTextColor 51 153 255
@@ -1693,9 +1693,9 @@ Show # Â“ÃË - 3.11»¨ˆ@ - ÉñÂ}Ö®»¨
     MinimapIcon 0 Blue Hexagon
     PlayEffect Blue
 
-# ¡¾Â“ÃË-3.10×dÍı¡¿3018
+# ã€è¯ç›Ÿ-3.10è­«å¦„ã€‘3018
 
-Show # Â“ÃË - 3.10×dÍı - ×dÍıÓñ
+Show # è¯ç›Ÿ - 3.10è­«å¦„ - è­«å¦„ç‰
     Class "Currency"
     BaseType "Delirium Orb"
     SetTextColor 0 0 0
@@ -1706,7 +1706,7 @@ Show # Â“ÃË - 3.10×dÍı - ×dÍıÓñ
     MinimapIcon 1 Grey Diamond
     PlayEffect Grey
 
-Show # Â“ÃË - 3.10×dÍı - »ÃÏñ”àÆ¬
+Show # è¯ç›Ÿ - 3.10è­«å¦„ - å¹»åƒæ–·ç‰‡
     Class "Currency"
     BaseType "Simulacrum Splinter"
     SetTextColor 0 0 0
@@ -1717,7 +1717,7 @@ Show # Â“ÃË - 3.10×dÍı - »ÃÏñ”àÆ¬
     MinimapIcon 1 Grey Star
     PlayEffect Grey
 
-Show # Â“ÃË - 3.10×dÍı - É¤Òô
+Show # è¯ç›Ÿ - 3.10è­«å¦„ - å—“éŸ³
     Rarity = Unique
     Class "Jewel"
     BaseType "Large Cluster Jewel"
@@ -1728,7 +1728,7 @@ Show # Â“ÃË - 3.10×dÍı - É¤Òô
     PlayEffect Red
     PlayAlertSound 1 250 
 
-Show # Â“ÃË - 3.10×dÍı - ĞÇˆFÖéŒš(‚÷Ææ)
+Show # è¯ç›Ÿ - 3.10è­«å¦„ - æ˜Ÿåœ˜ç å¯¶(å‚³å¥‡)
     Rarity = Unique
     Class "Jewel"
     BaseType "Cluster Jewel"
@@ -1739,7 +1739,7 @@ Show # Â“ÃË - 3.10×dÍı - ĞÇˆFÖéŒš(‚÷Ææ)
     MinimapIcon 0 Red Hexagon
     PlayEffect Red
 
-Show # Â“ÃË - 3.10×dÍı - ĞÇˆFÖéŒš
+Show # è¯ç›Ÿ - 3.10è­«å¦„ - æ˜Ÿåœ˜ç å¯¶
     Class "Jewel"
     BaseType "Cluster Jewel"
     SetTextColor 255 255 255
@@ -1750,7 +1750,7 @@ Show # Â“ÃË - 3.10×dÍı - ĞÇˆFÖéŒš
     MinimapIcon 0 White Circle
     PlayEffect White
 
-Show # Â“ÃË - 3.10×dÍı - »ÃÏó®½ç
+Show # è¯ç›Ÿ - 3.10è­«å¦„ - å¹»è±¡ç•°ç•Œ
     Class "Map Fragments"
     BaseType "Simulacrum"
     SetTextColor 255 255 255
@@ -1761,9 +1761,9 @@ Show # Â“ÃË - 3.10×dÍı - »ÃÏó®½ç
     MinimapIcon 0 White Circle
     PlayEffect White
 
-# ¡¾Â“ÃË-3.9å€Ä§¡¿3017
+# ã€è¯ç›Ÿ-3.9éŠé­”ã€‘3017
 
-Show # Â“ÃË - 3.9å€Ä§ - ›°œ¥/³äÄÜ/ÑĞÄ¥/Ò±Ÿ’/±¾Ù|/¶¾ĞÔ´ß»¯„©
+Show # è¯ç›Ÿ - 3.9éŠé­” - æ´¶æ¹§/å……èƒ½/ç ”ç£¨/å†¶ç…‰/æœ¬è³ª/æ¯’æ€§å‚¬åŒ–åŠ‘
     Class "Currency"
     BaseType "Turbulent Catalyst" "Imbued Catalyst" "Abrasive Catalyst" "Tempering Catalyst" "Intrinsic Catalyst" "Noxious Catalyst"
     SetTextColor 0 0 0
@@ -1771,7 +1771,7 @@ Show # Â“ÃË - 3.9å€Ä§ - ›°œ¥/³äÄÜ/ÑĞÄ¥/Ò±Ÿ’/±¾Ù|/¶¾ĞÔ´ß»¯„©
     SetBorderColor 255 215 0
     SetFontSize 40
 
-Show # Â“ÃË - 3.9å€Ä§ - ¶àÀâ/¸»ğˆ/¼ÓËÙ/Ò××ƒ´ß»¯„©
+Show # è¯ç›Ÿ - 3.9éŠé­” - å¤šæ£±/å¯Œé¥’/åŠ é€Ÿ/æ˜“è®Šå‚¬åŒ–åŠ‘
     Class "Currency"
     BaseType "Prismatic Catalyst" "Fertile Catalyst" "Accelerating Catalyst" "Unstable Catalyst"
     SetTextColor 255 61 0
@@ -1780,7 +1780,7 @@ Show # Â“ÃË - 3.9å€Ä§ - ¶àÀâ/¸»ğˆ/¼ÓËÙ/Ò××ƒ´ß»¯„©
     SetFontSize 45
     PlayAlertSound 9 300
 
-Show # Â“ÃË - 3.9å€Ä§ - Æ÷¹Ù
+Show # è¯ç›Ÿ - 3.9éŠé­” - å™¨å®˜
     Class "Metamorph Sample"
     BaseType "Metamorph Brain" "Metamorph Eye" "Metamorph Liver" "Metamorph Lung" "Metamorph Heart"
     SetTextColor 255 246 143
@@ -1791,9 +1791,9 @@ Show # Â“ÃË - 3.9å€Ä§ - Æ÷¹Ù
     MinimapIcon 0 Green Star
     PlayEffect Green
 
-# ¡¾Â“ÃË-3.8µòÂä¡¿3016
+# ã€è¯ç›Ÿ-3.8å‡‹è½ã€‘3016
 
-Show # Â“ÃË - 3.8µòÂä - ÇåÍ¸/ÉîºÖ/çúçê/´ä¾G/Çå¾G/±ÌË{/Šg×Ï/¾p¼t/µåÇàÓÍÆ¿
+Show # è¯ç›Ÿ - 3.8å‡‹è½ - æ¸…é€/æ·±è¤/ç¥ç€/ç¿ ç¶ /æ¸…ç¶ /ç¢§è—/å¥¼ç´«/ç·‹ç´…/é›é’æ²¹ç“¶
     Class "Currency"
     BaseType "Clear Oil" "Sepia Oil" "Amber Oil" "Verdant Oil" "Teal Oil" "Azure Oil" "Violet Oil" "Crimson Oil" "Indigo Oil"
     SetTextColor 0 0 0
@@ -1801,7 +1801,7 @@ Show # Â“ÃË - 3.8µòÂä - ÇåÍ¸/ÉîºÖ/çúçê/´ä¾G/Çå¾G/±ÌË{/Šg×Ï/¾p¼t/µåÇàÓÍÆ¿
     SetBorderColor 255 255 0
     SetFontSize 44
 
-Show # Â“ÃË - 3.8µòÂä - ÆáºÚ/Èé°×/¼ƒãy/½ğüS/›@È¾ÓÍÆ¿
+Show # è¯ç›Ÿ - 3.8å‡‹è½ - æ¼†é»‘/ä¹³ç™½/ç´”éŠ€/é‡‘é»ƒ/æ±™æŸ“æ²¹ç“¶
     Class "Currency"
     BaseType "Black Oil" "Opalescent Oil" "Silver Oil" "Golden Oil" "Tainted Oil"
     SetTextColor 0 0 0
@@ -1812,9 +1812,9 @@ Show # Â“ÃË - 3.8µòÂä - ÆáºÚ/Èé°×/¼ƒãy/½ğüS/›@È¾ÓÍÆ¿
     MinimapIcon 0 Yellow Star
     PlayEffect Yellow
 
-# ¡¾Â“ÃË-3.7‘ğy¡¿3015
+# ã€è¯ç›Ÿ-3.7æˆ°äº‚ã€‘3015
 
-Show # Â“ÃË - 3.7‘ğy - ÅàÓıÆ÷ - µÍëAÅàÓıÆ÷(ÏÈ×æ/¸½Ä§/×ğŸ/Ì½ëU/ÉîœY/µÍÕZ)
+Show # è¯ç›Ÿ - 3.7æˆ°äº‚ - åŸ¹è‚²å™¨ - ä½éšåŸ¹è‚²å™¨(å…ˆç¥–/é™„é­”/å°Šå¸«/æ¢éšª/æ·±æ·µ/ä½èª)
     Class "Incubator"
     BaseType "Primal Incubator" "Enchanted Incubator" "Eldritch Incubator" "Kalguuran Incubator" "Abyssal Incubator" "Whispering Incubator"
     SetTextColor 0 0 0
@@ -1822,7 +1822,7 @@ Show # Â“ÃË - 3.7‘ğy - ÅàÓıÆ÷ - µÍëAÅàÓıÆ÷(ÏÈ×æ/¸½Ä§/×ğŸ/Ì½ëU/ÉîœY/µÍÕZ)
     SetBorderColor 0 0 0
     SetFontSize 45
 
-Show # Â“ÃË - 3.7‘ğy - ÅàÓıÆ÷ - ÖĞëAÅàÓıÆ÷(ïwÂÓ/×¿Ô½/³¬·²/ëü–V/ÉñÃØ/×¢ÄÜ/ŒšÊ¯½³/»¯Ê¯/ÖIÊ¾/ÑuˆD/Ãüß\/±ŠĞÇ/µòÂä/å€Ä§/×dÍı)
+Show # è¯ç›Ÿ - 3.7æˆ°äº‚ - åŸ¹è‚²å™¨ - ä¸­éšåŸ¹è‚²å™¨(é£›æ /å“è¶Š/è¶…å‡¡/æœ¦æœ§/ç¥ç§˜/æ³¨èƒ½/å¯¶çŸ³åŒ /åŒ–çŸ³/è«­ç¤º/è£½åœ–/å‘½é‹/çœ¾æ˜Ÿ/å‡‹è½/éŠé­”/è­«å¦„)
     Class "Incubator"
     BaseType "Skittering Incubator" "Singular Incubator" "Otherworldly Incubator" "Obscured Incubator" "Mysterious Incubator" "Infused Incubator" "Gemcutter's Incubator" "Fragmented Incubator" "Fossilised Incubator" "Foreboding Incubator" "Cartographer's Incubator" "Celestial Armoursmith's Incubator" "Celestial Blacksmith's Incubator" "Diviner's Incubator" "Celestial Jeweller's Incubator" "Blighted Incubator"  "Maddening Incubator"
     SetTextColor 0 0 0
@@ -1832,7 +1832,7 @@ Show # Â“ÃË - 3.7‘ğy - ÅàÓıÆ÷ - ÖĞëAÅàÓıÆ÷(ïwÂÓ/×¿Ô½/³¬·²/ëü–V/ÉñÃØ/×¢ÄÜ/ŒšÊ¯½³
     PlayAlertSound 2 300
     MinimapIcon 0 Yellow Star
 
-Show # Â“ÃË - 3.7‘ğy - ÅàÓıÆ÷ - ¸ßëAÅàÓıÆ÷(•régßzÍü/»ÃĞgŸ/ÈAû/Õ¼²·/¾«¿@)
+Show # è¯ç›Ÿ - 3.7æˆ°äº‚ - åŸ¹è‚²å™¨ - é«˜éšåŸ¹è‚²å™¨(æ™‚é–“éºå¿˜/å¹»è¡“å¸«/è¯éº—/å åœ/ç²¾ç·»)
     Class "Incubator"
     BaseType "Time-Lost Incubator" "Thaumaturge's Incubator" "Ornate Incubator" "Geomancer's Incubator" "Fine Incubator"
     SetTextColor 0 0 0
@@ -1841,7 +1841,7 @@ Show # Â“ÃË - 3.7‘ğy - ÅàÓıÆ÷ - ¸ßëAÅàÓıÆ÷(•régßzÍü/»ÃĞgŸ/ÈAû/Õ¼²·/¾«¿@)
     SetFontSize 45
     MinimapIcon 0 Yellow Star
 
-Show # Â“ÃË - 3.7‘ğy - ÜŠˆFÁÑÆ¬ - ²»Ğà/¿¨ô”/Íß –
+Show # è¯ç›Ÿ - 3.7æˆ°äº‚ - è»åœ˜è£‚ç‰‡ - ä¸æœ½/å¡é­¯/ç“¦çˆ¾
     Class "Currency"
     BaseType "Timeless Eternal Empire Splinter" "Timeless Karui Splinter" "Timeless Vaal Splinter"
     SetTextColor 255 215 222 
@@ -1849,7 +1849,7 @@ Show # Â“ÃË - 3.7‘ğy - ÜŠˆFÁÑÆ¬ - ²»Ğà/¿¨ô”/Íß –
     SetFontSize 45
     MinimapIcon 0 Purple Star
 
-Show # Â“ÃË - 3.7‘ğy - ÜŠˆFÁÑÆ¬ - ñRÀ­¿ËË¹/Â}×Ú
+Show # è¯ç›Ÿ - 3.7æˆ°äº‚ - è»åœ˜è£‚ç‰‡ - é¦¬æ‹‰å…‹æ–¯/è–å®—
     Class "Currency"
     BaseType "Timeless Maraketh Splinter" "Timeless Templar Splinter"
     SetTextColor 255 255 119
@@ -1858,7 +1858,7 @@ Show # Â“ÃË - 3.7‘ğy - ÜŠˆFÁÑÆ¬ - ñRÀ­¿ËË¹/Â}×Ú
     SetFontSize 45
     MinimapIcon 0 Purple Star
 
-Show # Â“ÃË - 3.7‘ğy - ÜŠˆFÓ¡Ó›
+Show # è¯ç›Ÿ - 3.7æˆ°äº‚ - è»åœ˜å°è¨˜
     Class "Map Fragments"
     BaseType "Timeless Eternal Emblem" "Timeless Karui Emblem" "Timeless Maraketh Emblem" "Timeless Templar Emblem" "Timeless Vaal Emblem"
     SetTextColor 255 255 255
@@ -1867,7 +1867,7 @@ Show # Â“ÃË - 3.7‘ğy - ÜŠˆFÓ¡Ó›
     PlayAlertSound ShChaos 200
     MinimapIcon 0 White Star
 
-Show # Â“ÃË - 3.7‘ğy - ÓÀaÖéŒš
+Show # è¯ç›Ÿ - 3.7æˆ°äº‚ - æ°¸æ†ç å¯¶
     Class "Jewel"
     BaseType "Timeless Jewel"
     SetTextColor 128 0 128 255
@@ -1878,9 +1878,9 @@ Show # Â“ÃË - 3.7‘ğy - ÓÀaÖéŒš
     MinimapIcon 0 Red Hexagon
     PlayEffect Red
 
-# ¡¾Â“ÃË-3.6×·‘›¡¿3014
+# ã€è¯ç›Ÿ-3.6è¿½æ†¶ã€‘3014
 
-Show # Â“ÃË - 3.6×·‘› - ÆÆÁÑÎïÆ·
+Show # è¯ç›Ÿ - 3.6è¿½æ†¶ - ç ´è£‚ç‰©å“
     FracturedItem True
     SetTextColor 237 240 235 255
     SetBackgroundColor 106 172 220
@@ -1889,7 +1889,7 @@ Show # Â“ÃË - 3.6×·‘› - ÆÆÁÑÎïÆ·
     MinimapIcon 1 White Hexagon
     PlayEffect White
 
-Show # Â“ÃË - 3.6×·‘› - ×·‘›ÎïÆ·
+Show # è¯ç›Ÿ - 3.6è¿½æ†¶ - è¿½æ†¶ç‰©å“
     SynthesisedItem True
     SetTextColor 237 240 235 255
     SetBackgroundColor 106 172 220
@@ -1899,9 +1899,9 @@ Show # Â“ÃË - 3.6×·‘› - ×·‘›ÎïÆ·
     MinimapIcon 1 Yellow Hexagon
     PlayEffect Yellow
 
-# ¡¾Â“ÃË-3.5ÃÜ½Ì¡¿3013
+# ã€è¯ç›Ÿ-3.5å¯†æ•™ã€‘3013
 
-Show # Â“ÃË - 3.5ÃÜ½Ì - ÃÜ½ÌÔ~¾YÎïÆ·
+Show # è¯ç›Ÿ - 3.5å¯†æ•™ - å¯†æ•™è©ç¶´ç‰©å“
     HasExplicitMod "Veil"
     SetTextColor 0 0 0
     SetBackgroundColor 255 225 85
@@ -1910,7 +1910,7 @@ Show # Â“ÃË - 3.5ÃÜ½Ì - ÃÜ½ÌÔ~¾YÎïÆ·
     PlayAlertSound 16 200
     MinimapIcon 2 White Hexagon
 
-Show # Â“ÃË - 3.5ÃÜ½Ì - åƒ½ğÂ}¼×Ïx
+Show # è¯ç›Ÿ - 3.5å¯†æ•™ - éé‡‘è–ç”²èŸ²
     Class "Map Fragments"
     BaseType "Gilded"
     SetTextColor 0 0 0
@@ -1921,7 +1921,7 @@ Show # Â“ÃË - 3.5ÃÜ½Ì - åƒ½ğÂ}¼×Ïx
     MinimapIcon 0 Yellow Hexagon
     PlayEffect Yellow
 
-Show # Â“ÃË - 3.5ÃÜ½Ì - ˆA»¬Â}¼×Ïx
+Show # è¯ç›Ÿ - 3.5å¯†æ•™ - åœ“æ»‘è–ç”²èŸ²
     Class "Map Fragments"
     BaseType "Polished"
     SetTextColor 0 0 0
@@ -1932,7 +1932,7 @@ Show # Â“ÃË - 3.5ÃÜ½Ì - ˆA»¬Â}¼×Ïx
     MinimapIcon 1 Yellow Hexagon
     PlayEffect Yellow
 
-Show # Â“ÃË - 3.5ÃÜ½Ì - çnÎgÂ}¼×Ïx
+Show # è¯ç›Ÿ - 3.5å¯†æ•™ - é½è•è–ç”²èŸ²
     Class "Map Fragments"
     BaseType "Rusted"
     SetTextColor 0 0 0
@@ -1942,9 +1942,9 @@ Show # Â“ÃË - 3.5ÃÜ½Ì - çnÎgÂ}¼×Ïx
     MinimapIcon 2 Yellow Hexagon
     PlayEffect Yellow
 
-# ¡¾Â“ÃË-3.4¾òªz¡¿3012
+# ã€è¯ç›Ÿ-3.4æ˜ç„ã€‘3012
 
-Show # Â“ÃË - 3.4¾òªz - ¾òªzÂ“ÃËŒ£ŒÙÔ~¾YÑb‚ä
+Show # è¯ç›Ÿ - 3.4æ˜ç„ - æ˜ç„è¯ç›Ÿå°ˆå±¬è©ç¶´è£å‚™
     HasExplicitMod "of Crafting" "of Spellcraft" "of Weaponcraft" "of the Underground" "Subterranean"
     SetBorderColor 180 255 0
     SetFontSize 42
@@ -1952,7 +1952,7 @@ Show # Â“ÃË - 3.4¾òªz - ¾òªzÂ“ÃËŒ£ŒÙÔ~¾YÑb‚ä
     MinimapIcon 2 Red Hexagon
     PlayEffect Brown
 
-Show # Â“ÃË - 3.4¾òªz - 4SŠÁ¦èTĞÂƒx
+Show # è¯ç›Ÿ - 3.4æ˜ç„ - 4Så¼·åŠ›é‘„æ–°å„€
     Class "Delve Stackable Socketable Currency"
     BaseType "Prime Chaotic Resonator" "Prime Alchemical Resonator"
     SetTextColor 0 0 0
@@ -1963,7 +1963,7 @@ Show # Â“ÃË - 3.4¾òªz - 4SŠÁ¦èTĞÂƒx
     MinimapIcon 0 Red Triangle
     PlayEffect Red
 
-Show # Â“ÃË - 3.4¾òªz - 1S/2S/3SŸ’½ğèTĞÂƒx(ãyÉ«)
+Show # è¯ç›Ÿ - 3.4æ˜ç„ - 1S/2S/3Sç…‰é‡‘é‘„æ–°å„€(éŠ€è‰²)
     Class "Delve Stackable Socketable Currency"
     BaseType "Primitive Alchemical Resonator" "Potent Alchemical Resonator" "Powerful Alchemical Resonator"
     SetTextColor 0 0 0
@@ -1974,7 +1974,7 @@ Show # Â“ÃË - 3.4¾òªz - 1S/2S/3SŸ’½ğèTĞÂƒx(ãyÉ«)
     MinimapIcon 2 White Triangle
     PlayEffect White
 
-Show # Â“ÃË - 3.4¾òªz - 1S/2S/3S»ìãçèTĞÂƒx(üSÉ«)
+Show # è¯ç›Ÿ - 3.4æ˜ç„ - 1S/2S/3Sæ··æ²Œé‘„æ–°å„€(é»ƒè‰²)
     Class "Delve Stackable Socketable Currency"
     BaseType "Primitive Chaotic Resonator" "Potent Chaotic Resonator" "Powerful Chaotic Resonator"
     SetTextColor 0 0 0
@@ -1985,7 +1985,7 @@ Show # Â“ÃË - 3.4¾òªz - 1S/2S/3S»ìãçèTĞÂƒx(üSÉ«)
     MinimapIcon 2 White Triangle
     PlayEffect White
 
-Show # Â“ÃË - 3.4¾òªz - »¯Ê¯ -¸ßëA»¯Ê¯(Ñªn/ÆÆÁÑ/µñ×Á/è‚½ğ/çU¿Õ/µñ¼y/±©“ô/ÄÜÁ¦/Ÿoè¦»¯Ê¯)
+Show # è¯ç›Ÿ - 3.4æ˜ç„ - åŒ–çŸ³ -é«˜éšåŒ–çŸ³(è¡€æ¼¬/ç ´è£‚/é›•ç¢/é‘²é‡‘/é¤ç©º/é›•ç´‹/æš´æ“Š/èƒ½åŠ›/ç„¡ç‘•åŒ–çŸ³)
     Class "Currency"
     BaseType "Bloodstained Fossil" "Fractured Fossil" "Faceted Fossil" "Gilded Fossil" "Hollow Fossil" "Glyphic Fossil" "Sanctified Fossil" "Deft Fossil" "Fundamental Fossil" 
     SetTextColor 0 0 0
@@ -1996,7 +1996,7 @@ Show # Â“ÃË - 3.4¾òªz - »¯Ê¯ -¸ßëA»¯Ê¯(Ñªn/ÆÆÁÑ/µñ×Á/è‚½ğ/çU¿Õ/µñ¼y/±©“ô/ÄÜÁ¦/Ÿ
     MinimapIcon 0 Yellow Star
     PlayEffect Yellow
 
-Show # Â“ÃË - 3.4¾òªz - »¯Ê¯ -Ò»°ã»¯Ê¯
+Show # è¯ç›Ÿ - 3.4æ˜ç„ - åŒ–çŸ³ -ä¸€èˆ¬åŒ–çŸ³
     Class "Currency"
     BaseType "Fossil"
     SetTextColor 0 0 0
@@ -2005,9 +2005,9 @@ Show # Â“ÃË - 3.4¾òªz - »¯Ê¯ -Ò»°ã»¯Ê¯
     SetFontSize 42
     PlayAlertSound 9 300
 
-# ¡¾Â“ÃË-3.3´©Ô½¡¿3011
+# ã€è¯ç›Ÿ-3.3ç©¿è¶Šã€‘3011
 
-Show # Â“ÃË - 3.3´©Ô½ - ´©Ô½Â“ÃËŒ£ŒÙÔ~¾YÑb‚ä
+Show # è¯ç›Ÿ - 3.3ç©¿è¶Š - ç©¿è¶Šè¯ç›Ÿå°ˆå±¬è©ç¶´è£å‚™
     HasExplicitMod "Tacati" "Citaqualotl" "Matatl" "Topotante" "Xopec" "Guatelitzi" "Puhuarte"
     SetBorderColor 180 255 0
     SetFontSize 42
@@ -2015,7 +2015,7 @@ Show # Â“ÃË - 3.3´©Ô½ - ´©Ô½Â“ÃËŒ£ŒÙÔ~¾YÑb‚ä
     MinimapIcon 2 Red Hexagon
     PlayEffect Brown
 
-Show # Â“ÃË - 3.3´©Ô½ - ßBÍ¨Ö®Ê¯/éW·ÛÖ®Æ÷
+Show # è¯ç›Ÿ - 3.3ç©¿è¶Š - é€£é€šä¹‹çŸ³/é–ƒç²‰ä¹‹å™¨
     Class "Incursion Item"
     SetTextColor 255 180 135
     SetBackgroundColor 0 0 0
@@ -2025,7 +2025,7 @@ Show # Â“ÃË - 3.3´©Ô½ - ßBÍ¨Ö®Ê¯/éW·ÛÖ®Æ÷
     MinimapIcon 0 Red Star
     PlayEffect Blue
 
-Show # Â“ÃË - 3.3´©Ô½ - Éı¼‰Ö®À—
+Show # è¯ç›Ÿ - 3.3ç©¿è¶Š - å‡ç´šä¹‹ç½ˆ
     Class "Currency"
     BaseType "Vial of Awakening" "Vial of Consequence" "Vial of Dominance" "Vial of Fate" "Vial of Sacrifice" "Vial of Summoning" "Vial of the Ghost" "Vial of the Ritual" "Vial of Transcendence"
     SetTextColor 0 0 0
@@ -2036,7 +2036,7 @@ Show # Â“ÃË - 3.3´©Ô½ - Éı¼‰Ö®À—
     MinimapIcon 0 Red Star
     PlayEffect Blue
 
-Show # Â“ÃË - 3.3´©Ô½ - ÉñRµØˆD
+Show # è¯ç›Ÿ - 3.3ç©¿è¶Š - ç¥å»Ÿåœ°åœ–
     Class "Misc Map Items"
     BaseType "Chronicle of Atzoatl"
     SetTextColor 255 180 135
@@ -2047,9 +2047,9 @@ Show # Â“ÃË - 3.3´©Ô½ - ÉñRµØˆD
     MinimapIcon 0 Red Star
     PlayEffect Blue
 
-# ¡¾Â“ÃË-3.2«F«C¡¿3010
+# ã€è¯ç›Ÿ-3.2ç¸çµã€‘3010
 
-Show # Â“ÃË - 3.2«F«C - «F»êÓñ
+Show # è¯ç›Ÿ - 3.2ç¸çµ - ç¸é­‚ç‰
     Class "Currency"
     BaseType "Bestiary Orb"
     SetTextColor 0 0 0
@@ -2060,7 +2060,7 @@ Show # Â“ÃË - 3.2«F«C - «F»êÓñ
     MinimapIcon 2 Green Diamond
     PlayEffect Green
 
-Show # Â“ÃË - 3.2«F«C - Ò°«FÂ“ÃËŒ£ŒÙÔ~¾YÑb‚ä °ÁØˆ£¬ïwÓğ£¬¶¾Öë£¬Ğ·Œ¢×£¸£
+Show # è¯ç›Ÿ - 3.2ç¸çµ - é‡ç¸è¯ç›Ÿå°ˆå±¬è©ç¶´è£å‚™ å‚²è²“ï¼Œé£›ç¾½ï¼Œæ¯’è››ï¼ŒèŸ¹å°‡ç¥ç¦
     HasExplicitMod "of Farrul" "of Saqawal" "of Fenumus" "of Craiceann"
     SetBorderColor 255 0 0
     SetFontSize 42
@@ -2068,25 +2068,25 @@ Show # Â“ÃË - 3.2«F«C - Ò°«FÂ“ÃËŒ£ŒÙÔ~¾YÑb‚ä °ÁØˆ£¬ïwÓğ£¬¶¾Öë£¬Ğ·Œ¢×£¸£
     MinimapIcon 2 Yellow Hexagon
     PlayEffect Yellow
 
-Show # Â“ÃË - 3.2«F«C - Ì×Ë÷²¶«F¾W
+Show # è¯ç›Ÿ - 3.2ç¸çµ - å¥—ç´¢æ•ç¸ç¶²
     Class "Currency"
     BaseType "Strong Rope Net" "Reinforced Rope Net" "Simple Rope Net"
     SetTextColor 0 128 0
     SetFontSize 37
 
-Show # Â“ÃË - 3.2«F«C - Ó²èF²¶«F¾W
+Show # è¯ç›Ÿ - 3.2ç¸çµ - ç¡¬éµæ•ç¸ç¶²
     Class "Currency"
     BaseType "Strong Iron Net" "Reinforced Iron Net" "Simple Iron Net"
     SetTextColor 46 199 92
     SetFontSize 38
 
-Show # Â“ÃË - 3.2«F«C - ä“èF²¶«F¾W
+Show # è¯ç›Ÿ - 3.2ç¸çµ - é‹¼éµæ•ç¸ç¶²
     Class "Currency"
     BaseType "Strong Steel Net" "Reinforced Steel Net" "Simple Steel Net"
     SetTextColor 74 230 58
     SetFontSize 40
 
-Show # Â“ÃË - 3.2«F«C - »ÃĞg/Íöì`²¶«F¾W
+Show # è¯ç›Ÿ - 3.2ç¸çµ - å¹»è¡“/äº¡éˆæ•ç¸ç¶²
     Class "Currency"
     BaseType "Thaumaturgical Net" "Necromancy Net"
     SetTextColor 25 235 25
@@ -2095,9 +2095,9 @@ Show # Â“ÃË - 3.2«F«C - »ÃĞg/Íöì`²¶«F¾W
     PlayAlertSound 9 200
     PlayEffect White
 
-# ¡¾Â“ÃË-3.1ÉîœY¡¿3009
+# ã€è¯ç›Ÿ-3.1æ·±æ·µã€‘3009
 
-Show # Â“ÃË - 3.1ÉîœY - ÉîœYÑü§ - ‚÷Ææ
+Show # è¯ç›Ÿ - 3.1æ·±æ·µ - æ·±æ·µè…°å¸¶ - å‚³å¥‡
     Rarity = Unique
     Class "Belts"
     BaseType "Stygian Vise"
@@ -2108,7 +2108,7 @@ Show # Â“ÃË - 3.1ÉîœY - ÉîœYÑü§ - ‚÷Ææ
     MinimapIcon 0 Red Hexagon
     PlayEffect Red
 
-Show # Â“ÃË - 3.1ÉîœY - ÉîœYÑü§ - 84+
+Show # è¯ç›Ÿ - 3.1æ·±æ·µ - æ·±æ·µè…°å¸¶ - 84+
     ItemLevel >= 84
     Class "Belts"
     BaseType "Stygian Vise"
@@ -2120,7 +2120,7 @@ Show # Â“ÃË - 3.1ÉîœY - ÉîœYÑü§ - 84+
     MinimapIcon 1 Green Hexagon
     PlayEffect Green
 
-Show # Â“ÃË - 3.1ÉîœY - ÉîœYÑü§ - 75~83
+Show # è¯ç›Ÿ - 3.1æ·±æ·µ - æ·±æ·µè…°å¸¶ - 75~83
     ItemLevel >= 75
     ItemLevel <= 83
     Class "Belts"
@@ -2133,7 +2133,7 @@ Show # Â“ÃË - 3.1ÉîœY - ÉîœYÑü§ - 75~83
     MinimapIcon 1 Green Hexagon
     PlayEffect Green
 
-Show # Â“ÃË - 3.1ÉîœY - ÉîœYÑü§ - 60~74
+Show # è¯ç›Ÿ - 3.1æ·±æ·µ - æ·±æ·µè…°å¸¶ - 60~74
     ItemLevel >= 60
     ItemLevel <= 74
     Class "Belts"
@@ -2146,7 +2146,7 @@ Show # Â“ÃË - 3.1ÉîœY - ÉîœYÑü§ - 60~74
     MinimapIcon 1 Green Hexagon
     PlayEffect Green
 
-Show # Â“ÃË - 3.1ÉîœY - ÉîœYÑü§ - 1~59
+Show # è¯ç›Ÿ - 3.1æ·±æ·µ - æ·±æ·µè…°å¸¶ - 1~59
     ItemLevel < 60
     Class "Belts"
     BaseType "Stygian Vise"
@@ -2158,7 +2158,7 @@ Show # Â“ÃË - 3.1ÉîœY - ÉîœYÑü§ - 1~59
     MinimapIcon 1 Green Hexagon
     PlayEffect Green
 
-Show # Â“ÃË - 3.1ÉîœY - ÉîœYÖéŒš - ‚÷Ææ
+Show # è¯ç›Ÿ - 3.1æ·±æ·µ - æ·±æ·µç å¯¶ - å‚³å¥‡
     Rarity = Unique
     Class "Abyss Jewel"
     SetBackgroundColor 255 255 255
@@ -2168,7 +2168,7 @@ Show # Â“ÃË - 3.1ÉîœY - ÉîœYÖéŒš - ‚÷Ææ
     MinimapIcon 0 Red Hexagon
     PlayEffect Red
 
-Show # Â“ÃË - 3.1ÉîœY - ÉîœYÖéŒš - 84+
+Show # è¯ç›Ÿ - 3.1æ·±æ·µ - æ·±æ·µç å¯¶ - 84+
     ItemLevel >= 84
     Class "Abyss Jewel"
     SetTextColor 255 192 203
@@ -2178,7 +2178,7 @@ Show # Â“ÃË - 3.1ÉîœY - ÉîœYÖéŒš - 84+
     PlayAlertSound 9 200
     PlayEffect Yellow Temp
 
-Show # Â“ÃË - 3.1ÉîœY - ÉîœYÖéŒš - 75-83
+Show # è¯ç›Ÿ - 3.1æ·±æ·µ - æ·±æ·µç å¯¶ - 75-83
     ItemLevel >= 75
     ItemLevel <= 83
     Class "Abyss Jewel"
@@ -2188,7 +2188,7 @@ Show # Â“ÃË - 3.1ÉîœY - ÉîœYÖéŒš - 75-83
     SetFontSize 40
     PlayAlertSound 9 200
 
-Show # Â“ÃË - 3.1ÉîœY - ÉîœYÖéŒš - 60~74
+Show # è¯ç›Ÿ - 3.1æ·±æ·µ - æ·±æ·µç å¯¶ - 60~74
     ItemLevel >= 60
     ItemLevel <= 74
     Class "Abyss Jewel"
@@ -2198,7 +2198,7 @@ Show # Â“ÃË - 3.1ÉîœY - ÉîœYÖéŒš - 60~74
     SetFontSize 40
     PlayAlertSound 9 200
 
-Show # Â“ÃË - 3.1ÉîœY - ÉîœYÖéŒš - 1~59
+Show # è¯ç›Ÿ - 3.1æ·±æ·µ - æ·±æ·µç å¯¶ - 1~59
     ItemLevel < 60
     Class "Abyss Jewel"
     SetTextColor 255 192 203
@@ -2207,9 +2207,9 @@ Show # Â“ÃË - 3.1ÉîœY - ÉîœYÖéŒš - 1~59
     SetFontSize 40
     PlayAlertSound 9 200
 
-# ¡¾Â“ÃË-3.0ÉñÖI¡¿3008
+# ã€è¯ç›Ÿ-3.0ç¥è«­ã€‘3008
 
-Show # Â“ÃË - 3.0ÉñÖI - ÉñÖIËéÆ¬
+Show # è¯ç›Ÿ - 3.0ç¥è«­ - ç¥è«­ç¢ç‰‡
     Class "Piece"
     SetTextColor 255 177 0 255
     SetBackgroundColor 119 168 255 255
@@ -2219,9 +2219,9 @@ Show # Â“ÃË - 3.0ÉñÖI - ÉñÖIËéÆ¬
     MinimapIcon 0 Brown Triangle
     PlayEffect Brown
 
-# ¡¾Â“ÃË-2.6²»Ğà¡¿3007
+# ã€è¯ç›Ÿ-2.6ä¸æœ½ã€‘3007
 
-Show # Â“ÃË - 2.6²»Ğà - Â“ÃËÊ¯(³¬Ô½¡¢Í³ğ¡¢ÁÑºÛ)
+Show # è¯ç›Ÿ - 2.6ä¸æœ½ - è¯ç›ŸçŸ³(è¶…è¶Šã€å¾©ä»‡ã€è£‚ç—•)
     ItemLevel >= 67
     Class "Leaguestones"
     BaseType "Beyond Leaguestone" "Nemesis Leaguestone" "Breach Leaguestone"
@@ -2232,7 +2232,7 @@ Show # Â“ÃË - 2.6²»Ğà - Â“ÃËÊ¯(³¬Ô½¡¢Í³ğ¡¢ÁÑºÛ)
     PlayAlertSound 9 300
     PlayEffect Yellow
 
-Show # Â“ÃË - 2.6²»Ğà - Â“ÃËÊ¯(Ä§·¨)
+Show # è¯ç›Ÿ - 2.6ä¸æœ½ - è¯ç›ŸçŸ³(é­”æ³•)
     Rarity >= Magic
     Class "Leaguestones"
     SetTextColor 0 0 0
@@ -2242,7 +2242,7 @@ Show # Â“ÃË - 2.6²»Ğà - Â“ÃËÊ¯(Ä§·¨)
     PlayAlertSound 9 300
     PlayEffect Blue
 
-Show # Â“ÃË - 2.6²»Ğà - Â“ÃËÊ¯(ÆÕÍ¨)
+Show # è¯ç›Ÿ - 2.6ä¸æœ½ - è¯ç›ŸçŸ³(æ™®é€š)
     Rarity = Normal
     Class "Leaguestones"
     SetTextColor 0 0 0
@@ -2252,7 +2252,7 @@ Show # Â“ÃË - 2.6²»Ğà - Â“ÃËÊ¯(ÆÕÍ¨)
     PlayAlertSound 9 300
     PlayEffect White
 
-Show # Â“ÃË - 2.6²»Ğà - ¹Åµäßzè€/¹ÅĞàßzè€/Íß –ßzè€
+Show # è¯ç›Ÿ - 2.6ä¸æœ½ - å¤å…¸éºé‘°/å¤æœ½éºé‘°/ç“¦çˆ¾éºé‘°
     Class "Misc Map Items"
     BaseType "Ancient Reliquary Key" "Timeworn Reliquary Key" "Vaal Reliquary Key"
     SetTextColor 248 97 97
@@ -2263,9 +2263,9 @@ Show # Â“ÃË - 2.6²»Ğà - ¹Åµäßzè€/¹ÅĞàßzè€/Íß –ßzè€
     PlayEffect Red
     PlayAlertSound 1 250 
 
-# ¡¾Â“ÃË-2.5ÁÑºÛ¡¿3006
+# ã€è¯ç›Ÿ-2.5è£‚ç—•ã€‘3006
 
-Show # Â“ÃË - 2.5ÁÑºÛ - ÁÑºÛÊ¯
+Show # è¯ç›Ÿ - 2.5è£‚ç—• - è£‚ç—•çŸ³
     Class "Map Fragments"
     BaseType "Xoph's Breachstone" "Tul's Breachstone" "Esh's Breachstone" "Uul-Netol's Breachstone" "Chayula's Breachstone"
     SetTextColor 255 255 255
@@ -2276,7 +2276,7 @@ Show # Â“ÃË - 2.5ÁÑºÛ - ÁÑºÛÊ¯
     MinimapIcon 1 Red Circle
     PlayEffect Red
 
-Show # Â“ÃË - 2.5ÁÑºÛ - ÁÑºÛÁÑÆ¬
+Show # è¯ç›Ÿ - 2.5è£‚ç—• - è£‚ç—•è£‚ç‰‡
     Class "Currency"
     BaseType "Splinter of Xoph" "Splinter of Tul" "Splinter of Esh" "Splinter of Uul-Netol" "Splinter of Chayula"
     SetTextColor 255 192 203
@@ -2285,7 +2285,7 @@ Show # Â“ÃË - 2.5ÁÑºÛ - ÁÑºÛÁÑÆ¬
     PlayAlertSound ShChaos 150
     MinimapIcon 0 Red Star
 
-Show # Â“ÃË - 2.5ÁÑºÛ - ÁÑºÛ×£¸£
+Show # è¯ç›Ÿ - 2.5è£‚ç—• - è£‚ç—•ç¥ç¦
     Class "Currency"
     BaseType "Blessing of Xoph" "Blessing of Tul" "Blessing of Esh" "Blessing of Uul-Netol" "Blessing of Chayula"
     SetTextColor 0 0 0
@@ -2295,9 +2295,9 @@ Show # Â“ÃË - 2.5ÁÑºÛ - ÁÑºÛ×£¸£
     PlayAlertSound 10 150
     PlayEffect Yellow
 
-# ¡¾Â“ÃË-2.4¾«Ëè¡¿3005
+# ã€è¯ç›Ÿ-2.4ç²¾é«“ã€‘3005
 
-Show # Â“ÃË - 2.4¾«Ëè - ¾«Ëè -ÎÛÈ¾¾«ÈA&ÎÛÈ¾Æ÷Ãó
+Show # è¯ç›Ÿ - 2.4ç²¾é«“ - ç²¾é«“ -æ±¡æŸ“ç²¾è¯&æ±¡æŸ“å™¨çš¿
     Class "Currency"
     BaseType "Essence of Hysteria" "Essence of Insanity" "Essence of Horror" "Essence of Delirium" "Remnant of Corruption"
     SetTextColor 0 0 0
@@ -2307,37 +2307,37 @@ Show # Â“ÃË - 2.4¾«Ëè - ¾«Ëè -ÎÛÈ¾¾«ÈA&ÎÛÈ¾Æ÷Ãó
     PlayAlertSound 9 300
     PlayEffect Red
 
-Show # Â“ÃË - 2.4¾«Ëè - ¾«Ëè -T1
+Show # è¯ç›Ÿ - 2.4ç²¾é«“ - ç²¾é«“ -T1
     Class "Currency"
     BaseType "Deafening Essence of"
     SetTextColor 150 255 255
     SetFontSize 40
     PlayAlertSound 9 300
 
-Show # Â“ÃË - 2.4¾«Ëè - ¾«Ëè -T2
+Show # è¯ç›Ÿ - 2.4ç²¾é«“ - ç²¾é«“ -T2
     Class "Currency"
     BaseType "Shrieking Essence of"
     SetTextColor 65 255 255
     SetFontSize 40
     PlayAlertSound 9 200
 
-Show # Â“ÃË - 2.4¾«Ëè - ¾«Ëè -T3
+Show # è¯ç›Ÿ - 2.4ç²¾é«“ - ç²¾é«“ -T3
     Class "Currency"
     BaseType "Screaming Essence of"
     SetTextColor 0 255 255
     SetFontSize 39
     PlayAlertSound 9 150
 
-Show # Â“ÃË - 2.4¾«Ëè - ¾«Ëè -T4
+Show # è¯ç›Ÿ - 2.4ç²¾é«“ - ç²¾é«“ -T4
     Class "Currency"
     BaseType "Wailing Essence of" "Weeping Essence of" "Muttering Essence of" "Whispering Essence of"
     SetTextColor 0 210 255
     SetFontSize 38
     PlayAlertSound 9 150
 
-# ¡¾Â“ÃË-2.1Ä§·û¡¿3002
+# ã€è¯ç›Ÿ-2.1é­”ç¬¦ã€‘3002
 
-Show # Â“ÃË - 2.1Ä§·û - Ä§·û - T1ÆÕÍ¨
+Show # è¯ç›Ÿ - 2.1é­”ç¬¦ - é­”ç¬¦ - T1æ™®é€š
     Rarity = Normal
     Class "Amulets"
     BaseType "Breakrib Talisman" "Ashscale Talisman" "Deep One Talisman" "Lone Antler Talisman" "Deadhand Talisman" "Bonespire Talisman" "Black Maw Talisman" "Undying Flesh Talisman" "Rot Head Talisman" "Mandible Talisman" "Writhing Talisman" "Chrysalis Talisman"
@@ -2346,7 +2346,7 @@ Show # Â“ÃË - 2.1Ä§·û - Ä§·û - T1ÆÕÍ¨
     SetBorderColor 0 0 0
     SetFontSize 37
 
-Show # Â“ÃË - 2.1Ä§·û - Ä§·û - T1Ä§·¨
+Show # è¯ç›Ÿ - 2.1é­”ç¬¦ - é­”ç¬¦ - T1é­”æ³•
     Rarity = Magic
     Class "Amulets"
     BaseType "Breakrib Talisman" "Ashscale Talisman" "Deep One Talisman" "Lone Antler Talisman" "Deadhand Talisman" "Bonespire Talisman" "Black Maw Talisman" "Undying Flesh Talisman" "Rot Head Talisman" "Mandible Talisman" "Writhing Talisman" "Chrysalis Talisman"
@@ -2355,7 +2355,7 @@ Show # Â“ÃË - 2.1Ä§·û - Ä§·û - T1Ä§·¨
     SetBorderColor 0 0 0
     SetFontSize 37
 
-Show # Â“ÃË - 2.1Ä§·û - Ä§·û - T1Ï¡ÓĞ
+Show # è¯ç›Ÿ - 2.1é­”ç¬¦ - é­”ç¬¦ - T1ç¨€æœ‰
     Rarity = Rare
     Class "Amulets"
     BaseType "Breakrib Talisman" "Ashscale Talisman" "Deep One Talisman" "Lone Antler Talisman" "Deadhand Talisman" "Bonespire Talisman" "Black Maw Talisman" "Undying Flesh Talisman" "Rot Head Talisman" "Mandible Talisman" "Writhing Talisman" "Chrysalis Talisman"
@@ -2364,7 +2364,7 @@ Show # Â“ÃË - 2.1Ä§·û - Ä§·û - T1Ï¡ÓĞ
     SetFontSize 37
     PlayAlertSound 9 300
 
-Show # Â“ÃË - 2.1Ä§·û - Ä§·û - T2ÆÕÍ¨
+Show # è¯ç›Ÿ - 2.1é­”ç¬¦ - é­”ç¬¦ - T2æ™®é€š
     Rarity = Normal
     Class "Amulets"
     BaseType "Fangjaw Talisman" "Avian Twins Talisman" "Splitnewt Talisman" "Hexclaw Talisman" "Wereclaw Talisman" "Clutching Talisman" "Primal Skull Talisman" "Horned Talisman"
@@ -2373,7 +2373,7 @@ Show # Â“ÃË - 2.1Ä§·û - Ä§·û - T2ÆÕÍ¨
     SetBorderColor 0 0 0
     SetFontSize 38
 
-Show # Â“ÃË - 2.1Ä§·û - Ä§·û - T2Ä§·¨
+Show # è¯ç›Ÿ - 2.1é­”ç¬¦ - é­”ç¬¦ - T2é­”æ³•
     Rarity = Magic
     Class "Amulets"
     BaseType "Fangjaw Talisman" "Avian Twins Talisman" "Splitnewt Talisman" "Hexclaw Talisman" "Wereclaw Talisman" "Clutching Talisman" "Primal Skull Talisman" "Horned Talisman"
@@ -2382,7 +2382,7 @@ Show # Â“ÃË - 2.1Ä§·û - Ä§·û - T2Ä§·¨
     SetBorderColor 0 0 0
     SetFontSize 38
 
-Show # Â“ÃË - 2.1Ä§·û - Ä§·û - T2Ï¡ÓĞ
+Show # è¯ç›Ÿ - 2.1é­”ç¬¦ - é­”ç¬¦ - T2ç¨€æœ‰
     Rarity = Rare
     Class "Amulets"
     BaseType "Fangjaw Talisman" "Avian Twins Talisman" "Splitnewt Talisman" "Hexclaw Talisman" "Wereclaw Talisman" "Clutching Talisman" "Primal Skull Talisman" "Horned Talisman"
@@ -2391,7 +2391,7 @@ Show # Â“ÃË - 2.1Ä§·û - Ä§·û - T2Ï¡ÓĞ
     SetFontSize 38
     PlayAlertSound 9 300
 
-Show # Â“ÃË - 2.1Ä§·û - Ä§·û - T3ÆÕÍ¨
+Show # è¯ç›Ÿ - 2.1é­”ç¬¦ - é­”ç¬¦ - T3æ™®é€š
     Rarity = Normal
     Class "Amulets"
     BaseType "Monkey Twins Talisman" "Three Rat Talisman" "Longtooth Talisman" "Rotfeather Talisman" "Three Hands Talisman" "Spinefuse Talisman" "Monkey Paw Talisman"
@@ -2400,7 +2400,7 @@ Show # Â“ÃË - 2.1Ä§·û - Ä§·û - T3ÆÕÍ¨
     SetBorderColor 0 0 0
     SetFontSize 39
 
-Show # Â“ÃË - 2.1Ä§·û - Ä§·û - T3Ä§·¨
+Show # è¯ç›Ÿ - 2.1é­”ç¬¦ - é­”ç¬¦ - T3é­”æ³•
     Rarity = Magic
     Class "Amulets"
     BaseType "Monkey Twins Talisman" "Three Rat Talisman" "Longtooth Talisman" "Rotfeather Talisman" "Three Hands Talisman" "Spinefuse Talisman" "Monkey Paw Talisman"
@@ -2409,7 +2409,7 @@ Show # Â“ÃË - 2.1Ä§·û - Ä§·û - T3Ä§·¨
     SetBorderColor 0 0 0
     SetFontSize 39
 
-Show # Â“ÃË - 2.1Ä§·û - Ä§·û - T3Ï¡ÓĞ
+Show # è¯ç›Ÿ - 2.1é­”ç¬¦ - é­”ç¬¦ - T3ç¨€æœ‰
     Rarity = Rare
     Class "Amulets"
     BaseType "Monkey Twins Talisman" "Three Rat Talisman" "Longtooth Talisman" "Rotfeather Talisman" "Three Hands Talisman" "Spinefuse Talisman" "Monkey Paw Talisman"
@@ -2418,7 +2418,7 @@ Show # Â“ÃË - 2.1Ä§·û - Ä§·û - T3Ï¡ÓĞ
     SetFontSize 39
     PlayAlertSound 9 300
 
-Show # Â“ÃË - 2.1Ä§·û - Ä§·û - T4ÆÕÍ¨
+Show # è¯ç›Ÿ - 2.1é­”ç¬¦ - é­”ç¬¦ - T4æ™®é€š
     Rarity = Normal
     Class "Amulets"
     BaseType "Greatwolf Talisman"
@@ -2427,7 +2427,7 @@ Show # Â“ÃË - 2.1Ä§·û - Ä§·û - T4ÆÕÍ¨
     SetBorderColor 0 0 0
     SetFontSize 40
 
-Show # Â“ÃË - 2.1Ä§·û - Ä§·û - T4Ä§·¨
+Show # è¯ç›Ÿ - 2.1é­”ç¬¦ - é­”ç¬¦ - T4é­”æ³•
     Rarity = Magic
     Class "Amulets"
     BaseType "Greatwolf Talisman"
@@ -2436,7 +2436,7 @@ Show # Â“ÃË - 2.1Ä§·û - Ä§·û - T4Ä§·¨
     SetBorderColor 0 0 0
     SetFontSize 40
 
-Show # Â“ÃË - 2.1Ä§·û - Ä§·û - T4Ï¡ÓĞ
+Show # è¯ç›Ÿ - 2.1é­”ç¬¦ - é­”ç¬¦ - T4ç¨€æœ‰
     Rarity = Rare
     Class "Amulets"
     BaseType "Greatwolf Talisman"
@@ -2445,9 +2445,9 @@ Show # Â“ÃË - 2.1Ä§·û - Ä§·û - T4Ï¡ÓĞ
     SetFontSize 40
     PlayAlertSound 9 300
 
-# ¡¾Â“ÃË-2.0ÜŠˆF¡¿3001
+# ã€è¯ç›Ÿ-2.0è»åœ˜ã€‘3001
 
-Show # Â“ÃË - 2.0ÜŠˆF - ÜŠˆFÂ“ÃËŒ£ŒÙÔ~¾YÑb‚ä
+Show # è¯ç›Ÿ - 2.0è»åœ˜ - è»åœ˜è¯ç›Ÿå°ˆå±¬è©ç¶´è£å‚™
     HasExplicitMod "Brinerot" "Mutewind" "Redblade" "Betrayer's" "Deceiver's" "Turncoat's"
     SetBorderColor 180 255 0
     SetFontSize 42
@@ -2455,9 +2455,9 @@ Show # Â“ÃË - 2.0ÜŠˆF - ÜŠˆFÂ“ÃËŒ£ŒÙÔ~¾YÑb‚ä
     MinimapIcon 2 Red Hexagon
     PlayEffect Brown
 
-# ¡¾Â“ÃË-2.2•NÈA¡¿3003
+# ã€è¯ç›Ÿ-2.2æ˜‡è¯ã€‘3003
 
-Show # Â“ÃË - 2.2•NÈA - ¸½Ä§ÎïÆ·
+Show # è¯ç›Ÿ - 2.2æ˜‡è¯ - é™„é­”ç‰©å“
     AnyEnchantment True
     SetTextColor 53 87 170 255
     SetBackgroundColor 174 243 203
@@ -2466,44 +2466,44 @@ Show # Â“ÃË - 2.2•NÈA - ¸½Ä§ÎïÆ·
     MinimapIcon 1 White Hexagon
     PlayEffect White
 
-Show # Â“ÃË - 2.2•NÈA - üS½ğè€³×
+Show # è¯ç›Ÿ - 2.2æ˜‡è¯ - é»ƒé‡‘é‘°åŒ™
     Class "Labyrinth"
     BaseType "Golden Key"
     SetTextColor 205 185 25
     SetFontSize 45
 
-Show # Â“ÃË - 2.2•NÈA - °×ãyè€³×
+Show # è¯ç›Ÿ - 2.2æ˜‡è¯ - ç™½éŠ€é‘°åŒ™
     Class "Labyrinth"
     BaseType "Silver Key"
     SetTextColor 230 232 250
     SetFontSize 45
 
-Show # Â“ÃË - 2.2•NÈA - ¹Åã~è€³×
+Show # è¯ç›Ÿ - 2.2æ˜‡è¯ - å¤éŠ…é‘°åŒ™
     Class "Labyrinth"
     BaseType "Treasure Key"
     SetTextColor 165 120 83
     SetFontSize 45
     PlayEffect Yellow
 
-Show # Â“ÃË - 2.2•NÈA - ÆäËûÃÔŒmÎïÆ·
+Show # è¯ç›Ÿ - 2.2æ˜‡è¯ - å…¶ä»–è¿·å®®ç‰©å“
     Class "Labyrinth Trinket"
     SetTextColor 205 179 139
     SetFontSize 45
     PlayEffect Brown
 
 #============
-# ¡¾Ãüß\¿¨-ÕfÃ÷™Ú¡¿4000
-# ¡¾Ãüß\¿¨-T1¡¿4001
-# ¡¾Ãüß\¿¨-T2¡¿4002
-# ¡¾Ãüß\¿¨-T3¡¿4003
-# ¡¾Ãüß\¿¨-T4¡¿4004
-# ¡¾Ãüß\¿¨-T5¡¿4005
-# ¡¾Ãüß\¿¨-°²È«·ÀÂ©¾€¡¿4006
+# ã€å‘½é‹å¡-èªªæ˜æ¬„ã€‘4000
+# ã€å‘½é‹å¡-T1ã€‘4001
+# ã€å‘½é‹å¡-T2ã€‘4002
+# ã€å‘½é‹å¡-T3ã€‘4003
+# ã€å‘½é‹å¡-T4ã€‘4004
+# ã€å‘½é‹å¡-T5ã€‘4005
+# ã€å‘½é‹å¡-å®‰å…¨é˜²æ¼ç·šã€‘4006
 #============
 
-# ¡¾Ãüß\¿¨-T1¡¿4001
+# ã€å‘½é‹å¡-T1ã€‘4001
 
-Show # Ãüß\¿¨ - T1
+Show # å‘½é‹å¡ - T1
     Class "Divination"
     BaseType "Abandoned Wealth" "Alluring Bounty" "Beauty Through Death" "Brother's Stash" "Burning Blood" "Deadly Joy" "Gift of Asenath" "House of Mirrors" "Immortal Resolve" "Love Through Ice" "Luminous Trove" "Nook's Crown" "Pride of the First Ones" "Seven Years Bad Luck" "Succor of the Sinless" "The Cheater" "The Craving" "The Demon" "The Doctor" "The Fiend" "The Immortal" "The Nurse" "The Samurai's Eye" "Unrequited Love" "Eternal Bonds" "The Scout"
     SetFontSize 45
@@ -2514,9 +2514,9 @@ Show # Ãüß\¿¨ - T1
     PlayEffect Red
     MinimapIcon 0 Red Star
 
-# ¡¾Ãüß\¿¨-T2¡¿
+# ã€å‘½é‹å¡-T2ã€‘
 
-Show # Ãüß\¿¨ - T2
+Show # å‘½é‹å¡ - T2
     Class "Divination"
     BaseType "A Note in the Wind" "Broken Promises" "Chaotic Disposition" "Council of Cats" "Dark Dreams" "Dementophobia" "Desecrated Virtue" "Draped in Dreams" "Hunter's Reward" "Keeper's Corruption" "The Academic" "The Artist" "The Bargain" "The Celestial Justicar" "The Dragon's Heart" "The Enlightened" "The Escape" "The Eye of Terror" "The Greatest Intentions" "The Gulf" "The Rusted Bard" "The Life Thief" "The Long Con" "The Offspring" "The Patient" "The Price of Loyalty" "The Progeny of Lunaris" "The Sacrifice" "The Saint's Treasure" "The Spark and the Flame" "The Strategist" "The Sustenance" "The Void" "The White Knight" "Wealth and Power" "Winter's Embrace" "The Rabbit's Foot" "Chasing Risk" "The Catch" "The Forgotten Treasure" "The Aspirant" "Judging Voices" "Justified Ambition" "Misery in Darkness" "Duality" "The Transformation" "Magnum Opus" "Imperfect Memories" "The Magma Crab"
     SetFontSize 45
@@ -2527,9 +2527,9 @@ Show # Ãüß\¿¨ - T2
     PlayEffect Red
     MinimapIcon 0 Red Triangle
 
-# ¡¾Ãüß\¿¨-T3¡¿
+# ã€å‘½é‹å¡-T3ã€‘
 
-Show # Ãüß\¿¨ - T3
+Show # å‘½é‹å¡ - T3
     Class "Divination"
     BaseType "A Familiar Call" "A Modest Request" "Ambitious Obsession" "Azyran's Reward" "Blessing of God" "Boon of the First Ones" "Bowyer's Dream" "Brotherhood in Exile" "Divine Justice" "Dying Anguish" "Fateful Meeting" "Humility" "Lachrymal Necrosis" "Mawr Blaidd" "Peaceful Moments" "Pride Before the Fall" "Reckless Ambition" "Remembrance" "Squandered Prosperity" "Terrible Secret of Space" "The Astromancer" "The Bitter Blossom" "The Bones" "The Breach" "The Cartographer" "The Celestial Stone" "The Chosen" "The Damned" "The Dapper Prodigy" "The Dark Mage" "The Dreamer" "The Eldritch Decay" "The Endless Darkness" "The Enthusiasts" "The Eternal War" "The Ethereal" "The Hive of Knowledge" "The Hoarder" "The Innocent" "The Jeweller's Boon" "The Landing" "The Mayor" "The Mind's Eyes" "The Obscured" "The Offering" "The Old Man" "The Pact" "The Polymath" "The Porcupine" "The Primordial" "The Professor" "The Queen" "The Risk" "The Sephirot" "The Soul" "The Tinkerer's Table" "The Undaunted" "The Valkyrie" "The Warlord" "The Wolven King's Bite" "The World Eater" "Vanity" "Void of the Elements" "A Stone Perfected" "Treasures of the Vaal" "The Prince of Darkness" "Disdain" "Guardian's Challenge" "Bijoux" "Silence and Frost" "Parasitic Passengers" "The One That Got Away"
     SetFontSize 45
@@ -2540,8 +2540,8 @@ Show # Ãüß\¿¨ - T3
     PlayEffect Yellow
     MinimapIcon 1 Yellow Triangle
 
-# ¡¾Ãüß\¿¨-T4¡¿
-Show # Ãüß\¿¨ - T4
+# ã€å‘½é‹å¡-T4ã€‘
+Show # å‘½é‹å¡ - T4
     Class "Divination"
     BaseType "Acclimatisation" "Boon of Justice" "Buried Treasure" "Coveted Possession" "Demigod's Wager" "Emperor of Purity" "Emperor's Luck" "Harmony of Souls" "Imperial Legacy" "Last Hope" "Loyalty" "Lucky Connections" "Lucky Deck" "Monochrome" "More is Never Enough" "No Traces" "Sambodhi's Vow" "Sambodhi's Wisdom" "Society's Remorse" "The Cacophony" "The Card Sharp" "The Chains that Bind" "The Deal" "The Fool" "The Gemcutter" "The Heroic Shot" "The Inventor" "The Journey" "The Master Artisan" "The Seeker" "The Side Quest" "The Survivalist" "The Union" "The Wrath" "Three Faces in the Dark" "Three Voices" "Vinia's Token" "Desperate Crusade" "The Fox in the Brambles" "The Tireless Extractor"
     SetFontSize 45
@@ -2552,7 +2552,7 @@ Show # Ãüß\¿¨ - T4
     PlayEffect White
     MinimapIcon 2 White Triangle
 
-Show # Ãüß\¿¨ - T4
+Show # å‘½é‹å¡ - T4
 	Class "Divination"
     BaseType "A Dab of Ink" "A Sea of Blue" "Akil's Prophecy" "Alone in the Darkness" "Arrogance of the Vaal" "Assassin's Favour" "Atziri's Arsenal" "Baited Expectations" "Blind Venture" "Boundless Realms" "Brush, Paint and Palette" "Cameria's Cut" "Costly Curio" "Cursed Words" "Deathly Designs" "Dying Light" "Earth Drinker" "Etched in Blood" "Friendship" "Gemcutter's Promise" "Glimmer of Hope" "Haunting Shadows" "Heterochromia" "Hubris" "Hunter's Resolve" "Jack in the Box" "Left to Fate" "Mitts" "Perfection" "Prejudice" "Prometheus' Armoury" "Rebirth" "Scholar of the Seas" "The Admirer" "The Aesthete" "The Awakened" "The Battle Born" "The Betrayal" "The Blessing of Moosh" "The Body" "The Brittle Emperor" "The Cache" "The Cataclysm" "The Deep Ones" "The Doppelganger" "The Easy Stroll" "The Emptiness" "The Encroaching Darkness" "The Endurance" "The Eye of the Dragon" "The Fishmonger" "The Fletcher" "The Formless Sea" "The Garish Power" "The Gentleman" "The Gladiator" "The Hale Heart" "The Hook" "The Hunger" "The Insatiable" "The King's Heart" "The Last One Standing" "The Last Supper" "The Lion" "The Mad King" "The Master" "The Mercenary" "The Messenger" "The One With All" "The Penitent" "The Poet" "The Price of Prescience" "The Price of Protection" "The Realm" "The Rite of Elements" "The Road to Power" "The Scavenger" "The Shortcut" "The Standoff" "The Stormcaller" "The Sword King's Salute" "The Thaumaturgist" "The Throne" "The Tower" "The Traitor" "The Undisputed" "The Unexpected Prize" "The Valley of Steel Boxes" "The Vast" "The Whiteout" "The Wilted Rose" "The Wind" "The Wolf" "The Wolf's Legacy" "The Wolverine" "The Wretched" "Time-Lost Relic" "Triskaidekaphobia" "Unchained" "Underground Forest" "Vile Power" "Volatile Power"
     SetFontSize 45
@@ -2563,9 +2563,9 @@ Show # Ãüß\¿¨ - T4
     PlayEffect White
     MinimapIcon 2 White Triangle
 
-# ¡¾Ãüß\¿¨-T5¡¿
+# ã€å‘½é‹å¡-T5ã€‘
 
-Show # Ãüß\¿¨ - T5
+Show # å‘½é‹å¡ - T5
     Class "Divination"
     BaseType "Her Mask" "Rain of Chaos" "The Catalyst" "The Flora's Gift" "The Gambler" "The Puzzle" "The Scholar"
     SetFontSize 45
@@ -2574,7 +2574,7 @@ Show # Ãüß\¿¨ - T5
     SetBackgroundColor 0 0 0 255
     PlayAlertSound 2 300
 
-Show # Ãüß\¿¨ - T5
+Show # å‘½é‹å¡ - T5
     Class "Divination"
     BaseType "A Mother's Parting Gift" "Anarchy's Price" "Audacity" "Birth of the Three" "Call to the First Ones" "Cartographer's Delight" "Dark Temptation" "Death" "Destined to Crumble" "Dialla's Subjugation" "Doedre's Madness" "Echoes of Love" "Forbidden Power" "Gift of the Gemling Queen" "Grave Knowledge" "Hope" "Lantador's Lost Love" "Light and Truth" "Lingering Remnants" "Lost Worlds" "Lysah's Respite" "Merciless Armament" "Might is Right" "Prosperity" "Rain Tempter" "Rats" "Shard of Fate" "Struck by Lightning" "The Adventuring Spirit" "The Archmage's Right Hand" "The Arena Champion" "The Army of Blood" "The Avenger" "The Bear Woman" "The Beast" "The Blazing Fire" "The Calling" "The Carrion Crow" "The Coming Storm" "The Conduit" "The Cursed King" "The Darkest Dream" "The Deceiver" "The Demoness" "The Dragon" "The Dreamland" "The Drunken Aristocrat" "The Explorer" "The Fathomless Depths" "The Feast" "The Forsaken" "The Fox" "The Golden Era" "The Harvester" "The Hermit" "The Incantation" "The Inoculated" "The Jester" "The Journalist" "The King's Blade" "The Lich" "The Long Watch" "The Lord in Black" "The Lord of Celebration" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Mountain" "The Oath" "The Opulent" "The Pack Leader" "The Rabid Rhoa" "The Ruthless Ceinture" "The Scarred Meadow" "The Sigil" "The Siren" "The Skeleton" "The Spoiled Prince" "The Summoner" "The Sun" "The Surgeon" "The Surveyor" "The Trial" "The Tumbleweed" "The Twilight Moon" "The Twins" "The Tyrant" "The Visionary" "The Warden" "The Watcher" "The Web" "The Witch" "The Wolf's Shadow" "Thirst for Knowledge" "Thunderous Skies" "Tranquillity" "Treasure Hunter" "Turn the Other Cheek"
     SetFontSize 35
@@ -2582,9 +2582,9 @@ Show # Ãüß\¿¨ - T5
     SetBorderColor 31 152 212 255
     SetBackgroundColor 0 0 0 255
 
-# ¡¾Ãüß\¿¨-°²È«·ÀÂ©¾€¡¿
+# ã€å‘½é‹å¡-å®‰å…¨é˜²æ¼ç·šã€‘
 
-Show # Ãüß\¿¨ - °²È«·ÀÂ©¾€
+Show # å‘½é‹å¡ - å®‰å…¨é˜²æ¼ç·š
     Class "Divination"
     SetTextColor 0 0 0
     SetBackgroundColor 	255 255 255
@@ -2593,13 +2593,13 @@ Show # Ãüß\¿¨ - °²È«·ÀÂ©¾€
     PlayAlertSound 1 300
 
 #============
-# ¡¾İ›ˆDÎïÆ·-ÕfÃ÷™Ú¡¿5000
-# ¡¾İ›ˆDÎïÆ·¡¿5001
+# ã€è¼¿åœ–ç‰©å“-èªªæ˜æ¬„ã€‘5000
+# ã€è¼¿åœ–ç‰©å“ã€‘5001
 #============
 
-# ¡¾İ›ˆDÎïÆ·¡¿5001
+# ã€è¼¿åœ–ç‰©å“ã€‘5001
 
-Show # İ›ˆDÎïÆ· - ÈÎ„ÕµÀ¾ß
+Show # è¼¿åœ–ç‰©å“ - ä»»å‹™é“å…·
     Class "Quest Items"
     SetTextColor 0 255 0
     SetBackgroundColor 0 0 0
@@ -2609,7 +2609,7 @@ Show # İ›ˆDÎïÆ· - ÈÎ„ÕµÀ¾ß
     MinimapIcon 0 Green Triangle
     PlayEffect Green
 
-Show # İ›ˆDÎïÆ· - Ì“¿ÕÊ¯
+Show # è¼¿åœ–ç‰©å“ - è™›ç©ºçŸ³
     Class "Atlas Upgrade Item"
     BaseType "Voidstone" 
     SetTextColor 101 183 161
@@ -2620,7 +2620,7 @@ Show # İ›ˆDÎïÆ· - Ì“¿ÕÊ¯
     MinimapIcon 0 White Cross	
     PlayEffect White
 
-Show # İ›ˆDÎïÆ· - áŒ½çÖ®Ñû
+Show # è¼¿åœ–ç‰©å“ - é‡‹ç•Œä¹‹é‚€
     Class "Misc Map Items"
     BaseType "Invitation"
     SetTextColor 0 0 0
@@ -2631,7 +2631,7 @@ Show # İ›ˆDÎïÆ· - áŒ½çÖ®Ñû
     MinimapIcon 0 Red Diamond
     PlayEffect Red
 
-Show # İ›ˆDÎïÆ· - ĞÂÔÂÁÑÆ¬
+Show # è¼¿åœ–ç‰©å“ - æ–°æœˆè£‚ç‰‡
     Class "Currency"
     BaseType "Crescent Splinter"
     SetTextColor 255 255 255
@@ -2640,7 +2640,7 @@ Show # İ›ˆDÎïÆ· - ĞÂÔÂÁÑÆ¬
     SetFontSize 45
     PlayAlertSound 9 300
 
-Show # İ›ˆDÎïÆ· - áŒ½çÖ®Áî
+Show # è¼¿åœ–ç‰©å“ - é‡‹ç•Œä¹‹ä»¤
     Class "Map Fragments"
     BaseType "The Maven's Writ" 
     SetTextColor 200 0 255
@@ -2651,7 +2651,7 @@ Show # İ›ˆDÎïÆ· - áŒ½çÖ®Áî
     MinimapIcon 0 Purple Triangle
     PlayEffect Purple
 
-Show # İ›ˆDÎïÆ· - ±ŠÉñÂ}Æ÷
+Show # è¼¿åœ–ç‰©å“ - çœ¾ç¥è–å™¨
     Class "Map Fragments"
     BaseType "Divine Vessel"
     SetFontSize 45
@@ -2662,7 +2662,7 @@ Show # İ›ˆDÎïÆ· - ±ŠÉñÂ}Æ÷
     MinimapIcon 2 White Circle
     PlayEffect White
 
-Show # İ›ˆDÎïÆ· - ±ŠÉñÂ}Æ÷(ŠZÈ¡ì`»ê)
+Show # è¼¿åœ–ç‰©å“ - çœ¾ç¥è–å™¨(å¥ªå–éˆé­‚)
     Class "Pantheon Soul"
     SetFontSize 45
     SetTextColor 0 0 0 255              
@@ -2672,7 +2672,7 @@ Show # İ›ˆDÎïÆ· - ±ŠÉñÂ}Æ÷(ŠZÈ¡ì`»ê)
     MinimapIcon 2 White Triangle
     PlayEffect White
 
-Show # İ›ˆDÎïÆ· - ×ğŸÊØĞl”àÆ¬
+Show # è¼¿åœ–ç‰©å“ - å°Šå¸«å®ˆè¡›æ–·ç‰‡
     Class "Map Fragments"
     BaseType "Fragment of Enslavement" "Fragment of Eradication" "Fragment of Constriction" "Fragment of Purification"
     SetTextColor 0 0 0 
@@ -2683,7 +2683,7 @@ Show # İ›ˆDÎïÆ· - ×ğŸÊØĞl”àÆ¬
     MinimapIcon 0 White Circle
     PlayEffect White
 
-Show # İ›ˆDÎïÆ· - T18×ğŸ”àÆ¬
+Show # è¼¿åœ–ç‰©å“ - T18å°Šå¸«æ–·ç‰‡
     Class "Map Fragments"
     BaseType "Fragment of Terror" "Fragment of Emptiness"
     SetTextColor 255 255 255
@@ -2694,7 +2694,7 @@ Show # İ›ˆDÎïÆ· - T18×ğŸ”àÆ¬
     MinimapIcon 0 White Circle
     PlayEffect White
 
-Show # İ›ˆDÎïÆ· - T18ËÜ½ç”àÆ¬
+Show # è¼¿åœ–ç‰©å“ - T18å¡‘ç•Œæ–·ç‰‡
     Class "Map Fragments"
     BaseType "Fragment of Shape" "Fragment of Knowledge"
     SetTextColor 255 255 255
@@ -2705,7 +2705,7 @@ Show # İ›ˆDÎïÆ· - T18ËÜ½ç”àÆ¬
     MinimapIcon 0 White Circle
     PlayEffect White
 
-Show # İ›ˆDÎïÆ· - »ğøP”àÆ¬
+Show # è¼¿åœ–ç‰©å“ - ç«é³³æ–·ç‰‡
     Class "Map Fragments"
     BaseType "Fragment of the Phoenix" 
     SetTextColor 255 255 255
@@ -2716,7 +2716,7 @@ Show # İ›ˆDÎïÆ· - »ğøP”àÆ¬
     MinimapIcon 0 Red Circle
     PlayEffect Red
 
-Show # İ›ˆDÎïÆ· - Å£î^”àÆ¬
+Show # è¼¿åœ–ç‰©å“ - ç‰›é ­æ–·ç‰‡
     Class "Map Fragments"
     BaseType "Fragment of the Minotaur" 
     SetTextColor 255 255 255
@@ -2727,7 +2727,7 @@ Show # İ›ˆDÎïÆ· - Å£î^”àÆ¬
     MinimapIcon 0 Red Circle
     PlayEffect Red
 
-Show # İ›ˆDÎïÆ· - ÆæÃÀÀ­”àÆ¬
+Show # è¼¿åœ–ç‰©å“ - å¥‡ç¾æ‹‰æ–·ç‰‡
     Class "Map Fragments"
     BaseType "Fragment of the Chimera" 
     SetTextColor 255 255 255
@@ -2738,7 +2738,7 @@ Show # İ›ˆDÎïÆ· - ÆæÃÀÀ­”àÆ¬
     MinimapIcon 0 Red Circle
     PlayEffect Red
 
-Show # İ›ˆDÎïÆ· - ¾Åî^Éß”àÆ¬
+Show # è¼¿åœ–ç‰©å“ - ä¹é ­è›‡æ–·ç‰‡
     Class "Map Fragments"
     BaseType "Fragment of the Hydra" "Breachstone"
     SetTextColor 255 255 255
@@ -2749,7 +2749,7 @@ Show # İ›ˆDÎïÆ· - ¾Åî^Éß”àÆ¬
     MinimapIcon 0 Red Circle
     PlayEffect Red
 
-Show # İ›ˆDÎïÆ· - ¿‚¶½ÜŠËéÆ¬
+Show # è¼¿åœ–ç‰©å“ - ç¸½ç£è»ç¢ç‰‡
     Class "Map Fragments"
     BaseType "Drox's Crest" 
     SetTextColor 51 25 0
@@ -2760,7 +2760,7 @@ Show # İ›ˆDÎïÆ· - ¿‚¶½ÜŠËéÆ¬
     MinimapIcon 0 Yellow Pentagon
     PlayEffect Yellow
 
-Show # İ›ˆDÎïÆ· - Â}‘ğÊ¿ËéÆ¬
+Show # è¼¿åœ–ç‰©å“ - è–æˆ°å£«ç¢ç‰‡
     Class "Map Fragments"
     BaseType "Baran's Crest" 
     SetTextColor 51 25 0
@@ -2771,7 +2771,7 @@ Show # İ›ˆDÎïÆ· - Â}‘ğÊ¿ËéÆ¬
     MinimapIcon 0 Red Pentagon
     PlayEffect Red
 
-Show # İ›ˆDÎïÆ· - á÷«CÕßËéÆ¬
+Show # è¼¿åœ–ç‰©å“ - ç‹©çµè€…ç¢ç‰‡
     Class "Map Fragments"
     BaseType "Al-Hezmin's Crest" 
     SetTextColor 51 25 0
@@ -2782,7 +2782,7 @@ Show # İ›ˆDÎïÆ· - á÷«CÕßËéÆ¬
     MinimapIcon 0 Green Pentagon
     PlayEffect Green
 
-Show # İ›ˆDÎïÆ· - ¾ÈÚHÕßËéÆ¬
+Show # è¼¿åœ–ç‰©å“ - æ•‘è´–è€…ç¢ç‰‡
     Class "Map Fragments"
     BaseType "Veritania's Crest" 
     SetTextColor 51 25 0
@@ -2793,7 +2793,7 @@ Show # İ›ˆDÎïÆ· - ¾ÈÚHÕßËéÆ¬
     MinimapIcon 0 Cyan Pentagon
     PlayEffect Cyan
 
-Show # İ›ˆDÎïÆ· - Å®Éñ¼ÀÆ·
+Show # è¼¿åœ–ç‰©å“ - å¥³ç¥ç¥­å“
     BaseType "Offering to the Goddess" "Dedication to the Goddess" "Tribute to the Goddess"
     SetTextColor 0 0 0 
     SetBackgroundColor 0 255 255 
@@ -2803,7 +2803,7 @@ Show # İ›ˆDÎïÆ· - Å®Éñ¼ÀÆ·
     MinimapIcon 0 Yellow Square
     PlayEffect Yellow
 
-Show # İ›ˆDÎïÆ· - ·²ÈËµÄËéÆ¬
+Show # è¼¿åœ–ç‰©å“ - å‡¡äººçš„ç¢ç‰‡
     Class "Map Fragments"
     BaseType "Mortal"
     SetTextColor 0 0 0
@@ -2814,7 +2814,7 @@ Show # İ›ˆDÎïÆ· - ·²ÈËµÄËéÆ¬
     MinimapIcon 2 Yellow Triangle
     PlayEffect Yellow
 
-Show # İ›ˆDÎïÆ· - ÎçÒ¹µÄ·î«I
+Show # è¼¿åœ–ç‰©å“ - åˆå¤œçš„å¥‰ç»
     Class "Map Fragments"
     BaseType "Sacrifice at Midnight"
     SetTextColor 0 0 0 
@@ -2825,7 +2825,7 @@ Show # İ›ˆDÎïÆ· - ÎçÒ¹µÄ·î«I
     MinimapIcon 2 Yellow Triangle
     PlayEffect Yellow
 
-Show # İ›ˆDÎïÆ· - ÕıÎçüS»èÀèÃ÷µÄ·î«I
+Show # è¼¿åœ–ç‰©å“ - æ­£åˆé»ƒæ˜é»æ˜çš„å¥‰ç»
     Class "Map Fragments"
     BaseType "Sacrifice at Dawn" "Sacrifice at Dusk" "Sacrifice at Noon"
     SetTextColor 200 0 255
@@ -2836,7 +2836,7 @@ Show # İ›ˆDÎïÆ· - ÕıÎçüS»èÀèÃ÷µÄ·î«I
     MinimapIcon 2 Yellow Triangle
     PlayEffect Yellow
 
-Show # İ›ˆDÎïÆ· - °²È«¾€
+Show # è¼¿åœ–ç‰©å“ - å®‰å…¨ç·š
     Class "Map Fragments"
     SetTextColor 159 15 213 
     SetBackgroundColor 0 0 0 
@@ -2847,17 +2847,17 @@ Show # İ›ˆDÎïÆ· - °²È«¾€
     PlayEffect White
 
 #============
-# ¡¾¼¼ÄÜÕfÃ÷™Ú¡¿6000
-# ¡¾¼¼ÄÜŒšÊ¯-ÓXĞÑ¼¼ÄÜ¡¿6001
-# ¡¾¼¼ÄÜŒšÊ¯-ÈıÉ«İoÖú(†¢ÃÉÙxÓèÔö·ù)¡¿6002
-# ¡¾¼¼ÄÜŒšÊ¯-ÌØÊâ¡¿6003
-# ¡¾¼¼ÄÜŒšÊ¯-¸ßµÈ¸ßÆ·¡¿6004
-# ¡¾¼¼ÄÜŒšÊ¯-Ò»°ã¼¼ÄÜ¡¿6005
+# ã€æŠ€èƒ½èªªæ˜æ¬„ã€‘6000
+# ã€æŠ€èƒ½å¯¶çŸ³-è¦ºé†’æŠ€èƒ½ã€‘6001
+# ã€æŠ€èƒ½å¯¶çŸ³-ä¸‰è‰²è¼”åŠ©(å•Ÿè’™è³¦äºˆå¢å¹…)ã€‘6002
+# ã€æŠ€èƒ½å¯¶çŸ³-ç‰¹æ®Šã€‘6003
+# ã€æŠ€èƒ½å¯¶çŸ³-é«˜ç­‰é«˜å“ã€‘6004
+# ã€æŠ€èƒ½å¯¶çŸ³-ä¸€èˆ¬æŠ€èƒ½ã€‘6005
 #============
 
-# ¡¾¼¼ÄÜŒšÊ¯-ÓXĞÑ¼¼ÄÜ¡¿6001
+# ã€æŠ€èƒ½å¯¶çŸ³-è¦ºé†’æŠ€èƒ½ã€‘6001
 
-Show # ¼¼ÄÜ - ÓXĞÑ¼¼ÄÜ
+Show # æŠ€èƒ½ - è¦ºé†’æŠ€èƒ½
     Class "Gems"
     BaseType "Awakened"
     SetTextColor 0 255 255
@@ -2865,9 +2865,9 @@ Show # ¼¼ÄÜ - ÓXĞÑ¼¼ÄÜ
     SetFontSize 45
     PlayAlertSound 1 250  
 
-# ¡¾¼¼ÄÜŒšÊ¯-ÈıÉ«İoÖú(†¢ÃÉÙxÓèÔö·ù)¡¿6002
+# ã€æŠ€èƒ½å¯¶çŸ³-ä¸‰è‰²è¼”åŠ©(å•Ÿè’™è³¦äºˆå¢å¹…)ã€‘6002
 
-Show # ¼¼ÄÜ - †¢ÃÉ/ÎïÆ·”µÁ¿İoÖú
+Show # æŠ€èƒ½ - å•Ÿè’™/ç‰©å“æ•¸é‡è¼”åŠ©
     Class "Gems"
     BaseType "Enlighten Support" "Item Quantity Support"
     SetTextColor 0 0 255 255
@@ -2878,7 +2878,7 @@ Show # ¼¼ÄÜ - †¢ÃÉ/ÎïÆ·”µÁ¿İoÖú
     MinimapIcon 0 Blue Star
     PlayEffect Blue
 
-Show # ¼¼ÄÜ - ÙxÓèİoÖú
+Show # æŠ€èƒ½ - è³¦äºˆè¼”åŠ©
     Class "Gems"
     BaseType "Empower Support"
     SetTextColor 255 0 0
@@ -2889,7 +2889,7 @@ Show # ¼¼ÄÜ - ÙxÓèİoÖú
     MinimapIcon 0 Red Star
     PlayEffect Red
 
-Show # ¼¼ÄÜ - Ôö·ùİoÖú
+Show # æŠ€èƒ½ - å¢å¹…è¼”åŠ©
     Class "Gems"
     BaseType "Enhance Support"
     SetTextColor 59 255 113
@@ -2900,9 +2900,9 @@ Show # ¼¼ÄÜ - Ôö·ùİoÖú
     MinimapIcon 0 Green Star
     PlayEffect Green
 
-# ¡¾¼¼ÄÜŒšÊ¯-ÌØÊâ¡¿6003
+# ã€æŠ€èƒ½å¯¶çŸ³-ç‰¹æ®Šã€‘6003
 
-Show # ¼¼ÄÜ - •r¿ÕÖ®éT/Òı±¬µØÀ×/Íß –£®ÁÑºÛ
+Show # æŠ€èƒ½ - æ™‚ç©ºä¹‹é–€/å¼•çˆ†åœ°é›·/ç“¦çˆ¾ï¼è£‚ç—•
     Class "Gems"
     BaseType "Portal" "Detonate Mines" "Vaal Breach" 
     SetTextColor 0 255 255
@@ -2910,9 +2910,9 @@ Show # ¼¼ÄÜ - •r¿ÕÖ®éT/Òı±¬µØÀ×/Íß –£®ÁÑºÛ
     SetFontSize 40
     PlayAlertSound 9 300
 
-# ¡¾¼¼ÄÜŒšÊ¯-¸ßµÈ¸ßÆ·¡¿6004
+# ã€æŠ€èƒ½å¯¶çŸ³-é«˜ç­‰é«˜å“ã€‘6004
 
-Show # ¼¼ÄÜ - ¼¼ÄÜµÈ¼‰21+
+Show # æŠ€èƒ½ - æŠ€èƒ½ç­‰ç´š21+
     GemLevel >= 21
     Class "Gems"
     SetTextColor 255 0 0
@@ -2923,7 +2923,7 @@ Show # ¼¼ÄÜ - ¼¼ÄÜµÈ¼‰21+
     MinimapIcon 0 Green Star
     PlayEffect Green
 
-Show # ¼¼ÄÜ - ¼¼ÄÜÆ·Ù|20+
+Show # æŠ€èƒ½ - æŠ€èƒ½å“è³ª20+
     Quality >= 20
     Class "Gems"
     SetTextColor 0 255 255
@@ -2934,7 +2934,7 @@ Show # ¼¼ÄÜ - ¼¼ÄÜÆ·Ù|20+
     MinimapIcon 0 Green Star
     PlayEffect Green
 
-Show # ¼¼ÄÜ - ¼¼ÄÜÆ·Ù|15~19
+Show # æŠ€èƒ½ - æŠ€èƒ½å“è³ª15~19
     Quality >= 15
     Quality <= 19
     Class "Gems"
@@ -2942,36 +2942,36 @@ Show # ¼¼ÄÜ - ¼¼ÄÜÆ·Ù|15~19
     SetFontSize 43
     PlayEffect White Temp
 
-Show # ¼¼ÄÜ - ¼¼ÄÜÆ·Ù|1~14
+Show # æŠ€èƒ½ - æŠ€èƒ½å“è³ª1~14
     Quality >= 1
     Class "Gems"
     SetTextColor 10 230 230
     SetFontSize 40
 
-Show # ¼¼ÄÜ - µÈ¼‰15+
+Show # æŠ€èƒ½ - ç­‰ç´š15+
     Class "Gems"
     GemLevel >= 15
     SetTextColor 0 166 0
     SetFontSize 35
 
-# ¡¾¼¼ÄÜŒšÊ¯-Ò»°ã¼¼ÄÜ¡¿6005
+# ã€æŠ€èƒ½å¯¶çŸ³-ä¸€èˆ¬æŠ€èƒ½ã€‘6005
 
-Show # ¼¼ÄÜ - Íß –¼¼ÄÜ
+Show # æŠ€èƒ½ - ç“¦çˆ¾æŠ€èƒ½
     Class "Gems"
     BaseType "Vaal"
 
-Hide # ¼¼ÄÜ - Ò»°ã¼¼ÄÜ
+Hide # æŠ€èƒ½ - ä¸€èˆ¬æŠ€èƒ½
     Class "Gems"
 
-# ¡¾Ñb‚ä¡¿
-# ¡¾Ñb‚ä-Ø°Ê×¡¿
-# ¡¾Ñb‚ä-·û¼yØ°Ê×¡¿
-# ¡¾Ñb‚ä-·¨ÕÈ¡¿
-# ¡¾Ñb‚ä-Ø°Ê×¡¿
+# ã€è£å‚™ã€‘
+# ã€è£å‚™-åŒ•é¦–ã€‘
+# ã€è£å‚™-ç¬¦ç´‹åŒ•é¦–ã€‘
+# ã€è£å‚™-æ³•æ–ã€‘
+# ã€è£å‚™-åŒ•é¦–ã€‘
 
-# ¡¾Ñb‚ä-„İÁ¦Ñb‚ä¡¿
+# ã€è£å‚™-å‹¢åŠ›è£å‚™ã€‘
 
-Show # Ñb‚ä - „İÁ¦Ñb‚ä - ËÜ½çÑb‚ä
+Show # è£å‚™ - å‹¢åŠ›è£å‚™ - å¡‘ç•Œè£å‚™
     HasInfluence Shaper
     SetBackgroundColor 255 0 0 200
     SetBorderColor 0 255 255
@@ -2980,7 +2980,7 @@ Show # Ñb‚ä - „İÁ¦Ñb‚ä - ËÜ½çÑb‚ä
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - „İÁ¦Ñb‚ä - ×ğŸÑb‚ä
+Show # è£å‚™ - å‹¢åŠ›è£å‚™ - å°Šå¸«è£å‚™
     HasInfluence Elder
     SetBackgroundColor 137 0 205
     SetBorderColor 0 255 255
@@ -2989,7 +2989,7 @@ Show # Ñb‚ä - „İÁ¦Ñb‚ä - ×ğŸÑb‚ä
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - „İÁ¦Ñb‚ä - Â}‘ğÊ¿Ñb‚ä
+Show # è£å‚™ - å‹¢åŠ›è£å‚™ - è–æˆ°å£«è£å‚™
     HasInfluence Crusader 
     SetBackgroundColor 205 38 38
     SetBorderColor 0 255 255
@@ -2998,7 +2998,7 @@ Show # Ñb‚ä - „İÁ¦Ñb‚ä - Â}‘ğÊ¿Ñb‚ä
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - „İÁ¦Ñb‚ä - ¾ÈÚHÕßÑb‚ä
+Show # è£å‚™ - å‹¢åŠ›è£å‚™ - æ•‘è´–è€…è£å‚™
     HasInfluence Redeemer 
     SetBackgroundColor 0 191 255
     SetBorderColor 0 255 255
@@ -3007,7 +3007,7 @@ Show # Ñb‚ä - „İÁ¦Ñb‚ä - ¾ÈÚHÕßÑb‚ä
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - „İÁ¦Ñb‚ä - á÷«CÕßÑb‚ä
+Show # è£å‚™ - å‹¢åŠ›è£å‚™ - ç‹©çµè€…è£å‚™
     HasInfluence Hunter
     SetBackgroundColor 154 205 50
     SetBorderColor 0 255 255
@@ -3016,7 +3016,7 @@ Show # Ñb‚ä - „İÁ¦Ñb‚ä - á÷«CÕßÑb‚ä
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - „İÁ¦Ñb‚ä - ¿‚¶½ÜŠÑb‚ä
+Show # è£å‚™ - å‹¢åŠ›è£å‚™ - ç¸½ç£è»è£å‚™
     HasInfluence Warlord
     SetBackgroundColor 200 170 0
     SetBorderColor 0 255 255
@@ -3025,9 +3025,9 @@ Show # Ñb‚ä - „İÁ¦Ñb‚ä - ¿‚¶½ÜŠÑb‚ä
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-# ¡¾Ñb‚ä-ÌØÊâ‚÷ÆæÑb‚ä¡¿
+# ã€è£å‚™-ç‰¹æ®Šå‚³å¥‡è£å‚™ã€‘
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ñü§ - Ä§Ñª
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - è…°å¸¶ - é­”è¡€
     Rarity = Unique
     Class "Belts"
     BaseType "Heavy Belt"
@@ -3038,7 +3038,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ñü§ - Ä§Ñª
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ¶ÜÅÆ - ´óµØÖ÷
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - ç›¾ç‰Œ - å¤§åœ°ä¸»
     Rarity = Unique
     Class "Shields"
     BaseType "Elegant Round Shield"
@@ -3049,7 +3049,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ¶ÜÅÆ - ´óµØÖ÷
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ñü§ - «CÊ×
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - è…°å¸¶ - çµé¦–
     Rarity = Unique
     Class "Belts"
     BaseType "Leather Belt"
@@ -3060,7 +3060,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ñü§ - «CÊ×
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - í—å€ - õ –Äá¶àÖ®ÊÄ
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é …éŠ - çƒçˆ¾å°¼å¤šä¹‹èª“
     Rarity = Unique
     Class "Amulets"
     BaseType "Unset Amulet"
@@ -3071,7 +3071,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - í—å€ - õ –Äá¶àÖ®ÊÄ
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ·¨ÕÈ - “ÄÜÄ§°ô
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - æ³•æ– - æ½›èƒ½é­”æ£’
     Rarity = Unique
     Class "Wands"
     BaseType "Prophecy Wand"
@@ -3082,7 +3082,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ·¨ÕÈ - “ÄÜÄ§°ô
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - †ÎÊÖÎä - Î÷À­šâÁ÷š¢
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - å–®æ‰‹æ­¦ - è¥¿æ‹‰æ°£æµæ®º
     Rarity = Unique
     Class "One Hand Swords"
     BaseType "Charan's Sword"
@@ -3093,7 +3093,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - †ÎÊÖÎä - Î÷À­šâÁ÷š¢
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - †ÎÊÖÎä - ëx®‰ôÃÂ(ÏÄõÀ­) 
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - å–®æ‰‹æ­¦ - é›¢ç•°å¤¢å¯(å¤çƒæ‹‰) 
     Rarity = Unique
     Class "One Hand Swords"
     BaseType "Cutlass"
@@ -3104,7 +3104,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - †ÎÊÖÎä - ëx®‰ôÃÂ(ÏÄõÀ­)
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - †ÎÊÖÎä - Ã¬¶ÜŒ¦›Q
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - å–®æ‰‹æ­¦ - çŸ›ç›¾å°æ±º
     Rarity = Unique
     Class "Thrusting One Hand Swords"
     BaseType "Vaal Rapier"
@@ -3115,7 +3115,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - †ÎÊÖÎä - Ã¬¶ÜŒ¦›Q
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - †ÎÊÖÎä - ¿¨Ë¹ÆÕÀïµÄÔ¹ºŞ
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - å–®æ‰‹æ­¦ - å¡æ–¯æ™®é‡Œçš„æ€¨æ¨
     Rarity = Unique
     Class "Thrusting One Hand Swords"
     BaseType "Jewelled Foil"
@@ -3126,7 +3126,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - †ÎÊÖÎä - ¿¨Ë¹ÆÕÀïµÄÔ¹ºŞ
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - †ÎÊÖÎä - é_ÌÅ¸«
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - å–®æ‰‹æ­¦ - é–‹è†›æ–§
     Rarity = Unique
     Class "One Hand Axes"
     BaseType "Siege Axe"
@@ -3137,7 +3137,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - †ÎÊÖÎä - é_ÌÅ¸«
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ëpÊÖÎä - À×öªÂ}ÕÈ
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é›™æ‰‹æ­¦ - é›·éœ†è–æ–
     Rarity = Unique
     Class "Staves"
     BaseType "Imperial Staff"
@@ -3148,7 +3148,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ëpÊÖÎä - À×öªÂ}ÕÈ
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ¼ı´ü - ñRÂåÄáµÄ™CêP
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - ç®­è¢‹ - é¦¬æ´›å°¼çš„æ©Ÿé—œ
     Rarity = Unique
     Class "Quivers"
     BaseType "Ornate Quiver"
@@ -3159,7 +3159,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ¼ı´ü - ñRÂåÄáµÄ™CêP
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ¶ÜÅÆ - ‘ÒÄî/½µ·ü(õ –Äá¶à)
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - ç›¾ç‰Œ - æ‡¸å¿µ/é™ä¼(çƒçˆ¾å°¼å¤š)
     Rarity = Unique
     Class "Shields"
     BaseType "Ezomyte Tower Shield"
@@ -3170,7 +3170,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ¶ÜÅÆ - ‘ÒÄî/½µ·ü(õ –Äá¶à)
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ¶ÜÅÆ - ÔÂÓ°Ö®Ò«
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - ç›¾ç‰Œ - æœˆå½±ä¹‹è€€
     Rarity = Unique
     Class "Shields"
     BaseType "Jingling Spirit Shield"
@@ -3181,7 +3181,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ¶ÜÅÆ - ÔÂÓ°Ö®Ò«
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - ĞÅÑöÊØ×o
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é ­ç›” - ä¿¡ä»°å®ˆè­·
     Rarity = Unique
     Class "Helmets"
     BaseType "Runic Helm"
@@ -3192,7 +3192,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - ĞÅÑöÊØ×o
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - ¿¨µÏ¸ù»Ê¹Ú
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é ­ç›” - å¡è¿ªæ ¹çš‡å† 
     Rarity = Unique
     Class "Helmets"
     BaseType "Runic Crown"
@@ -3203,7 +3203,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - ¿¨µÏ¸ù»Ê¹Ú
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - ®½ÌÃæ¼†
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é ­ç›” - ç•°æ•™é¢ç´—
     Rarity = Unique
     Class "Helmets"
     BaseType "Deicide Mask"
@@ -3214,7 +3214,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - ®½ÌÃæ¼†
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - ÖiÈİ/®Ïë/»ìãçÒ»Æ³
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é ­ç›” - è¬å®¹/ç•°æƒ³/æ··æ²Œä¸€ç¥
     Rarity = Unique
     Class "Helmets"
     BaseType "Vaal Mask"
@@ -3225,7 +3225,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - ÖiÈİ/®Ïë/»ìãçÒ»Æ³
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - ×h•şÖ®ĞÄ/ÙM –Á_†Aà¹
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é ­ç›” - è­°æœƒä¹‹å¿ƒ/è²»çˆ¾ç¾…å’¥å–™
     Rarity = Unique
     Class "Helmets"
     BaseType "Harlequin Mask"
@@ -3236,7 +3236,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - ×h•şÖ®ĞÄ/ÙM –Á_†Aà¹
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - ¿ü –Éº»ûÃæ/»êï‹»¯Ãæ/º¿pÖ®Ãæ/ÌÃ»Ê¹ÚÃá/ŒÅĞÇf‡À
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é ­ç›” - å¥çˆ¾çŠç•¸é¢/é­‚é£²åŒ–é¢/æƒ¡ç¸«ä¹‹é¢/å ‚çš‡å† å†•/å¯©åˆ¤èŠåš´
     Rarity = Unique
     Class "Helmets"
     BaseType "Magistrate Crown"
@@ -3247,7 +3247,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - ¿ü –Éº»ûÃæ/»êï‹»¯Ãæ/º¿pÖ®Ãæ/ÌÃ»Ê¹ÚÃá/ŒÅĞÇf‡À
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - ¼À¶YÖ®Óê/µÂÎÖÍĞµÄĞÅÄîÖ®¿ø
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é ­ç›” - ç¥­ç¦®ä¹‹é›¨/å¾·æ²ƒæ‰˜çš„ä¿¡å¿µä¹‹ç›”
     Rarity = Unique
     Class "Helmets"
     BaseType "Nightmare Bascinet"
@@ -3258,7 +3258,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - ¼À¶YÖ®Óê/µÂÎÖÍĞµÄĞÅÄîÖ®¿ø
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - ÇĞÌØË¹µÄÍş™à/·Æ¶÷½zâ²ÑÀ/ÍÌÊÉÖ®¹Ú
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é ­ç›” - åˆ‡ç‰¹æ–¯çš„å¨æ¬Š/è²æ©çµ²ç ç‰™/åå™¬ä¹‹å† 
     Rarity = Unique
     Class "Helmets"
     BaseType "Necromancer Circlet"
@@ -3269,7 +3269,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - ÇĞÌØË¹µÄÍş™à/·Æ¶÷½zâ²ÑÀ/ÍÌÊÉÖ®¹Ú
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - ërøBÖ®Õ÷
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é ­ç›” - é››é³¥ä¹‹å¾
     Rarity = Unique
     Class "Helmets"
     BaseType "Steel Circlet"
@@ -3280,7 +3280,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - ërøBÖ®Õ÷
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - ˜OµØÖ®àÆ/´Ìš¢
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é ­ç›” - æ¥µåœ°ä¹‹å—¥/åˆºæ®º
     Rarity = Unique
     Class "Helmets"
     BaseType "Sinner Tricorne"
@@ -3291,7 +3291,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - ˜OµØÖ®àÆ/´Ìš¢
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - Ë¹¿¨ÎÖÖ®Í½/Ë¹Ëş¿Õ¼ÓÖ®Ê×/¿áº®¶·Åñ
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é ­ç›” - æ–¯å¡æ²ƒä¹‹å¾’/æ–¯å¡”ç©ºåŠ ä¹‹é¦–/é…·å¯’æ–—ç¯·
     Rarity = Unique
     Class "Helmets"
     BaseType "Silken Hood"
@@ -3302,7 +3302,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - Ë¹¿¨ÎÖÖ®Í½/Ë¹Ëş¿Õ¼ÓÖ®Ê×/¿áº®¶·Åñ
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - ½ğ¿|Ã±
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é ­ç›” - é‡‘ç¸·å¸½
     Rarity = Unique
     Class "Helmets"
     BaseType "Leather Cap"
@@ -3313,7 +3313,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - ½ğ¿|Ã±
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - ÉîœYÖ®†¾/ÊÈÑ×¶·Åñ
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é ­ç›” - æ·±æ·µä¹‹å–š/å—œç‚æ–—ç¯·
     Rarity = Unique
     Class "Helmets"
     BaseType "Ezomyte Burgonet"
@@ -3324,7 +3324,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - î^¿ø - ÉîœYÖ®†¾/ÊÈÑ×¶·Åñ
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÊÖÌ× - Ò¹Ö®Ó|
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - æ‰‹å¥— - å¤œä¹‹è§¸
     Rarity = Unique
     Class "Gloves"
     BaseType "Runic Gages"
@@ -3335,7 +3335,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÊÖÌ× - Ò¹Ö®Ó|
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÊÖÌ× - š§ÃæÕß
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - æ‰‹å¥— - æ¯€é¢è€…
     Rarity = Unique
     Class "Gloves"
     BaseType "Strapped Mitts"
@@ -3346,7 +3346,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÊÖÌ× - š§ÃæÕß
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÊÖÌ× - Ì“¿Õ/ÉßÆ¤«I¼À
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - æ‰‹å¥— - è™›ç©º/è›‡çš®ç»ç¥­
     Rarity = Unique
     Class "Gloves"
     BaseType "Legion Gloves"
@@ -3357,7 +3357,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÊÖÌ× - Ì“¿Õ/ÉßÆ¤«I¼À
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÊÖÌ× - éœºËÌ–Áî
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - æ‰‹å¥— - é—‡æ ¸è™Ÿä»¤
     Rarity = Unique
     Class "Gloves"
     BaseType "Riveted Gloves"
@@ -3368,7 +3368,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÊÖÌ× - éœºËÌ–Áî
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÊÖÌ× - ÙM –Á_äh×¦/ÍµÏ¢
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - æ‰‹å¥— - è²»çˆ¾ç¾…é‹’çˆª/å·æ¯
     Rarity = Unique
     Class "Gloves"
     BaseType "Hydrascale Gauntlets"
@@ -3379,7 +3379,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÊÖÌ× - ÙM –Á_äh×¦/ÍµÏ¢
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÊÖÌ× - ÏàÉúÏà„w
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - æ‰‹å¥— - ç›¸ç”Ÿç›¸å‰‹
     Rarity = Unique
     Class "Gloves"
     BaseType "Sorcerer Gloves"
@@ -3390,7 +3390,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÊÖÌ× - ÏàÉúÏà„w
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÊÖÌ× - ×h•şÖ®ÎÕ
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - æ‰‹å¥— - è­°æœƒä¹‹æ¡
     Rarity = Unique
     Class "Gloves"
     BaseType "Arcanist Gloves"
@@ -3401,7 +3401,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÊÖÌ× - ×h•şÖ®ÎÕ
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÊÖÌ× - Ì“¿ÕÖ®Á¦
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - æ‰‹å¥— - è™›ç©ºä¹‹åŠ›
     Rarity = Unique
     Class "Gloves"
     BaseType "Conjurer Gloves"
@@ -3412,7 +3412,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÊÖÌ× - Ì“¿ÕÖ®Á¦
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÊÖÌ× - ñRÀ×¸ğÌ}µÄÑªÈ¾ÊÖÌ×
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - æ‰‹å¥— - é¦¬é›·è‘›è˜¿çš„è¡€æŸ“æ‰‹å¥—
     Rarity = Unique
     Class "Gloves"
     BaseType "Deerskin Gloves"
@@ -3423,7 +3423,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÊÖÌ× - ñRÀ×¸ğÌ}µÄÑªÈ¾ÊÖÌ×
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÊÖÌ× - °¢ÆÀïµÄ½İË¼/¶àÀï†ÄáÖ®È­
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - æ‰‹å¥— - é˜¿èŒ²é‡Œçš„æ·æ€/å¤šé‡Œäºå°¼ä¹‹æ‹³
     Rarity = Unique
     Class "Gloves"
     BaseType "Vaal Gauntlets"
@@ -3434,7 +3434,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÊÖÌ× - °¢ÆÀïµÄ½İË¼/¶àÀï†ÄáÖ®È­
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÊÖÌ× - •NÈAÖ®ïL/Ô¹ºŞå‘Ôì
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - æ‰‹å¥— - æ˜‡è¯ä¹‹é¢¨/æ€¨æ¨é›é€ 
     Rarity = Unique
     Class "Gloves"
     BaseType "Ancient Gauntlets"
@@ -3445,7 +3445,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÊÖÌ× - •NÈAÖ®ïL/Ô¹ºŞå‘Ôì
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ğ¬×Ó - ¿ÕÏò¡¢½^µØ   
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é‹å­ - ç©ºå‘ã€çµ•åœ°   
     ItemLevel >= 84
     Rarity = Unique
     Class "Boots"
@@ -3457,7 +3457,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ğ¬×Ó - ¿ÕÏò¡¢½^µØ
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ğ¬×Ó - ÎÖÀ­ÄÈµÄÜŠê 
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é‹å­ - æ²ƒæ‹‰å¨œçš„è»éšŠ
     Rarity = Unique
     Class "Boots"
     BaseType "Runic Sabatons"
@@ -3468,7 +3468,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ğ¬×Ó - ÎÖÀ­ÄÈµÄÜŠê 
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ğ¬×Ó - ŠW –Á_Ë¹µÄĞn´Ì
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é‹å­ - å¥§çˆ¾ç¾…æ–¯çš„è¡åˆº
     Rarity = Unique
     Class "Boots"
     BaseType "Runic Sollerets"
@@ -3479,7 +3479,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ğ¬×Ó - ŠW –Á_Ë¹µÄĞn´Ì
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ğ¬×Ó - ¯‚°dÖ®Òı
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é‹å­ - ç˜‹ç™²ä¹‹å¼•
     Rarity = Unique
     Class "Boots"
     BaseType "Two-Toned Boots"
@@ -3490,7 +3490,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ğ¬×Ó - ¯‚°dÖ®Òı
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ğ¬×Ó - ·Æ¶÷½z´ÌÑ¥
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é‹å­ - è²æ©çµ²åˆºé´
     Rarity = Unique
     Class "Boots"
     BaseType "Assassin's Boots"
@@ -3501,7 +3501,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ğ¬×Ó - ·Æ¶÷½z´ÌÑ¥
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ğ¬×Ó - ËÀÍö´óéT
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é‹å­ - æ­»äº¡å¤§é–€
     Rarity = Unique
     Class "Boots"
     BaseType "Crusader Boots"
@@ -3512,7 +3512,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ğ¬×Ó - ËÀÍö´óéT
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ğ¬×Ó - Ë¹¿¨ÎÖú—×¦
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é‹å­ - æ–¯å¡æ²ƒé·¹çˆª
     Rarity = Unique
     Class "Boots"
     BaseType "Hydrascale Boots"
@@ -3523,7 +3523,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ğ¬×Ó - Ë¹¿¨ÎÖú—×¦
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ğ¬×Ó - °¢ÆÀïµÄ½ğÂÄ
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é‹å­ - é˜¿èŒ²é‡Œçš„é‡‘å±¥
     Rarity = Unique
     Class "Boots"
     BaseType "Slink Boots"
@@ -3534,7 +3534,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ğ¬×Ó - °¢ÆÀïµÄ½ğÂÄ
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ğ¬×Ó - ıˆÑ××ãÛE
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é‹å­ - é¾ç‚è¶³è·¡
     Rarity = Unique
     Class "Boots"
     BaseType "Nubuck Boots"
@@ -3545,7 +3545,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ğ¬×Ó - ıˆÑ××ãÛE
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ğ¬×Ó - ÃËÊÄÖ®ÛE
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é‹å­ - ç›Ÿèª“ä¹‹è·¡
     Rarity = Unique
     Class "Boots"
     BaseType "Rawhide Boots"
@@ -3556,7 +3556,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ğ¬×Ó - ÃËÊÄÖ®ÛE
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ğ¬×Ó - Ÿo±MÖ®¾à/¿ü –ÉºÖ®ÛE
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é‹å­ - ç„¡ç›¡ä¹‹è·/å¥çˆ¾çŠä¹‹è·¡
     Rarity = Unique
     Class "Boots"
     BaseType "Goliath Greaves"
@@ -3567,7 +3567,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ğ¬×Ó - Ÿo±MÖ®¾à/¿ü –ÉºÖ®ÛE
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ğ¬×Ó - ŒùÄ·µÄ·€ÖØÖ®Ñ¥/³à¼tÛ™ÛE
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é‹å­ - å²¡å§†çš„ç©©é‡ä¹‹é´/èµ¤ç´…è¹¤è·¡
     Rarity = Unique
     Class "Boots"
     BaseType "Titan Greaves"
@@ -3578,7 +3578,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ğ¬×Ó - ŒùÄ·µÄ·€ÖØÖ®Ñ¥/³à¼tÛ™ÛE
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÒÂ·ş - º¸½³Ö®Äw/Ó¡²·Ë_µÄĞÄËé/ß_Åå –¸Ê¸ñ‚ÎÑb
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - è¡£æœ - ç„ŠåŒ ä¹‹è†š/å°åœè–©çš„å¿ƒç¢/é”ä½©çˆ¾ç”˜æ ¼å½è£
     Rarity = Unique
     Class "Body Armours"
     BaseType "Sadist Garb"
@@ -3589,7 +3589,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÒÂ·ş - º¸½³Ö®Äw/Ó¡²·Ë_µÄĞÄËé/ß_Åå –¸Ê¸ñ‚ÎÑb
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÒÂ·ş - Ë¹¿¨ÎÖÖ®³²
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - è¡£æœ - æ–¯å¡æ²ƒä¹‹å·¢
     Rarity = Unique
     Class "Body Armours"
     BaseType "Blood Raiment"
@@ -3600,7 +3600,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÒÂ·ş - Ë¹¿¨ÎÖÖ®³²
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÒÂ·ş - ĞlµÀÖ®ÅÛ/¾S¶àÀïŠWÖ®½^í‘
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - è¡£æœ - è¡›é“ä¹‹è¢/ç¶­å¤šé‡Œå¥§ä¹‹çµ•éŸ¿
     Rarity = Unique
     Class "Body Armours"
     BaseType "Lacquered Garb"
@@ -3611,7 +3611,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÒÂ·ş - ĞlµÀÖ®ÅÛ/¾S¶àÀïŠWÖ®½^í‘
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÒÂ·ş - ¸ğô”Ë¹¿ÜÕæÆ¤
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - è¡£æœ - è‘›é­¯æ–¯å¯‡çœŸçš®
     Rarity = Unique
     Class "Body Armours"
     BaseType "Wyrmscale Doublet"
@@ -3622,7 +3622,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÒÂ·ş - ¸ğô”Ë¹¿ÜÕæÆ¤
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÒÂ·ş - Ñ¦ÀÊµÄ×oÉíéLÅÛ
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - è¡£æœ - è–›æœ—çš„è­·èº«é•·è¢
     Rarity = Unique
     Class "Body Armours"
     BaseType "Occultist's Vestment"
@@ -3633,7 +3633,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÒÂ·ş - Ñ¦ÀÊµÄ×oÉíéLÅÛ
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÒÂ·ş - ÌÕÃ×ƒº°¬Ë¹ÀíÖ®ÅÛ/Ÿo³£¶YÅÛ
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - è¡£æœ - é™¶ç±³å…’è‰¾æ–¯ç†ä¹‹è¢/ç„¡å¸¸ç¦®è¢
     Rarity = Unique
     Class "Body Armours"
     BaseType "Savant's Robe"
@@ -3644,7 +3644,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÒÂ·ş - ÌÕÃ×ƒº°¬Ë¹ÀíÖ®ÅÛ/Ÿo³£¶YÅÛ
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÒÂ·ş - Î÷ÀïµÄ‘ğÒÂ/ÍêÃÀ×Ë‘B
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - è¡£æœ - è¥¿é‡Œçš„æˆ°è¡£/å®Œç¾å§¿æ…‹
     Rarity = Unique
     Class "Body Armours"
     BaseType "Zodiac Leather"
@@ -3655,7 +3655,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÒÂ·ş - Î÷ÀïµÄ‘ğÒÂ/ÍêÃÀ×Ë‘B
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÒÂ·ş - ŒùÄ·µÄ‰ÑÖ¾/±³ĞÅÍüÁx
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - è¡£æœ - å²¡å§†çš„å£¯å¿—/èƒŒä¿¡å¿˜ç¾©
     Rarity = Unique
     Class "Body Armours"
     BaseType "Glorious Plate"
@@ -3666,7 +3666,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÒÂ·ş - ŒùÄ·µÄ‰ÑÖ¾/±³ĞÅÍüÁx
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÒÂ·ş - ˆÔã~‘ğÕÖ
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - è¡£æœ - å …éŠ…æˆ°ç½©
     Rarity = Unique
     Class "Body Armours"
     BaseType "Gladiator Plate"
@@ -3677,7 +3677,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ÒÂ·ş - ˆÔã~‘ğÕÖ
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - í—å€ - ×ÔÈ»½M¿—
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é …éŠ - è‡ªç„¶çµ„ç¹”
     Rarity = Unique
     Class "Amulets"
     BaseType "Rotfeather Talisman"
@@ -3688,7 +3688,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - í—å€ - ×ÔÈ»½M¿—
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - í—å€ - Èğ·ğÔ{Öä
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é …éŠ - ç‘ä½›è©›å’’
     Rarity = Unique
     Class "Amulets"
     BaseType "Wereclaw Talisman"
@@ -3699,7 +3699,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - í—å€ - Èğ·ğÔ{Öä
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - í—å€ - ¾ŞÀÇÖ®ÑÛ
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é …éŠ - å·¨ç‹¼ä¹‹çœ¼
     Rarity = Unique
     Class "Amulets"
     BaseType "Greatwolf Talisman"
@@ -3710,7 +3710,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - í—å€ - ¾ŞÀÇÖ®ÑÛ
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - í—å€ - ¿İ¾®
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é …éŠ - æ¯äº•
     Rarity = Unique
     Class "Amulets"
     BaseType "Clutching Talisman"
@@ -3721,7 +3721,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - í—å€ - ¿İ¾®
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - í—å€ - Ò¹ÊØ
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - é …éŠ - å¤œå®ˆ
     Rarity = Unique
     Class "Amulets"
     BaseType "Black Maw Talisman"
@@ -3732,7 +3732,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - í—å€ - Ò¹ÊØ
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ½äÖ¸ - ØÀ×½ä/ÒâÖ¾ºô†¾/Èğ·ğÖ®¹Ú/ÏÈÒıÖ®Õ÷
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - æˆ’æŒ‡ - è²é›·æˆ’/æ„å¿—å‘¼å–š/ç‘ä½›ä¹‹å† /å…ˆå¼•ä¹‹å¾
     Rarity = Unique
     Class "Rings"
     BaseType "Two-Stone Ring"
@@ -3743,7 +3743,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - ½äÖ¸ - ØÀ×½ä/ÒâÖ¾ºô†¾/Èğ·ğÖ®¹Ú/ÏÈÒıÖ®Õ÷
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ë„© - Î×»ğÃØá„/ÔÙÉúµÄ×ïº
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - è—¥åŠ‘ - å·«ç«ç§˜é‡€/å†ç”Ÿçš„ç½ªæƒ¡
     Rarity = Unique
     Class "Flasks"
     BaseType "Stibnite Flask"
@@ -3754,7 +3754,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ë„© - Î×»ğÃØá„/ÔÙÉúµÄ×ïº
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ë„© - ¾S¿ËËşÑªÆ÷
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - è—¥åŠ‘ - ç¶­å…‹å¡”è¡€å™¨
     Rarity = Unique
     Class "Flasks"
     BaseType "Topaz Flask"
@@ -3765,7 +3765,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ë„© - ¾S¿ËËşÑªÆ÷
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ë„© - ÕÜ™µ
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - è—¥åŠ‘ - å“²æ«Ÿ
     Rarity = Unique
     Class "Flasks"
     BaseType "Bismuth Flask"
@@ -3776,7 +3776,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ë„© - ÕÜ™µ
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ë„© - ºŞÒâ
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - è—¥åŠ‘ - æ¨æ„
     Rarity = Unique
     Class "Flasks"
     BaseType "Sapphire Flask"
@@ -3787,7 +3787,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ë„© - ºŞÒâ
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ë„© - ×·»êÕß/½û¹û/Ëé»êÕß
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - è—¥åŠ‘ - è¿½é­‚è€…/ç¦æœ/ç¢é­‚è€…
     Rarity = Unique
     Class "Flasks"
     BaseType "Quartz Flask"
@@ -3798,7 +3798,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ë„© - ×·»êÕß/½û¹û/Ëé»êÕß
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ë„© - ô”Ã×µÄì`Ë/ª{ºğ¾«ÈA
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - è—¥åŠ‘ - é­¯ç±³çš„éˆè—¥/ç…å¼ç²¾è¯
     Rarity = Unique
     Class "Flasks"
     BaseType "Granite Flask"
@@ -3809,7 +3809,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ë„© - ô”Ã×µÄì`Ë/ª{ºğ¾«ÈA
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ë„© - ²»ÆÆ­hÖ®ì`Ë/ŠW –Á_Ë¹µÄ›QĞÄ/ĞÇ¹âÂ}±­/ÎÖÀ­ÄÈµÄájá„
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - è—¥åŠ‘ - ä¸ç ´ç’°ä¹‹éˆè—¥/å¥§çˆ¾ç¾…æ–¯çš„æ±ºå¿ƒ/æ˜Ÿå…‰è–æ¯/æ²ƒæ‹‰å¨œçš„é†é‡€
     Rarity = Unique
     Class "Flasks"
     BaseType "Iron Flask"
@@ -3820,7 +3820,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ë„© - ²»ÆÆ­hÖ®ì`Ë/ŠW –Á_Ë¹µÄ›QĞÄ/ĞÇ¹âÂ}±­/ÎÖÀ­ÄÈµÄájá
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ë„© - éWÒ«¾«ÈA/œçÈÕ
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - è—¥åŠ‘ - é–ƒè€€ç²¾è¯/æ»…æ—¥
     Rarity = Unique
     Class "Flasks"
     BaseType "Ruby Flask"
@@ -3831,7 +3831,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ë„© - éWÒ«¾«ÈA/œçÈÕ
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ë„© - ¿¨ô”Ö®Ñª
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - è—¥åŠ‘ - å¡é­¯ä¹‹è¡€
     Rarity = Unique
     Class "Flasks"
     BaseType "Sanctified Life Flask"
@@ -3842,7 +3842,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ë„© - ¿¨ô”Ö®Ñª
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ë„© - °¢ÆÀïµÄÖZÑÔ
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - è—¥åŠ‘ - é˜¿èŒ²é‡Œçš„è«¾è¨€
     Rarity = Unique
     Class "Flasks"
     BaseType "Amethyst Flask"
@@ -3853,7 +3853,7 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Ë„© - °¢ÆÀïµÄÖZÑÔ
     MinimapIcon 0 Red UpsideDownHouse
     PlayEffect Red
 
-Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Èıí—ÖéŒš
+Show # è£å‚™ - é«˜åƒ¹å‚³å¥‡ - ä¸‰é …ç å¯¶
     Rarity = Unique
     Class "Jewel"
     BaseType "Prismatic Jewel"
@@ -3864,9 +3864,9 @@ Show # Ñb‚ä - ¸ßƒr‚÷Ææ - Èıí—ÖéŒš
     MinimapIcon 0 Red Hexagon
     PlayEffect Red 
 
-# ¡¾Ñb‚ä-‚÷ÆæÑb‚ä¡¿
+# ã€è£å‚™-å‚³å¥‡è£å‚™ã€‘
 
-Show # Ñb‚ä - ‚÷ÆæÑb‚ä - ‚÷ÆæÖéŒš
+Show # è£å‚™ - å‚³å¥‡è£å‚™ - å‚³å¥‡ç å¯¶
     Rarity = Unique
     Class "Jewel"
     SetBorderColor 255 95 0
@@ -3875,7 +3875,7 @@ Show # Ñb‚ä - ‚÷ÆæÑb‚ä - ‚÷ÆæÖéŒš
     MinimapIcon 0 Brown Hexagon
     PlayEffect Brown
 
-Show # Ñb‚ä - ‚÷ÆæÑb‚ä - Ò»°ã‚÷Ææ
+Show # è£å‚™ - å‚³å¥‡è£å‚™ - ä¸€èˆ¬å‚³å¥‡
     Rarity = Unique
     SetBorderColor 255 165 0
     SetFontSize 42
@@ -3884,16 +3884,16 @@ Show # Ñb‚ä - ‚÷ÆæÑb‚ä - Ò»°ã‚÷Ææ
     PlayEffect Brown 
 
 #============
-# ¡¾Ë„©ÕfÃ÷™Ú¡¿7000
-# ¡¾Ë„©-¹¦ÄÜË„©¡¿7001
-# ¡¾Ë„©-ÉúÃüË„©¡¿7002
-# ¡¾Ë„©-Ä§Á¦Ë„©¡¿7003
-# ¡¾Ë„©-Ñ}ºÏË„©¡¿7004
+# ã€è—¥åŠ‘èªªæ˜æ¬„ã€‘7000
+# ã€è—¥åŠ‘-åŠŸèƒ½è—¥åŠ‘ã€‘7001
+# ã€è—¥åŠ‘-ç”Ÿå‘½è—¥åŠ‘ã€‘7002
+# ã€è—¥åŠ‘-é­”åŠ›è—¥åŠ‘ã€‘7003
+# ã€è—¥åŠ‘-è¤‡åˆè—¥åŠ‘ã€‘7004
 #============
 
-# ¡¾Ë„©-¹¦ÄÜË„©¡¿7001
+# ã€è—¥åŠ‘-åŠŸèƒ½è—¥åŠ‘ã€‘7001
 
-Hide # Ë„© - ¹¦ÄÜË„©
+Hide # è—¥åŠ‘ - åŠŸèƒ½è—¥åŠ‘
     Class "Utility Flasks"
     SetTextColor 255 255 255
     SetBackgroundColor 163 141 109
@@ -3902,9 +3902,9 @@ Hide # Ë„© - ¹¦ÄÜË„©
     PlayAlertSound 9 200
     MinimapIcon 1 White Square
 
-# ¡¾Ë„©-ÉúÃüË„©¡¿7002
+# ã€è—¥åŠ‘-ç”Ÿå‘½è—¥åŠ‘ã€‘7002
 
-Hide # Ë„© - ÉúÃüË„© - µÍëA(Ğ¡ĞÍ/ÖĞĞÍ/´óĞÍ/Á¼Ù|/ƒÙ|/¾ŞĞÍ)
+Hide # è—¥åŠ‘ - ç”Ÿå‘½è—¥åŠ‘ - ä½éš(å°å‹/ä¸­å‹/å¤§å‹/è‰¯è³ª/å„ªè³ª/å·¨å‹)
     Rarity <= Magic
     Class "Life Flasks"
     BaseType "Small Life Flask" "Medium Life Flask" "Large Life Flask" "Greater Life Flask" "Grand Life Flask" "Giant Life Flask"
@@ -3913,7 +3913,7 @@ Hide # Ë„© - ÉúÃüË„© - µÍëA(Ğ¡ĞÍ/ÖĞĞÍ/´óĞÍ/Á¼Ù|/ƒÙ|/¾ŞĞÍ)
     SetBorderColor 153 0 0
     SetFontSize 40
 
-Hide # Ë„© - ÉúÃüË„© - ÖĞëA(¸ßëA/Â}ÕZ/×£¸£)
+Hide # è—¥åŠ‘ - ç”Ÿå‘½è—¥åŠ‘ - ä¸­éš(é«˜éš/è–èª/ç¥ç¦)
     Rarity <= Magic
     Class "Life Flasks"
     BaseType "Colossal Life Flask" "Sacred Life Flask" "Hallowed Life Flask"
@@ -3922,7 +3922,7 @@ Hide # Ë„© - ÉúÃüË„© - ÖĞëA(¸ßëA/Â}ÕZ/×£¸£)
     SetBorderColor 153 0 0
     SetFontSize 40
 
-Hide # Ë„© - ÉúÃüË„© - ¸ßëA(Â}»¯/²»Ğà/ÓÀa)
+Hide # è—¥åŠ‘ - ç”Ÿå‘½è—¥åŠ‘ - é«˜éš(è–åŒ–/ä¸æœ½/æ°¸æ†)
     Class "Life Flasks"
     BaseType "Sanctified Life Flask" "Divine Life Flask" "Eternal Life Flask"
     SetTextColor 153 0 0
@@ -3930,9 +3930,9 @@ Hide # Ë„© - ÉúÃüË„© - ¸ßëA(Â}»¯/²»Ğà/ÓÀa)
     SetBorderColor 153 0 0
     SetFontSize 40
 
-# ¡¾Ë„©-Ä§Á¦Ë„©¡¿7003
+# ã€è—¥åŠ‘-é­”åŠ›è—¥åŠ‘ã€‘7003
 
-Hide # Ë„© - Ä§Á¦Ë„© - µÍëA(Ğ¡ĞÍ/ÖĞĞÍ/´óĞÍ/Á¼Ù|/ƒÙ|/¾ŞĞÍ)
+Hide # è—¥åŠ‘ - é­”åŠ›è—¥åŠ‘ - ä½éš(å°å‹/ä¸­å‹/å¤§å‹/è‰¯è³ª/å„ªè³ª/å·¨å‹)
     Rarity <= Magic
     Class "Mana Flasks"
     BaseType "Small Mana Flask" "Medium Mana Flask" "Large Mana Flask" "Greater Mana Flask" "Grand Mana Flask" "Giant Mana Flask"
@@ -3941,7 +3941,7 @@ Hide # Ë„© - Ä§Á¦Ë„© - µÍëA(Ğ¡ĞÍ/ÖĞĞÍ/´óĞÍ/Á¼Ù|/ƒÙ|/¾ŞĞÍ)
     SetBorderColor 0 102 204
     SetFontSize 40
 
-Hide # Ë„© - Ä§Á¦Ë„© - ÖĞëA(¸ßëA/Â}ÕZ/×£¸£)
+Hide # è—¥åŠ‘ - é­”åŠ›è—¥åŠ‘ - ä¸­éš(é«˜éš/è–èª/ç¥ç¦)
     Rarity <= Magic
     Class "Mana Flasks"
     BaseType "Colossal Mana Flask" "Sacred Mana Flask" "Hallowed Mana Flask"
@@ -3950,7 +3950,7 @@ Hide # Ë„© - Ä§Á¦Ë„© - ÖĞëA(¸ßëA/Â}ÕZ/×£¸£)
     SetBorderColor 0 102 204
     SetFontSize 40
 
-Hide # Ë„© - Ä§Á¦Ë„© - ¸ßëA(Â}»¯/²»Ğà/ÓÀa)
+Hide # è—¥åŠ‘ - é­”åŠ›è—¥åŠ‘ - é«˜éš(è–åŒ–/ä¸æœ½/æ°¸æ†)
     Rarity <= Magic
     Class "Mana Flasks"
     BaseType "Sanctified Mana Flask" "Divine Mana Flask" "Eternal Mana Flask"
@@ -3959,9 +3959,9 @@ Hide # Ë„© - Ä§Á¦Ë„© - ¸ßëA(Â}»¯/²»Ğà/ÓÀa)
     SetBorderColor 0 102 204
     SetFontSize 40
 
-# ¡¾Ë„©-Ñ}ºÏË„©¡¿7004
+# ã€è—¥åŠ‘-è¤‡åˆè—¥åŠ‘ã€‘7004
 
-Hide # Ë„© - Ñ}ºÏË„© - µÍëA(Ğ¡ĞÍ/ÖĞĞÍ)
+Hide # è—¥åŠ‘ - è¤‡åˆè—¥åŠ‘ - ä½éš(å°å‹/ä¸­å‹)
     Rarity <= Magic
     Class "Hybrid Flasks"
     BaseType "Small Hybrid Flask" "Medium Hybrid Flask"
@@ -3970,7 +3970,7 @@ Hide # Ë„© - Ñ}ºÏË„© - µÍëA(Ğ¡ĞÍ/ÖĞĞÍ)
     SetBorderColor 76 0 153
     SetFontSize 40
 
-Hide # Ë„© - Ñ}ºÏË„© - ÖĞëA(´óĞÍ/¸ßëA)
+Hide # è—¥åŠ‘ - è¤‡åˆè—¥åŠ‘ - ä¸­éš(å¤§å‹/é«˜éš)
     Rarity <= Magic
     Class "Hybrid Flasks"
     BaseType "Large Hybrid Flask" "Colossal Hybrid Flask"
@@ -3979,7 +3979,7 @@ Hide # Ë„© - Ñ}ºÏË„© - ÖĞëA(´óĞÍ/¸ßëA)
     SetBorderColor 76 0 153
     SetFontSize 40
 
-Hide # Ë„© - Ñ}ºÏË„© - ¸ßëA(Â}ÕZ/×£¸£)
+Hide # è—¥åŠ‘ - è¤‡åˆè—¥åŠ‘ - é«˜éš(è–èª/ç¥ç¦)
     Rarity <= Magic
     Class "Hybrid Flasks"
     BaseType "Sacred Hybrid Flask" "Hallowed Hybrid Flask"
@@ -3988,9 +3988,9 @@ Hide # Ë„© - Ñ}ºÏË„© - ¸ßëA(Â}ÕZ/×£¸£)
     SetBorderColor 76 0 153
     SetFontSize 40
 
-# ¡¾Ñb‚ä-¸ßTÔ~¾YÑb‚ä¡¿
+# ã€è£å‚™-é«˜Tè©ç¶´è£å‚™ã€‘
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - †ÎÎï‚ûÔ~¾Y
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - é­”æ³• - å–®ç‰©å‚·è©ç¶´
     Corrupted False
     Rarity = Magic
     HasExplicitMod "Merciless"
@@ -4000,7 +4000,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - †ÎÎï‚ûÔ~¾Y
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - ëpÎïÀíÔ~¾Y
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - é­”æ³• - é›™ç‰©ç†è©ç¶´
     Corrupted False
     Rarity = Magic
     Class "Dagger" "Wands" "Claws" "One Hand" "Bow"
@@ -4012,7 +4012,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - ëpÎïÀíÔ~¾Y
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - †Î·¨‚ûÔ~¾Y
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - é­”æ³• - å–®æ³•å‚·è©ç¶´
     Corrupted False
     Rarity = Magic
     Class "Dagger" "Wands" "Sceptres"
@@ -4023,7 +4023,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - †Î·¨‚ûÔ~¾Y
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - ëp·¨‚ûÔ~¾Y
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - é­”æ³• - é›™æ³•å‚·è©ç¶´
     Corrupted False
     Rarity = Magic
     Class "Dagger" "Wands" "Sceptres"
@@ -4035,7 +4035,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - ëp·¨‚ûÔ~¾Y
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - î^¿ø1
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - é­”æ³• - é ­ç›”1
     Corrupted False
     Rarity = Magic
     Class "Helmets"
@@ -4046,7 +4046,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - î^¿ø1
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - î^¿ø2
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - é­”æ³• - é ­ç›”2
     Corrupted False
     Rarity = Magic
     Class "Helmets"
@@ -4058,7 +4058,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - î^¿ø2
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - ÊÖÌ×1
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - é­”æ³• - æ‰‹å¥—1
     Corrupted False
     Rarity = Magic
     Class "Gloves"
@@ -4070,7 +4070,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - ÊÖÌ×1
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - Ğ¬×Ó
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - é­”æ³• - é‹å­
     Corrupted False
     Rarity = Magic
     Class "Boots"
@@ -4082,7 +4082,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - Ğ¬×Ó
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - ÒÂ·ş
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - é­”æ³• - è¡£æœ
     Corrupted False
     Rarity = Magic
     Class "Body Armours"
@@ -4094,7 +4094,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - ÒÂ·ş
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - ¶ÜÅÆ
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - é­”æ³• - ç›¾ç‰Œ
     Corrupted False
     Rarity = Magic
     Class "Shields"
@@ -4106,7 +4106,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - ¶ÜÅÆ
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - ¼ı´ü
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - é­”æ³• - ç®­è¢‹
     Corrupted False
     Rarity = Magic
     Class "Quivers"
@@ -4119,7 +4119,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - ¼ı´ü
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - í—å€
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - é­”æ³• - é …éŠ
     Corrupted False
     Rarity = Magic
     Class "Amulets"
@@ -4131,7 +4131,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - í—å€
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - ½äÖ¸
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - é­”æ³• - æˆ’æŒ‡
     Corrupted False
     Rarity = Magic
     Class "Rings"
@@ -4143,7 +4143,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - ½äÖ¸
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - Ñü§
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - é­”æ³• - è…°å¸¶
     Corrupted False
     Rarity = Magic
     Class "Belts"
@@ -4155,7 +4155,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - Ñü§
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - ÖéŒš
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - é­”æ³• - ç å¯¶
     Corrupted False
     Rarity = Magic
     Class "Jewel"
@@ -4165,7 +4165,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ä§·¨ - ÖéŒš
     PlayAlertSound 9 300
     PlayEffect Blue Temp
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - Ø°Ê×¡¢×¦¡¢†ÎÊÖ„¦¡¢¼š„¦£¨Æ«Îï‚û£©
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - ç¨€æœ‰ - åŒ•é¦–ã€çˆªã€å–®æ‰‹åŠã€ç´°åŠï¼ˆåç‰©å‚·ï¼‰
     Corrupted False
     Rarity = Rare
     Class "Daggers" "Claws" "One Hand Swords" "Thrusting One Hand Swords"
@@ -4178,7 +4178,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - Ø°Ê×¡¢×¦¡¢†ÎÊÖ„¦¡¢¼š„¦£¨Æ«Îï‚û£©
     MinimapIcon 2 Yellow Hexagon
     PlayEffect Yellow
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - Ø°Ê×¡¢×¦¡¢†ÎÊÖ„¦¡¢¼š„¦£¨Æ«Îï±©£©
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - ç¨€æœ‰ - åŒ•é¦–ã€çˆªã€å–®æ‰‹åŠã€ç´°åŠï¼ˆåç‰©æš´ï¼‰
     Corrupted False
     Rarity = Rare
     Class "Daggers" "Claws" "One Hand Swords" "Thrusting One Hand Swords"
@@ -4191,7 +4191,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - Ø°Ê×¡¢×¦¡¢†ÎÊÖ„¦¡¢¼š„¦£¨Æ«Îï±©£©
     MinimapIcon 2 Yellow Hexagon
     PlayEffect Yellow
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - Ä§ÕÈ£¨Æ«Îï‚û£©
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - ç¨€æœ‰ - é­”æ–ï¼ˆåç‰©å‚·ï¼‰
     Corrupted False
     Rarity = Rare
     Class "Wands"
@@ -4204,7 +4204,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - Ä§ÕÈ£¨Æ«Îï‚û£©
     MinimapIcon 2 Yellow Hexagon
     PlayEffect Yellow
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - Ä§ÕÈ£¨Æ«Îï±©£©
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - ç¨€æœ‰ - é­”æ–ï¼ˆåç‰©æš´ï¼‰
     Corrupted False
     Rarity = Rare
     Class "Wands"
@@ -4217,7 +4217,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - Ä§ÕÈ£¨Æ«Îï±©£©
     MinimapIcon 2 Yellow Hexagon
     PlayEffect Yellow
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - Ø°Ê× Ä§ÕÈ ™àÕÈ£¨Æ«·¨‚û£©
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - ç¨€æœ‰ - åŒ•é¦– é­”æ– æ¬Šæ–ï¼ˆåæ³•å‚·ï¼‰
     Corrupted False
     Rarity = Rare
     Class "Daggers" "Wands" "Sceptres"
@@ -4230,7 +4230,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - Ø°Ê× Ä§ÕÈ ™àÕÈ£¨Æ«·¨‚û£©
     MinimapIcon 2 Yellow Hexagon
     PlayEffect Yellow
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - Ø°Ê× Ä§ÕÈ ™àÕÈ£¨Æ«·¨±©£©
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - ç¨€æœ‰ - åŒ•é¦– é­”æ– æ¬Šæ–ï¼ˆåæ³•æš´ï¼‰
     Corrupted False
     Rarity = Rare
     Class "Daggers" "Wands" "Sceptres"
@@ -4243,7 +4243,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - Ø°Ê× Ä§ÕÈ ™àÕÈ£¨Æ«·¨±©£©
     MinimapIcon 2 Yellow Hexagon
     PlayEffect Yellow
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - ¹­£¨Æ«Îï‚û£©
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - ç¨€æœ‰ - å¼“ï¼ˆåç‰©å‚·ï¼‰
     Corrupted False
     Rarity = Rare
     Class "Bow"
@@ -4256,7 +4256,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - ¹­£¨Æ«Îï‚û£©
     MinimapIcon 2 Yellow Hexagon
     PlayEffect Yellow
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - ¹­£¨Æ«Îï±©£©
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - ç¨€æœ‰ - å¼“ï¼ˆåç‰©æš´ï¼‰
     Corrupted False
     Rarity = Rare
     Class "Bow"
@@ -4269,7 +4269,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - ¹­£¨Æ«Îï±©£©
     MinimapIcon 2 Yellow Hexagon
     PlayEffect Yellow
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - ¹­£¨Æ«ÔªËØ£©
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - ç¨€æœ‰ - å¼“ï¼ˆåå…ƒç´ ï¼‰
     Corrupted False
     Rarity = Rare
     Class "Bow"
@@ -4282,7 +4282,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - ¹­£¨Æ«ÔªËØ£©
     MinimapIcon 2 Yellow Hexagon
     PlayEffect Yellow
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - ¹­£¨Æ«»ìãç£©
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - ç¨€æœ‰ - å¼“ï¼ˆåæ··æ²Œï¼‰
     Corrupted False
     Rarity = Rare
     Class "Bow"
@@ -4295,7 +4295,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - ¹­£¨Æ«»ìãç£©
     MinimapIcon 2 Yellow Hexagon
     PlayEffect Yellow
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - ¹­£¨+3£©
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - ç¨€æœ‰ - å¼“ï¼ˆ+3ï¼‰
     Corrupted False
     Rarity = Rare
     Class "Bow"
@@ -4307,7 +4307,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - ¹­£¨+3£©
     MinimapIcon 2 Yellow Hexagon
     PlayEffect Yellow
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - Ğ¬×Ó1
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - ç¨€æœ‰ - é‹å­1
     Corrupted False
     Rarity = Rare
     Class "Boots"
@@ -4321,7 +4321,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - Ğ¬×Ó1
     MinimapIcon 2 Yellow Hexagon
     PlayEffect Yellow
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - Ğ¬×Ó2
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - ç¨€æœ‰ - é‹å­2
     Corrupted False
     Rarity = Rare
     Class "Boots"
@@ -4334,7 +4334,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - Ğ¬×Ó2
     MinimapIcon 2 Yellow Hexagon
     PlayEffect Yellow
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - ÊÖÌ×
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - ç¨€æœ‰ - æ‰‹å¥—
     Corrupted False
     Rarity = Rare
     Class "Gloves"
@@ -4347,7 +4347,7 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - ÊÖÌ×
     MinimapIcon 2 Yellow Hexagon
     PlayEffect Yellow
 
-Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - î^¿ø
+Hide # è£å‚™ - é«˜Tè©ç¶´è£å‚™ - ç¨€æœ‰ - é ­ç›”
     Corrupted False
     Rarity = Rare
     Class "Helmets"
@@ -4360,9 +4360,9 @@ Hide # Ñb‚ä - ¸ßTÔ~¾YÑb‚ä - Ï¡ÓĞ - î^¿ø
     MinimapIcon 2 Yellow Hexagon
     PlayEffect Yellow
 
-# ¡¾Ñb‚ä-ÌØÊâÑb‚ä¡¿
+# ã€è£å‚™-ç‰¹æ®Šè£å‚™ã€‘
 
-Hide # Ñb‚ä - ÌØÊâÑb‚ä - 5LÎïÆ·
+Hide # è£å‚™ - ç‰¹æ®Šè£å‚™ - 5Lç‰©å“
     LinkedSockets = 5
     SetBackgroundColor 0 0 0
     SetBorderColor 30 187 255
@@ -4370,7 +4370,7 @@ Hide # Ñb‚ä - ÌØÊâÑb‚ä - 5LÎïÆ·
     PlayAlertSound 9 300
     PlayEffect White Temp
 
-Hide # Ñb‚ä - ÌØÊâÑb‚ä - ¸ßÆ·Ù|ÎïÆ·
+Hide # è£å‚™ - ç‰¹æ®Šè£å‚™ - é«˜å“è³ªç‰©å“
     Quality >= 25
     Corrupted False
     ItemLevel >= 75
@@ -4382,7 +4382,7 @@ Hide # Ñb‚ä - ÌØÊâÑb‚ä - ¸ßÆ·Ù|ÎïÆ·
     MinimapIcon 2 Blue Hexagon
     PlayEffect Blue
 
-Hide # Ñb‚ä - ÌØÊâÑb‚ä - 3É«ßB¶´ (1*3ów·e)
+Hide # è£å‚™ - ç‰¹æ®Šè£å‚™ - 3è‰²é€£æ´ (1*3é«”ç©)
     LinkedSockets >= 3
     LinkedSockets <= 4
     SocketGroup "RGB"
@@ -4393,7 +4393,7 @@ Hide # Ñb‚ä - ÌØÊâÑb‚ä - 3É«ßB¶´ (1*3ów·e)
     SetBorderColor 0 0 0
     SetFontSize 45
 
-Hide # Ñb‚ä - ÌØÊâÑb‚ä - 3É«ßB¶´ (2*2ów·e)
+Hide # è£å‚™ - ç‰¹æ®Šè£å‚™ - 3è‰²é€£æ´ (2*2é«”ç©)
     LinkedSockets >= 3
     LinkedSockets <= 4
     SocketGroup "RGB"
@@ -4404,7 +4404,7 @@ Hide # Ñb‚ä - ÌØÊâÑb‚ä - 3É«ßB¶´ (2*2ów·e)
     SetBorderColor 0 0 0
     SetFontSize 45
 
-Hide # Ñb‚ä - ÌØÊâÑb‚ä - Ê¯åN¡¢ÆÆÑÒåN¡¢ˆÔåNQ10+
+Hide # è£å‚™ - ç‰¹æ®Šè£å‚™ - çŸ³éŒ˜ã€ç ´å²©éŒ˜ã€å …éŒ˜Q10+
     Quality >= 10
     Rarity = Normal
     Class "One Hand Maces"
@@ -4413,7 +4413,7 @@ Hide # Ñb‚ä - ÌØÊâÑb‚ä - Ê¯åN¡¢ÆÆÑÒåN¡¢ˆÔåNQ10+
     SetBackgroundColor 150 150 200 60
     SetBorderColor 255 255 255
 
-Hide # Ñb‚ä - ÌØÊâÑb‚ä - Ê¯åN¡¢ÆÆÑÒåN¡¢ˆÔåN
+Hide # è£å‚™ - ç‰¹æ®Šè£å‚™ - çŸ³éŒ˜ã€ç ´å²©éŒ˜ã€å …éŒ˜
     Rarity = Normal
     Class "One Hand Maces"
     BaseType "Stone Hammer" "Rock Breaker" "Gavel"
@@ -4421,7 +4421,7 @@ Hide # Ñb‚ä - ÌØÊâÑb‚ä - Ê¯åN¡¢ÆÆÑÒåN¡¢ˆÔåN
     SetBackgroundColor 150 150 200 60
     SetBorderColor 255 255 255 125
 
-Show # Ñb‚ä - ÌØÊâÑb‚ä - ô~¸Í
+Show # è£å‚™ - ç‰¹æ®Šè£å‚™ - é­šç«¿
     Class "Fishing Rod"
     SetBorderColor 255 215 0
     SetFontSize 42
@@ -4429,648 +4429,648 @@ Show # Ñb‚ä - ÌØÊâÑb‚ä - ô~¸Í
     MinimapIcon 0 Red Star
     PlayEffect Red
 
-Hide # Ñb‚ä - ÌØÊâÑb‚ä - ¼À¶YÊøÒÂ
+Hide # è£å‚™ - ç‰¹æ®Šè£å‚™ - ç¥­ç¦®æŸè¡£
     Class "Body Armours"
     BaseType "Sacrificial Garb"
 
-# ¡¾Ñb‚ä-¸ßÁÁ»ùµ×-†ÎÊÖÎäÆ÷-Ø°Ê×¡¿
+# ã€è£å‚™-é«˜äº®åŸºåº•-å–®æ‰‹æ­¦å™¨-åŒ•é¦–ã€‘
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - †ÎÊÖÎäÆ÷ - Ø°Ê× - ·ü“ô´ÌÈĞ
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å–®æ‰‹æ­¦å™¨ - åŒ•é¦– - ä¼æ“Šåˆºåˆƒ
     Rarity = Rare
     Class "Daggers"
     BaseType "Ambusher"
     SetTextColor 255 255 0 255
     SetFontSize 40
 
-# ¡¾Ñb‚ä-¸ßÁÁ»ùµ×-†ÎÊÖÎäÆ÷-·û¼yØ°Ê×¡¿
+# ã€è£å‚™-é«˜äº®åŸºåº•-å–®æ‰‹æ­¦å™¨-ç¬¦ç´‹åŒ•é¦–ã€‘
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - †ÎÊÖÎäÆ÷ - ·û¼yØ°Ê× - °×½ğ²¨ÈĞ(50%È«Óò±©ÂÊ)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å–®æ‰‹æ­¦å™¨ - ç¬¦ç´‹åŒ•é¦– - ç™½é‡‘æ³¢åˆƒ(50%å…¨åŸŸæš´ç‡)
     Rarity = Rare
     Class "Rune Daggers"
     BaseType "Platinum Kris"
     SetTextColor 255 255 0 255
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - †ÎÊÖÎäÆ÷ - ·û¼yØ°Ê× - ºÄ§¶ÌØ°(40%È«Óò±©ÂÊ)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å–®æ‰‹æ­¦å™¨ - ç¬¦ç´‹åŒ•é¦– - æƒ¡é­”çŸ­åŒ•(40%å…¨åŸŸæš´ç‡)
     Rarity = Rare
     Class "Rune Daggers"
     BaseType "Demon Dagger"
     SetTextColor 255 255 0 255
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - †ÎÊÖÎäÆ÷ - ·û¼yØ°Ê× - µÛ‡øëpÈĞØ°(30%È«Óò±©ÂÊ)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å–®æ‰‹æ­¦å™¨ - ç¬¦ç´‹åŒ•é¦– - å¸åœ‹é›™åˆƒåŒ•(30%å…¨åŸŸæš´ç‡)
     Rarity = Rare
     Class "Rune Daggers"
     BaseType "Imperial Skean"
     SetTextColor 255 255 0 255
     SetFontSize 40
 
-# ¡¾Ñb‚ä-¸ßÁÁ»ùµ×-†ÎÊÖÎäÆ÷-·¨ÕÈ¡¿
+# ã€è£å‚™-é«˜äº®åŸºåº•-å–®æ‰‹æ­¦å™¨-æ³•æ–ã€‘
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - †ÎÊÖÎäÆ÷ - ·¨ÕÈ - ÕÙ†¾·¨ÕÈ(÷»ÕÙ†¾ÎïÔ~¾Y)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å–®æ‰‹æ­¦å™¨ - æ³•æ– - å¬å–šæ³•æ–(éª°å¬å–šç‰©è©ç¶´)
     Rarity = Rare
     Class "Wands"
     BaseType "Convoking Wand"
     SetTextColor 255 255 0 255
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - †ÎÊÖÎäÆ÷ - ·¨ÕÈ - ÒC^·¨ÕÈ(14%Ê©·ÅËÙ¶È)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å–®æ‰‹æ­¦å™¨ - æ³•æ– - è¤»ç€†æ³•æ–(14%æ–½æ”¾é€Ÿåº¦)
     Rarity = Rare
     Class "Wands"
     BaseType "Profane Wand"
     SetTextColor 255 255 0 255
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - †ÎÊÖÎäÆ÷ - ·¨ÕÈ - óğÑÔ·¨ÕÈ(36~40%·¨‚û)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å–®æ‰‹æ­¦å™¨ - æ³•æ– - ç®´è¨€æ³•æ–(36~40%æ³•å‚·)
     Rarity = Rare
     Class "Wands"
     BaseType "Prophecy Wand"
     SetTextColor 255 255 0 255
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - †ÎÊÖÎäÆ÷ - ·¨ÕÈ - ¿ñïL·¨ÕÈ(35~39%·¨‚û)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å–®æ‰‹æ­¦å™¨ - æ³•æ– - ç‹‚é¢¨æ³•æ–(35~39%æ³•å‚·)
     Rarity = Rare
     Class "Wands"
     BaseType "Tornado Wand"
     SetTextColor 255 255 0 255
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - †ÎÊÖÎäÆ÷ - ·¨ÕÈ - ì`Ê¯·¨ÕÈ(38~42%·¨‚û)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å–®æ‰‹æ­¦å™¨ - æ³•æ– - éˆçŸ³æ³•æ–(38~42%æ³•å‚·)
     Rarity = Rare
     Class "Wands"
     BaseType "Opal Wand"
     SetTextColor 255 255 0 255
     SetFontSize 40
 
-# ¡¾Ñb‚ä-¸ßÁÁ»ùµ×-†ÎÊÖÎäÆ÷-×¦¡¿
+# ã€è£å‚™-é«˜äº®åŸºåº•-å–®æ‰‹æ­¦å™¨-çˆªã€‘
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - †ÎÊÖÎäÆ÷ - ×¦ - ëp×Ó‘ğ×¦(¹¥“ôÄ§»Ø14Éú»Ø38)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å–®æ‰‹æ­¦å™¨ - çˆª - é›™å­æˆ°çˆª(æ”»æ“Šé­”å›14ç”Ÿå›38)
     Rarity = Rare
     Class "Claws"
     BaseType "Gemini Claw"
     SetTextColor 255 255 0 255
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - †ÎÊÖÎäÆ÷ - ×¦ - µÛ‡ø‘ğ×¦(¹¥“ôÉú»Ø46)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å–®æ‰‹æ­¦å™¨ - çˆª - å¸åœ‹æˆ°çˆª(æ”»æ“Šç”Ÿå›46)
     Rarity = Rare
     Class "Claws"
     BaseType "Imperial Claw"
     SetTextColor 255 255 0 255
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - †ÎÊÖÎäÆ÷ - ×¦ - ´ÌÑÛã^(¹¥“ôÉú»Ø50)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å–®æ‰‹æ­¦å™¨ - çˆª - åˆºçœ¼é‰¤(æ”»æ“Šç”Ÿå›50)
     Rarity = Rare
     Class "Claws"
     BaseType "Eye Gouger"
     SetTextColor 255 255 0 255
     SetFontSize 40
 
-# ¡¾Ñb‚ä-¸ßÁÁ»ùµ×-†ÎÊÖÎäÆ÷-¼š„¦¡¿
+# ã€è£å‚™-é«˜äº®åŸºåº•-å–®æ‰‹æ­¦å™¨-ç´°åŠã€‘
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - †ÎÊÖÎäÆ÷ - ¼š„¦ - Œšï—¼š„¦(25%È«Óò±©¼Ó)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å–®æ‰‹æ­¦å™¨ - ç´°åŠ - å¯¶é£¾ç´°åŠ(25%å…¨åŸŸæš´åŠ )
     Rarity = Rare
     Class "Thrusting One Hand Swords"
     BaseType "Jewelled Foil"
     SetTextColor 255 255 0 255
     SetFontSize 40
 
-# ¡¾Ñb‚ä-¸ßÁÁ»ùµ×-†ÎÊÖÎäÆ÷-†ÎÊÖ¸«¡¿
+# ã€è£å‚™-é«˜äº®åŸºåº•-å–®æ‰‹æ­¦å™¨-å–®æ‰‹æ–§ã€‘
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - †ÎÊÖÎäÆ÷ - †ÎÊÖ¸« - ÃÜÎÄÖ®¸«(12%ÎïÀí‚ûº¦)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å–®æ‰‹æ­¦å™¨ - å–®æ‰‹æ–§ - å¯†æ–‡ä¹‹æ–§(12%ç‰©ç†å‚·å®³)
     Rarity = Rare
     Class "One Hand Axes"
     BaseType "Runic Hatchet"
     SetTextColor 255 255 0 255
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - †ÎÊÖÎäÆ÷ - †ÎÊÖ¸« - šˆ±©Ö®¸«(×î¸ßüc‚û)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å–®æ‰‹æ­¦å™¨ - å–®æ‰‹æ–§ - æ®˜æš´ä¹‹æ–§(æœ€é«˜é»å‚·)
     Rarity = Rare
     Class "One Hand Axes"
     BaseType "Reaver Axe"
     SetTextColor 255 255 0 255
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - †ÎÊÖÎäÆ÷ - †ÎÊÖ¸« - ÆÆ³Ç¸«(×î¸ß¹¥ËÙ)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å–®æ‰‹æ­¦å™¨ - å–®æ‰‹æ–§ - ç ´åŸæ–§(æœ€é«˜æ”»é€Ÿ)
     Rarity = Rare
     Class "One Hand Axes"
     BaseType "Siege Axe"
     SetTextColor 255 255 0 255
     SetFontSize 40
 
-# ¡¾Ñb‚ä-¸ßÁÁ»ùµ×-†ÎÊÖÎäÆ÷-™àÕÈ¡¿
+# ã€è£å‚™-é«˜äº®åŸºåº•-å–®æ‰‹æ­¦å™¨-æ¬Šæ–ã€‘
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - †ÎÊÖÎäÆ÷ - ™àÕÈ - ºÄ§™àÕÈ(6%ÔªËØ´©Í¸)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å–®æ‰‹æ­¦å™¨ - æ¬Šæ– - æƒ¡é­”æ¬Šæ–(6%å…ƒç´ ç©¿é€)
     Rarity = Rare
     Class "Sceptres"
     BaseType "Sambar Sceptre"
     SetTextColor 255 255 0 255
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - †ÎÊÖÎäÆ÷ - ™àÕÈ - Ì“Ó°™àÕÈ(40%ÔªËØ‚ûº¦)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å–®æ‰‹æ­¦å™¨ - æ¬Šæ– - è™›å½±æ¬Šæ–(40%å…ƒç´ å‚·å®³)
     Rarity = Rare
     Class "Sceptres"
     BaseType "Void Sceptre"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - †ÎÊÖÎäÆ÷ - ™àÕÈ - ì`Ê¯™àÕÈ(40%ÔªËØ‚ûº¦)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å–®æ‰‹æ­¦å™¨ - æ¬Šæ– - éˆçŸ³æ¬Šæ–(40%å…ƒç´ å‚·å®³)
     Rarity = Rare
     Class "Sceptres"
     BaseType "Opal Sceptre"
     SetTextColor 255 255 0
     SetFontSize 40
 
-# ¡¾Ñb‚ä-¸ßÁÁ»ùµ×-ëpÊÖÎäÆ÷-¹­¼ı¡¿
+# ã€è£å‚™-é«˜äº®åŸºåº•-é›™æ‰‹æ­¦å™¨-å¼“ç®­ã€‘
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ëpÊÖÎäÆ÷ - ¹­¼ı - ñRÀ­¿ËË¹¹­(10%ÒÆ„ÓËÙ¶È)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é›™æ‰‹æ­¦å™¨ - å¼“ç®­ - é¦¬æ‹‰å…‹æ–¯å¼“(10%ç§»å‹•é€Ÿåº¦)
     Rarity = Rare
     Class "Bow"
     BaseType "Maraketh Bow"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ëpÊÖÎäÆ÷ - ¹­¼ı - µÛ‡øÖ®¹­(¹¥“ô24%Ôª‚û)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é›™æ‰‹æ­¦å™¨ - å¼“ç®­ - å¸åœ‹ä¹‹å¼“(æ”»æ“Š24%å…ƒå‚·)
     Rarity = Rare
     Class "Bow"
     BaseType "Imperial Bow"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ëpÊÖÎäÆ÷ - ¹­¼ı - ¼¹¹­(6.5%±©ÂÊ)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é›™æ‰‹æ­¦å™¨ - å¼“ç®­ - è„Šå¼“(6.5%æš´ç‡)
     Rarity = Rare
     Class "Bow"
     BaseType "Spine Bow"
     SetTextColor 255 255 0 255
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ëpÊÖÎäÆ÷ - ¹­¼ı - °µš¢¹­(25%È«Óò±©¼Ó)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é›™æ‰‹æ­¦å™¨ - å¼“ç®­ - æš—æ®ºå¼“(25%å…¨åŸŸæš´åŠ )
     Rarity = Rare
     Class "Bow"
     BaseType "Assassin Bow"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ëpÊÖÎäÆ÷ - ¹­¼ı - ÁÖÒ°«C¹­(1.5¹¥ËÙ)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é›™æ‰‹æ­¦å™¨ - å¼“ç®­ - æ—é‡çµå¼“(1.5æ”»é€Ÿ)
     Rarity = Rare
     Class "Bow"
     BaseType "Thicket Bow"
     SetTextColor 255 255 0
     SetFontSize 40
 
-# ¡¾Ñb‚ä-¸ßÁÁ»ùµ×-ëpÊÖÎäÆ÷-éLÕÈ¡¿
+# ã€è£å‚™-é«˜äº®åŸºåº•-é›™æ‰‹æ­¦å™¨-é•·æ–ã€‘
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ëpÊÖÎäÆ÷ - éLÕÈ - ÔÂÎgéLÕÈ(100%±©ÂÊ)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é›™æ‰‹æ­¦å™¨ - é•·æ– - æœˆè•é•·æ–(100%æš´ç‡)
     Rarity = Rare
     Class "Staves"
     BaseType "Eclipse Staff"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ëpÊÖÎäÆ÷ - éLÕÈ - µÛ‡øéLÕÈ(18%¹¥“ô¸ñ“õ)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é›™æ‰‹æ­¦å™¨ - é•·æ– - å¸åœ‹é•·æ–(18%æ”»æ“Šæ ¼æ“‹)
     Rarity = Rare
     Class "Staves"
     BaseType "Imperial Staff"
     SetTextColor 255 255 0
     SetFontSize 40
 
-# ¡¾Ñb‚ä-¸ßÁÁ»ùµ×-ëpÊÖÎäÆ÷-ëpÊÖ„¦¡¿
+# ã€è£å‚™-é«˜äº®åŸºåº•-é›™æ‰‹æ­¦å™¨-é›™æ‰‹åŠã€‘
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ëpÊÖÎäÆ÷ - ëpÊÖ„¦ - ¾«¿@Ö®ÈĞ(+50%±©¼Ó)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é›™æ‰‹æ­¦å™¨ - é›™æ‰‹åŠ - ç²¾ç·»ä¹‹åˆƒ(+50%æš´åŠ )
     Rarity = Rare
     Class "Two Hand Swords"
     BaseType "Exquisite Blade"
     SetTextColor 255 255 0
     SetFontSize 40
 
-# ¡¾Ñb‚ä-¸ßÁÁ»ùµ×-ëpÊÖÎäÆ÷-ëpÊÖ¸«¡¿
+# ã€è£å‚™-é«˜äº®åŸºåº•-é›™æ‰‹æ­¦å™¨-é›™æ‰‹æ–§ã€‘
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ëpÊÖÎäÆ÷ - ëpÊÖ¸« - ÁÑÈâÕß(50%±©ÂÊ)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é›™æ‰‹æ­¦å™¨ - é›™æ‰‹æ–§ - è£‚è‚‰è€…(50%æš´ç‡)
     Rarity = Rare
     Class "Two Hand Axes"
     BaseType "Fleshripper"
     SetTextColor 255 255 0
     SetFontSize 40
 
-# ¡¾Ñb‚ä-¸ßÁÁ»ùµ×-ëpÊÖÎäÆ÷-ëpÊÖåN¡¿
+# ã€è£å‚™-é«˜äº®åŸºåº•-é›™æ‰‹æ­¦å™¨-é›™æ‰‹éŒ˜ã€‘
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ëpÊÖÎäÆ÷ - ëpÊÖåN - »¨¹ÚÖØåN(20%¹ ‡úĞ§¹û)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é›™æ‰‹æ­¦å™¨ - é›™æ‰‹éŒ˜ - èŠ±å† é‡éŒ˜(20%ç¯„åœæ•ˆæœ)
     Rarity = Rare
     Class "Two Hand Maces"
     BaseType "Coronal Maul"
     SetTextColor 255 255 0
     SetFontSize 40
 
-# ¡¾Ñb‚ä-¸ßÁÁ»ùµ×-¸±ÊÖ-¼ı´ü¡¿
+# ã€è£å‚™-é«˜äº®åŸºåº•-å‰¯æ‰‹-ç®­è¢‹ã€‘
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ¸±ÊÖ - ¼ı´ü - ¼ı´ü(30%Ôª‚û)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å‰¯æ‰‹ - ç®­è¢‹ - ç®­è¢‹(30%å…ƒå‚·)
     Rarity = Rare
     Class "Quivers"
     BaseType "Primal Arrow Quiver"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ¸±ÊÖ - ¼ı´ü - ¼ı´ü(Îïüc‚û)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å‰¯æ‰‹ - ç®­è¢‹ - ç®­è¢‹(ç‰©é»å‚·)
     Rarity = Rare
     Class "Quivers"
     BaseType "Heavy Arrow Quiver"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ¸±ÊÖ - ¼ı´ü - ¼ı´ü(î~Íâ»ì)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å‰¯æ‰‹ - ç®­è¢‹ - ç®­è¢‹(é¡å¤–æ··)
     Rarity = Rare
     Class "Quivers"
     BaseType "Vile Arrow Quiver"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ¸±ÊÖ - ¼ı´ü - Œ’Ê¸¼ı´ü(¹¥ËÙ)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å‰¯æ‰‹ - ç®­è¢‹ - å¯¬çŸ¢ç®­è¢‹(æ”»é€Ÿ)
     Rarity = Rare
     Class "Quivers"
     BaseType "Broadhead Arrow Quiver"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ¸±ÊÖ - ¼ı´ü - ´Ìäh¼ı´ü(30%±©ÂÊ)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å‰¯æ‰‹ - ç®­è¢‹ - åˆºé‹’ç®­è¢‹(30%æš´ç‡)
     Rarity = Rare
     Class "Quivers"
     BaseType "Spike-Point Arrow Quiver"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ¸±ÊÖ - ¼ı´ü - ´©Éä¼ı´ü(+1´©Í¸)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å‰¯æ‰‹ - ç®­è¢‹ - ç©¿å°„ç®­è¢‹(+1ç©¿é€)
     Rarity = Rare
     Class "Quivers"
     BaseType "Penetrating Arrow Quiver"
     SetTextColor 255 255 0
     SetFontSize 40
 
-# ¡¾Ñb‚ä-¸ßÁÁ»ùµ×-¸±ÊÖ-¶ÜÅÆ¡¿
+# ã€è£å‚™-é«˜äº®åŸºåº•-å‰¯æ‰‹-ç›¾ç‰Œã€‘
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ¸±ÊÖ - ¶ÜÅÆ - ¾ŞÈËÄ§¶Ü(ES×î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å‰¯æ‰‹ - ç›¾ç‰Œ - å·¨äººé­”ç›¾(ESæœ€é«˜)
     Rarity = Rare
     Class "Shields"
     BaseType "Titanium Spirit Shield"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ¸±ÊÖ - ¶ÜÅÆ - ºÍÖCÄ§¶Ü(15%Ä§·¨‚ûº¦)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å‰¯æ‰‹ - ç›¾ç‰Œ - å’Œè«§é­”ç›¾(15%é­”æ³•å‚·å®³)
     Rarity = Rare
     Class "Shields"
     BaseType "Harmonic Spirit Shield"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ¸±ÊÖ - ¶ÜÅÆ - Æá²Êİp¶Ü(6%ÒÆ„ÓËÙ¶È/éW±Ü×î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å‰¯æ‰‹ - ç›¾ç‰Œ - æ¼†å½©è¼•ç›¾(6%ç§»å‹•é€Ÿåº¦/é–ƒé¿æœ€é«˜)
     Rarity = Rare
     Class "Shields"
     BaseType "Lacquered Buckler"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ¸±ÊÖ - ¶ÜÅÆ - °ÔÕß´Ì¶Ü(4%¶ã±Ü·¨Ğg)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å‰¯æ‰‹ - ç›¾ç‰Œ - éœ¸è€…åˆºç›¾(4%èº²é¿æ³•è¡“)
     Rarity = Rare
     Class "Shields"
     BaseType "Supreme Spiked Shield"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ¸±ÊÖ - ¶ÜÅÆ - ¾ŞĞÍËş¶Ü(20ÉúÃü/×o¼××î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å‰¯æ‰‹ - ç›¾ç‰Œ - å·¨å‹å¡”ç›¾(20ç”Ÿå‘½/è­·ç”²æœ€é«˜)
     Rarity = Rare
     Class "Shields"
     BaseType "Colossal Tower Shield"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ¸±ÊÖ - ¶ÜÅÆ - ÍşÄÜøS¶Ü(12Ôª¿¹)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - å‰¯æ‰‹ - ç›¾ç‰Œ - å¨èƒ½é³¶ç›¾(12å…ƒæŠ—)
     Rarity = Rare
     Class "Shields"
     BaseType "Archon Kite Shield"
     SetTextColor 255 255 0
     SetFontSize 40
 
-# ¡¾Ñb‚ä-¸ßÁÁ»ùµ×-·À¾ß-î^¿ø¡¿
+# ã€è£å‚™-é«˜äº®åŸºåº•-é˜²å…·-é ­ç›”ã€‘
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - î^¿ø - †¾¹Çî^¿ø(ÕÙ†¾Îï20%‚ûº¦)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - é ­ç›” - å–šéª¨é ­ç›”(å¬å–šç‰©20%å‚·å®³)
     Rarity = Rare
     Class "Helmets"
     BaseType "Bone Helmet"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - î^¿ø - ì`Ö÷Ö®­h(ES×î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - é ­ç›” - éˆä¸»ä¹‹ç’°(ESæœ€é«˜)
     Rarity = Rare
     Class "Helmets"
     BaseType "Hubris Circlet"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - î^¿ø - ª{Ê×Æ¤¿ø(éW±Ü×î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - é ­ç›” - ç…é¦–çš®ç›”(é–ƒé¿æœ€é«˜)
     Rarity = Rare
     Class "Helmets"
     BaseType "Lion Pelt"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - î^¿ø - »ÊÊÒˆÔ¿ø(×o¼××î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - é ­ç›” - çš‡å®¤å …ç›”(è­·ç”²æœ€é«˜)
     Rarity = Rare
     Class "Helmets"
     BaseType "Royal Burgonet"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - î^¿ø - ‰ôô|‘ğ¿ø(×oéW×î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - é ­ç›” - å¤¢é­˜æˆ°ç›”(è­·é–ƒæœ€é«˜)
     Rarity = Rare
     Class "Helmets"
     BaseType "Nightmare Bascinet"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - î^¿ø - îIÖ÷‘ğ¹Ú(×oÄÜ×î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - é ­ç›” - é ˜ä¸»æˆ°å† (è­·èƒ½æœ€é«˜)
     Rarity = Rare
     Class "Helmets"
     BaseType "Praetor Crown"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - î^¿ø - sÉñÖ®Ãæ(éWÄÜ×î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - é ­ç›” - å¼’ç¥ä¹‹é¢(é–ƒèƒ½æœ€é«˜)
     Rarity = Rare
     Class "Helmets"
     BaseType "Deicide Mask"
     SetTextColor 255 255 0
     SetFontSize 40
 
-# ¡¾Ñb‚ä-¸ßÁÁ»ùµ×-·À¾ß-ÊÖÌ×¡¿
+# ã€è£å‚™-é«˜äº®åŸºåº•-é˜²å…·-æ‰‹å¥—ã€‘
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - ÊÖÌ× - ì`ËÊÖÌ×(18%³ÖÀm‚ûº¦)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - æ‰‹å¥— - éˆè—¥æ‰‹å¥—(18%æŒçºŒå‚·å®³)
     Rarity = Rare
     Class "Gloves"
     BaseType "Apothecary's Gloves"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - ÊÖÌ× - Ä§Ö¸ÊÖÌ×(16%Ä§·¨ÊÖÌ×)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - æ‰‹å¥— - é­”æŒ‡æ‰‹å¥—(16%é­”æ³•æ‰‹å¥—)
     Rarity = Rare
     Class "Gloves"
     BaseType "Fingerless Silk Gloves"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - ÊÖÌ× - ÇÜÄÃÊÖÌ×(18%¹¥“ôÍ¶Éä‚û)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - æ‰‹å¥— - æ“’æ‹¿æ‰‹å¥—(18%æ”»æ“ŠæŠ•å°„å‚·)
     Rarity = Rare
     Class "Gloves"
     BaseType "Gripped Gloves"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - ÊÖÌ× - â@á”ÊÖÌ×(20%½ü‘ğ‚ûº¦)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - æ‰‹å¥— - é‡¦é‡˜æ‰‹å¥—(20%è¿‘æˆ°å‚·å®³)
     Rarity = Rare
     Class "Gloves"
     BaseType "Spiked Gloves"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - ÊÖÌ× - ĞgÊ¿ÊÖÌ×(ÄÜ¶Ü×î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - æ‰‹å¥— - è¡“å£«æ‰‹å¥—(èƒ½ç›¾æœ€é«˜)
     Rarity = Rare
     Class "Gloves"
     BaseType "Sorcerer Gloves"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - ÊÖÌ× - ÃÔÛ™ÊÖÌ×(éW±Ü×î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - æ‰‹å¥— - è¿·è¹¤æ‰‹å¥—(é–ƒé¿æœ€é«˜)
     Rarity = Rare
     Class "Gloves"
     BaseType "Slink Gloves"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - ÊÖÌ× - ¾ŞÈË×oÊÖ(×o¼××î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - æ‰‹å¥— - å·¨äººè­·æ‰‹(è­·ç”²æœ€é«˜)
     Rarity = Rare
     Class "Gloves"
     BaseType "Titan Gauntlets"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - ÊÖÌ× - ıˆ÷[ÊÖÌ×(×oéW×î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - æ‰‹å¥— - é¾é±—æ‰‹å¥—(è­·é–ƒæœ€é«˜)
     Rarity = Rare
     Class "Gloves"
     BaseType "Dragonscale Gauntlets"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - ÊÖÌ× - Â}‘ğÊÖÌ×(×oÄÜ×î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - æ‰‹å¥— - è–æˆ°æ‰‹å¥—(è­·èƒ½æœ€é«˜)
     Rarity = Rare
     Class "Gloves"
     BaseType "Crusader Gloves"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - ÊÖÌ× - °µš¢Õß×oÊÖ(éWÄÜ×î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - æ‰‹å¥— - æš—æ®ºè€…è­·æ‰‹(é–ƒèƒ½æœ€é«˜)
     Rarity = Rare
     Class "Gloves"
     BaseType "Murder Mitts"
     SetTextColor 255 255 0
     SetFontSize 40
 
-# ¡¾Ñb‚ä-¸ßÁÁ»ùµ×-·À¾ß-Ğ¬×Ó¡¿
+# ã€è£å‚™-é«˜äº®åŸºåº•-é˜²å…·-é‹å­ã€‘
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - Ğ¬×Ó - ÌÓëy¶ÌÑ¥(17»ì¿¹)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - é‹å­ - é€ƒé›£çŸ­é´(17æ··æŠ—)
     Rarity = Rare
     Class "Boots"
     BaseType "Fugitive Boots"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - Ğ¬×Ó - ®É«Ğ¬(12ëpÔª¿¹)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - é‹å­ - ç•°è‰²é‹(12é›™å…ƒæŠ—)
     Rarity = Rare
     Class "Boots"
     BaseType "Two-Toned Boots"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - Ğ¬×Ó - ĞgÊ¿éLÑ¥(ÄÜ¶Ü×î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - é‹å­ - è¡“å£«é•·é´(èƒ½ç›¾æœ€é«˜)
     Rarity = Rare
     Class "Boots"
     BaseType "Sorcerer Boots"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - Ğ¬×Ó - ¾ŞÈËÃ„¼×(×o¼××î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - é‹å­ - å·¨äººè„›ç”²(è­·ç”²æœ€é«˜)
     Rarity = Rare
     Class "Boots"
     BaseType "Titan Greaves"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - Ğ¬×Ó - ÃÔÛ™¶ÌÑ¥(éW±Ü×î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - é‹å­ - è¿·è¹¤çŸ­é´(é–ƒé¿æœ€é«˜)
     Rarity = Rare
     Class "Boots"
     BaseType "Slink Boots"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - Ğ¬×Ó - ıˆ÷[éLÑ¥(×oéW×î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - é‹å­ - é¾é±—é•·é´(è­·é–ƒæœ€é«˜)
     Rarity = Rare
     Class "Boots"
     BaseType "Dragonscale Boots"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - Ğ¬×Ó - Â}‘ğéLÑ¥(×oÄÜ×î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - é‹å­ - è–æˆ°é•·é´(è­·èƒ½æœ€é«˜)
     Rarity = Rare
     Class "Boots"
     BaseType "Crusader Boots"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - Ğ¬×Ó - °µš¢ÕßéLÑ¥(éWÄÜ×î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - é‹å­ - æš—æ®ºè€…é•·é´(é–ƒèƒ½æœ€é«˜)
     Rarity = Rare
     Class "Boots"
     BaseType "Murder Boots"
     SetTextColor 255 255 0
     SetFontSize 40
 
-# ¡¾Ñb‚ä-¸ßÁÁ»ùµ×-·À¾ß-ÒÂ·ş¡¿
+# ã€è£å‚™-é«˜äº®åŸºåº•-é˜²å…·-è¡£æœã€‘
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - ÒÂ·ş - Íß –·¨ÒÂ(ÄÜ¶Ü×î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - è¡£æœ - ç“¦çˆ¾æ³•è¡£(èƒ½ç›¾æœ€é«˜)
     Rarity = Rare
     Class "Body Armours"
     BaseType "Vaal Regalia"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - ÒÂ·ş - ÃØĞgéLÒÂ(10%·¨‚û)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - è¡£æœ - ç§˜è¡“é•·è¡£(10%æ³•å‚·)
     Rarity = Rare
     Class "Body Armours"
     BaseType "Occultist's Vestment"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - ÒÂ·ş - ˜sÒ«‘ğæz(×o¼××î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - è¡£æœ - æ¦®è€€æˆ°é§(è­·ç”²æœ€é«˜)
     Rarity = Rare
     Class "Body Armours"
     BaseType "Glorious Plate"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - ÒÂ·ş - ĞÇÃ¢‘ğæz(12Ôª¿¹)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - è¡£æœ - æ˜ŸèŠ’æˆ°é§(12å…ƒæŠ—)
     Rarity = Rare
     Class "Body Armours"
     BaseType "Astral Plate"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - ÒÂ·ş - ĞÇ³½Æ¤¼×(éW±Ü×î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - è¡£æœ - æ˜Ÿè¾°çš®ç”²(é–ƒé¿æœ€é«˜)
     Rarity = Rare
     Class "Body Armours"
     BaseType "Zodiac Leather"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - ÒÂ·ş - ´Ìš¢ÕßÖ®Ñb(3%ÒÆ„ÓËÙ¶È)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - è¡£æœ - åˆºæ®ºè€…ä¹‹è£(3%ç§»å‹•é€Ÿåº¦)
     Rarity = Rare
     Class "Body Armours"
     BaseType "Assassin's Garb"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - ÒÂ·ş - ßBÉíıˆ÷[æz(×oéW×î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - è¡£æœ - é€£èº«é¾é±—é§(è­·é–ƒæœ€é«˜)
     Rarity = Rare
     Class "Body Armours"
     BaseType "Full Dragonscale"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - ÒÂ·ş - Â}æi¼×(×oÄÜ×î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - è¡£æœ - è–æ½”é–ç”²(è­·èƒ½æœ€é«˜)
     Rarity = Rare
     Class "Body Armours"
     BaseType "Saintly Chainmail"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ·À¾ß - ÒÂ·ş - ¿ñÅ°ÕßÊøÒÂ(éWÄÜ×î¸ß)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é˜²å…· - è¡£æœ - ç‹‚è™è€…æŸè¡£(é–ƒèƒ½æœ€é«˜)
     Rarity = Rare
     Class "Body Armours"
     BaseType "Sadist Garb"
     SetTextColor 255 255 0
     SetFontSize 40
 
-# ¡¾Ñb‚ä-¸ßÁÁ»ùµ×-ï—Æ·-½äÖ¸¡¿
+# ã€è£å‚™-é«˜äº®åŸºåº•-é£¾å“-æˆ’æŒ‡ã€‘
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ï—Æ· - ½äÖ¸ - ±ÌË{½äÖ¸(10%Ä§Á¦)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é£¾å“ - æˆ’æŒ‡ - ç¢§è—æˆ’æŒ‡(10%é­”åŠ›)
     Rarity = Rare
     Class "Rings"
     BaseType "Cerulean Ring"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ï—Æ· - ½äÖ¸ - Öì¼t½äÖ¸(7%ÉúÃü)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é£¾å“ - æˆ’æŒ‡ - æœ±ç´…æˆ’æŒ‡(7%ç”Ÿå‘½)
     Rarity = Rare
     Class "Rings"
     BaseType "Vermillion Ring"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ï—Æ· - ½äÖ¸ - »ìÇàÊ¯½äÖ¸(23%»ìãç‚ûº¦)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é£¾å“ - æˆ’æŒ‡ - æ··é’çŸ³æˆ’æŒ‡(23%æ··æ²Œå‚·å®³)
     Rarity = Rare
     Class "Rings"
     BaseType "Iolite Ring"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ï—Æ· - ½äÖ¸ - µ°°×Ê¯½äÖ¸(25%ÔªËØ‚ûº¦)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é£¾å“ - æˆ’æŒ‡ - è›‹ç™½çŸ³æˆ’æŒ‡(25%å…ƒç´ å‚·å®³)
     Rarity = Rare
     Class "Rings"
     BaseType "Opal Ring"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ï—Æ· - ½äÖ¸ - ä“èT½äÖ¸(¹¥“ôÎïüc‚û)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é£¾å“ - æˆ’æŒ‡ - é‹¼é‘„æˆ’æŒ‡(æ”»æ“Šç‰©é»å‚·)
     Rarity = Rare
     Class "Rings"
     BaseType "Steel Ring"
     SetTextColor 255 255 0
     SetFontSize 40
 
-# ¡¾Ñb‚ä-¸ßÁÁ»ùµ×-ï—Æ·-í—å€¡¿
+# ã€è£å‚™-é«˜äº®åŸºåº•-é£¾å“-é …éŠã€‘
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ï—Æ· - í—å€ - Ï¦Äº×oÉí·û
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é£¾å“ - é …éŠ - å¤•æš®è­·èº«ç¬¦
     Rarity = Rare
     Class "Amulets"
     BaseType "Unset Amulet"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ï—Æ· - í—å€ - ±ÌÖé×oÉí·û(56%Ä§»Ø)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é£¾å“ - é …éŠ - ç¢§ç è­·èº«ç¬¦(56%é­”å›)
     Rarity = Rare
     Class "Amulets"
     BaseType "Blue Pearl Amulet"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ï—Æ· - í—å€ - º£çRí—å€(15%ÌáÇ°»Ø¶Ü)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é£¾å“ - é …éŠ - æµ·é¡é …éŠ(15%æå‰å›ç›¾)
     Rarity = Rare
     Class "Amulets"
     BaseType "Seaglass Amulet"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ï—Æ· - í—å€ - ÀíÊ¯×oÉí·û(1.6%ÉúÃü»ØÍ)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é£¾å“ - é …éŠ - ç†çŸ³è­·èº«ç¬¦(1.6%ç”Ÿå‘½å›å¾©)
     Rarity = Rare
     Class "Amulets"
     BaseType "Marble Amulet"
     SetTextColor 255 255 0
     SetFontSize 40
 
-# ¡¾Ñb‚ä-¸ßÁÁ»ùµ×-ï—Æ·-Ñü§¡¿
+# ã€è£å‚™-é«˜äº®åŸºåº•-é£¾å“-è…°å¸¶ã€‘
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ï—Æ· - Ñü§ - Ë®¾§Ñü§(80ÄÜÁ¿×o¶Ü)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é£¾å“ - è…°å¸¶ - æ°´æ™¶è…°å¸¶(80èƒ½é‡è­·ç›¾)
     Rarity = Rare
     Class "Belts"
     BaseType "Crystal Belt"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× «CÊ× Ä§Ñª # Ñ}Ñuë[²Ø
+Hide # è£å‚™ - é«˜äº®åŸºåº• çµé¦– é­”è¡€ # è¤‡è£½éš±è—
     Mirrored True 
     Rarity = Normal
     Class "Belts"
@@ -5078,7 +5078,7 @@ Hide # Ñb‚ä - ¸ßÁÁ»ùµ× «CÊ× Ä§Ñª # Ñ}Ñuë[²Ø
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× «CÊ× Ä§Ñª # ›@È¾ë[²Ø
+Hide # è£å‚™ - é«˜äº®åŸºåº• çµé¦– é­”è¡€ # æ±™æŸ“éš±è—
     Corrupted True
     Rarity = Normal
     Class "Belts"
@@ -5086,30 +5086,30 @@ Hide # Ñb‚ä - ¸ßÁÁ»ùµ× «CÊ× Ä§Ñª # ›@È¾ë[²Ø
     SetTextColor 255 255 0
     SetFontSize 40
 
-Show # Ñb‚ä - ¸ßÁÁ»ùµ× «CÊ× Ä§Ñª AA¶Ü # 
+Show # è£å‚™ - é«˜äº®åŸºåº• çµé¦– é­”è¡€ AAç›¾ # 
     Rarity = Normal
     Class "Belts"
     BaseType "Leather Belt" "Heavy Belt"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Show # Ñb‚ä - ¸ßÁÁ»ùµ×  AA¶Ü # 
+Show # è£å‚™ - é«˜äº®åŸºåº•  AAç›¾ # 
     Rarity = Normal
     Class "Shields"
     BaseType  "Champion Kite Shield"
     SetTextColor 255 255 0
     SetFontSize 40
 
-Hide # Ñb‚ä - ¸ßÁÁ»ùµ× - ï—Æ· - Ñü§ - ÏÈähÑü§(320×o¼×ºÍéW±Ü)
+Hide # è£å‚™ - é«˜äº®åŸºåº• - é£¾å“ - è…°å¸¶ - å…ˆé‹’è…°å¸¶(320è­·ç”²å’Œé–ƒé¿)
     Rarity = Rare
     Class "Belts"
     BaseType "Vanguard Belt"
     SetTextColor 255 255 0
     SetFontSize 40
 
-# ¡¾Ñb‚ä-ï—Æ·Ñb‚ä¡¿
+# ã€è£å‚™-é£¾å“è£å‚™ã€‘
 
-Hide # Ñb‚ä - ï—Æ·Ñb‚ä - 84+
+Hide # è£å‚™ - é£¾å“è£å‚™ - 84+
     ItemLevel >= 84
     Rarity = Rare
     Class "Amulets" "Rings" "Belts"
@@ -5117,7 +5117,7 @@ Hide # Ñb‚ä - ï—Æ·Ñb‚ä - 84+
     SetBorderColor 128 0 128 255
     SetFontSize 40
 
-Hide # Ñb‚ä - ï—Æ·Ñb‚ä - 75~83
+Hide # è£å‚™ - é£¾å“è£å‚™ - 75~83
     ItemLevel >= 75
     ItemLevel <= 83
     Rarity = Rare
@@ -5126,7 +5126,7 @@ Hide # Ñb‚ä - ï—Æ·Ñb‚ä - 75~83
     SetBorderColor 27 162 155
     SetFontSize 40
 
-Hide # Ñb‚ä - ï—Æ·Ñb‚ä - 60~74
+Hide # è£å‚™ - é£¾å“è£å‚™ - 60~74
     ItemLevel >= 60
     ItemLevel <= 74
     Rarity = Rare
@@ -5135,7 +5135,7 @@ Hide # Ñb‚ä - ï—Æ·Ñb‚ä - 60~74
     SetBorderColor 0 0 255 255
     SetFontSize 40
 
-Hide # Ñb‚ä - ï—Æ·Ñb‚ä - 1~59
+Hide # è£å‚™ - é£¾å“è£å‚™ - 1~59
     ItemLevel < 60
     Rarity = Rare
     Class "Amulets" "Rings" "Belts"
@@ -5143,27 +5143,27 @@ Hide # Ñb‚ä - ï—Æ·Ñb‚ä - 1~59
     SetBorderColor 176 138 80
     SetFontSize 40
 
-# ¡¾Ñb‚ä-Ò»°ãÖéŒš¡¿
+# ã€è£å‚™-ä¸€èˆ¬ç å¯¶ã€‘
 
-Hide # Ñb‚ä - Ï¡ÓĞÖéŒš
+Hide # è£å‚™ - ç¨€æœ‰ç å¯¶
     Rarity = Rare
     Class "Jewel"
     SetFontSize 40
 
-Hide # Ñb‚ä - Ä§·¨ÖéŒš
+Hide # è£å‚™ - é­”æ³•ç å¯¶
     Rarity = Magic
     Class "Jewel"
     SetFontSize 40
 
-Hide # Ñb‚ä - ÆÕÍ¨ÖéŒš
+Hide # è£å‚™ - æ™®é€šç å¯¶
     Rarity = Normal
     Class "Jewel"
     SetTextColor 255 255 255
     SetFontSize 40
 
-# ¡¾Ñb‚ä-Ò»°ãÑb‚ä¡¿
+# ã€è£å‚™-ä¸€èˆ¬è£å‚™ã€‘
 
-Hide # Ñb‚ä - Ò»°ãÑb‚ä - 84+
+Hide # è£å‚™ - ä¸€èˆ¬è£å‚™ - 84+
     ItemLevel >= 84
     Rarity = Rare
     Class "Bow" "Wands" "Claws" "Daggers" "One Hand" "Staves" "Two Hand" "Sceptres" "Gloves" "Boots" "Body Armours" "Helmets" "Shields" "Quivers" "Rune Daggers" "Warstaves" "Jewel"
@@ -5172,7 +5172,7 @@ Hide # Ñb‚ä - Ò»°ãÑb‚ä - 84+
     SetBorderColor 128 0 128 255
     SetFontSize 35
 
-Hide # Ñb‚ä - Ò»°ãÑb‚ä - 75~83
+Hide # è£å‚™ - ä¸€èˆ¬è£å‚™ - 75~83
     ItemLevel >= 75
     ItemLevel <= 83
     Rarity = Rare
@@ -5182,7 +5182,7 @@ Hide # Ñb‚ä - Ò»°ãÑb‚ä - 75~83
     SetBorderColor 27 162 155
     SetFontSize 35
 
-Hide # Ñb‚ä - Ò»°ãÑb‚ä - 60~74
+Hide # è£å‚™ - ä¸€èˆ¬è£å‚™ - 60~74
     ItemLevel >= 60
     ItemLevel <= 74
     Rarity = Rare
@@ -5192,7 +5192,7 @@ Hide # Ñb‚ä - Ò»°ãÑb‚ä - 60~74
     SetBorderColor 0 0 255 255
     SetFontSize 35
 
-Hide # Ñb‚ä - Ò»°ãÑb‚ä - 1~59
+Hide # è£å‚™ - ä¸€èˆ¬è£å‚™ - 1~59
     ItemLevel < 60
     Rarity = Rare
     Class "Bow" "Wands" "Claws" "Daggers" "One Hand" "Staves" "Two Hand" "Sceptres" "Gloves" "Boots" "Body Armours" "Helmets" "Shields" "Quivers" "Rune Daggers" "Warstaves" "Jewel"
@@ -5200,16 +5200,16 @@ Hide # Ñb‚ä - Ò»°ãÑb‚ä - 1~59
     SetBorderColor 176 138 80
     SetFontSize 35
 
-# ¡¾Ñb‚ä-ÍØ»ÄÑb‚ä¡¿
+# ã€è£å‚™-æ‹“è’è£å‚™ã€‘
 
-Hide # Ñb‚ä - ÍØ»Ä - ÆÕÍ¨ï—Æ· - 1~10
+Hide # è£å‚™ - æ‹“è’ - æ™®é€šé£¾å“ - 1~10
     ItemLevel <= 10
     Rarity = Normal
     Class "Rings" "Amulets" "Belts"
     SetTextColor 255 255 255
     SetBackgroundColor 0 0 0 180
 
-Hide # Ñb‚ä - ÍØ»Ä - ÆÕÍ¨ï—Æ· - 11~59
+Hide # è£å‚™ - æ‹“è’ - æ™®é€šé£¾å“ - 11~59
     ItemLevel >= 11
     ItemLevel <= 59
     Rarity = Normal
@@ -5217,13 +5217,13 @@ Hide # Ñb‚ä - ÍØ»Ä - ÆÕÍ¨ï—Æ· - 11~59
     SetTextColor 255 255 255
     SetFontSize 33
 
-Hide # Ñb‚ä - ÍØ»Ä - Ä§·¨ï—Æ· - 1~40
+Hide # è£å‚™ - æ‹“è’ - é­”æ³•é£¾å“ - 1~40
     ItemLevel <= 40
     Rarity = Magic
     Class "Rings" "Amulets" "Belts"
     SetBackgroundColor 0 0 0
 
-Hide # Ñb‚ä - ÍØ»Ä - Ä§·¨ï—Æ· - 41~59
+Hide # è£å‚™ - æ‹“è’ - é­”æ³•é£¾å“ - 41~59
     ItemLevel >= 41
     ItemLevel <= 59
     Rarity = Magic
@@ -5231,40 +5231,40 @@ Hide # Ñb‚ä - ÍØ»Ä - Ä§·¨ï—Æ· - 41~59
     SetTextColor 100 100 255
     SetBorderColor 255 255 255 0
 
-Hide # Ñb‚ä - ÍØ»Ä - 4LÑb‚ä1~65
+Hide # è£å‚™ - æ‹“è’ - 4Lè£å‚™1~65
     LinkedSockets = 4
     ItemLevel <= 65
     Rarity <= Magic
     SetBackgroundColor 0 0 0 150
     SetBorderColor 235 190 194
 
-Hide # Ñb‚ä - ÍØ»Ä - 3LÆÕÍ¨Ñb‚ä1~8
+Hide # è£å‚™ - æ‹“è’ - 3Læ™®é€šè£å‚™1~8
     LinkedSockets = 3
     ItemLevel <= 8
     Rarity = Normal
     Class "Bow" "Wands" "Claws" "Daggers" "One Hand" "Staves" "Two Hand" "Sceptres" "Gloves" "Boots" "Body Armours" "Helmets" "Shields" "Quivers" "Rune Daggers" "Warstaves"
 
-Hide # Ñb‚ä - ÍØ»Ä - ÆÕÍ¨Ñb‚ä1~8
+Hide # è£å‚™ - æ‹“è’ - æ™®é€šè£å‚™1~8
     ItemLevel <= 8
     Rarity = Normal
     Class "Bow" "Wands" "Claws" "Daggers" "One Hand" "Staves" "Two Hand" "Sceptres" "Gloves" "Boots" "Body Armours" "Helmets" "Shields" "Quivers" "Rune Daggers" "Warstaves"
     SetBackgroundColor 0 0 0 150
 
-Hide # Ñb‚ä - ÍØ»Ä - 3LÄ§·¨Ñb‚ä1~30
+Hide # è£å‚™ - æ‹“è’ - 3Lé­”æ³•è£å‚™1~30
     LinkedSockets = 3
     ItemLevel <= 30
     Rarity = Magic
     Class "Bow" "Wands" "Claws" "Daggers" "One Hand" "Staves" "Two Hand" "Sceptres" "Gloves" "Boots" "Body Armours" "Helmets" "Shields" "Quivers" "Rune Daggers" "Warstaves"
 
-Hide # Ñb‚ä - ÍØ»Ä - Ä§·¨Ñb‚ä1~30
+Hide # è£å‚™ - æ‹“è’ - é­”æ³•è£å‚™1~30
     ItemLevel <= 30
     Rarity = Magic
     Class "Bow" "Wands" "Claws" "Daggers" "One Hand" "Staves" "Two Hand" "Sceptres" "Gloves" "Boots" "Body Armours" "Helmets" "Shields" "Quivers" "Rune Daggers" "Warstaves"
     SetBackgroundColor 0 0 0 150
 
-# ¡¾Ñb‚ä-ë[²ØÑb‚ä(Îğ„h£¡)¡¿
+# ã€è£å‚™-éš±è—è£å‚™(å‹¿åˆªï¼)ã€‘
 
-Hide # Ñb‚ä - ë[²ØÑb‚ä - Q10ÒÔÉÏË{°×Ñb‚äÊ½˜Ó
+Hide # è£å‚™ - éš±è—è£å‚™ - Q10ä»¥ä¸Šè—ç™½è£å‚™å¼æ¨£
     Quality >= 10
     ItemLevel >= 50
     ItemLevel <= 75
@@ -5274,123 +5274,124 @@ Hide # Ñb‚ä - ë[²ØÑb‚ä - Q10ÒÔÉÏË{°×Ñb‚äÊ½˜Ó
     SetBorderColor 0 0 0
     SetFontSize 34
 
-Hide # Ñb‚ä - ë[²ØÑb‚ä - ÆÕÍ¨ - ï—Æ·
+Hide # è£å‚™ - éš±è—è£å‚™ - æ™®é€š - é£¾å“
 
     Rarity = Normal
     Class "Rings" "Amulets" "Belts"
     SetTextColor 255 255 255
 
-Hide # Ñb‚ä - ë[²ØÑb‚ä - Ä§·¨ - ï—Æ·
+Hide # è£å‚™ - éš±è—è£å‚™ - é­”æ³• - é£¾å“
     Rarity = Magic
     Class "Rings" "Amulets" "Belts"
     SetTextColor 100 100 255
 
-Hide # Ñb‚ä - ë[²ØÑb‚ä - ÊÖÌ×
+Hide # è£å‚™ - éš±è—è£å‚™ - æ‰‹å¥—
     Rarity <= Magic
     Class "Gloves"
     BaseType "Titan Gauntlets" "Slink Gloves" "Sorcerer Gloves" "Apothecary's Gloves" "Dragonscale Gauntlets" "Crusader Gloves" "Murder Mitts"
 
-Hide # Ñb‚ä - ë[²ØÑb‚ä - Ğ¬×Ó
+Hide # è£å‚™ - éš±è—è£å‚™ - é‹å­
     Rarity <= Magic
     Class "Boots"
     BaseType "Titan Greaves" "Slink Boots" "Sorcerer Boots" "Dragonscale Boots" "Crusader Boots" "Murder Boots"
 
-Hide # Ñb‚ä - ë[²ØÑb‚ä - ÒÂ·ş
+Hide # è£å‚™ - éš±è—è£å‚™ - è¡£æœ
     Rarity <= Magic
     Class "Body Armours"
     BaseType "Glorious Plate" "Assassin's Garb" "Vaal Regalia" "Triumphant Lamellar" "Saintly Chainmail" "Carnal Armour"
 
-Hide # Ñb‚ä - ë[²ØÑb‚ä - î^²¿
+Hide # è£å‚™ - éš±è—è£å‚™ - é ­éƒ¨
     Rarity <= Magic
     Class "Helmets"
     BaseType "Eternal Burgonet" "Lion Pelt" "Hubris Circlet" "Nightmare Bascinet" "Praetor Crown" "Deicide Mask"
 
-Hide # Ñb‚ä - ë[²ØÑb‚ä - ¶ÜÅÆ
+Hide # è£å‚™ - éš±è—è£å‚™ - ç›¾ç‰Œ
     Rarity <= Magic
     Class "Shields"
     BaseType "Pinnacle Tower Shield" "Imperial Buckler" "Titanium Spirit Shield" "Fossilised Spirit Shield" "Elegant Round Shield" "Archon Kite Shield" "Supreme Spiked Shield"
 
-Hide # Ñb‚ä - ë[²ØÑb‚ä - ¼ı´ü
+Hide # è£å‚™ - éš±è—è£å‚™ - ç®­è¢‹
     Rarity <= Magic
     Class "Quivers"
     BaseType "Spike-Point Arrow Quiver" "Penetrating Arrow Quiver"
 
-Hide # Ñb‚ä - ë[²ØÑb‚ä - Ø°Ê×
+Hide # è£å‚™ - éš±è—è£å‚™ - åŒ•é¦–
     Rarity <= Magic
     Class "Daggers"
     BaseType "Platinum Kris" "Imperial Skean" "Imperial Skean" "Sai" "Ambusher"
 
-Hide # Ñb‚ä - ë[²ØÑb‚ä - ×¦
+Hide # è£å‚™ - éš±è—è£å‚™ - çˆª
     Rarity <= Magic
     Class "Claws"
     BaseType "Gemini Claw" "Imperial Skean" "Terror Claw"
 
-Hide # Ñb‚ä - ë[²ØÑb‚ä - ¹­
+Hide # è£å‚™ - éš±è—è£å‚™ - å¼“
     Rarity <= Magic
     Class "Bow"
     BaseType "Maraketh Bow" "Harbinger Bow"
 
-Hide # Ñb‚ä - ë[²ØÑb‚ä - éLÕÈ
+Hide # è£å‚™ - éš±è—è£å‚™ - é•·æ–
     Rarity <= Magic
     Class "Staves"
     BaseType "Eclipse Staff"
 
-Hide # Ñb‚ä - ë[²ØÑb‚ä - ¼š„¦
+Hide # è£å‚™ - éš±è—è£å‚™ - ç´°åŠ
     Rarity <= Magic
     Class "Thrusting One Hand Swords"
     BaseType "Dragoon Sword" "Harpy Rapier"
 
-Hide # Ñb‚ä - ë[²ØÑb‚ä - ·¨ÕÈ
+Hide # è£å‚™ - éš±è—è£å‚™ - æ³•æ–
     Rarity <= Magic
     Class "Wands"
     BaseType "Imbued Wand" "Prophecy Wand"
 
-Hide # Ñb‚ä - ë[²ØÑb‚ä - ™àÕÈ
+Hide # è£å‚™ - éš±è—è£å‚™ - æ¬Šæ–
     Rarity <= Magic
     Class "Sceptres"
     BaseType "Opal Sceptre" "Sambar Sceptre"
 
-Hide # Ñb‚ä - ë[²ØÑb‚ä - †ÎÊÖ¸«
+Hide # è£å‚™ - éš±è—è£å‚™ - å–®æ‰‹æ–§
     Rarity <= Magic
     Class "One Hand Axes"
     BaseType "Runic Hatchet"
 
-Hide # Ñb‚ä - ë[²ØÑb‚ä - †ÎÊÖ„¦
+Hide # è£å‚™ - éš±è—è£å‚™ - å–®æ‰‹åŠ
     Rarity <= Magic
     Class "One Hand Swords"
     BaseType "Corsair Sword"
 
-Hide # Ñb‚ä - ë[²ØÑb‚ä - †ÎÊÖåN
+Hide # è£å‚™ - éš±è—è£å‚™ - å–®æ‰‹éŒ˜
     Rarity <= Magic
     Class "One Hand Maces"
     BaseType "Behemoth Mace"
 
-Hide # Ñb‚ä - ë[²ØÑb‚ä - ëpÊÖ„¦
+Hide # è£å‚™ - éš±è—è£å‚™ - é›™æ‰‹åŠ
     Rarity <= Magic
     Class "Two Hand Swords"
     BaseType "Exquisite Blade"
 
-Hide # Ñb‚ä - ë[²ØÑb‚ä - ëpÊÖ¸«   
+Hide # è£å‚™ - éš±è—è£å‚™ - é›™æ‰‹æ–§   
     Rarity <= Magic
     Class "Two Hand Axes"
     BaseType "Fleshripper"
 
-Hide # Ñb‚ä - ë[²ØÑb‚ä - ëpÊÖåN   
+Hide # è£å‚™ - éš±è—è£å‚™ - é›™æ‰‹éŒ˜   
     Rarity <= Magic
     Class "Two Hand Maces"
     BaseType "Coronal Maul"
 
-Hide # Ñb‚ä - ë[²ØÑb‚ä - ë[²ØµÄ°×¡¢Ë{Ñb "¹­" "·¨ÕÈ" "×¦" "Ø°Ê×" "·ûÎÄØ°Ê×" "†ÎÊÖ" "éLÕÈ" "ëpÊÖ" "™àÕÈ" "ÊÖÌ×" "Ğ¬×Ó" "ĞØ¼×" "î^²¿" "¶Ü" "¼ı´ü" "‘ğôYéLÕÈ"
+Hide # è£å‚™ - éš±è—è£å‚™ - éš±è—çš„ç™½ã€è—è£ "å¼“" "æ³•æ–" "çˆª" "åŒ•é¦–" "ç¬¦æ–‡åŒ•é¦–" "å–®æ‰‹" "é•·æ–" "é›™æ‰‹" "æ¬Šæ–" "æ‰‹å¥—" "é‹å­" "èƒ¸ç”²" "é ­éƒ¨" "ç›¾" "ç®­è¢‹" "æˆ°é¬¥é•·æ–"
     Rarity <= Magic
     Class "Bow" "Wands" "Claws" "Daggers" "Rune Daggers" "One Hand" "Staves" "Two Hand" "Sceptres" "Gloves" "Boots" "Body Armours" "Helmets" "Shields" "Quivers" "Warstaves" "Rune Daggers" "Jewel"
     SetBackgroundColor 0 0 0 0
     SetBorderColor 255 255 255 0
     SetFontSize 32
 
-# ¡¾Ñb‚ä-ĞÂÎïÆ··ÀÂ©¡¿
+# ã€è£å‚™-æ–°ç‰©å“é˜²æ¼ã€‘
 
-Show # ĞÂÎïÆ··ÀÂ© - Èôß[‘ò¸üĞÂÌí¼ÓĞÂÎïÆ·£¨ĞÂÑb‚ä»ùµ×³ıÍâ£©¶¼•şÒÔ´ËÊ½˜Óï@Ê¾£¬ËùÒÔ®”Äã¿´µ½´ËÊ½˜ÓµÄÎïÆ·•r£¬ÕfÃ÷ÄãµÄß^VĞèÒª¸üĞÂÁË¡£
+Show # æ–°ç‰©å“é˜²æ¼ - è‹¥éŠæˆ²æ›´æ–°æ·»åŠ æ–°ç‰©å“ï¼ˆæ–°è£å‚™åŸºåº•é™¤å¤–ï¼‰éƒ½æœƒä»¥æ­¤å¼æ¨£é¡¯ç¤ºï¼Œæ‰€ä»¥ç•¶ä½ çœ‹åˆ°æ­¤å¼æ¨£çš„ç‰©å“æ™‚ï¼Œèªªæ˜ä½ çš„éæ¿¾éœ€è¦æ›´æ–°äº†ã€‚
     SetTextColor 255 0 0
     SetBorderColor 255 255 255
     SetFontSize 40
     PlayAlertSound 15 200
+
