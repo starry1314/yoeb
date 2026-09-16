@@ -155,7 +155,7 @@
 [Type]=="Tainted Blacksmith's Whetstone" # [StashItem] == "true" // 玷污的磨刀石
 [Type]=="Tainted Divine Teardrop" # [StashItem] == "true" // 玷污的神聖淚珠
 
-//[Type] == "Rogue's Marker" # [StashItem] == "true" // 盜賊之印
+[Type] == "Rogue's Marker" # [StashItem] == "true" // 盜賊之印
 
 
 ////
