@@ -1,3 +1,6 @@
+v0.104b
+Fixed offsets for game version 3.30.0c.
+
 v0.104
 Fixed offsets for game version 3.30.0.
 Scarabs are replaced by threads: the bot now sets the map device thread slots (configurable threads and count per slot in the Map tab).
