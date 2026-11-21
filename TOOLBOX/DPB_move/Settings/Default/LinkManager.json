@@ -7,5 +7,7 @@
   "CastRange": 55,
   "BuffDurationSeconds": 12.0,
   "RefreshThresholdSeconds": 3.0,
-  "MinIntervalMs": 800
+  "MinIntervalMs": 800,
+  "SuppressMs": 2000,
+  "DebugLogging": false
 }

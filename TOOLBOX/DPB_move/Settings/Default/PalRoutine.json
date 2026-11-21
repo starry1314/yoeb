@@ -88,5 +88,9 @@
     }
   ],
   "EnableMinionCasting": false,
-  "RaiseZombieSkillSlot": 0
+  "RaiseZombieSkillSlot": 0,
+  "EnableGolemSummoning": false,
+  "GolemSkillSlot": 0,
+  "GolemType": "summon_carrion_golem",
+  "MinionDebug": false
 }
