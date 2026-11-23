@@ -1,3 +1,38 @@
+[Type] == "Scrying Orb" # [StashItem] == "true" //
+
+[Type] == "Portal"# [StashItem] == "true" //
+
+//3.30 Thread//
+[Type] == "Frayed Thread" # [StashItem] == "true" //
+[Type] == "Abyss Thread" # [StashItem] == "true" //
+[Type] == "Ritual Thread" # [StashItem] == "true" //
+[Type] == "Legion Thread" # [StashItem] == "true" //
+[Type] == "Bestiary Thread" # [StashItem] == "true" //
+[Type] == "Incursion Thread" # [StashItem] == "true" //
+[Type] == "Expedition Thread" # [StashItem] == "true" //
+[Type] == "Breach Thread" # [StashItem] == "true" //
+[Type] == "Blight Thread" # [StashItem] == "true" //
+[Type] == "Ultimatum Thread" # [StashItem] == "true" //
+[Type] == "Betrayal Thread" # [StashItem] == "true" //
+[Type] == "Primordial Exalted Orb" # [StashItem] == "true" //
+[Type] == "Originator's Exalted Orb" # [StashItem] == "true" //
+
+[Type] == "Cord Belt" # [StashItem] == "true" //
+[Type] == "Focused Amulet" # [StashItem] == "true" //
+[Type] == "Helical Ring" # [StashItem] == "true" //
+[Type] == "Manifold Ring" # [StashItem] == "true" //
+[Type] == "Simplex Amulet" # [StashItem] == "true" //
+
+//Tier0 Weapon Unique
+
+[Type] == "Imperial Skean" && [Rarity] == "Unique" # [UniqueName] == "Divinarius" && [StashItem] == "true"
+[Type] == "Hellion's Paw" && [Rarity] == "Unique" # [UniqueName] == "Bloodseeker" && [StashItem] == "true"
+[Type] == "Vaal Claw" && [Rarity] == "Unique" # [UniqueName] == "Essentia Sanguis" && [StashItem] == "true"
+[Type] == "Slaughter Knife" && [Rarity] == "Unique" # [UniqueName] == "Bino's Kitchen Knife" && [StashItem] == "true"
+[Type] == "Dusk Blade" && [Rarity] == "Unique" # [UniqueName] == "Ephemeral Edge" && [StashItem] == "true"
+[Type] == "Void Axe" && [Rarity] == "Unique" # [UniqueName] == "Kitava's Feast" && [StashItem] == "true"
+[Type] == "Imperial Bow" && [Rarity] == "Unique" # [UniqueName] == "Lioneye's Glare" && [StashItem] == "true"
+
 [Type] == "Map (Tier 16)" && [map_zana_influence] >= "1" # [ForceSellItem] =="true" 
 [Type] == "Map (Tier 16)" && [map_contains_citadel]>="1"# [ForceSellItem] =="true" 
 [Type] == "Map (Tier 16)" && [map_elder_boss_variation]>="1"# [ForceSellItem] =="true"
@@ -372,3 +407,4 @@
 //[Type] == "Contract: Underbelly" # [ForceSellItem] == "true" //
 //[Type] == "Contract: Records Office" # [ForceSellItem] == "true" //
 //[Type] == "Contract: Mansion" # [ForceSellItem] == "true" //
+
