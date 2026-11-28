@@ -19,7 +19,7 @@
 g_needMinimizeGame=false			--×îĞ¡»¯ß[‘ò´°¿Ú trueÎª×îĞ¡»¯ false»ònilÎª²»×îĞ¡»¯
 g_imBoss=false				--Èç¹ûÊÇ²Ö¿âºÅÒªÎªtrue ¹Ò»úºÅÎªfalse
 g_yiJieTimeOut=5*60			--Òì½çµØÍ¼ÄÚµÄ³¬Ê±Ê±¼ä µ¥Î»ÎªÃë Èç¹ûÎ´ÉèÖÃ¾Í»áÓÃg_timeOut *ÊÇ³ËºÅ ÕâÀïÎª15³ËÒÔ60=15·ÖÖÓ
-g_timeOut=5*60				--ÔÚÒ»¸öµØÍ¼´ôµÄÊ±¼ä³¬¹ıÉèÖÃµÄ ¾ÍÖØĞÂ¿ªÍ¼ÖØĞÂ µ¥Î»ÎªÃë
+g_timeOut=10*60				--ÔÚÒ»¸öµØÍ¼´ôµÄÊ±¼ä³¬¹ıÉèÖÃµÄ ¾ÍÖØĞÂ¿ªÍ¼ÖØĞÂ µ¥Î»ÎªÃë
 g_attackDis=40	                        --¹¥»÷¾àÀë
 g_sellSkillGem=true			--×Ô¶¯Âô³¬¹ı40Æ·ÖÊµÄ¼¼ÄÜ±¦Ê¯
 g_notHuanYaoLv=82			--´óÓÚµÈÓÚ¶àÉÙ¼¶Ö»¼ñÀ¶É«ÒÔÉÏÒ©
@@ -43,7 +43,7 @@ g_useMinLvMapTianFuCnt=999       -- ÓÀÔ¶ÓÅÏÈµÍ½×µØÍ¼(¿ìËÙÍê³ÉÌì¸³)
 g_openQlkMaxMapTianFuCnt=nil     -- ²»ÏŞÖÆÌì¸³ÊıÁ¿
 
 ------------------¹Ò»úÏà¹Ø
-g_yijieNoWhiteMonster=true	--Òì½çÊ±ÊÇ·ñ²»´ò°×¹Ö trueÎª²»´ò nil»òfalseÎª´ò
+g_yijieNoWhiteMonster=false	--Òì½çÊ±ÊÇ·ñ²»´ò°×¹Ö trueÎª²»´ò nil»òfalseÎª´ò
 g_yijieNoWhiteBox=true		--Òì½çÊ±ÊÇ·ñ²»¿ª°×Ïä×Ó trueÎª²»¿ª nil»òfalseÎª¿ª
 g_useYiJieWanChengDuLv=68	--Ê¹ÓÃÒì½çµØÍ¼Íê³É¶È»úÖÆµÄµÈ¼¶,68¼¶¿ªÊ¼
 g_yiJieWanChengDu=0.5		--Òì½çÍê³É¶È 50%¼´¿É»Ø³Ç Îª1¼´1ÒÔÏÂµÄĞ¡Êı
@@ -60,9 +60,9 @@ g_needMengYanLv=85              --85¼¶ÒÔºó¾ÍµãÃÎ÷Ê
 
 g_checkSellMapCnt=60		--µØÍ¼³¬¹ıÕâ¸öÊıÁ¿²Å»á¼ì²â³öÊÛµØÍ¼
 g_destroyNoUseMap=true		--Ïú»ÙÉÏÃæÉèÖÃ²»Ê¹ÓÃµÄµØÍ¼ nil»òfalseÎª²»Ïú»Ù
-g_mapUseFuHaoLv=80		--´óÓÚµÈÓÚ¶àÉÙ¼¶¶ÔÀ¶Í¼Ê¹ÓÃ¸»ºÀÊ¯ nilÎªÓÀÔ¶²»Ê¹ÓÃ
+g_mapUseFuHaoLv=70		--´óÓÚµÈÓÚ¶àÉÙ¼¶¶ÔÀ¶Í¼Ê¹ÓÃ¸»ºÀÊ¯ nilÎªÓÀÔ¶²»Ê¹ÓÃ
 g_mapUseZengFuLv=70		--´óÓÚµÈÓÚ¶àÉÙ¼¶¶ÔÀ¶Í¼Ê¹ÓÃÔö·ùÊ¯ nilÎªÓÀÔ¶²»Ê¹ÓÃ
-g_mapUseDianJingLv=80		--´óÓÚµÈÓÚ¶àÉÙ¼¶¶Ô°×Í¼Ê¹ÓÃµã½ğÊ¯ nilÎªÓÀÔ¶²»Ê¹ÓÃ
+g_mapUseDianJingLv=70		--´óÓÚµÈÓÚ¶àÉÙ¼¶¶Ô°×Í¼Ê¹ÓÃµã½ğÊ¯ nilÎªÓÀÔ¶²»Ê¹ÓÃ
 g_mapUseTuiBianLv=70		--´óÓÚµÈÓÚ¶àÉÙ¼¶¶Ô°×Í¼Ê¹ÓÃÍÉ±äÊ¯ nilÎªÓÀÔ¶²»Ê¹ÓÃ
 g_mapUseJiHuiLv=80		--´óÓÚµÈÓÚ¶àÉÙ¼¶¶Ô°×Í¼Ê¹ÓÃ»ú»áÊ¯ nilÎªÓÀÔ¶²»Ê¹ÓÃ
 g_mapUseWaErLv=80		--´óÓÚµÈÓÚ¶àÉÙ¼¶¶Ô°×¡¢À¶µØÍ¼Ê¹ÓÃÍß¶û±¦Öé nilÎªÓÀÔ¶²»Ê¹ÓÃ
@@ -501,7 +501,7 @@ AddNotMakeTaskData("a10q4")--ÎŞ°®¾É»ê
 AddNotMakeTaskData("a10q5")--Éîº£Ö®Â·
 
 --SetTaskMiGongData(taskClassName,taskIndex,migongIndex)--ÉèÖÃÅÜÍ¼Ê±ÃÔ¹¬ taskClassName=ÈÎÎñÀàÃû taskIndex=ÈÎÎñË÷Òı nilÎªºöÂÔ£¬Ö»Æ¥ÅäÈÎÎñÀàÃû migongIndexÎªÃÔ¹¬Ë÷ÒıÌî 1=µÚÒ»´ÎÃÔ¹¬ 2=µÚ¶ş´ÎÃÔ¹¬
-SetTaskMiGongDataByLv(35,1)
+--SetTaskMiGongDataByLv(35,1)
 --SetTaskMiGongData("a9q1",nil,2)
 SetTaskMiGongDataByLv(80,3)
 
@@ -519,8 +519,12 @@ SetZhongShenData("TheBrineKing","Yugul")--ÉèÖÃÔÂÓ°Å®ÉñÖ®»êÓë¾øÍûÖ®Ä¸ ¸ñÂ³Ë¿¿ËÖ®»
 --pageType ²Ö¿âÒ³ÀàĞÍ ÊıÖµĞÍ ²»Ìî»ònil»ò0 ÎªÆÕÍ¨²Ö¿â 1ÎªÍ¨»õÒ³ 2ÎªÃüÔË¿¨Ò³  3ÎªËéÆ¬Ò³
 
 -------×¢ÒâÒª´óÀàÔÚÇ° Ğ¡Àà µ¥¶ÀÉèÖÃÔÚºóÃæÌí¼Ó
-SetSaveIndex("Í¨»õ|¿É¶ÑµşÍ¨»õ","1|5|6|7|8")
-SetSaveIndex("Òì½çµØÍ¼","2|6|7|8")
+SetSaveIndex("Í¨»õ|¿É¶ÑµşÍ¨»õ","1|2|3|4")
+--SetSaveIndex("µØˆD|µØˆDËéÆ¬","1|2",nil,"Metadata/Items/Maps/MapKeyTier1")
+SetSaveIndex("Òì½çµØÍ¼|µØˆD|µØÍ¼|µØÍ¼","3")
+
+--SetSaveIndex("Òì½çµØÍ¼|µØˆD|µØÍ¼","1|2",nil,nil,nil,nil,nil,nil,nil)
+
 SetSaveIndex("ÏîÁ´|½äÖ¸|×¦|Ø°Ê×|·¨ÕÈ|µ¥ÊÖ½£|Ï¸½£|µ¥ÊÖ¸«|µ¥ÊÖ´¸|·ûÎÄØ°Ê×|¶ÌÕÈ|Õ½ÕÈ|¹­|³¤ÕÈ|Ë«ÊÖ½£|Ë«ÊÖ¸«|Ë«ÊÖ´¸|Ñü´ø|ÊÖÌ×|Ğ¬×Ó|Í·¿ø","3|5|6|7|8")
 SetSaveIndex("Ö÷¶¯¼¼ÄÜ±¦Ê¯|¸¨Öú¼¼ÄÜ±¦Ê¯|Öé±¦|ÃüÔË¿¨|ÒÂ·ş|¶Ü|¼ı´ü|µØÍ¼ËéÆ¬|ÆõÔ¼|µØĞÄÌ½Ë÷£º¿ÉÏâÇ¶µÄÍ¨»õ","3|4|6|7|8")
 SetSaveIndex("ÉúÃüÒ©¼Á|Ä§Á¦Ò©¼Á|¸´ºÏÒ©¼Á|¹¦ÄÜÒ©¼Á|ÆõÔ¼|µØÍ¼ËéÆ¬|Ô¤ÑÔ","4|5|6|7|8")
@@ -556,19 +560,19 @@ SetSaveIndex("À¶Í¼","4|5|6|7|8")
 SetSaveIndex("SentinelDrone","1|4")
 SetSaveIndex("Engraved Ultimatum","1|4")--"¿Ì»®×îºóÍ¨ëº"
 
-
-SetNeedFengYinYeShou(nil,"Metadata/Monsters/LeagueHarvest/Green/HarvestSquidT3MemoryLine")--ì`¬FÖ®¿´ÊØÕß
-SetNeedFengYinYeShou(nil,"Metadata/Monsters/LeagueHarvest/Green/HarvestVultureParasiteT3MemoryLine")--ì`¬FÖ®¶dú—
-SetNeedFengYinYeShou(nil,"Metadata/Monsters/LeagueAzmeri/GullGoliathBestiary")--ºÚÉ«ÄªÀï¸ù
-SetNeedFengYinYeShou(nil,"Metadata/Monsters/LeagueBestiary/MarakethBirdSpiritBoss")--³õÊ¼Ö®ÌìË¹¿¨ÎÖ
-SetNeedFengYinYeShou(nil,"Metadata/Monsters/LeagueBestiary/NessaCrabBestiarySpiritBoss")--³õÊ¼Ö®Ì¶¿ü –Éº
-SetNeedFengYinYeShou(nil,"Metadata/Monsters/LeagueBestiary/GemFrogBestiary")--¿ü –Éºıˆòá
-SetNeedFengYinYeShou(nil,"Metadata/Monsters/LeagueBestiary/PitbullBestiary")--ÙM –Á_¿ÓÑ¨«CÈ®
-SetNeedFengYinYeShou(nil,"Metadata/Monsters/LeagueBestiary/IguanaBestiary")--Ë¹¿¨ÎÖıˆòá
-SetNeedFengYinYeShou(nil,"Metadata/Monsters/LeagueBestiary/VultureBestiary")--Ë¹¿¨ÎÖ¶dú—
-SetNeedFengYinYeShou(nil,"Metadata/Monsters/LeagueBestiary/InsectSpawnerBestiary")--·Æ¶÷½zÅ®»Ê
-SetNeedFengYinYeShou(nil,"Metadata/Monsters/LeagueBestiary/Avians/MarakethBirdBestiary")--Ë¹¿¨ÎÖërøB
-SetNeedFengYinYeShou(nil,"Metadata/Monsters/LeagueBestiary/RootSpiderBestiary")--·Æ¶÷½zÍÌÊÉ«F
+--«Fˆ@
+--SetNeedFengYinYeShou(nil,"Metadata/Monsters/LeagueHarvest/Green/HarvestSquidT3MemoryLine")--ì`¬FÖ®¿´ÊØÕß
+--SetNeedFengYinYeShou(nil,"Metadata/Monsters/LeagueHarvest/Green/HarvestVultureParasiteT3MemoryLine")--ì`¬FÖ®¶dú—
+--SetNeedFengYinYeShou(nil,"Metadata/Monsters/LeagueAzmeri/GullGoliathBestiary")--ºÚÉ«ÄªÀï¸ù
+--SetNeedFengYinYeShou(nil,"Metadata/Monsters/LeagueBestiary/MarakethBirdSpiritBoss")--³õÊ¼Ö®ÌìË¹¿¨ÎÖ
+--SetNeedFengYinYeShou(nil,"Metadata/Monsters/LeagueBestiary/NessaCrabBestiarySpiritBoss")--³õÊ¼Ö®Ì¶¿ü –Éº
+--SetNeedFengYinYeShou(nil,"Metadata/Monsters/LeagueBestiary/GemFrogBestiary")--¿ü –Éºıˆòá
+--SetNeedFengYinYeShou(nil,"Metadata/Monsters/LeagueBestiary/PitbullBestiary")--ÙM –Á_¿ÓÑ¨«CÈ®
+--SetNeedFengYinYeShou(nil,"Metadata/Monsters/LeagueBestiary/IguanaBestiary")--Ë¹¿¨ÎÖıˆòá
+--SetNeedFengYinYeShou(nil,"Metadata/Monsters/LeagueBestiary/VultureBestiary")--Ë¹¿¨ÎÖ¶dú—
+--SetNeedFengYinYeShou(nil,"Metadata/Monsters/LeagueBestiary/InsectSpawnerBestiary")--·Æ¶÷½zÅ®»Ê
+--SetNeedFengYinYeShou(nil,"Metadata/Monsters/LeagueBestiary/Avians/MarakethBirdBestiary")--Ë¹¿¨ÎÖërøB
+--SetNeedFengYinYeShou(nil,"Metadata/Monsters/LeagueBestiary/RootSpiderBestiary")--·Æ¶÷½zÍÌÊÉ«F
 
 
 
@@ -870,7 +874,9 @@ SetNeedBuyGoodsData("»ú»áÊ¯","Metadata/Items/Currency/CurrencyUpgradeRandomly",2
 --lineCnt Êı×ÖĞÍ Á¬¶´ÊıÁ¿ ºöÂÔÔòÌî nil
 --checkCangKu ¼ÆËã±£ÁôÊıÁ¿Ê±ÊÇ·ñÁ¬²Ö¿âÄÚµÄÊıÁ¿Ò²¼ÆËã½øÈ¥ nil»òfalseÎª²»¼ÆËã²Ö¿â true ÎªĞèÒª¼ÆËã
 SetGoodsCaoZuo("Í¨»õ|¿É¶ÑµşÍ¨»õ","0|2")
-SetGoodsCaoZuo("Òì½çµØÍ¼","0|2",nil,nil,nil,nil,nil,nil,"0|1|2")--Ê°È¡°×É«+À¶É«+»ÆÉ«µØÍ¼
+SetGoodsCaoZuo("Òì½çµØÍ¼|µØˆD|µØÍ¼|µØÍ¼","0|2")--Ê°È¡°×É«+À¶É«+»ÆÉ«µØÍ¼
+SetGoodsCaoZuo(nil,"0|2",nil,"µØˆD",nil,nil,nil,nil,"0|1|2")--Ê°È¡+´æ+°×É«+À¶É«+»ÆÉ«µØÍ¼
+SetGoodsCaoZuo(nil,"0|2",nil,"µØˆD")--Ê°È¡+´æALLµØÍ¼
 SetGoodsCaoZuo("Ö÷¶¯¼¼ÄÜ±¦Ê¯|¸¨Öú¼¼ÄÜ±¦Ê¯","0|2",nil,nil,nil,nil,5)--Ê°È¡Æ·ÖÊ³¬¹ı5µÄ¼¼ÄÜ±¦Ê¯
 
 --SetGoodsCaoZuo("Convoking Wand|Bone Ring","0|1|4",nil,nil,nil,nil,nil,nil,"2")--Ê°È¡ ¼ø¶¨ ³öÊÛ»ÆÉ«ÎïÆ·Öé±¦
